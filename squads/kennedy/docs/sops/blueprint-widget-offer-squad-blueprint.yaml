@@ -1,0 +1,435 @@
+# Blueprint: Widget Offer Construction Squad Blueprint
+# Source: Ultimate Marketing Plan Ch.7 + Magnetic Marketing Ch.5
+# Squad: kennedy | Version: 1.0 | Date: 2026-02-11
+
+---
+
+metadata:
+  name: "Widget Offer Construction Blueprint"
+  description: >
+    Blueprint for creating irresistible Widget offers using Kennedy's
+    concept of "an offer on steroids" that transcends the base product,
+    eliminates price comparison, and makes saying no feel foolish.
+  version: "1.0"
+# source_sop: sop-widget-offer.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-widget-offer.md"
+  primary_agent: "kennedy-offers"
+  mental_model: "MM_007 + Widget Concept"
+  source:
+    books:
+      - title: "The Ultimate Marketing Plan"
+        chapters: [7]
+        pages: "18-20, 70-77"
+      - title: "Magnetic Marketing"
+        chapters: [5]
+        pages: "70-77"
+
+# ---
+
+# Agent Assignments
+
+agents:
+  lead:
+    name: "kennedy-offers"
+    role: "Widget Architect"
+    responsibilities:
+      - "Design Widget structure across 3 levels"
+      - "Calculate value-to-price ratios"
+      - "Create naming and positioning"
+      - "Validate irresistibility criteria"
+
+  support:
+    - name: "kennedy-chief"
+      role: "Strategic Alignment"
+      responsibilities:
+        - "Ensure Widget aligns with USP"
+        - "Validate Marketing Triangle coherence"
+        - "Approve final Widget package"
+
+    - name: "kennedy-copy"
+      role: "Copy & Presentation"
+      responsibilities:
+        - "Write Widget presentation copy"
+        - "Create comparison charts"
+        - "Craft bonus descriptions that amplify value"
+
+    - name: "kennedy-direct-response"
+      role: "DR Optimization"
+      responsibilities:
+        - "Ensure Widget includes offer, urgency, CTA"
+        - "Verify tracking mechanisms"
+        - "Test compliance with 10 Rules"
+
+# ---
+
+# Workflow Phases
+
+workflow:
+  total_phases: 5
+  estimated_duration: "3-5 days"
+  parallel_work: true
+
+  phases:
+    - phase: 1
+      name: "Value Inventory & WHO Objection Mapping"
+      duration: "3-4 hours"
+      agent: "kennedy-offers"
+      description: >
+        Catalog every possible value element and map WHO
+        objections to identify which elements address
+        which barriers to purchase.
+
+      inputs:
+        - "USP Statement (from USP Construction Blueprint)"
+        - "WHO psychographic profile"
+        - "Current product/service offerings"
+        - "Customer feedback and objection data"
+
+      tasks:
+        - task: "value-inventory"
+          description: >
+            List ALL possible value elements categorized by:
+            - High cost / High perceived value
+            - Low cost / High perceived value (PRIORITY)
+            - Zero cost / High perceived value (digital)
+            - Cost of each element vs perceived value
+
+        - task: "objection-mapping"
+          description: >
+            Map top 5-7 WHO objections.
+            For each objection, identify Widget components
+            that directly address and eliminate it.
+
+        - task: "competitor-offer-analysis"
+          description: >
+            Document what competitors include in their offers.
+            Identify elements they DON'T include that you CAN.
+            Find the Widget advantage.
+
+      outputs:
+        - "Value inventory matrix (30+ elements)"
+        - "Objection-to-component mapping table"
+        - "Competitor offer comparison"
+        - "Priority components list (best ratio items)"
+
+      quality_gate:
+        criteria:
+          - "30+ value elements inventoried"
+          - "Top 5 objections mapped to components"
+          - "Priority items identified (low cost / high value)"
+        reviewer: "kennedy-offers"
+
+    - phase: 2
+      name: "Widget Construction (3 Levels)"
+      duration: "4-6 hours"
+      agent: "kennedy-offers"
+      description: >
+        Build the Widget at all 3 levels: Lead Generation,
+        Consultation, and Direct Purchase. Each level must
+        be irresistible for its threshold resistance level.
+
+      inputs:
+        - "Value inventory and priority list from Phase 1"
+        - "USP Statement"
+        - "Widget templates from sop-widget-offer.md"
+
+      tasks:
+        - task: "lead-gen-widget"
+          description: >
+            Create Lead Generation Widget (low threshold).
+            Must fulfill 4 Jobs of LGM:
+            1. Generate response 2. Reinforce dissatisfaction
+            3. Establish expertise 4. Predispose to accept
+            Include: Free report + Self-assessment + Case study
+          source: "Magnetic Marketing, Cap. 7"
+
+        - task: "consultation-widget"
+          description: >
+            Create Consultation Widget (medium threshold).
+            Must demonstrate expertise and create commitment.
+            Include: Assessment + Report + Action plan + Bonus
+            Declare individual values prominently.
+
+        - task: "direct-purchase-widget"
+          description: >
+            Create Direct Purchase Widget (high threshold).
+            Must achieve 3-10x value/price ratio.
+            Include: Core + 3-4 Bonuses + Guarantee + Urgency
+            Each bonus must be complementary (not random).
+          source: "Ultimate Marketing Plan, pp. 18-20"
+
+        - task: "yes-ladder-integration"
+          description: >
+            Design the progression from Level 1 → 2 → 3.
+            Each YES facilitates the next YES.
+            Map the micro-agreement cascade.
+          source: "Magnetic Marketing, pp. 114-116"
+
+      outputs:
+        - "Lead Gen Widget (complete specification)"
+        - "Consultation Widget (complete specification)"
+        - "Direct Purchase Widget (complete specification)"
+        - "Yes Ladder progression map"
+
+      quality_gate:
+        criteria:
+          - "Each Widget has 3+ components beyond core"
+          - "Direct Purchase Widget ratio >= 3x"
+          - "Each bonus is complementary to core"
+          - "Yes Ladder creates logical progression"
+        reviewer: "kennedy-offers"
+
+    - phase: 3
+      name: "Naming & Positioning"
+      duration: "2-3 hours"
+      agent: "kennedy-copy"
+      description: >
+        Create compelling names for each Widget level
+        and write the presentation copy that communicates
+        the irresistible value.
+
+      inputs:
+        - "Widget specifications from Phase 2"
+        - "USP Statement"
+        - "WHO language and pain points"
+
+      tasks:
+        - task: "widget-naming"
+          description: >
+            Create memorable names for each Widget.
+            Names must: create curiosity, include benefit,
+            be impossible to confuse with competitor,
+            transform "an offer" into "a THING."
+
+        - task: "value-declaration-copy"
+          description: >
+            Write copy that declares individual values
+            of each component. Build the total value case.
+            Create the "irresistibility narrative."
+
+        - task: "comparison-proof"
+          description: >
+            Create side-by-side comparison showing
+            Widget vs. competitors. Demonstrate why
+            direct comparison is impossible.
+
+        - task: "guarantee-crafting"
+          description: >
+            Design risk reversal guarantee.
+            Make it bold, specific, and time-bound.
+            Ensure it's operationally deliverable.
+
+      outputs:
+        - "Widget names (per level)"
+        - "Value declaration copy"
+        - "Comparison proof document"
+        - "Guarantee statement"
+
+      quality_gate:
+        criteria:
+          - "Names are unique and memorable"
+          - "Value declarations are specific with dollar amounts"
+          - "Comparison makes competitors look incomplete"
+          - "Guarantee is bold but deliverable"
+        reviewer: "kennedy-chief"
+
+    - phase: 4
+      name: "Irresistibility Testing"
+      duration: "2-3 hours"
+      agent: "kennedy-offers"
+      description: >
+        Test each Widget against Kennedy's irresistibility
+        criteria and the Stupak Test.
+
+      inputs:
+        - "Complete Widget packages from Phases 2-3"
+
+      tasks:
+        - task: "stupak-test"
+          description: >
+            Apply the 5-question Stupak Test:
+            1. Would a stranger say "too good to be true"?
+            2. Would prospect feel FOOLISH saying no?
+            3. Is it impossible to find identical offer elsewhere?
+            4. Is value/price ratio at least 3x?
+            5. Does it attack at least 3 WHO objections?
+          source: "sop-widget-offer.md, Step 7"
+
+        - task: "dr-rules-compliance"
+          description: >
+            Verify each Widget passes 10 No B.S. Rules:
+            Rule 1 (offer), Rule 2 (urgency),
+            Rule 3 (clear instructions), Rule 4 (trackable).
+          source: "Magnetic Marketing, Cap. 6"
+
+        - task: "operational-feasibility"
+          description: >
+            Verify each Widget component can be delivered
+            consistently, every time, without exception.
+            If can't deliver, remove or replace.
+
+      outputs:
+        - "Stupak Test results per Widget"
+        - "DR compliance report"
+        - "Operational feasibility sign-off"
+        - "Final adjustments list"
+
+      quality_gate:
+        criteria:
+          - "All 3 Widgets pass Stupak Test (5/5)"
+          - "DR compliance: 10/10 rules"
+          - "Operational feasibility: 100% deliverable"
+        reviewer: "kennedy-chief"
+
+    - phase: 5
+      name: "Deployment & Integration"
+      duration: "1-2 days"
+      agent: "kennedy-direct-response"
+      description: >
+        Deploy Widgets into marketing system and integrate
+        with Lead Gen, Conversion, and Retention systems.
+
+      inputs:
+        - "Validated Widget packages from Phase 4"
+        - "Marketing channels and touchpoints"
+
+      tasks:
+        - task: "lead-gen-deployment"
+          description: >
+            Deploy Lead Gen Widget into:
+            - Landing pages, ads, direct mail, social media
+            - Shock and Awe Package
+            - Host-Beneficiary materials
+
+        - task: "consultation-deployment"
+          description: >
+            Deploy Consultation Widget into:
+            - Follow-up sequences, email nurture
+            - Sales scripts and booking pages
+
+        - task: "direct-purchase-deployment"
+          description: >
+            Deploy Direct Purchase Widget into:
+            - Sales letters, proposals, presentations
+            - Closing scripts and order forms
+
+        - task: "tracking-setup"
+          description: >
+            Configure tracking for:
+            - Conversion rate per Widget level
+            - Value/Price perception
+            - Refund/guarantee claim rate
+            - Average order value
+
+      outputs:
+        - "Deployed Widget assets per channel"
+        - "Tracking dashboard configured"
+        - "Team training on Widget presentation"
+        - "30-day review scheduled"
+
+      quality_gate:
+        criteria:
+          - "All 3 Widgets deployed in relevant channels"
+          - "Tracking active and verified"
+          - "Team trained on Widget presentation"
+        reviewer: "kennedy-direct-response"
+
+# ---
+
+# Quality Gates Summary
+
+quality_gates:
+  - gate: "Value Inventory Complete"
+    phase: 1
+    criteria: "30+ elements, objections mapped"
+    blocker: true
+
+  - gate: "3-Level Widgets Built"
+    phase: 2
+    criteria: "All 3 levels complete, ratio >= 3x"
+    blocker: true
+
+  - gate: "Names & Copy Ready"
+    phase: 3
+    criteria: "Unique names, value declarations, guarantee"
+    blocker: true
+
+  - gate: "Irresistibility Validated"
+    phase: 4
+    criteria: "Stupak Test 5/5, DR 10/10, operationally feasible"
+    blocker: true
+
+  - gate: "Deployed & Tracking"
+    phase: 5
+    criteria: "All channels, tracking live, team trained"
+    blocker: true
+
+# ---
+
+# Success Metrics
+
+metrics:
+  primary:
+    - name: "Lead Gen Widget Conversion"
+      target: "> 25%"
+      measurement: "Downloads / Landing page visits"
+
+    - name: "Direct Purchase Conversion"
+      target: "> 10%"
+      measurement: "Sales / Proposals presented"
+
+    - name: "Value/Price Ratio Perception"
+      target: "> 3x"
+      measurement: "Post-purchase survey"
+
+  secondary:
+    - name: "Average Order Value Lift"
+      target: "> 30%"
+      measurement: "Compare pre/post Widget AOV"
+
+    - name: "Guarantee Claim Rate"
+      target: "< 5%"
+      measurement: "Refunds / Total sales"
+
+    - name: "Comparison Elimination"
+      target: "> 60% don't compare prices"
+      measurement: "Sales process tracking"
+
+# ---
+
+# Dependencies
+
+dependencies:
+  requires:
+    - "blueprint-usp-construction-squad-blueprint.yaml"
+  enables:
+    - "blueprint-15-step-marketing-plan-squad-blueprint.yaml"
+    - "blueprint-host-beneficiary-squad-blueprint.yaml"
+    - "blueprint-information-first-marketing-squad-blueprint.yaml"
+
+# ---
+
+# Risk Mitigation
+
+risks:
+  - risk: "Widget components too expensive to deliver"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Focus on low-cost/high-perceived-value items; digital bonuses"
+
+  - risk: "Guarantee abuse (high refund rate)"
+    probability: "low"
+    impact: "medium"
+    mitigation: "Track refund rate; adjust guarantee terms if > 8%"
+
+  - risk: "Widget appears 'too good to be true' negatively"
+    probability: "low"
+    impact: "medium"
+    mitigation: "Add proof elements explaining WHY you can offer this"
+
+  - risk: "Operational delivery failure"
+    probability: "medium"
+    impact: "critical"
+    mitigation: "Phase 4 operational feasibility check; stress-test before launch"

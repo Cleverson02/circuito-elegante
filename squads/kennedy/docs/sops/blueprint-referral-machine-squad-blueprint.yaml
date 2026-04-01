@@ -1,0 +1,384 @@
+# Blueprint: Referral Machine Squad
+# Dan Kennedy's 11-Point Referral System
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Referral Machine Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-referral-machine.md"
+  source_courses:
+    - "Ultimate No BS Referral Machine (20 Sessions)"
+    - "Midas Touch - Referral System Module"
+  description: >
+    Blueprint operacional para construir e executar o 11-Point Referral Machine System
+    de Dan Kennedy. Transforma referrals de "acidentes felizes" em producao mensal
+    previsivel atraves de 11 pontos sistematicos de geracao.
+  kennedy_quote: >
+    "This checklist is your referral machine. If you do everything on this list every month,
+    you'll never worry about where your next customer is coming from."
+    -- Dan Kennedy, Session 4
+
+# ============================================================
+# AGENTS ENVOLVIDOS
+# ============================================================
+
+agents:
+  primary_agent:
+    name: "referral-architect"
+    role: "Arquiteto do Sistema de Referral"
+    responsibilities:
+      - Diagnosticar sistema atual com framework 3 I's
+      - Desenhar os 11 pontos customizados para o negocio
+      - Criar calendario editorial de newsletters
+      - Desenvolver Special Reports mensais
+      - Coordenar execucao do checklist mensal
+
+  supporting_agents:
+    - name: "newsletter-creator"
+      role: "Produtor de Newsletter"
+      responsibilities:
+        - Escrever ou ghostwrite artigos pessoais
+        - Curar conteudo util e entretenimento
+        - Aplicar BEIGE Test pre-publicacao
+        - Criar headlines irresistiveis para pagina 4
+        - Desenvolver freestanding inserts para vendas
+
+    - name: "wow-designer"
+      role: "Designer de WOW Packages"
+      responsibilities:
+        - Definir tema emocional por tipo de cliente
+        - Selecionar e orcamentar 5-10 itens
+        - Sistematizar envio automatizado
+        - Incluir materiais de referral no pacote
+        - Testar e iterar com feedback
+
+    - name: "report-writer"
+      role: "Escritor de Special Reports"
+      responsibilities:
+        - Pesquisar pergunta #1 do prospect ideal
+        - Escrever relatorio 8-12 paginas por mes
+        - Incluir CTA suave e posicionamento de autoridade
+        - Coordenar impressao e distribuicao
+        - Manter banco de topicos para 12 meses
+
+    - name: "event-coordinator"
+      role: "Coordenador de Eventos"
+      responsibilities:
+        - Planejar eventos trimestrais "traga-um-amigo"
+        - Buscar patrocinadores para cobrir custos
+        - Criar experiencia memoravel tipo Disney
+        - Coordenar logistica e follow-up
+        - Documentar resultados e fotos
+
+    - name: "partner-liaison"
+      role: "Gestor de Parcerias Estrategicas"
+      responsibilities:
+        - Identificar 5-10 upstream referral sources
+        - Iniciar e manter relacionamentos
+        - Escrever cartas de endorsed mailing
+        - Coordenar envio para listas de parceiros
+        - Rastrear resultados por parceiro
+
+# ============================================================
+# WORKFLOW PHASES
+# ============================================================
+
+workflow_phases:
+
+  phase_1_diagnostic:
+    name: "Diagnostico e Setup"
+    duration: "1 semana"
+    description: "Avaliar estado atual e preparar fundacao"
+    steps:
+      - step: "Auditar com 3 I's"
+        action: "Listar todas atividades de referral, testar contra Intentional/Invested/Integrated"
+        output: "Relatorio de gaps com scores 0-9"
+        agent: "referral-architect"
+
+      - step: "Calcular CLV"
+        action: "Receita media x retencao x valor de referrals gerados"
+        output: "CLV documentado para alocacao de orcamento"
+        agent: "referral-architect"
+
+      - step: "Mapear 9 Barreiras"
+        action: "Identificar quais das 9 barreiras ao referral se aplicam"
+        output: "Lista priorizada de barreiras com solucoes"
+        agent: "referral-architect"
+        barriers:
+          - "Esquecem de voce (72h window)"
+          - "Nao sabem o que dizer"
+          - "Medo de responsabilidade"
+          - "Nao sabem que voce aceita novos clientes"
+          - "Nao veem beneficio pessoal"
+          - "Processo de indicacao e complicado"
+          - "Nao tem material para entregar"
+          - "Nunca foram pedidos especificamente"
+          - "Nao foram treinados sobre como indicar"
+
+      - step: "Definir metricas base"
+        action: "Documentar referrals atuais por mes, fonte, taxa de conversao"
+        output: "Dashboard baseline"
+        agent: "referral-architect"
+
+  phase_2_foundation:
+    name: "Construcao da Fundacao"
+    duration: "3 semanas"
+    description: "Criar os elementos centrais do sistema"
+    steps:
+      - step: "Criar template de newsletter"
+        action: "Layout 4 paginas, definir tipos de conteudo por secao"
+        output: "Template pronto para primeira edicao"
+        agent: "newsletter-creator"
+
+      - step: "Escrever primeira newsletter"
+        action: "Artigo pessoal + util + entretenimento + negocio + BEIGE test"
+        output: "Newsletter #1 pronta para impressao"
+        agent: "newsletter-creator"
+
+      - step: "Criar primeiro Special Report"
+        action: "Pesquisar pergunta #1, escrever 8-12 paginas, CTA suave"
+        output: "Report impresso, 500 copias"
+        agent: "report-writer"
+
+      - step: "Montar WOW Package"
+        action: "Tema + 5-10 itens + orcamento + carta pessoal + referral kit"
+        output: "WOW Package pronto para envio a novos clientes"
+        agent: "wow-designer"
+
+      - step: "Configurar tracking"
+        action: "CRM ou planilha para rastrear fonte de cada referral"
+        output: "Sistema de tracking operacional"
+        agent: "referral-architect"
+
+      - step: "Criar referral prompts especificos"
+        action: "Escrever 5+ prompts especificos por servico/situacao"
+        output: "Lista de referral prompts para equipe usar"
+        agent: "referral-architect"
+        kennedy_rule: >
+          Especificidade ativa busca mental.
+          "Se voce conhece alguem" = nada.
+          "Se voce conhece uma mulher acima de 40 que..." = face na mente.
+
+  phase_3_amplification:
+    name: "Amplificacao"
+    duration: "Meses 2-3"
+    description: "Ativar todos os pontos do sistema"
+    steps:
+      - step: "Lancar concurso de referral"
+        action: "Premios definidos, regras claras, promocao em newsletter + verbal"
+        output: "Concurso ativo com tracking"
+        agent: "referral-architect"
+
+      - step: "Ativar programa de presentes"
+        action: "Calendario 12 meses, aniversarios no CRM, envios iniciados"
+        output: "Programa de presentes operacional"
+        agent: "wow-designer"
+
+      - step: "Treinar equipe"
+        action: "Scripts, role-play semanal, metas individuais, bonus"
+        output: "Equipe treinada e motivada"
+        agent: "referral-architect"
+
+      - step: "Planejar primeiro evento"
+        action: "Tema, data, convites, atividades, 'traga-um-amigo'"
+        output: "Evento planejado para proximo trimestre"
+        agent: "event-coordinator"
+
+  phase_4_strategic:
+    name: "Expansao Estrategica"
+    duration: "Meses 3-6"
+    description: "Fishing upstream e omnipresenca"
+    steps:
+      - step: "Identificar upstream sources"
+        action: "Mapear 5-10 profissionais que servem seus clientes ideais"
+        output: "Lista priorizada de potenciais parceiros"
+        agent: "partner-liaison"
+
+      - step: "Iniciar endorsed mailings"
+        action: "Escrever carta para parceiro, propor acordo mutuo"
+        output: "Primeiro endorsed mailing enviado"
+        agent: "partner-liaison"
+
+      - step: "Criar omnipresenca"
+        action: "Mapear 8-12 touchpoints mensais em diferentes canais"
+        output: "Omnipresence audit completo"
+        agent: "referral-architect"
+
+      - step: "Executar evento maior"
+        action: "Escalar para evento com patrocinadores e midia"
+        output: "Evento executado com metricas documentadas"
+        agent: "event-coordinator"
+
+  phase_5_optimization:
+    name: "Otimizacao Continua"
+    duration: "Mensal (ongoing)"
+    description: "Execucao do checklist mensal e melhoria continua"
+    steps:
+      - step: "Executar checklist mensal de 12 pontos"
+        action: "Completar todos 12 itens do Internal Marketing Checklist"
+        output: "Checklist preenchido com evidencias"
+        agent: "referral-architect"
+
+      - step: "Analisar metricas"
+        action: "Comparar metricas atuais vs baseline e metas"
+        output: "Relatorio mensal de performance"
+        agent: "referral-architect"
+
+      - step: "Iterar e melhorar"
+        action: "Ajustar com base em dados. Testar novos reports, presentes, eventos"
+        output: "Plano de melhoria para proximo mes"
+        agent: "referral-architect"
+
+# ============================================================
+# QUALITY GATES
+# ============================================================
+
+quality_gates:
+
+  gate_1_diagnostic_complete:
+    name: "Diagnostico Completo"
+    phase: "phase_1_diagnostic"
+    criteria:
+      - "3 I's audit completo com scores documentados"
+      - "CLV calculado e documentado"
+      - "9 barreiras mapeadas com solucoes"
+      - "Metricas baseline definidas"
+    blocker: true
+
+  gate_2_foundation_ready:
+    name: "Fundacao Pronta"
+    phase: "phase_2_foundation"
+    criteria:
+      - "Newsletter template aprovado e primeira edicao pronta"
+      - "Special Report #1 impresso (500+ copias)"
+      - "WOW Package montado e testado"
+      - "Sistema de tracking operacional"
+      - "5+ referral prompts especificos criados"
+    blocker: true
+
+  gate_3_system_active:
+    name: "Sistema Ativo"
+    phase: "phase_3_amplification"
+    criteria:
+      - "Concurso de referral lancado"
+      - "Programa de presentes operacional"
+      - "Equipe treinada com scripts"
+      - "Primeiro evento planejado"
+      - "Newsletter #2 enviada (consistencia)"
+    blocker: false
+
+  gate_4_strategic_expansion:
+    name: "Expansao Estrategica"
+    phase: "phase_4_strategic"
+    criteria:
+      - "5+ upstream sources identificados"
+      - "Primeiro endorsed mailing enviado"
+      - "Omnipresence audit completo com 8+ touchpoints"
+      - "Primeiro evento com patrocinadores executado"
+    blocker: false
+
+  gate_5_monthly_execution:
+    name: "Execucao Mensal"
+    phase: "phase_5_optimization"
+    criteria:
+      - "12/12 itens do checklist mensal completados"
+      - "Metricas atualizadas e comparadas com metas"
+      - "Plano de melhoria documentado para proximo mes"
+    blocker: false
+    frequency: "monthly"
+
+# ============================================================
+# METRICAS E KPIs
+# ============================================================
+
+metrics:
+  primary:
+    - name: "Referral Rate"
+      formula: "(Novos clientes por referral / Total novos clientes) x 100"
+      target_6m: "25-35%"
+      target_12m: "40-60%"
+
+    - name: "Referrals por Mes"
+      formula: "Contagem simples de referrals recebidos"
+      target: "+200% vs baseline em 12 meses"
+
+    - name: "CLV de Referral vs Outros"
+      formula: "CLV medio de clientes referidos / CLV medio de outros clientes"
+      target: "50-100% superior"
+
+    - name: "ROI do Sistema"
+      formula: "Receita de referrals / Custo total do sistema"
+      target: "5:1 minimo, 20:1 otimo"
+
+  secondary:
+    - name: "Special Reports distribuidos/mes"
+    - name: "WOW Packages enviados/mes"
+    - name: "Presentes enviados/mes"
+    - name: "Endorsed mailings enviados/trimestre"
+    - name: "Participacao em eventos"
+    - name: "Newsletter readership (feedback anecdotal)"
+    - name: "Depoimentos coletados/mes"
+
+# ============================================================
+# RECURSOS E ORCAMENTO
+# ============================================================
+
+resources:
+  monthly_budget_estimate:
+    newsletter_print_mail: "$500-2.000"
+    special_reports: "$200-500"
+    wow_packages: "$100-500 (por novo cliente)"
+    gifts_program: "$200-500"
+    events: "$500-2.000 (trimestral)"
+    materials_referral_kits: "$100-300"
+    total_estimated: "$1.500-5.000/mes"
+
+  tools_required:
+    - "CRM ou planilha para tracking"
+    - "Servico de impressao e envio (Newsletter Pro ou similar)"
+    - "Fornecedor de presentes corporativos"
+    - "Designer grafico para newsletter e reports"
+    - "Copywriter ou ghostwriter (se necessario)"
+
+  team_required:
+    - "1 pessoa responsavel pelo checklist mensal"
+    - "Front desk treinado para referral prompts"
+    - "Escritor para newsletter (pode ser ghostwriter)"
+
+# ============================================================
+# DEPENDENCIAS E INTEGRACOES
+# ============================================================
+
+dependencies:
+  requires:
+    - sop: "sop-retention-system.md"
+      reason: "Clientes retidos sao a base do referral machine"
+
+  feeds_into:
+    - sop: "sop-follow-up-sequence.md"
+      reason: "Leads gerados por referral entram no follow-up sequence"
+
+  amplified_by:
+    - sop: "sop-champion-circle.md"
+      reason: "Endorsed mailings amplificam alcance exponencialmente"
+    - sop: "sop-affluent-attraction.md"
+      reason: "Referrals de alto valor seguem estrategia affluent"
+
+# ============================================================
+# NOTAS E CONTEXTO
+# ============================================================
+
+notes:
+  - "Kennedy enfatiza que resultados significativos vem apos 6 meses de consistencia"
+  - "A newsletter impressa e INEGOCIAVEL - email sozinho nao funciona como veiculo de referral"
+  - "O Stealth Referral System (Special Reports) e o conceito mais poderoso: compartilhar INFORMACAO e infinitamente mais facil que indicar um PROVEDOR"
+  - "Consistencia mensal importa mais que qualquer tatica individual"
+  - "O sistema funciona por efeito composto - cada mes constroi sobre o anterior"
+
+sources:
+  - "dan-kennedy-referral-machine/dan-kennedy-referral-machine-summary.md"
+  - "dan-kennedy-referral-machine/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-referral-machine/raw-data-package/quotes-fragment.md"
+  - "dan-kennedy-midas-touch/dan-kennedy-midas-touch-summary.md"

@@ -1,0 +1,274 @@
+# Blueprint: Champion Circle of Influence
+# Dan Kennedy's Endorsed Mailing & Strategic Partnership System
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Champion Circle Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-champion-circle.md"
+  source_courses:
+    - "Ultimate No BS Referral Machine (Sessions 8-12)"
+    - "Affluent Client Attraction Playbook (Part 10)"
+    - "Magnetic Marketing System (Module 2)"
+  description: >
+    Blueprint para construir e gerenciar um circulo de parceiros estrategicos
+    que amplificam referrals exponencialmente via endorsed mailings, eventos
+    conjuntos e reciprocidade sistematica.
+  kennedy_quote: >
+    "Instead of fishing with one hook at a time, find the guy who controls
+    the whole school of fish. One relationship, hundreds of referrals."
+
+agents:
+  primary_agent:
+    name: "partner-strategist"
+    role: "Estrategista de Parcerias"
+    responsibilities:
+      - Identificar e priorizar upstream referral sources
+      - Desenvolver plano de relacionamento para cada parceiro
+      - Coordenar endorsed mailings (rascunho, aprovacao, envio)
+      - Medir ROI por parceiro e otimizar circulo
+      - Organizar eventos exclusivos para parceiros
+
+  supporting_agents:
+    - name: "endorsed-mailing-writer"
+      role: "Copywriter de Endorsed Mailings"
+      responsibilities:
+        - Escrever cartas de endorsed mailing em 5 partes
+        - Adaptar tom para cada parceiro/audiencia
+        - Criar ofertas exclusivas com deadline
+        - Desenvolver tracking codes unicos
+        - Manter banco de templates por tipo de parceria
+
+    - name: "relationship-nurturer"
+      role: "Gestor de Relacionamento"
+      responsibilities:
+        - Agendar e executar contatos mensais com parceiros
+        - Coordenar envio de presentes trimestrais
+        - Fazer referrals proativos PARA os parceiros
+        - Documentar interacoes no CRM
+        - Identificar chain referral opportunities
+
+    - name: "partner-event-host"
+      role: "Organizador de Eventos para Parceiros"
+      responsibilities:
+        - Planejar jantares/breakfasts trimestrais
+        - Selecionar venues premium
+        - Criar programa de reconhecimento
+        - Facilitar networking entre parceiros
+        - Documentar resultados e follow-up
+
+workflow_phases:
+
+  phase_1_identification:
+    name: "Identificacao e Mapeamento"
+    duration: "2 semanas"
+    steps:
+      - step: "Mapear upstream sources"
+        action: "Listar 15-20 profissionais que atendem seu publico antes/junto/depois de voce"
+        output: "Lista priorizada de 15-20 parceiros potenciais"
+        agent: "partner-strategist"
+
+      - step: "Ranquear por criterios"
+        action: "Avaliar cada parceiro por: tamanho lista, qualidade, relacionamento, complementaridade, reputacao"
+        output: "Ranking com score composto"
+        agent: "partner-strategist"
+
+      - step: "Selecionar Top 5"
+        action: "Escolher 5 mais acessiveis com melhor match"
+        output: "Lista final de 5 parceiros prioritarios"
+        agent: "partner-strategist"
+
+  phase_2_relationship_building:
+    name: "Construcao de Relacionamento"
+    duration: "4-6 semanas"
+    kennedy_principle: "Dar valor 3-5x antes de pedir qualquer coisa"
+    steps:
+      - step: "Primeiro contato: dar valor"
+        action: "Presente personalizado + nota escrita a mao para cada parceiro"
+        output: "5 primeiros contatos realizados"
+        agent: "relationship-nurturer"
+
+      - step: "Almoco/cafe sem agenda"
+        action: "Agendar encontro casual com cada parceiro prioritario"
+        output: "5 reunioes realizadas, relatorio de afinidade"
+        agent: "partner-strategist"
+
+      - step: "Dar referrals proativamente"
+        action: "Indicar clientes seus para os parceiros (dar antes de pedir)"
+        output: "Registro de referrals dados a cada parceiro"
+        agent: "relationship-nurturer"
+
+      - step: "Nutrir com conteudo"
+        action: "Enviar artigos, informacoes uteis, reconhecer conquistas publicamente"
+        output: "3-5 toques de valor por parceiro"
+        agent: "relationship-nurturer"
+
+  phase_3_first_endorsed_mailing:
+    name: "Primeiro Endorsed Mailing"
+    duration: "3-4 semanas"
+    steps:
+      - step: "Apresentar proposta"
+        action: "Propor endorsed mailing focado no beneficio para clientes do parceiro"
+        output: "Acordo verbal com pelo menos 1 parceiro"
+        agent: "partner-strategist"
+
+      - step: "Escrever carta"
+        action: "Redigir carta completa de 5 partes no tom do parceiro"
+        output: "Rascunho de endorsed mailing para aprovacao"
+        agent: "endorsed-mailing-writer"
+
+      - step: "Aprovar e preparar"
+        action: "Parceiro aprova carta, obter lista, preparar mailing premium"
+        output: "Mailing pronto para envio com tracking code"
+        agent: "endorsed-mailing-writer"
+
+      - step: "Enviar e monitorar"
+        action: "Envio coordenado, monitorar respostas via tracking"
+        output: "Relatorio de resultados: leads, conversoes, ROI"
+        agent: "partner-strategist"
+
+      - step: "Reciprocar"
+        action: "Oferecer endorsed mailing reverso para lista propria"
+        output: "Endorsed mailing enviado para parceiro"
+        agent: "endorsed-mailing-writer"
+
+  phase_4_expansion:
+    name: "Expansao do Circulo"
+    duration: "Meses 3-6"
+    steps:
+      - step: "Chain referrals"
+        action: "Pedir a parceiros atuais indicacao de outros profissionais"
+        output: "3-5 novos parceiros identificados"
+        agent: "partner-strategist"
+
+      - step: "Newsletter para parceiros"
+        action: "Criar newsletter bimestral exclusiva para o Champion Circle"
+        output: "Newsletter com casos de sucesso, oportunidades, eventos"
+        agent: "endorsed-mailing-writer"
+
+      - step: "Primeiro evento para parceiros"
+        action: "Jantar premium ou breakfast exclusivo"
+        output: "Evento realizado com 5-10 parceiros"
+        agent: "partner-event-host"
+
+      - step: "Escalar endorsed mailings"
+        action: "2-3 endorsed mailings por ano por parceiro, ofertas diferentes"
+        output: "Pipeline de endorsed mailings planejado para 12 meses"
+        agent: "partner-strategist"
+
+  phase_5_optimization:
+    name: "Otimizacao Continua"
+    duration: "Ongoing (trimestral)"
+    steps:
+      - step: "Avaliar ROI por parceiro"
+        action: "Calcular leads, conversoes, receita por parceiro"
+        output: "Dashboard de ROI por parceiro"
+        agent: "partner-strategist"
+
+      - step: "Reconhecer top parceiros"
+        action: "Presente premium + reconhecimento publico para melhores"
+        output: "Top parceiros reconhecidos e motivados"
+        agent: "relationship-nurturer"
+
+      - step: "Prunar e substituir"
+        action: "Desativar parcerias improdutivas, adicionar novas"
+        output: "Circulo otimizado com parceiros ativos"
+        agent: "partner-strategist"
+
+quality_gates:
+
+  gate_1_partners_identified:
+    name: "Parceiros Identificados"
+    criteria:
+      - "15-20 parceiros potenciais mapeados"
+      - "Top 5 selecionados com criterios documentados"
+      - "Nenhum parceiro e concorrente direto"
+    blocker: true
+
+  gate_2_relationships_built:
+    name: "Relacionamentos Construidos"
+    criteria:
+      - "3-5 toques de valor dados a cada parceiro"
+      - "Pelo menos 1 referral proativo feito para cada"
+      - "Almoco/cafe realizado com cada parceiro prioritario"
+    blocker: true
+
+  gate_3_first_mailing_sent:
+    name: "Primeiro Mailing Enviado"
+    criteria:
+      - "Carta aprovada pelo parceiro"
+      - "Tracking code configurado"
+      - "Mailing enviado para lista do parceiro"
+      - "Resultados monitorados e reportados"
+    blocker: false
+
+  gate_4_circle_active:
+    name: "Circulo Ativo"
+    criteria:
+      - "5+ parceiros ativos com endorsed mailings realizados"
+      - "Reciprocidade estabelecida (dando e recebendo)"
+      - "Newsletter para parceiros em circulacao"
+      - "Pelo menos 1 evento para parceiros realizado"
+    blocker: false
+
+metrics:
+  primary:
+    - name: "Parceiros Ativos"
+      target_6m: "5-7"
+      target_12m: "10-15"
+
+    - name: "Endorsed Mailings Enviados"
+      target_6m: "3-5"
+      target_12m: "8-12"
+
+    - name: "Taxa de Resposta"
+      formula: "(Leads / Lista total enviada) x 100"
+      target: "2-5%"
+
+    - name: "Novos Clientes via Champion Circle"
+      target_6m: "10-20"
+      target_12m: "30-60"
+
+    - name: "ROI por Endorsed Mailing"
+      formula: "Receita gerada / Custo do mailing"
+      target: "5:1+"
+
+  per_partner:
+    - "Tamanho da lista acessada"
+    - "Leads gerados"
+    - "Conversoes"
+    - "CLV dos clientes vindos desse parceiro"
+    - "Referrals dados vs recebidos (reciprocidade)"
+    - "Frequencia de endorsed mailings"
+
+resources:
+  budget_per_endorsed_mailing:
+    copywriting: "$200-500"
+    printing_and_postage: "$500-2.000"
+    special_report_included: "$100-300"
+    total_per_mailing: "$800-2.800"
+
+  relationship_maintenance:
+    partner_gifts_quarterly: "$100-300/parceiro"
+    partner_newsletter: "$200-500/edicao"
+    partner_events: "$500-2.000/evento"
+    monthly_total: "$500-1.500"
+
+dependencies:
+  requires:
+    - sop: "sop-referral-machine.md"
+      reason: "Base de newsletter e referral system ja operacionais"
+  feeds_into:
+    - sop: "sop-follow-up-sequence.md"
+      reason: "Leads de endorsed mailings entram no follow-up"
+  amplified_by:
+    - sop: "sop-affluent-attraction.md"
+      reason: "Parceiros premium para mercado afluente"
+
+sources:
+  - "dan-kennedy-referral-machine/dan-kennedy-referral-machine-summary.md"
+  - "dan-kennedy-referral-machine/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-affluent-client/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-magnetic-marketing/raw-data-package/frameworks-extract.md"

@@ -1,0 +1,360 @@
+# Blueprint: Fascination Bullets Squad Blueprint
+# Source: Fascination Marketing System (12 Sessions) + Copywriting Academy
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: fascination-bullets-blueprint
+  title: "Fascination Bullet System — Squad Execution Blueprint"
+  version: "1.0"
+# source_sop: sop-fascination-bullets.md
+  date: "2026-02-11"
+  squad: kennedy
+  source_courses:
+    - "Fascination Marketing System (Dan Kennedy + Sally Hogshead)"
+    - "Copywriting Academy (Dan Kennedy)"
+  total_triggers: 7
+  total_archetypes: 49
+  gold_hallmarks: 6
+  sop_reference: "sop-fascination-bullets.md"
+  tags:
+    - fascination
+    - personality-branding
+    - premium-pricing
+    - curiosity-bullets
+    - seven-triggers
+    - differentiation
+
+core_philosophy:
+  binary_choice: "Biggest budget or most fascinating — no third option"
+  identity_income: "The higher the income, the more paid for WHO you are, not WHAT you do"
+  anti_boring: "Boring is worse than controversial — boring actively damages your brand"
+  kennedy_quote: >
+    "Your personality is your ultimate asset. It costs nothing to create.
+    It cannot be copied by competitors. Unlike an overhead cost, your
+    personality appreciates every year."
+
+agents:
+
+  trigger_profiler:
+    role: "Fascination Trigger Identification Specialist"
+    description: >
+      Identifies primary, secondary, and dormant fascination triggers
+      for individuals and brands using the 7-trigger framework and
+      49-archetype matrix.
+    primary_frameworks:
+      - "7 Triggers of Fascination"
+      - "49 Personality Archetypes"
+      - "Primary/Secondary/Dormant hierarchy"
+    inputs:
+      - "Self-description at peak performance"
+      - "What feels draining and unnatural"
+      - "Communication style analysis"
+      - "Client feedback patterns"
+    outputs:
+      - "Trigger profile (primary, secondary, dormant)"
+      - "Archetype identification with 3 adjectives"
+      - "9-Second Fascination Statement"
+      - "Dormant trigger delegation recommendations"
+    quality_gates:
+      - "Primary and secondary triggers identified with evidence"
+      - "Dormant trigger identified with delegation plan"
+      - "9-Second Statement passes substitution test"
+      - "3 adjectives selected and validated"
+
+  bullet_architect:
+    role: "Fascination Bullet Creation Specialist"
+    description: >
+      Creates fascination bullets calibrated to specific triggers.
+      Each bullet is designed to activate neurological fascination
+      responses — curiosity gaps, emotional spikes, authority signals,
+      urgency activators, or pattern disruptions.
+    primary_frameworks:
+      - "7 Trigger Bullet Formulas"
+      - "Open Loop Mechanics (Mystique)"
+      - "Specificity Amplification (Alarm)"
+      - "Emotional Compression (Passion)"
+      - "Authority Declaration (Power)"
+    inputs:
+      - "Target audience trigger profile"
+      - "Product/service features and benefits"
+      - "Available proof and data points"
+      - "Desired trigger mix for the piece"
+    outputs:
+      - "Fascination bullet library (minimum 21 — 3 per trigger)"
+      - "Trigger-tagged bullet catalog"
+      - "Recommended bullet sequence for specific piece"
+      - "A/B test variants per trigger"
+    quality_gates:
+      - "Every bullet activates at least 1 identifiable trigger"
+      - "Mix of triggers across the piece (not all same type)"
+      - "Mystique bullets contain genuine open loops"
+      - "Alarm bullets use specific numbers (not round)"
+      - "No generic bullets that could apply to any product"
+
+  brand_fascination_auditor:
+    role: "Brand Fascination Audit Specialist"
+    description: >
+      Evaluates brands against the 6 Gold Hallmarks of a Fascinating
+      Brand and identifies gaps, opportunities, and strategic
+      initiatives to increase fascination score.
+    primary_frameworks:
+      - "6 Gold Hallmarks"
+      - "T-Shirt Test"
+      - "Binary Choice (Budget vs Fascination)"
+      - "Five-Step Fanatic Conversion"
+      - "Social Currency Metrics"
+    inputs:
+      - "Brand marketing materials"
+      - "Customer feedback and testimonials"
+      - "Social media presence and mentions"
+      - "Competitive landscape"
+    outputs:
+      - "6 Hallmarks scorecard (1-10 each)"
+      - "T-Shirt Test result"
+      - "Gap analysis with priority recommendations"
+      - "Fanatic conversion strategy"
+      - "Social currency building plan"
+    quality_gates:
+      - "All 6 hallmarks scored with evidence"
+      - "Weakest 2 hallmarks have specific action plans"
+      - "T-Shirt Test clearly passed or failed"
+      - "Social currency metrics defined and baseline measured"
+
+  trigger_copywriter:
+    role: "Trigger-Based Copy Specialist"
+    description: >
+      Rewrites marketing messages through each of the 7 triggers,
+      creating 7 versions of any message. Identifies which version
+      matches the brand's archetype and recommends the lead version.
+    primary_frameworks:
+      - "7-Trigger Message Rewrite Protocol"
+      - "9-Second Statement Integration"
+      - "Fascination-to-Copy Translation"
+      - "Trigger-Based Closing Strategies"
+    inputs:
+      - "Current marketing message"
+      - "Brand archetype and adjectives"
+      - "Target audience trigger profile"
+      - "Sales context (channel, stage, objective)"
+    outputs:
+      - "7 versions of marketing message (one per trigger)"
+      - "Recommended lead version with rationale"
+      - "Closing strategy matched to trigger"
+      - "Golden window script (first 9 seconds)"
+    quality_gates:
+      - "All 7 versions distinctly different"
+      - "Lead version matches brand archetype"
+      - "Each version clearly activates its target trigger"
+      - "Closing strategy specified for each version"
+
+  indoctrination_designer:
+    role: "Client Indoctrination Process Specialist"
+    description: >
+      Designs multi-step client acquisition processes based on
+      Dan Kennedy's indoctrination model, using fascination triggers
+      at each stage to pre-sell prospects before pricing conversations.
+    primary_frameworks:
+      - "Dan Kennedy's 7-Step Indoctrination Process"
+      - "3-Tier Customer Value (Transactional > Relational > Fascinated)"
+      - "No-Competition Zone Design"
+      - "Strategic Inaccessibility"
+    inputs:
+      - "Brand archetype and trigger profile"
+      - "Current client acquisition process"
+      - "Target client profile"
+      - "Price point and positioning"
+    outputs:
+      - "Multi-step indoctrination process"
+      - "Trigger deployment map (which trigger at each stage)"
+      - "Indoctrination materials checklist"
+      - "Migration strategy (Tier 1 → 2 → 3)"
+    quality_gates:
+      - "Minimum 5 steps before pricing conversation"
+      - "Different trigger deployed at each stage"
+      - "Barrier to entry creates perceived demand"
+      - "Pre-sale materials demonstrate archetype"
+
+workflow:
+
+  phase_1_profiling:
+    name: "Fascination Profiling"
+    description: "Identify triggers, archetype, and create 9-Second Statement"
+    duration: "1 day"
+    steps:
+      - step: "Trigger identification (primary, secondary, dormant)"
+        agent: trigger_profiler
+        output: "Complete trigger profile"
+      - step: "Archetype identification with 3 adjectives"
+        agent: trigger_profiler
+        output: "Archetype card with adjectives"
+      - step: "9-Second Fascination Statement creation"
+        agent: trigger_profiler
+        output: "Validated fascination statement"
+    gate: "Statement passes substitution test"
+
+  phase_2_audit:
+    name: "Brand Fascination Audit"
+    description: "Evaluate current brand against 6 Gold Hallmarks"
+    duration: "1 day"
+    steps:
+      - step: "6 Gold Hallmarks scoring"
+        agent: brand_fascination_auditor
+        output: "Hallmarks scorecard"
+      - step: "T-Shirt Test"
+        agent: brand_fascination_auditor
+        output: "Pass/fail with evidence"
+      - step: "Binary Choice assessment"
+        agent: brand_fascination_auditor
+        output: "Strategic clarity document"
+      - step: "Competitive fascination comparison"
+        agent: brand_fascination_auditor
+        output: "Competitive fascination map"
+    gate: "All 6 hallmarks scored, weakest 2 with action plans"
+
+  phase_3_bullet_creation:
+    name: "Fascination Bullet Library"
+    description: "Create trigger-calibrated bullet library"
+    duration: "1-2 days"
+    steps:
+      - step: "Create 3+ bullets per trigger (minimum 21 total)"
+        agent: bullet_architect
+        output: "Trigger-tagged bullet library"
+      - step: "Create 7 message versions (one per trigger)"
+        agent: trigger_copywriter
+        output: "7 message versions"
+      - step: "Identify lead version matching archetype"
+        agent: trigger_copywriter
+        output: "Lead version recommendation"
+      - step: "Design golden window scripts (first 9 seconds)"
+        agent: trigger_copywriter
+        output: "Golden window scripts by context"
+    gate: "21+ bullets created, 7 versions written, lead selected"
+
+  phase_4_indoctrination:
+    name: "Client Indoctrination Design"
+    description: "Build fascination-based client acquisition process"
+    duration: "1-2 days"
+    steps:
+      - step: "Map current client acquisition process"
+        agent: indoctrination_designer
+        output: "Current process documentation"
+      - step: "Design indoctrination process with trigger stages"
+        agent: indoctrination_designer
+        output: "Indoctrination process blueprint"
+      - step: "Create indoctrination materials"
+        agent: indoctrination_designer
+        output: "Materials checklist and templates"
+      - step: "Design Tier migration strategy"
+        agent: indoctrination_designer
+        output: "Tier 1→2→3 migration plan"
+    gate: "5+ step process designed with trigger at each stage"
+
+  phase_5_implementation:
+    name: "Deploy & Optimize"
+    description: "Implement fascination strategy and measure results"
+    duration: "Ongoing"
+    steps:
+      - step: "Deploy lead message version"
+        agent: trigger_copywriter
+        output: "Live marketing with fascination bullets"
+      - step: "Launch indoctrination process"
+        agent: indoctrination_designer
+        output: "Active indoctrination sequence"
+      - step: "Track fascination metrics"
+        agent: brand_fascination_auditor
+        output: "Monthly fascination dashboard"
+      - step: "A/B test trigger variations"
+        agent: bullet_architect
+        output: "Trigger performance data"
+    gate: "Metrics tracked for 30+ days, lead trigger validated"
+
+quality_gates:
+
+  substitution_test:
+    description: "9-Second Statement must not work for competitors"
+    method: "Replace your name with competitor's name — if it still works, too generic"
+    failure_action: "Add more personality-specific language"
+
+  trigger_coverage:
+    description: "Bullet library must cover all 7 triggers"
+    minimum_per_trigger: 3
+    total_minimum: 21
+    failure_action: "Create missing trigger bullets"
+
+  hallmark_scoring:
+    description: "Brand must score above 5/10 on at least 4 of 6 hallmarks"
+    target: "4+ hallmarks above 5/10"
+    failure_action: "Create specific improvement plans for weak hallmarks"
+
+  indoctrination_depth:
+    description: "Client process must have 5+ steps before pricing"
+    minimum_steps: 5
+    failure_action: "Add barrier, doutrinacao, or waiting stages"
+
+  archetype_alignment:
+    description: "All marketing must align with identified archetype"
+    method: "Archetype adjectives present in messaging"
+    failure_action: "Rewrite to incorporate archetype adjectives"
+
+frameworks_reference:
+  seven_triggers:
+    triggers:
+      - name: "Power"
+        mechanism: "Serotonin shift — automatic deference"
+        bullet_style: "Imperative, commanding"
+      - name: "Passion"
+        mechanism: "Emotional bonding"
+        bullet_style: "Story-driven, sensory"
+      - name: "Prestige"
+        mechanism: "Aspiration activation"
+        bullet_style: "Exclusivity, status"
+      - name: "Mystique"
+        mechanism: "Knowledge gap closure need"
+        bullet_style: "Open loops, partial reveals"
+      - name: "Alarm"
+        mechanism: "Sympathetic nervous system"
+        bullet_style: "Specific numbers, deadlines"
+      - name: "Rebellion"
+        mechanism: "Pattern disruption attention"
+        bullet_style: "Contrarian, inversions"
+      - name: "Trust"
+        mechanism: "Neurological pattern recognition"
+        bullet_style: "Temporal proof, consistency"
+    source: "Fascination Marketing, Modules 1-5"
+
+  six_gold_hallmarks:
+    hallmarks:
+      - "Provokes strong emotional reaction"
+      - "Creates advocates (not just customers)"
+      - "Becomes cultural shorthand"
+      - "Incites conversation"
+      - "Forces competitor realignment"
+      - "Taps into social movements"
+    source: "Fascination Marketing, Module 5"
+
+  three_tier_customer_value:
+    tiers:
+      - tier: 1
+        name: "Transactional"
+        value: "Base"
+        characteristic: "Buy on price"
+      - tier: 2
+        name: "Relational"
+        value: "Multiplied"
+        characteristic: "Buy on relationship"
+      - tier: 3
+        name: "Fascinated"
+        value: "Maximum multiplied"
+        characteristic: "Buy on identity"
+    source: "Fascination Marketing, Bonus CD01"
+
+dependencies:
+  related_sops:
+    - sop: "sop-mind-hijacking.md"
+      integration: "Emotional hijacks + fascination triggers = layered persuasion"
+    - sop: "sop-copywriting-academy.md"
+      integration: "Diagnostic approach + trigger profiling = personalized sales"
+    - sop: "sop-brass-balls-pricing.md"
+      integration: "Fascination as financial asset = premium pricing justified"
+    - sop: "sop-advertorial-tearsheet.md"
+      integration: "Fascination bullets in editorial format = credibility + curiosity"

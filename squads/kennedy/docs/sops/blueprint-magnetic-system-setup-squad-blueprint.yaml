@@ -1,0 +1,679 @@
+# Magnetic Marketing System Setup Squad Blueprint
+# Pattern: KN-SB-001 (Kennedy Squad Blueprint Standard)
+# Source: Magnetic Marketing — Dan Kennedy, Chapters 4-9
+# Version: 1.0.0
+# Generated: 2026-02-11
+
+squad:
+  name: magnetic-system-setup
+  purpose: "Build the complete Magnetic Marketing System with 3 Pillars (Attract + Convert + Retain) governed by 10 Foundational Rules"
+  domain: marketing-system-architecture
+  source_playbook: "Magnetic Marketing — Dan Kennedy, Chapters 4-9"
+
+  core_definition: |
+    Magnetic Marketing System = Attraction System (Lead Generation)
+                              + Conversion System (Lead-to-Customer)
+                              + Retention System (Customer Lifetime Value)
+                              GOVERNED BY: 10 Non-Negotiable Foundational Rules
+
+  business_impact: |
+    - Elimination of Rollercoaster Marketing (feast-famine cycle)
+    - Predictable revenue through measurable system
+    - Scalability via independent optimization of each pillar
+    - 24/7/365 customer attraction machine
+
+# ===============================================================================
+# TIER STRUCTURE
+# ===============================================================================
+
+tier_structure:
+  orchestrator:
+    - agent: system-architect
+      role: "Orchestrate complete Magnetic Marketing System build across 3 pillars"
+      decisions:
+        - "Sequence pillar construction (Attraction + Conversion together, then Retention)"
+        - "Ensure 10 Foundational Rules compliance across all components"
+        - "Validate Triangle alignment (Message-Market-Media)"
+      kpis:
+        - "System completeness score (3 pillars active)"
+        - "10 Rules compliance rate"
+        - "Lead-to-Customer conversion rate"
+
+  tier_0_diagnosis:
+    - agent: who-profiler
+      role: "Define the WHO with precision using 5 Psychographic Questions"
+      inputs:
+        - "Business description"
+        - "Current customer base data"
+        - "Industry category"
+      outputs:
+        - "WHO Profile (Geographic + Demographic + Psychographic)"
+        - "WHO wants matrix (what they THINK vs what they REALLY want)"
+        - "5 Psychographic Discovery answers"
+      source: "Magnetic Marketing Cap.4-5, p.48-65"
+
+    - agent: usp-architect
+      role: "Build the USP answering Kennedy's 3 Questions"
+      inputs:
+        - "WHO Profile from who-profiler"
+        - "Competitive landscape"
+        - "Business strengths and differentiators"
+      outputs:
+        - "USP Statement"
+        - "3 Questions answered"
+        - "Widget concept (offer on steroids)"
+      source: "Magnetic Marketing Cap.1, p.21-30; Cap.5, p.65-70"
+
+    - agent: system-auditor
+      role: "Audit current marketing against 9 Fatal Mistakes and 10 Rules"
+      inputs:
+        - "Current marketing materials"
+        - "Last 90 days marketing activities"
+        - "Current metrics (if available)"
+      outputs:
+        - "9 Fatal Mistakes audit report"
+        - "10 Rules compliance scorecard"
+        - "Gap analysis with priority recommendations"
+      source: "Magnetic Marketing Cap.2, p.21-40; Cap.6, p.83-100"
+
+  tier_1_execution:
+    - agent: attraction-builder
+      role: "Build Pillar 1 — Attraction System with Lead Gen Magnet and distribution"
+      specialization: "Lead Generation Magnet creation + multi-channel distribution"
+      capabilities:
+        - "Create LGM fulfilling 4 Jobs (response, dissatisfaction, expertise, predispose)"
+        - "Design tabloid-style headlines for LGM"
+        - "Build capture-only landing pages"
+        - "Configure minimum 3 distribution channels"
+      source: "Magnetic Marketing Cap.7, p.102-108"
+
+    - agent: conversion-builder
+      role: "Build Pillar 2 — Conversion System with Multi-Step Campaign + Shock & Awe"
+      specialization: "3-Step Letter Sequence + Shock and Awe Package"
+      capabilities:
+        - "Create 3-step campaign with escalating urgency"
+        - "Design Shock and Awe Package (minimum 5 elements)"
+        - "Implement linkage between campaign steps"
+        - "Add consultation offers for service businesses"
+      source: "Magnetic Marketing Cap.8, p.108-115"
+
+    - agent: retention-builder
+      role: "Build Pillar 3 — Retention System with Newsletter + Referrals"
+      specialization: "Monthly newsletter + active referral system"
+      capabilities:
+        - "Design physical newsletter with 4 content types"
+        - "Create referral request system"
+        - "Identify and activate Champion circles"
+        - "Configure endorsed mailing process"
+      source: "Magnetic Marketing Cap.9, p.118-128"
+
+    - agent: triangle-aligner
+      role: "Ensure Message-Market-Media alignment across all components"
+      specialization: "Magnetic Marketing Triangle validation"
+      capabilities:
+        - "Validate Message matches WHO desires (not features)"
+        - "Verify Media channels match WHERE the WHO is"
+        - "Check alignment between all 3 vertices"
+        - "Flag misalignment and recommend fixes"
+      source: "Magnetic Marketing Cap.5, p.61-80"
+
+  tier_2_judgment:
+    - agent: rules-enforcer
+      role: "Enforce 10 Foundational Rules across all marketing pieces"
+      responsibilities:
+        - "Validate every piece has specific offer (Rule 1)"
+        - "Verify urgency/deadline in every piece (Rule 2)"
+        - "Check instructions clarity (Rule 3)"
+        - "Confirm tracking mechanism (Rule 4)"
+        - "Block brand-building spend (Rule 5)"
+        - "Verify follow-up system exists (Rule 6)"
+        - "Evaluate copy strength (Rule 7)"
+        - "Check mail-order format (Rule 8)"
+        - "Demand results metrics (Rule 9)"
+        - "Maintain discipline (Rule 10)"
+      source: "Magnetic Marketing Cap.6, p.83-100"
+
+    - agent: copy-reviewer
+      role: "Review all copy for Kennedy-standard direct response quality"
+      responsibilities:
+        - "Ensure conversational, emotional tone (not corporate)"
+        - "Verify 'Hulk not Casper Milquetoast' boldness"
+        - "Check benefit-driven (not feature-driven) messaging"
+        - "Validate tabloid-style headlines"
+        - "Confirm clear CTA in every piece"
+      philosophy: |
+        "Timid salesmen have skinny kids." — Zig Ziglar
+        Copy must be bold, emotional, conversational.
+        Two fatal errors: writing factual/professional instead of emotional,
+        and being timid in promises.
+      source: "Magnetic Marketing Cap.6, Rule #7"
+
+    - agent: roi-tracker
+      role: "Track and analyze ROI for every marketing component"
+      responsibilities:
+        - "Calculate cost per lead by channel"
+        - "Track lead-to-customer conversion rate"
+        - "Monitor customer lifetime value"
+        - "Compare ROI across channels"
+        - "Recommend budget allocation"
+      metrics:
+        - "Cost per Lead = Ad spend / Leads generated"
+        - "Conversion Rate = Customers / Leads"
+        - "CAC = Total cost / Customers acquired"
+        - "LTV/CAC Ratio (target > 3:1)"
+      source: "Magnetic Marketing Cap.6, Rule #4 and #9"
+
+# ===============================================================================
+# AGENT DEFINITIONS
+# ===============================================================================
+
+agents:
+  system-architect:
+    id: system-architect
+    title: "Magnetic Marketing System Architect"
+    tier: orchestrator
+    icon: "magnet"
+    purpose: |
+      Orchestrate the complete Magnetic Marketing System build.
+      Ensure all 3 pillars are constructed, connected, and governed
+      by the 10 Foundational Rules.
+    core_frameworks:
+      - name: "3-Pillar System"
+        source: "Magnetic Marketing Cap.7-9"
+        pillars:
+          - "Attraction: Lead Gen Magnet + Distribution"
+          - "Conversion: Multi-Step Campaign + Shock & Awe"
+# source_sop: sop-magnetic-system-setup.md
+          - "Retention: Newsletter + Referrals"
+      - name: "Magnetic Marketing Triangle"
+        source: "Magnetic Marketing Cap.5"
+        vertices: ["Market (WHO)", "Message (WHAT)", "Media (WHERE)"]
+      - name: "10 Foundational Rules"
+        source: "Magnetic Marketing Cap.6"
+        principle: "Non-negotiable commandments governing all marketing"
+    decision_authority:
+      - "Approve WHO profile"
+      - "Validate USP"
+      - "Approve pillar build sequence"
+      - "Declare system operational"
+    inputs:
+      - "Business description and goals"
+      - "Current marketing materials"
+      - "Available budget and resources"
+    outputs:
+      - "Complete Magnetic Marketing System"
+      - "System operation manual"
+      - "KPI dashboard"
+
+  who-profiler:
+    id: who-profiler
+    title: "WHO Discovery Specialist"
+    tier: tier_0
+    icon: "target"
+    purpose: |
+      Define the ideal customer (WHO) with surgical precision using
+      Kennedy's Geographic + Demographic + Psychographic framework.
+    methodology:
+      step_1: "Define geographic boundaries"
+      step_2: "Define demographic profile"
+      step_3: "Answer 5 Psychographic Questions"
+      step_4: "Build WHO wants matrix (think they sell vs really want)"
+    psychographic_questions:
+      - "What keeps them awake at night, staring at the ceiling, worried?"
+      - "What are they AFRAID of?"
+      - "What/who are they ANGRY at?"
+      - "What are their three biggest daily FRUSTRATIONS?"
+      - "What TREND is happening or coming in their business/life?"
+    who_matrix_template:
+      columns: ["Industry", "What They THINK They Sell", "What WHO REALLY Wants"]
+      source: "Magnetic Marketing Cap.4, p.48-58"
+
+  system-auditor:
+    id: system-auditor
+    title: "Marketing System Auditor"
+    tier: tier_0
+    icon: "clipboard"
+    purpose: |
+      Audit current marketing against Kennedy's 9 Fatal Mistakes
+      and 10 Foundational Rules to identify gaps and priorities.
+    audit_framework:
+      nine_mistakes:
+        - "Wrong People (marketing to unqualified audience)"
+        - "Wrong Things (saying what doesn't resonate)"
+        - "Wrong Actions (marketing without strategy)"
+        - "Wrong Media (channels where WHO isn't)"
+        - "No System (random acts of marketing)"
+        - "Chasing Clients (pursuing instead of attracting)"
+        - "Coca-Cola Thinking (copying big corp strategies)"
+        - "Race to the Bottom (competing on price)"
+        - "No Follow Up (wasting lead investment)"
+      ten_rules_check:
+        - "Every piece has specific offer"
+        - "Every piece has urgency"
+        - "Clear instructions in every piece"
+        - "Tracking on every piece"
+        - "Zero brand-building spend"
+        - "Follow up system exists"
+        - "Copy is strong and emotional"
+        - "Mail-order format used"
+        - "Results are tracked"
+        - "Discipline maintained"
+    outputs:
+      - "9 Mistakes score (0-9)"
+      - "10 Rules compliance (0-10)"
+      - "Priority action list"
+
+# ===============================================================================
+# EXECUTOR MATRIX
+# ===============================================================================
+
+executor_matrix:
+  # Phase 1: Diagnosis
+  - task: "Complete 9 Fatal Mistakes audit"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Use checklist, human validates judgment calls"
+
+  - task: "Define WHO profile (Geographic + Demographic)"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "AI researches, human validates"
+
+  - task: "Answer 5 Psychographic Questions"
+    executor: Human
+    automation: LOW
+    guardrails: "Requires deep customer knowledge"
+
+  - task: "Build USP answering 3 Questions"
+    executor: Human
+    automation: LOW
+    guardrails: "Strategic decision requiring business owner input"
+
+  # Phase 2: Triangle Alignment
+  - task: "Map Message to WHO desires"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "AI drafts, human validates emotional accuracy"
+
+  - task: "Select Media channels where WHO is"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Research-based with human approval"
+
+  - task: "Create Widget (offer on steroids)"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must be impossible to compare with competitors"
+
+  # Phase 3: Pillar Construction
+  - task: "Create Lead Generation Magnet"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must fulfill 4 Jobs, tabloid-style title"
+
+  - task: "Build landing page (capture only)"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Zero navigation, zero distraction, only capture"
+
+  - task: "Configure 3+ distribution channels"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Tracking per channel required"
+
+  - task: "Create 3-Step Letter Sequence"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Escalating urgency, linkage between steps"
+
+  - task: "Build Shock and Awe Package"
+    executor: Hybrid
+    automation: LOW
+    guardrails: "Minimum 5 elements, physical preferred"
+
+  - task: "Design monthly newsletter template"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "4 content types, physical preferred"
+
+  - task: "Create referral request system"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Simple form, peak satisfaction timing"
+
+  # Phase 4: Integration
+  - task: "Connect 3 pillars into flow"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "No gaps in funnel, all leads get follow up"
+
+  - task: "Configure tracking dashboard"
+    executor: Worker
+    automation: HIGH
+    guardrails: "All KPIs visible"
+
+  - task: "Validate 10 Rules compliance across all pieces"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Every piece checked against all 10 rules"
+
+  # Phase 5: Launch and Optimize
+  - task: "Launch system across channels"
+    executor: Human
+    automation: LOW
+    guardrails: "Staged rollout recommended"
+
+  - task: "Track results and calculate ROI"
+    executor: Hybrid
+    automation: HIGH
+    guardrails: "Weekly reporting minimum"
+
+  - task: "Split-test and optimize"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Results-only decision making (Rule 9)"
+
+# ===============================================================================
+# QUALITY GATES
+# ===============================================================================
+
+quality_gates:
+  QG-001:
+    name: "WHO Definition Gate"
+    transition: "Diagnosis -> Triangle Alignment"
+    condition: "who_geographic_defined AND who_demographic_defined AND who_psychographic_answered"
+    type: blocking
+    failure_action: "Return to WHO profiling, answer all 5 psychographic questions"
+    source: "Magnetic Marketing Cap.4-5"
+
+  QG-002:
+    name: "USP Clarity Gate"
+    transition: "WHO Definition -> Message Creation"
+    condition: "usp_answers_3_questions AND usp_impossible_to_compare"
+    type: blocking
+    failure_action: "Refine USP until it passes 3-question test"
+    source: "Magnetic Marketing Cap.1, p.21-30"
+
+  QG-003:
+    name: "Triangle Alignment Gate"
+    transition: "Triangle Setup -> Pillar Construction"
+    condition: "message_matches_who_desires AND media_matches_who_location AND all_three_aligned"
+    type: blocking
+    failure_action: "Realign vertices until all three match"
+    source: "Magnetic Marketing Cap.5, p.61-80"
+
+  QG-004:
+    name: "Attraction Pillar Gate"
+    transition: "LGM Creation -> Conversion Build"
+    condition: "lgm_fulfills_4_jobs AND landing_page_capture_only AND min_3_channels_active"
+    type: blocking
+    failure_action: "Complete missing attraction components"
+    source: "Magnetic Marketing Cap.7"
+
+  QG-005:
+    name: "Conversion Pillar Gate"
+    transition: "Conversion Build -> Retention Build"
+    condition: "multi_step_campaign_3_steps AND shock_awe_min_5_elements AND linkage_verified"
+    type: blocking
+    failure_action: "Complete missing conversion components"
+    source: "Magnetic Marketing Cap.8"
+
+  QG-006:
+    name: "Retention Pillar Gate"
+    transition: "Retention Build -> Integration"
+    condition: "newsletter_template_4_types AND referral_system_active"
+    type: warning
+    failure_action: "Add missing retention components before scaling"
+    source: "Magnetic Marketing Cap.9"
+
+  QG-007:
+    name: "10 Rules Compliance Gate"
+    transition: "Integration -> Launch"
+    condition: "all_pieces_have_offer AND all_pieces_have_urgency AND tracking_configured AND follow_up_systematic"
+    type: blocking
+    failure_action: "Fix non-compliant pieces before launch"
+    source: "Magnetic Marketing Cap.6"
+
+  QG-008:
+    name: "System Integration Gate"
+    transition: "Integration -> Launch"
+    condition: "no_gaps_in_funnel AND all_transitions_working AND dashboard_configured"
+    type: blocking
+    failure_action: "Fix integration gaps"
+    source: "Magnetic Marketing System Architecture"
+
+# ===============================================================================
+# WORKFLOWS
+# ===============================================================================
+
+workflows:
+  magnetic_system_build:
+    trigger: "New business needs complete Magnetic Marketing System"
+    steps:
+      - step: 1
+        name: "System Audit"
+        agent: system-auditor
+        action: "Audit current marketing against 9 Mistakes and 10 Rules"
+        output: "Audit report with gap analysis"
+        gate: null
+
+      - step: 2
+        name: "WHO Discovery"
+        agent: who-profiler
+        action: "Define WHO with Geographic + Demographic + Psychographic"
+        output: "Complete WHO profile"
+        gate: QG-001
+
+      - step: 3
+        name: "USP Creation"
+        agent: usp-architect
+        action: "Build USP answering 3 Kennedy Questions"
+        output: "USP Statement + Widget concept"
+        gate: QG-002
+
+      - step: 4
+        name: "Triangle Alignment"
+        agent: triangle-aligner
+        action: "Align Message-Market-Media"
+        output: "Aligned Triangle documentation"
+        gate: QG-003
+
+      - step: 5
+        name: "Attraction Pillar Build"
+        agent: attraction-builder
+        action: "Create LGM + Landing Page + Distribution channels"
+        output: "Complete Attraction System"
+        gate: QG-004
+
+      - step: 6
+        name: "Conversion Pillar Build"
+        agent: conversion-builder
+        action: "Create Multi-Step Campaign + Shock & Awe"
+        output: "Complete Conversion System"
+        gate: QG-005
+
+      - step: 7
+        name: "Retention Pillar Build"
+        agent: retention-builder
+        action: "Create Newsletter + Referral System"
+        output: "Complete Retention System"
+        gate: QG-006
+
+      - step: 8
+        name: "Rules Compliance Check"
+        agent: rules-enforcer
+        action: "Validate all pieces against 10 Rules"
+        output: "Compliance report"
+        gate: QG-007
+
+      - step: 9
+        name: "System Integration"
+        agent: system-architect
+        action: "Connect 3 pillars into unified flow"
+        output: "Integrated system + dashboard"
+        gate: QG-008
+
+      - step: 10
+        name: "Launch and Track"
+        agent: roi-tracker
+        action: "Launch system and begin tracking ROI"
+        output: "Live system + first metrics"
+        gate: null
+
+  system_optimization:
+    trigger: "Existing system underperforming"
+    steps:
+      - step: 1
+        agent: system-auditor
+        action: "Re-audit against 9 Mistakes and 10 Rules"
+        output: "Updated audit with specific failures"
+
+      - step: 2
+        agent: roi-tracker
+        action: "Identify worst-performing components"
+        output: "Performance ranking by component"
+
+      - step: 3
+        agent: rules-enforcer
+        action: "Check if failing pieces violate any Rules"
+        output: "Rule violation report"
+
+      - step: 4
+        agent: triangle-aligner
+        action: "Verify Triangle still aligned"
+        output: "Alignment status"
+
+      - step: 5
+        agent: copy-reviewer
+        action: "Review copy quality on underperforming pieces"
+        output: "Copy improvement recommendations"
+
+# ===============================================================================
+# KPIs & SUCCESS METRICS
+# ===============================================================================
+
+kpis:
+  system_health:
+    pillar_coverage:
+      formula: "Active pillars / 3"
+      target: "100% (all 3 active)"
+
+    rules_compliance:
+      formula: "Rules followed / 10"
+      target: "100% (all 10 followed)"
+
+    triangle_alignment:
+      formula: "Aligned vertices / 3"
+      target: "100% (all 3 aligned)"
+
+  primary:
+    cost_per_lead:
+      formula: "Total attraction spend / Leads generated"
+      target: "Decreasing month over month"
+      source: "Magnetic Marketing Rule #4"
+
+    conversion_rate:
+      formula: "New customers / Total leads"
+      target: ">10% for services, >2% for products"
+
+    customer_lifetime_value:
+      formula: "Average revenue per customer x Average retention months"
+      target: "Increasing month over month"
+
+    referral_rate:
+      formula: "Referrals / Active customers"
+      target: ">20% of customers refer"
+
+  secondary:
+    ltv_cac_ratio:
+      formula: "Lifetime Value / Customer Acquisition Cost"
+      target: ">3:1"
+
+    multi_step_response:
+      formula: "Responses / Campaign sends"
+      target: ">5% response rate"
+
+    newsletter_retention:
+      formula: "Active subscribers / Total subscribers"
+      target: ">80% retained"
+
+    channel_roi:
+      formula: "(Channel revenue - Channel cost) / Channel cost"
+      target: ">3:1 per channel"
+
+# ===============================================================================
+# TROUBLESHOOTING
+# ===============================================================================
+
+troubleshooting:
+  - symptom: "No leads coming in (Attraction failure)"
+    possible_causes:
+      - "LGM not compelling (fails 4 Jobs)"
+      - "Distribution channels wrong (Media mismatch)"
+      - "WHO definition too broad or wrong"
+      - "Title/headline weak"
+    diagnosis:
+      - "Check LGM against 4 Jobs checklist"
+      - "Verify WHO is in selected channels"
+      - "Test different headlines"
+    solutions:
+      - "Recreate LGM with tabloid-style title"
+      - "Switch to channels where WHO actually is"
+      - "Narrow WHO definition"
+
+  - symptom: "Leads come in but don't convert (Conversion failure)"
+    possible_causes:
+      - "Multi-Step Campaign missing or weak"
+      - "No Shock and Awe Package"
+      - "Urgency insufficient"
+      - "Copy is Casper not Hulk"
+    diagnosis:
+      - "Check if all 3 steps are active"
+      - "Verify Shock & Awe has 5+ elements"
+      - "Review copy for boldness"
+    solutions:
+      - "Implement full 3-Step sequence"
+      - "Build Shock and Awe Package"
+      - "Rewrite copy with emotional, bold tone"
+
+  - symptom: "Customers leave quickly (Retention failure)"
+    possible_causes:
+      - "No newsletter keeping contact"
+      - "Not asking 'What's new?'"
+      - "No referral system active"
+    diagnosis:
+      - "Check newsletter frequency"
+      - "Survey departing customers"
+    solutions:
+      - "Start monthly physical newsletter"
+      - "Add new widgets/offers monthly"
+      - "Implement referral requests at satisfaction peaks"
+
+  - symptom: "System running but ROI poor"
+    possible_causes:
+      - "Triangle misaligned"
+      - "Rules violations"
+      - "Wrong WHO"
+    diagnosis:
+      - "Re-run Triangle alignment check"
+      - "Re-audit against 10 Rules"
+      - "Re-validate WHO with actual customers"
+    solutions:
+      - "Realign Triangle"
+      - "Fix rule violations"
+      - "Redefine WHO based on best customers"
+
+# ===============================================================================
+# VALIDATION
+# ===============================================================================
+
+validation:
+  sop_parts_complete: 10/10
+  frameworks_documented: 5
+  quality_gates_defined: 8
+  workflows_documented: 2
+  agents_defined: 10
+  case_studies_referenced: 4
+  kennedy_quotes_referenced: 15
+
+  blueprint_status: "READY FOR SQUAD EXECUTION"

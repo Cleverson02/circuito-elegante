@@ -1,0 +1,443 @@
+# Blueprint: Brass Balls Pricing Squad Blueprint
+# Source: Brass Balls (6 CDs — Dan Kennedy Live Seminar ~1999)
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: brass-balls-pricing-blueprint
+  title: "Brass Balls Pricing System — Squad Execution Blueprint"
+  version: "1.0"
+# source_sop: sop-brass-balls-pricing.md
+  date: "2026-02-11"
+  squad: kennedy
+  source_course: "Dan Kennedy's Brass Balls"
+  platform: "Live seminar recording (audio CDs)"
+  total_cds: 6
+  total_frameworks: 15
+  sop_reference: "sop-brass-balls-pricing.md"
+  tags:
+    - premium-pricing
+    - self-appraisal
+    - mindset
+    - income-levers
+    - differentiation
+    - specialization
+    - customer-management
+    - marketing-diversity
+
+core_philosophy:
+  self_appraisal: "The marketplace takes you at your own appraisal"
+  pricing_as_courage: "Price is a function of courage and positioning, not market conditions"
+  contrarian_default: "Just look at what everybody else is doing and don't do it"
+  kennedy_quote: >
+    "The truth of the matter is you charge any darn thing you want,
+    and get it. There is a market somewhere for every price point."
+
+agents:
+
+  pricing_courage_coach:
+    role: "Self-Appraisal Pricing & Mindset Specialist"
+    description: >
+      Applies Kennedy's Self-Appraisal Pricing framework to transform
+      pricing from a market-driven calculation into a courage-driven
+      declaration. Guides through mirror practice, resistance calibration,
+      and the testing mindset that eliminates fear of failure.
+    primary_frameworks:
+      - "Self-Appraisal Pricing (5 steps)"
+      - "Brass Balls Hierarchy (5 steps)"
+      - "Testing Mindset vs Failure Mindset"
+      - "Zigzag Principle (Maltz adaptation)"
+      - "Contrarian Default Rule"
+      - "Self-Appointment Protocol (Ringer adaptation)"
+    inputs:
+      - "Current pricing and income"
+      - "Desired income target"
+      - "Number of projects/clients per year"
+      - "Current resistance patterns from prospects"
+    outputs:
+      - "Self-Appraisal pricing calculation"
+      - "Mirror practice protocol with scripts"
+      - "Resistance calibration guide"
+      - "'Top 10 Things I Refuse' list"
+      - "Self-appointment positioning materials"
+    quality_gates:
+      - "Fee calculated from desired income, not market rates"
+      - "Zero hesitation demonstrated in mock pricing conversation"
+      - "Top 10 Refuse list complete and specific"
+      - "Testing mindset language adopted (not success/failure)"
+      - "Some resistance expected and planned for"
+
+  market_intelligence_analyst:
+    role: "10 Smart Questions & Market Research Specialist"
+    description: >
+      Executes Kennedy's 10 Smart Questions framework for deep market
+      empathy. Identifies the enemy (Q3), collects verbatim language (Q8),
+      and maps the emotional and competitive landscape to create marketing
+      that produces extraordinary response.
+    primary_frameworks:
+      - "10 Smart Questions"
+      - "Message-Market-Media Diagnostic"
+      - "Enemy Identification (Q3)"
+      - "Verbatim Language Collection (Q8)"
+    inputs:
+      - "Target market definition"
+      - "Customer conversation transcripts"
+      - "Competitive landscape data"
+      - "Industry trends and frustrations"
+    outputs:
+      - "10 Smart Questions answered with evidence"
+      - "Enemy definition with positioning strategy"
+      - "Verbatim language library"
+      - "Message-Market-Media diagnostic"
+      - "Market sensitivity report"
+    quality_gates:
+      - "All 10 questions answered with real data (not assumptions)"
+      - "Enemy identified with specific positioning against it"
+      - "Language collected from actual customers (verbatim)"
+      - "Message-Market-Media weakest corner identified"
+
+  income_engineer:
+    role: "Seven Income Levers & Revenue Optimization Specialist"
+    description: >
+      Audits and optimizes all seven income levers. Identifies untouched
+      levers, creates action plans for lowest-scoring levers, and
+      implements the 72 Things Model for marketing diversity. Also
+      manages the specialization pricing multiplier and Four-Visit
+      Lock-In for customer retention.
+    primary_frameworks:
+      - "Seven Income Levers"
+      - "72 Things Model (Marketing Diversity)"
+      - "Specialization Pricing Multiplier"
+      - "Four-Visit Lock-In"
+      - "Slack Adjusters (Big Paydays)"
+    inputs:
+      - "Current revenue breakdown by source"
+      - "Active marketing channels list"
+      - "Customer retention data"
+      - "Product/service catalog"
+    outputs:
+      - "Seven Levers scorecard (1-10 each)"
+      - "Action plan for 2-3 lowest levers"
+      - "Marketing diversity audit with reactivation plan"
+      - "Specialized versions with pricing tiers"
+      - "Four-Visit Lock-In implementation plan"
+      - "12-month revenue projection"
+    quality_gates:
+      - "All 7 levers scored with evidence"
+      - "Lowest 2-3 levers have specific action plans"
+      - "Marketing channels audited with cost-per-acquisition"
+      - "Minimum 3 specialized versions created"
+      - "Four-Visit sequence designed with triggers"
+
+  differentiation_strategist:
+    role: "Five Strategies & Anti-Commodity Specialist"
+    description: >
+      Applies Kennedy's Five Differentiation Strategies to escape
+      commodity pricing. Evaluates current differentiation across all
+      five dimensions (Product, Process, Personality, Service, Marketing)
+      and designs strategies to strengthen the weakest dimensions.
+    primary_frameworks:
+      - "Five Differentiation Strategies"
+      - "Credibility + Believability (Preponderance of Proof)"
+      - "Specialization Appearance Strategy"
+      - "Celebrity-Within-Niche Building"
+    inputs:
+      - "Current market position"
+      - "Competitive landscape"
+      - "Available proof elements (credentials, testimonials)"
+      - "Personal brand assets"
+    outputs:
+      - "Five Strategies scorecard"
+      - "Differentiation gap analysis"
+      - "Credibility + Believability audit"
+      - "Specialization appearance plan"
+      - "Proof architecture document"
+    quality_gates:
+      - "All 5 strategies scored"
+      - "Weakest 2 have improvement plans"
+      - "Both credibility AND believability elements present"
+      - "Testimonials from identifiable peers available"
+      - "Specialization appearance constructed (even if generalist)"
+
+  client_quality_manager:
+    role: "Customer Firing & 80/20 Optimization Specialist"
+    description: >
+      Executes Kennedy's Customer Firing Protocol and 80/20 customer
+      audit. Identifies the worst 20% of clients, calculates true cost
+      (including emotional and opportunity cost), and manages surgical
+      removal to improve overall business quality.
+    primary_frameworks:
+      - "Customer Firing Protocol (6 steps)"
+      - "80/20 Customer Audit"
+      - "Stern but Loving Parent Positioning"
+      - "5-90-5 Honesty Distribution"
+      - "Three Never-Delegate Functions"
+    inputs:
+      - "Customer list with revenue data"
+      - "Time/energy expenditure per customer"
+      - "Problem history and complaint patterns"
+      - "Current delegation structure"
+    outputs:
+      - "80/20 customer audit report"
+      - "True cost calculation per problem client"
+      - "Firing scripts (one-on-one and mass)"
+      - "Delegation audit (checkbook, marketing, legal)"
+      - "Net profit analysis (post-firing projection)"
+    quality_gates:
+      - "20% worst customers identified with data"
+      - "True cost includes time, energy, and opportunity"
+      - "Firing method specified for each (direct or silent)"
+      - "Three never-delegate functions verified under owner control"
+      - "Net (not gross) used for all calculations"
+
+  time_protection_architect:
+    role: "Time Engineering & Productivity Specialist"
+    description: >
+      Implements Kennedy's Time Protection System to maximize the value
+      of every minute. Designs regimens, implements access controls,
+      and engineers perceived demand through strategic inaccessibility.
+      Also applies Big Picture Optimist / Detail Pessimist to all
+      planning decisions.
+    primary_frameworks:
+      - "Time Protection System (7 steps)"
+      - "Big Picture Optimist / Detail Pessimist"
+      - "Minute Value Calculation"
+      - "8-9-10 Prospect Readiness Scale"
+      - "Compartmentalization Protocol"
+    inputs:
+      - "Current time allocation"
+      - "Desired work schedule"
+      - "Current accessibility level"
+      - "Planning and contingency data"
+    outputs:
+      - "Minute value calculation"
+      - "Daily regimen with time blocks"
+      - "Access control system design"
+      - "Perceived demand engineering plan"
+      - "Big Picture / Detail Pessimist planning template"
+    quality_gates:
+      - "Minute value calculated and known"
+      - "Prime time blocked daily for highest-value work"
+      - "Tasks decided night before"
+      - "Access limited to 8-9-10 readiness prospects"
+      - "Contingency plans exist for top 5 risks"
+
+workflow:
+
+  phase_1_mindset_foundation:
+    name: "Pricing Courage Foundation"
+    description: "Calculate desired pricing and practice self-appraisal"
+    duration: "1 day"
+    steps:
+      - step: "Calculate desired income and required fee per project"
+        agent: pricing_courage_coach
+        output: "Self-Appraisal pricing calculation"
+      - step: "Practice quoting new price (mirror/video)"
+        agent: pricing_courage_coach
+        output: "Mirror practice completed, zero hesitation"
+      - step: "Write Top 10 Things I Refuse list"
+        agent: pricing_courage_coach
+        output: "Complete refusal list"
+      - step: "Adopt testing mindset (reframe failure as data)"
+        agent: pricing_courage_coach
+        output: "Testing mindset commitment"
+    gate: "Price calculated from income, practiced without hesitation, refusal list complete"
+
+  phase_2_market_intelligence:
+    name: "Deep Market Research"
+    description: "Execute 10 Smart Questions and identify positioning"
+    duration: "2 days"
+    steps:
+      - step: "Answer all 10 Smart Questions with real data"
+        agent: market_intelligence_analyst
+        output: "10 Smart Questions document"
+      - step: "Identify market enemy (Q3) and position against it"
+        agent: market_intelligence_analyst
+        output: "Enemy identification with positioning"
+      - step: "Collect verbatim language from customers (Q8)"
+        agent: market_intelligence_analyst
+        output: "Verbatim language library"
+      - step: "Run Message-Market-Media diagnostic"
+        agent: market_intelligence_analyst
+        output: "Diagnostic with weakest corner identified"
+    gate: "All 10 questions answered with evidence, enemy defined, language collected"
+
+  phase_3_business_audit:
+    name: "Revenue & Client Optimization"
+    description: "Audit income levers, customers, and differentiation"
+    duration: "2 days"
+    steps:
+      - step: "Score Seven Income Levers (1-10 each)"
+        agent: income_engineer
+        output: "Seven Levers scorecard"
+      - step: "Execute 80/20 customer audit"
+        agent: client_quality_manager
+        output: "Customer quality report with true costs"
+      - step: "Audit marketing diversity (72 Things Model)"
+        agent: income_engineer
+        output: "Marketing channel audit"
+      - step: "Score Five Differentiation Strategies"
+        agent: differentiation_strategist
+        output: "Differentiation scorecard"
+      - step: "Audit Credibility + Believability elements"
+        agent: differentiation_strategist
+        output: "Proof architecture document"
+    gate: "All levers scored, worst customers identified, differentiation gaps mapped"
+
+  phase_4_implementation:
+    name: "Bold Execution"
+    description: "Execute pricing changes, customer firing, and specialization"
+    duration: "1 week"
+    steps:
+      - step: "Fire bottom 20% customers (per protocol)"
+        agent: client_quality_manager
+        output: "Firing executed, freed capacity documented"
+      - step: "Create 3+ specialized versions with premium pricing"
+        agent: income_engineer
+        output: "Specialized offerings with 3-5x pricing"
+      - step: "Quote new price to minimum 3 prospects"
+        agent: pricing_courage_coach
+        output: "Resistance calibration data"
+      - step: "Implement time protection system"
+        agent: time_protection_architect
+        output: "Daily regimen operational"
+      - step: "Implement perceived demand engineering"
+        agent: time_protection_architect
+        output: "Access controls and strategic delays active"
+    gate: "Customers fired, specializations launched, new price quoted 3+ times"
+
+  phase_5_optimization:
+    name: "Ongoing Optimization"
+    description: "Track metrics, calibrate, and expand levers"
+    duration: "Ongoing (quarterly review)"
+    steps:
+      - step: "Track Seven Income Levers quarterly"
+        agent: income_engineer
+        output: "Quarterly lever scorecard"
+      - step: "Calibrate pricing based on resistance data"
+        agent: pricing_courage_coach
+        output: "Price adjustment recommendations"
+      - step: "Reactivate abandoned marketing channels"
+        agent: income_engineer
+        output: "Channel reactivation report"
+      - step: "Quarterly customer quality audit"
+        agent: client_quality_manager
+        output: "Updated 80/20 report"
+      - step: "Delegation audit (checkbook, marketing, legal)"
+        agent: client_quality_manager
+        output: "Delegation compliance report"
+    gate: "All levers improving, pricing calibrated, customer quality maintained"
+
+quality_gates:
+
+  self_appraisal_pricing:
+    description: "Price set from desired income, not market comparison"
+    method: "Fee = Desired Annual Income / Projects Per Year"
+    failure_action: "Recalculate from income target, not competitor rates"
+
+  resistance_calibration:
+    description: "Some resistance is healthy; zero resistance means underpriced"
+    target_resistance: "10-25% of prospects push back on price"
+    failure_action: "If 0% resistance, raise price. If >50%, improve positioning"
+
+  seven_levers_coverage:
+    description: "All 7 income levers scored and 2-3 weakest have action plans"
+    minimum_active_levers: 4
+    failure_action: "Create action plan for lowest-scoring lever immediately"
+
+  marketing_diversity:
+    description: "Multiple marketing channels active (72 Things Model)"
+    minimum_channels: 10
+    failure_action: "Reactivate abandoned channels and add new ones"
+
+  proof_architecture:
+    description: "Both credibility AND believability elements present"
+    requirement: "Minimum 3 credibility + 3 believability elements"
+    failure_action: "Strengthen whichever dimension is weaker"
+
+  customer_quality:
+    description: "Bottom 20% identified and removed or restructured"
+    method: "True cost calculation including time and opportunity"
+    failure_action: "Execute Customer Firing Protocol"
+
+  net_not_gross:
+    description: "All financial decisions based on net profit, not gross revenue"
+    enforcement: "Net is the only number that counts"
+    failure_action: "Recalculate removing all costs including opportunity cost"
+
+  time_protection:
+    description: "Prime time blocked daily, minute value calculated"
+    minimum: "2 hours protected daily for highest-value work"
+    failure_action: "Redesign schedule to protect minimum 2 hours"
+
+frameworks_reference:
+  self_appraisal_pricing:
+    steps: 5
+    core_principle: "Marketplace takes you at your own appraisal"
+    kennedy_result: "$25K-$45K+ per copywriting project"
+    source: "Brass Balls, CD 1"
+
+  ten_smart_questions:
+    questions: 10
+    categories: ["Emotional (Q1-4)", "Aspirational (Q5-7)", "Contextual (Q8-10)"]
+    most_important: "Q3 (enemy) and Q8 (language)"
+    kennedy_claim: "The most important thing I teach in marketing"
+    source: "Brass Balls, CD 6"
+
+  seven_income_levers:
+    levers: 7
+    derived_from: "Jay Abraham's 3 Ways (expanded to 7)"
+    application: "Quarterly business review"
+    source: "Brass Balls, CD 6"
+
+  five_differentiation_strategies:
+    strategies: 5
+    list: ["Product", "Process", "Personality", "Service", "Marketing"]
+    insight: "Product is least effective pre-sale; Marketing and Personality are most effective"
+    source: "Brass Balls, CD 6"
+
+  big_picture_detail_pessimist:
+    dimensions: 2
+    paradox_resolution: "Simultaneous optimism (big picture) and pessimism (details)"
+    example: "Air travel — optimistic about arriving, pessimistic about every detail"
+    source: "Brass Balls, CD 4"
+
+  brass_balls_hierarchy:
+    steps: 5
+    sequence: ["Set price boldly", "Stop free work", "Dictate terms", "Fire problem customers", "Engineer perceived demand"]
+    source: "Brass Balls, CDs 1-6"
+
+  seventy_two_things_model:
+    principle: "Many small channels > one magic bullet"
+    example: "Chiropractor with 72 methods, each producing 1 patient/month"
+    source: "Brass Balls, CD 4"
+
+  four_visit_lock_in:
+    visits: 4
+    principle: "After 4 visits, behavior becomes habitual"
+    example: "Dry cleaner grand opening at 89 cents any garment"
+    source: "Brass Balls, CD 6"
+
+  credibility_plus_believability:
+    components: 2
+    credibility: "Time, numbers, associations, publications (necessary but not sufficient)"
+    believability: "Testimonials from identifiable peers (the closer)"
+    example: "Rexall — brand credibility + healthcare professional testimonials"
+    source: "Brass Balls, CD 5"
+
+  five_ninety_five_distribution:
+    honest_always: "5%"
+    conditionally_honest: "90%"
+    dishonest_always: "5%"
+    application: "Healthy paranoia, counting systems, oversight"
+    source: "Brass Balls, CD 5"
+
+dependencies:
+  related_sops:
+    - sop: "sop-copywriting-academy.md"
+      integration: "Compensation Menu + Self-Appraisal = layered premium pricing"
+    - sop: "sop-fascination-bullets.md"
+      integration: "Fascination triggers amplify differentiation strategies"
+    - sop: "sop-mind-hijacking.md"
+      integration: "Proof systems + 1=4 Formula support premium pricing"
+    - sop: "sop-advertorial-tearsheet.md"
+      integration: "Editorial format maximizes credibility before pricing conversation"

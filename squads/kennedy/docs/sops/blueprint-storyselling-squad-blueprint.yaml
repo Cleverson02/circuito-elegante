@@ -1,0 +1,475 @@
+# ============================================================================
+# BLUEPRINT: StorySelling Squad Blueprint
+# Source: No B.S. Guide to Brand-Building by Direct Response, Ch.16-17
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+# ============================================================================
+
+metadata:
+  name: "StorySelling Squad Blueprint"
+  version: "1.0"
+# source_sop: sop-storyselling.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-storyselling.md"
+  description: >
+    Blueprint para operacionalizacao do StorySelling Framework de Dan Kennedy.
+    Define agentes, workflow, quality gates e integracao com o ecossistema kennedy.
+  source:
+    book: "No B.S. Guide to Brand-Building by Direct Response"
+    chapters: "Ch.16-17 (Nick Nanton & J.W. Dicks)"
+    framework: "StorySelling - 4 Key Factors"
+
+# ============================================================================
+# AGENTS
+# ============================================================================
+
+agents:
+  primary:
+    name: "kennedy-brand"
+    role: "StorySelling Architect"
+    responsibilities:
+      - "Define historia central (Origin, Transformation, David vs Goliath)"
+      - "Aplica 4 Key Factors (Simplicity, Authenticity, Visibility, Relevancy)"
+      - "Valida alinhamento com Winning Formula (DR Acquisition + Brand Retention)"
+      - "Garante que toda historia segue Brand-Building by DR principles"
+    source_knowledge:
+      - "Brand-Building by DR, Framework 7 - StorySelling 4 Key Factors"
+      - "Brand-Building by DR, Framework 8 - Disney/Hefner Model"
+      - "Brand-Building by DR, Framework 10 - Toby Keith Strategies"
+
+  supporting:
+    - name: "kennedy-copy"
+      role: "Story Copywriter"
+      responsibilities:
+        - "Escreve versoes longa, media e curta da historia"
+        - "Aplica estrutura AIDA adaptada para StorySelling"
+        - "Garante copy forte e emocional (Rule #7)"
+        - "Integra CTAs e elementos de direct response"
+      source_knowledge:
+        - "Magnetic Marketing, Rule #7 - Strong Copy"
+        - "Copywriting Academy - Fascination Bullet System"
+
+    - name: "kennedy-persuasion"
+      role: "Emotional Trigger Specialist"
+      responsibilities:
+        - "Identifica gatilhos emocionais do WHO"
+        - "Valida Relevancy contra 5 Psychographic Questions"
+        - "Aplica Mind Hijacking techniques para maximizar impacto"
+        - "Garante que historia ativa emocoes corretas"
+      source_knowledge:
+        - "Mind Hijacking Course - Emotional Trigger Architecture"
+        - "Magnetic Marketing, Framework 13 - 5 Psychographic Questions"
+
+    - name: "kennedy-direct-response"
+      role: "DR Compliance Officer"
+      responsibilities:
+        - "Verifica que toda historia tem elementos de DR"
+        - "Garante CTA, oferta, urgencia, rastreamento em cada peca"
+        - "Aplica 10 Regras Fundacionais a cada versao da historia"
+        - "Valida Money Math (ROI mensuravel)"
+      source_knowledge:
+        - "Magnetic Marketing, 10 Regras Fundacionais"
+        - "No B.S. Direct Marketing - 10 No B.S. Rules"
+
+    - name: "kennedy-media"
+      role: "Multi-Channel Distributor"
+      responsibilities:
+        - "Define canais de distribuicao para Visibility"
+        - "Adapta historia para cada formato/canal"
+        - "Garante presenca em 3+ canais (YOUbiquity)"
+        - "Monitora performance por canal"
+      source_knowledge:
+        - "Brand-Building by DR, Heuristica - YOUbiquity"
+        - "DR Social Media, Framework 4 - Count as One Rule"
+
+# ============================================================================
+# WORKFLOW PHASES
+# ============================================================================
+
+workflow:
+  total_estimated_time: "6-8 hours"
+
+  phase_1:
+    name: "Discovery & WHO Analysis"
+    duration: "60-90 min"
+    agent: "kennedy-persuasion"
+    inputs:
+      - "WHO profile (target market definition)"
+      - "USP definido"
+      - "Marketing Triangle alignment"
+      - "Available proof/testimonial materials"
+    activities:
+      - step: "Run 5 Psychographic Discovery Questions"
+        detail: "Map WHO fears, desires, frustrations, anger triggers, trends"
+      - step: "Identify emotional triggers"
+        detail: "Which emotions will the story activate?"
+      - step: "Map WHO's internal narrative"
+        detail: "What story does the WHO tell themselves about their problem?"
+      - step: "Define relevancy anchors"
+        detail: "Which specific WHO pain points will the story address?"
+    outputs:
+      - "WHO Psychographic Profile"
+      - "Emotional Trigger Map"
+      - "Relevancy Anchor Document"
+    quality_gate: "gate_1"
+
+  phase_2:
+    name: "Story Architecture"
+    duration: "60-90 min"
+    agent: "kennedy-brand"
+    inputs:
+      - "WHO Psychographic Profile (from Phase 1)"
+      - "Brand/personal raw story materials"
+      - "Business USP and positioning"
+    activities:
+      - step: "Select story type"
+        detail: "Origin, Transformation, Crisis/Comeback, Discovery, David vs Goliath"
+      - step: "Extract raw story elements"
+        detail: "Situation, conflict, discovery, result, proof"
+      - step: "Apply 4 Key Factors filter"
+        detail: "Validate Simplicity, Authenticity, Visibility potential, Relevancy"
+      - step: "Map story to Disney/Hefner Model"
+        detail: "Which of the 7 strategies can amplify this story?"
+      - step: "Define story arc"
+        detail: "AIDA structure adapted for StorySelling"
+    outputs:
+      - "Story Architecture Document"
+      - "4 Key Factors Validation Report"
+      - "Story Arc Outline"
+    quality_gate: "gate_2"
+
+  phase_3:
+    name: "Copy Creation"
+    duration: "120-180 min"
+    agent: "kennedy-copy"
+    inputs:
+      - "Story Architecture Document (from Phase 2)"
+      - "Emotional Trigger Map (from Phase 1)"
+      - "Brand voice guidelines"
+    activities:
+      - step: "Write long-form version"
+        detail: "2000-5000 words, full story + DR elements"
+      - step: "Write medium-form version"
+        detail: "500-1500 words for email/newsletter"
+      - step: "Write short-form versions"
+        detail: "100-300 words for social media/ads (3-5 variations)"
+      - step: "Write headline variations"
+        detail: "Minimum 10 headlines for A/B testing"
+      - step: "Integrate fascination bullets"
+        detail: "Apply Copywriting Academy techniques"
+    outputs:
+      - "Long-Form Story Copy"
+      - "Medium-Form Story Copy"
+      - "Short-Form Story Copies (3-5 versions)"
+      - "Headline Variations (10+)"
+    quality_gate: "gate_3"
+
+  phase_4:
+    name: "DR Compliance Review"
+    duration: "30-45 min"
+    agent: "kennedy-direct-response"
+    inputs:
+      - "All copy versions (from Phase 3)"
+      - "10 Regras Fundacionais checklist"
+    activities:
+      - step: "Audit each version against 10 Rules"
+        detail: "Offer, urgency, instructions, tracking, follow-up present?"
+      - step: "Verify CTA clarity and specificity"
+        detail: "Is the next step crystal clear?"
+      - step: "Validate tracking mechanisms"
+        detail: "UTM codes, unique phone numbers, coupon codes?"
+      - step: "Define follow-up sequence"
+        detail: "What happens to non-converters?"
+      - step: "Calculate expected Money Math"
+        detail: "Projected cost per lead, cost per acquisition, expected ROI"
+    outputs:
+      - "DR Compliance Report"
+      - "Tracking Setup Document"
+      - "Follow-Up Sequence Plan"
+      - "Money Math Projections"
+    quality_gate: "gate_4"
+
+  phase_5:
+    name: "Multi-Channel Distribution"
+    duration: "60-90 min"
+    agent: "kennedy-media"
+    inputs:
+      - "Approved copy versions (from Phase 4)"
+      - "WHO media consumption habits"
+      - "Available channels and budgets"
+    activities:
+      - step: "Select 3+ distribution channels"
+        detail: "Must include at least 1 owned media channel"
+      - step: "Adapt copy for each channel format"
+        detail: "Adjust length, tone, CTA for platform norms"
+      - step: "Create distribution calendar"
+        detail: "4-week rollout plan with sequencing"
+      - step: "Set up tracking for each channel"
+        detail: "Unique tracking per channel for attribution"
+      - step: "Plan amplification strategy"
+        detail: "Paid boost, cross-promotion, endorsed sharing"
+    outputs:
+      - "Channel Distribution Plan"
+      - "Adapted Copy per Channel"
+      - "Distribution Calendar (4 weeks)"
+      - "Tracking Configuration Document"
+    quality_gate: "gate_5"
+
+  phase_6:
+    name: "Launch, Measure & Optimize"
+    duration: "Ongoing (30 days minimum)"
+    agent: "kennedy-brand + all supporting agents"
+    inputs:
+      - "All distribution materials (from Phase 5)"
+      - "Tracking systems active"
+    activities:
+      - step: "Execute distribution calendar"
+        detail: "Publish according to plan"
+      - step: "Monitor daily metrics"
+        detail: "Leads, conversions, revenue per channel"
+      - step: "A/B test headlines and CTAs"
+        detail: "Test minimum 2 variations per channel"
+      - step: "Collect WHO feedback"
+        detail: "Does the story resonate? Story recall test?"
+      - step: "Optimize based on Money Math"
+        detail: "Double down on winning channels/versions, cut losers"
+      - step: "Plan next story cycle"
+        detail: "New angle, new proof, same core story"
+    outputs:
+      - "30-Day Performance Report"
+      - "Optimization Recommendations"
+      - "Next Cycle Story Plan"
+    quality_gate: "gate_final"
+
+# ============================================================================
+# QUALITY GATES
+# ============================================================================
+
+quality_gates:
+  gate_1:
+    name: "WHO Validated"
+    phase: "phase_1"
+    criteria:
+      - "5 Psychographic Questions answered with specific, actionable data"
+      - "Emotional triggers identified (minimum 3)"
+      - "Relevancy anchors defined (minimum 2)"
+      - "WHO profile complete (demographics + psychographics)"
+    blocker: true
+    failure_action: "Return to Phase 1 and deepen WHO research"
+
+  gate_2:
+    name: "Story Architecture Approved"
+    phase: "phase_2"
+    criteria:
+      - "Story type selected and justified"
+      - "4 Key Factors validated:"
+      - "  - Simplicity: Story retellable in 2-3 sentences"
+      - "  - Authenticity: All facts verifiable"
+      - "  - Visibility: Story works in 3+ formats"
+      - "  - Relevancy: Connects to minimum 2 WHO pain points"
+      - "Story arc follows AIDA structure"
+      - "Disney/Hefner strategies mapped (minimum 3 applicable)"
+    blocker: true
+    failure_action: "Return to Phase 2 and revise story architecture"
+
+  gate_3:
+    name: "Copy Quality Approved"
+    phase: "phase_3"
+    criteria:
+      - "Long-form version: 2000-5000 words, complete story + DR elements"
+      - "Medium-form version: 500-1500 words, condensed but complete"
+      - "Short-form versions: 3-5 variations at 100-300 words each"
+      - "Headline variations: minimum 10"
+      - "Copy is emotional, conversational, NOT corporate"
+      - "No placeholder text, no TODOs"
+    blocker: true
+    failure_action: "Return to Phase 3 and revise copy"
+
+  gate_4:
+    name: "DR Compliance Passed"
+    phase: "phase_4"
+    criteria:
+      - "Every version has: offer, urgency, clear instructions, tracking, follow-up"
+      - "CTA is specific and actionable (not generic 'learn more')"
+      - "Tracking mechanisms configured and tested"
+      - "Follow-up sequence defined (minimum 3 steps)"
+      - "Money Math projections are positive or breakeven on front-end"
+    blocker: true
+    failure_action: "Return to Phase 3-4 and add missing DR elements"
+
+  gate_5:
+    name: "Distribution Ready"
+    phase: "phase_5"
+    criteria:
+      - "3+ channels selected (minimum 1 owned media)"
+      - "Copy adapted for each channel format"
+      - "Distribution calendar complete (4 weeks)"
+      - "Tracking unique per channel"
+      - "No single channel > 20% of expected leads"
+    blocker: false
+    failure_action: "Add channels or adjust calendar before launch"
+
+  gate_final:
+    name: "Campaign Validated by Results"
+    phase: "phase_6"
+    criteria:
+      - "30-day data collected"
+      - "Story campaign conversion >= non-story baseline"
+      - "Positive ROI on Money Math (or clear path to positive)"
+      - "Story recall rate >= 3/5 among WHO sample"
+      - "Next cycle plan created"
+    blocker: false
+    failure_action: "Revise story or distribution strategy for next cycle"
+
+# ============================================================================
+# VETO CONDITIONS
+# ============================================================================
+
+veto_conditions:
+  universal:
+    - condition: "Story has no call-to-action"
+      severity: "BLOCKER"
+      rationale: "StorySelling without CTA is just storytelling -- violates Rule #1"
+      source: "Magnetic Marketing, Rule #1"
+
+    - condition: "Story cannot be verified as authentic"
+      severity: "BLOCKER"
+      rationale: "Inauthentic stories destroy brands"
+      source: "Brand-Building by DR, Framework 7 - Authenticity"
+
+    - condition: "No tracking mechanism configured"
+      severity: "BLOCKER"
+      rationale: "Untracked marketing is burning money"
+      source: "Magnetic Marketing, Rule #4"
+
+    - condition: "Story is brand-building without DR"
+      severity: "BLOCKER"
+      rationale: "Brand is subproduct of DR, never the objective"
+      source: "Brand-Building by DR, Core Thesis"
+
+  warnings:
+    - condition: "Story distributed in fewer than 3 channels"
+      severity: "WARNING"
+      rationale: "Visibility factor requires multi-channel presence"
+
+    - condition: "No follow-up sequence for non-converters"
+      severity: "WARNING"
+      rationale: "Every non-followed-up lead = $20 bill burned"
+
+    - condition: "Story tested only once without optimization"
+      severity: "WARNING"
+      rationale: "Split-test everything -- Rule #9 Results Rule"
+
+# ============================================================================
+# INTEGRATION MAP
+# ============================================================================
+
+integrations:
+  depends_on:
+    - sop: "sop-brand-by-dr.md"
+      provides: "Winning Formula alignment (DR + Brand)"
+    - sop: "sop-personal-branding-dr.md"
+      provides: "Personal brand framework for Origin Stories"
+
+  feeds_into:
+    - sop: "sop-newsletter-content.md"
+      provides: "Story content for monthly newsletters"
+    - sop: "sop-dr-social-media.md"
+      provides: "Story-based content that converts on social media"
+
+  shared_frameworks:
+    - name: "Marketing Triangle"
+      usage: "Story must align Market + Message + Media"
+    - name: "10 Regras Fundacionais"
+      usage: "Every story version must comply with all 10 rules"
+    - name: "Disney/Hefner Model"
+      usage: "7 strategies for story amplification"
+    - name: "Toby Keith Strategies"
+      usage: "Synergy, Prolific Output, Polarization"
+    - name: "11-Point Referral System"
+      usage: "Stories drive word-of-mouth and referrals"
+
+# ============================================================================
+# METRICS & KPIs
+# ============================================================================
+
+metrics:
+  primary:
+    - name: "Story Campaign Conversion Rate"
+      target: "> non-story baseline"
+      ideal: "2x non-story baseline"
+      measurement: "Tracked conversions / total story impressions"
+
+    - name: "Cost per Lead (Story)"
+      target: "< non-story cost per lead"
+      ideal: "50% of non-story CPL"
+      measurement: "Total story campaign spend / leads generated"
+
+    - name: "Revenue per Story Campaign"
+      target: "Positive ROI"
+      ideal: "3x+ investment"
+      measurement: "Total revenue attributed / total investment"
+
+  secondary:
+    - name: "Story Recall Rate"
+      target: "3/5 can retell"
+      ideal: "5/5 can retell"
+      measurement: "Survey 5 WHO members, count accurate retells"
+
+    - name: "Multi-Channel Distribution Score"
+      target: "3+ channels"
+      ideal: "5+ channels with owned media majority"
+      measurement: "Count of active distribution channels"
+
+  vanity_metrics_excluded:
+    - "Likes without conversion"
+    - "Shares without CTA click"
+    - "Views without measurable action"
+    - "Follower count growth"
+
+# ============================================================================
+# TEMPLATES
+# ============================================================================
+
+templates:
+  story_architecture:
+    fields:
+      - "story_type: [Origin | Transformation | Crisis | Discovery | David_vs_Goliath]"
+      - "situation_before: (describe the BEFORE state)"
+      - "conflict: (the obstacle, villain, or challenge)"
+      - "turning_point: (the insight or discovery)"
+      - "result_after: (specific, measurable transformation)"
+      - "proof: (testimonials, data, third-party validation)"
+      - "bridge_to_offer: (how story connects to current product/service)"
+      - "cta: (specific next step for the reader)"
+
+  four_factors_checklist:
+    fields:
+      - "simplicity_score: [1-5] (1=complex, 5=retellable in 2 sentences)"
+      - "authenticity_score: [1-5] (1=unverifiable, 5=fully documented)"
+      - "visibility_score: [1-5] (1=single channel, 5=omnipresent)"
+      - "relevancy_score: [1-5] (1=irrelevant to WHO, 5=perfect match)"
+      - "minimum_passing: all scores >= 3"
+
+  money_math_projection:
+    fields:
+      - "total_investment: $___"
+      - "expected_leads: ___"
+      - "expected_cost_per_lead: $___"
+      - "expected_conversion_rate: ___%"
+      - "expected_customers: ___"
+      - "average_front_end_value: $___"
+      - "expected_front_end_revenue: $___"
+      - "expected_front_end_roi: ___%"
+      - "average_back_end_value_90_days: $___"
+      - "expected_total_roi_90_days: ___%"
+
+# ============================================================================
+# VERSION HISTORY
+# ============================================================================
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-11"
+    changes: "Initial blueprint creation"
+    author: "kennedy squad"

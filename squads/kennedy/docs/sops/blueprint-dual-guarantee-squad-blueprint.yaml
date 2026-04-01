@@ -1,0 +1,233 @@
+# Blueprint: Dual Guarantee Structure + Risk Reversal
+# Dan Kennedy's Performance + Buy-Back Guarantee System
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Dual Guarantee Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-dual-guarantee.md"
+  source_courses:
+    - "The Ultimate Sales Letter, 3rd Edition"
+    - "No B.S. Direct Marketing, Third Edition"
+  description: >
+    Blueprint para criar garantias tao fortes que eliminam 100% do risco percebido
+    pelo prospect. Estrutura de Garantia Dual: Garantia de Performance (compensacao
+    parcial) + Garantia de Buy-Back (devolucao total). Inclui 7 formatos de garantia,
+    calculo de risco, e integracao com copy.
+  kennedy_quote: >
+    "Would I put these kinds of guarantees on the line if the property would not
+    perform like I say it will? Of course not."
+    "If you truly believe in your product, your guarantee should be bold enough
+    to prove it."
+
+agents:
+  primary_agent:
+    name: "guarantee-architect"
+    role: "Arquiteto de Garantias"
+    responsibilities:
+      - Mapear objecoes de risco do prospect
+      - Calcular risco real da garantia (matematica de devolucoes)
+      - Formular Garantia #1 (Performance) com resultados mensuraveis
+      - Formular Garantia #2 (Buy-Back) com devolucao clara
+      - Definir periodo de cobertura e processo de claims
+
+  supporting_agents:
+    - name: "risk-calculator"
+      role: "Calculador de Risco"
+      responsibilities:
+        - Analisar taxa historica de devolucoes
+        - Projetar taxa de devolucao com garantia mais forte
+        - Calcular custo da garantia vs receita adicional
+        - Modelar cenarios (conservador, esperado, otimista)
+        - Monitorar taxa de claims pos-implementacao
+
+    - name: "guarantee-copywriter"
+      role: "Copywriter de Garantias"
+      responsibilities:
+        - Escrever linguagem clara e impactante para cada garantia
+        - Posicionar garantia no copy (apos oferta, antes CTA)
+        - Criar destaque visual (box, borda)
+        - Incluir logica "por que oferecemos isso"
+        - Integrar no P.S. e em pecas de follow-up
+
+    - name: "claims-manager"
+      role: "Gestor de Claims"
+      responsibilities:
+        - Definir processo claro de claims
+        - Treinar equipe para honrar sem resistencia
+        - Processar devolucoes em < 48 horas
+        - Registrar razoes de devolucao
+        - Produzir relatorios mensais de claims
+
+workflow_phases:
+
+  phase_1_objection_mapping:
+    name: "Mapeamento de Objecoes de Risco"
+    duration: "3-5 dias"
+    steps:
+      - step: "Listar objecoes de risco"
+        action: "Identificar todas as razoes pelas quais prospect hesita por medo"
+        output: "Lista de objecoes de risco categorizada"
+        agent: "guarantee-architect"
+
+      - step: "Categorizar medos"
+        action: "Classificar: financeiro, tempo, resultado, reputacao"
+        output: "Mapa de medos por categoria"
+        agent: "guarantee-architect"
+
+      - step: "Definir tipo de garantia necessaria"
+        action: "Qual garantia neutraliza cada medo?"
+        output: "Matching objecao → tipo de garantia"
+        agent: "guarantee-architect"
+
+  phase_2_risk_calculation:
+    name: "Calculo de Risco"
+    duration: "3-5 dias"
+    steps:
+      - step: "Analisar historico"
+        action: "Revisar taxa de devolucao/insatisfacao dos ultimos 12 meses"
+        output: "Baseline de devolucoes"
+        agent: "risk-calculator"
+
+      - step: "Projetar cenarios"
+        action: "Modelar devolucoes estimadas vs aumento de vendas"
+        output: "Business case com 3 cenarios"
+        agent: "risk-calculator"
+
+      - step: "Aprovar garantia"
+        action: "SE receita adicional > custo de devolucoes → aprovar"
+        output: "Decisao de go/no-go"
+        agent: "guarantee-architect"
+
+  phase_3_formulation:
+    name: "Formulacao da Garantia Dual"
+    duration: "1 semana"
+    steps:
+      - step: "Formular Garantia #1 (Performance)"
+        action: "Resultado mensuravel + periodo + compensacao especifica"
+        output: "Garantia #1 escrita e aprovada"
+        agent: "guarantee-copywriter"
+
+      - step: "Formular Garantia #2 (Buy-Back)"
+        action: "Periodo de cobertura + processo de devolucao + linguagem"
+        output: "Garantia #2 escrita e aprovada"
+        agent: "guarantee-copywriter"
+
+      - step: "Criar versao de copy"
+        action: "Posicionar no copy com destaque visual e logica"
+        output: "Copy integrado com garantia dual"
+        agent: "guarantee-copywriter"
+
+  phase_4_implementation:
+    name: "Implementacao e Operacao"
+    duration: "1-2 semanas"
+    steps:
+      - step: "Definir processo de claims"
+        action: "Workflow claro: solicitacao → verificacao → processamento → reembolso"
+        output: "SOP de claims documentado"
+        agent: "claims-manager"
+
+      - step: "Treinar equipe"
+        action: "Treinamento para honrar sem resistencia e processar rapidamente"
+        output: "Equipe treinada"
+        agent: "claims-manager"
+
+      - step: "Integrar em todos os materiais"
+        action: "Incluir garantia dual em website, emails, cartas, follow-up"
+        output: "Garantia presente em todos os touchpoints"
+        agent: "guarantee-copywriter"
+
+  phase_5_monitoring:
+    name: "Monitoramento"
+    duration: "Ongoing"
+    steps:
+      - step: "Monitorar taxa de claims"
+        action: "Registrar e analisar claims mensalmente"
+        output: "Relatorio mensal de claims"
+        agent: "claims-manager"
+
+      - step: "Medir impacto em conversao"
+        action: "A/B test: com garantia dual vs sem"
+        output: "Dados de impacto em conversao"
+        agent: "risk-calculator"
+
+      - step: "Otimizar formulacao"
+        action: "Ajustar linguagem, periodos ou compensacoes com base em dados"
+        output: "Garantia otimizada"
+        agent: "guarantee-architect"
+
+quality_gates:
+
+  gate_1_risk_approved:
+    name: "Risco Aprovado"
+    criteria:
+      - "Objecoes de risco mapeadas"
+      - "Historico de devolucoes analisado"
+      - "Business case positivo (receita > custo)"
+      - "Decisao de go aprovada"
+    blocker: true
+
+  gate_2_guarantee_formulated:
+    name: "Garantia Formulada"
+    criteria:
+      - "Garantia #1 (Performance) com resultado mensuravel"
+      - "Garantia #2 (Buy-Back) com devolucao clara"
+      - "Linguagem clara, sem ambiguidade, sem letras miudas"
+      - "Posicionamento no copy definido"
+    blocker: true
+
+  gate_3_operational:
+    name: "Operacional"
+    criteria:
+      - "Processo de claims definido e documentado"
+      - "Equipe treinada"
+      - "Garantia presente em todos os materiais de vendas"
+      - "Monitoramento mensal configurado"
+    blocker: false
+
+metrics:
+  conversion_impact:
+    without_guarantee: "Baseline"
+    with_simple_guarantee: "+10-15% conversao"
+    with_dual_guarantee: "+15-30% conversao"
+
+  claims_metrics:
+    claims_rate: "Meta: < 5%"
+    processing_time: "Meta: < 48 horas"
+    net_revenue_impact: "Receita adicional - custo claims = positivo"
+
+  tracking:
+    - "Taxa de conversao com vs sem garantia (A/B)"
+    - "Taxa de claims mensal"
+    - "Custo total de garantia ($)"
+    - "Receita adicional atribuivel a garantia"
+    - "Top 3 razoes de devolucao"
+    - "Impacto em lifetime value"
+
+resources:
+  templates:
+    - "Template de Garantia #1 (Performance)"
+    - "Template de Garantia #2 (Buy-Back)"
+    - "Template de copy integrado"
+    - "Workflow de processamento de claims"
+
+  tools:
+    - "Sistema de registro de claims"
+    - "Dashboard de monitoramento"
+    - "A/B testing platform"
+
+dependencies:
+  prerequisite:
+    - sop: "sop-objection-anticipation.md"
+  integrates_with:
+    - sop: "sop-copywriting-academy.md"
+    - sop: "sop-direct-mail-campaign.md"
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-usp-construction.md"
+    - sop: "sop-pest-to-welcome-guest.md"
+
+sources:
+  - "dan-kennedy-ultimate-sales-letter-frameworks.md"
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"

@@ -1,0 +1,247 @@
+# Blueprint: The Swipe File System
+# Dan Kennedy's Organized Copy Reference & Template Library
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Swipe File System Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-swipe-file-system.md"
+  source_courses:
+    - "Magnetic Marketing System (Copywriting Module)"
+    - "Midas Touch (14 Copywriting Tips)"
+    - "Affluent Client Playbook (Shock and Awe)"
+  description: >
+    Blueprint para construir, organizar e usar sistematicamente um swipe file
+    de 12 categorias que acelera a criacao de copy em 50%+ e garante que
+    toda peca de marketing seja construida sobre estruturas comprovadas.
+  kennedy_quote: >
+    "Style vs. Structure principle: change the words, keep the framework."
+
+agents:
+  primary_agent:
+    name: "swipe-curator"
+    role: "Curador do Swipe File"
+    responsibilities:
+      - Manter sistema de 12 categorias organizado
+      - Coletar 4+ novas pecas por mes
+      - Anotar "por que funciona" em cada peca
+      - Facilitar uso do swipe file por toda equipe
+      - Garantir diversidade de mercados nas colecoes
+
+  supporting_agents:
+    - name: "copy-analyst"
+      role: "Analista de Copy"
+      responsibilities:
+        - Analisar ESTRUTURA de pecas coletadas
+        - Extrair frameworks reutilizaveis
+        - Criar templates adaptaveis por tipo de peca
+        - Manter biblioteca de headline formulas
+        - Documentar padroes de alta conversao
+
+    - name: "collection-scout"
+      role: "Scout de Pecas"
+      responsibilities:
+        - Monitorar 5+ mercados para pecas de coleta
+        - Assinar newsletters de referencia
+        - Fotografar/salvar anuncios relevantes
+        - Coletar mala direta fisica
+        - Buscar pecas classicas de copywriters historicos
+
+workflow_phases:
+
+  phase_1_setup:
+    name: "Setup do Sistema"
+    duration: "1 semana"
+    steps:
+      - step: "Criar estrutura de 12 categorias"
+        action: "Pastas fisicas e/ou digitais por componente"
+        output: "Sistema de armazenamento pronto"
+        agent: "swipe-curator"
+
+      - step: "Semear com pecas Kennedy"
+        action: "Coletar pecas dos proprios cursos como base"
+        output: "50+ pecas iniciais categorizadas"
+        agent: "swipe-curator"
+
+      - step: "Definir fontes de coleta"
+        action: "Listar newsletters, mercados, fontes para monitoring"
+        output: "Lista de 10+ fontes ativas"
+        agent: "collection-scout"
+
+  phase_2_collection_habit:
+    name: "Instalar Habito de Coleta"
+    duration: "Meses 1-3"
+    steps:
+      - step: "Rotina semanal de coleta"
+        action: "30 min/semana revisando e classificando novas pecas"
+        output: "4+ pecas/mes adicionadas"
+        agent: "collection-scout"
+
+      - step: "Analise de estrutura"
+        action: "Para cada peca, documentar por que funciona"
+        output: "Anotacoes de analise por peca"
+        agent: "copy-analyst"
+
+      - step: "Criar templates reutilizaveis"
+        action: "Extrair frameworks das melhores pecas"
+        output: "Biblioteca de templates por tipo"
+        agent: "copy-analyst"
+
+  phase_3_active_use:
+    name: "Uso Ativo na Criacao"
+    duration: "Ongoing"
+    steps:
+      - step: "Consultar antes de criar"
+        action: "Sempre abrir swipe file ANTES de escrever qualquer peca"
+        output: "Copy criado sobre estrutura comprovada"
+        agent: "swipe-curator"
+
+      - step: "Medir impacto"
+        action: "Comparar conversao de copy com vs sem uso do swipe"
+        output: "Metricas de impacto documentadas"
+        agent: "copy-analyst"
+
+  phase_4_optimization:
+    name: "Otimizacao e Expansao"
+    duration: "Trimestral"
+    steps:
+      - step: "Audit trimestral"
+        action: "Verificar 12 categorias, gap analysis, adicionar pecas faltantes"
+        output: "Relatorio trimestral de completude"
+        agent: "swipe-curator"
+
+      - step: "Atualizar templates"
+        action: "Refinar templates com base em resultados de campanhas"
+        output: "Templates atualizados"
+        agent: "copy-analyst"
+
+quality_gates:
+
+  gate_1_system_ready:
+    name: "Sistema Pronto"
+    criteria:
+      - "12 categorias criadas"
+      - "50+ pecas iniciais semeadas"
+      - "Fontes de coleta definidas"
+    blocker: true
+
+  gate_2_habit_installed:
+    name: "Habito Instalado"
+    criteria:
+      - "4+ pecas adicionadas por mes (3 meses consecutivos)"
+      - "Anotacoes de analise em 80%+ das pecas"
+      - "Swipe consultado antes de cada criacao de copy"
+    blocker: false
+
+  gate_3_templates_ready:
+    name: "Templates Prontos"
+    criteria:
+      - "Templates para cada categoria principal"
+      - "Headline formulas documentadas (20+)"
+      - "3-step sequence templates prontos"
+    blocker: false
+
+metrics:
+  primary:
+    - name: "Total de Pecas"
+      target_6m: "100+"
+      target_12m: "250+"
+    - name: "Tempo de Criacao de Copy"
+      target: "-50% vs baseline"
+    - name: "Conversao de Copy"
+      target: "+25% vs sem swipe"
+  secondary:
+    - "Pecas por categoria (min 5 cada)"
+    - "Pecas adicionadas por mes"
+    - "Categorias com 10+ pecas"
+    - "Templates reutilizaveis criados"
+
+resources:
+  tools:
+    - "Arquivo fisico (pastas suspensas) ou digital (pasta estruturada)"
+    - "Scanner para digitalizar pecas fisicas"
+    - "Planilha pesquisavel de headlines"
+    - "Assinaturas de newsletters de referencia (3-5)"
+
+  time_investment:
+    weekly_collection: "30 minutos"
+    per_creation_consultation: "15-30 minutos"
+    quarterly_audit: "2 horas"
+
+categories:
+  - id: "01"
+    name: "Headlines Comprovadas"
+    min_pieces: 50
+    sources: "Ads, emails, sales letters, magazine covers"
+
+  - id: "02"
+    name: "Cartas de Venda Completas"
+    min_pieces: 20
+    sources: "Direct mail, sales pages, Kennedy courses"
+
+  - id: "03"
+    name: "Three-Step Sequences"
+    min_pieces: 10
+    sources: "Kennedy Georgio Letters, own campaigns, collected"
+
+  - id: "04"
+    name: "Ofertas Irresistiveis"
+    min_pieces: 15
+    sources: "Ads, sales letters, Kennedy irresistible offer formula"
+
+  - id: "05"
+    name: "Gimmicks e Grabbers"
+    min_pieces: 10
+    sources: "Direct mail, FedEx packages, physical marketing"
+
+  - id: "06"
+    name: "Newsletters de Referencia"
+    min_pieces: 10
+    sources: "Newsletter Pro, Kennedy No BS, industry leaders"
+
+  - id: "07"
+    name: "Special Reports"
+    min_pieces: 10
+    sources: "Lead magnets, Ben Glass reports, own reports"
+
+  - id: "08"
+    name: "Shock and Awe Packages"
+    min_pieces: 5
+    sources: "Kennedy affluent course, own packages"
+
+  - id: "09"
+    name: "Endorsed Mailings"
+    min_pieces: 5
+    sources: "Kennedy referral course, partner mailings"
+
+  - id: "10"
+    name: "WOW Packages"
+    min_pieces: 5
+    sources: "Burleson case, own packages"
+
+  - id: "11"
+    name: "Anuncios de Resposta Direta"
+    min_pieces: 20
+    sources: "Print ads, Facebook ads, Google ads, landing pages"
+
+  - id: "12"
+    name: "Garantias e Risk Reversal"
+    min_pieces: 10
+    sources: "Kennedy dual guarantee, collected guarantees"
+
+dependencies:
+  used_by:
+    - sop: "sop-referral-machine.md"
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-affluent-attraction.md"
+    - sop: "sop-champion-circle.md"
+    - sop: "sop-retention-system.md"
+    - sop: "sop-dual-guarantee.md"
+
+sources:
+  - "dan-kennedy-magnetic-marketing/dan-kennedy-magnetic-marketing-summary.md"
+  - "dan-kennedy-magnetic-marketing/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-midas-touch/dan-kennedy-midas-touch-summary.md"
+  - "dan-kennedy-affluent-client/raw-data-package/frameworks-extract.md"

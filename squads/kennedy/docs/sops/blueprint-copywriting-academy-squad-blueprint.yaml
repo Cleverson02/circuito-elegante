@@ -1,0 +1,379 @@
+# Blueprint: Copywriting Academy Squad Blueprint
+# Source: Copywriting Academy (15 Sessions — AWAI Live Seminar)
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: copywriting-academy-blueprint
+  title: "Copywriting Academy Complete System — Squad Execution Blueprint"
+  version: "1.0"
+# source_sop: sop-copywriting-academy.md
+  date: "2026-02-11"
+  squad: kennedy
+  source_course: "Dan Kennedy's Copywriting Academy"
+  platform: "AWAI (American Writers & Artists Inc.)"
+  total_sessions: 15
+  total_frameworks: 12
+  sop_reference: "sop-copywriting-academy.md"
+  tags:
+    - copywriting-business
+    - client-management
+    - premium-pricing
+    - freelance-consulting
+    - diagnostic-selling
+    - royalties
+    - host-parasite
+
+core_philosophy:
+  identity_reframe: "You're not doing work. You're creating assets."
+  control_principle: "Client management is a polite term for client control."
+  selection_over_skill: "Your success has much more to do with the selection of the client than with you."
+  kennedy_quote: >
+    "I do not operate as a copywriter given assignments, rather as
+    a strategic marketing advisor, who often but not always also writes copy."
+
+agents:
+
+  diagnostic_advisor:
+    role: "Client Diagnostic & Control Specialist"
+    description: >
+      Runs the Diagnostic Approach for every new client engagement.
+      Evaluates business economics, marketing gaps, blind spots, and
+      execution capability. Prescribes multi-project scope with
+      layered compensation. Controls the client relationship through
+      the medical model.
+    primary_frameworks:
+      - "The Diagnostic Approach (8 steps)"
+      - "Three Client Selection Criteria"
+      - "Scotoma Diagnosis (dumb questions x3)"
+      - "Agreements Process (Werner Erhard adaptation)"
+    inputs:
+      - "Client inquiry or referral"
+      - "Business description and financials"
+      - "Current marketing materials"
+      - "Referral source information"
+    outputs:
+      - "Client qualification scorecard (3 criteria, 1-10 each)"
+      - "Diagnostic Day report"
+      - "Multi-project prescription"
+      - "Compensation structure proposal"
+      - "Agreements document"
+    quality_gates:
+      - "All 3 selection criteria scored with evidence"
+      - "Diagnostic completed before any fee discussion"
+      - "Scope expanded beyond original request"
+      - "Minimum 3 compensation mechanisms stacked"
+      - "Agreements documented in writing"
+
+  compensation_architect:
+    role: "Fee Structure & Revenue Engineering Specialist"
+    description: >
+      Designs layered compensation structures using Kennedy's 12-type
+      menu. Calculates ROI-based fee justification. Structures royalties,
+      continuation fees, and buyout clauses for maximum lifetime value.
+    primary_frameworks:
+      - "Compensation Structure Menu (12 types)"
+      - "ROI-Based Fee Justification"
+      - "Percentage Above Base Model"
+      - "Seven Fee Presentation Mistakes"
+      - "GE Spot (Good Enough Spot)"
+    inputs:
+      - "Client business economics"
+      - "Project scope from diagnostic"
+      - "Available royalty mechanisms"
+      - "Market rate benchmarks"
+    outputs:
+      - "Layered compensation proposal"
+      - "ROI calculation showing fee as % of value"
+      - "Royalty structure with measurement method"
+      - "Buyout clause terms"
+      - "Fee presentation script"
+    quality_gates:
+      - "Fee justified by ROI, not hours"
+      - "Minimum 3 compensation types stacked"
+      - "Royalty measurement method specified"
+      - "Buyout clause included"
+      - "None of the 7 Fee Mistakes present"
+
+  client_hunter:
+    role: "Client Acquisition & Host-Parasite Specialist"
+    description: >
+      Executes Kennedy's client acquisition strategies including
+      Host-Parasite partnerships, Stealth Interview campaigns,
+      Prospecting Letter Architecture, and Six Gold Mines sourcing.
+    primary_frameworks:
+      - "Host-Parasite Strategy (6 steps)"
+      - "Stealth Interview Strategy"
+      - "Prospecting Letter Architecture (8 elements)"
+      - "Six Gold Mines"
+      - "1-4-15-80 Rule"
+      - "Correspondence Sequence (3 letters)"
+    inputs:
+      - "Target niche definition"
+      - "Ideal client profile"
+      - "Available hosts in niche"
+      - "Six Gold Mines inventory"
+    outputs:
+      - "Host-Parasite partnership proposals (3+)"
+      - "Stealth Interview campaign materials"
+      - "Prospecting letter with all 8 elements"
+      - "Gold Mine sourcing report"
+      - "Correspondence sequence (3 letters)"
+    quality_gates:
+      - "3+ host candidates identified with pitch"
+      - "Prospecting letter includes all 8 elements"
+      - "Correspondence sequence complete (3 letters)"
+      - "Target focused on top 5% (1-4-15-80 rule)"
+
+  strategic_thinker:
+    role: "Message-Media-Market Strategist"
+    description: >
+      Thinks beyond copy to evaluate whether the biggest opportunity
+      is in the message, the media, or the market. Prevents copywriter
+      tunnel vision and positions the advisor as strategic, not tactical.
+    primary_frameworks:
+      - "Message-Media-Market Balance"
+      - "GE Spot (effort allocation)"
+      - "Scotoma Diagnosis"
+      - "Beat-the-Control Strategy"
+      - "Format Change Before Message Change"
+    inputs:
+      - "Current marketing performance data"
+      - "Competitive landscape"
+      - "Available channels and formats"
+      - "Audience segment data"
+    outputs:
+      - "Message-Media-Market diagnostic"
+      - "Non-copy improvement recommendations"
+      - "GE Spot assessment per project"
+      - "Beat-the-control opportunity analysis"
+    quality_gates:
+      - "All 3 dimensions (message, media, market) evaluated"
+      - "Non-copy improvements identified before copy work begins"
+      - "GE Spot defined for each deliverable"
+
+  revenue_diversifier:
+    role: "Multiple Income Stream Architect"
+    description: >
+      Builds the 4 revenue streams that create financial stability
+      and client-attraction leverage: client copy, non-marketing writing,
+      information products, and speaking/consulting.
+    primary_frameworks:
+      - "Four Revenue Streams"
+      - "Authority Asset Creation"
+      - "Celebrity Association"
+      - "Evil Temptations Audit"
+    inputs:
+      - "Current revenue breakdown"
+      - "Available expertise for info products"
+      - "Speaking/consulting opportunities"
+      - "Current evil temptations in play"
+    outputs:
+      - "Revenue diversification plan"
+      - "Authority asset creation roadmap"
+      - "Evil temptations audit with fixes"
+      - "12-month revenue projection by stream"
+    quality_gates:
+      - "At least 2 revenue streams active"
+      - "1 authority asset created or in progress"
+      - "Evil temptations identified and addressed"
+
+workflow:
+
+  phase_1_foundation:
+    name: "Business Foundation"
+    description: "Identity reframe, pricing, and process setup"
+    duration: "1 week"
+    steps:
+      - step: "Identity reframe from copywriter to strategic marketing advisor"
+        agent: diagnostic_advisor
+        output: "Updated positioning materials"
+      - step: "McDonald's Math — calculate required fee per project"
+        agent: compensation_architect
+        output: "Revenue targets and fee minimums"
+      - step: "Create Diagnostic Day process document"
+        agent: diagnostic_advisor
+        output: "Diagnostic Day template"
+      - step: "Create standard contract with Kennedy architecture"
+        agent: compensation_architect
+        output: "Standard contract template"
+    gate: "Identity reframed, fees calculated, diagnostic process documented"
+
+  phase_2_acquisition:
+    name: "Client Acquisition System"
+    description: "Build host-parasite relationships and prospecting materials"
+    duration: "1-2 weeks"
+    steps:
+      - step: "Identify 3+ host organizations"
+        agent: client_hunter
+        output: "Host partnership proposals"
+      - step: "Inventory Six Gold Mines for niche"
+        agent: client_hunter
+        output: "Gold Mine sourcing report"
+      - step: "Create prospecting letter with all 8 elements"
+        agent: client_hunter
+        output: "Prospecting letter"
+      - step: "Create correspondence sequence (3 letters)"
+        agent: client_hunter
+        output: "Correspondence sequence"
+      - step: "Create authority asset (guide or framework)"
+        agent: revenue_diversifier
+        output: "Authority asset for premium offer"
+    gate: "3 hosts identified, prospecting materials ready, authority asset created"
+
+  phase_3_client_engagement:
+    name: "Client Engagement Process"
+    description: "Run diagnostic and close with layered compensation"
+    duration: "Per client (1-2 weeks)"
+    steps:
+      - step: "Pre-qualify against Three Selection Criteria"
+        agent: diagnostic_advisor
+        output: "Qualification scorecard"
+      - step: "Run Diagnostic Day"
+        agent: diagnostic_advisor
+        output: "Diagnostic report"
+      - step: "Message-Media-Market evaluation"
+        agent: strategic_thinker
+        output: "Strategic recommendations"
+      - step: "Create multi-project prescription"
+        agent: diagnostic_advisor
+        output: "Project scope document"
+      - step: "Design layered compensation structure"
+        agent: compensation_architect
+        output: "Compensation proposal"
+      - step: "Present and close"
+        agent: diagnostic_advisor
+        output: "Signed agreement"
+    gate: "Diagnostic complete, scope expanded, 3+ compensation types, agreement signed"
+
+  phase_4_execution:
+    name: "Project Execution & Optimization"
+    description: "Execute projects at GE Spot quality, build recurring revenue"
+    duration: "Ongoing"
+    steps:
+      - step: "Execute deliverables at GE Spot quality"
+        agent: strategic_thinker
+        output: "Completed deliverables"
+      - step: "Track royalty mechanisms"
+        agent: compensation_architect
+        output: "Royalty tracking dashboard"
+      - step: "Strategic correspondence (obligation creation)"
+        agent: client_hunter
+        output: "Ongoing correspondence"
+      - step: "Quarterly client audit (3 criteria re-check)"
+        agent: diagnostic_advisor
+        output: "Client retention/upgrade decisions"
+    gate: "Deliverables at GE Spot, royalties tracked, client relationships managed"
+
+  phase_5_scaling:
+    name: "Revenue Diversification"
+    description: "Build multiple income streams beyond client work"
+    duration: "Ongoing"
+    steps:
+      - step: "Create information products from expertise"
+        agent: revenue_diversifier
+        output: "Info products"
+      - step: "Develop speaking/consulting opportunities"
+        agent: revenue_diversifier
+        output: "Speaking calendar"
+      - step: "Build non-marketing writing income"
+        agent: revenue_diversifier
+        output: "Alternative writing revenue"
+      - step: "Evil Temptations audit (quarterly)"
+        agent: revenue_diversifier
+        output: "Temptation audit report"
+    gate: "2+ revenue streams active, evil temptations addressed"
+
+quality_gates:
+
+  diagnostic_before_fee:
+    description: "No fee discussion before diagnostic process"
+    enforcement: "Automatic rejection of proposals without diagnostic"
+    failure_action: "Return to diagnostic step"
+
+  three_criteria_minimum:
+    description: "All 3 selection criteria must score 5+/10"
+    scoring: "Appreciation of value, Size/scope, Ability to execute"
+    failure_action: "Decline client or set conditions"
+
+  compensation_stacking:
+    description: "Minimum 3 compensation types per engagement"
+    types: "Fee + royalty + continuation/buyout minimum"
+    failure_action: "Redesign proposal to add mechanisms"
+
+  roi_justification:
+    description: "Fee justified as fraction of projected ROI"
+    method: "Calculate client revenue impact at 10%, 25%, 50% improvement"
+    failure_action: "Recalculate or adjust scope"
+
+  ge_spot_compliance:
+    description: "Effort stopped at Good Enough unless royalties tied to max performance"
+    assessment: "Is additional effort worth more than next opportunity?"
+    failure_action: "Redirect time to higher-value work"
+
+  no_nda:
+    description: "Never sign NDAs"
+    rationale: "Invitation to litigation"
+    failure_action: "Decline engagement or negotiate NDA removal"
+
+frameworks_reference:
+  diagnostic_approach:
+    steps: 8
+    model: "Cleveland Clinic Executive Physical"
+    source: "Client Management 1-2"
+
+  compensation_menu:
+    types: 12
+    meta_rule: "Stack minimum 3 per deal"
+    kennedy_result: "60-70 royalty checks per month"
+    source: "Client Management 2"
+
+  three_client_criteria:
+    criteria:
+      - "Appreciation of value (money mindset)"
+      - "Size, scope, number of opportunities"
+      - "Ability to execute"
+    all_required: true
+    source: "Client Management 2"
+
+  host_parasite:
+    steps: 6
+    credited_to: "Jay Abraham (concept); Kennedy (implementation)"
+    kennedy_result: "$200K per conference from single host"
+    source: "Client Attraction 2"
+
+  ge_spot:
+    question: "Is additional effort here worth more than starting next opportunity?"
+    application: "Every deliverable"
+    source: "Client Management 3"
+
+  prospecting_letter_architecture:
+    elements:
+      - "Personal benefit headline"
+      - "Disgust-based differentiation"
+      - "Five reason-why arguments"
+      - "Limited call-to-action"
+      - "Deadline"
+      - "Premium offer"
+      - "Disclosure PS"
+      - "Follow-up doodad"
+    source: "Client Attraction 2"
+
+  problem_client_taxonomy:
+    types: 8
+    litmus_test: "3 people who would do business again"
+    source: "Client Management 3"
+
+  evil_temptations:
+    types: 7
+    source: "Client Management 2"
+
+dependencies:
+  related_sops:
+    - sop: "sop-mind-hijacking.md"
+      integration: "Diagnostic discovers what hijacks to deploy"
+    - sop: "sop-fascination-bullets.md"
+      integration: "Archetype alignment with client selection"
+    - sop: "sop-brass-balls-pricing.md"
+      integration: "Compensation menu + pricing courage"
+    - sop: "sop-advertorial-tearsheet.md"
+      integration: "Prospecting letter in advertorial format"

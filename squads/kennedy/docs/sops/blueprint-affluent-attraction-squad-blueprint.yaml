@@ -1,0 +1,258 @@
+# Blueprint: Affluent Client Attraction System
+# Dan Kennedy's Premium Positioning & Anti-Sales Framework
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Affluent Attraction Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-affluent-attraction.md"
+  source_courses:
+    - "Affluent Client Attraction Playbook (10 Sessions)"
+    - "Magnetic Marketing RB Interview"
+  description: >
+    Blueprint para reposicionar negocio inteiro para atrair clientes de alto
+    patrimonio via Money Pyramid, Celebrity Authority Ladder, Anti-Sales Positioning,
+    Nine Gates framework, e Shock and Awe Package system.
+  kennedy_quote: >
+    "Stop selling stuff. Stop. Sell you. Whatever stuff you got is
+    replicatable, commoditizable, whether you think it is or not."
+
+agents:
+  primary_agent:
+    name: "affluent-strategist"
+    role: "Estrategista de Posicionamento Premium"
+    responsibilities:
+      - Diagnosticar posicao na Money Pyramid e Celebrity Ladder
+      - Desenhar estrategia anti-sales personalizada
+      - Planejar campanha de Celebrity Manufaturada
+      - Coordenar producao do Shock and Awe Package
+      - Auditar congruencia de marca em todos os touchpoints
+
+  supporting_agents:
+    - name: "celebrity-builder"
+      role: "Construtor de Autoridade Manufaturada"
+      responsibilities:
+        - Identificar venues e publicacoes para celebrity appearances
+        - Criar advertorials para publicacoes respeitadas
+        - Coordenar co-apresentacoes com figuras reconhecidas
+        - Planejar redeployment de midia em todos os materiais
+        - Manter portfolio de provas de autoridade
+
+    - name: "shock-awe-producer"
+      role: "Produtor de Shock and Awe Packages"
+      responsibilities:
+        - Desenvolver peca Minha Historia (90% pessoal, 10% servico)
+        - Criar peca O Que Nos NAO Somos (diferenciacao por contraste)
+        - Montar ferramenta de comparacao viciada
+        - Selecionar container premium
+        - Sistematizar envio pre-consulta
+
+    - name: "affluent-copywriter"
+      role: "Copywriter para Mercado Afluente"
+      responsibilities:
+        - Escrever 3 Conversas da Mesa da Cozinha
+        - Criar ofertas irresistiveis para affluents
+        - Desenvolver sequencia de follow-up de 53 dias
+        - Redigir cartas FedEx com $5 bill grabber
+        - Adaptar linguagem anti-sales em todos os materiais
+
+    - name: "brand-auditor"
+      role: "Auditor de Congruencia de Marca"
+      responsibilities:
+        - Mapear todos os touchpoints do cliente
+        - Avaliar congruencia premium (score 1-10 por touchpoint)
+        - Identificar incongruencias brand-breaking
+        - Recomendar correcoes priorizadas
+        - Re-auditar trimestralmente
+
+workflow_phases:
+
+  phase_1_psychological_diagnostic:
+    name: "Diagnostico Psicologico e Estrategico"
+    duration: "1 semana"
+    steps:
+      - step: "Confrontar barreira Glenn Turner"
+        action: "Identificar 3 prospects de alto patrimonio evitados e a barreira psicologica para cada"
+        output: "Autodiagnostico psicologico documentado"
+        agent: "affluent-strategist"
+
+      - step: "Mapear Money Pyramid"
+        action: "Classificar clientes por tier, calcular CLV diferencial"
+        output: "Mapa da piramide com CLV por tier"
+        agent: "affluent-strategist"
+
+      - step: "Escrever 3 Conversas"
+        action: "Tentar escrever dialogos como dramaturgo, identificar gaps de conhecimento"
+        output: "3 dialogos escritos ou plano de pesquisa imersiva"
+        agent: "affluent-copywriter"
+
+      - step: "Identificar posicao na Celebrity Ladder"
+        action: "Avaliar posicao atual (1-6) com evidencias"
+        output: "Posicao documentada com plano de ascensao"
+        agent: "celebrity-builder"
+
+  phase_2_anti_sales_repositioning:
+    name: "Reposicionamento Anti-Sales"
+    duration: "2-3 semanas"
+    steps:
+      - step: "Auditar processo de vendas atual"
+        action: "Gravar e transcrever conversa de vendas, marcar linguagem de vendedor"
+        output: "Lista de eliminacoes e substituicoes"
+        agent: "affluent-strategist"
+
+      - step: "Redesenhar processo consultivo"
+        action: "Substituir apresentacao por conversa com perguntas"
+        output: "Novo script consultivo (anti-sales)"
+        agent: "affluent-copywriter"
+
+      - step: "Auditar congruencia de marca"
+        action: "Listar cada touchpoint, dar nota 1-10, corrigir abaixo de 7"
+        output: "Audit report com plano de correcao priorizado"
+        agent: "brand-auditor"
+
+  phase_3_celebrity_manufacture:
+    name: "Campanha de Celebrity Manufaturada"
+    duration: "60-90 dias"
+    steps:
+      - step: "Identificar oportunidades de celebrity"
+        action: "2-3 venues, publicacoes, ou figuras para associacao"
+        output: "Pipeline de celebrity opportunities"
+        agent: "celebrity-builder"
+
+      - step: "Executar appearances"
+        action: "Palestra, advertorial, co-apresentacao"
+        output: "Fotos, videos, materiais de cada appearance"
+        agent: "celebrity-builder"
+
+      - step: "Redeployer midia"
+        action: "Atualizar TODOS os materiais com novas provas de autoridade"
+        output: "Todos os materiais atualizados com celebrity proof"
+        agent: "celebrity-builder"
+
+  phase_4_marketing_assets:
+    name: "Producao de Assets de Marketing"
+    duration: "4-6 semanas"
+    steps:
+      - step: "Criar peca O Que Nos NAO Somos"
+        action: "8-10 contrastes com concorrentes"
+        output: "Peca de diferenciacao por contraste"
+        agent: "shock-awe-producer"
+
+      - step: "Criar livro Minha Historia"
+        action: "90% historia pessoal, 10% servico, publicacao profissional"
+        output: "Livro publicado"
+        agent: "shock-awe-producer"
+
+      - step: "Montar Shock and Awe Package"
+        action: "7 componentes em container premium"
+        output: "Package pronto para envio"
+        agent: "shock-awe-producer"
+
+      - step: "Criar Tier Premium"
+        action: "Versao 3-10x do servico mais caro"
+        output: "Descricao de 1 pagina do tier premium"
+        agent: "affluent-strategist"
+
+  phase_5_follow_up_system:
+    name: "Sistema de Follow-Up Premium"
+    duration: "2-3 semanas"
+    steps:
+      - step: "Desenhar sequencia de 53 dias"
+        action: "4 ofertas, multi-canal, multi-midia"
+        output: "Sequencia completa documentada"
+        agent: "affluent-copywriter"
+
+      - step: "Identificar canais fora-da-categoria"
+        action: "5+ midias onde clientes estao mas concorrentes nao"
+        output: "Lista de canais com zero competicao"
+        agent: "affluent-strategist"
+
+      - step: "Lancar primeiro Shock and Awe"
+        action: "Enviar para 5-10 prospects qualificados, medir resposta"
+        output: "Resultados do primeiro batch"
+        agent: "shock-awe-producer"
+
+quality_gates:
+
+  gate_1_diagnostic_complete:
+    name: "Diagnostico Completo"
+    criteria:
+      - "Money Pyramid mapeada com CLV diferencial"
+      - "3 Conversas escritas ou plano de pesquisa definido"
+      - "Posicao na Celebrity Ladder documentada"
+      - "Barreira Glenn Turner confrontada"
+    blocker: true
+
+  gate_2_repositioned:
+    name: "Reposicionamento Completo"
+    criteria:
+      - "Audit anti-sales completo com eliminacoes documentadas"
+      - "Processo consultivo redesenhado"
+      - "Congruencia de marca >= 7/10 em todos touchpoints"
+    blocker: true
+
+  gate_3_assets_ready:
+    name: "Assets Prontos"
+    criteria:
+      - "Shock and Awe Package montado e testado"
+      - "Peca O Que Nos NAO Somos escrita"
+      - "Celebrity campaign executada (minimo 1 appearance)"
+      - "Tier Premium definido com descricao de 1 pagina"
+    blocker: false
+
+  gate_4_system_active:
+    name: "Sistema Ativo"
+    criteria:
+      - "Sequencia de 53 dias operacional"
+      - "5+ canais fora-da-categoria identificados"
+      - "Shock and Awe enviado para primeiros prospects"
+      - "Metricas de conversao sendo rastreadas"
+    blocker: false
+
+metrics:
+  primary:
+    - name: "Premium Revenue Ratio"
+      formula: "(Receita dos top 5% clientes / Receita total) x 100"
+      target: "+40% em 12 meses"
+
+    - name: "Average Transaction Value"
+      target: "+100% em 12 meses"
+
+    - name: "Shock and Awe Conversion Rate"
+      target: "30-40%"
+
+    - name: "Celebrity Ladder Position"
+      target: "+1 rung a cada 6-12 meses"
+
+    - name: "Tier Premium Clients"
+      target: "10-15 em 12 meses"
+
+resources:
+  monthly_budget:
+    shock_awe_packages: "$500-2.000 (10-20 packages)"
+    celebrity_campaign: "$1.000-3.000"
+    follow_up_sequence: "$500-1.500"
+    brand_congruence_fixes: "$500-2.000"
+    out_of_category_advertising: "$1.000-3.000"
+    total_estimated: "$3.500-11.500/mes"
+
+dependencies:
+  requires:
+    - sop: "sop-follow-up-sequence.md"
+      reason: "Sequencia de 53 dias para leads affluent"
+  feeds_into:
+    - sop: "sop-referral-machine.md"
+      reason: "Clientes affluent referem outros affluents"
+  amplified_by:
+    - sop: "sop-champion-circle.md"
+      reason: "Parceiros premium amplificam acesso"
+    - sop: "sop-dual-guarantee.md"
+      reason: "Garantia forte elimina medo reputacional dos affluents"
+
+sources:
+  - "dan-kennedy-affluent-client/dan-kennedy-affluent-client-summary.md"
+  - "dan-kennedy-affluent-client/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-affluent-client/raw-data-package/quotes-fragment.md"
+  - "dan-kennedy-magnetic-marketing-rb/dan-kennedy-magnetic-marketing-rb-summary.md"

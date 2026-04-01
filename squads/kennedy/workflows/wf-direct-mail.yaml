@@ -1,0 +1,352 @@
+# Direct Mail Campaign Workflow
+# Based on Dan Kennedy's A-Pile/B-Pile Framework + Grabber Mail System
+# Source: Ultimate Sales Letter + Ultimate Marketing Plan + No B.S. Direct Marketing
+# Version: 1.0.0
+
+id: wf-direct-mail
+name: "Direct Mail Campaign"
+version: "1.0.0"
+duration: "2-3 days"
+description: |
+  Complete workflow to create a direct mail campaign using Kennedy's
+  proven mail strategies. Covers A-Pile mail design, grabber/lumpy mail
+  concepts, multi-step mail sequences, and response tracking.
+
+  PHILOSOPHY: "Direct mail is the most personal, highest-impact medium
+  available. Everyone else abandoned it — that's your advantage."
+
+  RESULT: A complete direct mail campaign with envelope design, letter,
+  grabber elements, response mechanism, and tracking system.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Launching a direct mail campaign to a targeted list"
+  - "Creating grabber/lumpy mail for high-value prospects"
+  - "Building a multi-step mail sequence"
+  - "Converting online leads with offline mail follow-up"
+  - "Reaching affluent prospects who ignore digital noise"
+
+decision_matrix_fit:
+  complexity: medium
+  agents_required: 4
+  estimated_duration: "2-3 days"
+  user_involvement: "medium"
+  prerequisites:
+    - "Targeted mailing list (or plan to acquire one)"
+    - "Clear offer to promote"
+    - "Budget for print and postage"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, Results Triangle, media channel validation"
+      phases: [0]
+
+    - agent: kennedy-media
+      role: "A-Pile strategy, grabber mail, multi-channel integration"
+      phases: [1, 2]
+
+    - agent: kennedy-copy
+      role: "Letter copy, fascination bullets, envelope teaser"
+      phases: [2, 3]
+
+    - agent: kennedy-sales-letter
+      role: "28-Step letter structure, headline, P.S. lines"
+      phases: [2, 3]
+
+  synergies:
+    - agents: [kennedy-media, kennedy-copy]
+      pattern: "Media defines format and delivery, Copy fills with persuasive content"
+
+    - agents: [kennedy-media, kennedy-sales-letter]
+      pattern: "Media designs the A-Pile envelope, Sales Letter writes the response-getting content"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Discovery + List Strategy"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Define the target, select/build the mailing list, and establish
+      the Results Triangle for the mail campaign.
+
+      PRINCIPLE: "A mediocre letter to a great list will outperform
+      a great letter to a mediocre list every single time."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Define Target Market + List Strategy"
+        required: true
+        description: |
+          WHO receives this mail? Define with specificity.
+          List sources: house list, rented list, compiled list, endorsed list.
+          Kennedy: "The list is 40% of your success. The offer is 40%.
+          The copy is only 20%."
+        output: "list_strategy.yaml"
+
+      - task_id: T0.2
+        name: "Results Triangle for Mail"
+        required: true
+        description: |
+          Message + Market + Media specifically for direct mail.
+          What makes direct mail the RIGHT medium for this campaign?
+          Cost per piece vs. expected response rate vs. customer value.
+        output: "mail_results_triangle.yaml"
+
+    handoff_to_phase-1:
+      from_agent: "auto"
+      to_agent: "kennedy-media"
+      to_phase: "PHASE-1"
+      trigger: "List and strategy complete"
+      passes: "Target market, mailing list, Results Triangle"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "List + Strategy Complete"
+      criteria:
+        - "Target market defined with mailing list source"
+        - "Results Triangle justified for direct mail medium"
+        - "Budget and volume estimated"
+      human_review: true
+      veto_conditions:
+        - condition: "No defined mailing list or list source"
+          action: "BLOCK - Cannot mail without a list"
+        - condition: "Customer value does not justify mail cost"
+          action: "HALT - Reconsider medium choice"
+
+  - id: PHASE-1
+    name: "Mail Format Design"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Design the mail piece format: A-Pile or B-Pile strategy,
+      envelope type, grabber concept, dimensional elements.
+
+      PRINCIPLE: "Your letter gets sorted in 3 seconds. A-Pile gets
+      opened. B-Pile gets trashed. There is no C-Pile."
+
+    agent: kennedy-media
+
+    tasks:
+      - task_id: T1.1
+        name: "A-Pile Envelope Strategy"
+        required: true
+        description: |
+          Design the envelope to land in the A-Pile:
+          - Hand-addressed or simulated handwriting
+          - No bulk mail indicators
+          - Real stamp (not metered)
+          - Personal return address
+          - No teaser copy OR irresistible teaser
+          Choose strategy and justify.
+        output: "envelope_strategy.md"
+
+      - task_id: T1.2
+        name: "Grabber/Lumpy Mail Concept"
+        required: false
+        description: |
+          If targeting high-value prospects, design a grabber:
+          - Dollar bill attached to letter
+          - Aspirin/bandaid with "headache" theme
+          - Toy trash can ("Don't throw away this opportunity")
+          - Key ("This key unlocks...")
+          - Dimensional package (FedEx, Priority Mail)
+          Kennedy: "Lumpy mail gets opened 99% of the time."
+        output: "grabber_concept.md"
+
+      - task_id: T1.3
+        name: "Multi-Step Sequence Design"
+        required: true
+        description: |
+          Map the full mail sequence (Kennedy recommends 3-7 steps):
+          - Touch 1: Initial letter with offer
+          - Touch 2: Follow-up postcard (5-7 days)
+          - Touch 3: Second letter with new angle
+          - Touch 4: "Final notice" with deadline
+          Each touch builds on previous without repeating.
+        output: "mail_sequence.yaml"
+
+    handoff_to_phase-2:
+      from_agent: "auto"
+      to_agent: "kennedy-copy"
+      to_phase: "PHASE-2"
+      trigger: "Format design complete"
+      passes: "A-Pile envelope, grabber concept, mail sequence"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Format Design Complete"
+      criteria:
+        - "A-Pile strategy defined"
+        - "Mail sequence mapped (minimum 3 steps)"
+        - "Grabber concept decided (use or justified omission)"
+      human_review: true
+      veto_conditions:
+        - condition: "Mail looks like B-Pile bulk mail"
+          action: "REWRITE - Redesign for A-Pile sorting"
+
+  - id: PHASE-2
+    name: "Copy Creation"
+    days: "Day 1-2"
+    tier: 2
+    description: |
+      Write the copy for each mail piece in the sequence.
+      Kennedy's direct mail copy principles apply.
+
+    agent: kennedy-copy
+
+    tasks:
+      - task_id: T2.1
+        name: "Write Primary Sales Letter"
+        required: true
+        description: |
+          Full sales letter using 28-Step System (abridged for mail):
+          - Compelling headline
+          - Problem identification
+          - Solution presentation
+          - Proof and credibility
+          - Irresistible offer
+          - Guarantee
+          - Call to action
+          - P.S. lines (2-3 minimum)
+        output: "primary_letter.md"
+
+      - task_id: T2.2
+        name: "Write Follow-Up Pieces"
+        required: true
+        description: |
+          Write copy for each follow-up touch:
+          - Postcards: short, punchy, deadline-driven
+          - Follow-up letters: new angle, added urgency
+          - Final notice: scarcity, last chance
+          Each piece must stand alone AND connect to the series.
+        output: "follow_up_pieces.md"
+
+      - task_id: T2.3
+        name: "Write Envelope Teaser/Grabber Copy"
+        required: true
+        description: |
+          If using teaser copy on envelope, write it.
+          If using grabber, write the grabber tie-in copy.
+          Example: "The dollar bill you see inside is NOT a bribe..."
+        output: "envelope_copy.md"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Copy Complete"
+      criteria:
+        - "Primary letter follows 28-Step structure"
+        - "All follow-up pieces written"
+        - "Envelope copy/teaser ready"
+      human_review: false
+      veto_conditions:
+        - condition: "Letter reads like institutional marketing"
+          action: "REWRITE - Must be personal, conversational, direct response"
+
+  - id: PHASE-3
+    name: "Assembly + Tracking"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Assemble the complete mail package, set up tracking,
+      and prepare for production.
+
+    agent: kennedy-sales-letter
+
+    tasks:
+      - task_id: T3.1
+        name: "Assemble Complete Mail Package"
+        required: true
+        description: |
+          Compile all elements into production-ready format:
+          - Envelope + contents checklist
+          - Letter + inserts + reply card
+          - Grabber element (if applicable)
+          - Return envelope (if applicable)
+          Verify nothing is missing.
+        output: "mail_package_spec.yaml"
+
+      - task_id: T3.2
+        name: "Set Up Tracking Mechanisms"
+        required: true
+        description: |
+          Configure tracking for response measurement:
+          - Unique phone number per campaign
+          - Unique URL/landing page
+          - Source codes on reply cards
+          - QR codes linking to tracked pages
+          Kennedy Rule #4: "There will be tracking and measurement."
+        output: "tracking_setup.yaml"
+
+      - task_id: T3.3
+        name: "Production Specifications"
+        required: true
+        description: |
+          Document production specs:
+          - Paper stock, size, fold
+          - Printing method (digital, offset)
+          - Envelope size and type
+          - Postage class
+          - Quantity and budget
+          - Mail house instructions
+        output: "production_specs.yaml"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Campaign Ready"
+      criteria:
+        - "Complete mail package assembled"
+        - "Tracking mechanisms configured"
+        - "Production specs documented"
+      human_review: true
+      veto_conditions:
+        - condition: "No tracking mechanism on any piece"
+          action: "BLOCK - Kennedy Rule #4: No tracking = no marketing"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Direct Mail Campaign Kit"
+      file: "mail_campaign_kit.md"
+      description: "Complete campaign documentation"
+    - name: "Letter + Follow-Up Copy"
+      file: "primary_letter.md"
+      description: "All copy pieces production-ready"
+    - name: "Production Specs"
+      file: "production_specs.yaml"
+      description: "Print-ready specifications"
+    - name: "Tracking Plan"
+      file: "tracking_setup.yaml"
+      description: "Response tracking configuration"
+  output_directory: "outputs/kennedy-direct-mail-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "No B.S. Direct Marketing — A-Pile/B-Pile"
+    - "Ultimate Sales Letter — 28-Step System"
+    - "Ultimate Marketing Plan — Direct Mail Mastery"
+  total_phases: 4
+  total_tasks: 12

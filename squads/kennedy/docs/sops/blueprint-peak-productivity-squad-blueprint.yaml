@@ -1,0 +1,541 @@
+# Blueprint: Peak Productivity Squad
+# Source: Dan Kennedy - The Ultimate No B.S. Business Success Book, Ch.14 + Renegade Millionaire
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+---
+
+metadata:
+  name: "Peak Productivity Squad Blueprint"
+  description: >
+    Orchestration blueprint for implementing Dan Kennedy's Peak Productivity
+    System. Deploys agents to diagnose time usage, eliminate Time Vampires,
+    implement the Yes or No Test, and create a sustainable productivity
+    system for entrepreneurs.
+  version: "1.0"
+# source_sop: sop-peak-productivity.md
+  source:
+    book: "The Ultimate No B.S. Business Success Book"
+    author: "Dan S. Kennedy"
+    chapter: 14
+    pages: "111-118"
+    framework: "Peak Productivity System (Framework 15)"
+    additional_sources:
+      - "Renegade Millionaire Course"
+      - "Framework 21 - Three Big Crashes to Prevent (pp. 151-154)"
+  sop_reference: "sop-peak-productivity.md"
+  squad: "kennedy"
+  created: "2026-02-11"
+  tags:
+    - productivity
+    - time-management
+    - time-vampires
+    - yes-or-no-test
+    - time-blocking
+    - delegation
+
+# ---
+
+# Agent Definitions
+agents:
+
+  - id: productivity-chief
+    name: "Productivity Chief"
+    role: "orchestrator"
+    description: >
+      Master orchestrator for the Peak Productivity system. Coordinates
+      diagnostics, system design, and implementation. Ensures the Yes or
+      No Test becomes the owner's default operating mode.
+    responsibilities:
+      - Oversee full productivity transformation process
+      - Ensure diagnostic is thorough and honest
+      - Guide time-blocking system design
+      - Monitor adoption and compliance
+      - Report productivity improvement metrics
+    kennedy_principles:
+      - "The use of your time, energy, intelligence, resources, and opportunities in a manner calculated to move you measurably closer to meaningful goals."
+      - "The secret is not working harder -- it's working on the right things."
+    inputs:
+      - Owner's current schedule/calendar
+      - Business goals (90-day minimum)
+      - Team structure and capabilities
+      - Current pain points around time
+    outputs:
+      - Productivity diagnostic report
+      - System design document
+      - Weekly productivity dashboard
+      - Monthly optimization recommendations
+
+  - id: time-auditor
+    name: "Time Auditor"
+    role: "specialist"
+    description: >
+      Conducts the initial 5-day time tracking diagnostic and ongoing
+      audits. Categorizes all activities as A (high return), B (support),
+      C (habit), or D (vampire). Produces the data that drives all
+      other agents.
+    responsibilities:
+      - Design and execute 5-day time tracking
+      - Categorize all activities (A/B/C/D)
+      - Calculate time allocation percentages
+      - Identify productivity patterns (peak hours)
+      - Produce diagnostic report with visualizations
+    kennedy_principles:
+      - "Is this going to move me measurably closer to a goal?"
+      - "Guard your time as ferociously as you guard your money."
+    inputs:
+      - 5 days of detailed time logs
+      - Calendar/agenda history (30 days)
+      - Meeting inventory with outcomes
+      - Interruption log
+    outputs:
+      - Time allocation breakdown (A/B/C/D percentages)
+      - Peak productivity hours identified
+      - Time vampire inventory
+      - Baseline metrics for improvement tracking
+
+  - id: vampire-slayer
+    name: "Vampire Slayer"
+    role: "specialist"
+    description: >
+      Identifies and eliminates Time Vampires across all 5 categories:
+      drop-in visitors, unnecessary meetings, phone interruptions,
+      email black holes, and false crises. Creates defense systems.
+    responsibilities:
+      - Classify each Time Vampire by type and severity
+      - Design specific defenses for each vampire
+      - Create scripts for graceful refusal
+      - Implement environmental barriers
+      - Monitor vampire recurrence
+    kennedy_principles:
+      - "Time Vampires suck your time without moving you toward goals."
+      - "Create boundaries. Block time for important work. Say no."
+    inputs:
+      - Time vampire inventory from time-auditor
+      - Interruption patterns
+      - Relationship context (who are the vampires)
+      - Environmental factors
+    outputs:
+      - Vampire elimination plan
+      - Refusal scripts and templates
+      - Environmental modification guide
+      - Auto-responder configurations
+      - Weekly vampire monitoring report
+
+  - id: system-designer
+    name: "System Designer"
+    role: "specialist"
+    description: >
+      Designs the customized time-blocking system and daily workflow.
+      Creates the structure that replaces willpower with systems.
+      Ensures the Yes or No Test is operationalized into daily routine.
+    responsibilities:
+      - Design personalized time-blocking schedule
+      - Create daily workflow templates
+      - Operationalize Yes or No Test into routines
+      - Design delegation framework for B/C activities
+      - Build habit consolidation plan
+    kennedy_principles:
+      - "Self-imposed work plans create structure in the chaos."
+      - "Results = High-Pay-Off Activity x Focus (NOT Hours x Effort)."
+    inputs:
+      - Time audit data from time-auditor
+      - Owner's peak productivity patterns
+      - Business requirements and constraints
+      - Team delegation capacity
+    outputs:
+      - Customized time-blocking calendar
+      - Daily workflow template
+      - Delegation framework
+      - 30-day habit consolidation plan
+      - System maintenance guide
+
+  - id: wellbeing-guardian
+    name: "Wellbeing Guardian"
+    role: "support"
+    description: >
+      Monitors the owner's health, energy, and life balance throughout
+      the productivity optimization. Applies the $100,000 Racehorse
+      principle and prevents the three big crashes.
+    responsibilities:
+      - Monitor owner health indicators
+      - Enforce recovery time and boundaries
+      - Apply the Deathbed Test to priorities
+      - Prevent burnout and life imbalance
+      - Ensure sustainable productivity (not sprint-based)
+    kennedy_principles:
+      - "No one on his deathbed says I wish I'd spent more time at the office. (Eternal Truth #21)"
+      - "If you had a $100,000 racehorse, would you treat it the way you treat yourself?"
+      - "Most entrepreneurs would double success by cutting haste by half."
+    inputs:
+      - Owner self-reported energy levels
+      - Hours worked per week
+      - Relationship and health status
+      - Stress indicators
+    outputs:
+      - Wellbeing check-in reports
+      - Burnout risk alerts
+      - Recovery recommendations
+      - Life balance dashboard
+
+# ---
+
+# Workflow Phases
+workflow:
+
+  phase_1:
+    name: "Diagnosis"
+    duration: "Week 1"
+    description: "Track, measure, and diagnose current time usage."
+    steps:
+      - step: "1.1 Goal Clarity Check"
+        agent: productivity-chief
+        duration: "Day 1"
+        actions:
+          - Verify 90-day goals exist and are written
+          - If no goals, facilitate rapid goal-setting session
+          - Ensure goals are specific and measurable
+          - Goals are foundation of Yes or No Test
+        gate: "Written 90-day goals with specific, measurable targets"
+
+      - step: "1.2 Time Tracking"
+        agent: time-auditor
+        duration: "Days 1-5"
+        actions:
+          - Set up 15-minute block tracking system
+          - Owner tracks ALL activities for 5 working days
+          - Categorize each block as A/B/C/D
+          - Log all interruptions with source and duration
+        gate: "5 complete days of time data collected"
+
+      - step: "1.3 Diagnostic Analysis"
+        agent: time-auditor
+        duration: "Day 5-6"
+        actions:
+          - Calculate category percentages
+          - Identify peak productivity hours
+          - Rank Time Vampires by time consumed
+          - Produce diagnostic report
+        gate: "Diagnostic report complete with baseline metrics"
+
+  phase_2:
+    name: "System Design"
+    duration: "Week 2"
+    description: "Design personalized productivity system."
+    steps:
+      - step: "2.1 Vampire Elimination Plan"
+        agent: vampire-slayer
+        duration: "Days 6-8"
+        actions:
+          - Classify each vampire by type
+          - Design specific defense for each
+          - Create refusal scripts
+          - Plan environmental modifications
+        gate: "Defense plan for every identified Time Vampire"
+
+      - step: "2.2 Time-Blocking Design"
+        agent: system-designer
+        duration: "Days 7-9"
+        actions:
+          - Design blocks based on peak hours and business needs
+          - Create morning block (creation/high return)
+          - Create communication block (batch processing)
+          - Create execution block (operations/management)
+          - Create planning block (daily close)
+        gate: "Complete time-blocking calendar template"
+
+      - step: "2.3 Delegation Framework"
+        agent: system-designer
+        duration: "Days 8-10"
+        actions:
+          - Identify B/C activities to delegate
+          - Map delegation targets (team, VA, automation)
+          - Create delegation handoff documents
+          - Set up accountability for delegated tasks
+        gate: "Delegation plan for >50% of B/C activities"
+
+      - step: "2.4 Wellbeing Baseline"
+        agent: wellbeing-guardian
+        duration: "Days 6-10 (parallel)"
+        actions:
+          - Assess current health/energy/balance
+          - Identify crash risks
+          - Integrate recovery time into system design
+          - Set wellbeing monitoring cadence
+        gate: "Wellbeing baseline documented. Recovery time in schedule."
+
+  phase_3:
+    name: "Implementation"
+    duration: "Week 3-4"
+    description: "Deploy new system and build habits."
+    steps:
+      - step: "3.1 System Launch"
+        agent: productivity-chief
+        duration: "Day 11"
+        actions:
+          - Communicate new system to all stakeholders
+          - Set up environment (physical and digital)
+          - Activate auto-responders and barriers
+          - Begin first day under new system
+        gate: "All systems active. First day completed under new protocol."
+
+      - step: "3.2 Daily Execution"
+        agent: system-designer
+        duration: "Days 11-30"
+        actions:
+          - Owner follows time blocks daily
+          - Apply Yes or No Test to every activity
+          - Vampire defenses active
+          - End-of-day planning ritual for next day
+        gate: "14+ days of system adherence (>80% compliance)"
+
+      - step: "3.3 Mid-Course Correction"
+        agent: time-auditor
+        duration: "Day 20"
+        actions:
+          - Re-track time for 2 days
+          - Compare with baseline
+          - Identify new vampires or system gaps
+          - Recommend adjustments
+        gate: "Improvement vs baseline documented. Adjustments implemented."
+
+  phase_4:
+    name: "Consolidation"
+    duration: "Month 2-3"
+    description: "Lock in habits and optimize the system."
+    steps:
+      - step: "4.1 Habit Consolidation"
+        agent: system-designer
+        duration: "Month 2"
+        actions:
+          - Reduce conscious effort needed (automatize routines)
+          - Build triggers and rewards for key behaviors
+          - Simplify system to sustainable minimum
+        gate: "System feels natural. Compliance >90% without conscious effort."
+
+      - step: "4.2 Ongoing Optimization"
+        agent: productivity-chief
+        duration: "Month 3+"
+        actions:
+          - Monthly time audit (1-day sample)
+          - Quarterly full review
+          - Annual system overhaul
+          - Continuously refine based on changing goals
+        gate: "System producing sustained results. Owner reports improvement."
+
+# ---
+
+# Quality Gates
+quality_gates:
+
+  gate_1_diagnosis:
+    name: "Diagnosis Complete"
+    trigger: "End of Week 1"
+    criteria:
+      - "5 full days of time tracking data collected"
+      - "Activities categorized as A/B/C/D"
+      - "Time allocation percentages calculated"
+      - "Top 5 Time Vampires identified"
+      - "Peak productivity hours mapped"
+      - "90-day goals written and specific"
+    fail_action: "Extend tracking by 2 days. Cannot proceed without data."
+
+  gate_2_system_designed:
+    name: "System Ready"
+    trigger: "End of Week 2"
+    criteria:
+      - "Time-blocking calendar template complete"
+      - "Vampire defense plan for each identified vampire"
+      - "Delegation framework with >50% of B/C activities covered"
+      - "Refusal scripts prepared"
+      - "Wellbeing recovery time included in schedule"
+    fail_action: "Complete missing elements. 2-day extension max."
+
+  gate_3_system_live:
+    name: "System Operating"
+    trigger: "End of Week 4"
+    criteria:
+      - "14+ days of system adherence documented"
+      - "Compliance >80% with time blocks"
+      - "Time in Category A increased vs baseline"
+      - "Interruptions decreased vs baseline"
+      - "Owner reports subjective improvement"
+    fail_action: "Troubleshoot compliance issues. Simplify system if needed."
+
+  gate_4_consolidated:
+    name: "System Consolidated"
+    trigger: "End of Month 3"
+    criteria:
+      - "Time in Category A >40% sustained"
+      - "Total hours <50/week sustained"
+      - "Business KPIs improved vs pre-system"
+      - "System maintenance requires <30 min/week"
+      - "Owner considers system 'how things are done'"
+    fail_action: "Re-evaluate system fit. Redesign if fundamental issues exist."
+
+# ---
+
+# Risk Management
+risks:
+
+  - id: risk-001
+    name: "Resistance to Tracking"
+    probability: "high"
+    impact: "critical"
+    description: "Owner resists tracking time for 5 days -- too tedious"
+    mitigation: >
+      Simplify tracking method. Use 30-min blocks instead of 15-min.
+      Emphasize: data is non-negotiable for diagnosis. 5 days of tracking
+      saves years of wasted time.
+    owner: time-auditor
+
+  - id: risk-002
+    name: "Vampire Adaptation"
+    probability: "high"
+    impact: "medium"
+    description: "Time Vampires find new ways around defenses"
+    mitigation: >
+      Vampire-slayer conducts monthly audits. New vampires identified
+      and addressed within 1 week. System must evolve.
+    owner: vampire-slayer
+
+  - id: risk-003
+    name: "Guilt About Saying No"
+    probability: "high"
+    impact: "medium"
+    description: "Owner feels guilty refusing meetings, visitors, requests"
+    mitigation: >
+      Wellbeing-guardian provides emotional support. Reference: protecting
+      your time IS protecting your business and the people who depend on it.
+      Provide scripts that redirect gracefully, not reject harshly.
+    owner: wellbeing-guardian
+
+  - id: risk-004
+    name: "System Abandoned After Week 1"
+    probability: "medium"
+    impact: "critical"
+    description: "Owner abandons new system when first emergency arises"
+    mitigation: >
+      Productivity-chief provides daily check-ins for first 2 weeks.
+      Pre-plan how to handle emergencies within the system (not by
+      abandoning it). Celebrate small wins daily.
+    owner: productivity-chief
+
+  - id: risk-005
+    name: "Burnout from Over-Optimization"
+    probability: "low"
+    impact: "high"
+    description: "Owner becomes obsessed with optimization, losing joy"
+    mitigation: >
+      Wellbeing-guardian monitors for over-optimization signs. Reference
+      Eternal Truth #21 (Deathbed Test). Productivity serves life, not
+      the other way around.
+    owner: wellbeing-guardian
+
+# ---
+
+# Success Metrics
+success_metrics:
+
+  primary:
+    - metric: "Time in Category A activities"
+      baseline: "<10% typical"
+      target_30_days: ">30%"
+      target_90_days: ">40%"
+      measurement: "Weekly time audit"
+
+    - metric: "Total hours worked per week"
+      baseline: ">60 hours typical"
+      target_30_days: "<55 hours"
+      target_90_days: "<50 hours"
+      measurement: "Weekly tracking"
+
+    - metric: "Business results per hour"
+      baseline: "Current ratio"
+      target_90_days: "2x improvement"
+      measurement: "Revenue or KPI divided by hours worked"
+
+  secondary:
+    - metric: "Interruptions per day"
+      target: "-50% from baseline"
+      measurement: "Interruption log"
+
+    - metric: "Meetings per week"
+      target: "-40% from baseline"
+      measurement: "Calendar count"
+
+    - metric: "Time Vampires active"
+      target: "<2 significant vampires"
+      measurement: "Monthly vampire audit"
+
+    - metric: "Owner satisfaction"
+      target: "Improved work-life balance"
+      measurement: "Monthly self-assessment"
+
+# ---
+
+# Integration
+integration:
+
+  depends_on:
+    - sop: "None"
+      condition: "Can be applied independently at any time"
+      note: "However, clear business goals are a prerequisite"
+
+  feeds_into:
+    - sop: "sop-business-turnaround.md"
+      relationship: "Ensures Passo 8 (renovation) gets daily 1-hour block"
+      data_passed: "Protected time blocks, delegation framework"
+
+    - sop: "sop-5-keys-cash-flow.md"
+      relationship: "Focused time enables effective MCF execution"
+      data_passed: "Time allocation for each MCF key"
+
+    - sop: "sop-midas-touch-audit.md"
+      relationship: "Marketing audit requires focused analysis time"
+      data_passed: "Protected time blocks for audit activities"
+
+    - sop: "sop-entrepreneurial-management.md"
+      relationship: "Delegation framework requires management skills"
+      data_passed: "B/C activity list for delegation, team capacity assessment"
+
+  shared_data:
+    - name: "time_diagnostic"
+      format: "report"
+      source: time-auditor
+      consumers: ["All squad agents", "Business owner"]
+
+    - name: "productivity_dashboard"
+      format: "dashboard"
+      source: productivity-chief
+      consumers: ["Business owner", "wellbeing-guardian"]
+
+# ---
+
+# Kennedy Wisdom Applied
+kennedy_wisdom:
+
+  eternal_truths_used:
+    - number: 19
+      text: "There is never enough time. Entrepreneurs learn to get what they want working with what they've got."
+      application: "Accept time scarcity. Focus on allocation quality, not quantity."
+
+    - number: 21
+      text: "No one on his deathbed says I wish I'd spent more time at the office."
+      application: "Wellbeing-guardian's compass. Productivity serves life."
+
+    - number: 14
+      text: "No one will ever care about your business as much as you do."
+      application: "Delegate B/C tasks -- they won't do it YOUR way, but they can do it WELL ENOUGH."
+
+  mental_models:
+    - name: "The $100,000 Racehorse"
+      application: "Treat yourself as the most valuable asset. Rest, nutrition, exercise."
+
+    - name: "Time Vampires"
+      application: "Core framework for Phase 2 -- identify and eliminate all time drains."
+
+    - name: "The Deathbed Test"
+      application: "Ultimate priority filter when Yes or No Test gives ambiguous results."
+
+    - name: "The Yes or No Test"
+      application: "Daily operating system -- every activity must pass this filter."

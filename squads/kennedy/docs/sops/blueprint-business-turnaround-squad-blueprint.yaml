@@ -1,0 +1,620 @@
+# Blueprint: Business Turnaround Squad
+# Source: Dan Kennedy - The Ultimate No B.S. Business Success Book, Ch.19
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+---
+
+metadata:
+  name: "Business Turnaround Squad Blueprint"
+  description: >
+    Orchestration blueprint for executing Dan Kennedy's 8-Step Business
+    Turnaround System. Deploys specialized agents to diagnose crisis,
+    execute surgical cuts, create recovery plans, negotiate with creditors,
+    and drive business renovation.
+  version: "1.0"
+# source_sop: sop-business-turnaround.md
+  source:
+    book: "The Ultimate No B.S. Business Success Book"
+    author: "Dan S. Kennedy"
+    chapter: 19
+    pages: "145-150"
+    framework: "Business Turnaround Framework (Framework 20)"
+  sop_reference: "sop-business-turnaround.md"
+  squad: "kennedy"
+  created: "2026-02-11"
+  tags:
+    - turnaround
+    - crisis-management
+    - cash-flow
+    - cost-cutting
+    - business-recovery
+    - creditor-negotiation
+
+# ---
+
+# Agent Definitions
+agents:
+
+  - id: turnaround-chief
+    name: "Turnaround Chief"
+    role: "orchestrator"
+    description: >
+      Master orchestrator for the turnaround process. Coordinates all
+      other agents, ensures adherence to the 8-step system, and maintains
+      the discipline of simultaneous crisis management and strategic
+      renovation. Embodies Kennedy's principle: "As long as there's a
+      pulse (cash flow), there's hope."
+    responsibilities:
+      - Coordinate execution of all 8 turnaround steps
+      - Monitor overall turnaround progress and timeline
+      - Escalate blockers and adjust strategy in real-time
+      - Ensure Passo 8 (Renovacao) receives daily 1-hour block
+      - Report weekly to business owner with KPI dashboard
+    kennedy_principles:
+      - "When you're up to your neck in alligators, remember the objective was to drain the swamp."
+      - "As long as there's a pulse (cash flow), there's hope."
+    inputs:
+      - Business financial data (6 months minimum)
+      - Complete creditor list
+      - Employee roster with roles and costs
+      - Active contracts inventory
+    outputs:
+      - Turnaround status dashboard (daily)
+      - Weekly progress report
+      - Agent coordination instructions
+      - Go/no-go decisions for each phase
+
+  - id: financial-surgeon
+    name: "Financial Surgeon"
+    role: "specialist"
+    description: >
+      Responsible for Passos 1-3: brutal honest diagnosis, cash flow
+      pulse monitoring, and surgical cost cutting. Operates with the
+      Kennedy mandate: "Swing your axe in a wide arc. Cut everywhere.
+      Spare no one, no thing."
+    responsibilities:
+      - Execute complete financial diagnosis (Passo 1)
+      - Set up daily cash flow monitoring system (Passo 2)
+      - Identify and execute cost cuts of 30-50% (Passo 3)
+      - Calculate months of oxygen remaining
+      - Classify all expenses as essential vs dispensable
+      - Produce financial triage report
+    kennedy_principles:
+      - "Cash is king. (Eternal Truth #15)"
+      - "Swing your axe in a wide arc. Cut everywhere."
+      - "If you can't make money without money, you won't make money with money either."
+    inputs:
+      - Balance sheet (last 30 days)
+      - Cash flow statements (6 months)
+      - Full expense ledger
+      - Employee compensation data
+      - All active contracts
+    outputs:
+      - Brutal diagnosis document
+      - Cash flow dashboard (daily updates)
+      - Cost-cutting execution plan
+      - Post-cut financial projection
+      - Break-even analysis
+
+  - id: strategy-architect
+    name: "Strategy Architect"
+    role: "specialist"
+    description: >
+      Responsible for Passo 4: creating the detailed turnaround plan.
+      Fights against the "spinning top" syndrome by producing a written
+      plan with 6-month detail and 12-month direction.
+    responsibilities:
+      - Create detailed 6-month turnaround plan (week by week)
+      - Define 6-12 month strategic direction
+      - Establish weekly KPIs and milestones
+      - Develop Plan B contingency
+      - Integrate inputs from financial-surgeon and creditor-negotiator
+    kennedy_principles:
+      - "Without a plan, you'll spin like a top reacting to every crisis."
+      - "The willingness to do whatever it takes is infinitely more important than knowing everything."
+    inputs:
+      - Financial diagnosis from financial-surgeon
+      - Creditor status from creditor-negotiator
+      - Market analysis and competitive position
+      - Owner's goals and constraints
+    outputs:
+      - Complete turnaround plan document
+      - Weekly KPI dashboard template
+      - Milestone tracker
+      - Plan B documentation
+      - Monthly review cadence
+
+  - id: creditor-negotiator
+    name: "Creditor Negotiator"
+    role: "specialist"
+    description: >
+      Responsible for Passo 5: facing creditors with transparency and
+      renegotiating terms. Follows Kennedy's mandate that hiding from
+      creditors is the worst possible strategy.
+    responsibilities:
+      - Map all creditors with amounts and deadlines
+      - Prioritize creditors by impact (top 5 first)
+      - Prepare negotiation presentations with turnaround plan
+      - Conduct or guide creditor meetings
+      - Document all new agreements in writing
+      - Monitor compliance with renegotiated terms
+    kennedy_principles:
+      - "Face creditors head-on. Open communication earns respect."
+      - "There is no such thing as standard terms. (Eternal Truth #11)"
+      - "Everything is negotiable."
+    inputs:
+      - Complete creditor list with amounts
+      - Turnaround plan from strategy-architect
+      - Post-cut financial projections from financial-surgeon
+      - Legal constraints and obligations
+    outputs:
+      - Creditor priority matrix
+      - Negotiation scripts and presentations
+      - Renegotiated terms documentation
+      - Payment schedule for new agreements
+      - Compliance tracking log
+
+  - id: renovation-driver
+    name: "Renovation Driver"
+    role: "specialist"
+    description: >
+      Responsible for Passo 8: driving daily business renovation while
+      crisis management continues. Follows the Don G. model of selecting
+      one unit as a laboratory, reinventing it completely, proving the
+      model, then duplicating.
+    responsibilities:
+      - Select the renovation target (unit/product/service)
+      - Design the reinvented model from scratch
+      - Execute renovation with daily 1-hour dedicated blocks
+      - Test and measure new model performance
+      - Create duplication playbook for other units
+    kennedy_principles:
+      - "Dedicate time daily to REINVENTING the business, not just patching."
+      - "A normal small business can only yield a normal income. (Eternal Truth #23)"
+      - "The ability to win is easily transferred from one business to another. (Eternal Truth #9)"
+    inputs:
+      - Current business model analysis
+      - Financial surgeon's data on profitable vs unprofitable units
+      - Market opportunity assessment
+      - Owner's vision for renovated business
+    outputs:
+      - Renovation target selection rationale
+      - Reinvented model design document
+      - Weekly renovation progress reports
+      - Performance metrics for new model
+      - Duplication playbook
+
+  - id: mindset-coach
+    name: "Mindset Coach"
+    role: "support"
+    description: >
+      Supports Passos 6-7: emotional separation and help-seeking.
+      Ensures the business owner maintains objectivity, separates
+      responsibility from guilt, and actively seeks external support.
+    responsibilities:
+      - Guide owner through emotional separation framework
+      - Facilitate connection to mastermind groups and mentors
+      - Monitor owner wellbeing and prevent burnout
+      - Apply Kennedy's responsibility vs guilt distinction
+      - Recommend SCORE, consultants, and external resources
+    kennedy_principles:
+      - "Take on responsibility, not guilt. (Eternal Truth #18)"
+      - "The only cause for shame is giving up without a fight."
+      - "Seeking help is a sign of strength."
+      - "No one on his deathbed says I wish I'd spent more time at the office. (Eternal Truth #21)"
+    inputs:
+      - Owner stress level assessment
+      - Current support network inventory
+      - Available mentors and resources
+    outputs:
+      - Emotional separation exercises
+      - External support connection plan
+      - Weekly owner wellbeing check-in
+      - Burnout prevention alerts
+
+# ---
+
+# Workflow Phases
+workflow:
+
+  phase_1:
+    name: "Triage & Surgery"
+    duration: "Days 1-7"
+    description: "Diagnose, monitor pulse, and cut deep."
+    steps:
+      - step: "1.1 Financial Diagnosis"
+        agent: financial-surgeon
+        duration: "Days 1-2"
+        actions:
+          - Collect all financial data
+          - Calculate real cash flow (6-month average)
+          - Map all creditors with amounts
+          - Calculate months of oxygen remaining
+          - Produce brutal diagnosis document
+        gate: "Diagnosis document complete with all numbers verified"
+
+      - step: "1.2 Cash Flow Dashboard"
+        agent: financial-surgeon
+        duration: "Day 2"
+        actions:
+          - Set up daily cash flow monitoring
+          - Define break-even targets
+          - Establish daily reporting cadence
+        gate: "Dashboard operational with Day 1 data populated"
+
+      - step: "1.3 Surgical Cuts"
+        agent: financial-surgeon
+        duration: "Days 3-5"
+        actions:
+          - Classify all expenses (essential vs dispensable)
+          - Execute 30-50% cost reduction
+          - Communicate cuts to affected parties
+          - Update cash flow projections post-cuts
+        gate: "Costs reduced by minimum 30%. Post-cut projection shows extended runway."
+
+      - step: "1.4 Emotional Baseline"
+        agent: mindset-coach
+        duration: "Days 1-7 (parallel)"
+        actions:
+          - Assess owner emotional state
+          - Introduce responsibility vs guilt framework
+          - Begin daily check-ins
+        gate: "Owner understands emotional separation framework"
+
+  phase_2:
+    name: "Planning & Negotiation"
+    duration: "Days 8-21"
+    description: "Create recovery plan and face creditors."
+    steps:
+      - step: "2.1 Turnaround Plan"
+        agent: strategy-architect
+        duration: "Days 8-12"
+        actions:
+          - Draft 6-month detailed plan (week by week)
+          - Define 6-12 month strategic direction
+          - Establish weekly KPIs
+          - Create Plan B
+          - Review with financial-surgeon and turnaround-chief
+        gate: "Written plan complete, reviewed, and approved by turnaround-chief"
+
+      - step: "2.2 Creditor Engagement"
+        agent: creditor-negotiator
+        duration: "Days 10-21"
+        actions:
+          - Prioritize creditors (top 5 by amount)
+          - Prepare negotiation materials with plan
+          - Schedule and conduct creditor meetings
+          - Document all renegotiated terms
+          - Set up compliance tracking
+        gate: "Top 5 creditors contacted. Min 3 agreements renegotiated in writing."
+
+      - step: "2.3 Support Network"
+        agent: mindset-coach
+        duration: "Days 8-21 (parallel)"
+        actions:
+          - Identify available mastermind groups
+          - Connect owner with SCORE or mentors
+          - Facilitate first external consultation
+        gate: "Owner connected to minimum 1 external support resource"
+
+  phase_3:
+    name: "Execution & Renovation"
+    duration: "Days 22-180"
+    description: "Execute plan while simultaneously renovating business model."
+    steps:
+      - step: "3.1 Daily Execution"
+        agent: turnaround-chief
+        duration: "Ongoing (6 months)"
+        actions:
+          - Monitor daily cash flow
+          - Track weekly KPIs
+          - Coordinate agent activities
+          - Adjust plan based on results
+          - Produce weekly progress reports
+        gate: "Weekly KPIs meeting >80% target. Cash flow trending positive."
+
+      - step: "3.2 Business Renovation"
+        agent: renovation-driver
+        duration: "Days 22-180 (parallel)"
+        actions:
+          - Select renovation target
+          - Design reinvented model
+          - Execute daily 1-hour renovation blocks
+          - Test and measure new model
+          - Prepare duplication playbook
+        gate: "Renovated unit achieving target margins. Playbook ready for duplication."
+
+      - step: "3.3 Ongoing Negotiation"
+        agent: creditor-negotiator
+        duration: "Monthly reviews"
+        actions:
+          - Track payment compliance
+          - Renegotiate additional creditors as needed
+          - Update creditor communication
+        gate: "All payment obligations met. No creditor escalations."
+
+  phase_4:
+    name: "Stabilization & Duplication"
+    duration: "Months 7-12"
+    description: "Duplicate successful model and stabilize operations."
+    steps:
+      - step: "4.1 Model Duplication"
+        agent: renovation-driver
+        duration: "Months 7-9"
+        actions:
+          - Apply renovation playbook to additional units
+          - Monitor duplication fidelity
+          - Adjust model based on learnings
+        gate: "Renovated model successfully duplicated in 2+ units"
+
+      - step: "4.2 Financial Stabilization"
+        agent: financial-surgeon
+        duration: "Months 7-12"
+        actions:
+          - Transition from crisis monitoring to standard reporting
+          - Build emergency reserve (target 3 months expenses)
+          - Establish ongoing financial controls
+        gate: "Positive cash flow sustained 3+ consecutive months. Reserve building."
+
+      - step: "4.3 Turnaround Completion"
+        agent: turnaround-chief
+        duration: "Month 12"
+        actions:
+          - Produce final turnaround report
+          - Document lessons learned
+          - Transition to normal operations SOPs
+          - Celebrate and recognize team
+        gate: "Business profitable. Debts 50%+ resolved. Systems documented."
+
+# ---
+
+# Quality Gates
+quality_gates:
+
+  gate_1_diagnosis:
+    name: "Diagnosis Complete"
+    trigger: "End of Phase 1"
+    criteria:
+      - "Financial diagnosis document exists with all numbers verified"
+      - "Cash flow dashboard operational with daily data"
+      - "Cost cuts of minimum 30% executed (not just planned)"
+      - "Months of oxygen calculated and documented"
+      - "Owner has completed emotional baseline assessment"
+    fail_action: "STOP. Do not proceed to Phase 2 without complete diagnosis."
+
+  gate_2_plan_ready:
+    name: "Plan & Creditors Engaged"
+    trigger: "End of Phase 2"
+    criteria:
+      - "Written turnaround plan with 6-month weekly detail exists"
+      - "Top 5 creditors contacted with documented responses"
+      - "Minimum 3 creditor agreements renegotiated in writing"
+      - "Owner connected to external support resource"
+      - "KPI dashboard populated with first data points"
+    fail_action: "Extend Phase 2 by 1 week. Escalate blockers to turnaround-chief."
+
+  gate_3_execution_monthly:
+    name: "Monthly Execution Review"
+    trigger: "End of each month (Months 1-6)"
+    criteria:
+      - "Weekly KPIs achieving >80% of targets"
+      - "Cash flow trending positive or at break-even"
+      - "Renovation receiving minimum 1 hour daily"
+      - "All creditor payments made per agreement"
+      - "No unresolved critical issues >7 days old"
+    fail_action: "Turnaround-chief convenes emergency review. Adjust plan within 48h."
+
+  gate_4_turnaround_complete:
+    name: "Turnaround Complete"
+    trigger: "Month 12"
+    criteria:
+      - "Business profitable (>10% net margin) for 3+ consecutive months"
+      - "50%+ of debts resolved (paid or renegotiated with compliance)"
+      - "Renovated model duplicated in 2+ units/products"
+      - "Owner working <50 hours/week"
+      - "Emergency reserve of 3 months expenses in place"
+      - "All systems documented for ongoing operations"
+    fail_action: "Extend turnaround by 3 months with revised targets."
+
+# ---
+
+# Risk Management
+risks:
+
+  - id: risk-001
+    name: "Insufficient Cuts"
+    probability: "high"
+    impact: "critical"
+    description: "Owner resists cutting deep enough in Phase 1"
+    mitigation: >
+      Financial-surgeon presents stark reality with oxygen countdown.
+      Mindset-coach applies emotional separation framework. Reference
+      Kennedy's Rule of 38 -- he fired 38 people in one day.
+    owner: financial-surgeon
+
+  - id: risk-002
+    name: "Creditor Escalation"
+    probability: "medium"
+    impact: "high"
+    description: "Creditors refuse negotiation and take legal action"
+    mitigation: >
+      Creditor-negotiator engages early (before creditors act). Legal
+      counsel retained. Transparent communication maintained. Worst case:
+      structured legal process with court-supervised repayment.
+    owner: creditor-negotiator
+
+  - id: risk-003
+    name: "Owner Burnout"
+    probability: "high"
+    impact: "high"
+    description: "Owner collapses physically or emotionally during turnaround"
+    mitigation: >
+      Mindset-coach monitors weekly. Enforce Eternal Truth #21:
+      "No one on his deathbed says I wish I'd spent more time at
+      the office." Build in mandatory recovery time.
+    owner: mindset-coach
+
+  - id: risk-004
+    name: "Renovation Neglect"
+    probability: "high"
+    impact: "medium"
+    description: "Crisis firefighting consumes all time, no renovation happens"
+    mitigation: >
+      Turnaround-chief enforces daily 1-hour renovation block as
+      non-negotiable. Reference Eternal Truth #25 and Don G. case study.
+    owner: turnaround-chief
+
+  - id: risk-005
+    name: "Cash Runs Out"
+    probability: "medium"
+    impact: "critical"
+    description: "Despite cuts, business runs out of cash before turnaround takes effect"
+    mitigation: >
+      Financial-surgeon monitors daily. Apply Patchwork Quilt financing
+      (Framework 9) -- credit cards, vendor terms, private investors.
+      Activate Plan B from strategy-architect.
+    owner: financial-surgeon
+
+# ---
+
+# Success Metrics
+success_metrics:
+
+  immediate_30_days:
+    - metric: "Cost Reduction"
+      target: "30-50% of total expenses"
+      measurement: "Month-over-month expense comparison"
+    - metric: "Cash Burn Rate"
+      target: "Reduced by 50%+"
+      measurement: "Monthly cash gap (revenue - expenses)"
+    - metric: "Creditor Contact"
+      target: "100% of top 5 creditors"
+      measurement: "Contact log with dates and responses"
+    - metric: "Turnaround Plan"
+      target: "1 complete written plan"
+      measurement: "Document exists with weekly detail for 6 months"
+
+  medium_term_90_days:
+    - metric: "Cash Flow"
+      target: "Break-even or positive"
+      measurement: "Monthly cash flow statement"
+    - metric: "Creditor Agreements"
+      target: "100% renegotiated"
+      measurement: "Written agreements on file"
+    - metric: "KPI Adherence"
+      target: ">80% weekly targets met"
+      measurement: "KPI dashboard tracking"
+    - metric: "Renovation Progress"
+      target: "1 unit/product fully reinvented"
+      measurement: "Renovation completion checklist"
+
+  long_term_12_months:
+    - metric: "Net Margin"
+      target: ">10%"
+      measurement: "Monthly P&L statement"
+    - metric: "Debt Resolution"
+      target: "50%+ resolved"
+      measurement: "Balance sheet comparison"
+    - metric: "Model Duplication"
+      target: "2+ units using renovated model"
+      measurement: "Operational unit count"
+    - metric: "Owner Hours"
+      target: "<50 hours/week"
+      measurement: "Self-tracking log"
+    - metric: "Emergency Reserve"
+      target: "3 months of expenses"
+      measurement: "Bank balance"
+
+# ---
+
+# Integration
+integration:
+
+  depends_on: []  # This is typically the starting point in crisis
+
+  feeds_into:
+    - sop: "sop-5-keys-cash-flow.md"
+      relationship: "After stabilization, apply MCF methods to multiply revenue"
+      data_passed: "Financial diagnosis, post-cut projections"
+
+    - sop: "sop-midas-touch-audit.md"
+      relationship: "After cash flow stabilized, audit marketing for leaks"
+      data_passed: "Marketing expense analysis, customer data"
+
+    - sop: "sop-entrepreneurial-management.md"
+      relationship: "After cuts, restructure remaining team"
+      data_passed: "Post-cut employee roster, role definitions"
+
+    - sop: "sop-peak-productivity.md"
+      relationship: "Ongoing optimization of owner's time allocation"
+      data_passed: "Time allocation analysis, priority activities"
+
+  shared_data:
+    - name: "financial_diagnosis"
+      format: "markdown"
+      source: financial-surgeon
+      consumers:
+        - strategy-architect
+        - creditor-negotiator
+        - renovation-driver
+
+    - name: "turnaround_plan"
+      format: "markdown"
+      source: strategy-architect
+      consumers:
+        - turnaround-chief
+        - creditor-negotiator
+        - financial-surgeon
+
+    - name: "creditor_agreements"
+      format: "markdown"
+      source: creditor-negotiator
+      consumers:
+        - turnaround-chief
+        - financial-surgeon
+
+    - name: "renovation_playbook"
+      format: "markdown"
+      source: renovation-driver
+      consumers:
+        - turnaround-chief
+        - strategy-architect
+
+# ---
+
+# Kennedy Wisdom Applied
+kennedy_wisdom:
+
+  eternal_truths_used:
+    - number: 8
+      text: "The willingness to do whatever it takes is infinitely more important than knowing everything."
+      application: "Cuts must be made even without perfect information about consequences."
+
+    - number: 15
+      text: "Cash is king."
+      application: "Every decision during turnaround is filtered through cash flow impact."
+
+    - number: 17
+      text: "How you deal with failure determines whether or not you ever get the opportunity to deal with success."
+      application: "The turnaround process itself builds the resilience needed for future success."
+
+    - number: 18
+      text: "Take on responsibility, not guilt."
+      application: "Owner must maintain objectivity throughout the process."
+
+    - number: 25
+      text: "When you're up to your neck in alligators, remember the objective was to drain the swamp."
+      application: "Daily renovation time (Passo 8) is the swamp-draining work."
+
+  mental_models:
+    - name: "The Axe Swung Wide"
+      application: "Phase 1 cuts must be 30-50%, not gradual 5% reductions."
+
+    - name: "Alligators and Swamps"
+      application: "Balance firefighting (alligators) with strategic renovation (swamp draining)."
+
+    - name: "The Spinning Top"
+      application: "Without a written plan, the team reacts chaotically to every new crisis."
+
+    - name: "The Don G. Model"
+      application: "Renovate one unit completely, prove the model, then duplicate."

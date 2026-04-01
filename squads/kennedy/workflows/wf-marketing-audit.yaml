@@ -1,0 +1,325 @@
+# Marketing Audit & Diagnosis Workflow
+# Based on Dan Kennedy's Marketing Triangle Audit + Money Pyramid Analysis
+# Source: Midas Touch Course + No B.S. Direct Marketing
+# Version: 1.0.0
+
+id: wf-marketing-audit
+name: "Marketing Audit & Diagnosis"
+version: "1.0.0"
+duration: "1-2 days"
+description: |
+  Complete marketing audit using Kennedy's diagnostic frameworks.
+  Evaluates the business against 10 No B.S. Rules, 9 Fatal Marketing
+  Mistakes, Money Pyramid positioning, and the Results Triangle.
+
+  PHILOSOPHY: "Before you can fix marketing, you must diagnose it
+  with the precision of a surgeon — not the guesswork of a gambler."
+
+  RESULT: A comprehensive marketing audit report with prioritized
+  remediation plan, ROI analysis, and strategic recommendations.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Diagnosing why marketing is not producing results"
+  - "Auditing a business before building new campaigns"
+  - "Quarterly marketing performance review"
+  - "Pre-engagement assessment for new clients"
+  - "Identifying the biggest marketing leaks (holes in the bucket)"
+
+decision_matrix_fit:
+  complexity: medium
+  agents_required: 3
+  estimated_duration: "1-2 days"
+  user_involvement: "high (requires business data)"
+  prerequisites:
+    - "Access to current marketing materials"
+    - "Revenue and marketing spend data"
+    - "Willingness to hear uncomfortable truths"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, initial diagnosis, strategic recommendations"
+      phases: [0]
+
+    - agent: kennedy-audit
+      role: "Full audit execution, Money Pyramid, Marketing Triangle, 5 Holes"
+      phases: [1, 2]
+
+    - agent: kennedy-direct-response
+      role: "10 No B.S. Rules assessment, DR vs institutional analysis"
+      phases: [1, 2]
+
+  synergies:
+    - agents: [kennedy-audit, kennedy-direct-response]
+      pattern: "Audit runs diagnostics, Direct Response evaluates DR compliance"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Discovery + Data Collection"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Collect all necessary data for a thorough audit. Kennedy says
+      most businesses cannot even answer basic questions about their
+      marketing performance.
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Marketing Data Collection"
+        required: true
+        description: |
+          Collect the following:
+          - Current marketing materials (ads, letters, emails, website)
+          - Revenue data (last 12 months)
+          - Marketing spend by channel
+          - Customer acquisition cost
+          - Customer lifetime value (if known)
+          - Current list size and composition
+          - Referral rate
+          - Response rates by channel
+        output: "marketing_data.yaml"
+
+      - task_id: T0.2
+        name: "Business Context Assessment"
+        required: true
+        description: |
+          Understand the business context:
+          - Business model and revenue streams
+          - Target market description
+          - Competitive landscape
+          - Current marketing challenges
+          - Goals for next 12 months
+        output: "business_context.yaml"
+
+    handoff_to_phase-1:
+      from_agent: "auto"
+      to_agent: "kennedy-audit"
+      to_phase: "PHASE-1"
+      trigger: "Discovery complete"
+      passes: "Business analysis, preliminary findings"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Data Collection Complete"
+      criteria:
+        - "Marketing materials collected"
+        - "Financial data available (at least partial)"
+        - "Business context understood"
+      human_review: true
+      veto_conditions:
+        - condition: "Zero marketing data available"
+          action: "HALT - Cannot audit what does not exist"
+
+  - id: PHASE-1
+    name: "Multi-Framework Diagnosis"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Run the business through Kennedy's diagnostic frameworks.
+
+      PRINCIPLE: "Most businesses are sitting on a goldmine but
+      mining it with a teaspoon."
+
+    agent: kennedy-audit
+
+    tasks:
+      - task_id: T1.1
+        name: "10 No B.S. Rules Assessment"
+        required: true
+        description: |
+          Score compliance with all 10 Rules (1-10 each):
+          1. Always an offer
+          2. Reason to respond NOW
+          3. Clear instructions
+          4. Tracking/measurement
+          5. Meaningful follow-up
+          6. Results rule
+          7. Tough love
+          8. Thick skin
+          9. Be in the market
+          10. Willing to be "bad"
+          Calculate total score out of 100.
+        output: "nobs_rules_score.yaml"
+        checklist: "checklists/direct-response-checklist.md"
+
+      - task_id: T1.2
+        name: "9 Fatal Marketing Mistakes Audit"
+        required: true
+        description: |
+          Check each of the 9 Fatal Mistakes:
+          1. Institutional/image advertising
+          2. No USP
+          3. Wrong target
+          4. Not building a list
+          5. Not following up
+          6. No multi-step campaigns
+          7. Not testing
+          8. Not tracking ROI
+          9. No referral system
+          Mark each as: GUILTY / NOT GUILTY / PARTIAL
+        output: "fatal_mistakes_audit.yaml"
+
+      - task_id: T1.3
+        name: "Money Pyramid Analysis"
+        required: true
+        description: |
+          Analyze where the business is positioned on the Money Pyramid:
+          - Current customer tier distribution
+          - Revenue by tier
+          - Opportunity analysis (which tier is underserved?)
+          - Price point alignment with target tier
+        output: "money_pyramid_audit.yaml"
+
+      - task_id: T1.4
+        name: "5 Holes in the Bucket Analysis"
+        required: true
+        description: |
+          Identify the 5 Holes that leak money:
+          1. No lead capture (visitors leave without trace)
+          2. No follow-up (leads go cold)
+          3. No back-end (one-and-done transactions)
+          4. No referral system (word-of-mouth is not a system)
+          5. No reactivation (lost customers stay lost)
+          Score each hole: SEALED / LEAKING / HEMORRHAGING
+        output: "five_holes_audit.yaml"
+
+      - task_id: T1.5
+        name: "Results Triangle Evaluation"
+        required: true
+        description: |
+          Evaluate Message + Market + Media alignment:
+          - Is the message compelling and differentiated?
+          - Is the market clearly defined and reachable?
+          - Are the media channels appropriate and tracked?
+          - Are all three aligned, or is there a mismatch?
+        output: "results_triangle_audit.yaml"
+        checklist: "checklists/marketing-audit-checklist.md"
+
+    handoff_to_phase-2:
+      from_agent: "auto"
+      to_agent: "kennedy-direct-response"
+      to_phase: "PHASE-2"
+      trigger: "Audit complete"
+      passes: "Findings, recommendations, action plan"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Diagnosis Complete"
+      criteria:
+        - "All 5 diagnostic frameworks scored"
+        - "Key findings identified"
+        - "Patterns across frameworks noted"
+      human_review: false
+      veto_conditions:
+        - condition: "Audit conducted without actual marketing data"
+          action: "BLOCK - Audit must be based on evidence, not assumptions"
+
+  - id: PHASE-2
+    name: "Prescription + Priority Plan"
+    days: "Day 1-2"
+    tier: 2
+    description: |
+      Synthesize findings into a prioritized action plan.
+      Kennedy: "Diagnosis without prescription is academic."
+
+    agent: kennedy-audit
+
+    tasks:
+      - task_id: T2.1
+        name: "Synthesize Findings"
+        required: true
+        description: |
+          Create the unified audit report:
+          - Executive summary (biggest wins and biggest problems)
+          - Score card across all frameworks
+          - Pattern analysis (what keeps showing up?)
+          - Quick wins (fix in <7 days)
+          - Strategic fixes (30-90 day horizon)
+          - Transformational changes (90+ days)
+        output: "audit_synthesis.md"
+
+      - task_id: T2.2
+        name: "Create Prioritized Action Plan"
+        required: true
+        description: |
+          Prioritize using Kennedy's Impact/Effort matrix:
+          - HIGH impact + LOW effort = Do first (quick wins)
+          - HIGH impact + HIGH effort = Plan and schedule
+          - LOW impact + LOW effort = Delegate
+          - LOW impact + HIGH effort = Eliminate
+          List top 10 actions in priority order.
+        output: "action_plan.yaml"
+
+      - task_id: T2.3
+        name: "ROI Opportunity Projection"
+        required: true
+        description: |
+          Project ROI for top 3 recommended changes:
+          - Current state metrics
+          - Expected improvement (conservative/moderate/aggressive)
+          - Required investment
+          - Payback period
+          - 12-month ROI projection
+        output: "roi_projection.yaml"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Audit Report Complete"
+      criteria:
+        - "Unified audit report synthesized"
+        - "Action plan prioritized (top 10 actions)"
+        - "ROI projections for top 3 changes"
+      human_review: true
+      message: "Review the complete audit and action plan."
+      veto_conditions:
+        - condition: "Recommendations are generic (not specific to this business)"
+          action: "REWRITE - Prescriptions must be specific and actionable"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Complete Marketing Audit Report"
+      file: "marketing_audit_report.md"
+      description: "Full audit across 5 Kennedy frameworks"
+    - name: "Scorecard"
+      file: "audit_scorecard.yaml"
+      description: "Scores across all frameworks"
+    - name: "Prioritized Action Plan"
+      file: "action_plan.yaml"
+      description: "Top 10 actions in priority order"
+    - name: "ROI Projection"
+      file: "roi_projection.yaml"
+      description: "Expected returns from top changes"
+  output_directory: "outputs/kennedy-marketing-audit-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "No B.S. Direct Marketing — 10 Rules, 9 Fatal Mistakes"
+    - "Midas Touch — Money Pyramid, 5 Holes"
+    - "Ultimate Marketing Plan — Results Triangle"
+  total_phases: 3
+  total_tasks: 10

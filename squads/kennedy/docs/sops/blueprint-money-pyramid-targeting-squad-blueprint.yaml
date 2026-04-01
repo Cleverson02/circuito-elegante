@@ -1,0 +1,524 @@
+# Squad Blueprint: Money Pyramid Targeting & Tier Positioning
+# Extraido de: No B.S. Direct Marketing, Third Edition, Preface p.5-8 + Ch.10-12
+# Versao: 1.0
+# Data: 2026-02-11
+
+metadata:
+  name: money-pyramid-targeting-squad
+  version: "1.0"
+# source_sop: sop-money-pyramid-targeting.md
+  domain: "market-positioning-strategy"
+  source: "No B.S. Direct Marketing, Dan Kennedy, Third Edition"
+  sop_reference: "sop-money-pyramid-targeting.md"
+  description: >
+    Squad blueprint for identifying, selecting, and positioning within the correct tier
+    of Kennedy's Money Pyramid. Ensures pricing, messaging, media, and experience are
+    fully aligned with the chosen wealth tier. Prevents the fatal error of mixing tiers.
+
+# =============================================================================
+# AGENTS
+# =============================================================================
+
+agents:
+
+  - id: tier-diagnostician
+    name: "Tier Diagnostician Agent"
+    role: "Analyzes current business positioning to identify which Money Pyramid tier the business currently occupies, and recommends the optimal strategic tier"
+    capabilities:
+      - "Current tier identification via price/client/communication analysis"
+      - "Gap analysis between current and desired tier"
+      - "Competitive tier mapping"
+      - "Client profile analysis (income, behavior, price sensitivity)"
+      - "Revenue and margin analysis by tier potential"
+      - "Migration feasibility assessment"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Preface p.5-8 (Money Pyramid model)"
+      - "Money Pyramid 5 tiers: 1% ultra-rich, 4% rich, 15% comfortable, 60% mass, 20% base"
+      - "Tier mixing prohibition"
+      - "Craig Proctor's premium positioning (Ch.16)"
+      - "Ben Glass professional practice positioning (Ch.15)"
+    decision_rules:
+      - rule: "DR-TD-001"
+        description: "Small businesses (<50 employees) should default to Tier 2-3. Volume competition (Tier 4-5) requires massive scale."
+      - rule: "DR-TD-002"
+        description: "Professional practices (lawyers, doctors, dentists, consultants) should ALWAYS target Tier 2."
+      - rule: "DR-TD-003"
+        description: "Never recommend Tier 5 positioning. Margins are insufficient for sustainable business."
+      - rule: "DR-TD-004"
+        description: "If current tier differs from strategic tier, migration plan must be phased (not overnight)."
+      - rule: "DR-TD-005"
+        description: "Tier recommendation must consider operational capacity, not just aspiration."
+    input_schema:
+      type: object
+      required:
+        - business_type
+        - current_pricing
+        - client_profile
+      properties:
+        business_type:
+          type: string
+          description: "Type of business (professional practice, e-commerce, SaaS, etc.)"
+        current_pricing:
+          type: object
+          properties:
+            lowest_price:
+              type: number
+            highest_price:
+              type: number
+            average_ticket:
+              type: number
+          description: "Current pricing structure"
+        client_profile:
+          type: object
+          properties:
+            estimated_income:
+              type: string
+            price_sensitivity:
+              type: string
+              enum: ["none", "low", "moderate", "high", "extreme"]
+            bargaining_behavior:
+              type: string
+          description: "Profile of current clients"
+        company_size:
+          type: integer
+          description: "Number of employees"
+        current_margin:
+          type: number
+          description: "Current profit margin percentage"
+    output_schema:
+      type: object
+      properties:
+        current_tier:
+          type: integer
+          description: "Current tier (1-5)"
+        recommended_tier:
+          type: integer
+          description: "Recommended strategic tier"
+        tier_gap:
+          type: integer
+          description: "Difference between current and recommended"
+        migration_plan:
+          type: object
+          description: "Phased plan to migrate tiers (if needed)"
+        justification:
+          type: string
+          description: "Detailed rationale for tier recommendation"
+
+  - id: price-architect
+    name: "Price Architect Agent"
+    role: "Restructures pricing strategy to align with the chosen Money Pyramid tier, including price points, payment structures, and value framing"
+    capabilities:
+      - "Price-tier alignment analysis"
+      - "Value-based pricing design"
+      - "Payment structure optimization (installments, subscriptions)"
+      - "Price anchoring strategies"
+      - "Discount elimination for premium tiers"
+      - "Value-add alternatives to discounts"
+      - "Price migration planning"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, p.5-8 (tier pricing expectations)"
+      - "Kennedy principle: 'Name your price, then work backward' (p.186)"
+      - "Kennedy principle: 'More hoops = more qualified = more likely to buy' (p.196)"
+      - "Threshold Resistance Continuum (p.15-22)"
+    decision_rules:
+      - rule: "DR-PA-001"
+        description: "For Tier 2-3: Price is a signal of quality. Higher price = higher perceived value. Never compete on price."
+      - rule: "DR-PA-002"
+        description: "For Tier 2: Eliminate ALL discounts. Add value instead. Discounts destroy premium positioning."
+      - rule: "DR-PA-003"
+        description: "For Tier 3: Offer payment plans but never frame as 'cheap'. Frame as 'accessible premium'."
+      - rule: "DR-PA-004"
+        description: "For Tier 4: Price competitiveness is essential. Offer clear comparisons and guarantees."
+      - rule: "DR-PA-005"
+        description: "Name the price first, then design the offer to justify it. Not the other way around."
+    input_schema:
+      type: object
+      required:
+        - target_tier
+        - current_pricing
+        - product_catalog
+      properties:
+        target_tier:
+          type: integer
+          description: "Target Money Pyramid tier"
+        current_pricing:
+          type: object
+          description: "Current pricing structure"
+        product_catalog:
+          type: array
+          items:
+            type: object
+          description: "List of products/services"
+        competitor_pricing:
+          type: object
+          description: "Competitor pricing for context"
+    output_schema:
+      type: object
+      properties:
+        revised_pricing:
+          type: array
+          items:
+            type: object
+            properties:
+              product:
+                type: string
+              old_price:
+                type: number
+              new_price:
+                type: number
+              payment_structure:
+                type: string
+              value_justification:
+                type: string
+          description: "Complete revised pricing with justifications"
+        discount_policy:
+          type: string
+          description: "New discount policy aligned with tier"
+        value_adds:
+          type: array
+          description: "Value additions that replace discounts"
+
+  - id: experience-designer
+    name: "Experience Designer Agent"
+    role: "Designs the complete client experience (first contact through post-sale) to align with the chosen tier"
+    capabilities:
+      - "Customer journey mapping by tier"
+      - "Shock and Awe package design"
+      - "Touchpoint calibration"
+      - "Service level definition"
+      - "Physical material design specification"
+      - "Follow-up experience design"
+      - "Referral program design by tier"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, p.163-165 (Shock and Awe Package)"
+      - "Ben Glass follow-up system (p.155-170)"
+      - "Income At Will Position (p.135-142)"
+      - "Craig Proctor client experience model (p.166-180)"
+    decision_rules:
+      - rule: "DR-ED-001"
+        description: "Every touchpoint must communicate the chosen tier. A single off-tier touchpoint breaks the illusion."
+      - rule: "DR-ED-002"
+        description: "Tier 2 clients expect Shock and Awe package within 24h of qualifying as lead."
+      - rule: "DR-ED-003"
+        description: "Physical mail cuts through digital noise. Higher tiers should use MORE physical touchpoints."
+      - rule: "DR-ED-004"
+        description: "Response time must match tier: Tier 2 = <4h, Tier 3 = <24h, Tier 4 = <48h."
+      - rule: "DR-ED-005"
+        description: "Post-sale experience is where referrals are born. Design it deliberately, not accidentally."
+    input_schema:
+      type: object
+      required:
+        - target_tier
+        - business_type
+        - current_journey
+      properties:
+        target_tier:
+          type: integer
+          description: "Target Money Pyramid tier"
+        business_type:
+          type: string
+          description: "Type of business"
+        current_journey:
+          type: object
+          description: "Current client journey touchpoints"
+        budget_for_experience:
+          type: number
+          description: "Budget available for experience design"
+    output_schema:
+      type: object
+      properties:
+        journey_map:
+          type: object
+          properties:
+            pre_sale:
+              type: array
+              description: "Touchpoints before sale"
+            during_sale:
+              type: array
+              description: "Touchpoints during engagement"
+            post_sale:
+              type: array
+              description: "Touchpoints after completion"
+          description: "Complete journey map by phase"
+        shock_and_awe_spec:
+          type: object
+          description: "Specification for Shock and Awe package (if Tier 2-3)"
+        service_level_agreement:
+          type: object
+          description: "Response times, quality standards per tier"
+        referral_program:
+          type: object
+          description: "Referral program design for the tier"
+
+  - id: tier-consistency-auditor
+    name: "Tier Consistency Auditor Agent"
+    role: "Audits all business elements for tier consistency and identifies any signals that communicate the wrong tier"
+    capabilities:
+      - "Cross-element tier consistency checking"
+      - "Wrong-tier signal detection"
+      - "Competitive positioning comparison"
+      - "Brand consistency assessment"
+      - "Communication tone analysis"
+      - "Price-experience alignment verification"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, p.5-8 (never mix tiers)"
+      - "All tier characteristics and expectations"
+      - "Common tier-mixing mistakes"
+    decision_rules:
+      - rule: "DR-TCA-001"
+        description: "A single wrong-tier signal can undermine the entire positioning. Zero tolerance."
+      - rule: "DR-TCA-002"
+        description: "Audit must cover ALL customer-facing elements: website, emails, social, physical, verbal."
+      - rule: "DR-TCA-003"
+        description: "Discounts in premium tiers are the #1 consistency violation. Flag immediately."
+      - rule: "DR-TCA-004"
+        description: "If multiple brands serve different tiers, verify ZERO cross-contamination."
+    input_schema:
+      type: object
+      required:
+        - target_tier
+        - business_elements
+      properties:
+        target_tier:
+          type: integer
+          description: "Target tier all elements should align with"
+        business_elements:
+          type: object
+          properties:
+            pricing:
+              type: object
+            messaging:
+              type: array
+            media_channels:
+              type: array
+            experience_touchpoints:
+              type: array
+            physical_materials:
+              type: array
+            digital_presence:
+              type: object
+          description: "All business elements to audit"
+    output_schema:
+      type: object
+      properties:
+        consistency_score:
+          type: number
+          description: "Overall consistency score (1-10)"
+        violations:
+          type: array
+          items:
+            type: object
+            properties:
+              element:
+                type: string
+              current_tier_signal:
+                type: integer
+              target_tier:
+                type: integer
+              severity:
+                type: string
+                enum: ["critical", "major", "minor"]
+              fix:
+                type: string
+          description: "List of tier consistency violations"
+        approved:
+          type: boolean
+          description: "Whether positioning passes consistency check"
+
+# =============================================================================
+# WORKFLOW
+# =============================================================================
+
+workflow:
+  name: "Money Pyramid Tier Positioning Process"
+  description: >
+    Diagnostic-to-implementation workflow that identifies current tier,
+    selects optimal tier, aligns all business elements, and validates consistency.
+
+  phases:
+
+    - name: "Phase 1: Tier Diagnosis"
+      description: "Analyze current positioning and recommend strategic tier"
+      agents: ["tier-diagnostician"]
+      steps:
+        - "Analyze current pricing structure"
+        - "Profile current client base"
+        - "Assess current communication tone and channels"
+        - "Identify current tier"
+        - "Evaluate optimal tier based on business type, size, and capacity"
+        - "Create migration plan if tier change needed"
+      checkpoint: "Current tier identified, strategic tier chosen with justification, migration plan drafted"
+      outputs:
+        - "current_tier_report"
+        - "recommended_tier"
+        - "migration_plan"
+
+    - name: "Phase 2: Pricing Realignment"
+      description: "Restructure pricing for target tier"
+      agents: ["price-architect"]
+      dependencies: ["Phase 1"]
+      steps:
+        - "Review all current prices against target tier expectations"
+        - "Design new pricing structure"
+        - "Create payment options appropriate for tier"
+        - "Eliminate tier-inappropriate discounts"
+        - "Design value-adds to replace discounts"
+        - "Create price migration timeline (if raising prices)"
+      checkpoint: "Complete pricing structure aligned with target tier"
+      outputs:
+        - "revised_pricing"
+        - "discount_policy"
+        - "value_adds"
+        - "price_migration_timeline"
+
+    - name: "Phase 3: Experience Redesign"
+      description: "Design client experience for target tier"
+      agents: ["experience-designer"]
+      dependencies: ["Phase 1"]
+      steps:
+        - "Map current customer journey"
+        - "Design tier-appropriate first contact"
+        - "Specify Shock and Awe package (if Tier 2-3)"
+        - "Define service level standards"
+        - "Design follow-up experience"
+        - "Create referral program for the tier"
+        - "Specify physical materials needed"
+      checkpoint: "Complete experience design aligned with target tier"
+      outputs:
+        - "journey_map"
+        - "shock_and_awe_spec"
+        - "service_level_agreement"
+        - "referral_program"
+
+    - name: "Phase 4: Consistency Audit"
+      description: "Verify all elements align with target tier"
+      agents: ["tier-consistency-auditor"]
+      dependencies: ["Phase 2", "Phase 3"]
+      steps:
+        - "Audit pricing for tier alignment"
+        - "Audit messaging and communication tone"
+        - "Audit media channel selection"
+        - "Audit experience touchpoints"
+        - "Audit physical and digital materials"
+        - "Identify any wrong-tier signals"
+        - "Issue consistency verdict"
+      checkpoint: "All elements verified as tier-consistent. Zero wrong-tier signals."
+      outputs:
+        - "consistency_report"
+        - "violations_list"
+        - "final_approval"
+
+# =============================================================================
+# QUALITY GATES
+# =============================================================================
+
+quality_gates:
+
+  - gate: "QG-MP-001"
+    phase: "Phase 1"
+    description: "Current tier must be identified with supporting evidence (pricing, client data, communication analysis)"
+    validation: "current_tier_report contains pricing_analysis AND client_analysis AND communication_analysis"
+    failure_action: "Gather missing data before proceeding"
+
+  - gate: "QG-MP-002"
+    phase: "Phase 1"
+    description: "Strategic tier must be justified by business type, capacity, and margin requirements"
+    validation: "recommended_tier has justification covering business_type, capacity, and margin"
+    failure_action: "Provide complete justification or reassess tier"
+
+  - gate: "QG-MP-003"
+    phase: "Phase 1"
+    description: "Never recommend Tier 5. If current tier is 5, migration plan to higher tier is mandatory."
+    validation: "recommended_tier >= 2 AND recommended_tier <= 4"
+    failure_action: "Reassess and recommend Tier 2-4"
+
+  - gate: "QG-MP-004"
+    phase: "Phase 2"
+    description: "All prices must fall within target tier range. No mixed-tier pricing."
+    validation: "All revised prices within tier_range AND no outliers from different tiers"
+    failure_action: "Adjust outlier prices or create separate brand for different tier"
+
+  - gate: "QG-MP-005"
+    phase: "Phase 2"
+    description: "For Tier 2-3: Zero discount-based promotions. Only value-adds."
+    validation: "discount_policy == 'no_discounts' for Tier 2-3"
+    failure_action: "Replace all discounts with value-add alternatives"
+
+  - gate: "QG-MP-006"
+    phase: "Phase 3"
+    description: "Tier 2 businesses must have Shock and Awe package designed"
+    validation: "IF target_tier == 2 THEN shock_and_awe_spec exists AND is complete"
+    failure_action: "Design Shock and Awe package before proceeding"
+
+  - gate: "QG-MP-007"
+    phase: "Phase 3"
+    description: "Response time SLA must match tier expectations"
+    validation: "Tier 2: response_time <= 4h, Tier 3: <= 24h, Tier 4: <= 48h"
+    failure_action: "Adjust operational capacity to meet tier SLA"
+
+  - gate: "QG-MP-008"
+    phase: "Phase 4"
+    description: "Consistency score must be 8+ out of 10 with zero critical violations"
+    validation: "consistency_score >= 8 AND critical_violations == 0"
+    failure_action: "Fix all critical violations and recheck"
+
+  - gate: "QG-MP-009"
+    phase: "Phase 4"
+    description: "No element should signal a tier more than 1 step away from target"
+    validation: "All element_tier_signals within +/-1 of target_tier"
+    failure_action: "Fix misaligned elements"
+
+# =============================================================================
+# KENNEDY PRINCIPLES (Embedded References)
+# =============================================================================
+
+kennedy_principles:
+  money_pyramid:
+    structure:
+      tier_1: "1% Ultra-Rich: spend without thinking, luxury extreme"
+      tier_2: "4% Rich: high purchasing power, seek premium quality"
+      tier_3: "15% Upper-Middle: aspire to luxury, influenced by status"
+      tier_4: "60% Mass: price-sensitive, volume market"
+      tier_5: "20% Base: lowest purchasing power, bargain market"
+    source: "No B.S. Direct Marketing, p.5-8"
+
+  never_mix_tiers:
+    principle: "Choose one level and adapt EVERYTHING for that level. Mixing is fatal."
+    source: "No B.S. Direct Marketing, p.5-8"
+
+  name_your_price:
+    principle: "Name your price, then work backward to create the value that justifies it."
+    source: "No B.S. Direct Marketing, p.186"
+
+  more_hoops_more_qualified:
+    principle: "More qualification steps = more qualified prospects = higher close rate"
+    source: "No B.S. Direct Marketing, p.196"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  prerequisites:
+    - sop: "sop-great-divide-audit.md"
+      purpose: "Confirm DR orientation before tier positioning"
+
+  this_feeds_into:
+    - sop: "sop-results-triangle.md"
+      purpose: "Tier defines Market vertex, influences Message vertex, determines Media vertex"
+    - sop: "sop-10-rules-compliance.md"
+      purpose: "Rule 10 discipline includes maintaining chosen tier"
+    - sop: "sop-direct-mail-campaign.md"
+      purpose: "Mail format and quality must match tier"
+
+  recommended_sequence:
+    - step: 1
+      sop: "sop-great-divide-audit.md"
+    - step: 2
+      sop: "sop-money-pyramid-targeting.md"
+    - step: 3
+      sop: "sop-results-triangle.md"
+    - step: 4
+      sop: "sop-10-rules-compliance.md"
+    - step: 5
+      sop: "sop-direct-mail-campaign.md"

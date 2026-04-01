@@ -1,0 +1,220 @@
+# Kennedy Squad — Handoff Context Template
+# MANDATORY for specialist-to-specialist transfers
+# Version: 1.0.0
+# Created: 2026-02-11
+# Pattern: SC-TMPL-HANDOFF-001
+
+# ===============================================================================
+# PURPOSE: Garantir que contexto NAO se perde entre agents
+# RULE: Este template DEVE ser preenchido antes de qualquer handoff
+# VETO: VT3-001 bloqueia handoff sem este template completo
+# ===============================================================================
+
+handoff:
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 1: TRANSFER INFO (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  transfer:
+    source_agent: ""          # Ex: kennedy-sales-letter
+    target_agent: ""          # Ex: kennedy-copy
+    timestamp: ""             # YYYY-MM-DD HH:MM
+    workflow_id: ""           # Ex: wf-sales-letter
+    current_phase: ""         # Ex: PHASE-2
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 2: MARKETING DATA STATUS (Obrigatorio)
+  # Minimum data that must be collected before campaign design.
+  # ───────────────────────────────────────────────────────────────────────────
+  marketing_data_status:
+    completeness: ""          # X/5 (ex: 5/5)
+    items:
+      results_triangle: ""    # Y/N — Message + Market + Media defined
+      usp: ""                 # Y/N — Unique Selling Proposition articulated
+      target_market: ""       # Y/N — Target market with demographics + psychographics
+      offer: ""               # Y/N — Offer with CTA and guarantee
+      tracking: ""            # Y/N — Tracking/measurement in place
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 3: CAMPAIGN ARCHITECTURE STATUS (Obrigatorio se apos PHASE-1)
+  # ───────────────────────────────────────────────────────────────────────────
+  campaign_architecture:
+    campaign_type: ""         # Ex: "Sales Letter", "Magnetic Campaign", "Direct Mail"
+    media_channels: []        # Ex: ["direct_mail", "email", "landing_page"]
+    components_count: ""      # Ex: 5 (letter, follow-up, grabber, reply card, tracking)
+    response_targets:
+      response_rate: ""       # Ex: "2-5%"
+      cost_per_lead: ""       # Ex: "$15-25"
+      roi_target: ""          # Ex: "3:1 minimum"
+    money_pyramid_tier: ""    # Which tier of Money Pyramid being targeted
+    dr_compliance: ""         # Y/N — All 10 No B.S. Rules satisfied
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 4: KEY DECISIONS MADE (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  key_decisions:
+    - decision: ""
+      rationale: ""
+      decided_by: ""          # agent ou user
+    # Adicionar mais conforme necessario
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 5: ARTIFACTS PRODUCED (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  artifacts:
+    - name: ""                # Ex: "results_triangle.yaml"
+      location: ""            # Path relativo
+      status: ""              # COMPLETE/PARTIAL/DRAFT
+    # Adicionar mais conforme necessario
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 6: BLOCKERS & OPEN QUESTIONS (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  blockers:
+    - blocker: ""
+      severity: ""            # HIGH/MEDIUM/LOW
+      proposed_resolution: ""
+    # Adicionar mais conforme necessario
+
+  open_questions:
+    - question: ""
+      requires_user_input: false
+    # Adicionar mais conforme necessario
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 7: CONTEXT FOR TARGET AGENT (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  context_for_target:
+    primary_objective: ""     # O que o target agent deve fazer
+    constraints: []           # Restricoes identificadas
+    user_preferences: []      # Preferencias expressas pelo user
+    priority: ""              # HIGH/MEDIUM/LOW
+    dont_repeat: []           # O que NAO precisa ser feito de novo
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SECTION 8: VETO CONDITIONS CHECK (Obrigatorio)
+  # ───────────────────────────────────────────────────────────────────────────
+  veto_check:
+    all_phase_vetos_passed: false  # true/false
+    vetos_triggered: []            # Lista de vetos que foram triggered (se algum)
+    vetos_resolved: []             # Lista de vetos que foram resolvidos
+
+# ===============================================================================
+# VALIDATION RULES
+# ===============================================================================
+
+validation:
+  mandatory_fields:
+    - "transfer.source_agent"
+    - "transfer.target_agent"
+    - "transfer.current_phase"
+    - "marketing_data_status.completeness"
+    - "key_decisions"                      # Pelo menos 1
+    - "context_for_target.primary_objective"
+    - "veto_check.all_phase_vetos_passed"
+
+  conditional_fields:
+    - field: "campaign_architecture.campaign_type"
+      required_if: "current_phase >= PHASE-1"
+    - field: "campaign_architecture.media_channels"
+      required_if: "current_phase >= PHASE-2"
+    - field: "campaign_architecture.response_targets"
+      required_if: "current_phase >= PHASE-2"
+
+  veto_on_failure:
+    id: "VT3-001"
+    message: "Handoff sem contexto. Preencher template antes de transferir."
+
+# ===============================================================================
+# EXAMPLE (Para referencia)
+# ===============================================================================
+
+example:
+  transfer:
+    source_agent: "kennedy-sales-letter"
+    target_agent: "kennedy-copy"
+    timestamp: "2026-02-11 14:30"
+    workflow_id: "wf-sales-letter"
+    current_phase: "PHASE-2"
+
+  marketing_data_status:
+    completeness: "5/5"
+    items:
+      results_triangle: "Y"
+      usp: "Y"
+      target_market: "Y"
+      offer: "Y"
+      tracking: "Y"
+
+  campaign_architecture:
+    campaign_type: "Sales Letter"
+    media_channels: ["direct_mail", "email"]
+    components_count: 4
+    response_targets:
+      response_rate: "3%"
+      cost_per_lead: "$20"
+      roi_target: "5:1"
+    money_pyramid_tier: "top_15_percent"
+    dr_compliance: "Y"
+
+  key_decisions:
+    - decision: "Sales letter de 8 paginas com grabber (nota de dolar)"
+      rationale: "Target market e top 15%, mail longo com prova converte melhor"
+      decided_by: "kennedy-sales-letter"
+    - decision: "Headline selecionado: 'They Laughed When I Said...'"
+      rationale: "Testado contra 23 outros, melhor A-Pile performance"
+      decided_by: "user"
+
+  artifacts:
+    - name: "results_triangle.yaml"
+      location: "outputs/kennedy-sales-letter/results_triangle.yaml"
+      status: "COMPLETE"
+    - name: "headline_candidates.md"
+      location: "outputs/kennedy-sales-letter/headline_candidates.md"
+      status: "COMPLETE"
+    - name: "letter_structure_map.md"
+      location: "outputs/kennedy-sales-letter/letter_structure_map.md"
+      status: "COMPLETE"
+
+  blockers:
+    - blocker: "Precisa de mais testimoniais para secao de prova"
+      severity: "MEDIUM"
+      proposed_resolution: "User fornece 3 depoimentos de clientes"
+
+  open_questions:
+    - question: "Incluir grabber mail ou envelope clean?"
+      requires_user_input: true
+    - question: "Budget para impressao permite papel premium?"
+      requires_user_input: true
+
+  context_for_target:
+    primary_objective: "Escrever fascination bullets e body copy seguindo a estrutura de 28 passos"
+    constraints:
+      - "Manter tom conversacional, NAO institucional"
+      - "Minimo 30 fascination bullets"
+      - "Cada paragrafo deve ganhar o proximo"
+    user_preferences:
+      - "Prefere tom agressivo ao estilo Kennedy"
+      - "Quer incluir P.S. com historia pessoal"
+    priority: "HIGH"
+    dont_repeat:
+      - "Results Triangle ja coletado"
+      - "Headline ja selecionado"
+      - "Estrutura ja mapeada"
+
+  veto_check:
+    all_phase_vetos_passed: true
+    vetos_triggered: []
+    vetos_resolved:
+      - "VT1-002: Inicialmente tinha 15 headlines, user gerou mais 8 para atingir minimo de 20"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  purpose: "Garantir contexto preservado em handoffs entre specialists do Kennedy Squad"
+  linked_veto: "VT3-001"
+  enforcement: "mandatory"

@@ -1,0 +1,479 @@
+# Blueprint: USP Construction Squad Blueprint
+# Source: The Ultimate Marketing Plan, Chapter 2 (pp. 12-27)
+# Squad: kennedy | Version: 1.0 | Date: 2026-02-11
+
+---
+
+metadata:
+  name: "USP Construction Blueprint"
+  description: >
+    Blueprint for constructing a Unique Selling Proposition using Kennedy's
+    4 Pathways (Be First, Be Best, Be Different, Be Specialized). Transforms
+    a me-too business into the only logical choice for the target market.
+  version: "1.0"
+# source_sop: sop-usp-construction.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-usp-construction.md"
+  primary_agent: "kennedy-offers"
+  mental_model: "MM_007"
+  source:
+    book: "The Ultimate Marketing Plan"
+    author: "Dan Kennedy"
+    chapters: [2]
+    pages: "12-27"
+
+# ---
+
+# Agent Assignments
+
+agents:
+  lead:
+    name: "kennedy-offers"
+    role: "USP Architect"
+    responsibilities:
+      - "Guide the 4-pathway exploration process"
+      - "Evaluate USP candidates against Kennedy criteria"
+      - "Ensure USP is specific, verifiable, unique, and relevant"
+      - "Integrate USP into Message Assembly"
+
+  support:
+    - name: "kennedy-chief"
+      role: "Strategic Validator"
+      responsibilities:
+        - "Validate USP alignment with Marketing Triangle"
+        - "Ensure Market-Message-Media coherence"
+        - "Final approval on USP deployment"
+
+    - name: "kennedy-audit"
+      role: "Me-Tooism Auditor"
+      responsibilities:
+        - "Competitive analysis and me-tooism scoring"
+        - "USP Sensitivity Scan across competitors"
+        - "Identify gaps and opportunities"
+
+    - name: "kennedy-direct-response"
+      role: "DR Compliance"
+      responsibilities:
+        - "Ensure USP passes the 10 No B.S. Rules test"
+        - "Verify USP enables measurable direct response"
+        - "Validate USP includes actionable offer potential"
+
+# ---
+
+# Workflow Phases
+
+workflow:
+  total_phases: 6
+  estimated_duration: "3-5 days"
+  parallel_work: true
+
+  phases:
+    - phase: 1
+      name: "Competitive Intelligence"
+      duration: "4-6 hours"
+      agent: "kennedy-audit"
+      description: >
+        Analyze competitive landscape using USP Sensitivity Scan.
+        Map every competitor's positioning, identify me-tooism patterns,
+        and discover whitespace opportunities.
+
+      inputs:
+        - "List of 5-10 direct competitors"
+        - "Competitor marketing materials (websites, ads, brochures)"
+        - "Industry reports and market data"
+
+      tasks:
+        - task: "usp-sensitivity-scan"
+          description: >
+            For each competitor, answer Kennedy's 4 Sensitivity Questions:
+            1. Does this business have a USP?
+            2. If not, can I think of one for them?
+            3. If so, is there a way to improve it?
+            4. Is there an idea here I can steal for my use?
+          source: "Ultimate Marketing Plan, p. 20"
+
+        - task: "me-tooism-scoring"
+          description: >
+            Score each competitor 0-10 on me-tooism scale.
+            Identify which pathways they use (or don't).
+            Map the competitive positioning landscape.
+
+        - task: "whitespace-identification"
+          description: >
+            Identify unclaimed positioning territories.
+            Find pathways no competitor has claimed.
+            Prioritize by market value and defensibility.
+
+      outputs:
+        - "Competitive USP matrix (5-10 competitors)"
+        - "Me-tooism score per competitor"
+        - "Whitespace opportunity map"
+        - "Stolen idea candidates list"
+
+      quality_gate:
+        criteria:
+          - "Minimum 5 competitors analyzed"
+          - "All 4 sensitivity questions answered per competitor"
+          - "At least 3 whitespace opportunities identified"
+        reviewer: "kennedy-chief"
+
+    - phase: 2
+      name: "Pathway Exploration"
+      duration: "4-8 hours"
+      agent: "kennedy-offers"
+      description: >
+        Deep exploration of all 4 USP Pathways with specific
+        application to the business. Generate USP candidates
+        from each pathway.
+
+      inputs:
+        - "Whitespace opportunity map from Phase 1"
+        - "Business capabilities and constraints"
+        - "WHO definition and psychographic profile"
+
+      tasks:
+        - task: "pathway-1-be-first"
+          description: >
+            Explore what the business can be FIRST at.
+            Identify promises, guarantees, innovations that
+            no competitor has claimed. Document with specifics.
+          source: "Ultimate Marketing Plan, pp. 14-16"
+
+        - task: "pathway-2-be-best"
+          description: >
+            Identify dimensions where the business is or can be
+            objectively BEST. Focus on measurable, provable claims.
+            Ensure the dimension matters to the WHO.
+          source: "Ultimate Marketing Plan, pp. 14-16"
+
+        - task: "pathway-3-be-different"
+          description: >
+            Analyze what ALL competitors do the same way.
+            Design radical alternatives. Explore category creation.
+            Apply Vegas World and Widget Concept thinking.
+          source: "Ultimate Marketing Plan, pp. 18-20"
+
+        - task: "pathway-4-be-specialized"
+          description: >
+            Identify most profitable niche the business serves.
+            Explore hyper-specialization opportunities.
+            Calculate premium pricing potential of specialization.
+          source: "Ultimate Marketing Plan, pp. 14-16"
+
+        - task: "pathway-combination"
+          description: >
+            Explore combinations of 2+ pathways for maximum
+            differentiation. Score each combination on
+            uniqueness, relevance, and defensibility.
+
+      outputs:
+        - "3-5 USP candidates per pathway (12-20 total)"
+        - "Pathway combination analysis"
+        - "Top 5 USP candidates ranked"
+
+      quality_gate:
+        criteria:
+          - "Minimum 3 candidates per pathway"
+          - "Each candidate has specificity (not generic)"
+          - "Top 5 candidates clearly ranked"
+        reviewer: "kennedy-offers"
+
+    - phase: 3
+      name: "USP Crafting"
+      duration: "2-4 hours"
+      agent: "kennedy-offers"
+      description: >
+        Take the top USP candidates and craft them into
+        polished, deployable USP statements using Kennedy's
+        templates and testing criteria.
+
+      inputs:
+        - "Top 5 USP candidates from Phase 2"
+        - "WHO psychographic profile"
+        - "Competitive whitespace map"
+
+      tasks:
+        - task: "usp-statement-drafting"
+          description: >
+            Write 3-5 versions of each top candidate using templates:
+            - Promise Direct template
+            - Domino's style template
+            - Risk Elimination template
+            - Widget style template
+
+        - task: "usp-testing-7-criteria"
+          description: >
+            Test each USP against 7 criteria:
+            1. Specific? 2. Verifiable? 3. Unique?
+            4. Relevant? 5. Memorable? 6. Deliverable? 7. Simple?
+          source: "sop-usp-construction.md, Step 6"
+
+        - task: "anti-me-tooism-test"
+          description: >
+            Replace business name with competitor name.
+            If USP still works, it's me-too. Rewrite.
+          source: "Ultimate Marketing Plan, p. 13"
+
+      outputs:
+        - "3 polished USP statements (final candidates)"
+        - "7-criteria test results per candidate"
+        - "Anti-me-tooism test results"
+        - "Recommended USP (winner)"
+
+      quality_gate:
+        criteria:
+          - "Winner passes all 7 criteria tests"
+          - "Winner fails anti-me-tooism test (good = unique)"
+          - "Winner can be communicated in under 10 seconds"
+        reviewer: "kennedy-chief"
+
+    - phase: 4
+      name: "Message Assembly Integration"
+      duration: "4-6 hours"
+      agent: "kennedy-offers"
+      description: >
+        Integrate the winning USP with the 5 elements of
+        Kennedy's Message Assembly Framework to create
+        the complete marketing message.
+
+      inputs:
+        - "Winning USP statement"
+        - "Business values and mission"
+        - "Customer feedback and complaints data"
+
+      tasks:
+        - task: "customer-bill-of-rights"
+          description: >
+            Create 5-10 explicit commitments the business makes
+            to customers. Each addresses a real fear or frustration.
+          source: "Ultimate Marketing Plan, pp. 23-25"
+
+        - task: "code-of-values"
+          description: >
+            Define the values that guide operations.
+            Model after Don Dwyer's 10-Point Code.
+          source: "Ultimate Marketing Plan, pp. 23-25"
+
+        - task: "magnificent-mission"
+          description: >
+            Articulate the purpose beyond profit.
+            Connect emotionally with the WHO.
+          source: "Ultimate Marketing Plan, p. 25"
+
+        - task: "irresistible-offer-integration"
+          description: >
+            Connect USP with Widget Offer structure.
+            Ensure the offer operationalizes the USP.
+          source: "sop-widget-offer.md"
+
+        - task: "message-assembly-document"
+          description: >
+            Compile all 5 elements into a single coherent
+            Message Assembly Document that can be used as
+            the foundation for all marketing materials.
+
+      outputs:
+        - "Customer Bill of Rights (5-10 points)"
+        - "Code of Values"
+        - "Magnificent Mission statement"
+        - "Message Assembly Document (complete)"
+
+      quality_gate:
+        criteria:
+          - "All 5 elements present and coherent"
+          - "Bill of Rights addresses top 5 customer fears"
+          - "Message Assembly creates emotional connection"
+        reviewer: "kennedy-chief"
+
+    - phase: 5
+      name: "Deployment Preparation"
+      duration: "2-4 hours"
+      agent: "kennedy-direct-response"
+      description: >
+        Prepare the USP and Message Assembly for deployment
+        across all marketing channels and touchpoints.
+
+      inputs:
+        - "Message Assembly Document"
+        - "List of all marketing channels and touchpoints"
+
+      tasks:
+        - task: "touchpoint-mapping"
+          description: >
+            Map every customer touchpoint where the USP
+            and message need to be present. Create adaptation
+            guidelines for each channel.
+
+        - task: "team-training-materials"
+          description: >
+            Create training script for team members to
+            learn and recite the USP. Include objection
+            handling aligned with USP.
+
+        - task: "dr-compliance-check"
+          description: >
+            Verify all materials pass the 10 No B.S. Rules.
+            Ensure every piece includes offer, urgency,
+            clear instructions, and tracking.
+          source: "Magnetic Marketing, Cap. 6"
+
+      outputs:
+        - "Touchpoint deployment checklist"
+        - "Team training script and USP card"
+        - "DR compliance report"
+        - "Deployment timeline"
+
+      quality_gate:
+        criteria:
+          - "All touchpoints mapped and assigned"
+          - "Training materials complete"
+          - "DR compliance: 10/10 rules satisfied"
+        reviewer: "kennedy-direct-response"
+
+    - phase: 6
+      name: "Validation & Launch"
+      duration: "1-2 days"
+      agent: "kennedy-chief"
+      description: >
+        Final validation of the complete USP system and
+        coordinated launch across all channels.
+
+      inputs:
+        - "All outputs from Phases 1-5"
+
+      tasks:
+        - task: "final-validation"
+          description: >
+            Run complete validation checklist from
+            sop-usp-construction.md. Verify every
+            criterion passes.
+
+        - task: "launch-coordination"
+          description: >
+            Coordinate simultaneous deployment across
+            all channels. Ensure consistency.
+
+        - task: "baseline-metrics"
+          description: >
+            Capture baseline metrics before launch
+            for comparison: conversion rate, price
+            premium, referral rate, recall rate.
+
+      outputs:
+        - "Validation report (all checks passed)"
+        - "Launch execution confirmation"
+        - "Baseline metrics captured"
+        - "30-day review scheduled"
+
+      quality_gate:
+        criteria:
+          - "100% validation checklist passed"
+          - "USP deployed across all touchpoints"
+          - "Baseline metrics documented"
+          - "Review date set for 30 days"
+        reviewer: "kennedy-chief"
+
+# ---
+
+# Quality Gates Summary
+
+quality_gates:
+  - gate: "Competitive Analysis Complete"
+    phase: 1
+    criteria: "5+ competitors analyzed, whitespace identified"
+    blocker: true
+
+  - gate: "USP Candidates Generated"
+    phase: 2
+    criteria: "12+ candidates across 4 pathways"
+    blocker: true
+
+  - gate: "USP Winner Selected"
+    phase: 3
+    criteria: "Passes all 7 criteria + anti-me-tooism"
+    blocker: true
+
+  - gate: "Message Assembly Complete"
+    phase: 4
+    criteria: "All 5 elements integrated"
+    blocker: true
+
+  - gate: "DR Compliance Verified"
+    phase: 5
+    criteria: "10/10 No B.S. Rules satisfied"
+    blocker: true
+
+  - gate: "Launch Validated"
+    phase: 6
+    criteria: "All checks passed, metrics baselined"
+    blocker: true
+
+# ---
+
+# Success Metrics
+
+metrics:
+  primary:
+    - name: "USP Recall Rate"
+      target: "> 70%"
+      measurement: "Survey customers 30 days post-launch"
+
+    - name: "Conversion Lift"
+      target: "> 15%"
+      measurement: "Compare pre/post conversion rates"
+
+    - name: "Price Premium"
+      target: "> 10% above market average"
+      measurement: "Compare pricing vs competitors"
+
+  secondary:
+    - name: "Referral Rate"
+      target: "> 20%"
+      measurement: "Track referral source in CRM"
+
+    - name: "Me-Tooism Score"
+      target: "< 2/10"
+      measurement: "Independent audit by kennedy-audit"
+
+    - name: "Team USP Fluency"
+      target: "100% can recite"
+      measurement: "Random test of team members"
+
+# ---
+
+# Dependencies
+
+dependencies:
+  requires: []  # USP is the foundation - no prerequisites
+  enables:
+    - "blueprint-widget-offer-squad-blueprint.yaml"
+    - "blueprint-15-step-marketing-plan-squad-blueprint.yaml"
+    - "blueprint-host-beneficiary-squad-blueprint.yaml"
+    - "blueprint-pest-to-welcome-guest-squad-blueprint.yaml"
+    - "blueprint-information-first-marketing-squad-blueprint.yaml"
+
+# ---
+
+# Risk Mitigation
+
+risks:
+  - risk: "USP that cannot be delivered consistently"
+    probability: "medium"
+    impact: "critical"
+    mitigation: "Operational capability audit before finalizing USP"
+
+  - risk: "USP that doesn't resonate with WHO"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Test with 5-10 existing customers before launch"
+
+  - risk: "Competitor copies USP quickly"
+    probability: "low-medium"
+    impact: "medium"
+    mitigation: "Build USP on operational capability, not just messaging"
+
+  - risk: "Team doesn't adopt USP consistently"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Training program + visible USP cards at every workstation"

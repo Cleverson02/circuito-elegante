@@ -1,0 +1,468 @@
+# ============================================================================
+# BLUEPRINT: Brand-Building by Direct Response Squad Blueprint
+# Source: No B.S. Guide to Brand-Building by Direct Response, Ch.1-3, Ch.7
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+# ============================================================================
+
+metadata:
+  name: "Brand-Building by Direct Response Squad Blueprint"
+  version: "1.0"
+# source_sop: sop-brand-by-dr.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-brand-by-dr.md"
+  description: >
+    Blueprint para implementacao da Winning Formula de Dan Kennedy:
+    Direct Response para adquirir clientes + Brand para reter clientes.
+    Define o processo completo de integracao DR + Brand.
+  source:
+    book: "No B.S. Guide to Brand-Building by Direct Response"
+    chapters: "Ch.1-3, Ch.7, Ch.19"
+    frameworks:
+      - "Winning Formula (DR Acquisition + Brand Retention)"
+      - "Principle > Strategies > Tactics Hierarchy"
+      - "Front-End vs Back-End ROI"
+      - "Brand Protection Principles"
+
+# ============================================================================
+# AGENTS
+# ============================================================================
+
+agents:
+  primary:
+    name: "kennedy-brand"
+    role: "Brand-by-DR Architect"
+    responsibilities:
+      - "Design da estrategia integrada DR + Brand"
+      - "Alocacao de budget entre front-end (DR) e back-end (brand)"
+      - "Implementacao da Winning Formula"
+      - "Protecao e manutencao da marca"
+      - "Validacao de que brand nunca substitui DR"
+    source_knowledge:
+      - "Brand-Building by DR, Framework 1 - Core Thesis"
+      - "Brand-Building by DR, Framework 5 - Winning Formula"
+      - "Brand-Building by DR, Framework 6 - Front-End vs Back-End ROI"
+
+  supporting:
+    - name: "kennedy-direct-response"
+      role: "DR Foundation Specialist"
+      responsibilities:
+        - "Garante que sistema DR esta funcionando antes de brand"
+        - "Valida compliance com 10 Regras Fundacionais"
+        - "Monitora front-end ROI"
+        - "Impede abandono de DR em favor de brand puro"
+      source_knowledge:
+        - "No B.S. Direct Marketing - 10 No B.S. Rules"
+        - "Magnetic Marketing, 10 Regras Fundacionais"
+
+    - name: "kennedy-chief"
+      role: "Strategic Decision Maker"
+      responsibilities:
+        - "Decisoes de alocacao entre DR e Brand"
+        - "Avaliacao de cenario (A/B/C/D)"
+        - "Protecao dos 3 controles (marketing, financas, relacionamento)"
+        - "Decisoes de expansao e diversificacao"
+      source_knowledge:
+        - "Brand-Building by DR, Heuristica - Three Things to Never Abdicate"
+        - "Brand-Building by DR, Framework 2 - Principle > Strategies > Tactics"
+
+    - name: "kennedy-referrals"
+      role: "Retention System Specialist"
+      responsibilities:
+        - "Implementacao do 11-Point Referral System"
+        - "Design de programa de referrals"
+        - "Client appreciation events"
+        - "Reactivation campaigns"
+      source_knowledge:
+        - "Brand-Building by DR, Framework 9 - 11-Point Referral System"
+        - "Referral Machine Course"
+
+    - name: "kennedy-magnetic"
+      role: "Marketing System Specialist"
+      responsibilities:
+        - "Newsletter mensal (conteudo e distribuicao)"
+        - "Retention system via comunicacao ongoing"
+        - "Shock and Awe packages"
+        - "Lead Generation Magnets"
+      source_knowledge:
+        - "Magnetic Marketing, Framework 10 - Retention System"
+        - "Magnetic Marketing, Framework 20 - Newsletter Content Formula"
+
+# ============================================================================
+# WORKFLOW PHASES
+# ============================================================================
+
+workflow:
+  total_estimated_time: "8-12 hours initial setup + ongoing"
+
+  phase_1:
+    name: "Diagnostic Assessment"
+    duration: "30-45 min"
+    agent: "kennedy-chief"
+    inputs:
+      - "Current business metrics (revenue, clients, margins)"
+      - "Current marketing activities and budget"
+      - "Existing brand assets (if any)"
+      - "DR system status (if any)"
+    activities:
+      - step: "Classify business scenario"
+        detail: "A (no brand no DR), B (DR no brand), C (brand no DR), D (both)"
+      - step: "Collect baseline metrics"
+        detail: "Cost per lead, CAC, LTV, retention rate, referral rate"
+      - step: "Assess channel dependency"
+        detail: "% of revenue per channel -- flag any >20%"
+      - step: "Evaluate the 3 controls"
+        detail: "Marketing, finances, customer relationship -- who controls each?"
+    outputs:
+      - "Scenario Classification (A/B/C/D)"
+      - "Baseline Metrics Report"
+      - "Channel Dependency Analysis"
+      - "Control Assessment"
+    quality_gate: "gate_1"
+
+  phase_2:
+    name: "DR Foundation (if needed)"
+    duration: "120-180 min (Scenario A/C) or SKIP (Scenario B/D)"
+    agent: "kennedy-direct-response"
+    condition: "Only if Scenario A or C (no DR system)"
+    inputs:
+      - "Scenario Classification (from Phase 1)"
+      - "WHO profile"
+      - "Product/service information"
+    activities:
+      - step: "Define WHO with psychographics"
+        detail: "5 Psychographic Discovery Questions"
+      - step: "Create USP"
+        detail: "Answer: Why you vs every other option?"
+      - step: "Build Lead Generation Magnet"
+        detail: "Apply 4 Jobs framework"
+      - step: "Implement Multi-Step Campaign"
+        detail: "3 notices with linkage"
+      - step: "Configure tracking"
+        detail: "UTM, unique codes, CRM setup"
+      - step: "Launch and measure 30 days"
+        detail: "Must achieve positive or breakeven ROI"
+    outputs:
+      - "WHO Profile Document"
+      - "USP Statement"
+      - "Lead Generation Magnet"
+      - "Multi-Step Campaign (3 notices)"
+      - "Tracking Configuration"
+      - "30-Day DR Results Report"
+    quality_gate: "gate_2"
+
+  phase_3:
+    name: "Winning Formula Design"
+    duration: "60-90 min"
+    agent: "kennedy-brand"
+    inputs:
+      - "Baseline Metrics (from Phase 1)"
+      - "DR Results (from Phase 2 or existing)"
+      - "Business goals and constraints"
+    activities:
+      - step: "Define budget allocation"
+        detail: "60-70% DR (front-end) / 30-40% Brand (back-end)"
+      - step: "Map front-end ROI goals"
+        detail: "Target cost per lead, CAC, front-end ROI"
+      - step: "Map back-end ROI goals"
+        detail: "Target retention, recompra, referral, LTV"
+      - step: "Design brand integration points"
+        detail: "Where brand elements enter DR materials"
+      - step: "Create Brand Equity projection"
+        detail: "Brand Equity = (DR Clients) x (Retention) x (Referral) x (Time)"
+    outputs:
+      - "Winning Formula Strategy Document"
+      - "Budget Allocation Plan"
+      - "Front-End / Back-End ROI Targets"
+      - "Brand Integration Map"
+      - "Brand Equity Projection (12 months)"
+    quality_gate: "gate_3"
+
+  phase_4:
+    name: "Retention System Implementation"
+    duration: "90-120 min"
+    agent: "kennedy-referrals + kennedy-magnetic"
+    inputs:
+      - "Winning Formula Strategy (from Phase 3)"
+      - "Client base information"
+      - "Budget allocation for back-end"
+    activities:
+      - step: "Design newsletter program"
+        detail: "Monthly newsletter with 4 content types"
+      - step: "Create first newsletter issue"
+        detail: "USP, entertainment, CTA, personality"
+      - step: "Implement referral program"
+        detail: "Formalized program with rewards"
+      - step: "Plan 11-Point Referral System rollout"
+        detail: "Progressive implementation over 90 days"
+      - step: "Design client appreciation events"
+        detail: "Quarterly events + surprise moments"
+      - step: "Create reactivation campaign"
+        detail: "For dormant clients"
+    outputs:
+      - "Newsletter Program Design"
+      - "First Newsletter Issue (draft)"
+      - "Referral Program Structure"
+      - "11-Point Implementation Timeline"
+      - "Event Calendar (next 12 months)"
+      - "Reactivation Campaign (3 notices)"
+    quality_gate: "gate_4"
+
+  phase_5:
+    name: "Brand Protection Setup"
+    duration: "45-60 min"
+    agent: "kennedy-brand + kennedy-chief"
+    inputs:
+      - "All previous phase outputs"
+      - "Current quality standards"
+      - "Competitive landscape"
+    activities:
+      - step: "Define quality monitoring protocols"
+        detail: "What to monitor, how often, who is responsible"
+      - step: "Establish 3 control boundaries"
+        detail: "What is NEVER delegated (marketing, finances, relationships)"
+      - step: "Create brand protection checklist"
+        detail: "Monthly review of potential 'paper cuts'"
+      - step: "Design channel diversification plan"
+        detail: "Ensure no channel >20% dependency"
+      - step: "Document 'What brung you to the dance'"
+        detail: "Record the DR foundation for future reference"
+    outputs:
+      - "Quality Monitoring Protocol"
+      - "Control Boundaries Document"
+      - "Brand Protection Monthly Checklist"
+      - "Channel Diversification Plan"
+      - "DR Foundation Record"
+    quality_gate: "gate_5"
+
+  phase_6:
+    name: "Launch, Measure & Optimize"
+    duration: "Ongoing (90-day initial cycle)"
+    agent: "all agents"
+    inputs:
+      - "All implemented systems"
+      - "Tracking active"
+    activities:
+      - step: "Launch integrated DR + Brand system"
+        detail: "Execute all systems simultaneously"
+      - step: "Weekly metric review"
+        detail: "Front-end ROI, back-end metrics, channel performance"
+      - step: "Monthly brand protection audit"
+        detail: "Run monthly checklist"
+      - step: "Quarterly strategy review"
+        detail: "Adjust budget allocation based on results"
+      - step: "Annual Winning Formula reassessment"
+        detail: "Full review of DR + Brand integration"
+    outputs:
+      - "Weekly Metrics Dashboard"
+      - "Monthly Brand Health Report"
+      - "Quarterly Strategy Adjustment"
+      - "Annual Winning Formula Review"
+    quality_gate: "gate_final"
+
+# ============================================================================
+# QUALITY GATES
+# ============================================================================
+
+quality_gates:
+  gate_1:
+    name: "Diagnostic Complete"
+    phase: "phase_1"
+    criteria:
+      - "Scenario classified (A/B/C/D)"
+      - "Baseline metrics collected (all required fields)"
+      - "Channel dependency assessed (flagged if any >20%)"
+      - "3 controls evaluated (marketing, finances, relationships)"
+    blocker: true
+    failure_action: "Collect missing data before proceeding"
+
+  gate_2:
+    name: "DR Foundation Solid"
+    phase: "phase_2"
+    criteria:
+      - "WHO profile complete with psychographics"
+      - "USP answers the 3 questions"
+      - "Lead Generation Magnet live and generating leads"
+      - "Multi-Step Campaign implemented and sending"
+      - "Tracking configured and producing data"
+      - "30-day results: positive or breakeven front-end ROI"
+    blocker: true
+    failure_action: "Optimize DR system until positive/breakeven ROI achieved"
+
+  gate_3:
+    name: "Winning Formula Approved"
+    phase: "phase_3"
+    criteria:
+      - "Budget allocation defined (60-70% DR / 30-40% Brand)"
+      - "Front-end and back-end ROI targets set"
+      - "Brand integration points mapped"
+      - "Brand Equity projection calculated"
+      - "Winning Formula signed off by kennedy-chief"
+    blocker: true
+    failure_action: "Revise allocation or targets"
+
+  gate_4:
+    name: "Retention System Ready"
+    phase: "phase_4"
+    criteria:
+      - "Newsletter program designed with 4 content types"
+      - "First newsletter issue drafted"
+      - "Referral program structured with rewards"
+      - "11-Point implementation timeline created"
+      - "Client appreciation events planned"
+    blocker: false
+    failure_action: "Prioritize newsletter + referral program; events can follow"
+
+  gate_5:
+    name: "Brand Protection Active"
+    phase: "phase_5"
+    criteria:
+      - "Quality monitoring protocol documented"
+      - "3 control boundaries established"
+      - "Brand protection monthly checklist created"
+      - "No single channel >20% dependency"
+      - "DR foundation documented for reference"
+    blocker: false
+    failure_action: "Address highest-risk items first"
+
+  gate_final:
+    name: "Winning Formula Validated"
+    phase: "phase_6"
+    criteria:
+      - "90-day data collected"
+      - "Front-end ROI positive"
+      - "Back-end metrics improving (retention, recompra, referral)"
+      - "Brand Equity growing per projection"
+      - "No channel >20% dependency"
+      - "DR not abandoned in favor of brand"
+    blocker: false
+    failure_action: "Diagnose specific underperformance and adjust"
+
+# ============================================================================
+# VETO CONDITIONS
+# ============================================================================
+
+veto_conditions:
+  universal:
+    - condition: "Brand spending with zero DR foundation"
+      severity: "BLOCKER"
+      rationale: "Customers, Sales, Revenue FIRST"
+      source: "Brand-Building by DR, Heuristica"
+
+    - condition: "Marketing investment without tracking"
+      severity: "BLOCKER"
+      rationale: "Untracked marketing = burning money"
+      source: "Magnetic Marketing, Rule #4"
+
+    - condition: "Abandoning DR for pure brand approach"
+      severity: "BLOCKER"
+      rationale: "Never forget what brung you to the dance"
+      source: "Brand-Building by DR, Ch.19"
+
+    - condition: "Delegating all 3 controls (marketing, finances, relationships)"
+      severity: "BLOCKER"
+      rationale: "Three Things to Never Abdicate"
+      source: "Brand-Building by DR, Ch.6"
+
+  warnings:
+    - condition: "Single channel >20% of revenue"
+      severity: "WARNING"
+      rationale: "Danger of One -- diversify immediately"
+
+    - condition: "Brand spending >40% of total budget"
+      severity: "WARNING"
+      rationale: "DR should always lead in budget allocation"
+
+    - condition: "No newsletter for 2+ months"
+      severity: "WARNING"
+      rationale: "Newsletter is the ultimate relationship tool"
+
+    - condition: "Retention rate declining for 2+ months"
+      severity: "WARNING"
+      rationale: "Death by 1000 paper cuts may be occurring"
+
+# ============================================================================
+# INTEGRATION MAP
+# ============================================================================
+
+integrations:
+  depends_on:
+    - system: "Direct Response Foundation"
+      provides: "Working DR system with positive/breakeven ROI"
+
+  feeds_into:
+    - sop: "sop-storyselling.md"
+      provides: "Winning Formula context for StorySelling"
+    - sop: "sop-personal-branding-dr.md"
+      provides: "Brand-by-DR principles for personal brand"
+    - sop: "sop-dr-social-media.md"
+      provides: "Brand principles for social media DR"
+    - sop: "sop-newsletter-content.md"
+      provides: "Retention strategy that drives newsletter content"
+
+  shared_frameworks:
+    - name: "Winning Formula"
+      usage: "Core framework -- DR acquire, Brand retain"
+    - name: "Principle > Strategies > Tactics"
+      usage: "Decision hierarchy for all marketing choices"
+    - name: "Marketing Triangle"
+      usage: "Market/Message/Media alignment"
+    - name: "Front-End vs Back-End ROI"
+      usage: "Budget allocation and measurement"
+    - name: "11-Point Referral System"
+      usage: "Retention system implementation"
+    - name: "10 Regras Fundacionais"
+      usage: "DR compliance in every brand touchpoint"
+    - name: "Brand Protection Principles"
+      usage: "Ongoing brand defense"
+
+# ============================================================================
+# METRICS & KPIs
+# ============================================================================
+
+metrics:
+  front_end:
+    - name: "Cost per Lead"
+      target: "Decrease 20% over 90 days"
+      measurement: "Total DR spend / leads generated"
+    - name: "Cost per Acquisition"
+      target: "Decrease 15% over 90 days"
+      measurement: "Total DR spend / customers acquired"
+    - name: "Front-End ROI"
+      target: "Positive or breakeven"
+      measurement: "(Front-end revenue - DR spend) / DR spend"
+
+  back_end:
+    - name: "Retention Rate (12 months)"
+      target: "> 80%"
+      measurement: "Clients active at 12 months / clients acquired"
+    - name: "Recompra Rate"
+      target: "> 30%"
+      measurement: "Clients with 2+ purchases / total clients"
+    - name: "Referral Rate"
+      target: "> 15%"
+      measurement: "New clients from referrals / total new clients"
+    - name: "Lifetime Value"
+      target: "Grow 25% annually"
+      measurement: "Average total revenue per client over 12 months"
+
+  integrated:
+    - name: "Brand Equity Score"
+      formula: "(DR Clients) x (Retention Rate) x (Referral Rate) x (Years)"
+      target: "Growing quarter over quarter"
+
+  vanity_metrics_excluded:
+    - "Brand awareness percentage (unmeasurable)"
+    - "Social media followers (unless tied to revenue)"
+    - "Press mentions (unless tracked to leads)"
+    - "Logo recognition surveys (unless tied to sales)"
+
+# ============================================================================
+# VERSION HISTORY
+# ============================================================================
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-11"
+    changes: "Initial blueprint creation"
+    author: "kennedy squad"

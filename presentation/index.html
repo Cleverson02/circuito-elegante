@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito Elegante — Relatório Tecnológico & Estratégico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+JP:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --ce-green: #289548;
+            --ce-green-light: #34b85a;
+            --ce-green-dark: #1e7338;
+            --ce-gold: #B8A446;
+            --ce-gold-light: #d4bf5e;
+            --ce-gold-muted: #9A8B3A;
+            --bg-base: #061210;
+            --bg-elevated: #0c1f1a;
+            --bg-surface: #132b24;
+            --bg-card: rgba(19, 43, 36, 0.6);
+            --bg-glass: rgba(19, 43, 36, 0.45);
+            --bg-overlay: rgba(6, 18, 16, 0.85);
+            --text-primary: #f0f4f2;
+            --text-secondary: #a8bfb5;
+            --text-muted: #6b8a7d;
+            --border-default: rgba(40, 149, 72, 0.12);
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-gold: rgba(184, 164, 70, 0.25);
+            --glow-green: rgba(40, 149, 72, 0.35);
+            --glow-gold: rgba(184, 164, 70, 0.3);
+            --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-entrance: cubic-bezier(0, 0, 0.2, 1);
+            --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+            --duration-fast: 100ms;
+            --duration-normal: 200ms;
+            --duration-moderate: 300ms;
+            --duration-slow: 400ms;
+            --duration-deliberate: 600ms;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 20px;
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-glow: 0 0 30px var(--glow-green);
+            --shadow-gold-glow: 0 0 24px var(--glow-gold);
+        }
+
+        .reveal {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .reveal .slides { text-align: left; }
+
+        .reveal .slides section {
+            background: var(--bg-base);
+            padding: 56px 64px;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .reveal .slide-background { background: var(--bg-base) !important; }
+
+        .reveal h1, .reveal h2 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: none;
+            letter-spacing: -0.045em;
+            line-height: 0.95;
+            margin: 0 0 4px 0;
+        }
+
+        .reveal h1 { font-size: 2.8em; }
+        .reveal h2 { font-size: 2em; }
+
+        .reveal h3 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-weight: 500;
+            font-size: 1em;
+            color: var(--ce-gold-light);
+            text-transform: none;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .reveal p, .reveal li {
+            font-size: 0.68em;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.52em;
+            font-weight: 500;
+            color: var(--ce-gold);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .eyebrow::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            max-width: 80px;
+            background: linear-gradient(90deg, var(--ce-gold-muted), transparent);
+        }
+
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            transition: transform var(--duration-moderate) var(--ease-standard),
+                        border-color var(--duration-normal) var(--ease-standard),
+                        box-shadow var(--duration-moderate) var(--ease-standard);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--ce-green);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .glass-card h4 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 0.72em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .glass-card p {
+            font-size: 0.56em !important;
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .glass-card .card-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.48em;
+            font-weight: 600;
+            color: var(--ce-gold-muted);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1023px) {
+            .reveal .slides section { padding: 36px 40px; }
+            .reveal h1 { font-size: 2.2em; }
+            .reveal h2 { font-size: 1.6em; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .grid-3 { grid-template-columns: 1fr 1fr; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 639px) {
+            .reveal .slides section { padding: 24px 20px; }
+            .reveal h1 { font-size: 1.6em; }
+            .reveal h2 { font-size: 1.3em; }
+            .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .stat-row { flex-direction: column; }
+            .funnel-step { font-size: 0.5em; }
+            .cost-layout { grid-template-columns: 1fr !important; }
+        }
+
+        /* Cover */
+        .cover-slide {
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 25% 15%, rgba(40, 149, 72, 0.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 75%, rgba(184, 164, 70, 0.08) 0%, transparent 50%);
+            animation: ambient 25s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes ambient {
+            0% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        .cover-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .cover-content { position: relative; z-index: 1; }
+
+        .cover-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 32px;
+            filter: drop-shadow(0 0 40px var(--glow-green));
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .cover-title {
+            font-family: 'Space Grotesk', system-ui, sans-serif !important;
+            font-size: 3.2em !important;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--text-primary) 40%, var(--ce-gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cover-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.52em !important;
+            font-weight: 500;
+            color: var(--ce-gold);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin: 16px 0 0;
+        }
+
+        .cover-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.42em !important;
+            color: var(--text-muted);
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .cover-meta .divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border-gold);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.46em;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 100px;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-green {
+            background: rgba(40, 149, 72, 0.12);
+            border: 1px solid rgba(40, 149, 72, 0.25);
+            color: var(--ce-green-light);
+        }
+
+        .badge-gold {
+            background: rgba(184, 164, 70, 0.12);
+            border: 1px solid rgba(184, 164, 70, 0.25);
+            color: var(--ce-gold-light);
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        /* Feature List */
+        .feat-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        .feat-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 0.62em !important;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .feat-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--ce-green);
+            box-shadow: 0 0 8px var(--glow-green);
+        }
+
+        /* Cost Table */
+        .cost-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 32px;
+            align-items: start;
+            margin-top: 16px;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cost-table th {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.44em;
+            font-weight: 600;
+            color: var(--ce-gold-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .cost-table th:last-child { text-align: right; }
+
+        .cost-table td {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.56em;
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+        }
+
+        .cost-table td:last-child {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            color: var(--text-primary);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .cost-table .row-total td {
+            border-top: 2px solid var(--ce-green);
+            border-bottom: none;
+            font-weight: 700;
+            color: var(--ce-green-light);
+            font-size: 0.62em;
+            padding-top: 14px;
+        }
+
+        /* Funnel */
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            margin: 20px auto;
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 14px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.58em;
+            font-weight: 500;
+            color: var(--text-primary);
+            border-radius: var(--radius-md);
+            transition: transform var(--duration-normal) var(--ease-standard);
+        }
+
+        .funnel-step:hover { transform: scale(1.02); }
+        .funnel-step.f1 { width: 100%; background: linear-gradient(135deg, var(--ce-green), var(--ce-green-dark)); }
+        .funnel-step.f2 { width: 86%; background: linear-gradient(135deg, #1e7338, #165c2c); }
+        .funnel-step.f3 { width: 72%; background: linear-gradient(135deg, #8a7a30, #6e6226); }
+        .funnel-step.f4 { width: 56%; background: linear-gradient(135deg, #b85c3a, #943a1e); }
+        .funnel-step.f5 { width: 42%; background: linear-gradient(135deg, #922b21, #6e1f18); }
+
+        .funnel-arrow {
+            color: var(--text-muted);
+            font-size: 0.65em;
+            line-height: 1;
+        }
+
+        /* Stats */
+        .stat-row {
+            display: flex;
+            gap: 16px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 130px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-lg);
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .stat-value.green { color: var(--ce-green-light); }
+        .stat-value.gold { color: var(--ce-gold-light); }
+        .stat-value.red { color: #e06050; }
+
+        .stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.44em;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.4;
+        }
+
+        /* Comparison */
+        .compare-col {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+        }
+
+        .compare-col.active {
+            border-color: var(--ce-green);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .compare-col h4 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 0.68em;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin: 0 0 16px 0;
+        }
+
+        .compare-col.active h4 { color: var(--ce-green-light); }
+
+        .compare-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .compare-col ul li {
+            font-size: 0.54em !important;
+            padding: 7px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .compare-col ul li::before {
+            content: '\2014';
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .compare-col.active ul li::before {
+            content: '+';
+            color: var(--ce-green-light);
+            font-weight: 600;
+        }
+
+        /* Challenges */
+        .challenge {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-gold);
+            border-left: 3px solid var(--ce-gold);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 14px;
+        }
+
+        .challenge h4 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 0.66em;
+            font-weight: 600;
+            color: var(--ce-gold-light);
+            margin: 0 0 6px 0;
+        }
+
+        .challenge p { font-size: 0.54em !important; margin: 0; }
+
+        /* Progress Bars */
+        .progress-group { margin: 12px 0; }
+        .progress-item { margin-bottom: 14px; }
+
+        .progress-header {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.5em;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress-header .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+        }
+
+        .progress-header .tag.green { color: var(--ce-green-light); }
+        .progress-header .tag.red { color: #e06050; }
+
+        .progress-track {
+            height: 6px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1.2s var(--ease-entrance);
+        }
+
+        .progress-fill.green { background: linear-gradient(90deg, var(--ce-green-dark), var(--ce-green-light)); }
+        .progress-fill.red { background: linear-gradient(90deg, #943a1e, #e06050); }
+
+        /* Chat Demo */
+        .chat-demo {
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-xl);
+            padding: 20px;
+            max-width: 420px;
+        }
+
+        .chat-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 14px;
+        }
+
+        .chat-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--ce-green), var(--ce-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .chat-info .chat-name {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 0.56em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .chat-info .chat-status {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.4em;
+            color: var(--ce-green-light);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pulse {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--ce-green);
+            animation: pulse-anim 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-anim {
+            0%, 100% { box-shadow: 0 0 0 0 var(--glow-green); }
+            50% { box-shadow: 0 0 0 6px rgba(40, 149, 72, 0); }
+        }
+
+        .bubble {
+            max-width: 85%;
+            padding: 10px 16px;
+            border-radius: 14px;
+            margin-bottom: 8px;
+            font-size: 0.52em !important;
+            line-height: 1.55;
+        }
+
+        .bubble.user {
+            background: var(--ce-green-dark);
+            color: var(--text-primary);
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+
+        .bubble.bot {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            color: var(--text-secondary);
+            border-bottom-left-radius: 4px;
+        }
+
+        /* OTA Tags */
+        .ota-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 12px 0;
+        }
+
+        .ota-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.52em;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: rgba(176, 80, 60, 0.12);
+            border: 1px solid rgba(176, 80, 60, 0.3);
+            color: #e06050;
+            letter-spacing: 0.02em;
+        }
+
+        /* Footer */
+        .s-footer {
+            margin-top: auto;
+            padding-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.36em;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            opacity: 0.5;
+        }
+
+        /* Closing */
+        .closing-slide {
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            position: relative;
+        }
+
+        .closing-slide .closing-content { position: relative; z-index: 1; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--text-primary) 30%, var(--ce-gold-light) 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .closing-quote {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 200;
+            font-size: 0.72em !important;
+            color: var(--ce-gold-light);
+            max-width: 560px;
+            margin: 20px auto;
+            line-height: 1.65;
+        }
+
+        /* Reveal progress bar */
+        .reveal .progress { height: 3px; }
+        .reveal .progress span { background: linear-gradient(90deg, var(--ce-green), var(--ce-gold)); }
+        .reveal .controls .navigate-left, .reveal .controls .navigate-right { color: var(--ce-green); }
+        .reveal .slide-number { font-family: 'JetBrains Mono', monospace; font-size: 0.6em; color: var(--text-muted); }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ====== S1: CAPA ====== -->
+            <section class="cover-slide" data-transition="fade">
+                <div class="cover-content">
+                    <img src="https://www.circuitoelegante.com.br/wp-content/uploads/2023/07/Logotipo-Circuito-Elegante_2021_vertical_RGB.png"
+                         alt="Circuito Elegante" class="cover-logo">
+                    <div class="cover-title">Circuito Elegante</div>
+                    <p class="cover-subtitle">Relatório Tecnológico & Estratégico</p>
+                    <div class="cover-meta">
+                        <span>Circuito Elegante</span>
+                        <div class="divider"></div>
+                        <span>Elevare Tecnologia</span>
+                        <div class="divider"></div>
+                        <span>Abril 2026</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== S2: AGENDA ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">Agenda</div>
+                <h2>O que vamos abordar</h2>
+                <div class="grid-4" style="margin-top: 28px;">
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">01</span>
+                        <h4>Entregas Realizadas</h4>
+                        <p>Motor de reservas personalizado e Concierge IA integrada</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">02</span>
+                        <h4>Investimento</h4>
+                        <p>Transparência total sobre custos de operação mensal</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">03</span>
+                        <h4>Diagnóstico</h4>
+                        <p>Dados reais de comportamento dos usuários no site</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">04</span>
+                        <h4>Parceria</h4>
+                        <p>Proposta de modelo sustentável para continuidade da operação</p>
+                    </div>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>Confidencial</span>
+                </div>
+            </section>
+
+            <!-- ====== S3: ENTREGAS — MOTOR ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">01 Entregas</div>
+                <h2>CE Reserve</h2>
+                <h3>Motor de Reservas Proprietário</h3>
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div>
+                        <ul class="feat-list">
+                            <li class="fragment fade-up">Busca inteligente com autocomplete por cidade, região, estado e hotel</li>
+                            <li class="fragment fade-up">Coleções curadas exclusivas — Escapadas Paulistas, Coração do Brasil</li>
+                            <li class="fragment fade-up">Reserva multi-quarto com configuração individual de hóspedes</li>
+                            <li class="fragment fade-up">Checkout 100% brasileiro — CPF, CEP auto-fill, parcelamento até 6x</li>
+                            <li class="fragment fade-up">Sistema de parceiros com rastreamento por UUID</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="feat-list">
+                            <li class="fragment fade-up">Short links compartilháveis para campanhas de marketing</li>
+                            <li class="fragment fade-up">Galeria de fotos full-screen com navegação por thumbnails</li>
+                            <li class="fragment fade-up">Indicadores de refeição — BB, HB, FB, All Inclusive</li>
+                            <li class="fragment fade-up">Política de cancelamento transparente por tarifa</li>
+                            <li class="fragment fade-up">Consulta e reserva de disponibilidade em tempo real</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="badge-row fragment fade-up">
+                    <span class="badge badge-green">Next.js</span>
+                    <span class="badge badge-green">Tailwind CSS</span>
+                    <span class="badge badge-green">TypeScript</span>
+                    <span class="badge badge-green">API RESTful</span>
+                    <span class="badge badge-green">Cloudflare CDN</span>
+                    <span class="badge badge-gold">Omnibees API</span>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>01 / Entregas</span>
+                </div>
+            </section>
+
+            <!-- ====== S4: ENTREGAS — IA CONCIERGE ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">01 Entregas</div>
+                <h2>Concierge Digital IA</h2>
+                <h3>Atendimento 100% humanizado, 24/7</h3>
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div>
+                        <ul class="feat-list">
+                            <li class="fragment fade-up">Integrada com a API da Elevare para cotação e reserva automática</li>
+                            <li class="fragment fade-up">Base de conhecimento completa de todos os hotéis do circuito</li>
+                            <li class="fragment fade-up">Encaminhamento inteligente para concierge humano quando sem integração</li>
+                            <li class="fragment fade-up">Conversação natural em português com tom de luxo e hospitalidade</li>
+                            <li class="fragment fade-up">Cotação manual automatizada para hotéis não-integrados</li>
+                        </ul>
+                    </div>
+                    <div class="fragment fade-up">
+                        <div class="chat-demo">
+                            <div class="chat-head">
+                                <div class="chat-avatar">CE</div>
+                                <div class="chat-info">
+                                    <div class="chat-name">Concierge CE</div>
+                                    <div class="chat-status"><span class="pulse"></span> Online agora</div>
+                                </div>
+                            </div>
+                            <div class="bubble user">Quero uma pousada romântica em Campos do Jordão para o feriado</div>
+                            <div class="bubble bot">Tenho opções incríveis para vocês. A Pousada Villa Capivary tem suíte com lareira e café da manhã incluso. Verifico disponibilidade?</div>
+                            <div class="bubble user">Sim, para 2 adultos</div>
+                            <div class="bubble bot">Suíte Charme disponível por R$890/noite com café colonial incluso. Posso reservar agora mesmo!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>01 / IA Concierge</span>
+                </div>
+            </section>
+
+            <!-- ====== S5: DIFERENCIAIS ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">02 Diferenciais</div>
+                <h2>O que nos diferencia</h2>
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="compare-col fragment fade-up">
+                        <h4>Solução Genérica de Mercado</h4>
+                        <ul>
+                            <li>Widget padrão do channel manager</li>
+                            <li>Sem personalização visual</li>
+                            <li>Busca simples por data e hotel</li>
+                            <li>Checkout genérico internacional</li>
+                            <li>Sem sistema de afiliados</li>
+                            <li>Sem curadoria de coleções</li>
+                            <li>Sem IA conversacional</li>
+                            <li>Sem links compartilháveis</li>
+                        </ul>
+                    </div>
+                    <div class="compare-col active fragment fade-up">
+                        <h4>CE Reserve + Elevare</h4>
+                        <ul>
+                            <li>Plataforma white-label personalizada</li>
+                            <li>Identidade visual Circuito Elegante integrada</li>
+                            <li>Busca por cidade, região, estado e coleções curadas</li>
+                            <li>Checkout brasileiro com CPF, CEP e parcelamento</li>
+                            <li>Sistema de parceiros com tracking UUID</li>
+                            <li>Coleções editoriais temáticas</li>
+                            <li>Concierge IA 24/7 com base de conhecimento</li>
+                            <li>Short links para campanhas de marketing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>02 / Diferenciais</span>
+                </div>
+            </section>
+
+            <!-- ====== S6: INVESTIMENTO ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">03 Investimento</div>
+                <h2>Custos Mensais de Operação</h2>
+                <div class="cost-layout">
+                    <div>
+                        <table class="cost-table">
+                            <thead>
+                                <tr><th>Item</th><th>Valor/mês</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>API Omnibees</td><td>R$ 2.650</td></tr>
+                                <tr><td>Taxa de Performance</td><td>R$ 1.100</td></tr>
+                                <tr><td>Integrador Moblix</td><td>R$ 1.800</td></tr>
+                                <tr><td>IA Concierge Digital</td><td>R$ 4.500</td></tr>
+                                <tr><td>E-mail Transacional</td><td>R$ 50</td></tr>
+                                <tr><td>Z-API (WhatsApp)</td><td>R$ 99</td></tr>
+                                <tr><td>Cloudfy</td><td>R$ 59</td></tr>
+                                <tr><td>API LLM (IA)</td><td>$ 20 USD</td></tr>
+                                <tr><td>Digital Ocean (infra)</td><td>$ 180 USD</td></tr>
+                                <tr><td>AWS Banco de Dados</td><td>$ 28 USD</td></tr>
+                                <tr><td>Backup & Storage</td><td>$ 12 USD</td></tr>
+                                <tr><td style="color: var(--text-muted);">Dev & Manutenção / Pentest</td><td style="color: var(--text-muted); font-style: italic;">A calcular</td></tr>
+                                <tr class="row-total">
+                                    <td>Total Estimado</td>
+                                    <td>~R$ 11.600+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 0.4em !important; margin-top: 10px; color: var(--text-muted);">
+                            * Valores em USD convertidos à taxa vigente (~R$ 5,70). Custos de desenvolvimento e pentest não inclusos.
+                        </p>
+                    </div>
+                    <div class="fragment fade-up" style="display: flex; align-items: center;">
+                        <canvas id="costChart" style="max-width: 360px; width: 100%;"></canvas>
+                    </div>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>03 / Investimento</span>
+                </div>
+            </section>
+
+            <!-- ====== S7: DIAGNÓSTICO ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">04 Diagnóstico</div>
+                <h2>Comportamento do Usuário</h2>
+                <h3 style="color: var(--text-secondary); font-size: 0.68em; font-family: 'Inter', sans-serif; font-weight: 400;">Dados coletados via monitoramento analítico do site</h3>
+                <div class="funnel fragment fade-up">
+                    <div class="funnel-step f1">Usuário acessa circuitoelegante.com.br</div>
+                    <div class="funnel-arrow">|</div>
+                    <div class="funnel-step f2">Navega, pesquisa hotéis e destinos</div>
+                    <div class="funnel-arrow">|</div>
+                    <div class="funnel-step f3">Abre nova aba — compara em OTAs concorrentes</div>
+                    <div class="funnel-arrow">|</div>
+                    <div class="funnel-step f4">10% clicam para comprar na OTA</div>
+                    <div class="funnel-arrow">|</div>
+                    <div class="funnel-step f5">Abandona o site do Circuito Elegante</div>
+                </div>
+                <div class="ota-row fragment fade-up">
+                    <span class="ota-tag">Booking.com</span>
+                    <span class="ota-tag">Expedia</span>
+                    <span class="ota-tag">Hotels.com</span>
+                    <span class="ota-tag">Trivago</span>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>04 / Diagnóstico</span>
+                </div>
+            </section>
+
+            <!-- ====== S8: ANÁLISE ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">05 Análise</div>
+                <h2>Por que isso acontece</h2>
+                <h3 style="color: var(--text-secondary); font-size: 0.68em; font-family: 'Inter', sans-serif; font-weight: 400; margin-bottom: 4px;">Fenômeno global do setor hoteleiro — não exclusivo do Circuito Elegante</h3>
+                <div class="grid-4" style="margin-top: 20px;">
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">01</span>
+                        <h4>Comparação de preços</h4>
+                        <p>O viajante moderno compara em 3 a 5 plataformas antes de reservar. Comportamento padrão do consumidor digital.</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">02</span>
+                        <h4>Confiança nas OTAs</h4>
+                        <p>Booking e Expedia investem bilhões em branding. O usuário já tem conta, histórico e familiaridade.</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">03</span>
+                        <h4>Programas de fidelidade</h4>
+                        <p>Genius, Rewards e similares oferecem descontos progressivos que criam lock-in do usuário.</p>
+                    </div>
+                    <div class="glass-card fragment fade-up">
+                        <span class="card-num">04</span>
+                        <h4>Hábito digital</h4>
+                        <p>O usuário reserva onde já reservou antes. Mudar exige proposta de valor clara e diferenciada.</p>
+                    </div>
+                </div>
+                <div class="fragment fade-up" style="margin-top: 20px; text-align: center;">
+                    <span class="badge badge-gold" style="font-size: 0.52em;">
+                        Não é um problema de tecnologia — é um desafio de mercado
+                    </span>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>05 / Análise</span>
+                </div>
+            </section>
+
+            <!-- ====== S9: DESAFIOS ====== -->
+            <section data-transition="slide">
+                <div class="eyebrow">06 Desafios</div>
+                <h2>Desafios Atuais</h2>
+                <div class="grid-2" style="margin-top: 16px;">
+                    <div>
+                        <div class="challenge fragment fade-up">
+                            <h4>Hotéis sem Omnibees</h4>
+                            <p>60% dos hotéis do circuito não utilizam Omnibees como channel manager. Sem API disponível, não é possível integrar reservas automáticas para esses estabelecimentos.</p>
+                        </div>
+                        <div class="challenge fragment fade-up">
+                            <h4>Custo de APIs Adicionais</h4>
+                            <p>Cada channel manager (Cloudbeds, HSystem, RMS, etc.) cobra separadamente pela API. Integrar múltiplos provedores eleva significativamente o custo fixo mensal.</p>
+                        </div>
+                        <div class="challenge fragment fade-up">
+                            <h4>Escala vs. Custo</h4>
+                            <p>Mais motores integrados significam maior custo fixo mensal — sem garantia proporcional de volume de reservas no curto prazo.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 0.72em; margin-bottom: 14px;">Cobertura Atual</h3>
+                        <div class="progress-group">
+                            <div class="progress-item fragment fade-up">
+                                <div class="progress-header">
+                                    <span>Hotéis com Omnibees (integrados)</span>
+                                    <span class="tag green">Automático</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill green" data-width="40%" style="width: 0;"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item fragment fade-up">
+                                <div class="progress-header">
+                                    <span>Hotéis sem nenhuma integração</span>
+                                    <span class="tag red">Sem cobertura</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill red" data-width="60%" style="width: 0;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-row fragment fade-up" style="margin-top: 24px;">
+                            <div class="stat-box">
+                                <div class="stat-value green">40%</div>
+                                <div class="stat-label">Integrados<br>Omnibees</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value red">60%</div>
+                                <div class="stat-label">Sem nenhuma<br>integração</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-footer">
+                    <span>Circuito Elegante + Elevare</span>
+                    <span>06 / Desafios</span>
+                </div>
+            </section>
+
+            <!-- ====== S10: ENCERRAMENTO ====== -->
+            <section class="closing-slide" data-transition="fade">
+                <div class="closing-content">
+                    <img src="https://www.circuitoelegante.com.br/wp-content/uploads/2023/07/Logotipo-Circuito-Elegante_2021_vertical_RGB.png"
+                         alt="Circuito Elegante" style="width: 90px; margin-bottom: 24px; filter: drop-shadow(0 0 24px var(--glow-green));">
+                    <h2 class="gradient-text" style="font-size: 2.4em !important;">Parceria & Sustentabilidade</h2>
+                    <p class="closing-quote">
+                        Acreditamos no potencial do Circuito Elegante. Para que a operação continue evoluindo, precisamos construir juntos um modelo de parceria que torne os custos sustentáveis para ambos os lados.
+                    </p>
+                    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 24px;">
+                        <span class="badge badge-green" style="font-size: 0.48em;">
+                            <span class="pulse"></span> Motor de Reservas Ativo
+                        </span>
+                        <span class="badge badge-gold" style="font-size: 0.48em;">
+                            <span class="pulse" style="background: var(--ce-gold);"></span> Concierge IA Online
+                        </span>
+                    </div>
+                    <div class="cover-meta" style="margin-top: 40px;">
+                        <span>Circuito Elegante</span>
+                        <div class="divider"></div>
+                        <span>Elevare Tecnologia</span>
+                    </div>
+                    <p style="font-size: 0.4em !important; color: var(--text-muted); margin-top: 32px;">
+                        Cleverson Silva — Elevare Tecnologia | Abril 2026
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            center: false,
+            controls: true,
+            controlsTutorial: false,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            overview: true,
+            touch: true,
+            autoAnimateEasing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+            autoAnimateDuration: 0.6,
+        });
+
+        let chartDone = false;
+        function renderChart() {
+            if (chartDone) return;
+            chartDone = true;
+            const ctx = document.getElementById('costChart');
+            if (!ctx) return;
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'API Omnibees',
+                        'Taxa Performance',
+                        'Integrador Moblix',
+                        'IA Concierge',
+                        'APIs & Serviços',
+                        'Infraestrutura'
+                    ],
+                    datasets: [{
+                        data: [2650, 1100, 1800, 4500, 322, 1368],
+                        backgroundColor: ['#289548', '#34b85a', '#B8A446', '#d4bf5e', '#1e7338', '#6b8a7d'],
+                        borderColor: '#061210',
+                        borderWidth: 3,
+                        hoverOffset: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '58%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#a8bfb5',
+                                font: { family: "'JetBrains Mono', monospace", size: 10 },
+                                padding: 10,
+                                usePointStyle: true,
+                                pointStyleWidth: 8
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#132b24',
+                            titleColor: '#f0f4f2',
+                            titleFont: { family: "'Space Grotesk', sans-serif", weight: 600 },
+                            bodyColor: '#a8bfb5',
+                            bodyFont: { family: "'JetBrains Mono', monospace" },
+                            borderColor: 'rgba(40, 149, 72, 0.25)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            padding: 12,
+                            callbacks: {
+                                label: function(c) { return ' R$ ' + c.raw.toLocaleString('pt-BR') + '/mês'; }
+                            }
+                        }
+                    },
+                    animation: { animateRotate: true, duration: 1200 }
+                }
+            });
+        }
+
+        Reveal.on('slidechanged', function(e) {
+            if (e.currentSlide.querySelector('#costChart')) renderChart();
+            e.currentSlide.querySelectorAll('.progress-fill').forEach(function(bar) {
+                var w = bar.getAttribute('data-width');
+                if (w) { bar.style.width = '0'; setTimeout(function() { bar.style.width = w; }, 200); }
+            });
+        });
+
+        Reveal.on('ready', function() {
+            var s = document.querySelector('#costChart');
+            if (s && s.closest('section.present')) renderChart();
+        });
+    </script>
+</body>
+</html>

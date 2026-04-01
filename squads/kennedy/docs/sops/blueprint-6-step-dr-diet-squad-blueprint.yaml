@@ -1,0 +1,354 @@
+# 6-Step Direct Marketing Diet Squad Blueprint — Dan Kennedy
+# Pattern: KN-SB-006 (Kennedy Squad Blueprint Standard)
+# Source: No B.S. Direct Marketing (3rd Ed, 2018) — Chapter 10, p.87-94 + Chapters 1-9
+# Version: 1.0
+# Generated: 2026-02-12
+# source_sop: sop-6-step-dr-diet.md
+
+metadata:
+  name: 6-step-dr-diet-squad
+  version: "1.0"
+  domain: "marketing-transformation"
+  source: "No B.S. Direct Marketing, Dan Kennedy, Third Edition, Chapter 10"
+  sop_reference: "sop-6-step-dr-diet.md"
+  description: >
+    Squad blueprint for administering Kennedy's 6-Step Direct Marketing Diet —
+    the systematic transformation of any business from institutional marketing
+    wastage to 100% direct response discipline. This diet eliminates untrackable
+    marketing spending and reallocates budget to proven, measurable activities.
+
+# =============================================================================
+# AGENTS
+# =============================================================================
+
+agents:
+
+  - id: marketing-auditor
+    name: "Marketing Auditor Agent"
+    role: "Completes comprehensive audit of all marketing spending, classifying each expense as DR or Institutional, and scoring DR compliance 1-10 scale"
+    capabilities:
+      - "Complete marketing expense inventory"
+      - "Great Divide classification (DR vs Institutional)"
+      - "DR compliance scoring (1-10 scale)"
+      - "Results Triangle validation per expense"
+      - "ROI calculation and tracking history analysis"
+      - "Expense prioritization by business impact"
+      - "Budget reallocation recommendations"
+      - "Monthly review process design"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.1-10 (6-Step Diet framework)"
+      - "Great Divide concept (Institutional vs Direct Response)"
+      - "10 No B.S. Rules compliance"
+      - "Results Triangle alignment (Message-Market-Media)"
+      - "Money Pyramid budget allocation"
+    decision_rules:
+      - rule: "DIET-AU-001"
+        description: "EVERY marketing expense must be classified. No grey areas. 0-10 score or not included."
+      - rule: "DIET-AU-002"
+        description: "Anything scoring 1-3 (institutional/unmeasurable) is recommended for immediate elimination."
+      - rule: "DIET-AU-003"
+        description: "Anything scoring 4-5 (weak DR) gets 30-day transformation notice or elimination."
+      - rule: "DIET-AU-004"
+        description: "Winners (9-10 score) are identified for immediate budget expansion testing."
+      - rule: "DIET-AU-005"
+        description: "Must calculate % of budget currently wasted on institutional marketing (Kennedy: avg 70-90%)."
+      - rule: "DIET-AU-006"
+        description: "Monthly audit process must be implemented to prevent regression to old habits."
+
+  - id: diet-implementer
+    name: "Diet Implementation Agent"
+    role: "Executes the 6 steps of the Direct Marketing Diet: Eliminate, Offer, Urgency, Instructions, Tracking, Follow-Up"
+    capabilities:
+      - "Kill list execution (institutional marketing elimination)"
+      - "Offer injection (add to every marketing piece)"
+      - "Urgency mechanism design (deadline, scarcity, bonus)"
+      - "Clear instruction creation (step-by-step for every piece)"
+      - "Tracking code assignment and dashboard setup"
+      - "Follow-up sequence implementation (6-step model)"
+      - "Team accountability system"
+      - "Weekly compliance checklist"
+    knowledge_sources:
+      - "6-Step Diet framework (p.87-94)"
+      - "10 No B.S. Rules (enforcement during diet)"
+      - "Offer architecture (3 types + Hybrid)"
+      - "Urgency types (deadline, quantity, bonus, event, price)"
+      - "Tracking systems (phone, URL, coupon codes)"
+      - "Follow-up sequence (Restate → New Angle → Final Notice → Change Offer → Nurture)"
+    decision_rules:
+      - rule: "DIET-IMPL-001"
+        description: "ALL 6 steps applied to EVERY piece of marketing. No partial implementation."
+      - rule: "DIET-IMPL-002"
+        description: "Step 1 (Eliminate) is non-negotiable. Institutional marketing is deleted, not modified."
+      - rule: "DIET-IMPL-003"
+        description: "Every piece must have: offer + urgency + instructions + tracking. No exceptions."
+      - rule: "DIET-IMPL-004"
+        description: "Urgency must be REAL. Fake deadlines destroy credibility permanently."
+      - rule: "DIET-IMPL-005"
+        description: "New marketing must pass all 6 steps BEFORE approval/launch."
+      - rule: "DIET-IMPL-006"
+        description: "Monthly audit verifies no backsliding to institutional marketing (discipline check)."
+
+  - id: measurement-architect
+    name: "Measurement Architect Agent"
+    role: "Designs and implements tracking dashboard, ROI calculations, and performance metrics for post-diet optimization"
+    capabilities:
+      - "Central tracking dashboard design"
+      - "Channel-specific ROI calculation"
+      - "Cost per lead tracking"
+      - "Cost per customer tracking"
+      - "Response rate monitoring by channel"
+      - "A/B testing framework setup"
+      - "Winner identification and scaling strategy"
+      - "Budget reallocation automation"
+    knowledge_sources:
+      - "Money Pyramid targeting (allocate by tier)"
+      - "ROI calculation (Revenue - Cost) / Cost"
+      - "Response rate analysis (test vs baseline)"
+      - "Customer lifetime value integration"
+      - "Quarterly budget reallocation strategy"
+    decision_rules:
+      - rule: "DIET-MEAS-001"
+        description: "EVERY channel must have unique tracking code/URL/phone. No commingling."
+      - rule: "DIET-MEAS-002"
+        description: "Dashboard reviewed weekly for immediate optimization."
+      - rule: "DIET-MEAS-003"
+        description: "Winners (>3:1 ROI) get 50% budget increase for expanded testing."
+      - rule: "DIET-MEAS-004"
+        description: "Losers (<1.5:1 ROI) get 90-day improvement notice or elimination."
+      - rule: "DIET-MEAS-005"
+        description: "Results shared with team monthly to drive accountability."
+
+  - id: discipline-enforcer
+    name: "Discipline Enforcer Agent"
+    role: "Maintains ongoing diet discipline through monthly audits, quarterly deep-dives, and veto of non-compliant marketing"
+    capabilities:
+      - "Monthly expense audit"
+      - "New marketing approval/rejection"
+      - "Compliance scoring against 6-step framework"
+      - "Team coaching on DR principles"
+      - "Anti-pattern detection (slippage to institutional)"
+      - "Quarterly strategic review"
+      - "Annual full diet re-administration"
+    knowledge_sources:
+      - "10 No B.S. Rules (enforcement mechanism)"
+      - "Great Divide principles (zero tolerance)"
+      - "Results Triangle validation"
+      - "81 Kennedy success principles"
+    decision_rules:
+      - rule: "DIET-DISC-001"
+        description: "Any new marketing must pre-pass all 6 steps or be rejected immediately."
+      - rule: "DIET-DISC-002"
+        description: "Any piece scoring below 5/10 not approved for launch."
+      - rule: "DIET-DISC-003"
+        description: "Any institutional marketing reversal triggers investigation + retraining."
+      - rule: "DIET-DISC-004"
+        description: "Quarterly CEO/Owner review: Are we 100% DR? Why/why not?"
+      - rule: "DIET-DISC-005"
+        description: "Annual full re-administration of 6-step diet (prevents gradual erosion)."
+
+# =============================================================================
+# WORKFLOWS
+# =============================================================================
+
+workflows:
+
+  - id: diet-administration
+    name: "6-Step Direct Marketing Diet Administration"
+    description: "Complete 4-phase diet implementation process"
+    phases:
+      - phase: 1
+        name: "Diagnosis (Week 1)"
+        agents: [marketing-auditor]
+        outputs:
+          - "Complete 12-month marketing spend list"
+          - "Classification: DR vs Institutional"
+          - "Compliance scores (1-10) per expense"
+          - "% budget wasted on institutional marketing"
+          - "Winners identified (9-10 score)"
+      - phase: 2
+        name: "Surgery (Weeks 2-3)"
+        agents: [diet-implementer]
+        outputs:
+          - "Kill list: Institutional marketing eliminated"
+          - "Modified campaigns with 6 steps applied"
+          - "New offer structures injected"
+          - "Urgency mechanisms added"
+          - "Tracking codes assigned"
+      - phase: 3
+        name: "Instrumentation (Week 4)"
+        agents: [measurement-architect]
+        outputs:
+          - "Tracking dashboard live"
+          - "ROI calculations by channel"
+          - "Team training on measurement"
+          - "Weekly review process"
+      - phase: 4
+        name: "Ongoing Discipline (Month 2+)"
+        agents: [discipline-enforcer, marketing-auditor]
+        outputs:
+          - "Monthly audit report"
+          - "New marketing approvals"
+          - "Budget reallocation recommendations"
+          - "Quarterly strategic review"
+          - "Annual full diet re-administration"
+
+  - id: new-marketing-approval
+    name: "New Marketing Approval Workflow"
+    description: "Veto any marketing that doesn't pass 6-step diet"
+    steps:
+      - step: 1
+        action: "Review new marketing piece against Results Triangle"
+        responsible_agent: "marketing-auditor"
+      - step: 2
+        action: "Apply 6-step framework check"
+        responsible_agent: "diet-implementer"
+      - step: 3
+        action: "Score 1-10 on DR compliance"
+        responsible_agent: "marketing-auditor"
+      - step: 4
+        action: "VETO if <5/10, APPROVE if ≥5/10"
+        responsible_agent: "discipline-enforcer"
+      - step: 5
+        action: "If rejected: feedback loop back to creator"
+        responsible_agent: "diet-implementer"
+
+  - id: monthly-audit-cycle
+    name: "Monthly Diet Audit & Optimization"
+    description: "Recurring review of spending, ROI, and compliance"
+    frequency: "Monthly (first Monday)"
+    steps:
+      - step: 1
+        action: "Review all marketing from previous month"
+        responsible_agent: "marketing-auditor"
+      - step: 2
+        action: "Score each piece 1-10, re-classify if needed"
+        responsible_agent: "marketing-auditor"
+      - step: 3
+        action: "Analyze ROI dashboard"
+        responsible_agent: "measurement-architect"
+      - step: 4
+        action: "Identify winners for expansion, losers for elimination"
+        responsible_agent: "measurement-architect"
+      - step: 5
+        action: "Present findings to leadership, recommend budget shifts"
+        responsible_agent: "discipline-enforcer"
+      - step: 6
+        action: "Execute approved budget reallocations"
+        responsible_agent: "diet-implementer"
+
+# =============================================================================
+# SUCCESS CRITERIA
+# =============================================================================
+
+success_criteria:
+  - criterion: "Phase 1: Diagnosis Complete"
+    measurement: "100% of marketing expenses classified and scored"
+    timeframe: "Week 1 (45-90 min investment)"
+  - criterion: "Phase 2: Diet Surgery Executed"
+    measurement: "All institutional marketing eliminated, all remaining pieces have 6-step framework applied"
+    timeframe: "Weeks 2-3"
+  - criterion: "Phase 3: Tracking Live"
+    measurement: "Dashboard with ROI per channel, daily updates"
+    timeframe: "Week 4"
+  - criterion: "Institutional Marketing Eliminated"
+    measurement: "0% budget allocated to untrackable/unmeasurable marketing"
+    timeframe: "Month 1"
+  - criterion: "DR Compliance: 100%"
+    measurement: "Every piece has: Offer + Urgency + Instructions + Tracking + Follow-up"
+    timeframe: "Month 1 ongoing"
+  - criterion: "Monthly Audit Implemented"
+    measurement: "First Monday of every month: spending reviewed and optimized"
+    timeframe: "Month 2 onward"
+  - criterion: "Winners Identified & Tested"
+    measurement: "Top 3-5 channels showing >3:1 ROI, expanded budget allocated"
+    timeframe: "Month 2-3"
+  - criterion: "Budget Freed from Waste"
+    measurement: "Minimum 50% of previous institutional budget now available for reallocation"
+    timeframe: "Month 2"
+
+# =============================================================================
+# EXAMPLES: BEFORE & AFTER
+# =============================================================================
+
+examples:
+  - example:
+      id: "EX-001"
+      business: "Dental Practice"
+      before_state:
+        total_monthly_budget: "$3,000"
+        institutional_waste: "$2,400 (80%)"
+        institutional_waste_items:
+          - "Magazine sponsorships: $500 (no tracking, no offer)"
+          - "Yellow Pages: $600 (no response mechanism)"
+          - "Brand website: $800 (brochure only, no lead capture)"
+          - "Local radio: $500 (awareness only, no CTA)"
+        direct_response: "$600 (20%)"
+        direct_response_items:
+          - "Google Ads: $400 (weak CTA, no urgency)"
+          - "Direct mail: $200 (basic offer, no tracking)"
+      diet_results:
+        total_monthly_budget: "$3,000"
+        killed_immediately: "$2,400 eliminated in week 2"
+        retained_enhanced: "$600 upgraded to DR compliance"
+        new_allocation: "$2,400 reallocated to proven winners"
+        new_allocation_items:
+          - "Google Ads: $1,500 (optimized with urgency + tracking)"
+          - "Direct mail: $500 (6-step framework applied)"
+          - "Follow-up automation: $400 (added step 6)"
+        outcome_12months:
+          - "Revenue from new patients: +180%"
+          - "Customer acquisition cost: down 65%"
+          - "Monthly ROI: 4.2:1"
+      expected_results:
+        savings_monthly: "$1,200+ (40% of original budget freed)"
+        revenue_increase: "120-180% typical in first 12 months"
+        customer_qual_improvement: "Higher-quality patients, better retention"
+
+# =============================================================================
+# INTEGRATION WITH OTHER SQUADS
+# =============================================================================
+
+integrations:
+  - squad: "results-triangle-squad"
+    purpose: "Validate each expense against Results Triangle (Message-Market-Media alignment)"
+    touchpoint: "Phase 1 diagnosis"
+  - squad: "10-rules-compliance-squad"
+    purpose: "Enforce 10 No B.S. Rules during diet implementation"
+    touchpoint: "Phase 2 surgery"
+  - squad: "great-divide-audit-squad"
+    purpose: "Initial classification of DR vs Institutional"
+    touchpoint: "Phase 1 diagnosis"
+  - squad: "direct-mail-campaign-squad"
+    purpose: "Upgrade existing direct mail to 6-step framework"
+    touchpoint: "Phase 2 surgery (direct mail subset)"
+  - squad: "follow-up-sequence-squad"
+    purpose: "Implement Step 6 (follow-up system)"
+    touchpoint: "Phase 2-3 surgery/instrumentation"
+
+# =============================================================================
+# RESOURCE REQUIREMENTS
+# =============================================================================
+
+resources_required:
+  time:
+    - "Phase 1 (Diagnosis): 45-90 minutes"
+    - "Phase 2 (Surgery): 2-3 weeks"
+    - "Phase 3 (Instrumentation): 1 week"
+    - "Ongoing (Monthly audits): 4-6 hours/month"
+  people:
+    - "Marketing Auditor: 1 specialist"
+    - "Diet Implementer: 1 specialist"
+    - "Measurement Architect: 1 specialist"
+    - "Discipline Enforcer: executive/CEO oversight"
+  tools:
+    - "Tracking dashboard (Google Sheets or analytics tool)"
+    - "Monthly audit checklist"
+    - "ROI calculator"
+    - "Weekly compliance tracker"
+  investment:
+    - "Minimal direct cost"
+    - "ROI positive within 90 days typical (more budget available for scaling winners)"
+
+# Blueprint: 6-Step Direct Marketing Diet Squad | Version 1.0
+# Source: No B.S. Direct Marketing (3rd Ed) by Dan Kennedy, Chapter 10
+# Kennedy Squad Standard Pattern: KN-SB-006

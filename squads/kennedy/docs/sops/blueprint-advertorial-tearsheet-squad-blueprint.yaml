@@ -1,0 +1,232 @@
+# Blueprint: Advertorial/Tear-Sheet Format + Postcard Strategy
+# Dan Kennedy's Editorial-Disguised Marketing + Quick Response Cards
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Advertorial and Postcard Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-advertorial-tearsheet.md"
+  source_courses:
+    - "The Ultimate Sales Letter, 3rd Edition"
+    - "No B.S. Direct Marketing, Third Edition"
+  description: >
+    Blueprint para criar anuncios disfarçados de conteudo editorial (advertoriais e
+    tear-sheets) que bypassam o filtro de publicidade do leitor, gerando 3-5x mais
+    leitores que anuncios tradicionais. Inclui estrategia de postcards para
+    campanhas rapidas e economicas. Combinacao em sequencias multitouch.
+  kennedy_quote: >
+    "People buy newspapers for articles, not ads. Advertorials get read MORE than
+    obvious ads."
+    "Todo anuncio deve caber em uma dessas tres caixas: Mail-Order Ad, Advertorial,
+    ou Carta."
+
+agents:
+  primary_agent:
+    name: "advertorial-architect"
+    role: "Arquiteto de Advertoriais"
+    responsibilities:
+      - Selecionar formato ideal (advertorial, tear-sheet, postcard)
+      - Pesquisar estilo editorial do veiculo-alvo
+      - Coordenar criacao e producao de pecas
+      - Montar sequencias multitouch combinadas
+      - Analisar resultados e otimizar
+
+  supporting_agents:
+    - name: "editorial-copywriter"
+      role: "Copywriter Editorial"
+      responsibilities:
+        - Escrever copy em formato jornalistico
+        - Criar headlines tipo noticia (nao publicitario)
+        - Desenvolver corpo editorial com dados e citacoes
+        - Fazer transicao natural para CTA
+        - Adaptar 12 formulas de headline para tom editorial
+
+    - name: "postcard-designer"
+      role: "Designer de Postcards DR"
+      responsibilities:
+        - Criar postcards com headline impactante
+        - Desenvolver copy concisa para verso
+        - Customizar por micro-mercado
+        - Selecionar formato adequado (standard, oversized, roadmap)
+        - Incluir tracking code e elementos de resposta
+
+    - name: "layout-specialist"
+      role: "Especialista em Layout Editorial"
+      responsibilities:
+        - Mimetizar layout do veiculo editorial alvo
+        - Selecionar tipografia e formatacao editorial
+        - Produzir tear-sheets com aparencia autentica
+        - Criar post-its com mensagem "pessoal"
+        - Garantir que peca parece editorial, nao anuncio
+
+workflow_phases:
+
+  phase_1_research:
+    name: "Pesquisa e Planejamento"
+    duration: "1 semana"
+    steps:
+      - step: "Coletar exemplos editoriais"
+        action: "Reunir 5-10 artigos reais do veiculo/midia alvo"
+        output: "Biblioteca de referencia editorial"
+        agent: "layout-specialist"
+
+      - step: "Analisar estilo editorial"
+        action: "Documentar fonte, espacamento, tom, estrutura de headlines"
+        output: "Guia de estilo do veiculo"
+        agent: "layout-specialist"
+
+      - step: "Definir publico e Message-Market Match"
+        action: "Quem le esse veiculo? Qual a dor? Qual a oferta?"
+        output: "Estrategia de advertorial documentada"
+        agent: "advertorial-architect"
+
+      - step: "Decidir formato"
+        action: "Advertorial em veiculo? Tear-sheet por correio? Postcard? Sequencia?"
+        output: "Formato e sequencia definidos"
+        agent: "advertorial-architect"
+
+  phase_2_creation:
+    name: "Criacao de Conteudo"
+    duration: "2 semanas"
+    steps:
+      - step: "Escrever advertorial"
+        action: "Headline editorial + lead jornalistico + corpo com dados + CTA"
+        output: "Advertorial completo"
+        agent: "editorial-copywriter"
+
+      - step: "Criar tear-sheet (se aplicavel)"
+        action: "Imprimir em newsprint, bordas irregulares, verso editorial"
+        output: "Tear-sheet pronto para envio"
+        agent: "layout-specialist"
+
+      - step: "Criar postcards"
+        action: "Headline na frente + oferta/urgencia no verso + tracking"
+        output: "Postcards prontos por micro-mercado"
+        agent: "postcard-designer"
+
+      - step: "Montar sequencia"
+        action: "Tear-sheet Dia 0 → Postcard 1 Dia 10 → Postcard 2 Dia 20 → Carta Dia 30"
+        output: "Sequencia completa de 4 pecas"
+        agent: "advertorial-architect"
+
+  phase_3_production:
+    name: "Producao e Teste"
+    duration: "1-2 semanas"
+    steps:
+      - step: "Produzir pecas fisicas"
+        action: "Impressao com especificacoes exatas (newsprint, formato correto)"
+        output: "Pecas prontas para envio"
+        agent: "layout-specialist"
+
+      - step: "Preparar post-its"
+        action: "Post-it amarelo com mensagem manuscrita para tear-sheets"
+        output: "Post-its prontos"
+        agent: "layout-specialist"
+
+      - step: "Configurar tracking"
+        action: "URLs e telefones dedicados por peca e por micro-mercado"
+        output: "Sistema de tracking ativo"
+        agent: "advertorial-architect"
+
+      - step: "Teste com batch pequeno"
+        action: "Enviar para 100-200 enderecos"
+        output: "Dados iniciais de resposta"
+        agent: "advertorial-architect"
+
+  phase_4_execution:
+    name: "Execucao e Otimizacao"
+    duration: "4-6 semanas"
+    steps:
+      - step: "Enviar sequencia completa"
+        action: "Executar timing de 30 dias para toda a lista"
+        output: "Campanha executada"
+        agent: "advertorial-architect"
+
+      - step: "Monitorar respostas"
+        action: "Tracking por peca, por step, por micro-mercado"
+        output: "Dashboard de performance"
+        agent: "advertorial-architect"
+
+      - step: "Otimizar"
+        action: "Ajustar headlines, ofertas, micro-mercados com base em dados"
+        output: "Versao otimizada para proximo ciclo"
+        agent: "advertorial-architect"
+
+quality_gates:
+
+  gate_1_research_complete:
+    name: "Pesquisa Completa"
+    criteria:
+      - "Estilo editorial do veiculo documentado"
+      - "Publico e Message-Market Match definidos"
+      - "Formato e sequencia decididos"
+    blocker: true
+
+  gate_2_content_ready:
+    name: "Conteudo Pronto"
+    criteria:
+      - "Advertorial parece artigo editorial (nao anuncio)"
+      - "Headlines em formato de noticia"
+      - "Postcards com oferta + urgencia + tracking"
+      - "Sequencia de 4 pecas completa"
+    blocker: true
+
+  gate_3_tested:
+    name: "Testado"
+    criteria:
+      - "Batch de teste enviado e resultados analisados"
+      - "Taxa de resposta dentro do esperado"
+      - "Tracking funcionando corretamente"
+    blocker: false
+
+metrics:
+  by_format:
+    advertorial:
+      read_rate: "3-5x do anuncio convencional"
+      response_rate: "1-5%"
+      cost_per_piece: "$0.50-2.00"
+    postcard:
+      response_rate: "2-7% (lista segmentada)"
+      cost_per_piece: "$0.30-1.00"
+    combined_sequence:
+      response_rate: "5-15%"
+      cost_total: "$2-5 por prospect"
+      roi_target: "8:1"
+
+  tracking:
+    - "Respostas por peca (advertorial vs postcard)"
+    - "Custo por resposta por formato"
+    - "Conversao resposta para venda"
+    - "Melhor micro-mercado"
+    - "Melhor headline"
+
+resources:
+  production:
+    paper_advertorial: "Papel newsprint, tamanho jornal"
+    paper_tearsheet: "Newsprint com bordas irregulares"
+    postcard_standard: "4x6 ou 6x9"
+    postcard_roadmap: "8.5x11 dobrado"
+    post_it: "Post-it amarelo com mensagem manuscrita"
+
+  tools:
+    - "Template de layout editorial"
+    - "Biblioteca de headlines editoriais"
+    - "Sistema de impressao em newsprint"
+    - "Servico de envio postal"
+    - "URLs e telefones de tracking"
+
+dependencies:
+  uses_from:
+    - sop: "sop-headline-formulas.md"
+    - sop: "sop-feature-to-benefit.md"
+    - sop: "sop-results-triangle.md"
+  integrates_with:
+    - sop: "sop-direct-mail-campaign.md"
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-swipe-file-system.md"
+
+sources:
+  - "dan-kennedy-ultimate-sales-letter-frameworks.md"
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"

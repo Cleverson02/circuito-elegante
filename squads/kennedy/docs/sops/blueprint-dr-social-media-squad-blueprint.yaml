@@ -1,0 +1,450 @@
+# ============================================================================
+# BLUEPRINT: Direct Response Social Media Squad Blueprint
+# Source: No B.S. Guide to Direct Response Social Media Marketing, Ch.1-2
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+# ============================================================================
+
+metadata:
+  name: "Direct Response Social Media Squad Blueprint"
+  version: "1.0"
+# source_sop: sop-dr-social-media.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-dr-social-media.md"
+  description: >
+    Blueprint para operacionalizacao de social media com principios de
+    direct response. Trata social media como UM canal de midia sujeito
+    aos mesmos padroes de ROI e accountability de qualquer outro canal.
+  source:
+    book: "No B.S. Guide to Direct Response Social Media Marketing"
+    chapters: "Ch.1-2"
+    frameworks:
+      - "6 Iron Rules of DR Social Media"
+      - "The Money Business Principle"
+      - "Count as One Rule"
+      - "Ego Sharing Analysis"
+
+# ============================================================================
+# AGENTS
+# ============================================================================
+
+agents:
+  primary:
+    name: "kennedy-media"
+    role: "DR Social Media Commander"
+    responsibilities:
+      - "Implementacao das 6 Iron Rules em toda atividade social"
+      - "Content strategy baseada em conversao, nao engajamento"
+      - "Channel diversification (Count as One Rule)"
+      - "Weekly Money Math review"
+      - "Platform hostility awareness e contingency planning"
+    source_knowledge:
+      - "DR Social Media, Framework 6 - 6 Iron Rules"
+      - "DR Social Media, Framework 4 - Count as One Rule"
+      - "DR Social Media, Framework 8 - Ego Sharing Analysis"
+
+  supporting:
+    - name: "kennedy-direct-response"
+      role: "DR Compliance Officer"
+      responsibilities:
+        - "Validates every post has: offer, urgency, CTA, tracking"
+        - "Enforces 10 Regras Fundacionais on social content"
+        - "Monitors ROI and flags negative trends"
+        - "Ensures follow-up system is capturing all leads"
+      source_knowledge:
+        - "Magnetic Marketing, 10 Regras Fundacionais"
+        - "No B.S. Direct Marketing - 10 No B.S. Rules"
+
+    - name: "kennedy-copy"
+      role: "Social Copy Specialist"
+      responsibilities:
+        - "Writes DR-compliant social media copy"
+        - "Creates hook + body + bridge + CTA structures"
+        - "A/B tests headlines and CTAs"
+        - "Adapts StorySelling for social media formats"
+      source_knowledge:
+        - "Copywriting Academy"
+        - "Brand-Building by DR, Framework 7 - StorySelling"
+
+    - name: "kennedy-brand"
+      role: "Brand Integration Advisor"
+      responsibilities:
+        - "Ensures brand consistency across social channels"
+        - "Validates that brand-building is subproduct of DR"
+        - "Integrates personal brand elements into social content"
+        - "Protects brand reputation on social platforms"
+      source_knowledge:
+        - "Brand-Building by DR, Core Thesis"
+        - "Brand-Building by DR, Heuristica - Brand Protection"
+
+# ============================================================================
+# WORKFLOW PHASES
+# ============================================================================
+
+workflow:
+  total_estimated_time: "6-8 hours initial + weekly ongoing"
+
+  phase_1:
+    name: "Social Media Audit"
+    duration: "30-45 min"
+    agent: "kennedy-media"
+    inputs:
+      - "Current social media accounts and metrics"
+      - "Current marketing channel data"
+      - "Business revenue and lead sources"
+    activities:
+      - step: "Inventory all social media presence"
+        detail: "Platform, posts/week, leads, revenue, % of total"
+      - step: "Apply Count as One Rule test"
+        detail: "Total social revenue / total revenue = __% (must be <20%)"
+      - step: "Vanity Metrics Purge"
+        detail: "Remove likes, shares, views from KPI reports"
+      - step: "Assess platform dependency risk"
+        detail: "What happens if top platform bans you tomorrow?"
+      - step: "Document current Money Math"
+        detail: "Cost per lead, cost per acquisition, ROI per platform"
+    outputs:
+      - "Social Media Audit Report"
+      - "Dependency Risk Assessment"
+      - "Baseline Money Math"
+    quality_gate: "gate_1"
+
+  phase_2:
+    name: "DR Infrastructure Setup"
+    duration: "60-90 min"
+    agent: "kennedy-direct-response + kennedy-media"
+    inputs:
+      - "Social Media Audit (from Phase 1)"
+      - "Existing DR systems (if any)"
+      - "Technical capabilities"
+    activities:
+      - step: "Configure tracking systems"
+        detail: "UTM standards, pixels, analytics goals, CRM source tracking"
+      - step: "Build landing pages"
+        detail: "Dedicated capture pages per campaign (no navigation)"
+      - step: "Set up Lead Generation Magnet delivery"
+        detail: "Automated delivery upon capture"
+      - step: "Configure email follow-up sequences"
+        detail: "Minimum 5 emails over 14 days"
+      - step: "Create Money Math dashboard"
+        detail: "Weekly tracking template"
+      - step: "Verify multi-channel backup"
+        detail: "Confirm other marketing channels are active"
+    outputs:
+      - "Tracking Configuration Document"
+      - "Landing Pages (live and tested)"
+      - "Email Follow-Up Sequences (active)"
+      - "Money Math Dashboard Template"
+      - "Multi-Channel Verification Report"
+    quality_gate: "gate_2"
+
+  phase_3:
+    name: "DR Content Creation"
+    duration: "90-120 min"
+    agent: "kennedy-copy + kennedy-media"
+    inputs:
+      - "WHO profile with psychographics"
+      - "USP and offer details"
+      - "Brand voice guidelines"
+      - "StorySelling assets (if available)"
+    activities:
+      - step: "Create content calendar template"
+        detail: "5 post types across the week: Value, Proof, Story, Controversy, Offer"
+      - step: "Write first month of posts"
+        detail: "20 posts minimum, each with hook + body + bridge + CTA + urgency"
+      - step: "Create ad variations"
+        detail: "3-5 variations per campaign for A/B testing"
+      - step: "Design Ego Sharing content"
+        detail: "Content that thought-leaders want to share"
+      - step: "Write landing page copy"
+        detail: "Aligned with each content type"
+    outputs:
+      - "Content Calendar (4 weeks)"
+      - "20+ Social Posts (DR-compliant)"
+      - "Ad Variations (3-5 per campaign)"
+      - "Landing Page Copy"
+    quality_gate: "gate_3"
+
+  phase_4:
+    name: "Launch & Paid Setup"
+    duration: "60-90 min"
+    agent: "kennedy-media"
+    inputs:
+      - "All content ready (from Phase 3)"
+      - "Tracking verified (from Phase 2)"
+      - "Budget approved"
+    activities:
+      - step: "Schedule organic content"
+        detail: "First 2 weeks of posts scheduled"
+      - step: "Launch initial paid campaigns"
+        detail: "Start with minimum budget ($5-20/day per ad set)"
+      - step: "Configure conversion events"
+        detail: "Lead capture, purchase, appointment as goals"
+      - step: "Set up monitoring alerts"
+        detail: "Daily check on key metrics"
+      - step: "Document contingency plan"
+        detail: "What to do if platform bans/restricts account"
+    outputs:
+      - "Scheduled Content (2 weeks)"
+      - "Active Paid Campaigns"
+      - "Conversion Events Configured"
+      - "Monitoring Alert Setup"
+      - "Platform Contingency Plan"
+    quality_gate: "gate_4"
+
+  phase_5:
+    name: "Weekly Optimization Cycle"
+    duration: "30-45 min per week (ongoing)"
+    agent: "kennedy-media + kennedy-direct-response"
+    inputs:
+      - "Previous week's data"
+      - "Money Math dashboard"
+    activities:
+      - step: "Update Money Math dashboard"
+        detail: "Investment, leads, conversions, revenue, ROI"
+      - step: "Identify top-performing content"
+        detail: "Which posts/ads generated most leads and revenue?"
+      - step: "Kill underperformers"
+        detail: "Pause ads with negative ROI for 14+ days"
+      - step: "Scale winners"
+        detail: "Increase budget 20% on positive ROI campaigns"
+      - step: "Check 6 Iron Rules compliance"
+        detail: "Every post has offer, urgency, CTA, tracking, follow-up?"
+      - step: "Verify dependency limits"
+        detail: "Social still <20% of total leads?"
+    outputs:
+      - "Weekly Money Math Report"
+      - "Optimization Actions Taken"
+      - "Updated Budget Allocation"
+    quality_gate: "gate_weekly"
+
+  phase_6:
+    name: "Monthly Strategy Review"
+    duration: "60 min per month"
+    agent: "all agents"
+    inputs:
+      - "4 weekly reports"
+      - "Platform-level data"
+    activities:
+      - step: "Platform ROI comparison"
+        detail: "Which platform has best ROI? Worst?"
+      - step: "60-day negative ROI check"
+        detail: "Any platform negative for 60+ days? Cut it."
+      - step: "Content performance analysis"
+        detail: "Which content types convert best?"
+      - step: "Follow-up system audit"
+        detail: "Are all leads being captured and followed up?"
+      - step: "Channel diversification check"
+        detail: "Update dependency percentages"
+      - step: "Next month content planning"
+        detail: "Based on what worked this month"
+    outputs:
+      - "Monthly Strategy Report"
+      - "Platform Performance Rankings"
+      - "Next Month Content Plan"
+      - "Channel Health Dashboard"
+    quality_gate: "gate_monthly"
+
+# ============================================================================
+# QUALITY GATES
+# ============================================================================
+
+quality_gates:
+  gate_1:
+    name: "Audit Complete"
+    phase: "phase_1"
+    criteria:
+      - "All active platforms documented with metrics"
+      - "Count as One Rule test performed"
+      - "Vanity metrics identified and flagged for removal"
+      - "Baseline Money Math documented"
+      - "Dependency risk assessed"
+    blocker: true
+    failure_action: "Complete audit before proceeding"
+
+  gate_2:
+    name: "Infrastructure Ready"
+    phase: "phase_2"
+    criteria:
+      - "Tracking configured and tested (UTM, pixel, analytics)"
+      - "Landing pages live and capture-tested"
+      - "Email follow-up sequences active (5+ emails)"
+      - "Money Math dashboard created"
+      - "At least 2 non-social marketing channels active"
+    blocker: true
+    failure_action: "Do not launch social until infrastructure ready"
+
+  gate_3:
+    name: "Content DR-Compliant"
+    phase: "phase_3"
+    criteria:
+      - "Every post has: hook + body + bridge + CTA + urgency"
+      - "20+ posts created for first month"
+      - "No post exists without an offer"
+      - "No post exists without clear instructions"
+      - "Ad variations ready for A/B testing"
+    blocker: true
+    failure_action: "Revise content to include missing DR elements"
+
+  gate_4:
+    name: "Launch Verified"
+    phase: "phase_4"
+    criteria:
+      - "Content scheduled"
+      - "Paid campaigns active with tracking"
+      - "Conversion events firing correctly"
+      - "Contingency plan documented"
+      - "Budget within approved limits"
+    blocker: false
+    failure_action: "Fix technical issues before scaling"
+
+  gate_weekly:
+    name: "Weekly Performance Check"
+    phase: "phase_5"
+    criteria:
+      - "Money Math updated"
+      - "Underperformers paused"
+      - "Winners identified and scaled"
+      - "All posts this week had CTA"
+      - "Social < 20% of total leads"
+    blocker: false
+    failure_action: "Address specific failures in next week"
+
+  gate_monthly:
+    name: "Monthly Health Check"
+    phase: "phase_6"
+    criteria:
+      - "No platform negative ROI for 60+ days"
+      - "Social < 20% of total revenue"
+      - "Follow-up capturing 90%+ of leads"
+      - "Content optimized based on performance data"
+      - "Next month plan created"
+    blocker: false
+    failure_action: "Cut negative platforms, diversify channels"
+
+# ============================================================================
+# VETO CONDITIONS
+# ============================================================================
+
+veto_conditions:
+  universal:
+    - condition: "Social media post without offer or CTA"
+      severity: "BLOCKER"
+      rationale: "Rule #1: There Will ALWAYS Be An Offer"
+      source: "DR Social Media, Rule #1"
+
+    - condition: "Social media investment without tracking"
+      severity: "BLOCKER"
+      rationale: "Rule #4: There Will Be Tracking and Measurement"
+      source: "DR Social Media, Rule #4"
+
+    - condition: "Social media as sole marketing channel"
+      severity: "BLOCKER"
+      rationale: "Count as One Rule -- max 20% dependency"
+      source: "DR Social Media, Framework 4"
+
+    - condition: "Using vanity metrics as success indicators"
+      severity: "BLOCKER"
+      rationale: "Money Math is the only standard"
+      source: "DR Social Media, Framework 1"
+
+  warnings:
+    - condition: "Social > 20% of leads or revenue"
+      severity: "WARNING"
+      rationale: "Approaching dangerous dependency"
+
+    - condition: "Leads not entering follow-up within 24 hours"
+      severity: "WARNING"
+      rationale: "Every uncaptured lead = $20 burned"
+
+    - condition: "No A/B testing for 30+ days"
+      severity: "WARNING"
+      rationale: "Results Rule -- test everything"
+
+    - condition: "Negative ROI for 30+ days without action"
+      severity: "WARNING"
+      rationale: "Cut or reformulate -- do not accept negative ROI"
+
+# ============================================================================
+# INTEGRATION MAP
+# ============================================================================
+
+integrations:
+  depends_on:
+    - sop: "sop-brand-by-dr.md"
+      provides: "Winning Formula (DR foundation)"
+    - sop: "sop-personal-branding-dr.md"
+      provides: "Personal brand as content driver"
+    - sop: "sop-storyselling.md"
+      provides: "Stories for social media content"
+
+  feeds_into:
+    - sop: "sop-newsletter-content.md"
+      provides: "Social leads for newsletter list growth"
+    - sop: "sop-brand-by-dr.md"
+      provides: "Brand building as social DR subproduct"
+
+  shared_frameworks:
+    - name: "6 Iron Rules"
+      usage: "Core framework for every social activity"
+    - name: "Money Business Principle"
+      usage: "Philosophical foundation"
+    - name: "Count as One Rule"
+      usage: "Channel dependency management"
+    - name: "Marketing Success Triangle"
+      usage: "Market/Message/Media alignment for social"
+    - name: "10 Regras Fundacionais"
+      usage: "DR compliance baseline"
+    - name: "StorySelling 4 Key Factors"
+      usage: "Story content for social posts"
+    - name: "Ego Sharing Analysis"
+      usage: "Content sharing strategy"
+
+# ============================================================================
+# METRICS & KPIs
+# ============================================================================
+
+metrics:
+  primary_money_math:
+    - name: "Cost per Lead (Social)"
+      target: "< $30"
+      ideal: "< $15"
+    - name: "Cost per Acquisition (Social)"
+      target: "< $150"
+      ideal: "< $75"
+    - name: "ROI per Campaign"
+      target: "> 0%"
+      ideal: "> 200%"
+    - name: "Revenue Attributable (Monthly)"
+      target: "Growing month-over-month"
+      ideal: "3x investment"
+    - name: "Social % of Total Revenue"
+      target: "< 20%"
+      ideal: "10-15%"
+
+  channel_health:
+    - name: "Follow-Up Capture Rate"
+      target: "> 90%"
+    - name: "Posts with CTA"
+      target: "100%"
+    - name: "Platforms with 60+ Day Negative ROI"
+      target: "0 (cut or reformulate)"
+
+  vanity_metrics_banned:
+    - "Likes / Reactions"
+    - "Followers count"
+    - "Shares (without click tracking)"
+    - "Views (without conversion event)"
+    - "Engagement rate (without ROI)"
+    - "Reach (without revenue data)"
+    - "Impressions (without Money Math)"
+
+# ============================================================================
+# VERSION HISTORY
+# ============================================================================
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-11"
+    changes: "Initial blueprint creation"
+    author: "kennedy squad"

@@ -1,0 +1,487 @@
+# Blueprint: Mind Hijacking Squad Blueprint
+# Source: Mind-HiJacking Course (22 Sessions — Main Course 13h + Bonus Day 8h)
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: mind-hijacking-blueprint
+  title: "Mind Hijacking System — Squad Execution Blueprint"
+  version: "1.0"
+# source_sop: sop-mind-hijacking.md
+  date: "2026-02-11"
+  squad: kennedy
+  source_course: "Mind-HiJacking"
+  instructor: "Dan Kennedy"
+  co_presenters:
+    - "Dave Dee (mentalism-based sales scripts)"
+    - "Doberman Dan (big idea copywriting)"
+  total_sessions: 22
+  total_hours: 21
+  total_techniques: "110+"
+  sop_reference: "sop-mind-hijacking.md"
+  tags:
+    - persuasion
+    - psychological-influence
+    - copywriting
+    - direct-response
+    - sales-psychology
+    - mind-control
+    - ethical-marketing
+
+# =============================================================================
+# CORE PHILOSOPHY
+# =============================================================================
+
+core_philosophy:
+  meta_principle: "Maximum Deployment — use ALL techniques, not just favorites"
+  kennedy_quote: >
+    "The please winnow down the list and tell me the 20% of it to use...
+    I don't do three days just to pad the price."
+  anti_80_20: >
+    There is no 80/20 for hijacks. Accumulation IS the strategy.
+    Marketing that operates on 10-20 psychological levels simultaneously
+    creates compounding persuasion effects that cannot be replicated
+    by selecting 'the best' 5-10 techniques.
+  ethical_stance: >
+    Kennedy declares techniques 'ethically neutral tools.'
+    Responsibility lies with the practitioner, not the technique.
+
+# =============================================================================
+# AGENTS
+# =============================================================================
+
+agents:
+
+  mind_hijack_auditor:
+    role: "Catalog Audit Specialist"
+    description: >
+      Audits existing marketing materials against the full 110+ Mind Hijack
+      Catalog. Identifies present hijacks, missing hijacks, and recommends
+      priority additions based on category gaps.
+    primary_frameworks:
+      - "Mind Hijack Catalog (110+ techniques)"
+      - "6 Category System (Rapport, Proof, Emotional, Structural, Copy, Positioning)"
+    inputs:
+      - "Existing marketing piece (copy, ad, sales page, email sequence)"
+      - "Target audience profile"
+      - "Current conversion metrics"
+    outputs:
+      - "Hijack audit scorecard (X/110+)"
+      - "Category gap analysis"
+      - "Top 10 recommended additions with specific copy suggestions"
+      - "Priority sequencing (which hijacks to add first)"
+    quality_gates:
+      - "Minimum 15 hijacks identified per marketing piece"
+      - "All 6 categories represented in audit"
+      - "Specific copy suggestions for each recommended addition"
+      - "Layering order specified (rapport > proof > emotion > structure > close)"
+
+  sequential_agreements_diagnostician:
+    role: "Sales Process Diagnostician"
+    description: >
+      Maps sales processes against Kennedy's 11 Sequential Agreements.
+      Identifies the specific step where most sales die and creates
+      targeted content to address that bottleneck.
+    primary_frameworks:
+      - "11 Sequential Agreements for Opportunity Selling"
+      - "1=4 Formula (Time Obtained = 4 Outcomes)"
+    inputs:
+      - "Current sales process documentation"
+      - "Close rate data by stage"
+      - "Common objections and drop-off points"
+      - "Average time with prospect"
+    outputs:
+      - "11 Agreements map for specific business"
+      - "Bottleneck identification report"
+      - "Targeted content for each missing agreement"
+      - "Time engineering recommendations"
+    quality_gates:
+      - "All 11 agreements addressed explicitly"
+      - "Bottleneck identified with evidence (not assumption)"
+      - "Content pieces created for top 3 bottleneck agreements"
+      - "Time obtained baseline measured and improvement targets set"
+
+  emotional_trigger_architect:
+    role: "Emotional Persuasion Specialist"
+    description: >
+      Designs emotional trigger systems for marketing pieces using
+      Kennedy's emotional frameworks — Arrow to the Heart, permission
+      slips, guilt activation, ego hooks, and self-image buying.
+    primary_frameworks:
+      - "Arrow to the Heart (4 Core Motivators)"
+      - "Permission Slips"
+      - "Emotional Poverty Identification"
+      - "Stacking Formula (dark-to-light sequencing)"
+    inputs:
+      - "Target audience emotional profile"
+      - "Product/service category"
+      - "Known desires and guilt points"
+      - "Competitive landscape"
+    outputs:
+      - "Emotional trigger map for audience"
+      - "3-5 permission slips"
+      - "Stacking sequence (dark to light)"
+      - "Ego hooks and guilt activation scripts"
+    quality_gates:
+      - "Arrow to the Heart applied to specific audience"
+      - "Minimum 3 permission slips created"
+      - "Stacking Formula sequence documented"
+      - "Self-image buying angle identified"
+
+  copy_hijacker:
+    role: "Copywriting Integration Specialist"
+    description: >
+      Integrates Mind Hijack techniques into actual copy. Handles
+      cold reading openings, Barnum statements, overarching objectives,
+      reading level optimization, redundancy engineering, and reverse
+      reality positioning.
+    primary_frameworks:
+      - "Overarching Objectives (3-5 psychological prerequisites)"
+      - "Cold Reading Scripts for Copy"
+      - "Top-Third Test"
+      - "Deliberate Redundancy (3x)"
+      - "Reverse Reality Lead Generation"
+      - "4th Grade Reading Level"
+    inputs:
+      - "Hijack audit scorecard"
+      - "Emotional trigger map"
+      - "11 Agreements content pieces"
+      - "Existing copy to optimize (or brief for new copy)"
+    outputs:
+      - "Complete copy with hijacks integrated"
+      - "Overarching objectives document"
+      - "Cold reading opening (500 words)"
+      - "Stacking-ordered body copy"
+      - "Order form in customer voice"
+    quality_gates:
+      - "Overarching objectives defined before writing"
+      - "Reading level at 4th-6th grade (HemingwayApp verified)"
+      - "Top-Third Test passes"
+      - "Sound Turned Off test passes"
+      - "3x redundancy on key points"
+      - "Order form written in first person"
+
+  proof_architect:
+    role: "Social Proof & Demonstration Specialist"
+    description: >
+      Engineers the proof layer of marketing using Kennedy's 4-element
+      social proof system, demonstration hierarchy, source credibility,
+      and proof by numbers techniques.
+    primary_frameworks:
+      - "Social Proof 4 Elements (Bulk, Heft, Persuasiveness, Affinity)"
+      - "Proof Hierarchy (visual demo > rigged demo > process > numbers > source > social)"
+      - "Sound Turned Off Test"
+      - "Proof by Numbers"
+      - "I Told You So Predictive Credibility"
+    inputs:
+      - "Available testimonials and case studies"
+      - "Available demonstration materials"
+      - "Authority/credibility assets"
+      - "Numbers and statistics available"
+    outputs:
+      - "Scored testimonial library (4 elements per testimonial)"
+      - "Proof strategy document with hierarchy"
+      - "Demonstration script (if applicable)"
+      - "Numbers and statistics formatted for maximum impact"
+    quality_gates:
+      - "Minimum 5 testimonials scored on all 4 elements"
+      - "Proof hierarchy explicitly documented"
+      - "Sound Turned Off test applied to visual elements"
+      - "Specific numbers used (not round numbers)"
+
+  enemy_strategist:
+    role: "Positioning & Enemy Definition Specialist"
+    description: >
+      Defines market enemies using Kennedy's 7 criteria, creates
+      declarations of war, builds conspiracy architecture, and
+      develops the 'bigger idea' behind the offer.
+    primary_frameworks:
+      - "Enemies and Villains (7 Criteria)"
+      - "Declare War on Establishment"
+      - "The Bigger Idea"
+      - "Conspiracy Theory Architecture"
+      - "Certainty as Persuasion Tool"
+    inputs:
+      - "Market landscape analysis"
+      - "Audience resentments and frustrations"
+      - "Competitive positioning data"
+      - "Industry orthodoxies to challenge"
+    outputs:
+      - "Enemy definition with 7-criteria score"
+      - "500-word declaration of war"
+      - "Bigger idea statement (1 sentence)"
+      - "3 conspiracy architecture statements"
+      - "Certainty-language guidelines"
+    quality_gates:
+      - "Enemy scores 5+/7 on criteria"
+      - "Declaration of war is specific and emotionally resonant"
+      - "Bigger idea transcends product features"
+      - "Conspiracy statements create 'insider' feeling"
+
+# =============================================================================
+# WORKFLOW PHASES
+# =============================================================================
+
+workflow:
+
+  phase_1_discovery:
+    name: "Mind Hijack Discovery"
+    description: "Audit existing materials and map sales process"
+    duration: "1-2 days"
+    steps:
+      - step: "Audit existing marketing against 110+ catalog"
+        agent: mind_hijack_auditor
+        output: "Hijack audit scorecard"
+      - step: "Map sales process against 11 Sequential Agreements"
+        agent: sequential_agreements_diagnostician
+        output: "Agreements map + bottleneck report"
+      - step: "Measure baseline time with prospect (1=4)"
+        agent: sequential_agreements_diagnostician
+        output: "Time baseline measurement"
+      - step: "Profile audience emotional landscape"
+        agent: emotional_trigger_architect
+        output: "Emotional trigger map"
+    gate: >
+      Phase 1 complete when: audit scorecard exists, agreements mapped,
+      time baseline measured, emotional profile documented.
+
+  phase_2_strategy:
+    name: "Hijack Strategy Design"
+    description: "Design the persuasion architecture"
+    duration: "1-2 days"
+    steps:
+      - step: "Define overarching objectives (3-5)"
+        agent: copy_hijacker
+        output: "Overarching objectives document"
+      - step: "Select and score enemy (7 criteria)"
+        agent: enemy_strategist
+        output: "Enemy definition + declaration of war"
+      - step: "Create permission slips (3-5)"
+        agent: emotional_trigger_architect
+        output: "Permission slip library"
+      - step: "Design proof strategy (hierarchy + 4 elements)"
+        agent: proof_architect
+        output: "Proof strategy document"
+      - step: "Design time engineering additions"
+        agent: sequential_agreements_diagnostician
+        output: "Time extension recommendations"
+    gate: >
+      Phase 2 complete when: objectives defined, enemy selected,
+      permission slips created, proof strategy documented,
+      time engineering plan created.
+
+  phase_3_creation:
+    name: "Hijack-Loaded Copy Creation"
+    description: "Write copy integrating maximum hijacks"
+    duration: "2-3 days"
+    steps:
+      - step: "Write cold reading opening (500 words)"
+        agent: copy_hijacker
+        output: "Cold reading copy opening"
+      - step: "Apply Stacking Formula (dark-to-light sequence)"
+        agent: copy_hijacker
+        output: "Stacking-ordered body copy"
+      - step: "Integrate proof elements per hierarchy"
+        agent: proof_architect
+        output: "Proof sections integrated into copy"
+      - step: "Add emotional triggers per Arrow to the Heart"
+        agent: emotional_trigger_architect
+        output: "Emotional trigger sections"
+      - step: "Write order form in customer's first-person voice"
+        agent: copy_hijacker
+        output: "First-person order form"
+      - step: "Add picture boxes and visual elements"
+        agent: copy_hijacker
+        output: "Visual copy elements"
+    gate: >
+      Phase 3 complete when: complete copy exists with all layers integrated,
+      cold reading opening present, stacking sequence applied.
+
+  phase_4_optimization:
+    name: "Hijack Optimization & Testing"
+    description: "Validate and optimize the hijack-loaded piece"
+    duration: "1 day"
+    steps:
+      - step: "Top-Third Test"
+        agent: copy_hijacker
+        output: "Pass/fail with revision if needed"
+      - step: "Sound Turned Off test"
+        agent: proof_architect
+        output: "Visual communication assessment"
+      - step: "Reading level check (target: 4th-6th grade)"
+        agent: copy_hijacker
+        output: "Reading level score + simplification if needed"
+      - step: "3x redundancy verification"
+        agent: copy_hijacker
+        output: "Redundancy check on key points"
+      - step: "Final hijack count and category coverage"
+        agent: mind_hijack_auditor
+        output: "Final hijack scorecard"
+    gate: >
+      Phase 4 complete when: Top-Third passes, Sound-Off passes,
+      reading level at 4th-6th grade, 3x redundancy confirmed,
+      minimum 15 hijacks across all 6 categories.
+
+  phase_5_deployment:
+    name: "Deploy & Measure"
+    description: "Launch and track against 1=4 metrics"
+    duration: "Ongoing"
+    steps:
+      - step: "Launch hijack-loaded marketing piece"
+        agent: mind_hijack_auditor
+        output: "Live marketing piece"
+      - step: "Track 1=4 metrics (close rate, price, satisfaction, referrals)"
+        agent: sequential_agreements_diagnostician
+        output: "1=4 metrics dashboard"
+      - step: "A/B test individual hijack additions"
+        agent: mind_hijack_auditor
+        output: "Individual hijack performance data"
+      - step: "Format change before message change (if fatigue)"
+        agent: copy_hijacker
+        output: "Format variations of control"
+    gate: >
+      Phase 5 complete when: metrics tracked for minimum 30 days,
+      1=4 correlation measured, format variations tested before
+      message changes.
+
+# =============================================================================
+# QUALITY GATES
+# =============================================================================
+
+quality_gates:
+
+  hijack_density:
+    description: "Minimum number of hijacks per marketing piece"
+    threshold: 15
+    measurement: "Count of distinct hijacks across all 6 categories"
+    failure_action: "Return to Phase 3 and add missing categories"
+
+  category_coverage:
+    description: "All 6 hijack categories must be represented"
+    categories:
+      - "Rapport/Affinity"
+      - "Proof/Credibility"
+      - "Emotional Triggers"
+      - "Structural/Environmental"
+      - "Copywriting-Specific"
+      - "Positioning/Enemies"
+    failure_action: "Identify empty category and add minimum 2 hijacks"
+
+  reading_level:
+    description: "Copy must be at 4th-6th grade reading level"
+    tool: "HemingwayApp.com"
+    target: "Grade 4-6"
+    failure_action: "Simplify language, shorten sentences, use common words"
+
+  top_third_test:
+    description: "Top third of copy must generate response independently"
+    method: "Attach simple CTA to top third only — would it produce responses?"
+    failure_action: "Rewrite headline area before touching body copy"
+
+  sound_turned_off:
+    description: "Piece must communicate visually without reading text"
+    method: "View piece at arm's length, blurred — what message comes through?"
+    failure_action: "Add visual elements, improve layout, add picture boxes"
+
+  sequential_agreements:
+    description: "All 11 agreements addressed for opportunity offers"
+    method: "Map each piece of content to its agreement step"
+    failure_action: "Create targeted content for missing agreement steps"
+
+  time_engineering:
+    description: "Sales process must extend time with prospect"
+    measurement: "Average time before vs after optimization"
+    target: "+30% minimum"
+    failure_action: "Add time-extending elements per 1=4 protocol"
+
+# =============================================================================
+# KEY FRAMEWORKS REFERENCE
+# =============================================================================
+
+frameworks_reference:
+  mind_hijack_catalog:
+    techniques: "110+"
+    categories: 6
+    meta_rule: "Deploy ALL, not favorites"
+    source: "Mind-HiJacking Main Course"
+
+  eleven_sequential_agreements:
+    steps: 11
+    application: "Opportunity selling"
+    diagnostic_use: "Find where sales die"
+    source: "Part 2 DVDs 3-4"
+
+  one_equals_four_formula:
+    variable: "Time obtained"
+    outcomes:
+      - "Purchase likelihood"
+      - "Price elasticity"
+      - "Post-purchase satisfaction"
+      - "Referral generation"
+    source: "Part 2 DVD 4"
+
+  stacking_formula:
+    sequence:
+      - "Dark (fear/problem)"
+      - "Embellishment"
+      - "Even darker"
+      - "Darkest"
+      - "Light at tunnel end"
+      - "Personal positive benefits"
+    source: "Bonus Day CDs 1-2"
+
+  social_proof_four_elements:
+    elements:
+      - "Bulk (quantity)"
+      - "Heft (authority)"
+      - "Persuasiveness (story/detail)"
+      - "Affinity (similarity to prospect)"
+    source: "Part 1 DVD 3"
+
+  enemies_seven_criteria:
+    criteria: 7
+    minimum_score: 5
+    application: "Market positioning and community building"
+    source: "Part 1 DVD 4"
+
+  reverse_reality:
+    application: "Burned-out categories"
+    method: "Completely disguise offer at lead gen stage"
+    reveal: "Gradual truth after engagement"
+    source: "Bonus Day CD 6"
+
+  cold_reading_for_copy:
+    steps:
+      - "3-5 Barnum statements"
+      - "You might be wondering... (thought planting)"
+      - "Embedded commands via formatting"
+      - "Obviously/naturally seeding"
+      - "Ego strokes with disclaimers"
+      - "5-7 yes responses before pitch"
+    source: "Bonus Day CDs 1-2"
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+
+dependencies:
+  related_sops:
+    - sop: "sop-fascination-bullets.md"
+      integration: "Fascination triggers complement emotional hijacks"
+    - sop: "sop-copywriting-academy.md"
+      integration: "Diagnostic approach feeds hijack catalog application"
+    - sop: "sop-brass-balls-pricing.md"
+      integration: "1=4 Formula supports premium pricing justification"
+    - sop: "sop-advertorial-tearsheet.md"
+      integration: "Reverse Reality + advertorial = disguised lead gen"
+
+  required_tools:
+    - "HemingwayApp.com (reading level verification)"
+    - "Mind Hijack Catalog checklist (printed)"
+    - "11 Sequential Agreements worksheet"
+    - "Stacking Formula card sorting system"
+
+  source_materials:
+    - "Mind-HiJacking Main Course (Part 1 + Part 2, 13 hours)"
+    - "Mind-HiJacking Bonus Day (8 hours)"
+    - "Mind-HiJacking Summary + Frameworks Extract"
+    - "Kennedy quotes fragment (55 quotes)"

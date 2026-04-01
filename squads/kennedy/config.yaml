@@ -1,0 +1,561 @@
+# Kennedy Squad — The No B.S. Marketing System v1.0
+# One mind, multiple specialties. Direct response marketing with brutal honesty.
+
+pack:
+  name: kennedy
+  title: "Kennedy Squad — The No B.S. Marketing System"
+  version: "1.0.0"
+  author: "AIOS Team"
+  description: "14 specialized Dan Kennedy agents, each mastering one aspect of his direct response marketing methodology"
+  icon: "📬"
+  slash_prefix: "kennedy"
+  pattern_prefix: "*"
+  entry_agent: kennedy-chief
+
+metadata:
+  created: 2026-02-11
+  source_mind: dan_kennedy
+  fidelity_target: 0.90
+  total_source_files: 200
+  total_source_size_mb: 2700
+  mental_models: 12
+  checklists_actual: 45
+  books:
+    - "No B.S. Direct Marketing (3rd Ed, 2018)"
+    - "Magnetic Marketing (2018)"
+    - "The Ultimate Sales Letter (3rd Ed, 2006)"
+    - "The Ultimate Marketing Plan (3rd Ed, 2006)"
+    - "No B.S. Guide to Brand-Building by Direct Response (2014)"
+    - "No B.S. Guide to Direct Response Social Media Marketing (2015)"
+    - "The Ultimate No B.S. Business Success Book (2004)"
+  courses:
+    - "Copywriting Academy"
+    - "Mind Hijacking"
+    - "Fascination Marketing System"
+    - "Magnetic Marketing System"
+    - "Affluent Client Attraction Playbook"
+    - "The Ultimate No BS Referral Machine"
+    - "Renegade Millionaire"
+    - "Midas Touch"
+    - "Brass Balls"
+    - "Magnetic Marketing (Russell Brunson Edition)"
+
+# MMOS Integration
+mmos_integration:
+  enabled: true
+  log_source: true
+  fallback_behavior: "graceful"
+  mind_mapping:
+    kennedy-chief: dan_kennedy
+    kennedy-direct-response: dan_kennedy
+    kennedy-magnetic: dan_kennedy
+    kennedy-sales-letter: dan_kennedy
+    kennedy-copy: dan_kennedy
+    kennedy-offers: dan_kennedy
+    kennedy-media: dan_kennedy
+    kennedy-persuasion: dan_kennedy
+    kennedy-referrals: dan_kennedy
+    kennedy-affluent: dan_kennedy
+    kennedy-advisor: dan_kennedy
+    kennedy-audit: dan_kennedy
+    kennedy-brand: dan_kennedy
+    kennedy-business: dan_kennedy
+
+# Agents — Organized by Tier
+agents:
+  # Tier 0: Orchestrator
+  - id: kennedy-chief
+    name: "Kennedy Chief"
+    role: "Master orchestrator — routing, marketing diagnosis, strategic coordination"
+    tier: 0
+    primary_frameworks:
+      - "Results Triangle (Message-Market-Media)"
+      - "10 No B.S. Rules of Direct Marketing"
+      - "9 Fatal Marketing Mistakes"
+      - "Marketing Triangle"
+
+  # Tier 1: Core Specialists (Primary Books)
+  - id: kennedy-direct-response
+    name: "Kennedy Direct Response"
+    role: "10 No B.S. Rules, Results Triangle, DR principles, Money Pyramid"
+    tier: 1
+    primary_source: "No B.S. Direct Marketing"
+    primary_frameworks:
+      - "10 No B.S. Rules"
+      - "Results Triangle"
+      - "Money Pyramid"
+      - "The Great Divide (DR vs Institutional)"
+
+  - id: kennedy-magnetic
+    name: "Kennedy Magnetic"
+    role: "Magnetic Marketing Triangle, 3-Pillar System, lead generation magnets"
+    tier: 1
+    primary_source: "Magnetic Marketing + Magnetic Marketing Course"
+    primary_frameworks:
+      - "Magnetic Marketing Triangle"
+      - "3-Pillar System (Attract-Convert-Retain)"
+      - "9 Fatal Marketing Mistakes"
+      - "Shock and Awe Package"
+
+  - id: kennedy-sales-letter
+    name: "Kennedy Sales Letter"
+    role: "28-Step Sales Letter System, headline formulas, copy structure"
+    tier: 1
+    primary_source: "The Ultimate Sales Letter"
+    primary_frameworks:
+      - "28-Step Sales Letter System"
+      - "12 Fill-in-the-Blank Headline Formulas"
+      - "A-Pile / B-Pile Framework"
+      - "Pest-to-Welcome-Guest"
+
+  # Tier 2: Execution Specialists
+  - id: kennedy-copy
+    name: "Kennedy Copy"
+    role: "Copywriting mastery, fascination bullets, sales copy, direct mail"
+    tier: 2
+    primary_sources:
+      - "Copywriting Academy (15 transcriptions)"
+      - "Fascination Marketing System (12 transcriptions)"
+    primary_frameworks:
+      - "Fascination Bullet System"
+      - "Client Management System"
+      - "Copywriter's Toolbox"
+
+  - id: kennedy-offers
+    name: "Kennedy Offers"
+    role: "USP creation, irresistible offers, widgets, guarantees"
+    tier: 2
+    primary_sources:
+      - "Ultimate Marketing Plan"
+      - "Brass Balls Course"
+    primary_frameworks:
+      - "USP Construction (4 Pathways)"
+      - "Widget Concept (Irresistible Offer)"
+      - "Three Types of Offers"
+      - "Preponderance of Proof"
+
+  - id: kennedy-media
+    name: "Kennedy Media"
+    role: "Multi-channel media, direct mail mastery, DR social media"
+    tier: 2
+    primary_sources:
+      - "No B.S. Social Media"
+      - "Ultimate Marketing Plan"
+    primary_frameworks:
+      - "Multimedia/Multichannel Imperative"
+      - "A-Pile Mail Strategy"
+      - "Grabber/Lumpy Mail System"
+      - "Classic Mail-Order Ad Structure"
+
+  - id: kennedy-persuasion
+    name: "Kennedy Persuasion"
+    role: "Mind hijacking, fascination marketing, psychological triggers"
+    tier: 2
+    primary_sources:
+      - "Mind Hijacking Course (22 transcriptions)"
+      - "Fascination Marketing System (12 transcriptions)"
+    primary_frameworks:
+      - "Mind Hijacking System"
+      - "Fascination Marketing Triggers"
+      - "Emotional Trigger Architecture"
+
+  - id: kennedy-referrals
+    name: "Kennedy Referrals"
+    role: "Referral machine, endorsed mailings, lost customer reactivation"
+    tier: 2
+    primary_sources:
+      - "Ultimate No BS Referral Machine (20 transcriptions)"
+    primary_frameworks:
+      - "11-Point Referral System"
+      - "Champion Circle of Influence"
+      - "Endorsed Mailing System"
+      - "Lost Customer Reactivation"
+
+  - id: kennedy-affluent
+    name: "Kennedy Affluent"
+    role: "Affluent client attraction, premium positioning, luxury marketing"
+    tier: 2
+    primary_sources:
+      - "Affluent Client Attraction Playbook (10 transcriptions)"
+    primary_frameworks:
+      - "Affluent Client Attraction System"
+      - "Premium Positioning Framework"
+      - "Affluent Psychology Map"
+
+  # Tier 3: Strategic Specialists
+  - id: kennedy-advisor
+    name: "Kennedy Advisor"
+    role: "Strategic counsel, Renegade Millionaire mindset, business philosophy"
+    tier: 3
+    primary_sources:
+      - "Renegade Millionaire Course"
+      - "25 Eternal Truths"
+    primary_frameworks:
+      - "Renegade Millionaire System"
+      - "25 Eternal Truths"
+      - "Peak Productivity System"
+      - "Time Vampires Framework"
+
+  - id: kennedy-audit
+    name: "Kennedy Audit"
+    role: "Marketing audit, diagnosis, Money Pyramid analysis, ROI tracking"
+    tier: 3
+    primary_sources:
+      - "Midas Touch Course (14 transcriptions)"
+      - "No B.S. Direct Marketing"
+    primary_frameworks:
+      - "Money Pyramid Analysis"
+      - "Marketing Triangle Audit"
+      - "6-Step Direct Marketing Diet"
+      - "Holes in the Bucket (5 holes)"
+
+  - id: kennedy-brand
+    name: "Kennedy Brand"
+    role: "Brand building by direct response, StorySelling, personal branding"
+    tier: 3
+    primary_source: "No B.S. Brand-Building by Direct Response"
+    primary_frameworks:
+      - "Brand-Building by Direct Response"
+      - "Winning Formula (Acquisition via DR, Retention via Brand)"
+      - "StorySelling (4 Key Factors)"
+      - "Disney/Hefner Brand-Building Model"
+
+  - id: kennedy-business
+    name: "Kennedy Business"
+    role: "No B.S. business success, cash flow, turnarounds, peak productivity"
+    tier: 3
+    primary_source: "The Ultimate No B.S. Business Success Book"
+    primary_frameworks:
+      - "25 Eternal Truths"
+      - "Business Maturity Framework"
+      - "Business Turnaround System (8-step)"
+      - "Five Keys to Multiplied Cash Flow"
+
+# Tier Architecture
+tier_architecture:
+  tier_0:
+    name: "Orchestrator"
+    agents: 1
+    agents_list: [kennedy-chief]
+    responsibility: "Master routing, campaign diagnosis, strategic coordination"
+    activation_model: "Direct user interaction"
+  tier_1:
+    name: "Core Specialists"
+    agents: 3
+    agents_list: [kennedy-direct-response, kennedy-magnetic, kennedy-sales-letter]
+    responsibility: "Primary frameworks from core books"
+    activation_model: "Called by Chief or user request"
+  tier_2:
+    name: "Execution Specialists"
+    agents: 6
+    agents_list: [kennedy-copy, kennedy-offers, kennedy-media, kennedy-persuasion, kennedy-referrals, kennedy-affluent]
+    responsibility: "Tactical execution, copywriting, offer design, media strategy"
+    activation_model: "Called by Chief or Tier 1 agents"
+  tier_3:
+    name: "Strategic Specialists"
+    agents: 4
+    agents_list: [kennedy-advisor, kennedy-audit, kennedy-brand, kennedy-business]
+    responsibility: "Strategic counsel, business philosophy, ROI analysis, brand building, business turnaround"
+    activation_model: "Called by Chief or Tier 1/2 for strategic support"
+
+# Use Cases
+use_cases:
+  - id: uc-001
+    name: "Sales Letter Campaign"
+    description: "Create complete sales letter using 28-step system"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-sales-letter, kennedy-copy, kennedy-offers, kennedy-audit]
+    framework: "28-Step Sales Letter System"
+    duration: "2-3 days"
+
+  - id: uc-002
+    name: "Direct Mail Campaign"
+    description: "Design and execute direct mail campaign with tracking"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-media, kennedy-copy, kennedy-direct-response]
+    framework: "A-Pile/B-Pile Strategy + Direct Mail Mastery"
+    duration: "2-3 days"
+
+  - id: uc-003
+    name: "Magnetic Marketing Launch"
+    description: "Build complete Magnetic Marketing System (Attract-Convert-Retain)"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-magnetic, kennedy-offers, kennedy-media, kennedy-audit]
+    framework: "Magnetic Marketing Triangle"
+    duration: "3-5 days"
+
+  - id: uc-004
+    name: "Referral Machine Setup"
+    description: "Create automated referral generation system"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-referrals, kennedy-copy, kennedy-media]
+    framework: "11-Point Referral System"
+    duration: "3-5 days"
+
+  - id: uc-005
+    name: "Marketing Audit"
+    description: "Diagnose and audit existing marketing using Kennedy frameworks"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-audit, kennedy-direct-response]
+    framework: "Marketing Triangle Audit + Money Pyramid Analysis"
+    duration: "1-2 days"
+
+  - id: uc-006
+    name: "Affluent Client Attraction"
+    description: "Design premium positioning system for affluent market"
+    primary_agent: kennedy-chief
+    supporting_agents: [kennedy-affluent, kennedy-offers, kennedy-brand]
+    framework: "Affluent Psychology + Premium Positioning"
+    duration: "3-5 days"
+
+# Quality Gates
+quality_gates:
+  campaign_design:
+    name: "Campaign Design Review"
+    checks:
+      - "Results Triangle defined (Message-Market-Media)"
+      - "USP is clear and differentiating"
+      - "Offer is compelling and irresistible"
+      - "Call-to-action is time-specific"
+      - "Tracking mechanism established"
+    validators:
+      - scripts/validate-marketing-data.py
+
+  copy_quality:
+    name: "Copy Quality Standards"
+    checks:
+      - "Fascination bullets present"
+      - "No hyperbole without proof"
+      - "Emotional triggers identified"
+      - "A-Pile vs B-Pile tested"
+      - "Response mechanism clear"
+    validators:
+      - scripts/validate-antipattern.py
+
+  offer_irresistibility:
+    name: "Offer Irresistibility Check"
+    checks:
+      - "Widget concept present"
+      - "Guarantee is strong (money-back or equity)"
+      - "Scarcity/Urgency element (time or quantity)"
+      - "Preponderance of proof included"
+    validators: []
+
+  roi_tracking:
+    name: "ROI Tracking Setup"
+    checks:
+      - "Unique tracking code/phone assigned"
+      - "Backend data capture configured"
+      - "Response metrics defined"
+      - "Customer lifetime value considered"
+    validators: []
+
+  handoff:
+    name: "Agent Handoff Validation"
+    checks:
+      - "Previous agent output verified"
+      - "Handoff context complete (see templates/handoff-context-tmpl.yaml)"
+      - "No veto conditions violated"
+      - "Next agent context clear"
+    validators:
+      - scripts/validate-handoff.py
+
+# Sources
+sources:
+  extracted_frameworks:
+    - outputs/extracted/dan-kennedy-no-bs-direct-marketing-frameworks.md
+    - outputs/extracted/dan-kennedy-magnetic-marketing-frameworks.md
+    - outputs/extracted/dan-kennedy-ultimate-sales-letter-frameworks.md
+    - outputs/extracted/dan-kennedy-ultimate-marketing-plan-frameworks.md
+    - outputs/extracted/dan-kennedy-no-bs-brand-building-by-direct-response-frameworks.md
+    - outputs/extracted/dan-kennedy-no-bs-direct-response-social-media-frameworks.md
+    - outputs/extracted/dan-kennedy-ultimate-no-bs-business-success-frameworks.md
+  course_summaries:
+    path: outputs/courses/dan-kennedy-*/
+  transcriptions:
+    path: "${MENTE_LENDARIA_ROOT}/external/transcriptions/dan-kennedy/"
+    note: "Reference external transcription source; use environment variable for portability"
+
+# Mental Models (12 confirmed)
+mental_models:
+  - id: MM_001
+    name: "Marketing Triangle (Results Triangle)"
+    formula: "Results = RIGHT Message + RIGHT Market + RIGHT Media"
+    type: universal
+    transferability: 0.95
+
+  - id: MM_002
+    name: "Magnetic Marketing System"
+    insight: "Attract, don't chase. 3 pillars: Attraction, Conversion, Retention"
+    type: universal
+    transferability: 0.90
+
+  - id: MM_003
+    name: "The Great Divide"
+    insight: "Direct Response vs Institutional — only DR is measurable and accountable"
+    type: universal
+    transferability: 0.95
+
+  - id: MM_004
+    name: "Money Pyramid"
+    insight: "1% ultra-rich / 4% rich / 15% comfortable / 60% paycheck / 20% broke"
+    type: domain
+    transferability: 0.85
+
+  - id: MM_005
+    name: "A-Pile / B-Pile Sort"
+    insight: "Every mail piece gets sorted in 3 seconds — be in the A-pile or die"
+    type: domain
+    transferability: 0.80
+
+  - id: MM_006
+    name: "The Starving Crowd"
+    insight: "Market selection trumps everything — find the starving crowd first"
+    type: universal
+    transferability: 0.95
+
+  - id: MM_007
+    name: "USP as Wedge"
+    insight: "Without a USP you're a me-too commodity competing only on price"
+    type: universal
+    transferability: 0.90
+
+  - id: MM_008
+    name: "28-Step Sales Letter"
+    insight: "Systematic, repeatable copy process that converts — step by step"
+    type: domain
+    transferability: 0.85
+
+  - id: MM_009
+    name: "No B.S. Rules"
+    insight: "10 non-negotiable rules that separate DR marketers from amateurs"
+    type: universal
+    transferability: 0.90
+
+  - id: MM_010
+    name: "Shock and Awe"
+    insight: "Overwhelm prospects with proof and value before they can object"
+    type: domain
+    transferability: 0.80
+
+  - id: MM_011
+    name: "Time Vampires"
+    insight: "Ruthlessly eliminate people and activities that steal your productive time"
+    type: universal
+    transferability: 0.85
+
+  - id: MM_012
+    name: "Renegade Millionaire"
+    insight: "Think and act contrary to conventional wisdom — that's where the money is"
+    type: universal
+    transferability: 0.80
+
+# Workflows
+workflows:
+  - id: wf-sales-letter
+    name: "Sales Letter Creation"
+    duration: "2-3 days"
+    phases: 5
+    agents_involved: [kennedy-chief, kennedy-sales-letter, kennedy-copy, kennedy-offers, kennedy-audit]
+
+  - id: wf-magnetic-campaign
+    name: "Magnetic Marketing Campaign"
+    duration: "3-5 days"
+    phases: 5
+    agents_involved: [kennedy-chief, kennedy-magnetic, kennedy-media, kennedy-offers, kennedy-audit]
+
+  - id: wf-direct-mail
+    name: "Direct Mail Campaign"
+    duration: "2-3 days"
+    phases: 4
+    agents_involved: [kennedy-chief, kennedy-media, kennedy-copy, kennedy-sales-letter]
+
+  - id: wf-referral-machine
+    name: "Referral Machine Setup"
+    duration: "3-5 days"
+    phases: 5
+    agents_involved: [kennedy-chief, kennedy-referrals, kennedy-copy, kennedy-media]
+
+  - id: wf-affluent-attraction
+    name: "Affluent Client Attraction"
+    duration: "3-5 days"
+    phases: 5
+    agents_involved: [kennedy-chief, kennedy-affluent, kennedy-offers, kennedy-copy, kennedy-brand]
+
+  - id: wf-marketing-audit
+    name: "Marketing Audit & Diagnosis"
+    duration: "1-2 days"
+    phases: 3
+    agents_involved: [kennedy-chief, kennedy-audit, kennedy-direct-response]
+
+  - id: wf-mind-hijacking
+    name: "Persuasion & Mind Hijacking Campaign"
+    duration: "2-3 days"
+    phases: 4
+    agents_involved: [kennedy-chief, kennedy-persuasion, kennedy-copy, kennedy-offers]
+
+  - id: wf-brand-building
+    name: "Brand Building by Direct Response"
+    duration: "3-5 days"
+    phases: 4
+    agents_involved: [kennedy-chief, kennedy-brand, kennedy-direct-response, kennedy-media]
+
+  - id: wf-business-turnaround
+    name: "Business Turnaround System"
+    duration: "3-5 days"
+    phases: 5
+    agents_involved: [kennedy-chief, kennedy-business, kennedy-audit, kennedy-advisor]
+
+# Shared Data Files
+shared_data:
+  voice_dna: data/minds/kennedy-voice-dna.yaml
+  thinking_dna: data/minds/kennedy-thinking-dna.yaml
+  case_library: data/kennedy-case-library.yaml
+  source_index: data/source-index.yaml
+
+
+# Dependencies
+dependencies:
+  - aios-core
+
+tags:
+  - kennedy
+  - direct-response
+  - no-bs
+  - copywriting
+  - magnetic-marketing
+  - sales-letters
+  - direct-mail
+  - persuasion
+  - affluent-marketing
+
+# Veto Conditions (Centralized)
+veto_conditions:
+  config_file: config/veto-conditions.yaml
+  enforcement: strict
+  tiers:
+    tier_0_universal: 3
+    tier_1_workflow: 8
+    tier_2_agent_specific: 6
+    tier_3_handoff: 1
+  handoff_template: templates/handoff-context-tmpl.yaml
+
+# Validation Scripts
+validation_scripts:
+  marketing_data_validator:
+    path: scripts/validate-marketing-data.py
+    usage: "python squads/kennedy/scripts/validate-marketing-data.py --inline 'results_triangle:Y,usp:Y,...'"
+    trigger: "Before any marketing campaign design"
+    returns: "PASS (exit 0) or FAIL (exit 1)"
+
+  handoff_validator:
+    path: scripts/validate-handoff.py
+    usage: "python squads/kennedy/scripts/validate-handoff.py <file.yaml>"
+    trigger: "Before any specialist-to-specialist handoff"
+    returns: "PASS (exit 0) or FAIL (exit 1)"
+
+  antipattern_validator:
+    path: scripts/validate-antipattern.py
+    usage: "python squads/kennedy/scripts/validate-antipattern.py --interactive"
+    trigger: "Before approving campaign for launch"
+    returns: "PASS (exit 0) or VETO (exit 1)"

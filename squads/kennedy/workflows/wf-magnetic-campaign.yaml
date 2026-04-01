@@ -1,0 +1,471 @@
+# Magnetic Marketing Campaign Workflow
+# Based on Dan Kennedy's Magnetic Marketing System — 3-Pillar System
+# Source: Magnetic Marketing (2018) + Magnetic Marketing Course
+# Version: 1.0.0
+
+id: wf-magnetic-campaign
+name: "Magnetic Marketing Campaign"
+version: "1.0.0"
+duration: "3-5 days"
+description: |
+  Complete workflow to build a Magnetic Marketing campaign using
+  Kennedy's 3-Pillar System: Attract, Convert, Retain. Creates
+  lead generation magnets, shock-and-awe packages, and retention
+  sequences that turn strangers into customers into evangelists.
+
+  PHILOSOPHY: "Stop chasing customers. Become magnetic."
+
+  RESULT: A complete magnetic marketing system with lead magnet,
+  shock-and-awe package, conversion sequence, and retention program.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Building a complete lead generation system from scratch"
+  - "Replacing cold outreach with attraction-based marketing"
+  - "Creating a shock-and-awe package for new prospects"
+  - "Designing automated nurture and conversion sequences"
+  - "Fixing a business that relies too heavily on referrals alone"
+
+decision_matrix_fit:
+  complexity: high
+  agents_required: 5
+  estimated_duration: "3-5 days"
+  user_involvement: "medium (checkpoints require approval)"
+  prerequisites:
+    - "Clear understanding of target market"
+    - "Product or service to sell"
+    - "Budget for lead magnet creation (even minimal)"
+    - "Willingness to implement multi-step follow-up"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, Results Triangle validation, 9 Fatal Mistakes check"
+      phases: [0]
+
+    - agent: kennedy-magnetic
+      role: "3-Pillar System design, lead magnet creation, shock-and-awe"
+      phases: [1, 2]
+
+    - agent: kennedy-media
+      role: "Multi-channel media strategy, A-Pile mail, grabber mail"
+      phases: [2, 3]
+
+    - agent: kennedy-offers
+      role: "USP, irresistible offer creation, widget design"
+      phases: [1, 3]
+
+    - agent: kennedy-audit
+      role: "9 Fatal Marketing Mistakes audit, Money Pyramid analysis"
+      phases: [4]
+
+  synergies:
+    - agents: [kennedy-magnetic, kennedy-offers]
+      pattern: "Magnetic creates the system, Offers makes each touchpoint irresistible"
+
+    - agents: [kennedy-magnetic, kennedy-media]
+      pattern: "Magnetic defines the magnets, Media distributes through optimal channels"
+
+    - agents: [kennedy-audit, kennedy-magnetic]
+      pattern: "Audit validates system against 9 Fatal Marketing Mistakes"
+
+# ===============================================================================
+# PHASE 0: DISCOVERY — 9 Fatal Mistakes Diagnosis
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Discovery"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Diagnose the current marketing situation using Kennedy's 9 Fatal
+      Marketing Mistakes. Identify which mistakes the business is making
+      and establish the Results Triangle foundation.
+
+      PRINCIPLE: "Most business owners are guilty of at least 5 of the
+      9 Fatal Marketing Mistakes. Fix those first."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "9 Fatal Marketing Mistakes Assessment"
+        required: true
+        description: |
+          Evaluate the business against all 9 Fatal Mistakes:
+          1. Wasting money on institutional/image advertising
+          2. Not using a USP
+          3. Not clearly targeting the right prospect
+          4. Not building a list
+          5. Not following up
+          6. Not using multi-step campaigns
+          7. Not testing
+          8. Not tracking ROI
+          9. Not having a referral system
+        output: "fatal_mistakes_assessment.yaml"
+
+      - task_id: T0.2
+        name: "Results Triangle Foundation"
+        required: true
+        description: |
+          Define the Results Triangle: Message + Market + Media.
+          Who is the starving crowd? What is the compelling message?
+          What media channels will reach them?
+        output: "results_triangle.yaml"
+
+      - task_id: T0.3
+        name: "Money Pyramid Positioning"
+        required: true
+        description: |
+          Where does the target market sit on Kennedy's Money Pyramid?
+          1% ultra-rich / 4% rich / 15% comfortable / 60% paycheck / 20% broke.
+          Marketing to the wrong tier wastes everything.
+        output: "money_pyramid_positioning.md"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Diagnosis Complete"
+      criteria:
+        - "9 Fatal Mistakes scored with remediation plan"
+        - "Results Triangle defined"
+        - "Money Pyramid tier identified"
+      human_review: true
+      message: "Review diagnosis before building magnetic system."
+      veto_conditions:
+        - condition: "Business guilty of 7+ Fatal Mistakes with no plan"
+          action: "HALT - Fix foundational issues before building campaigns"
+        - condition: "No Results Triangle defined"
+          action: "BLOCK - Message + Market + Media must be established first"
+
+  # ===============================================================================
+  # PHASE 1: PILLAR 1 — ATTRACTION
+  # ===============================================================================
+
+  - id: PHASE-1
+    name: "Attraction System"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Build Pillar 1 of the Magnetic Marketing System: Attraction.
+      Create lead magnets that pull prospects toward you instead of
+      chasing them. Design the USP that makes you the obvious choice.
+
+      PRINCIPLE: "You want to be the welcomed guest, not the annoying pest."
+
+    agent: kennedy-magnetic
+
+    tasks:
+      - task_id: T1.1
+        name: "Create Lead Magnet Suite"
+        required: true
+        description: |
+          Design 3-5 lead magnets for different awareness levels:
+          - Problem-aware: "Free Report: 7 Deadly Mistakes in [Industry]"
+          - Solution-aware: "Free Guide: How to [Desired Outcome] in [Timeframe]"
+          - Product-aware: "Free Demo/Consultation/Assessment"
+          Each must be genuinely valuable, not bait-and-switch.
+        output: "lead_magnet_suite.yaml"
+
+      - task_id: T1.2
+        name: "Design USP (Unique Selling Proposition)"
+        required: true
+        description: |
+          Use Kennedy's 4 USP Pathways:
+          1. Be the first (pioneer positioning)
+          2. Be the best (superiority claim with proof)
+          3. Be different (contrarian positioning)
+          4. Be specialized (niche domination)
+          The USP must answer: "Why should I do business with you
+          vs. any and every other option, including doing nothing?"
+        output: "usp_design.md"
+
+      - task_id: T1.3
+        name: "Create Attraction Ads/Copy"
+        required: true
+        description: |
+          Write the ads and copy that will attract prospects to
+          request the lead magnet. Use Kennedy's headline formulas
+          and fascination bullets. Must be direct response
+          (measurable, trackable, with a clear CTA).
+        output: "attraction_copy.md"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Attraction System Complete"
+      criteria:
+        - "Minimum 3 lead magnets designed"
+        - "USP clearly articulated"
+        - "Attraction copy written with DR principles"
+      human_review: true
+      message: "Review attraction system before conversion phase."
+      veto_conditions:
+        - condition: "Lead magnets are generic (e.g., 'free consultation')"
+          action: "REWRITE - Lead magnets must have perceived standalone value"
+        - condition: "No USP differentiation"
+          action: "BLOCK - Cannot attract without clear USP"
+
+  # ===============================================================================
+  # PHASE 2: PILLAR 2 — CONVERSION
+  # ===============================================================================
+
+  - id: PHASE-2
+    name: "Conversion System"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Build Pillar 2: Conversion. Create the shock-and-awe package,
+      multi-step follow-up sequence, and conversion mechanisms that
+      turn leads into customers.
+
+      PRINCIPLE: "The shock-and-awe package should so overwhelm the
+      prospect with proof and value that saying 'no' feels foolish."
+
+    agent: kennedy-magnetic
+
+    tasks:
+      - task_id: T2.1
+        name: "Design Shock-and-Awe Package"
+        required: true
+        description: |
+          Create the shock-and-awe package contents:
+          - Personalized welcome letter
+          - Authority-building materials (book, DVD, reports)
+          - Testimonial compilation
+          - FAQ/Objection-crushing document
+          - Time-sensitive offer
+          - Premium/widget
+          Must overwhelm with VALUE, not volume.
+        output: "shock_awe_package.yaml"
+
+      - task_id: T2.2
+        name: "Build Multi-Step Follow-Up Sequence"
+        required: true
+        description: |
+          Create a multi-step, multi-media follow-up sequence:
+          - Step 1 (Day 0): Shock-and-awe package arrives
+          - Step 2 (Day 3): Follow-up letter/email
+          - Step 3 (Day 7): Phone call or personal video
+          - Step 4 (Day 14): Second offer with urgency
+          - Step 5 (Day 21): Final deadline notice
+          Kennedy: "Fortune is in the follow-up."
+        output: "follow_up_sequence.yaml"
+
+      - task_id: T2.3
+        name: "Create Conversion Offer"
+        required: true
+        description: |
+          Design the main conversion offer with:
+          - Irresistible value stack
+          - Risk-reversal guarantee
+          - Deadline/urgency (real, not fake)
+          - Premium/widget incentive
+          - Multiple response mechanisms
+        output: "conversion_offer.yaml"
+
+    handoff:
+      from: kennedy-magnetic
+      to: kennedy-media
+      template: templates/handoff-context-tmpl.yaml
+      required_data:
+        - "Shock-and-awe package designed"
+        - "Follow-up sequence mapped"
+        - "Conversion offer created"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Conversion System Complete"
+      criteria:
+        - "Shock-and-awe package with minimum 5 elements"
+        - "Multi-step follow-up sequence (minimum 5 steps)"
+        - "Conversion offer with guarantee and urgency"
+      human_review: true
+      message: "Review conversion system before media planning."
+      veto_conditions:
+        - condition: "Single-step follow-up (one and done)"
+          action: "BLOCK - Kennedy demands multi-step, multi-media follow-up"
+        - condition: "No shock-and-awe package"
+          action: "BLOCK - Conversion without overwhelming proof is gambling"
+
+  # ===============================================================================
+  # PHASE 3: PILLAR 3 — RETENTION
+  # ===============================================================================
+
+  - id: PHASE-3
+    name: "Retention + Media"
+    days: "Day 3-4"
+    tier: 2
+    description: |
+      Build Pillar 3: Retention. Create the ongoing communication
+      system that keeps customers engaged and buying. Simultaneously,
+      plan the media distribution strategy.
+
+      PRINCIPLE: "A customer retained is worth 6-10 times a customer acquired."
+
+    agent: kennedy-media
+
+    tasks:
+      - task_id: T3.1
+        name: "Design Monthly Retention System"
+        required: true
+        description: |
+          Create an ongoing retention program:
+          - Monthly newsletter (Kennedy loves print)
+          - Quarterly special offers
+          - Birthday/anniversary recognition
+          - VIP/inner circle program
+          - Reactivation campaign for dormant customers
+        output: "retention_system.yaml"
+
+      - task_id: T3.2
+        name: "Plan Media Distribution"
+        required: true
+        description: |
+          Map the multi-channel media strategy:
+          - Direct mail (primary for Kennedy)
+          - Email sequences
+          - Social media (DR-only, not branding)
+          - Online ads (with tracking)
+          - Phone follow-up
+          - Endorsed mailings/joint ventures
+          Each channel must be trackable and accountable.
+        output: "media_plan.yaml"
+
+      - task_id: T3.3
+        name: "Design Referral Trigger Points"
+        required: true
+        description: |
+          Identify moments in the customer journey where referrals
+          can be triggered. Kennedy: "If you don't have a referral
+          system, you don't have a marketing system."
+        output: "referral_triggers.md"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Retention + Media Complete"
+      criteria:
+        - "Monthly retention program designed"
+        - "Multi-channel media plan with tracking"
+        - "Referral triggers mapped"
+      human_review: true
+      message: "Review retention and media plan before final audit."
+      veto_conditions:
+        - condition: "No print/direct mail component"
+          action: "WARNING - Kennedy considers direct mail essential. Justify omission."
+        - condition: "No tracking codes on any media channel"
+          action: "BLOCK - Rule #4: If you can't measure it, don't do it"
+
+  # ===============================================================================
+  # PHASE 4: AUDIT — System Validation
+  # ===============================================================================
+
+  - id: PHASE-4
+    name: "Audit"
+    days: "Day 4-5"
+    tier: 3
+    description: |
+      Final audit of the complete Magnetic Marketing System against
+      Kennedy's 9 Fatal Mistakes and 10 No B.S. Rules.
+
+      PRINCIPLE: "The most profitable marketing is a SYSTEM, not a
+      series of random acts of marketing."
+
+    agent: kennedy-audit
+
+    tasks:
+      - task_id: T4.1
+        name: "9 Fatal Mistakes Re-Assessment"
+        required: true
+        description: |
+          Re-evaluate against 9 Fatal Mistakes now that the system
+          is built. All 9 should now show GREEN or REMEDIATED.
+        output: "fatal_mistakes_final.yaml"
+
+      - task_id: T4.2
+        name: "3-Pillar System Completeness Check"
+        required: true
+        description: |
+          Validate all 3 pillars are connected and functional:
+          - Attract: Lead magnets + USP + Ads
+          - Convert: Shock-awe + Follow-up + Offer
+          - Retain: Newsletter + VIP + Referrals
+          No gaps between pillars.
+        output: "pillar_audit.md"
+        checklist: "checklists/magnetic-marketing-checklist.md"
+
+      - task_id: T4.3
+        name: "ROI Projection + Tracking Setup"
+        required: true
+        description: |
+          Project expected ROI and ensure tracking is in place:
+          - Cost per lead target
+          - Cost per acquisition target
+          - Lifetime customer value estimate
+          - Tracking codes on every touchpoint
+          - A/B test plan for first 90 days
+        output: "roi_projection.yaml"
+
+    checkpoint:
+      id: CP_PHASE_4
+      name: "Magnetic System Approved"
+      criteria:
+        - "All 9 Fatal Mistakes addressed"
+        - "3-Pillar system complete and connected"
+        - "ROI projection with tracking plan"
+      human_review: true
+      message: "Magnetic Marketing System ready for launch."
+      veto_conditions:
+        - condition: "Any Fatal Mistake still unaddressed"
+          action: "HALT - Fix remaining mistakes before launch"
+        - condition: "No ROI tracking mechanism"
+          action: "BLOCK - Cannot launch without measurement"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Magnetic Marketing Blueprint"
+      file: "magnetic_blueprint.md"
+      description: "Complete 3-Pillar system documentation"
+
+    - name: "Lead Magnet Suite"
+      file: "lead_magnet_suite.yaml"
+      description: "3-5 lead magnets with copy and design specs"
+
+    - name: "Shock-and-Awe Package"
+      file: "shock_awe_package.yaml"
+      description: "Complete package contents and production plan"
+
+    - name: "Follow-Up Sequence"
+      file: "follow_up_sequence.yaml"
+      description: "Multi-step, multi-media follow-up system"
+
+    - name: "Media Plan"
+      file: "media_plan.yaml"
+      description: "Multi-channel distribution with tracking"
+
+  output_directory: "outputs/kennedy-magnetic-campaign-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "Magnetic Marketing — 3-Pillar System"
+    - "Magnetic Marketing Course — Shock and Awe"
+    - "No B.S. Direct Marketing — 9 Fatal Mistakes, 10 Rules"
+  total_phases: 5
+  total_tasks: 15

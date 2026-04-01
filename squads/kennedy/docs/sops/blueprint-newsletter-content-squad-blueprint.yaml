@@ -1,0 +1,514 @@
+# ============================================================================
+# BLUEPRINT: Newsletter Content + Retention System Squad Blueprint
+# Source: Magnetic Marketing Ch.9; Brand-Building by DR Ch.13
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+# ============================================================================
+
+metadata:
+  name: "Newsletter Content + Retention System Squad Blueprint"
+  version: "1.0"
+# source_sop: sop-newsletter-content.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-newsletter-content.md"
+  description: >
+    Blueprint para producao e distribuicao de newsletters mensais que
+    reteem clientes, geram recompras e produzem referrals. Operacionaliza
+    o Newsletter Content Formula (4 tipos de conteudo) e integra com o
+    11-Point Referral System de Kennedy.
+  source:
+    book_1: "Magnetic Marketing: How To Attract A Flood Of New Customers"
+    book_1_chapters: "Ch.9 - Retention System"
+    book_2: "No B.S. Guide to Brand-Building by Direct Response"
+    book_2_chapters: "Ch.13 - 11-Point Referral System (Bill Gough)"
+    frameworks:
+      - "Newsletter Content Formula (4 types)"
+      - "Retention System (2 Pillars)"
+      - "11-Point Referral System"
+      - "Enticement Devices"
+
+# ============================================================================
+# AGENTS
+# ============================================================================
+
+agents:
+  primary:
+    name: "kennedy-magnetic"
+    role: "Retention System Commander"
+    responsibilities:
+      - "Overall newsletter strategy and calendar"
+      - "Content Formula enforcement (4 types balanced)"
+      - "Retention metrics monitoring"
+      - "Integration with Magnetic Marketing System"
+      - "Annual planning and monthly production oversight"
+    source_knowledge:
+      - "Magnetic Marketing, Framework 10 - Retention System"
+      - "Magnetic Marketing, Framework 20 - Newsletter Content Formula"
+      - "Magnetic Marketing, Rule #1-10"
+
+  supporting:
+    - name: "kennedy-copy"
+      role: "Newsletter Writer"
+      responsibilities:
+        - "Writes monthly newsletter content"
+        - "Ensures conversational tone (not corporate)"
+        - "Creates compelling subject lines"
+        - "Integrates CTAs naturally into content"
+        - "Produces entertainment content (puzzles, humor)"
+      source_knowledge:
+        - "Magnetic Marketing, Rule #7 - Strong Copy"
+        - "Copywriting Academy"
+
+    - name: "kennedy-brand"
+      role: "Brand & Story Integrator"
+      responsibilities:
+        - "Ensures brand consistency across editions"
+        - "Integrates StorySelling into personality content"
+        - "Maintains Origin Story thread across months"
+        - "Validates brand voice in every edition"
+      source_knowledge:
+        - "Brand-Building by DR, Framework 7 - StorySelling"
+        - "Brand-Building by DR, Core Thesis"
+
+    - name: "kennedy-referrals"
+      role: "Referral System Integrator"
+      responsibilities:
+        - "Designs soft and hard referral asks"
+        - "Tracks referrals generated per edition"
+        - "Integrates newsletter with 11-Point System"
+        - "Plans quarterly referral campaigns within newsletter"
+      source_knowledge:
+        - "Brand-Building by DR, Framework 9 - 11-Point Referral System"
+        - "Referral Machine Course"
+
+    - name: "kennedy-direct-response"
+      role: "DR Compliance Officer"
+      responsibilities:
+        - "Validates every edition has offer + CTA + urgency"
+        - "Ensures tracking is configured and active"
+        - "Monitors Money Math (revenue per edition)"
+        - "Enforces 10 Regras compliance"
+      source_knowledge:
+        - "Magnetic Marketing, 10 Regras Fundacionais"
+
+# ============================================================================
+# WORKFLOW PHASES
+# ============================================================================
+
+workflow:
+  total_estimated_time: "3-4 hours/month production + 2 hours annual planning"
+
+  phase_0:
+    name: "Annual Planning"
+    duration: "120-180 min (once per year)"
+    agent: "kennedy-magnetic"
+    inputs:
+      - "Business goals for the year"
+      - "Product/service launch calendar"
+      - "Event calendar"
+      - "WHO profile and interests"
+    activities:
+      - step: "Define 12 monthly themes"
+        detail: "Authority topic + What's New offer + Personality angle"
+      - step: "Create entertainment bank"
+        detail: "24 jokes, 12 puzzles, 12 recommendations, 12 quotes"
+      - step: "Map referral campaigns"
+        detail: "Soft ask every month, hard ask quarterly (Mar, Jun, Sep, Dec)"
+      - step: "Set production calendar"
+        detail: "Day 1-5 plan, 6-15 write, 16-20 design, 21-25 send"
+      - step: "Define success metrics"
+        detail: "Open rate, click rate, conversion, revenue, retention targets"
+    outputs:
+      - "Annual Newsletter Calendar"
+      - "Entertainment Content Bank"
+      - "Referral Campaign Calendar"
+      - "Production Timeline"
+      - "Success Metrics Targets"
+    quality_gate: "gate_0"
+
+  phase_1:
+    name: "Monthly Planning"
+    duration: "30 min"
+    agent: "kennedy-magnetic"
+    timing: "Day 1-5 of each month"
+    inputs:
+      - "Annual calendar (from Phase 0)"
+      - "Previous month's performance data"
+      - "Current business updates and news"
+      - "New proof/testimonials available"
+    activities:
+      - step: "Review previous edition metrics"
+        detail: "Open rate, clicks, conversions, revenue, feedback"
+      - step: "Confirm or adjust this month's theme"
+        detail: "Based on current events and performance data"
+      - step: "Identify personality story for this month"
+        detail: "What happened recently that's share-worthy?"
+      - step: "Confirm CTA/offer for this month"
+        detail: "What's the primary action we want?"
+      - step: "Select entertainment content"
+        detail: "Pull from bank or create fresh"
+    outputs:
+      - "Monthly Edition Brief"
+      - "Content Assignments"
+    quality_gate: "gate_1"
+
+  phase_2:
+    name: "Content Production"
+    duration: "120-150 min"
+    agent: "kennedy-copy + kennedy-brand"
+    timing: "Day 6-15 of each month"
+    inputs:
+      - "Monthly Edition Brief (from Phase 1)"
+      - "Brand voice guidelines"
+      - "StorySelling assets"
+      - "Proof/testimonials"
+    activities:
+      - step: "Write personality opener"
+        detail: "200-400 words, personal story, warm connection"
+      - step: "Write authority section"
+        detail: "300-500 words, insight, practical application"
+      - step: "Write What's New / CTA section"
+        detail: "200-400 words, offer + urgency + clear instructions"
+      - step: "Prepare entertainment section"
+        detail: "100-200 words, puzzle + joke + previous puzzle answer"
+      - step: "Write closing + referral ask"
+        detail: "100-200 words, personal note + preview + referral CTA"
+      - step: "Write subject line variations"
+        detail: "3 options for A/B testing (email)"
+      - step: "Kennedy-brand review"
+        detail: "Brand consistency, StorySelling alignment, voice check"
+    outputs:
+      - "Complete Newsletter Draft"
+      - "Subject Line Variations (3)"
+    quality_gate: "gate_2"
+
+  phase_3:
+    name: "DR Compliance & Referral Review"
+    duration: "20-30 min"
+    agent: "kennedy-direct-response + kennedy-referrals"
+    timing: "Day 16-18"
+    inputs:
+      - "Newsletter Draft (from Phase 2)"
+      - "10 Regras checklist"
+      - "Referral program details"
+    activities:
+      - step: "Verify CTA present and clear"
+        detail: "Offer + urgency + instructions + tracking"
+      - step: "Verify tracking configured"
+        detail: "UTM links, conversion events, CRM tagging"
+      - step: "Verify referral ask present"
+        detail: "Soft ask (monthly) or hard ask (quarterly)"
+      - step: "Validate content balance"
+        detail: "4 types present in correct proportions"
+      - step: "Approve for production"
+        detail: "Final sign-off"
+    outputs:
+      - "DR Compliance Report"
+      - "Final Approved Draft"
+    quality_gate: "gate_3"
+
+  phase_4:
+    name: "Design & Send"
+    duration: "30-45 min"
+    agent: "kennedy-media"
+    timing: "Day 18-25"
+    inputs:
+      - "Approved Draft (from Phase 3)"
+      - "Design template"
+      - "Subscriber list (segmented)"
+    activities:
+      - step: "Apply design template"
+        detail: "Clean layout, mobile-friendly, consistent branding"
+      - step: "Test all links"
+        detail: "Every CTA link tested and tracked"
+      - step: "Send test emails"
+        detail: "Internal review on multiple devices"
+      - step: "Schedule/send to list"
+        detail: "Segmented send (clients/leads/dormentes)"
+      - step: "Print and mail (if applicable)"
+        detail: "Physical newsletter production and fulfillment"
+    outputs:
+      - "Sent Newsletter"
+      - "Send Report (delivered, bounced)"
+    quality_gate: "gate_4"
+
+  phase_5:
+    name: "Follow-Up & Analysis"
+    duration: "30 min"
+    agent: "kennedy-magnetic + kennedy-referrals"
+    timing: "Day 26-30 (and next month Day 1-5)"
+    inputs:
+      - "Newsletter sent (from Phase 4)"
+      - "Engagement data"
+      - "Conversion data"
+    activities:
+      - step: "Day +2: Follow-up email"
+        detail: "'Did you see the newsletter? What did you think of [topic]?'"
+      - step: "Day +5: CTA click non-converter follow-up"
+        detail: "Reinforced offer with urgency for those who clicked but didn't buy"
+      - step: "Day +10: Non-opener resend"
+        detail: "New subject line for those who didn't open"
+      - step: "Day +15: Referral thank-you"
+        detail: "Thank and reward anyone who referred"
+      - step: "Compile edition metrics"
+        detail: "Open, click, conversion, revenue, referrals, unsubscribes"
+      - step: "Compare readers vs non-readers"
+        detail: "Retention, recompra, referral, LTV comparison"
+    outputs:
+      - "Edition Performance Report"
+      - "Readers vs Non-Readers Comparison"
+      - "Optimization Recommendations for Next Edition"
+    quality_gate: "gate_5"
+
+# ============================================================================
+# QUALITY GATES
+# ============================================================================
+
+quality_gates:
+  gate_0:
+    name: "Annual Plan Complete"
+    phase: "phase_0"
+    criteria:
+      - "12 monthly themes defined"
+      - "Entertainment bank created (24 jokes, 12 puzzles)"
+      - "Referral campaign calendar set (4 hard asks/year)"
+      - "Production timeline established"
+      - "Success metrics defined"
+    blocker: true
+    failure_action: "Complete annual planning before first edition"
+
+  gate_1:
+    name: "Monthly Brief Ready"
+    phase: "phase_1"
+    criteria:
+      - "Theme confirmed or adjusted"
+      - "Personality story identified"
+      - "CTA/offer defined"
+      - "Entertainment content selected"
+      - "Previous month metrics reviewed"
+    blocker: true
+    failure_action: "Finalize brief before starting production"
+
+  gate_2:
+    name: "Content Quality Approved"
+    phase: "phase_2"
+    criteria:
+      - "All 4 content types present:"
+      - "  USP/Authority: 15-25% of content"
+      - "  Entertainment: 20-30% of content"
+      - "  What's New/CTA: 20-30% of content"
+      - "  Personality/Bond: 25-35% of content"
+      - "Conversational tone (not corporate)"
+      - "Stories included (not just declarations)"
+      - "900-1700 words total (email) or 4-8 pages (print)"
+      - "3 subject line variations ready"
+    blocker: true
+    failure_action: "Revise content to meet quality standards"
+
+  gate_3:
+    name: "DR Compliance Passed"
+    phase: "phase_3"
+    criteria:
+      - "CTA present with offer + urgency + clear instructions"
+      - "Tracking configured (UTM, pixels, CRM)"
+      - "Referral ask present (soft or hard)"
+      - "All links verified"
+      - "Content balance validated"
+    blocker: true
+    failure_action: "Add missing DR elements before send"
+
+  gate_4:
+    name: "Successfully Sent"
+    phase: "phase_4"
+    criteria:
+      - "Newsletter delivered to segmented list"
+      - "Bounce rate < 3%"
+      - "All links functional"
+      - "Design renders correctly on mobile"
+    blocker: false
+    failure_action: "Fix delivery issues for next edition"
+
+  gate_5:
+    name: "Edition Performance Analyzed"
+    phase: "phase_5"
+    criteria:
+      - "All metrics collected (open, click, conversion, revenue)"
+      - "Follow-up sequence executed"
+      - "Reader vs non-reader comparison done"
+      - "Optimization recommendations documented"
+      - "Insights fed into next month planning"
+    blocker: false
+    failure_action: "Ensure analysis before starting next edition"
+
+# ============================================================================
+# VETO CONDITIONS
+# ============================================================================
+
+veto_conditions:
+  universal:
+    - condition: "Newsletter edition without CTA or offer"
+      severity: "BLOCKER"
+      rationale: "Rule #1: There Will Always Be An Offer"
+      source: "Magnetic Marketing, Rule #1"
+
+    - condition: "Newsletter is 100% industry/business content"
+      severity: "BLOCKER"
+      rationale: "Must include entertainment + personality for retention"
+      source: "Magnetic Marketing, Framework 20"
+
+    - condition: "Newsletter has no tracking configured"
+      severity: "BLOCKER"
+      rationale: "Untracked communication = no accountability"
+      source: "Magnetic Marketing, Rule #4"
+
+    - condition: "Skipping newsletter for 2+ months"
+      severity: "BLOCKER"
+      rationale: "Consistency is mandatory for retention bond"
+      source: "Magnetic Marketing, Framework 10"
+
+  warnings:
+    - condition: "Corporate tone instead of conversational"
+      severity: "WARNING"
+      rationale: "People bond with people, not with companies"
+
+    - condition: "No personality/personal stories in edition"
+      severity: "WARNING"
+      rationale: "Bond content is 25-35% of effective newsletters"
+
+    - condition: "No entertainment/enticement devices"
+      severity: "WARNING"
+      rationale: "Entertainment gives staying power"
+
+    - condition: "No referral ask for 3+ months"
+      severity: "WARNING"
+      rationale: "Newsletter is prime channel for referral asks"
+
+    - condition: "Unsubscribe rate > 1% per edition"
+      severity: "WARNING"
+      rationale: "May indicate content relevance or frequency issues"
+
+# ============================================================================
+# INTEGRATION MAP
+# ============================================================================
+
+integrations:
+  depends_on:
+    - sop: "sop-brand-by-dr.md"
+      provides: "Retention strategy context (Winning Formula back-end)"
+    - sop: "sop-personal-branding-dr.md"
+      provides: "Brand voice and personality content"
+    - sop: "sop-storyselling.md"
+      provides: "Stories for personality and authority sections"
+    - sop: "sop-dr-social-media.md"
+      provides: "Social leads that grow the newsletter list"
+
+  feeds_into:
+    - sop: "sop-brand-by-dr.md"
+      provides: "Newsletter as central retention pillar"
+    - sop: "sop-personal-branding-dr.md"
+      provides: "YOUbiquity touchpoint for personal brand"
+    - sop: "sop-storyselling.md"
+      provides: "Monthly channel for story repetition"
+    - sop: "sop-dr-social-media.md"
+      provides: "Newsletter list as owned media backup for social"
+
+  shared_frameworks:
+    - name: "Newsletter Content Formula"
+      usage: "Core framework -- 4 content types balanced"
+    - name: "Retention System (2 Pillars)"
+      usage: "Newsletter = Pillar 1"
+    - name: "11-Point Referral System"
+      usage: "Referral asks integrated into newsletter"
+    - name: "10 Regras Fundacionais"
+      usage: "CTA, urgency, tracking in every edition"
+    - name: "Enticement Devices"
+      usage: "Entertainment content for staying power"
+    - name: "Own Your Media"
+      usage: "Newsletter as primary owned channel"
+    - name: "YOUbiquity"
+      usage: "Monthly touchpoint in omnipresence strategy"
+    - name: "StorySelling 4 Key Factors"
+      usage: "Story content for personality sections"
+
+# ============================================================================
+# METRICS & KPIs
+# ============================================================================
+
+metrics:
+  email_newsletter:
+    - name: "Open Rate"
+      baseline: "20%"
+      target: "> 30%"
+      ideal: "> 40%"
+    - name: "Click Rate"
+      baseline: "3%"
+      target: "> 5%"
+      ideal: "> 8%"
+    - name: "CTA Conversion Rate"
+      baseline: "1%"
+      target: "> 2%"
+      ideal: "> 5%"
+    - name: "Unsubscribe Rate (per edition)"
+      baseline: "0.5%"
+      target: "< 0.3%"
+      ideal: "< 0.1%"
+    - name: "Revenue per Edition"
+      baseline: "$0"
+      target: "> $500"
+      ideal: "> $2,000"
+
+  retention_impact:
+    - name: "Reader Retention Rate (12m)"
+      target: "> non-reader retention rate"
+      measurement: "Compare readers vs non-readers"
+    - name: "Reader Recompra Rate"
+      target: "> non-reader recompra rate"
+    - name: "Reader Referral Rate"
+      target: "> non-reader referral rate"
+    - name: "Reader LTV"
+      target: "> non-reader LTV"
+
+  referral:
+    - name: "Referrals per Edition"
+      target: "> 3"
+      ideal: "> 10"
+    - name: "Referrals from Hard Ask (quarterly)"
+      target: "> 10"
+      ideal: "> 25"
+
+  overall:
+    - name: "Newsletter ROI"
+      formula: "(Revenue attributable + LTV uplift) / Production & send cost"
+      target: "Positive (newsletter pays for itself)"
+      ideal: "3x+ cost"
+
+# ============================================================================
+# PRODUCTION CALENDAR TEMPLATE
+# ============================================================================
+
+production_calendar:
+  day_01_to_05: "Monthly Planning (Phase 1)"
+  day_06_to_15: "Content Production (Phase 2)"
+  day_16_to_18: "DR Compliance Review (Phase 3)"
+  day_18_to_25: "Design & Send (Phase 4)"
+  day_26_to_30: "Follow-Up & Analysis (Phase 5)"
+
+  send_schedule:
+    email: "Between Day 21-25"
+    print: "Between Day 20-23 (to arrive by month start)"
+
+  follow_up_schedule:
+    day_plus_2: "Engagement follow-up email"
+    day_plus_5: "Non-converter CTA reinforcement"
+    day_plus_10: "Non-opener resend with new subject"
+    day_plus_15: "Referral thank-you messages"
+
+# ============================================================================
+# VERSION HISTORY
+# ============================================================================
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-11"
+    changes: "Initial blueprint creation"
+    author: "kennedy squad"

@@ -1,0 +1,81 @@
+squad:
+  name: asaas-payment
+  version: 1.0.0
+  short-title: Asaas Payment Gateway Specialist
+  description: >-
+    Squad especialista em integração com Asaas Payment Gateway.
+    Internaliza toda a documentação Asaas (pagamentos, subcontas, webhooks,
+    splits, PIX, cartão, boleto), valida payloads, ensina padrões de
+    pagamento a outros agents, e garante que integrações funcionem
+    corretamente em qualquer projeto. Checkout transparente, sem redirect.
+  author: Synkra AIOS
+  icon: "💳"
+  entry_agent: asaas-chief
+  slashPrefix: asaasPayment
+  tested: false
+
+workspace_integration:
+  level: none
+  rationale: "Generic squad — reads project code on demand via agent commands, no workspace dependency"
+  read_paths: []
+  write_paths: []
+  template_namespace: null
+
+pattern_library:
+  prefix: AP
+  naming_convention:
+    format: "{PREFIX}-{CATEGORY}-{NUMBER}"
+    example: "AP-TP-001"
+  categories:
+    - id: TP
+      name: "Task Patterns"
+      description: "Patterns for payment integration tasks"
+    - id: EP
+      name: "Executor Patterns"
+      description: "Patterns for executor selection"
+    - id: PP
+      name: "Process Patterns"
+      description: "Patterns for payment workflows"
+    - id: IP
+      name: "Integration Patterns"
+      description: "Patterns for Asaas API integration"
+    - id: VP
+      name: "Validation Patterns"
+      description: "Patterns for payload validation"
+  patterns: []
+
+task_standards:
+  enforce_anatomy: true
+  validator: "AP-TP-001"
+  required_fields:
+    - task_name
+    - status
+    - responsible_executor
+    - execution_type
+    - input
+    - output
+    - action_items
+    - acceptance_criteria
+
+executor_types:
+  human:
+    id: "AP-EP-001"
+    use_for: ["API key management", "Production deployment approval", "Asaas dashboard config"]
+  agent:
+    id: "AP-EP-002"
+    use_for: ["Code audit", "Payload validation", "Integration design", "Bug diagnosis"]
+  hybrid:
+    id: "AP-EP-003"
+    use_for: ["Webhook testing", "Payment flow verification", "Sandbox testing"]
+  worker:
+    id: "AP-EP-004"
+    use_for: ["Payload schema validation", "URL format checks", "Rate limit enforcement"]
+
+workflow_config:
+  checkpoint_policy: always_active
+  fail_fast: true
+  allow_manual_override: false
+
+dependencies:
+  squads:
+    - db-sage  # For database migration guidance

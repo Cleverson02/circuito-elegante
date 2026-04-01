@@ -1,0 +1,436 @@
+# Blueprint: 15-Step Ultimate Marketing Plan Squad Blueprint
+# Source: The Ultimate Marketing Plan (full book, pp. 1-224)
+# Squad: kennedy | Version: 1.0 | Date: 2026-02-11
+
+---
+
+metadata:
+  name: "15-Step Ultimate Marketing Plan Blueprint"
+  description: >
+    Master blueprint that orchestrates all 15 steps of Kennedy's
+    Ultimate Marketing Plan. This is the integration layer that
+    connects all other SOPs and blueprints into a single cohesive
+    marketing system governed by the Marketing Triangle.
+  version: "1.0"
+# source_sop: sop-15-step-marketing-plan.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-15-step-marketing-plan.md"
+  primary_agent: "kennedy-chief"
+  mental_model: "MM_001 + 15-Step System"
+  source:
+    book: "The Ultimate Marketing Plan"
+    author: "Dan Kennedy"
+    chapters: "All (1-15)"
+    pages: "1-224"
+
+# ---
+
+# Agent Assignments
+
+agents:
+  lead:
+    name: "kennedy-chief"
+    role: "Master Orchestrator"
+    responsibilities:
+      - "Coordinate all 15 steps across agents"
+      - "Ensure Marketing Triangle alignment"
+      - "Final validation of integrated plan"
+      - "Resolve conflicts between steps"
+
+  support:
+    - name: "kennedy-offers"
+      role: "Steps 1, 7 — Message & Offers"
+      responsibilities:
+        - "USP Construction (Step 1)"
+        - "Widget/Irresistible Offer creation (Step 7)"
+        - "Message Assembly coordination"
+
+    - name: "kennedy-direct-response"
+      role: "Steps 2, 8, 14 — Presentation & Tools"
+      responsibilities:
+        - "Message presentation and DR compliance (Step 2)"
+        - "Marketing tools selection (Step 8)"
+        - "Technology evaluation (Step 14)"
+
+    - name: "kennedy-audit"
+      role: "Steps 3, 4 — Targeting & Proof"
+      responsibilities:
+        - "Target market selection and validation (Step 3)"
+        - "Preponderance of proof system (Step 4)"
+
+    - name: "kennedy-brand"
+      role: "Steps 5, 6 — Image & PR"
+      responsibilities:
+        - "First impressions audit (Step 5)"
+        - "Free advertising / PR strategy (Step 6)"
+
+    - name: "kennedy-magnetic"
+      role: "Steps 9, 10, 11 — Growth Systems"
+      responsibilities:
+        - "Short-term sales surges (Step 9)"
+        - "Long-term customer value (Step 10)"
+        - "Customer communities (Step 11)"
+
+    - name: "kennedy-referrals"
+      role: "Step 12 — Referral Systems"
+      responsibilities:
+        - "Celebrity and referral programs (Step 12)"
+        - "Host-Beneficiary alliances"
+
+    - name: "kennedy-advisor"
+      role: "Step 13 — Resilience"
+      responsibilities:
+        - "Recession-proofing strategy (Step 13)"
+        - "Contingency planning"
+
+# ---
+
+# Workflow Phases
+
+workflow:
+  total_phases: 4
+  estimated_duration: "4-12 weeks"
+  parallel_work: true
+  note: "Phases represent implementation waves, not sequential blockers"
+
+  phases:
+    - phase: 1
+      name: "Foundation (Steps 1-4)"
+      duration: "Weeks 1-2"
+      coordinator: "kennedy-chief"
+      description: >
+        Build the marketing foundation: Message, Presentation,
+        Targeting, and Proof. These 4 steps form the core of
+        the Marketing Triangle and must be completed before
+        any other steps can be effective.
+
+      steps:
+        - step: 1
+          name: "Put Together the Right Message"
+          agent: "kennedy-offers"
+          sub_blueprint: "blueprint-usp-construction-squad-blueprint.yaml"
+          deliverables:
+            - "USP Statement"
+            - "Widget (3 levels)"
+            - "Customer Bill of Rights"
+            - "Code of Values"
+            - "Magnificent Mission"
+            - "Message Assembly Document"
+
+        - step: 2
+          name: "Present Your Message"
+          agent: "kennedy-direct-response"
+          sub_blueprint: "blueprint-pest-to-welcome-guest-squad-blueprint.yaml"
+          deliverables:
+            - "Presentation covering 5 Buying Decisions"
+            - "3 Presentation Keys applied"
+            - "A-pile format materials"
+            - "CTA in every piece"
+
+        - step: 3
+          name: "Pick the Right Targets"
+          agent: "kennedy-audit"
+          deliverables:
+            - "Geographic targeting plan"
+            - "Demographic targeting plan"
+            - "Affinity targeting plan"
+            - "Combined targeting strategy (2+ methods)"
+            - "Starving Crowd identification"
+
+        - step: 4
+          name: "Prove Your Case"
+          agent: "kennedy-audit"
+          deliverables:
+            - "Claims list (all claims to substantiate)"
+            - "Doubts list (all doubts to eliminate)"
+            - "Proof mapped to each claim/doubt"
+            - "Testimonials collected (10+ minimum)"
+            - "Before/After snapshots"
+            - "Visual proof elements"
+
+      quality_gate:
+        criteria:
+          - "USP passes 7-criteria test"
+          - "Presentation covers all 5 buying decisions"
+          - "Target uses 2+ methods"
+          - "Preponderance of proof: 1+ proof per claim"
+        blocker: true
+        reviewer: "kennedy-chief"
+
+    - phase: 2
+      name: "Infrastructure (Steps 5-8)"
+      duration: "Weeks 3-4"
+      coordinator: "kennedy-chief"
+      description: >
+        Build the marketing infrastructure: Image, PR,
+        financial orientation, and tool selection.
+
+      steps:
+        - step: 5
+          name: "Put Your Best Foot Forward"
+          agent: "kennedy-brand"
+          deliverables:
+            - "Touchpoint audit report"
+            - "Improvement plan per touchpoint"
+            - "Visual consistency guidelines"
+            - "First impression standards"
+
+        - step: 6
+          name: "Get Free Advertising"
+          agent: "kennedy-brand"
+          deliverables:
+            - "PR strategy document"
+            - "Press release templates"
+            - "Media contact list"
+            - "Expert positioning plan"
+            - "Content calendar for earned media"
+
+        - step: 7
+          name: "Malibuism (Get Rich Marketing)"
+          agent: "kennedy-offers"
+          sub_blueprint: "blueprint-widget-offer-squad-blueprint.yaml"
+          deliverables:
+            - "Financial ROI targets per channel"
+            - "Revenue-oriented offer structure"
+            - "Profitability analysis per Widget"
+            - "Break-even analysis"
+
+        - step: 8
+          name: "Pick the Right Marketing Tools"
+          agent: "kennedy-direct-response"
+          deliverables:
+            - "Channel selection matrix (WHO-based)"
+            - "Budget allocation per channel"
+            - "Tool configuration plan"
+            - "Integration architecture"
+
+      quality_gate:
+        criteria:
+          - "All touchpoints audited and improved"
+          - "PR plan with calendar"
+          - "ROI targets set per channel"
+          - "Tools selected and budgeted"
+        blocker: false
+        reviewer: "kennedy-chief"
+
+    - phase: 3
+      name: "Growth Systems (Steps 9-12)"
+      duration: "Months 2-3"
+      coordinator: "kennedy-magnetic"
+      description: >
+        Implement the growth engines: Sales surges,
+        customer value maximization, communities,
+        and referral systems.
+
+      steps:
+        - step: 9
+          name: "Create Short-Term Sales Surges"
+          agent: "kennedy-magnetic"
+          deliverables:
+            - "Quarterly surge calendar"
+            - "Surge campaign templates"
+            - "Urgency mechanisms defined"
+            - "Reactivation campaign for dormant clients"
+
+        - step: 10
+          name: "Build Long-Term Customer Value"
+          agent: "kennedy-magnetic"
+          deliverables:
+            - "Monthly newsletter plan (print preferred)"
+            - "Upsell/cross-sell matrix"
+            - "Customer communication calendar"
+            - "Retention metrics dashboard"
+
+        - step: 11
+          name: "Create Customer Communities"
+          agent: "kennedy-magnetic"
+          deliverables:
+            - "Membership program structure"
+            - "Exclusive benefits catalog"
+            - "Community platform selection"
+            - "Engagement plan"
+
+        - step: 12
+          name: "Create Celebrity and Referrals"
+          agent: "kennedy-referrals"
+          sub_blueprint: "blueprint-host-beneficiary-squad-blueprint.yaml"
+          deliverables:
+            - "Referral system design"
+            - "Champion identification"
+            - "Endorsed mailing campaigns"
+            - "Referral rewards program"
+            - "Case study publication plan"
+
+      quality_gate:
+        criteria:
+          - "At least 1 surge planned and ready"
+          - "Newsletter system active"
+          - "Membership program designed"
+          - "Referral system operational"
+        blocker: false
+        reviewer: "kennedy-chief"
+
+    - phase: 4
+      name: "Mastery & Integration (Steps 13-15)"
+      duration: "Months 3-6"
+      coordinator: "kennedy-chief"
+      description: >
+        Complete the system with resilience planning,
+        technology implementation, and full integration
+        of all 15 steps into a cohesive marketing plan.
+
+      steps:
+        - step: 13
+          name: "Prosper Through Recession"
+          agent: "kennedy-advisor"
+          deliverables:
+            - "Recession contingency plan"
+            - "Counter-cyclical marketing strategy"
+            - "Essential vs. discretionary budget split"
+            - "Opportunity-in-downturn playbook"
+
+        - step: 14
+          name: "Use Marketing Technologies"
+          agent: "kennedy-direct-response"
+          deliverables:
+            - "Technology audit (current stack)"
+            - "DR-compliant tech recommendations"
+            - "Automation opportunities mapped"
+            - "Integration plan"
+
+        - step: 15
+          name: "Create the Ultimate Marketing Plan"
+          agent: "kennedy-chief"
+          deliverables:
+            - "Integrated Marketing Plan document"
+            - "Annual marketing calendar"
+            - "Budget allocation summary"
+            - "KPI dashboard"
+            - "Quarterly review schedule"
+            - "Team responsibilities matrix"
+
+      quality_gate:
+        criteria:
+          - "All 15 steps documented"
+          - "Marketing Triangle validated"
+          - "Calendar with dates and owners"
+          - "Metrics defined per step"
+          - "Quarterly review scheduled"
+        blocker: true
+        reviewer: "kennedy-chief"
+
+# ---
+
+# Quality Gates Summary
+
+quality_gates:
+  - gate: "Foundation Complete"
+    phase: 1
+    criteria: "Steps 1-4 all delivered and validated"
+    blocker: true
+
+  - gate: "Infrastructure Ready"
+    phase: 2
+    criteria: "Steps 5-8 operational"
+    blocker: false
+
+  - gate: "Growth Engines Active"
+    phase: 3
+    criteria: "Steps 9-12 at least minimally operational"
+    blocker: false
+
+  - gate: "Full Integration"
+    phase: 4
+    criteria: "15/15 steps complete, plan document finalized"
+    blocker: true
+
+# ---
+
+# Success Metrics
+
+metrics:
+  per_step:
+    - step: 1
+      metric: "USP Recall Rate > 70%"
+    - step: 2
+      metric: "Conversion Rate > 15%"
+    - step: 3
+      metric: "Cost per Qualified Lead reduced 30%"
+    - step: 4
+      metric: "Proof Elements > 50"
+    - step: 5
+      metric: "NPS > 60"
+    - step: 6
+      metric: "Earned Media > 2/month"
+    - step: 7
+      metric: "ROAS > 3x"
+    - step: 8
+      metric: "> 80% channels ROI positive"
+    - step: 9
+      metric: "Revenue lift > 50% during surges"
+    - step: 10
+      metric: "Customer retention > 80%"
+    - step: 11
+      metric: "Community membership > 30% of customers"
+    - step: 12
+      metric: "Referral rate > 20%"
+    - step: 13
+      metric: "Revenue stability < 15% drop in downturn"
+    - step: 14
+      metric: "> 60% processes automated"
+    - step: 15
+      metric: "Plan completion: 15/15 steps"
+
+  overall:
+    - name: "Marketing Plan Completeness"
+      target: "15/15 steps implemented"
+    - name: "Revenue Growth"
+      target: "> 30% year-over-year"
+    - name: "Customer Acquisition Cost"
+      target: "Reduced 40% from baseline"
+    - name: "Customer Lifetime Value"
+      target: "Increased 50% from baseline"
+
+# ---
+
+# Dependencies
+
+dependencies:
+  requires: []  # Master blueprint - no prerequisites
+  sub_blueprints:
+    - "blueprint-usp-construction-squad-blueprint.yaml"
+    - "blueprint-widget-offer-squad-blueprint.yaml"
+    - "blueprint-host-beneficiary-squad-blueprint.yaml"
+    - "blueprint-pest-to-welcome-guest-squad-blueprint.yaml"
+    - "blueprint-information-first-marketing-squad-blueprint.yaml"
+
+# ---
+
+# Risk Mitigation
+
+risks:
+  - risk: "Overwhelm - trying to do all 15 steps at once"
+    probability: "high"
+    impact: "high"
+    mitigation: "Phase-based approach: Foundation first, then layer"
+
+  - risk: "Cherry-picking steps instead of completing all"
+    probability: "high"
+    impact: "high"
+    mitigation: "Quality gates enforce sequential completion"
+
+  - risk: "Budget constraints limit implementation"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Minimum viable version per step; scale up over time"
+
+  - risk: "Losing momentum after Phase 1"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Quick wins from surges (Step 9) maintain energy"
+
+  - risk: "Team resistance to systematic marketing"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Show ROI from early steps; celebrate wins publicly"

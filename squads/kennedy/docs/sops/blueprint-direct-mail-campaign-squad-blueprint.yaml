@@ -1,0 +1,269 @@
+# Blueprint: Direct Mail Campaign System (A-Pile Methodology)
+# Dan Kennedy's Complete Direct Mail Architecture
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Direct Mail Campaign Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-direct-mail-campaign.md"
+  source_courses:
+    - "No B.S. Direct Marketing, Third Edition"
+    - "The Ultimate Sales Letter, 3rd Edition"
+  description: >
+    Blueprint para campanhas de mala direta completas usando a metodologia A-Pile
+    de Kennedy: estrategia de envelope, copy de resposta direta, rastreamento por
+    peca, e sequencia multitouch de 4+ steps.
+  kennedy_quote: >
+    "Nothing beats the mailman bringing a package to the prospect's house."
+    "Save your money. Never do one-shot mail."
+
+agents:
+  primary_agent:
+    name: "direct-mail-strategist"
+    role: "Estrategista de Campanha de Mala Direta"
+    responsibilities:
+      - Definir Message-Market-Media match para cada campanha
+      - Selecionar e segmentar listas de envio
+      - Projetar estrategia de envelope (Sneak-Up vs Billboard)
+      - Calcular budget e ROI projetado
+      - Coordenar sequencia multitouch de 4+ steps
+
+  supporting_agents:
+    - name: "envelope-engineer"
+      role: "Engenheiro de Envelopes"
+      responsibilities:
+        - Projetar envelopes para A-Pile
+        - Selecionar grabbers e lumpy mail
+        - Definir tipo de selo, enderecamento e remetente
+        - Testar diferentes abordagens (Sneak-Up, Billboard, Hibrido)
+        - Garantir que envelope sobrevive ao "wastebasket sort"
+
+    - name: "direct-mail-copywriter"
+      role: "Copywriter de Mala Direta"
+      responsibilities:
+        - Escrever cartas de vendas usando 3 formatos (Mail-Order, Advertorial, Sales Letter)
+        - Criar headlines usando 12 formulas de Kennedy
+        - Aplicar PAS (Problem-Agitate-Solve)
+        - Escrever P.S. estrategico
+        - Desenvolver ofertas hibridas (Direct Purchase + Lead-Gen)
+
+    - name: "tracking-analyst"
+      role: "Analista de Rastreamento"
+      responsibilities:
+        - Implementar tracking codes por campanha, lista e step
+        - Configurar numeros de telefone e URLs dedicados
+        - Monitorar respostas diariamente
+        - Calcular metricas de ROI
+        - Produzir relatorios de performance
+
+workflow_phases:
+
+  phase_1_strategy:
+    name: "Planejamento Estrategico"
+    duration: "1 semana"
+    steps:
+      - step: "Responder 10 Smart Questions"
+        action: "Pesquisa profunda do prospect-alvo"
+        output: "Perfil completo do prospect"
+        agent: "direct-mail-strategist"
+
+      - step: "Definir Results Triangle"
+        action: "Alinhar Message + Market + Media"
+        output: "Results Triangle documentado"
+        agent: "direct-mail-strategist"
+
+      - step: "Selecionar e segmentar lista"
+        action: "Escolher lista propria, comprada ou referral; segmentar"
+        output: "Lista validada e segmentada"
+        agent: "direct-mail-strategist"
+
+      - step: "Definir oferta hibrida"
+        action: "Direct Purchase + Lead-Gen + urgencia"
+        output: "Oferta completa documentada"
+        agent: "direct-mail-strategist"
+
+      - step: "Calcular budget"
+        action: "(Custo/peca x lista x steps) vs ROI projetado"
+        output: "Budget aprovado"
+        agent: "direct-mail-strategist"
+
+  phase_2_envelope:
+    name: "Engenharia do Envelope"
+    duration: "3-5 dias"
+    steps:
+      - step: "Classificar destinatario"
+        action: "Frio vs quente; com gatekeeper vs sem"
+        output: "Tipo de abordagem definido"
+        agent: "envelope-engineer"
+
+      - step: "Projetar envelope"
+        action: "Sneak-Up, Billboard ou Hibrido"
+        output: "Especificacao completa do envelope"
+        agent: "envelope-engineer"
+
+      - step: "Selecionar grabber"
+        action: "Decidir se usa lumpy mail e qual objeto"
+        output: "Grabber definido e adquirido"
+        agent: "envelope-engineer"
+
+  phase_3_copy:
+    name: "Criacao de Copy"
+    duration: "2 semanas"
+    steps:
+      - step: "Escrever carta principal (Step 1)"
+        action: "Formato escolhido + headline + PAS + oferta + urgencia + P.S."
+        output: "Carta principal completa"
+        agent: "direct-mail-copywriter"
+
+      - step: "Escrever 2nd Notice (Step 2)"
+        action: "Referenciar carta 1 + novo angulo + urgencia escalada"
+        output: "Carta Step 2 completa"
+        agent: "direct-mail-copywriter"
+
+      - step: "Escrever Third and Final Notice (Step 3)"
+        action: "Urgencia maxima + deadline + copias anteriores"
+        output: "Carta Step 3 completa"
+        agent: "direct-mail-copywriter"
+
+      - step: "Escrever Change the Offer (Step 4)"
+        action: "Oferta DIFERENTE para nao-respondedores"
+        output: "Carta Step 4 completa"
+        agent: "direct-mail-copywriter"
+
+  phase_4_production:
+    name: "Producao e Teste"
+    duration: "1-2 semanas"
+    steps:
+      - step: "Configurar tracking"
+        action: "Codigos, URLs, telefones dedicados por step"
+        output: "Sistema de tracking operacional"
+        agent: "tracking-analyst"
+
+      - step: "Produzir amostra fisica"
+        action: "Imprimir e montar 5-10 amostras completas"
+        output: "Amostras para revisao"
+        agent: "envelope-engineer"
+
+      - step: "Teste com batch pequeno"
+        action: "Enviar para 100-200 enderecos"
+        output: "Dados iniciais de resposta"
+        agent: "tracking-analyst"
+
+  phase_5_execution:
+    name: "Envio e Monitoramento"
+    duration: "4-8 semanas (sequencia completa)"
+    steps:
+      - step: "Enviar Step 1"
+        action: "Batch principal da carta principal"
+        output: "Step 1 enviado e rastreado"
+        agent: "direct-mail-strategist"
+
+      - step: "Enviar Steps 2-4"
+        action: "Sequencia para nao-respondedores em timing definido"
+        output: "Sequencia completa executada"
+        agent: "direct-mail-strategist"
+
+      - step: "Monitorar e reportar"
+        action: "Dashboard diario de respostas e metricas"
+        output: "Relatorio final de campanha"
+        agent: "tracking-analyst"
+
+quality_gates:
+
+  gate_1_strategy_approved:
+    name: "Estrategia Aprovada"
+    criteria:
+      - "10 Smart Questions respondidas com especificidade"
+      - "Results Triangle documentado e alinhado"
+      - "Lista segmentada e validada"
+      - "Oferta hibrida com urgencia real"
+      - "Budget aprovado"
+    blocker: true
+
+  gate_2_envelope_tested:
+    name: "Envelope Projetado e Testado"
+    criteria:
+      - "Abordagem definida (Sneak-Up/Billboard/Hibrido)"
+      - "Amostra fisica produzida e revisada"
+      - "Grabber selecionado (se aplicavel)"
+    blocker: true
+
+  gate_3_copy_complete:
+    name: "Copy Completo para 4 Steps"
+    criteria:
+      - "Headline forte em cada carta"
+      - "Oferta clara com urgencia em cada step"
+      - "Instrucoes de resposta em cada peca"
+      - "P.S. estrategico em cada carta"
+      - "Referencia sequencial entre steps"
+    blocker: true
+
+  gate_4_tracking_live:
+    name: "Tracking Operacional"
+    criteria:
+      - "Codigos unicos por step configurados"
+      - "URLs/telefones dedicados ativos"
+      - "Dashboard de metricas funcional"
+    blocker: false
+
+metrics:
+  by_list_type:
+    cold_purchased:
+      response_rate: "0.5-2%"
+      roi_target: "2:1"
+    cold_micro_market:
+      response_rate: "2-7%"
+      roi_target: "5:1"
+    warm_leads:
+      response_rate: "5-15%"
+      roi_target: "8:1"
+    warm_customers:
+      response_rate: "10-25%"
+      roi_target: "15:1"
+    referral_endorsed:
+      response_rate: "15-30%"
+      roi_target: "20:1+"
+
+  tracking:
+    - "Taxa de resposta por step"
+    - "Custo por peca enviada"
+    - "Custo por resposta"
+    - "Vendas geradas por campanha"
+    - "ROI por campanha"
+    - "CLV dos respondentes"
+    - "Taxa de retorno (endereco errado)"
+
+resources:
+  budget_per_piece:
+    letter_standard: "$1.50-3.00"
+    letter_grabber: "$3.00-10.00"
+    fedex_premium: "$15-25"
+    postcard: "$0.30-1.00"
+
+  tools:
+    - "Sistema de impressao com personalizacao"
+    - "Fornecedor de selos e servico postal"
+    - "CRM com automacao de sequencias"
+    - "Numeros de telefone dedicados"
+    - "URLs de tracking dedicadas"
+    - "Fornecedor de grabbers/lumpy mail"
+
+dependencies:
+  uses_frameworks_from:
+    - sop: "sop-results-triangle.md"
+    - sop: "sop-headline-formulas.md"
+    - sop: "sop-usp-construction.md"
+    - sop: "sop-feature-to-benefit.md"
+    - sop: "sop-damaging-admission.md"
+    - sop: "sop-grabber-lumpy-mail.md"
+  feeds_into:
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-shock-and-awe-package.md"
+    - sop: "sop-retention-system.md"
+
+sources:
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"
+  - "dan-kennedy-ultimate-sales-letter-frameworks.md"
+  - "dan-kennedy-ultimate-no-bs-business-success-frameworks.md"

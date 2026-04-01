@@ -1,0 +1,243 @@
+# Blueprint: Multi-Touch Follow-Up Campaign System
+# Dan Kennedy's 4-Level Follow-Up Architecture
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Follow-Up Sequence Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-follow-up-sequence.md"
+  source_courses:
+    - "Magnetic Marketing System"
+    - "Affluent Client Attraction Playbook"
+    - "Magnetic Marketing RB Interview"
+    - "Referral Machine (Dave Dee Bonus)"
+  description: >
+    Blueprint para 4 niveis de follow-up: Three-Step Letters (aquisicao basica),
+    Appointment No-Sale (pos-apresentacao), 53-Day Premium (leads de alto valor),
+    e Reativacao de 4 Passos (clientes perdidos). Multi-canal, multi-oferta.
+  kennedy_quote: >
+    "Process and follow up is where the game is won."
+    "We never failed to make a profit."
+
+agents:
+  primary_agent:
+    name: "follow-up-architect"
+    role: "Arquiteto de Sequencias de Follow-Up"
+    responsibilities:
+      - Definir nivel de follow-up por tipo de lead
+      - Desenhar sequencias completas com timing
+      - Configurar automacao e triggers no CRM
+      - Analisar conversao por step e otimizar
+      - Coordenar integracao entre niveis
+
+  supporting_agents:
+    - name: "sequence-copywriter"
+      role: "Copywriter de Sequencias"
+      responsibilities:
+        - Escrever cartas/emails para cada step
+        - Criar ofertas diferentes por step
+        - Desenvolver headlines e gimmicks fisicos
+        - Manter biblioteca de templates por nivel
+        - Testar angulos diferentes
+
+    - name: "channel-coordinator"
+      role: "Coordenador Multi-Canal"
+      responsibilities:
+        - Coordenar envios fisicos (correio, FedEx)
+        - Agendar emails e automacoes
+        - Coordenar follow-up telefonico
+        - Gerenciar webinars/webcasts de follow-up
+        - Garantir timing correto entre canais
+
+    - name: "lead-sharing-manager"
+      role: "Gestor de Lead Sharing"
+      responsibilities:
+        - Identificar parceiros para lead sharing
+        - Coordenar troca de leads nao-convertidos
+        - Rastrear valor de leads compartilhados
+        - Manter relacionamentos de reciprocidade
+
+workflow_phases:
+
+  phase_1_architecture:
+    name: "Arquitetura do Sistema"
+    duration: "1 semana"
+    steps:
+      - step: "Classificar leads por CLV"
+        action: "Definir qual nivel de follow-up para cada faixa de CLV"
+        output: "Matriz CLV x Nivel de Follow-Up"
+        agent: "follow-up-architect"
+
+      - step: "Definir ofertas por step"
+        action: "Criar 1-4 ofertas diferentes por nivel"
+        output: "Menu de ofertas documentado"
+        agent: "follow-up-architect"
+
+      - step: "Selecionar canais por nivel"
+        action: "Definir mix de canais (correio, email, telefone, FedEx)"
+        output: "Mapa de canais por nivel"
+        agent: "channel-coordinator"
+
+  phase_2_content_creation:
+    name: "Criacao de Conteudo"
+    duration: "2-3 semanas"
+    steps:
+      - step: "Escrever cartas Nivel 1"
+        action: "3 cartas com referencia sequencial, PAS, long copy"
+        output: "3 cartas prontas com gimmicks"
+        agent: "sequence-copywriter"
+
+      - step: "Escrever sequencia Nivel 2"
+        action: "Pacote de follow-up + 2-3 touches adicionais"
+        output: "Sequencia Appointment No-Sale completa"
+        agent: "sequence-copywriter"
+
+      - step: "Escrever sequencia Nivel 3"
+        action: "53 dias com 4 ofertas, multi-canal"
+        output: "30+ pecas de conteudo para sequencia premium"
+        agent: "sequence-copywriter"
+
+      - step: "Escrever campanha Nivel 4"
+        action: "3 postcards + 1 email de reativacao"
+        output: "Campanha de 4 passos pronta"
+        agent: "sequence-copywriter"
+
+  phase_3_automation:
+    name: "Configuracao de Automacao"
+    duration: "1-2 semanas"
+    steps:
+      - step: "Configurar triggers"
+        action: "CRM triggers para cada nivel e cada step"
+        output: "Automacao operacional"
+        agent: "follow-up-architect"
+
+      - step: "Configurar tracking"
+        action: "Tracking codes unicos por step e por canal"
+        output: "Dashboard de conversao por step"
+        agent: "channel-coordinator"
+
+      - step: "Configurar lead sharing"
+        action: "Pipeline de leads nao-convertidos para parceiros"
+        output: "Sistema de lead sharing operacional"
+        agent: "lead-sharing-manager"
+
+  phase_4_test:
+    name: "Teste e Validacao"
+    duration: "2-4 semanas"
+    steps:
+      - step: "Testar cada nivel"
+        action: "Batch de 50-200 leads por nivel"
+        output: "Metricas de conversao por step"
+        agent: "follow-up-architect"
+
+      - step: "Otimizar"
+        action: "Ajustar ofertas, timing, canais com base em dados"
+        output: "Sequencias otimizadas"
+        agent: "follow-up-architect"
+
+  phase_5_scale:
+    name: "Scale e Operacao Continua"
+    duration: "Ongoing"
+    steps:
+      - step: "Ativar para todos os leads"
+        action: "Automatizar para novos leads e lista de inativos"
+        output: "Sistema em operacao continua"
+        agent: "follow-up-architect"
+
+      - step: "Revisao mensal"
+        action: "Analisar metricas, atualizar ofertas, testar novos angulos"
+        output: "Relatorio mensal + plano de otimizacao"
+        agent: "follow-up-architect"
+
+quality_gates:
+
+  gate_1_architecture_defined:
+    name: "Arquitetura Definida"
+    criteria:
+      - "Niveis de follow-up mapeados por CLV"
+      - "Ofertas diferentes para cada step"
+      - "Canais definidos por nivel"
+    blocker: true
+
+  gate_2_content_ready:
+    name: "Conteudo Pronto"
+    criteria:
+      - "Todas as pecas escritas e revisadas"
+      - "Gimmicks fisicos preparados"
+      - "Templates no CRM"
+    blocker: true
+
+  gate_3_automation_live:
+    name: "Automacao Operacional"
+    criteria:
+      - "Triggers configurados e testados"
+      - "Tracking codes ativos"
+      - "Dashboard de conversao funcionando"
+    blocker: false
+
+  gate_4_tested:
+    name: "Testado e Validado"
+    criteria:
+      - "Batch de teste executado para cada nivel"
+      - "Metricas de conversao documentadas"
+      - "Otimizacoes implementadas"
+    blocker: false
+
+metrics:
+  by_level:
+    level_1_three_step:
+      response_rate: "2-7%"
+      roi_target: "3:1"
+    level_2_appointment_no_sale:
+      response_rate: "5-15%"
+      roi_target: "5:1"
+    level_3_53_day_premium:
+      response_rate: "10-25%"
+      roi_target: "10:1"
+    level_4_reactivation:
+      response_rate: "13%"
+      roi_target: "20:1+"
+
+  tracking:
+    - "Conversao por step"
+    - "Custo por conversao"
+    - "Tempo medio de conversao"
+    - "Canal mais efetivo"
+    - "Oferta mais efetiva"
+    - "Lead lifetime antes de nurture"
+
+resources:
+  budget_per_lead:
+    level_1: "$5-15 (3 cartas)"
+    level_2: "$15-40 (pacote + follow-ups)"
+    level_3: "$50-200 (53 dias multi-canal)"
+    level_4: "$3-10 (3 postcards + 1 email)"
+
+  tools:
+    - "CRM com automacao de sequencias"
+    - "Servico de impressao e envio (correio)"
+    - "Conta FedEx (para nivel 3)"
+    - "Plataforma de email marketing"
+    - "Sistema de tracking (codigos unicos)"
+    - "Plataforma de webinar (para nivel 3)"
+
+dependencies:
+  receives_leads_from:
+    - sop: "sop-affluent-attraction.md"
+    - sop: "sop-referral-machine.md"
+    - sop: "sop-champion-circle.md"
+  feeds_conversions_to:
+    - sop: "sop-retention-system.md"
+  uses_materials_from:
+    - sop: "sop-swipe-file-system.md"
+    - sop: "sop-dual-guarantee.md"
+
+sources:
+  - "dan-kennedy-magnetic-marketing/dan-kennedy-magnetic-marketing-summary.md"
+  - "dan-kennedy-magnetic-marketing/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-affluent-client/dan-kennedy-affluent-client-summary.md"
+  - "dan-kennedy-affluent-client/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-magnetic-marketing-rb/dan-kennedy-magnetic-marketing-rb-summary.md"
+  - "dan-kennedy-referral-machine/dan-kennedy-referral-machine-summary.md"

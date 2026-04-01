@@ -1,0 +1,502 @@
+# Lead Magnet Creation Squad Blueprint — Dan Kennedy
+# Pattern: KN-SB-002 (Kennedy Squad Blueprint Standard)
+# Source: Magnetic Marketing — Dan Kennedy, Chapter 7
+# Version: 1.0.0
+# Generated: 2026-02-11
+# source_sop: sop-lead-magnet-creation.md
+
+squad:
+  name: lead-magnet-creation
+  purpose: "Create Lead Generation Magnets that fulfill Kennedy's 4 Jobs: attract right people, repel wrong ones, establish authority, create desire to buy"
+  domain: lead-generation
+  source_playbook: "Magnetic Marketing — Dan Kennedy, Chapter 7"
+
+  core_definition: |
+    Lead Generation Magnet = Valuable content offered free
+                            + In exchange for contact information
+                            + Fulfilling 4 specific Jobs
+                            + Predisposing prospect to buy core offer
+
+  business_impact: |
+    - Qualified leads who raised their hand indicating interest
+    - Separation of interested prospects from generic mass
+    - Authority positioning before asking for the sale
+    - Yes Ladder initiation (micro-agreement cascade)
+
+# ===============================================================================
+# TIER STRUCTURE
+# ===============================================================================
+
+tier_structure:
+  orchestrator:
+    - agent: lgm-architect
+      role: "Orchestrate complete Lead Gen Magnet creation fulfilling 4 Jobs"
+      decisions:
+        - "Approve problem selection (narrow, significant, revelatory)"
+        - "Validate format choice matches WHO preferences"
+        - "Ensure 4 Jobs are fulfilled in content"
+        - "Approve title after testing"
+      kpis:
+        - "LGM capture rate (>25%)"
+        - "LGM consumption rate (>50%)"
+        - "LGM to next-step rate (>10%)"
+
+  tier_0_diagnosis:
+    - agent: problem-selector
+      role: "Identify the narrow, significant problem the LGM will solve"
+      inputs:
+        - "WHO profile (from who-profiler)"
+        - "5 Psychographic Questions answers"
+        - "Core offer description"
+        - "WHO problems list (minimum 10)"
+      outputs:
+        - "Selected problem statement"
+        - "Problem narrowness validation"
+        - "Revelation chain (problem → solution → desire for core offer)"
+      source: "Magnetic Marketing Cap.7, inspired by WHO Discovery Cap.4-5"
+
+    - agent: format-selector
+      role: "Choose optimal LGM format based on WHO and problem"
+      inputs:
+        - "Selected problem"
+        - "WHO consumption preferences"
+        - "Available resources"
+      outputs:
+        - "Recommended format (report, checklist, video, audio, guide, assessment)"
+        - "Format rationale"
+        - "Alternative formats if primary fails"
+      source: "Magnetic Marketing Cap.7"
+
+  tier_1_execution:
+    - agent: title-crafter
+      role: "Create tabloid-style titles that are impossible to ignore"
+      specialization: "Headline creation using Kennedy's tabloid model"
+      capabilities:
+        - "Generate 10+ title variations using proven templates"
+        - "Apply Cosmopolitan/Reader's Digest/Enquirer modeling"
+        - "Test titles with audience"
+        - "Identify winning headline"
+      templates:
+        - "Os [N] Segredos que [INDUSTRIA] Nao Quer que Voce Saiba Sobre [BENEFICIO]"
+        - "[N] Erros Fatais que Estao [CONSEQUENCIA] — e Como Evita-los"
+        - "Guia Gratuito: Como [RESULTADO] em [PRAZO] Sem [OBJECAO]"
+        - "REPORT CONFIDENCIAL: O Que Todo [PROFISSAO] Deveria Saber Sobre [TOPICO]"
+      source: "Magnetic Marketing Cap.7, p.107"
+
+    - agent: content-writer
+      role: "Write LGM content fulfilling all 4 Jobs"
+      specialization: "Direct response content that educates and persuades"
+      capabilities:
+        - "Write opening that connects with WHO's pain (Job 1)"
+        - "Amplify dissatisfaction with data and examples (Job 2)"
+        - "Establish expertise with proofs and empathy (Job 3)"
+        - "Include CTA that predisposes to accept (Job 4)"
+        - "Maintain 3:1 prospect-to-you ratio (no me-me-me)"
+        - "Say WHAT not HOW (no overeducation)"
+      source: "Magnetic Marketing Cap.7, p.102-108"
+
+    - agent: landing-page-builder
+      role: "Create capture-only landing pages with zero distraction"
+      specialization: "Squeeze pages following Kennedy's capture-only principle"
+      capabilities:
+        - "Build pages with ONLY capture form"
+        - "Eliminate all navigation, menus, links"
+        - "Optimize headline and CTA above fold"
+        - "Add urgency elements"
+      mandatory_elements:
+        - "Headline (LGM title)"
+        - "Subheadline (main benefit)"
+        - "3-5 bullet points"
+        - "LGM image/mockup"
+        - "Capture form (name + email + phone)"
+        - "Clear action button"
+        - "Urgency element"
+      prohibited_elements:
+        - "Navigation menu"
+        - "Links to other pages"
+        - "Sidebar content"
+        - "Footer links"
+        - "Any distraction from form"
+      source: "Magnetic Marketing Cap.7, p.108-109"
+
+    - agent: ad-copy-writer
+      role: "Write ads for each distribution channel following mail-order format"
+      specialization: "Multi-channel ad copy in Kennedy's mail-order style"
+      capabilities:
+        - "Write direct mail letters and postcards"
+        - "Create online ad copy (social, PPC)"
+        - "Write email sequences for LGM distribution"
+        - "Follow Rule #8 mail-order format (1/4 headline, 1/2 proof, 1/4 offer)"
+      source: "Magnetic Marketing Cap.6, Rule #8, p.95-97"
+
+    - agent: distribution-manager
+      role: "Configure and manage multi-channel distribution with tracking"
+      specialization: "Channel setup, tracking, and optimization"
+      capabilities:
+        - "Setup minimum 3 distribution channels"
+        - "Configure unique tracking per channel"
+        - "Calculate cost per lead by channel"
+        - "Recommend budget allocation based on results"
+      source: "Magnetic Marketing Cap.6, Rules #4 and #9"
+
+  tier_2_judgment:
+    - agent: four-jobs-validator
+      role: "Validate LGM fulfills all 4 Jobs before launch"
+      responsibilities:
+        - "Verify Job 1: Does it generate response to advertising?"
+        - "Verify Job 2: Does it reinforce prospect's dissatisfaction?"
+        - "Verify Job 3: Does it establish expertise AND empathy?"
+        - "Verify Job 4: Does it predispose prospect to accept recommendations?"
+      validation_questions:
+        - "Would the WHO stop what they're doing to request this?"
+        - "Does reading this make the prospect feel their problem MORE acutely?"
+        - "Does the WHO think 'this person understands me AND knows the solution'?"
+        - "Is the prospect more likely to say YES after consuming this?"
+      source: "Magnetic Marketing Cap.7, p.102-108"
+
+    - agent: me-me-me-auditor
+      role: "Ensure content speaks in prospect's language, not company's"
+      responsibilities:
+        - "Count prospect-vs-you ratio (minimum 3:1)"
+        - "Flag 'me-me-me' violations"
+        - "Verify tabloid tone (not corporate)"
+        - "Check overeducation (WHAT not HOW)"
+      source: "Magnetic Marketing Cap.7, p.104-106"
+
+    - agent: rules-compliance
+      role: "Check LGM and all ads against 10 Foundational Rules"
+      responsibilities:
+        - "Every piece has specific offer (R1)"
+        - "Urgency in every piece (R2)"
+        - "Clear instructions (R3)"
+        - "Tracking configured (R4)"
+        - "Copy is bold/emotional (R7)"
+        - "Mail-order format (R8)"
+      source: "Magnetic Marketing Cap.6, p.83-100"
+
+# ===============================================================================
+# EXECUTOR MATRIX
+# ===============================================================================
+
+executor_matrix:
+  # Problem Selection
+  - task: "List 10+ problems WHO faces"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "AI suggests from psychographic data, human validates"
+
+  - task: "Select narrow, significant, revelatory problem"
+    executor: Human
+    automation: LOW
+    guardrails: "Must pass 3 criteria test"
+
+  # Format & Title
+  - task: "Choose LGM format"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Match to WHO consumption preferences"
+
+  - task: "Generate 10+ title variations"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must use tabloid templates"
+
+  - task: "Test titles with audience"
+    executor: Hybrid
+    automation: HIGH
+    guardrails: "Minimum 3 titles tested"
+
+  # Content Creation
+  - task: "Write LGM content (4 Jobs structure)"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must fulfill all 4 Jobs, 3:1 ratio, WHAT not HOW"
+
+  - task: "Validate 4 Jobs fulfillment"
+    executor: Human
+    automation: LOW
+    guardrails: "Each Job verified independently"
+
+  - task: "Run me-me-me audit"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Count ratio, flag violations"
+
+  # Landing Page & Distribution
+  - task: "Build capture-only landing page"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Zero distraction, only capture form"
+
+  - task: "Write ad copy per channel"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Mail-order format, bold copy"
+
+  - task: "Configure 3+ channels with tracking"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Unique tracking per channel"
+
+  - task: "Launch and track results"
+    executor: Hybrid
+    automation: HIGH
+    guardrails: "Cost per lead calculated daily"
+
+# ===============================================================================
+# QUALITY GATES
+# ===============================================================================
+
+quality_gates:
+  QG-001:
+    name: "Problem Selection Gate"
+    transition: "Problem List -> Format Selection"
+    condition: "problem_is_narrow AND problem_is_significant AND problem_reveals_core_offer_need"
+    type: blocking
+    failure_action: "Return to problem list, narrow or choose different"
+    source: "Magnetic Marketing Cap.7"
+
+  QG-002:
+    name: "Title Power Gate"
+    transition: "Title Creation -> Content Writing"
+    condition: "title_follows_tabloid_model AND title_uses_specific_numbers AND title_tested_min_3"
+    type: blocking
+    failure_action: "Generate more variations, retest"
+    source: "Magnetic Marketing Cap.7, p.107"
+
+  QG-003:
+    name: "4 Jobs Fulfillment Gate"
+    transition: "Content Writing -> Landing Page"
+    condition: "all_4_jobs_fulfilled AND ratio_3_to_1 AND what_not_how"
+    type: blocking
+    failure_action: "Rewrite sections that fail Job validation"
+    source: "Magnetic Marketing Cap.7, p.102-108"
+
+  QG-004:
+    name: "Landing Page Purity Gate"
+    transition: "Landing Page -> Ad Copy"
+    condition: "only_capture_form AND zero_navigation AND zero_links AND headline_above_fold"
+    type: blocking
+    failure_action: "Strip all distractions until only form remains"
+    source: "Magnetic Marketing Cap.7, p.108-109"
+
+  QG-005:
+    name: "Distribution Readiness Gate"
+    transition: "Ad Copy -> Launch"
+    condition: "min_3_channels_configured AND tracking_per_channel AND budget_allocated"
+    type: blocking
+    failure_action: "Add channels or configure tracking"
+    source: "Magnetic Marketing Cap.6, Rules #4 and #9"
+
+  QG-006:
+    name: "10 Rules Compliance Gate"
+    transition: "Pre-Launch Review"
+    condition: "all_pieces_have_offer AND urgency_present AND instructions_clear AND copy_bold"
+    type: blocking
+    failure_action: "Fix non-compliant pieces"
+    source: "Magnetic Marketing Cap.6"
+
+# ===============================================================================
+# WORKFLOWS
+# ===============================================================================
+
+workflows:
+  lgm_creation:
+    trigger: "New Lead Generation Magnet needed"
+    steps:
+      - step: 1
+        name: "Problem Selection"
+        agent: problem-selector
+        action: "List 10+ problems, select the narrow/significant/revelatory one"
+        output: "Selected problem statement"
+        gate: QG-001
+
+      - step: 2
+        name: "Format Selection"
+        agent: format-selector
+        action: "Choose optimal format for WHO and problem"
+        output: "Format decision with rationale"
+        gate: null
+
+      - step: 3
+        name: "Title Creation"
+        agent: title-crafter
+        action: "Generate 10+ titles, test minimum 3"
+        output: "Winning title"
+        gate: QG-002
+
+      - step: 4
+        name: "Content Writing"
+        agent: content-writer
+        action: "Write LGM content fulfilling 4 Jobs"
+        output: "Complete LGM content"
+        gate: QG-003
+
+      - step: 5
+        name: "Content Validation"
+        agents: [four-jobs-validator, me-me-me-auditor]
+        action: "Validate 4 Jobs and me-me-me ratio"
+        output: "Validation report"
+        gate: null
+
+      - step: 6
+        name: "Landing Page Build"
+        agent: landing-page-builder
+        action: "Build capture-only landing page"
+        output: "Live landing page"
+        gate: QG-004
+
+      - step: 7
+        name: "Ad Copy Creation"
+        agent: ad-copy-writer
+        action: "Write ads per channel in mail-order format"
+        output: "Channel-specific ad copy"
+        gate: null
+
+      - step: 8
+        name: "Distribution Setup"
+        agent: distribution-manager
+        action: "Configure 3+ channels with tracking"
+        output: "Active distribution channels"
+        gate: QG-005
+
+      - step: 9
+        name: "Pre-Launch Compliance"
+        agent: rules-compliance
+        action: "Validate all pieces against 10 Rules"
+        output: "Compliance certification"
+        gate: QG-006
+
+      - step: 10
+        name: "Launch and Track"
+        agent: distribution-manager
+        action: "Launch across channels, track cost per lead"
+        output: "Live LGM system with metrics"
+        gate: null
+
+  lgm_optimization:
+    trigger: "Existing LGM underperforming"
+    steps:
+      - step: 1
+        agent: four-jobs-validator
+        action: "Re-validate 4 Jobs fulfillment"
+        output: "Job-by-job assessment"
+
+      - step: 2
+        agent: title-crafter
+        action: "Re-test titles if capture rate low"
+        condition: "If capture rate < 25%"
+
+      - step: 3
+        agent: me-me-me-auditor
+        action: "Re-audit content ratio"
+        condition: "If consumption rate low"
+
+      - step: 4
+        agent: distribution-manager
+        action: "Analyze channel performance, reallocate budget"
+        output: "Optimized channel allocation"
+
+# ===============================================================================
+# KPIs & SUCCESS METRICS
+# ===============================================================================
+
+kpis:
+  primary:
+    capture_rate:
+      formula: "Leads captured / Landing page visitors"
+      target: ">25%"
+      action_if_below: "Revise headline and offer"
+
+    consumption_rate:
+      formula: "LGM consumed / LGM delivered"
+      target: ">50%"
+      action_if_below: "Simplify format, add multiple formats"
+
+    next_step_rate:
+      formula: "Take action after LGM / LGM consumed"
+      target: ">10%"
+      action_if_below: "Strengthen CTA and urgency"
+
+  secondary:
+    cost_per_lead:
+      formula: "Channel spend / Leads from channel"
+      target: "Decreasing month over month"
+
+    channel_roi:
+      formula: "(Channel revenue - Channel cost) / Channel cost"
+      target: ">3:1"
+
+    title_test_winner:
+      formula: "Best performing title engagement rate"
+      target: "2x+ vs weakest tested title"
+
+  effectiveness_formula:
+    name: "LGM Effectiveness Score"
+    formula: "Capture Rate x Consumption Rate x Next Step Rate"
+    example: "25% x 50% x 10% = 1.25% general conversion"
+    interpretation: "For 1000 visitors = 12.5 prospects ready to buy"
+
+# ===============================================================================
+# TROUBLESHOOTING
+# ===============================================================================
+
+troubleshooting:
+  - symptom: "Low capture rate (<25%)"
+    possible_causes:
+      - "Title not compelling enough"
+      - "Landing page has distractions"
+      - "Wrong channel (WHO not there)"
+      - "LGM not relevant to WHO"
+    solutions:
+      - "Test 5+ new titles using tabloid templates"
+      - "Strip landing page to pure capture"
+      - "Switch channels to where WHO is"
+      - "Re-validate problem selection"
+
+  - symptom: "High capture but low consumption (<50%)"
+    possible_causes:
+      - "LGM too long or complex"
+      - "Format doesn't match WHO preferences"
+      - "Delivery friction (hard to access)"
+    solutions:
+      - "Shorten or simplify"
+      - "Offer multiple formats (video + text + audio)"
+      - "Reduce access steps"
+
+  - symptom: "High consumption but low next step (<10%)"
+    possible_causes:
+      - "LGM overeducates (gives HOW, not just WHAT)"
+      - "CTA weak or missing"
+      - "No urgency"
+      - "Job 4 not fulfilled"
+    solutions:
+      - "Remove HOW details, keep WHAT"
+      - "Strengthen CTA with clear action"
+      - "Add deadline/scarcity"
+      - "Rewrite closing to predispose acceptance"
+
+  - symptom: "Attracting wrong people"
+    possible_causes:
+      - "Title too broad"
+      - "Wrong channels"
+      - "WHO not defined specifically enough"
+    solutions:
+      - "Narrow title to specific WHO"
+      - "Use channels specific to WHO"
+      - "Re-run 5 Psychographic Questions"
+
+# ===============================================================================
+# VALIDATION
+# ===============================================================================
+
+validation:
+  sop_parts_complete: 10/10
+  four_jobs_documented: 4/4
+  quality_gates_defined: 6
+  workflows_documented: 2
+  agents_defined: 9
+  title_templates: 6
+  kennedy_quotes_referenced: 10
+
+  blueprint_status: "READY FOR SQUAD EXECUTION"

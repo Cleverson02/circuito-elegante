@@ -1,0 +1,504 @@
+# Squad Blueprint: Grabber/Lumpy Mail System + A-Pile/B-Pile Framework
+# Extracted from: The Ultimate Sales Letter + No B.S. Direct Marketing — Dan Kennedy
+# Version: 1.0
+# Date: 2026-02-11
+
+squad:
+  name: kennedy-grabber-lumpy-mail
+  purpose: "Create mail that DEMANDS to be opened and read using physical grabbers, lumpy envelopes, and A-Pile targeting strategies that survive the wastebasket sort"
+  extracted_from: "sop-grabber-lumpy-mail.md"
+
+  philosophy: |
+    "Lumpy envelopes cannot be ignored — they demand investigation."
+    "Picture the person you've sent your sales letter to with a stack
+    of mail in his hands, sorting through that stack, standing next
+    to a wastebasket."
+    — Dan Kennedy / Gary Halbert
+
+    - The envelope is as important as the copy inside
+    - Lumpy = impossible to stack, impossible to ignore
+    - Grabber MUST connect to the message
+    - A-Pile or death — no middle ground
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIER STRUCTURE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tier_structure:
+  orchestrator:
+    - mail-strategist
+
+  tier_0_planning:
+    - envelope-engineer
+    - grabber-designer
+    # Strategy and physical component selection
+
+  tier_1_creation:
+    - opening-writer
+    # Writing the grabber-connected letter opening
+
+  tier_2_execution:
+    - fulfillment-coordinator
+    - campaign-tester
+    # Physical production, assembly, testing, and mailing
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENT DEFINITIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  mail-strategist:
+    id: mail-strategist
+    name: "Mail Strategist"
+    role: "Orchestrator"
+    description: "Coordinates the entire physical mail strategy — envelope, grabber, postage, and format decisions"
+    cognitive_type: "Judgment + Strategy"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Select optimal envelope strategy using Decision Tree"
+      - "Approve grabber-message connection"
+      - "Calculate ROI of lumpy mail investment"
+      - "Decide between formats (letter, advertorial, postcard, lumpy)"
+      - "Approve A-Pile targeting approach"
+
+    decision_rules:
+      - "DR-001: Cold + gatekeeper = Sneak-Up + First Class + Live Stamp"
+      - "DR-002: Cold + no gatekeeper = Sneak-Up with personal return"
+      - "DR-003: Warm/customer = Billboard with teaser and branding"
+      - "DR-004: NEVER mix strategies — full Sneak-Up OR full Billboard"
+      - "DR-005: Budget allows first class? ALWAYS first class over bulk"
+      - "DR-006: Envelope promise must match letter content immediately"
+      - "DR-007: High-value individual target = Lumpy mail mandatory"
+
+    input_schema:
+      list_type: "enum — cold | warm | customer | individual"
+      has_gatekeeper: "boolean"
+      b2b_or_b2c: "enum — b2b | b2c"
+      budget_per_piece: "number"
+      list_size: "number"
+      letter_message: "string — Core message of the sales letter"
+      expected_ticket: "number — Average revenue per response"
+
+    output_schema:
+      strategy: "enum — sneak_up | billboard | hybrid | lumpy"
+      format: "enum — letter | advertorial | postcard | roadmap | express"
+      grabber_recommendation: "object — Selected grabber with rationale"
+      envelope_spec: "object — Complete envelope specification"
+      budget_analysis: "object — Cost per piece, expected ROI"
+      a_pile_score: "number 1-10 — Estimated A-Pile likelihood"
+
+  envelope-engineer:
+    id: envelope-engineer
+    name: "Envelope Engineer"
+    role: "Tier 0 — Planning"
+    description: "Designs the complete envelope strategy for A-Pile targeting"
+    cognitive_type: "Strategy + Detail"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Apply Envelope Strategy Decision Tree"
+      - "Specify all envelope components (return address, postage, addressing)"
+      - "Design hybrid envelope innovations"
+      - "Calculate postage costs for different weights"
+      - "Ensure consistency (no 'half pregnant' strategy)"
+
+    decision_rules:
+      - "DR-010: Live stamp ALWAYS beats meter imprint"
+      - "DR-011: Ink-jet or handwriting ALWAYS beats labels"
+      - "DR-012: First class = 10-30% better delivery than bulk"
+      - "DR-013: If envelope uses devious strategy, content must fulfill promise"
+      - "DR-014: Consistency check — every element supports the same strategy"
+
+    input_schema:
+      strategy: "enum — sneak_up | billboard | hybrid | lumpy"
+      has_gatekeeper: "boolean"
+      grabber_spec: "object | null"
+      budget: "number"
+
+    output_schema:
+      envelope_spec:
+        size: "string — standard | oversize | custom"
+        color: "string — white | branded | custom"
+        return_address: "string — personal | company | hybrid"
+        addressing: "enum — inkjet | handwritten | label | window"
+        postage: "enum — live_stamp | meter | bulk | express"
+        teaser_copy: "string | null"
+        teaser_position: "enum — front | back | both | none"
+        window: "boolean — If hybrid with personalization visible"
+        special_features: "array — e.g. 'hand-written font', 'wax seal'"
+      postage_cost: "number — Per piece"
+      consistency_check: "boolean — All elements align with strategy"
+
+  grabber-designer:
+    id: grabber-designer
+    name: "Grabber Designer"
+    role: "Tier 0 — Planning"
+    description: "Selects and designs physical grabber objects that connect to the letter message"
+    cognitive_type: "Creativity + Strategy"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Brainstorm 10-15 potential grabber objects"
+      - "Evaluate connection strength to message"
+      - "Calculate cost per unit at scale"
+      - "Source suppliers and verify availability"
+      - "Design the message-grabber bridge"
+
+    decision_rules:
+      - "DR-020: Grabber MUST connect to letter message — no random objects"
+      - "DR-021: Stranger object = more curiosity"
+      - "DR-022: Grabber must be referenced in first line of letter"
+      - "DR-023: Cost must fit within per-piece budget"
+      - "DR-024: Object must fit in envelope without excessive postage"
+      - "DR-025: Object must not offend, confuse, or be in bad taste"
+
+    input_schema:
+      letter_message: "string — Core message/theme"
+      key_benefit: "string — Primary benefit being sold"
+      budget_per_grabber: "number"
+      audience_profile: "object — Demographics, sophistication level"
+      envelope_size: "string — From envelope-engineer"
+
+    output_schema:
+      grabber_candidates:
+        - object: "string"
+          connection: "string — How it connects to message"
+          curiosity_score: "number 1-10"
+          cost_per_unit: "number"
+          supplier: "string"
+          opening_line: "string — First line of letter referencing grabber"
+      recommended_grabber: "object — Top pick with full rationale"
+      backup_grabber: "object — Alternative if primary unavailable"
+
+  opening-writer:
+    id: opening-writer
+    name: "Opening Writer"
+    role: "Tier 1 — Creation"
+    description: "Writes the first 2-3 lines of the letter that connect the grabber to the message"
+    cognitive_type: "Creativity + Persuasion"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Write grabber-connected openings"
+      - "Bridge from physical object to message"
+      - "Create immediate curiosity payoff"
+      - "Transition from grabber to benefit/problem"
+
+    decision_rules:
+      - "DR-030: First line MUST mention the physical object"
+      - "DR-031: Connection must be clear within 2 sentences"
+      - "DR-032: Transition to benefit/problem within 3 sentences"
+      - "DR-033: Tone matches envelope strategy (personal if Sneak-Up)"
+
+    input_schema:
+      grabber: "object — Selected grabber with connection"
+      headline: "string — Letter headline"
+      key_benefit: "string — Primary benefit"
+      envelope_strategy: "string — Sneak-Up, Billboard, etc."
+
+    output_schema:
+      opening_variants:
+        - opening_text: "string — First 3-5 sentences"
+          grabber_reference: "string — How object is mentioned"
+          transition: "string — Bridge to main message"
+      recommended_opening: "string — Best variant"
+
+  fulfillment-coordinator:
+    id: fulfillment-coordinator
+    name: "Fulfillment Coordinator"
+    role: "Tier 2 — Execution"
+    description: "Manages physical production, assembly, and mailing logistics"
+    cognitive_type: "Execution + Detail"
+    executor_type: "Worker"
+
+    capabilities:
+      - "Source grabber materials at scale"
+      - "Coordinate assembly of lumpy mail pieces"
+      - "Manage print production"
+      - "Coordinate with mailing house"
+      - "Track costs and timelines"
+
+    decision_rules:
+      - "DR-040: Order 10% extra grabbers for assembly errors"
+      - "DR-041: Quality check 5% of assembled pieces"
+      - "DR-042: Weigh sample pieces to confirm postage"
+      - "DR-043: Test delivery time before full launch"
+
+    input_schema:
+      envelope_spec: "object — From envelope-engineer"
+      grabber_spec: "object — From grabber-designer"
+      letter_final: "string — Approved letter text"
+      volume: "number — Total pieces to mail"
+
+    output_schema:
+      production_plan:
+        print_vendor: "string"
+        grabber_supplier: "string"
+        assembly_method: "enum — in_house | outsourced"
+        timeline: "object — Days from start to mail"
+      cost_breakdown:
+        printing: "number"
+        grabbers: "number"
+        assembly: "number"
+        postage: "number"
+        total: "number"
+        cost_per_piece: "number"
+
+  campaign-tester:
+    id: campaign-tester
+    name: "Campaign Tester"
+    role: "Tier 2 — Execution"
+    description: "Tests lumpy mail campaigns before full-scale launch"
+    cognitive_type: "Analysis + Execution"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Design test campaigns"
+      - "Send self-mail mockups"
+      - "Manage small-scale test mailings"
+      - "Analyze test results"
+      - "Recommend scale-up or pivot"
+
+    decision_rules:
+      - "DR-050: Physical mockup to self MANDATORY"
+      - "DR-051: 3-5 people from target demographic must test"
+      - "DR-052: Test 50-100 pieces before scaling"
+      - "DR-053: A/B test grabber vs no-grabber"
+      - "DR-054: Only scale if ROI positive on test"
+
+    input_schema:
+      assembled_pieces: "array — Sample mail pieces"
+      test_list: "array — Small segment of mailing list"
+      success_metrics: "object — Target response rate, CPA, ROI"
+
+    output_schema:
+      mockup_results: "object — Self-mail evaluation"
+      feedback_summary: "object — Target demographic feedback"
+      test_campaign_results:
+        pieces_mailed: "number"
+        responses: "number"
+        response_rate: "number"
+        cost_per_response: "number"
+        roi: "number"
+      recommendation: "enum — scale | pivot | abort"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  lumpy_mail_creation:
+    trigger: "When sales letter is written and approved"
+    duration: "2-5 days (excluding production)"
+
+    steps:
+      - agent: "mail-strategist"
+        action: "Select strategy using Decision Tree"
+        duration: "30 min"
+        gate: "QG-001"
+
+      - agent: "envelope-engineer"
+        action: "Design complete envelope specification"
+        duration: "1 hour"
+        parallel: true
+
+      - agent: "grabber-designer"
+        action: "Select and specify grabber (if applicable)"
+        duration: "1 hour"
+        parallel: true
+        gate: "QG-002"
+
+      - agent: "opening-writer"
+        action: "Write grabber-connected letter opening"
+        duration: "30 min"
+
+      - agent: "mail-strategist"
+        action: "Review and approve complete package"
+        gate: "QG-003"
+
+      - agent: "fulfillment-coordinator"
+        action: "Source materials and coordinate production"
+        duration: "2-5 days"
+
+      - agent: "campaign-tester"
+        action: "Self-mail mockup and small-scale test"
+        duration: "3-7 days"
+        gate: "QG-004"
+
+      - agent: "mail-strategist"
+        action: "Approve full-scale launch"
+
+    output: "Tested lumpy mail campaign ready for full-scale mailing"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  QG-001:
+    name: "Strategy Gate"
+    transition: "Planning → Design"
+    conditions:
+      - "Envelope strategy selected (no mixed signals)"
+      - "Budget per piece confirmed"
+      - "ROI calculation justifies approach"
+      - "A-Pile targeting approach defined"
+    type: "blocking"
+
+  QG-002:
+    name: "Grabber Gate"
+    transition: "Selection → Writing"
+    conditions:
+      - "Grabber connects to letter message"
+      - "Cost fits within budget"
+      - "Supplier identified and available"
+      - "Object is not offensive or confusing"
+      - "Fits in envelope without excessive postage"
+    type: "blocking"
+
+  QG-003:
+    name: "Package Gate"
+    transition: "Design → Production"
+    conditions:
+      - "Envelope, grabber, and letter are consistent"
+      - "First line of letter references grabber"
+      - "Envelope promise matches letter content"
+      - "No 'half pregnant' strategy violations"
+    type: "blocking"
+
+  QG-004:
+    name: "Test Gate"
+    transition: "Testing → Full Launch"
+    conditions:
+      - "Physical mockup mailed to self and approved"
+      - "3-5 target demographic feedback positive"
+      - "Test campaign shows positive ROI"
+      - "Delivery confirmed (no postal issues)"
+    type: "blocking"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# A-PILE TARGETING MODEL
+# ═══════════════════════════════════════════════════════════════════════════════
+
+a_pile_model:
+  mail_sorting_hierarchy:
+    tier_1_urgent:
+      description: "Opened immediately"
+      characteristics: ["express mail", "overnight", "official-looking", "lumpy"]
+      strategy: "Express format or lumpy mail"
+
+    tier_2_personal:
+      description: "Opened soon after urgent"
+      characteristics: ["handwritten", "personal return", "live stamp"]
+      strategy: "Sneak-Up approach"
+
+    tier_3_a_pile_business:
+      description: "Reviewed same day"
+      characteristics: ["professional", "important-looking", "first class"]
+      strategy: "Billboard or hybrid approach"
+
+    tier_4_other:
+      description: "May wait days or weeks"
+      characteristics: ["generic", "labels", "meter postage"]
+      strategy: "AVOID — optimize to move up"
+
+    tier_5_catalogs:
+      description: "Skimmed later"
+      characteristics: ["bulk", "branded", "familiar"]
+      strategy: "Only for customer retention"
+
+    tier_6_obvious_junk:
+      description: "Trashed immediately"
+      characteristics: ["labels", "bulk rate", "stuffed", "generic"]
+      strategy: "NEVER — fatal for response rates"
+
+  lumpy_advantage: |
+    Lumpy mail bypasses the entire sorting hierarchy.
+    It cannot be stacked, cannot be ignored, and curiosity
+    forces the recipient to investigate. Lumpy mail
+    automatically enters Tier 1 (Urgent) regardless
+    of other envelope characteristics.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# GRABBER CATALOG (Quick Reference)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+grabber_catalog:
+  budget_low:
+    range: "$0.01-$1.00"
+    items:
+      - {object: "Penny/coin", cost: 0.01, connection: "A penny for your thoughts"}
+      - {object: "Tea bag", cost: 0.20, connection: "Let's have a cup of tea and discuss"}
+      - {object: "Band-aid", cost: 0.05, connection: "Temporary fix vs permanent solution"}
+      - {object: "Seed packet", cost: 0.10, connection: "Plant the future / grow results"}
+      - {object: "Paper clip", cost: 0.01, connection: "Keep this together / hold onto this"}
+
+  budget_medium:
+    range: "$1.00-$10.00"
+    items:
+      - {object: "Aspirin", cost: 2.00, connection: "Cure for your [problem] headache"}
+      - {object: "Calculator", cost: 4.00, connection: "Do the math — ROI is undeniable"}
+      - {object: "Magnifying glass", cost: 3.00, connection: "Look closer at these opportunities"}
+      - {object: "Foreign coin", cost: 2.00, connection: "Pure curiosity driver"}
+      - {object: "Magnet", cost: 2.00, connection: "Attract customers, don't chase"}
+      - {object: "Antique key", cost: 4.00, connection: "The key to [desired result]"}
+
+  budget_high:
+    range: "$10.00-$50.00+"
+    items:
+      - {object: "Compass + map + magnifier", cost: 20.00, connection: "Navigate to success"}
+      - {object: "Mini trash can + peanuts", cost: 12.00, connection: "You're nuts not to respond"}
+      - {object: "Bottle with map", cost: 25.00, connection: "Treasure message"}
+      - {object: "Hourglass", cost: 12.00, connection: "Time is running out"}
+      - {object: "Mini first aid kit", cost: 18.00, connection: "Emergency in your business"}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metrics:
+  comparison:
+    regular_mail:
+      open_rate: "30-50%"
+      read_rate: "10-30%"
+      response_cold: "1-2%"
+      response_warm: "5-10%"
+      cost_per_piece: "$0.50-$2.00"
+
+    lumpy_mail:
+      open_rate: "80-95%"
+      read_rate: "50-80%"
+      response_cold: "3-8%"
+      response_warm: "15-35%"
+      cost_per_piece: "$5.00-$50.00"
+
+    improvement:
+      open_rate: "+50-100%"
+      read_rate: "+100-300%"
+      response_rate: "+200-400%"
+      cost_per_response: "Often lower despite higher per-piece cost"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES & INTEGRATIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  sops:
+    - "sop-grabber-lumpy-mail.md"
+    - "sop-28-step-sales-letter.md"  # Parent system (Steps 4-5)
+    - "sop-headline-formulas.md"  # Headline works WITH grabber
+
+  kennedy_agents:
+    - "kennedy-media — Direct mail format specialist"
+    - "kennedy-sales-letter — Letter structure integration"
+    - "kennedy-copy — Opening connected to grabber"
+    - "kennedy-audit — ROI and performance measurement"
+
+integrations:
+  sales_letter_system: "Grabber is Steps 4-5, before headline (Step 6)"
+  headline_formulas: "Headline and grabber work together for attention"
+  damaging_admission: "Honesty of envelope must continue in letter"
+  objection_anticipation: "Grabber overcomes 'won't open direct mail' objection"
+  referral_machine: "Lumpy mail for endorsed mailings"
+  affluent_attraction: "Premium grabbers for affluent targeting"

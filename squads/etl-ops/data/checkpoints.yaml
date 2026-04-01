@@ -1,0 +1,87 @@
+version: 1
+policy:
+  fail_fast: true
+  unidirectional_flow: true
+  allow_manual_override: false
+
+thresholds:
+  min_extract_chars: 100
+  min_transform_fidelity_ratio: 0.70
+  min_chunk_count_for_rag: 1
+
+phases:
+  diagnose:
+    required_checks:
+      - "source kind detected"
+      - "routing profile selected"
+    veto_conditions:
+      - "unknown source kind"
+      - "no routing profile matched"
+
+  validate:
+    required_checks:
+      - "input schema valid"
+      - "prerequisites verified (file/url/env)"
+    veto_conditions:
+      - "schema invalid"
+      - "missing file"
+      - "invalid url format"
+      - "required env var missing"
+
+    # Per-profile prerequisites
+    profile_prerequisites:
+      web_page_js_heavy:
+        required_env: ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID"]
+        fallback_env: ["FIRECRAWL_API_KEY"]
+        note: "If Cloudflare env missing, falls back to Firecrawl. If both missing, falls back to Playwright."
+      site_crawl:
+        required_env: ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID"]
+        fallback_env: ["FIRECRAWL_API_KEY"]
+        note: "Cloudflare primary (render:false = free). Firecrawl fallback (costs credits)."
+      search_and_scrape:
+        required_env: ["FIRECRAWL_API_KEY"]
+        fallback_env: []
+        note: "Firecrawl is the only tool with atomic search+scrape. No fallback = EXA + fetch-page.js (2 steps)."
+
+  extract:
+    required_checks:
+      - "execution exit status is success"
+      - "output is non-empty"
+      - "output format is parseable when structured"
+      - "no whisper loop detected"
+    veto_conditions:
+      - "tool/api execution failed"
+      - "output chars < min_extract_chars"
+      - "whisper loop detected (same phrase repeated 3+ times consecutively)"
+
+    # WHISPER LOOP DETECTION (from acquisition_training learnings):
+    # Bug: Whisper enters infinite loop repeating phrases when:
+    # - Background music present
+    # - Extended silence
+    # - Low audio quality
+    # Detection: Check for 3+ consecutive identical segments
+    # Mitigation: Use --max-len or --split-on-word flags
+    whisper_loop_detection:
+      enabled: true
+      consecutive_threshold: 3
+      similarity_threshold: 0.95
+
+  transform:
+    required_checks:
+      - "operation matches desired_output"
+      - "post-transform metrics computed"
+      - "fidelity ratio >= min_transform_fidelity_ratio (for clean/chunks)"
+      - "speaker filter integrity verified (for filtered)"
+    veto_conditions:
+      - "transform execution failed"
+      - "fidelity ratio below threshold (for clean/chunks)"
+      - "rag mode produced zero chunks"
+
+  deliver:
+    required_checks:
+      - "output envelope contract valid"
+      - "artifact paths exist when persisted"
+      - "checkpoint log complete"
+    veto_conditions:
+      - "output contract invalid"
+      - "persist requested but artifact missing"

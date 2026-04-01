@@ -1,0 +1,237 @@
+# Blueprint: Entrepreneurial Management System
+# Dan Kennedy's 25 Eternal Truths Applied to Daily Business
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Entrepreneurial Management Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-entrepreneurial-management.md"
+  source_courses:
+    - "The Ultimate No B.S. Business Success Book"
+  description: >
+    Blueprint para gestao empresarial baseada nos 6 pilares de Kennedy:
+    Decisao, Pessoas, Dinheiro, Tempo, Resiliencia e Evolucao. Aplicacao das
+    25 Verdades Eternas ao dia-a-dia do empreendedor para operar com clareza,
+    disciplina e sistemas.
+  kennedy_quote: >
+    "The willingness to do whatever it takes is infinitely more important than
+    knowing everything there is to know about how to do it."
+    "No one will ever care about your business as much as you do."
+
+agents:
+  primary_agent:
+    name: "entrepreneurial-coach"
+    role: "Coach Empreendedor Kennedy"
+    responsibilities:
+      - Diagnosticar estado atual do empreendedor nos 6 pilares
+      - Aplicar 25 Eternal Truths como framework de decisao
+      - Guiar evolucao de Market Driven para Systems Driven
+      - Implementar Yes or No Test e eliminacao de Time Vampires
+      - Monitorar progresso em cada pilar
+
+  supporting_agents:
+    - name: "decision-advisor"
+      role: "Assessor de Decisao"
+      responsibilities:
+        - Aplicar Framework de Decisao de 4 Passos
+        - Identificar paralisia de analise
+        - Ajudar a "queimar os barcos" quando necessario
+        - Facilitar decisoes sem informacao perfeita
+
+    - name: "people-manager"
+      role: "Gestor de Pessoas"
+      responsibilities:
+        - Avaliar equipe contra 4 caracteristicas do associado ideal
+        - Implementar Hire Slow / Fire Fast
+        - Configurar sistemas de inspecao (expect = inspect)
+        - Minimizar oportunidade de roubo (fator controlavel)
+
+    - name: "cash-flow-guardian"
+      role: "Guardiao de Fluxo de Caixa"
+      responsibilities:
+        - Implementar 5 Keys to MCF
+        - Monitorar cash flow diariamente
+        - Identificar ou criar Slack Adjuster
+        - Gerenciar programa de credito (9 steps)
+
+    - name: "productivity-optimizer"
+      role: "Otimizador de Produtividade"
+      responsibilities:
+        - Aplicar Yes or No Test diariamente
+        - Identificar e eliminar Time Vampires
+        - Bloquear tempo para trabalho estrategico
+        - Medir % de tempo em atividades de alto retorno
+
+workflow_phases:
+
+  phase_1_diagnostic:
+    name: "Diagnostico dos 6 Pilares"
+    duration: "1 semana"
+    steps:
+      - step: "Avaliar Pilar 1 - Decisao"
+        action: "Identificar decisoes pendentes, paralisia de analise, comprometimento"
+        output: "Score de decisao (1-10)"
+        agent: "decision-advisor"
+
+      - step: "Avaliar Pilar 2 - Pessoas"
+        action: "Avaliar equipe contra 4 caracteristicas, identificar wrong fits"
+        output: "Mapa de pessoas com recomendacoes"
+        agent: "people-manager"
+
+      - step: "Avaliar Pilar 3 - Dinheiro"
+        action: "Analisar cash flow com 5 Keys, identificar Slack Adjuster"
+        output: "Diagnostico financeiro com gaps"
+        agent: "cash-flow-guardian"
+
+      - step: "Avaliar Pilar 4 - Tempo"
+        action: "Aplicar Yes or No Test a atividades da semana, listar Time Vampires"
+        output: "Analise de uso de tempo com desperdicios"
+        agent: "productivity-optimizer"
+
+      - step: "Avaliar Pilar 5 - Resiliencia"
+        action: "Identificar batalhas atuais (internas e externas)"
+        output: "Mapa de desafios com estrategias"
+        agent: "entrepreneurial-coach"
+
+      - step: "Avaliar Pilar 6 - Evolucao"
+        action: "Classificar estagio de maturidade (Market/Product/Service/Systems)"
+        output: "Estagio atual + gaps para Systems Driven"
+        agent: "entrepreneurial-coach"
+
+  phase_2_quick_wins:
+    name: "Quick Wins (Semana 2)"
+    duration: "1 semana"
+    steps:
+      - step: "Eliminar Time Vampires"
+        action: "Cortar/bloquear os top 3 desperdicadores de tempo"
+        output: "Tempo recuperado para atividades de alto retorno"
+        agent: "productivity-optimizer"
+
+      - step: "Fire Fast (se aplicavel)"
+        action: "Remover wrong fits identificados"
+        output: "Equipe mais alinhada"
+        agent: "people-manager"
+
+      - step: "Cortar despesas (Key 1 MCF)"
+        action: "Eliminar despesas desnecessarias identificadas"
+        output: "Cash flow imediatamente melhorado"
+        agent: "cash-flow-guardian"
+
+      - step: "Decidir pendencias"
+        action: "Resolver decisoes pendentes usando Framework de 4 Passos"
+        output: "Decisoes tomadas e em execucao"
+        agent: "decision-advisor"
+
+  phase_3_systems:
+    name: "Construcao de Sistemas"
+    duration: "4-8 semanas"
+    steps:
+      - step: "Documentar processos chave"
+        action: "Criar SOPs para processos criticos do negocio"
+        output: "Processos documentados (caminho para Systems Driven)"
+        agent: "entrepreneurial-coach"
+
+      - step: "Implementar 5 Keys MCF"
+        action: "Todos os 5 keys em operacao"
+        output: "Cash flow multiplicado e monitorado"
+        agent: "cash-flow-guardian"
+
+      - step: "Criar/identificar Slack Adjuster"
+        action: "Produto de margem alta que subsidia o resto"
+        output: "Slack Adjuster operacional"
+        agent: "cash-flow-guardian"
+
+      - step: "Bloquear tempo estrategico"
+        action: "Minimo 1h/dia para trabalho estrategico (nao operacional)"
+        output: "Rotina de trabalho estrategico implementada"
+        agent: "productivity-optimizer"
+
+  phase_4_evolution:
+    name: "Evolucao Continua"
+    duration: "Ongoing"
+    steps:
+      - step: "Revisao mensal dos 6 Pilares"
+        action: "Re-scoring de cada pilar"
+        output: "Dashboard de evolucao"
+        agent: "entrepreneurial-coach"
+
+      - step: "Teste de ausencia"
+        action: "Negocio sobrevive 1 semana sem voce?"
+        output: "Assessment de independencia do negocio"
+        agent: "entrepreneurial-coach"
+
+      - step: "Reavaliacao trimestral de maturidade"
+        action: "Onde esta na escala Market → Systems?"
+        output: "Plano de evolucao para proximo estagio"
+        agent: "entrepreneurial-coach"
+
+quality_gates:
+
+  gate_1_diagnostic_complete:
+    name: "Diagnostico Completo"
+    criteria:
+      - "6 pilares avaliados com scores"
+      - "Quick wins identificados"
+      - "Mapa de pessoas completo"
+      - "Cash flow analisado"
+    blocker: true
+
+  gate_2_quick_wins_executed:
+    name: "Quick Wins Executados"
+    criteria:
+      - "Time Vampires eliminados"
+      - "Wrong fits removidos"
+      - "Despesas cortadas"
+      - "Decisoes pendentes resolvidas"
+    blocker: true
+
+  gate_3_systems_operational:
+    name: "Sistemas Operacionais"
+    criteria:
+      - "Processos chave documentados"
+      - "5 Keys MCF implementados"
+      - "Slack Adjuster operacional"
+      - "Tempo estrategico bloqueado"
+    blocker: false
+
+  gate_4_independence:
+    name: "Independencia do Negocio"
+    criteria:
+      - "Negocio sobrevive 1+ semana sem dono"
+      - "Estagio Systems Driven atingido ou em progresso"
+      - "Dashboard de 6 pilares atualizado mensalmente"
+    blocker: false
+
+metrics:
+  per_pillar:
+    decision: "Velocidade de decisao (dias para resolver pendencias)"
+    people: "% equipe com 4 caracteristicas + turnover < 10%/ano"
+    money: "Cash flow positivo consistente + Slack Adjuster margin > 60%"
+    time: "% tempo em atividades de alto retorno (meta > 70%)"
+    resilience: "Score de confianca do empreendedor (1-10)"
+    evolution: "Estagio de maturidade (1-4)"
+
+  global:
+    - "Horas trabalhadas/semana (meta: diminuindo)"
+    - "Teste de ausencia (1 semana sem dono)"
+    - "Receita vs horas (produtividade por hora)"
+
+resources:
+  tools:
+    - "Template de Yes or No Test diario"
+    - "Checklist de 4 caracteristicas para contratacao"
+    - "Dashboard de 5 Keys MCF"
+    - "Template de documentacao de processos"
+    - "Log de tempo semanal"
+
+dependencies:
+  integrates_with:
+    - sop: "sop-peak-productivity.md"
+    - sop: "sop-business-turnaround.md"
+    - sop: "sop-5-keys-cash-flow.md"
+    - sop: "sop-6-step-dr-diet.md"
+
+sources:
+  - "dan-kennedy-ultimate-no-bs-business-success-frameworks.md"

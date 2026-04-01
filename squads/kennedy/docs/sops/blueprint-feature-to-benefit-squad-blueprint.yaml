@@ -1,0 +1,343 @@
+# Squad Blueprint: Feature-to-Benefit Conversion System
+# Extracted from: The Ultimate Sales Letter (3rd Edition, 2006) — Dan Kennedy
+# Version: 1.0
+# Date: 2026-02-11
+
+squad:
+  name: kennedy-feature-benefit
+  purpose: "Systematically convert every product feature into compelling customer benefits, including discovery of the Hidden Benefit — the non-obvious benefit of profound importance"
+  extracted_from: "sop-feature-to-benefit.md"
+
+  philosophy: |
+    "People don't buy products. They buy the promise of how those
+    products will make them feel."
+    "The hidden benefit is one of profound importance to the customer
+    but not immediately associated with the product."
+    — Dan Kennedy / Ted Nicholas
+
+    - Features tell, Benefits sell
+    - The 'So What?' test separates features from benefits
+    - Hidden Benefits are where the real money is
+    - Prioritize by CUSTOMER importance, not yours
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIER STRUCTURE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tier_structure:
+  orchestrator:
+    - benefit-director
+
+  tier_0_extraction:
+    - feature-lister
+    - benefit-converter
+    # Core extraction and conversion
+
+  tier_1_discovery:
+    - hidden-benefit-hunter
+    # Advanced: finding the non-obvious benefit
+
+  tier_2_output:
+    - benefit-statement-writer
+    # Writing final polished benefit statements
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENT DEFINITIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  benefit-director:
+    id: benefit-director
+    name: "Benefit Director"
+    role: "Orchestrator"
+    description: "Coordinates the Feature-to-Benefit conversion process and validates output quality"
+    cognitive_type: "Judgment + Strategy"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Enforce 'So What?' test on all benefits"
+      - "Validate hidden benefit discovery"
+      - "Approve final benefit prioritization"
+      - "Ensure customer perspective dominates over product perspective"
+
+    decision_rules:
+      - "DR-001: Every feature MUST have at least 1 corresponding benefit"
+      - "DR-002: If prospect can say 'So What?' — still a feature, not benefit"
+      - "DR-003: Hidden benefit search is MANDATORY — never skip"
+      - "DR-004: Benefits MUST be in customer language, not product language"
+      - "DR-005: Priority always by CUSTOMER importance, never by product complexity"
+
+    input_schema:
+      product_service: "object — Complete product/service description"
+      customer_profile: "object — 10 Smart Questions answers"
+      existing_marketing: "array — Current marketing materials"
+
+    output_schema:
+      feature_benefit_deck: "array — Complete card deck"
+      hidden_benefits: "array — 1-3 hidden benefits discovered"
+      benefit_priority: "array — Ranked by customer importance"
+      benefit_statements: "array — Polished statements ready for copy"
+
+  feature-lister:
+    id: feature-lister
+    name: "Feature Lister"
+    role: "Tier 0 — Extraction"
+    description: "Exhaustively lists every product/service feature on individual cards"
+    cognitive_type: "Analysis + Thoroughness"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Extract features from product specs, marketing, and experience"
+      - "Categorize features (technical, operational, aesthetic, logistic)"
+      - "Identify competitive differentiators"
+      - "Map competitor features for comparison"
+
+    decision_rules:
+      - "DR-010: List EVERYTHING — do not filter during listing"
+      - "DR-011: One feature per card — no combining"
+      - "DR-012: Include features that seem insignificant"
+      - "DR-013: Target 20-50 features per product"
+
+    input_schema:
+      product_specs: "object — Technical specifications"
+      marketing_materials: "array — Existing brochures, website, ads"
+      personal_experience: "string — First-hand product experience notes"
+      competitor_comparison: "array — Competitor feature lists"
+
+    output_schema:
+      feature_cards: "array — 20-50 individual feature cards"
+      feature_categories:
+        technical: "array"
+        operational: "array"
+        aesthetic: "array"
+        logistic: "array"
+        support: "array"
+        guarantee: "array"
+      total_count: "number"
+
+  benefit-converter:
+    id: benefit-converter
+    name: "Benefit Converter"
+    role: "Tier 0 — Extraction"
+    description: "Converts each feature into multi-level benefits using the 'So What?' chain"
+    cognitive_type: "Analysis + Empathy"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Apply 'So What?' chain until emotional level reached"
+      - "Categorize benefits by level (Functional/Emotional/Social)"
+      - "Translate product language into customer language"
+      - "Create proprietary benefit names"
+
+    decision_rules:
+      - "DR-020: Chain 'So What?' minimum 3 times per feature"
+      - "DR-021: Must reach emotional level (L2) for every feature"
+      - "DR-022: Use customer language, not copywriter language"
+      - "DR-023: Generic benefits must be made proprietary (give it a NAME)"
+      - "DR-024: Mark each benefit with level tag (L1/L2/L3)"
+
+    input_schema:
+      feature_cards: "array — From feature-lister"
+      customer_language: "array — Phrases and jargon from customer research"
+      customer_desires: "array — From 10 Smart Questions #6"
+
+    output_schema:
+      benefit_cards:
+        - feature: "string"
+          benefit_l1_functional: "string"
+          benefit_l2_emotional: "string"
+          benefit_l3_social: "string"
+          proprietary_name: "string | null"
+      conversion_rate: "number — % of features with 3 benefit levels"
+
+  hidden-benefit-hunter:
+    id: hidden-benefit-hunter
+    name: "Hidden Benefit Hunter"
+    role: "Tier 1 — Discovery"
+    description: "Discovers the non-obvious hidden benefit of profound importance using the Ted Nicholas Method"
+    cognitive_type: "Creativity + Empathy"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Apply Ted Nicholas Hidden Benefit discovery method"
+      - "Ask 'What do they DO after achieving this?' chain"
+      - "Identify the 'eyes light up' benefit"
+      - "Validate hidden benefit with customer perspective"
+
+    decision_rules:
+      - "DR-030: Hidden benefit is NEVER the first obvious benefit"
+      - "DR-031: Must be 3-5 questions deep from obvious benefit"
+      - "DR-032: Must cause 'I never thought of it that way' reaction"
+      - "DR-033: If eyes don't light up, dig deeper"
+      - "DR-034: Hidden benefit often becomes the headline"
+
+    input_schema:
+      benefit_cards: "array — All converted benefits"
+      customer_desires: "object — Smart Question #6 (secret desire)"
+      customer_frustrations: "array — Smart Question #4 (daily frustrations)"
+
+    output_schema:
+      hidden_benefits: "array — 1-3 discovered"
+      discovery_chain: "array — Step-by-step 'What do they do next?' chain"
+      headline_potential: "boolean — Could this be the headline?"
+      validation_test: "string — How to validate with real prospect"
+
+  benefit-statement-writer:
+    id: benefit-statement-writer
+    name: "Benefit Statement Writer"
+    role: "Tier 2 — Output"
+    description: "Writes polished benefit statements ready for use in sales letters, ads, and marketing"
+    cognitive_type: "Creativity + Polish"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Write complete Feature→L1→L2→L3 statements"
+      - "Create standalone benefit bullets"
+      - "Write benefit-driven paragraphs"
+      - "Adapt statements for different media formats"
+
+    decision_rules:
+      - "DR-040: Each statement must flow Feature→Functional→Emotional→Social"
+      - "DR-041: Customer language must dominate"
+      - "DR-042: Specific numbers beat vague claims"
+      - "DR-043: Each statement must pass the 'I want that' test"
+
+    input_schema:
+      prioritized_benefits: "array — Top 5-10 benefits ranked"
+      hidden_benefits: "array — From hidden-benefit-hunter"
+      customer_language: "array"
+
+    output_schema:
+      full_statements: "array — Feature→L1→L2→L3 format"
+      bullet_versions: "array — Single-line benefit bullets"
+      paragraph_versions: "array — Expanded benefit paragraphs"
+      headline_candidates: "array — Benefits strong enough for headlines"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  feature_to_benefit_conversion:
+    trigger: "When product details and customer profile are available"
+    duration: "3-5 hours"
+
+    steps:
+      - agent: "feature-lister"
+        action: "Exhaustively list all features (20-50 cards)"
+        duration: "45-60 min"
+        gate: "QG-001"
+
+      - agent: "benefit-converter"
+        action: "Convert each feature using 'So What?' chain"
+        duration: "60-90 min"
+        gate: "QG-002"
+
+      - agent: "hidden-benefit-hunter"
+        action: "Discover hidden benefit using Ted Nicholas Method"
+        duration: "30-45 min"
+        gate: "QG-003"
+
+      - agent: "benefit-director"
+        action: "Prioritize benefits by customer importance"
+        duration: "30 min"
+
+      - agent: "benefit-statement-writer"
+        action: "Write polished benefit statements"
+        duration: "45-60 min"
+        gate: "QG-004"
+
+    output: "Complete benefit deck with hidden benefits and polished statements"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  QG-001:
+    name: "Feature Volume Gate"
+    transition: "Listing → Conversion"
+    conditions:
+      - "Minimum 20 features listed"
+      - "One feature per card"
+      - "No filtering during listing"
+    type: "blocking"
+
+  QG-002:
+    name: "Conversion Completeness Gate"
+    transition: "Conversion → Discovery"
+    conditions:
+      - "Every feature has at least 1 benefit"
+      - "80%+ features reach emotional level (L2)"
+      - "Benefits in customer language"
+      - "None pass the 'So What?' test"
+    type: "blocking"
+
+  QG-003:
+    name: "Hidden Benefit Gate"
+    transition: "Discovery → Prioritization"
+    conditions:
+      - "At least 1 hidden benefit discovered"
+      - "Hidden benefit is 3+ levels deep"
+      - "Passes 'eyes light up' test"
+    type: "blocking"
+
+  QG-004:
+    name: "Statement Quality Gate"
+    transition: "Writing → Output"
+    conditions:
+      - "5-10 polished benefit statements"
+      - "Each flows Feature→L1→L2→L3"
+      - "Specific numbers used where possible"
+      - "Customer language dominates"
+    type: "blocking"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BENEFIT LEVEL FRAMEWORK
+# ═══════════════════════════════════════════════════════════════════════════════
+
+benefit_levels:
+  L0_feature:
+    description: "What the product IS or HAS"
+    test: "If customer says 'So What?' — it's this level"
+    example: "24-hour customer service"
+
+  L1_functional:
+    description: "What the product DOES for the customer"
+    test: "Answers 'What does this do for me?'"
+    example: "You get help whenever you need it"
+
+  L2_emotional:
+    description: "How the product makes the customer FEEL"
+    test: "Answers 'How does this make me feel?'"
+    example: "You never lose sleep worrying about unresolved problems"
+
+  L3_social:
+    description: "How OTHERS perceive the customer"
+    test: "Answers 'What will others think of me?'"
+    example: "Your team sees you as someone who always has things under control"
+
+  hidden:
+    description: "Non-obvious benefit of profound importance"
+    test: "Causes 'I never thought of it that way' reaction"
+    example: "Spend more time on the golf course instead of recruiting"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES & INTEGRATIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  sops:
+    - "sop-feature-to-benefit.md"
+    - "sop-28-step-sales-letter.md"  # Parent system (Step 2)
+
+  kennedy_agents:
+    - "kennedy-sales-letter — Primary consumer of benefit deck"
+    - "kennedy-copy — Uses benefits in all copy"
+    - "kennedy-offers — Benefit-driven offer design"
+
+integrations:
+  headline_formulas: "Top benefit feeds headline creation"
+  damaging_admission: "Feature analysis reveals weaknesses"
+  objection_anticipation: "Benefits form basis of objection responses"
+  sales_letter_system: "Benefits are core of letter body (Steps 8-9)"

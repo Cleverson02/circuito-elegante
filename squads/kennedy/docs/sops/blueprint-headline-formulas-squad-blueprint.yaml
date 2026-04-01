@@ -1,0 +1,379 @@
+# Squad Blueprint: 12 Fill-in-the-Blank Headline Formulas
+# Extracted from: The Ultimate Sales Letter (3rd Edition, 2006) — Ch.7 — Dan Kennedy
+# Version: 1.0
+# Date: 2026-02-11
+
+squad:
+  name: kennedy-headline-system
+  purpose: "Generate high-converting headlines using Kennedy's 12 proven fill-in-the-blank formulas with systematic testing and optimization"
+  extracted_from: "sop-headline-formulas.md"
+
+  philosophy: |
+    "Your headline's job is identical to a door-to-door salesperson wedging
+    a foot in the door. You have exactly 1-2 sentences to melt resistance,
+    create interest, and prevent the door from closing."
+    — Dan Kennedy, The Ultimate Sales Letter
+
+    - Headlines are the #1 factor affecting response rate
+    - 12 proven formulas eliminate guesswork
+    - Volume first, selection second, testing third
+    - Pest-to-Welcome-Guest transformation is the ultimate test
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIER STRUCTURE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tier_structure:
+  orchestrator:
+    - headline-director
+
+  tier_0_research:
+    - benefit-extractor
+    # Distills top benefits and audience language for headline input
+
+  tier_1_creation:
+    - formula-writer
+    - variation-generator
+    # Core headline production using 12 formulas
+
+  tier_2_optimization:
+    - headline-tester
+    # A/B testing and performance analysis
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENT DEFINITIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  headline-director:
+    id: headline-director
+    name: "Headline Director"
+    role: "Orchestrator"
+    description: "Coordinates headline creation, selects top candidates, approves final choice"
+    cognitive_type: "Judgment + Strategy"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Select appropriate formulas based on context"
+      - "Evaluate headlines against Pest-to-Welcome-Guest test"
+      - "Approve top 3-5 for testing"
+      - "Make final headline selection"
+
+    decision_rules:
+      - "DR-001: Clear offer = Formula #11 (Give Me/I'll)"
+      - "DR-002: Dramatic transformation story = Formula #1 (They Didn't Think)"
+      - "DR-003: Specific audience needed = Formula #7 (If You Are)"
+      - "DR-004: Clear how-to benefit = Formula #6 (How To)"
+      - "DR-005: Strong social proof = Formula #2 (Who Else Wants)"
+      - "DR-006: Fear/urgency genuine = Formula #10 (Warning)"
+      - "DR-007: Multiple tips/methods = Formula #12 (Ways To)"
+      - "DR-008: Default to Formula #6 when uncertain"
+
+    input_schema:
+      customer_profile: "object — Top benefits, fears, desires, language"
+      product_details: "object — What is being sold"
+      context: "enum — sales_letter | ad | email | landing_page | postcard"
+
+    output_schema:
+      selected_formulas: "array — 3-5 formulas chosen with rationale"
+      top_headlines: "array — Final 3-5 candidates ranked"
+      recommended_headline: "string — #1 pick with justification"
+      test_plan: "object — A/B test design"
+
+  benefit-extractor:
+    id: benefit-extractor
+    name: "Benefit Extractor"
+    role: "Tier 0 — Research"
+    description: "Distills the #1 benefit, hidden benefit, and audience language for headline input"
+    cognitive_type: "Analysis"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Identify the single most compelling benefit"
+      - "Extract hidden benefit (Ted Nicholas Method)"
+      - "Collect exact audience language and jargon"
+      - "Map fears, desires, and frustrations for headline angles"
+
+    decision_rules:
+      - "DR-010: Hidden benefit takes priority over obvious benefit"
+      - "DR-011: Audience language beats copywriter language"
+      - "DR-012: Specific numbers beat vague claims"
+
+    input_schema:
+      ten_smart_answers: "object — From customer profiling"
+      feature_benefit_cards: "array — Prioritized cards"
+      customer_language_samples: "array — Real phrases from audience"
+
+    output_schema:
+      primary_benefit: "string — The #1 benefit for headlines"
+      hidden_benefit: "string — Non-obvious benefit"
+      audience_flag: "string — Specific identifier for Formula #7"
+      pain_points: "array — Top 3 fears/pains for Formula #10"
+      social_proof_data: "object — Numbers for Formula #2/#9"
+      transformation_story: "string — For Formula #1/#3/#5"
+
+  formula-writer:
+    id: formula-writer
+    name: "Formula Writer"
+    role: "Tier 1 — Creation"
+    description: "Writes headline variations using all 12 Kennedy formulas"
+    cognitive_type: "Creativity + Synthesis"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Apply all 12 fill-in-the-blank formulas"
+      - "Create minimum 2 variations per formula"
+      - "Write Johnson Box versions"
+      - "Create Flag + How To combinations"
+      - "Write celebrity lead-in variants when applicable"
+
+    decision_rules:
+      - "DR-020: Minimum 2 variations per formula = 24 total minimum"
+      - "DR-021: Volume first — do not edit during generation"
+      - "DR-022: Every headline must pass 3-second comprehension test"
+      - "DR-023: Specific numbers preferred over vague claims"
+      - "DR-024: Odd numbers (7, 27, 101) more credible than round"
+
+    input_schema:
+      primary_benefit: "string"
+      hidden_benefit: "string"
+      audience_flag: "string"
+      pain_points: "array"
+      social_proof_data: "object"
+      transformation_story: "string"
+
+    output_schema:
+      headline_set:
+        formula_1_underdog: "array — 2+ variations"
+        formula_2_social_proof: "array — 2+ variations"
+        formula_3_transformation: "array — 2+ variations"
+        formula_4_challenge: "array — 2+ variations"
+        formula_5_personal: "array — 2+ variations"
+        formula_6_how_to: "array — 2+ variations"
+        formula_7_flagging: "array — 2+ variations"
+        formula_8_secrets: "array — 2+ variations"
+        formula_9_mass_proof: "array — 2+ variations"
+        formula_10_warning: "array — 2+ variations"
+        formula_11_give_me: "array — 2+ variations"
+        formula_12_ways: "array — 2+ variations"
+      total_count: "number — Should be 24+"
+      johnson_box_variants: "array — Top 5 in Johnson Box format"
+
+  variation-generator:
+    id: variation-generator
+    name: "Variation Generator"
+    role: "Tier 1 — Creation"
+    description: "Creates additional variations of top-performing headline structures"
+    cognitive_type: "Creativity"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Generate 5-10 variations of each winning formula"
+      - "Combine formulas for hybrid headlines"
+      - "Create subheadline pairs"
+      - "Adapt headlines for different formats (email, ad, postcard)"
+
+    decision_rules:
+      - "DR-030: Only vary top 3-5 headlines from formula-writer"
+      - "DR-031: Each variation changes ONE element only"
+      - "DR-032: Create format-specific versions (email subject, ad hook, etc.)"
+
+    input_schema:
+      top_headlines: "array — Best 3-5 from formula-writer"
+      target_formats: "array — Where headlines will be used"
+
+    output_schema:
+      variations: "array — 5-10 per top headline"
+      subheadline_pairs: "array — Each headline with matching subheadline"
+      format_adaptations: "object — Versions for each target format"
+
+  headline-tester:
+    id: headline-tester
+    name: "Headline Tester"
+    role: "Tier 2 — Optimization"
+    description: "Designs and analyzes A/B tests for headline optimization"
+    cognitive_type: "Analysis"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Design statistically valid A/B tests"
+      - "Analyze response rate differences"
+      - "Identify winning headlines"
+      - "Recommend losing headlines for P.S. or subheadline use"
+
+    decision_rules:
+      - "DR-040: A/B test headline as FIRST priority"
+      - "DR-041: Winner by >30% = clearly superior"
+      - "DR-042: Difference <10% = inconclusive, test larger sample"
+      - "DR-043: All variants low = problem is NOT headline, review offer"
+      - "DR-044: Losing headline can still be P.S. or subheadline"
+
+    input_schema:
+      headline_candidates: "array — Top 3-5 for testing"
+      list_size: "number — Available test audience"
+      test_budget: "number"
+
+    output_schema:
+      test_design: "object — Sample sizes, split method, duration"
+      results: "object — Response rates per variation"
+      winner: "string — Winning headline with confidence level"
+      reuse_plan: "object — How to use losing headlines elsewhere"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  headline_creation:
+    trigger: "When customer profile and benefit cards are ready"
+    duration: "2-4 hours"
+
+    steps:
+      - agent: "benefit-extractor"
+        action: "Distill top benefit, hidden benefit, audience language"
+        duration: "30 min"
+
+      - agent: "headline-director"
+        action: "Select 3-5 target formulas based on context"
+        duration: "15 min"
+
+      - agent: "formula-writer"
+        action: "Write 24+ headlines using all 12 formulas"
+        duration: "1-2 hours"
+        gate: "QG-001"
+
+      - agent: "headline-director"
+        action: "Filter and rank top 3-5 headlines"
+        duration: "30 min"
+        gate: "QG-002"
+
+      - agent: "variation-generator"
+        action: "Create 5-10 variations of top headlines"
+        duration: "30 min"
+
+      - agent: "headline-director"
+        action: "Final selection and Johnson Box formatting"
+        gate: "QG-003"
+
+  headline_testing:
+    trigger: "When headline candidates are approved"
+    duration: "1-7 days (depending on medium)"
+
+    steps:
+      - agent: "headline-tester"
+        action: "Design A/B test for top 2-3 headlines"
+        duration: "1 hour"
+
+      - agent: "headline-tester"
+        action: "Monitor test results"
+        duration: "1-7 days"
+
+      - agent: "headline-tester"
+        action: "Analyze results and declare winner"
+        duration: "1 hour"
+
+      - agent: "headline-director"
+        action: "Approve winner, assign losing headlines to P.S./subheadline"
+        duration: "30 min"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  QG-001:
+    name: "Volume Gate"
+    transition: "Generation → Filtering"
+    conditions:
+      - "Minimum 24 headlines generated (12 formulas x 2)"
+      - "All 12 formulas attempted"
+      - "No editing during generation phase"
+    type: "blocking"
+
+  QG-002:
+    name: "Quality Filter Gate"
+    transition: "Filtering → Variation"
+    conditions:
+      - "Top 3-5 headlines selected"
+      - "Each passes Pest-to-Welcome-Guest test"
+      - "Each contains specific benefit or curiosity element"
+      - "Each comprehensible in 3 seconds"
+    type: "blocking"
+
+  QG-003:
+    name: "Format Gate"
+    transition: "Variation → Testing"
+    conditions:
+      - "Johnson Box version created for top pick"
+      - "Subheadline paired with each candidate"
+      - "Format adaptations created if needed"
+    type: "warning"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FORMULA SELECTION MATRIX
+# ═══════════════════════════════════════════════════════════════════════════════
+
+formula_selection:
+  by_scenario:
+    clear_compelling_offer: "#11 — Give Me/I'll"
+    dramatic_transformation: "#1 — They Didn't Think"
+    specific_audience: "#7 — If You Are"
+    how_to_benefit: "#6 — How To"
+    strong_social_proof: "#2 — Who Else Wants"
+    genuine_fear_urgency: "#10 — Warning"
+    multiple_tips: "#12 — Ways To"
+    insider_knowledge: "#8 — Secrets Of"
+    personal_achievement: "#5 — How I"
+    mass_social_proof: "#9 — Thousands Now"
+    provoke_self_evaluation: "#4 — Are You"
+    unexpected_event: "#3 — How Made Me"
+    default_universal: "#6 — How To"
+
+  by_audience_type:
+    cold_b2c: ["#6", "#10", "#12", "#2"]
+    cold_b2b: ["#7", "#10", "#12", "#8"]
+    warm_consumer: ["#2", "#11", "#9", "#1"]
+    warm_business: ["#7", "#11", "#8", "#5"]
+    high_ticket: ["#8", "#7", "#5", "#1"]
+    low_ticket: ["#11", "#6", "#12", "#2"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metrics:
+  production:
+    - name: "Headlines Generated"
+      target: "24+ (12 formulas x 2)"
+    - name: "Top Candidates"
+      target: "3-5 selected"
+    - name: "Formulas Used"
+      target: "All 12 attempted"
+
+  performance:
+    - name: "Response Rate Impact"
+      measure: "A/B test winner vs loser gap"
+    - name: "3-Second Comprehension"
+      test: "Can reader understand in 3 seconds?"
+    - name: "Pest-to-Welcome-Guest"
+      test: "Does headline transform relationship?"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES & INTEGRATIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  sops:
+    - "sop-headline-formulas.md"
+    - "sop-feature-to-benefit.md"  # Provides benefits for headlines
+    - "sop-28-step-sales-letter.md"  # Parent system (Step 6)
+
+  kennedy_agents:
+    - "kennedy-sales-letter — Primary user of headlines"
+    - "kennedy-copy — Copywriting integration"
+
+integrations:
+  sales_letter_system: "Headlines feed directly into Step 6"
+  email_campaigns: "Subject lines use same formulas"
+  ad_creation: "Ad hooks derived from headline formulas"
+  landing_pages: "Page headlines use same system"

@@ -1,0 +1,535 @@
+# Blueprint: Renegade Millionaire Squad
+# Source: Dan Kennedy - The Ultimate No B.S. Business Success Book + Renegade Millionaire Course
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+---
+
+metadata:
+  name: "Renegade Millionaire Squad Blueprint"
+  description: >
+    Orchestration blueprint for the foundational Kennedy system -- the
+    25 Eternal Truths and Renegade Millionaire philosophy. This blueprint
+    provides the philosophical and strategic operating system that
+    underlies all other Kennedy SOPs. It transforms conventional
+    entrepreneurs into Renegade Millionaires who think and act
+    contrarian to mainstream business advice.
+  version: "1.0"
+# source_sop: sop-renegade-millionaire.md
+  source:
+    book: "The Ultimate No B.S. Business Success Book"
+    author: "Dan S. Kennedy"
+    pages: "2-154"
+    framework: "Dan Kennedy's 25 Eternal Truths (Framework 1)"
+    additional_sources:
+      - "Renegade Millionaire Course"
+      - "All 21 Frameworks extracted from the book"
+  sop_reference: "sop-renegade-millionaire.md"
+  squad: "kennedy"
+  created: "2026-02-11"
+  tags:
+    - renegade-millionaire
+    - eternal-truths
+    - mindset
+    - philosophy
+    - decision-making
+    - entrepreneurship
+
+# ---
+
+# Agent Definitions
+agents:
+
+  - id: renegade-chief
+    name: "Renegade Chief"
+    role: "orchestrator"
+    description: >
+      Master orchestrator for the Renegade Millionaire transformation.
+      Guides the entrepreneur through internalization and application
+      of the 25 Eternal Truths. Serves as the philosophical compass
+      for all Kennedy squad operations.
+    responsibilities:
+      - Guide 25 Eternal Truths internalization process
+      - Diagnose "conventional vs renegade" areas in business
+      - Coordinate application across all business dimensions
+      - Serve as decision-making framework reference
+      - Connect to specific SOPs when specialized action needed
+    kennedy_principles:
+      - "Every successful achievement begins with decision. (Truth #1)"
+      - "The willingness to do whatever it takes is infinitely more important than knowing everything. (Truth #8)"
+    inputs:
+      - Current business situation assessment
+      - Owner's goals and aspirations
+      - Existing business challenges
+      - Owner's decision-making patterns
+    outputs:
+      - Renegade diagnostic report
+      - Truth application plan
+      - Decision-making framework
+      - SOP routing recommendations
+
+  - id: truth-mentor
+    name: "Truth Mentor"
+    role: "specialist"
+    description: >
+      Deep expert on all 25 Eternal Truths. Helps the entrepreneur
+      understand, internalize, and apply each truth to their specific
+      situation. Provides the "why" behind each truth and connects
+      them to real-world decisions.
+    responsibilities:
+      - Teach and contextualize each Eternal Truth
+      - Create personalized application for each truth
+      - Provide examples and case studies
+      - Guide daily truth reflection practice
+      - Track internalization progress
+    kennedy_principles:
+      - All 25 Eternal Truths
+      - "There are only 2 categories of people -- those who say 'I can' and those who say 'I can't.' Both are right."
+    inputs:
+      - Owner's business context
+      - Current challenges and decisions
+      - Existing beliefs and assumptions
+    outputs:
+      - Truth-by-truth application guide
+      - Daily reflection prompts
+      - Decision-making scenarios
+      - Progress tracking checklist
+
+  - id: contrarian-strategist
+    name: "Contrarian Strategist"
+    role: "specialist"
+    description: >
+      Identifies where the entrepreneur is following conventional
+      wisdom that isn't working, and designs contrarian alternatives.
+      Challenges every assumption and "standard practice" that limits
+      growth. Applies the "Renegade lens" to business strategy.
+    responsibilities:
+      - Audit business for conventional thinking traps
+      - Design contrarian positioning strategies
+      - Challenge pricing strategies (Truth #5)
+      - Identify "extraordinary" opportunities (Truth #23)
+      - Test contrarian hypotheses in market (Truth #4)
+    kennedy_principles:
+      - "Live by price, die by price. (Truth #5)"
+      - "A normal small business can only yield a normal income. (Truth #23)"
+      - "You cannot trust your own judgment. Test, test, test. (Truth #4)"
+    inputs:
+      - Current business strategy
+      - Competitive landscape
+      - Pricing and positioning data
+      - Industry "best practices" being followed
+    outputs:
+      - Conventional thinking audit
+      - Contrarian strategy proposals
+      - Market test designs
+      - Positioning recommendations
+
+  - id: resilience-coach
+    name: "Resilience Coach"
+    role: "specialist"
+    description: >
+      Specializes in the failure, resilience, and crisis truths
+      (#3, #16, #17, #18, #25). Prepares the entrepreneur for
+      inevitable challenges and provides frameworks for navigating
+      them without losing momentum or hope.
+    responsibilities:
+      - Prepare owner for inevitable failures (Truth #3)
+      - Provide resilience frameworks (Truth #17)
+      - Distinguish responsibility from guilt (Truth #18)
+      - Guide through crisis moments (Truth #25)
+      - Connect to turnaround SOP when needed
+    kennedy_principles:
+      - "Failure is part of the daily entrepreneurial experience. (Truth #3)"
+      - "How you deal with failure determines whether you get to deal with success. (Truth #17)"
+      - "Take on responsibility, not guilt. (Truth #18)"
+    inputs:
+      - Current challenges and setbacks
+      - Owner's emotional state
+      - Business health indicators
+      - Past failure patterns
+    outputs:
+      - Resilience action plan
+      - Emotional separation exercises
+      - Battle strategy (5-step conflict resolution)
+      - Crisis prevention checklist
+
+  - id: systems-builder
+    name: "Systems Builder"
+    role: "specialist"
+    description: >
+      Focuses on the business maturity truths (#2, #9, #23, #24).
+      Guides the entrepreneur from passion-dependent to systems-driven
+      operations. Designs the path from ordinary to extraordinary
+      business through systematization and cross-fertilization.
+    responsibilities:
+      - Assess business maturity stage
+      - Design systems to replace passion dependency (Truth #24)
+      - Create extraordinary business model (Truth #23)
+      - Evaluate cross-fertilization opportunities
+      - Build owner-independent operations
+    kennedy_principles:
+      - "Passion wanes with longevity and familiarity. (Truth #24)"
+      - "A normal small business can only yield a normal income. (Truth #23)"
+      - "The ability to win is easily transferred. (Truth #9)"
+    inputs:
+      - Current business model
+      - Owner dependency assessment
+      - System documentation inventory
+      - Growth aspirations
+    outputs:
+      - Business maturity assessment
+      - Systematization roadmap
+      - Cross-fertilization opportunity map
+      - Owner independence plan
+
+  - id: life-balance-guardian
+    name: "Life Balance Guardian"
+    role: "support"
+    description: >
+      Guardian of Truth #21 and the Three Big Crashes (relationship,
+      health, burnout). Ensures the Renegade Millionaire path leads
+      to financial independence AND life quality, not just wealth
+      accumulation at the expense of everything else.
+    responsibilities:
+      - Monitor life balance indicators
+      - Apply Deathbed Test to major decisions
+      - Prevent Three Big Crashes
+      - Ensure business serves life goals (not vice versa)
+      - Guide "marry the goals, not the business" mindset
+    kennedy_principles:
+      - "No one on his deathbed says I wish I'd spent more time at the office. (Truth #21)"
+      - "What goes around, comes around. (Truth #22)"
+      - "Marry the goals, not the business."
+    inputs:
+      - Owner life satisfaction assessment
+      - Relationship health indicators
+      - Physical health status
+      - Hours worked vs quality of life
+    outputs:
+      - Life balance dashboard
+      - Crash prevention alerts
+      - Goal vs business alignment assessment
+      - Recovery and balance recommendations
+
+# ---
+
+# Workflow Phases
+workflow:
+
+  phase_1:
+    name: "Awakening"
+    duration: "Week 1-2"
+    description: "Read, reflect, and diagnose current renegade vs conventional status."
+    steps:
+      - step: "1.1 Truth Immersion"
+        agent: truth-mentor
+        duration: "Days 1-5"
+        actions:
+          - Present all 25 Eternal Truths with context
+          - Owner reflects on each truth's personal relevance
+          - Identify top 5 most relevant truths for current situation
+          - Create personalized truth cards for daily reference
+        gate: "Owner has read, reflected on, and internalized all 25 truths"
+
+      - step: "1.2 Conventional Audit"
+        agent: contrarian-strategist
+        duration: "Days 3-7"
+        actions:
+          - Audit business for conventional thinking patterns
+          - Identify where owner follows "standard" advice
+          - Map pricing strategy against Truth #5
+          - Assess positioning against Framework 5
+        gate: "Conventional thinking audit complete with 3+ areas identified"
+
+      - step: "1.3 Renegade Diagnostic"
+        agent: renegade-chief
+        duration: "Days 7-10"
+        actions:
+          - Synthesize truth immersion and conventional audit
+          - Score business on renegade scale (1-10 per cluster)
+          - Identify highest-impact areas for transformation
+          - Create prioritized action plan
+        gate: "Renegade diagnostic complete with scored assessment"
+
+      - step: "1.4 Life Balance Baseline"
+        agent: life-balance-guardian
+        duration: "Days 1-10 (parallel)"
+        actions:
+          - Assess current life balance
+          - Apply Deathbed Test to current priorities
+          - Identify crash risks
+          - Establish baseline metrics
+        gate: "Life balance baseline documented"
+
+  phase_2:
+    name: "Application"
+    duration: "Week 3-8"
+    description: "Apply truths systematically across business dimensions."
+    steps:
+      - step: "2.1 Positioning Revolution"
+        agent: contrarian-strategist
+        duration: "Week 3-4"
+        actions:
+          - Redesign positioning (move away from price)
+          - Create or refine USP
+          - Audit image congruence (Truth #6)
+          - Design market tests for new positioning
+        gate: "New positioning defined and first market test launched"
+
+      - step: "2.2 Financial Renegade"
+        agent: renegade-chief
+        duration: "Week 4-5"
+        actions:
+          - Route to SOP 5 Keys to Cash Flow
+          - Apply Truth #15 (Cash is King) framework
+          - Identify/create slack adjuster
+          - Challenge all "standard terms (Truth #11)"
+        gate: "Cash flow optimization initiated. Slack adjuster identified."
+
+      - step: "2.3 Resilience Building"
+        agent: resilience-coach
+        duration: "Week 3-6 (parallel)"
+        actions:
+          - Prepare for inevitable challenges
+          - Build emotional separation skills
+          - Create personal resilience playbook
+          - Address any current failures/setbacks
+        gate: "Resilience playbook created. Owner distinguishes responsibility from guilt."
+
+      - step: "2.4 Systems Foundation"
+        agent: systems-builder
+        duration: "Week 5-8"
+        actions:
+          - Assess business maturity stage
+          - Identify 3 processes to systematize first
+          - Begin documentation and system creation
+          - Plan path to Systems Driven maturity
+        gate: "3 processes documented. Maturity roadmap created."
+
+  phase_3:
+    name: "Consolidation"
+    duration: "Month 3-6"
+    description: "Lock in renegade mindset and build toward extraordinary."
+    steps:
+      - step: "3.1 Daily Renegade Practice"
+        agent: truth-mentor
+        duration: "Ongoing"
+        actions:
+          - Daily truth reflection (rotate through 25)
+          - Weekly decision review against truths
+          - Monthly renegade audit
+        gate: "Truths integrated into daily decision-making"
+
+      - step: "3.2 Extraordinary Business Design"
+        agent: systems-builder
+        duration: "Month 3-6"
+        actions:
+          - Design extraordinary business model (Truth #23)
+          - Explore miniconglomerate opportunities
+          - Build cross-fertilization strategies
+          - Create owner-independent systems
+        gate: "Business model upgraded. Owner independence increasing."
+
+      - step: "3.3 Life Integration"
+        agent: life-balance-guardian
+        duration: "Ongoing"
+        actions:
+          - Monthly life balance check
+          - Quarterly Deathbed Test review
+          - Continuous crash prevention monitoring
+        gate: "Life balance maintained or improved throughout transformation."
+
+# ---
+
+# Quality Gates
+quality_gates:
+
+  gate_1_awakening:
+    name: "Awakening Complete"
+    trigger: "End of Phase 1"
+    criteria:
+      - "Owner has internalized all 25 Eternal Truths"
+      - "Conventional thinking audit identifies 3+ areas"
+      - "Renegade diagnostic scored and prioritized"
+      - "Life balance baseline established"
+      - "90-day written goals exist"
+    fail_action: "Extend Phase 1 by 1 week. Truth immersion is non-negotiable."
+
+  gate_2_application:
+    name: "Application Underway"
+    trigger: "End of Phase 2"
+    criteria:
+      - "Positioning redesigned (not price-based)"
+      - "Cash flow optimization initiated"
+      - "Resilience playbook created"
+      - "3 business processes systematized"
+      - "Market tests launched"
+    fail_action: "Identify blocked areas. Assign additional support."
+
+  gate_3_consolidated:
+    name: "Renegade Millionaire Mindset Consolidated"
+    trigger: "End of Month 6"
+    criteria:
+      - "Daily truth practice active for 3+ months"
+      - "Business model upgraded toward extraordinary"
+      - "Owner independence measurably increased"
+      - "Life balance maintained"
+      - "Revenue/margin trending positive"
+    fail_action: "Continue practice. Mindset change takes 6-12 months minimum."
+
+# ---
+
+# Risk Management
+risks:
+
+  - id: risk-001
+    name: "Intellectual Agreement Without Action"
+    probability: "high"
+    impact: "critical"
+    description: "Owner agrees with all 25 truths but doesn't change behavior"
+    mitigation: >
+      Truth-mentor ties each truth to a specific, measurable action with
+      deadline. Contrarian-strategist designs market tests that force
+      action. Weekly accountability check.
+    owner: renegade-chief
+
+  - id: risk-002
+    name: "Going Too Renegade Too Fast"
+    probability: "medium"
+    impact: "high"
+    description: "Owner makes dramatic changes without testing, causing damage"
+    mitigation: >
+      Truth #4 override: TEST before committing. Contrarian-strategist
+      designs small tests before major pivots. Systems-builder ensures
+      core operations remain stable during transformation.
+    owner: contrarian-strategist
+
+  - id: risk-003
+    name: "Life Balance Collapse"
+    probability: "medium"
+    impact: "high"
+    description: "Transformation energy leads to overwork and crash"
+    mitigation: >
+      Life-balance-guardian monitors weekly. Deathbed Test applied to
+      all major decisions. Three Big Crashes prevention protocol active.
+    owner: life-balance-guardian
+
+  - id: risk-004
+    name: "Isolation from Conventional World"
+    probability: "low"
+    impact: "medium"
+    description: "Renegade thinking alienates partners, employees, investors"
+    mitigation: >
+      Contrarian-strategist ensures communication bridges remain. Not
+      everything needs to be contrarian. Pick battles wisely.
+    owner: contrarian-strategist
+
+# ---
+
+# Success Metrics
+success_metrics:
+
+  mindset_metrics:
+    - metric: "Truth Application Rate"
+      target: "25/25 truths with specific business actions"
+      measurement: "Checklist completion"
+
+    - metric: "Decision Speed"
+      target: "Major decisions within 48h (not weeks)"
+      measurement: "Decision log with timestamps"
+
+    - metric: "Test Frequency"
+      target: "2+ market tests per month"
+      measurement: "Test log"
+
+  business_metrics:
+    - metric: "Positioning"
+      target: "Non-price-based competitive advantage"
+      measurement: "USP audit"
+
+    - metric: "Business Maturity"
+      target: "Advance 1+ stage within 12 months"
+      measurement: "Maturity assessment"
+
+    - metric: "Revenue Trend"
+      target: "Positive growth trend"
+      measurement: "Monthly revenue comparison"
+
+  life_metrics:
+    - metric: "Life Balance Score"
+      target: "Maintained or improved"
+      measurement: "Monthly self-assessment"
+
+    - metric: "Owner Independence"
+      target: "Business operates 1 week without owner"
+      measurement: "Actual absence test"
+
+# ---
+
+# Integration
+integration:
+
+  depends_on: []  # This IS the foundation -- depends on nothing
+
+  feeds_into:
+    - sop: "sop-business-turnaround.md"
+      relationship: "Truths #16, #17, #18, #25 provide crisis mindset"
+
+    - sop: "sop-5-keys-cash-flow.md"
+      relationship: "Truths #5, #10, #11, #15 drive cash optimization"
+
+    - sop: "sop-peak-productivity.md"
+      relationship: "Truths #19, #21 drive time optimization"
+
+    - sop: "sop-midas-touch-audit.md"
+      relationship: "Truths #4, #5, #6, #12 drive marketing audit"
+
+    - sop: "sop-entrepreneurial-management.md"
+      relationship: "Truths #14, #22 drive people management"
+
+  role: "FOUNDATION -- This blueprint provides the philosophical OS for all other Kennedy SOPs"
+
+# ---
+
+# Kennedy Wisdom Applied
+kennedy_wisdom:
+
+  all_25_eternal_truths:
+    - "#1: Every successful achievement begins with decision."
+    - "#2: If it's work, it won't make you rich."
+    - "#3: Failure is part of the daily entrepreneurial experience."
+    - "#4: You cannot trust your own judgment. Test, test, test."
+    - "#5: Live by price, die by price."
+    - "#6: We can't help but judge a book by its cover."
+    - "#7: No one will ever be a bigger expert on your business than you."
+    - "#8: Willingness to do whatever it takes > knowing everything."
+    - "#9: The ability to win is easily transferred."
+    - "#10: If you can't make money without money, you won't with money either."
+    - "#11: There is no such thing as standard terms."
+    - "#12: Familiarity breeds investment and trust."
+    - "#13: Talk is cheap until you hire a lawyer."
+    - "#14: No one will ever care about your business as much as you do."
+    - "#15: Cash is king."
+    - "#16: You WILL want to quit at least once."
+    - "#17: How you deal with failure determines success."
+    - "#18: Take on responsibility, not guilt."
+    - "#19: There is never enough time."
+    - "#20: Even a blind hog finds a truffle if it keeps poking around."
+    - "#21: No one on his deathbed wishes for more office time."
+    - "#22: What goes around, comes around."
+    - "#23: Normal business = normal income. Extraordinary required."
+    - "#24: Passion wanes with longevity and familiarity."
+    - "#25: Alligators vs draining the swamp."
+
+  mental_models_complete:
+    - "The Patchwork Quilt (financing)"
+    - "The Pig That Can't Sing (hiring)"
+    - "The Blind Hog and the Truffle (persistence)"
+    - "Alligators and Swamps (crisis vs strategy)"
+    - "Time Vampires (productivity)"
+    - "The $100,000 Racehorse (self-care)"
+    - "Burning the Boats (commitment)"
+    - "The Axe Swung Wide (turnaround)"
+    - "Marrying the Goals, Not the Business (life design)"
+    - "The Spinning Top (planning)"
+    - "Draining the Swamp vs Fighting Alligators (dual execution)"
+    - "The Deathbed Test (priorities)"

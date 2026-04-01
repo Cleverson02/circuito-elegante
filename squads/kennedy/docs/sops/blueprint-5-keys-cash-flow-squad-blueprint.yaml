@@ -1,0 +1,551 @@
+# Blueprint: Five Keys to Multiplied Cash Flow Squad
+# Source: Dan Kennedy - The Ultimate No B.S. Business Success Book, Ch.12
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+---
+
+metadata:
+  name: "Five Keys to Multiplied Cash Flow Squad Blueprint"
+  description: >
+    Orchestration blueprint for executing Dan Kennedy's MCF (Multiplied Cash
+    Flow) system. Deploys specialized agents to simultaneously attack all 5
+    cash flow levers: expenses, financing, collections, sales, and margin
+    optimization through slack adjusters.
+  version: "1.0"
+# source_sop: sop-5-keys-cash-flow.md
+  source:
+    book: "The Ultimate No B.S. Business Success Book"
+    author: "Dan S. Kennedy"
+    chapter: 12
+    pages: "98-103"
+    framework: "Five Keys to Multiplied Cash Flow (Framework 13)"
+  sop_reference: "sop-5-keys-cash-flow.md"
+  squad: "kennedy"
+  created: "2026-02-11"
+  tags:
+    - cash-flow
+    - revenue-optimization
+    - expense-reduction
+    - collections
+    - slack-adjuster
+    - mcf
+
+# ---
+
+# Agent Definitions
+agents:
+
+  - id: mcf-chief
+    name: "MCF Chief"
+    role: "orchestrator"
+    description: >
+      Master orchestrator for the Multiplied Cash Flow system. Ensures all
+      5 keys are attacked simultaneously for maximum multiplicative effect.
+      Monitors the compound impact across all cash flow levers.
+    responsibilities:
+      - Coordinate simultaneous execution of all 5 MCF keys
+      - Monitor compound cash flow improvement
+      - Ensure no key is neglected in favor of others
+      - Report weekly with MCF dashboard
+      - Escalate when any key underperforms
+    kennedy_principles:
+      - "Cash is king. (Eternal Truth #15)"
+      - "Most businesses focus only on the first sale. The real profit is in maximizing lifetime value."
+    inputs:
+      - Financial statements (12 months)
+      - Current cash flow analysis
+      - Product/service margin data
+      - Accounts receivable aging report
+    outputs:
+      - MCF dashboard (weekly)
+      - Compound improvement report
+      - Agent coordination instructions
+      - Monthly MCF review document
+
+  - id: expense-auditor
+    name: "Expense Auditor"
+    role: "specialist"
+    description: >
+      Key 1 specialist. Conducts line-by-line expense audit, negotiates
+      contracts, and implements spending controls. Operates on Kennedy's
+      principle that every dollar saved goes straight to the bottom line.
+    responsibilities:
+      - Conduct complete expense audit
+      - Negotiate top contracts for better terms
+      - Implement approval controls
+      - Eliminate invisible waste
+      - Monitor ongoing expense discipline
+    kennedy_principles:
+      - "There is no such thing as standard terms. (Eternal Truth #11)"
+      - "Challenge every expense: Is this truly necessary?"
+    inputs:
+      - Full expense ledger (12 months)
+      - All active contracts
+      - Subscription inventory
+      - Departmental budgets
+    outputs:
+      - Expense audit report
+      - Contract renegotiation tracker
+      - Spending control policy
+      - Monthly expense dashboard
+
+  - id: financing-strategist
+    name: "Financing Strategist"
+    role: "specialist"
+    description: >
+      Key 2 specialist. Optimizes use of other people's money through
+      credit lines, vendor terms, leasing, and the Patchwork Quilt
+      approach to financing.
+    responsibilities:
+      - Map all financing options available
+      - Optimize vendor payment terms
+      - Establish/expand credit facilities
+      - Implement Patchwork Quilt financing model
+      - Manage banking relationships
+    kennedy_principles:
+      - "The cost of borrowing is less than the cost of lost opportunity."
+      - "If you can't make money without money, you won't make money with money either. (Eternal Truth #10)"
+    inputs:
+      - Current financing arrangements
+      - Vendor terms inventory
+      - Banking relationships
+      - Cash flow timing analysis
+    outputs:
+      - Financing optimization plan
+      - Vendor terms renegotiation tracker
+      - Credit facility status report
+      - Working capital improvement analysis
+
+  - id: collections-enforcer
+    name: "Collections Enforcer"
+    role: "specialist"
+    description: >
+      Key 3 specialist. Implements Kennedy's 9-step credit management
+      plan to ensure money moves from books to bank. Transforms passive
+      collection into systematic recovery.
+    responsibilities:
+      - Implement 9-step credit management plan
+      - Set up automated reminder systems
+      - Conduct direct phone follow-ups
+      - Manage collection agency relationships
+      - Maintain weekly aging dashboard
+    kennedy_principles:
+      - "Money in the bank, not on the books."
+      - "Implement a systematic credit management program."
+    inputs:
+      - Accounts receivable aging report
+      - Current collection processes
+      - Customer payment history
+      - Credit policies
+    outputs:
+      - 9-step plan implementation status
+      - Weekly aging dashboard
+      - Collection success rate report
+      - Recovered amount tracker
+
+  - id: revenue-multiplier
+    name: "Revenue Multiplier"
+    role: "specialist"
+    description: >
+      Key 4 specialist. Maximizes revenue through TCV optimization,
+      upsells, cross-sells, retention, referrals, and strategic
+      alliances (host-beneficiary model).
+    responsibilities:
+      - Calculate and optimize TCV per customer
+      - Implement systematic upsell/cross-sell
+      - Build referral programs
+      - Develop host-beneficiary alliances
+      - Increase customer retention and frequency
+    kennedy_principles:
+      - "The real profit is in maximizing the lifetime value of each customer."
+      - "Who already has my ideal customer?"
+    inputs:
+      - Customer transaction history
+      - Current TCV metrics
+      - Product/service catalog
+      - Competitive landscape
+      - Potential alliance partners
+    outputs:
+      - TCV optimization plan
+      - Upsell/cross-sell playbook
+      - Referral program design
+      - Alliance partnership proposals
+      - Retention improvement metrics
+
+  - id: margin-architect
+    name: "Margin Architect"
+    role: "specialist"
+    description: >
+      Key 5 specialist. Identifies, creates, and optimizes the slack
+      adjuster -- the high-margin product or service that subsidizes
+      the rest of the business. Like movie theater popcorn for
+      every business.
+    responsibilities:
+      - Analyze margin across all products/services
+      - Identify existing high-margin candidates
+      - Design new slack adjuster if none exists
+      - Train team on slack adjuster presentation
+      - Protect margin integrity (no discounting)
+    kennedy_principles:
+      - "Every business needs at least one high-margin slack adjuster."
+      - "A normal small business can only yield a normal income. (Eternal Truth #23)"
+    inputs:
+      - Product/service margin analysis
+      - Customer purchase patterns
+      - Competitive pricing data
+      - Delivery cost structure
+    outputs:
+      - Margin analysis report
+      - Slack adjuster recommendation
+      - Sales presentation/pitch for slack adjuster
+      - Margin protection policy
+      - Slack adjuster performance dashboard
+
+# ---
+
+# Workflow Phases
+workflow:
+
+  phase_1:
+    name: "MCF Diagnosis"
+    duration: "Week 1-2"
+    description: "Complete diagnostic across all 5 cash flow levers."
+    steps:
+      - step: "1.1 Financial Baseline"
+        agent: mcf-chief
+        duration: "Days 1-3"
+        actions:
+          - Collect all financial data (12 months)
+          - Establish current cash flow baseline
+          - Create MCF diagnostic template
+          - Assign diagnostics to specialist agents
+        gate: "All financial data collected and baseline established"
+
+      - step: "1.2 Expense Audit"
+        agent: expense-auditor
+        duration: "Days 3-7"
+        actions:
+          - Line-by-line expense review
+          - Categorize essential vs dispensable
+          - Identify renegotiation opportunities
+          - Calculate potential savings
+        gate: "Expense audit complete with savings potential quantified"
+
+      - step: "1.3 Financing Assessment"
+        agent: financing-strategist
+        duration: "Days 3-7"
+        actions:
+          - Map current financing arrangements
+          - Identify optimization opportunities
+          - Assess credit facility options
+          - Analyze vendor term improvement potential
+        gate: "Financing landscape documented with optimization options"
+
+      - step: "1.4 Collections Audit"
+        agent: collections-enforcer
+        duration: "Days 3-7"
+        actions:
+          - Generate aging report
+          - Assess current collection processes
+          - Identify gaps in 9-step plan
+          - Quantify recoverable amounts
+        gate: "Aging report current. Recovery potential quantified."
+
+      - step: "1.5 Revenue Analysis"
+        agent: revenue-multiplier
+        duration: "Days 3-10"
+        actions:
+          - Calculate TCV per customer segment
+          - Map upsell/cross-sell opportunities
+          - Assess retention rates
+          - Identify alliance partner candidates
+        gate: "TCV calculated. Revenue growth opportunities quantified."
+
+      - step: "1.6 Margin Analysis"
+        agent: margin-architect
+        duration: "Days 3-10"
+        actions:
+          - Calculate margin per product/service
+          - Identify existing slack adjuster candidates
+          - Assess slack adjuster creation opportunities
+          - Design preliminary slack adjuster concept
+        gate: "Margin analysis complete. Slack adjuster identified or designed."
+
+  phase_2:
+    name: "Rapid Implementation"
+    duration: "Week 3-6"
+    description: "Implement quick wins across all 5 keys simultaneously."
+    steps:
+      - step: "2.1 Expense Cuts"
+        agent: expense-auditor
+        duration: "Week 3"
+        actions:
+          - Renegotiate top 5 contracts
+          - Cancel unnecessary subscriptions
+          - Implement approval controls
+          - Obtain alternative quotes for key services
+        gate: "Expense reduction of 10-25% achieved or committed"
+
+      - step: "2.2 Financing Optimization"
+        agent: financing-strategist
+        duration: "Week 3-4"
+        actions:
+          - Renegotiate vendor terms
+          - Establish/expand credit facility
+          - Implement cash timing optimization
+          - Build second banking relationship
+        gate: "Working capital improved by 20%+ or committed"
+
+      - step: "2.3 Collections Activation"
+        agent: collections-enforcer
+        duration: "Week 3-4"
+        actions:
+          - Deploy 9-step plan
+          - Configure automated reminders
+          - Call top 10 overdue accounts
+          - Engage collection agency for 60+ day accounts
+        gate: "9-step plan operational. Overdue reduced by 30%+"
+
+      - step: "2.4 Revenue Boost"
+        agent: revenue-multiplier
+        duration: "Week 4-6"
+        actions:
+          - Launch upsell protocols
+          - Launch referral program
+          - Begin systematic follow-up
+          - Initiate 3+ alliance conversations
+        gate: "Upsell active. Referral program launched. First alliance contacted."
+
+      - step: "2.5 Slack Adjuster Launch"
+        agent: margin-architect
+        duration: "Week 4-6"
+        actions:
+          - Finalize slack adjuster design
+          - Train team on presentation
+          - Soft launch to existing customer base
+          - Monitor adoption rate
+        gate: "Slack adjuster launched. Initial adoption data collected."
+
+  phase_3:
+    name: "Continuous Optimization"
+    duration: "Month 2-6"
+    description: "Refine, measure, and compound gains across all 5 keys."
+    steps:
+      - step: "3.1 Monthly MCF Review"
+        agent: mcf-chief
+        duration: "Monthly"
+        actions:
+          - Compile data from all 5 keys
+          - Calculate compound improvement
+          - Identify underperforming keys
+          - Adjust resource allocation
+          - Report to business owner
+        gate: "Compound cash flow improvement trending positive month-over-month"
+
+      - step: "3.2 Key Optimization Cycles"
+        agent: "All specialists"
+        duration: "Ongoing"
+        actions:
+          - Each specialist optimizes their key monthly
+          - A/B test improvements
+          - Share cross-key insights
+          - Document best practices
+        gate: "Each key showing measurable improvement quarterly"
+
+# ---
+
+# Quality Gates
+quality_gates:
+
+  gate_1_diagnosis:
+    name: "MCF Diagnosis Complete"
+    trigger: "End of Phase 1"
+    criteria:
+      - "Expense audit complete with savings quantified"
+      - "Financing options mapped and assessed"
+      - "Aging report current with recovery potential calculated"
+      - "TCV calculated per customer segment"
+      - "Slack adjuster identified or designed"
+      - "MCF baseline dashboard operational"
+    fail_action: "Extend diagnosis by 1 week for incomplete areas."
+
+  gate_2_implementation:
+    name: "Quick Wins Achieved"
+    trigger: "End of Phase 2"
+    criteria:
+      - "Expense reduction of minimum 10% achieved"
+      - "Working capital improved by 20%+"
+      - "9-step collection plan operational"
+      - "Upsell and referral systems active"
+      - "Slack adjuster launched with initial data"
+    fail_action: "Identify blockers. Reassign resources. Extend by 2 weeks."
+
+  gate_3_compound:
+    name: "Compound Effect Verified"
+    trigger: "End of Month 3"
+    criteria:
+      - "Cash flow improved 20%+ vs baseline"
+      - "All 5 keys showing individual improvement"
+      - "Slack adjuster contributing >10% of revenue"
+      - "Accounts receivable overdue <10% of total"
+      - "Expense-to-revenue ratio improved by 5+ percentage points"
+    fail_action: "MCF-chief convenes deep review. Adjust strategy for underperforming keys."
+
+  gate_4_sustained:
+    name: "Sustained MCF Improvement"
+    trigger: "End of Month 6"
+    criteria:
+      - "Cash flow improved 40%+ vs baseline"
+      - "Slack adjuster contributing >20% of revenue"
+      - "Accounts receivable overdue <5%"
+      - "TCV increased 30%+ vs baseline"
+      - "Systems documented for ongoing MCF management"
+    fail_action: "Continue optimization cycle for additional 3 months."
+
+# ---
+
+# Risk Management
+risks:
+
+  - id: risk-001
+    name: "Single Key Focus"
+    probability: "high"
+    impact: "medium"
+    description: "Team focuses on easiest key (usually sales) and neglects others"
+    mitigation: >
+      MCF-chief enforces parallel execution with weekly check on all 5 keys.
+      Dashboard shows compound effect to motivate balanced approach.
+    owner: mcf-chief
+
+  - id: risk-002
+    name: "Expense Cuts Hurt Revenue"
+    probability: "medium"
+    impact: "high"
+    description: "Cutting expenses that actually generate revenue (marketing, sales tools)"
+    mitigation: >
+      Expense-auditor must calculate ROI before cutting any revenue-generating
+      expense. Rule: if ROI > 2x, do not cut.
+    owner: expense-auditor
+
+  - id: risk-003
+    name: "Customer Backlash on Collections"
+    probability: "medium"
+    impact: "medium"
+    description: "Aggressive collection damages customer relationships"
+    mitigation: >
+      Collections-enforcer uses firm but professional approach. Offer payment
+      plans before escalating. Separate VIP accounts for personal handling.
+    owner: collections-enforcer
+
+  - id: risk-004
+    name: "Slack Adjuster Fails to Launch"
+    probability: "medium"
+    impact: "medium"
+    description: "New high-margin product/service doesn't find market acceptance"
+    mitigation: >
+      Margin-architect tests with small segment first. A/B test pricing and
+      positioning. Have backup slack adjuster candidates ready.
+    owner: margin-architect
+
+  - id: risk-005
+    name: "Alliance Partners Unresponsive"
+    probability: "medium"
+    impact: "low"
+    description: "Host-beneficiary alliance candidates don't respond or decline"
+    mitigation: >
+      Revenue-multiplier maintains pipeline of 10+ candidates. Focus on
+      making the value proposition irresistible for the host.
+    owner: revenue-multiplier
+
+# ---
+
+# Success Metrics
+success_metrics:
+
+  compound_effect:
+    description: >
+      The power of MCF is in the compound effect. If each key improves
+      by just 20%, the compound improvement is 2.49x (not 2x).
+    formula: "1.20 x 1.20 x 1.20 x 1.20 x 1.20 = 2.49x"
+    target: "Minimum 1.5x improvement in total cash flow within 6 months"
+
+  by_key:
+    key_1_expenses:
+      target: "10-25% reduction in operating expenses"
+      measurement: "Month-over-month expense comparison"
+    key_2_financing:
+      target: "20-50% improvement in available working capital"
+      measurement: "Working capital ratio"
+    key_3_collections:
+      target: "50% reduction in overdue receivables"
+      measurement: "Aging report comparison"
+    key_4_sales:
+      target: "15-30% revenue increase"
+      measurement: "Revenue comparison with TCV tracking"
+    key_5_margin:
+      target: "Slack adjuster at >50% margin, >20% of revenue"
+      measurement: "Product mix and margin analysis"
+
+# ---
+
+# Integration
+integration:
+
+  depends_on:
+    - sop: "sop-business-turnaround.md"
+      condition: "Only if business is in crisis first"
+      data_received: "Financial diagnosis, post-cut projections"
+
+  feeds_into:
+    - sop: "sop-midas-touch-audit.md"
+      relationship: "Key 4 benefits from marketing audit insights"
+      data_passed: "Revenue analysis, customer segments, marketing ROI data"
+
+    - sop: "sop-entrepreneurial-management.md"
+      relationship: "Key 1 intersects with team optimization"
+      data_passed: "Employee cost-to-productivity analysis"
+
+    - sop: "sop-peak-productivity.md"
+      relationship: "Owner time optimization supports all 5 keys"
+      data_passed: "Time allocation analysis, priority activities"
+
+  shared_data:
+    - name: "mcf_dashboard"
+      format: "dashboard"
+      source: mcf-chief
+      consumers: ["All agents", "Business owner"]
+
+    - name: "margin_analysis"
+      format: "spreadsheet"
+      source: margin-architect
+      consumers: ["mcf-chief", "revenue-multiplier"]
+
+    - name: "tcv_metrics"
+      format: "report"
+      source: revenue-multiplier
+      consumers: ["mcf-chief", "margin-architect"]
+
+# ---
+
+# Kennedy Wisdom Applied
+kennedy_wisdom:
+
+  eternal_truths_used:
+    - number: 5
+      text: "Live by price, die by price."
+      application: "Key 5 is about value and margin, never about being cheapest."
+
+    - number: 11
+      text: "There is no such thing as standard terms."
+      application: "Key 1 and Key 2 require aggressive negotiation of every term."
+
+    - number: 15
+      text: "Cash is king."
+      application: "The entire MCF framework exists to protect and multiply the king."
+
+  mental_models:
+    - name: "The Patchwork Quilt"
+      application: "Key 2 financing through multiple small sources."
+
+    - name: "Movie Theater Popcorn"
+      application: "Key 5 slack adjuster -- low cost, high price, essential complement."

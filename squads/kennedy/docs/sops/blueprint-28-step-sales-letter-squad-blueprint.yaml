@@ -1,0 +1,728 @@
+# Squad Blueprint: 28-Step Sales Letter System
+# Extracted from: The Ultimate Sales Letter (3rd Edition, 2006) — Dan Kennedy
+# Version: 1.0
+# Date: 2026-02-11
+
+squad:
+  name: kennedy-sales-letter-system
+  purpose: "Create high-converting direct-response sales letters using Kennedy's complete 28-Step system — from customer research through physical delivery"
+  extracted_from: "sop-28-step-sales-letter.md"
+
+  philosophy: |
+    "A sales letter is a salesperson in an envelope."
+    "You do not need much creativity to write letters; you only need to be
+    adept at recycling and reorganizing ideas, themes, words, and phrases."
+    — Dan Kennedy, The Ultimate Sales Letter
+
+    - Research BEFORE writing (Steps 1-3 are non-negotiable)
+    - Assemble from blocks, don't write linearly
+    - The envelope is as important as the copy
+    - Every element is testable and improvable
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIER STRUCTURE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tier_structure:
+  orchestrator:
+    - sales-letter-director
+    # Coordinates the full 28-step process end-to-end
+
+  tier_0_research:
+    - customer-profiler
+    - offer-analyst
+    # Steps 1-3: Deep research before any writing
+
+  tier_1_engineering:
+    - delivery-engineer
+    # Steps 4-5: Envelope strategy and A-Pile targeting
+
+  tier_2_creation:
+    - headline-architect
+    - body-copy-writer
+    - objection-crusher
+    # Steps 6-13: Core copywriting production
+
+  tier_3_refinement:
+    - copy-editor
+    - presentation-designer
+    # Steps 14-22: Creative enhancement and editing
+
+  tier_4_launch:
+    - campaign-tester
+    # Steps 23-28: Testing, production, and mailing
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENT DEFINITIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  sales-letter-director:
+    id: sales-letter-director
+    name: "Sales Letter Director"
+    role: "Orchestrator"
+    description: "Coordinates the 28-step process, ensures phase gates are met, and approves final output"
+    cognitive_type: "Judgment + Synthesis"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Route tasks to appropriate specialist agents"
+      - "Enforce quality gates between phases"
+      - "Approve headline selection"
+      - "Make kill/continue decisions at testing phase"
+      - "Maintain strategic alignment throughout process"
+
+    decision_rules:
+      - "DR-001: NEVER allow writing to begin before Steps 1-3 complete"
+      - "DR-002: If 10 Smart Questions not answered with specificity, BLOCK progression"
+      - "DR-003: Require minimum 3 headline variations before selection"
+      - "DR-004: Enforce 24h cool-off before final approval (Step 24)"
+      - "DR-005: Require external feedback before production (Step 25)"
+
+    input_schema:
+      product_service: "string — What is being sold"
+      target_audience: "string — Who is receiving the letter"
+      list_type: "enum — cold | warm | customer"
+      campaign_budget: "number — Total budget for campaign"
+      success_metrics: "object — Target response rate, CPA, ROI"
+
+    output_schema:
+      final_sales_letter: "markdown — Complete letter ready for production"
+      envelope_spec: "object — Envelope strategy specification"
+      test_plan: "object — Pre-test and A/B testing plan"
+      campaign_timeline: "object — Production and mailing schedule"
+
+  customer-profiler:
+    id: customer-profiler
+    name: "Customer Profiler"
+    role: "Tier 0 — Research (Step 1)"
+    description: "Conducts deep customer empathy research using the 10 Smart Questions and Theater In Your Mind"
+    cognitive_type: "Analysis + Empathy"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Answer 10 Smart Market Diagnosis Questions with specificity"
+      - "Execute Theater In Your Mind visualization technique"
+      - "Identify customer language patterns and jargon"
+      - "Map competitive landscape from customer perspective"
+      - "Discover hidden desires and unspoken fears"
+
+    decision_rules:
+      - "DR-010: If writing for unfamiliar industry, execute Outsider-to-Insider Method first"
+      - "DR-011: Question #6 (secret desire) must reveal the Hidden Benefit"
+      - "DR-012: If any question answered generically, dig deeper before proceeding"
+
+    input_schema:
+      industry: "string — Target industry/niche"
+      product_category: "string — Type of product/service"
+      existing_customer_data: "object — Any available customer research"
+      competitor_list: "array — Known competitors"
+
+    output_schema:
+      ten_smart_answers: "object — All 10 questions answered with specificity"
+      customer_persona: "object — Detailed persona with language samples"
+      hidden_benefit: "string — The non-obvious benefit of profound importance"
+      decision_biases: "array — Identified cognitive/professional patterns"
+      customer_language: "array — Jargon, phrases, insider terminology"
+
+  offer-analyst:
+    id: offer-analyst
+    name: "Offer Analyst"
+    role: "Tier 0 — Research (Steps 2-3)"
+    description: "Analyzes the product/offer, creates Feature-to-Benefit cards, identifies Damaging Admissions"
+    cognitive_type: "Analysis + Creativity"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Create comprehensive Feature-to-Benefit card decks"
+      - "Identify Hidden Benefits using Ted Nicholas Method"
+      - "Craft Damaging Admissions that build credibility"
+      - "Build Objection Anticipation card decks"
+      - "Design guarantee structures"
+
+    decision_rules:
+      - "DR-020: Every feature MUST have at least one corresponding benefit"
+      - "DR-021: Benefits must be stated in customer language, not product language"
+      - "DR-022: At least 1 Damaging Admission required — no exceptions"
+      - "DR-023: Minimum 10 objection cards before proceeding"
+      - "DR-024: If hidden benefit found, it takes priority in copy hierarchy"
+
+    input_schema:
+      product_details: "object — Full product/service description"
+      pricing: "object — Price points and guarantee options"
+      competitive_advantages: "array — What makes this different"
+      known_weaknesses: "array — Honest assessment of flaws"
+
+    output_schema:
+      feature_benefit_cards: "array — Each card with feature, benefit, and hidden benefit flag"
+      damaging_admissions: "array — Crafted admissions with reframes"
+      objection_cards: "array — Objection + neutralization response pairs"
+      guarantee_structure: "object — Recommended guarantee(s)"
+      benefit_priority_ranking: "array — Benefits ranked by customer importance"
+
+  delivery-engineer:
+    id: delivery-engineer
+    name: "Delivery Engineer"
+    role: "Tier 1 — Engineering (Steps 4-5)"
+    description: "Designs envelope strategy and physical delivery approach to ensure letter reaches A-Pile"
+    cognitive_type: "Strategy + Execution"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Select envelope strategy (Sneak-Up vs Billboard)"
+      - "Design grabber/lumpy mail elements"
+      - "Optimize for A-Pile sorting"
+      - "Specify postage and addressing approach"
+      - "Design hybrid envelope innovations"
+
+    decision_rules:
+      - "DR-030: Cold list + gatekeeper = Sneak-Up + First Class + Live Stamp"
+      - "DR-031: Cold list + no gatekeeper = Sneak-Up with personal return address"
+      - "DR-032: Warm list = Billboard approach with teaser copy and branding"
+      - "DR-033: NEVER mix strategies — go full Sneak-Up OR full Billboard"
+      - "DR-034: If budget allows, always use first class over bulk"
+      - "DR-035: Envelope promise must match letter content immediately"
+
+    input_schema:
+      list_type: "enum — cold | warm | customer"
+      has_gatekeeper: "boolean"
+      b2b_or_b2c: "enum — b2b | b2c"
+      budget_per_piece: "number"
+      grabber_budget: "number — Optional budget for physical objects"
+
+    output_schema:
+      envelope_strategy: "enum — sneak_up | billboard | hybrid"
+      envelope_spec:
+        return_address: "string"
+        addressing_method: "enum — inkjet | handwritten | label"
+        postage: "enum — live_stamp | meter | bulk"
+        teaser_copy: "string | null"
+        size: "string — standard | oversized | custom"
+      grabber_spec: "object | null — Physical object specification"
+      a_pile_score: "number 1-10 — Estimated A-Pile likelihood"
+
+  headline-architect:
+    id: headline-architect
+    name: "Headline Architect"
+    role: "Tier 2 — Creation (Steps 6-7)"
+    description: "Creates headlines using the 12 Fill-in-the-Blank formulas and Pest-to-Welcome-Guest transformation"
+    cognitive_type: "Creativity + Strategy"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Generate 3-5+ headline variations per formula"
+      - "Apply all 12 Kennedy headline formulas"
+      - "Create Johnson Box presentations"
+      - "Beat price bugaboo through headline framing"
+      - "Execute Pest-to-Welcome-Guest transformation"
+
+    decision_rules:
+      - "DR-040: Minimum 3 headline variations required"
+      - "DR-041: At least 1 variation must use direct 'HOW TO' formula"
+      - "DR-042: If targeting specific audience, include 1 'IF YOU ARE' flagging headline"
+      - "DR-043: Headline must transform Pest to Welcome Guest in 1-2 sentences"
+      - "DR-044: Celebrity lead-in only if genuine connection exists"
+
+    input_schema:
+      customer_profile: "object — From customer-profiler"
+      top_benefit: "string — #1 benefit from offer-analyst"
+      hidden_benefit: "string — From offer-analyst"
+      target_audience_flag: "string — Specific identifier for flagging"
+
+    output_schema:
+      headline_variations: "array — Minimum 3, each with formula reference"
+      recommended_headline: "string — Top recommendation with rationale"
+      johnson_box_version: "string — Formatted for Johnson Box placement"
+# source_sop: sop-28-step-sales-letter.md
+      subheadline: "string — Supporting subheadline"
+
+  body-copy-writer:
+    id: body-copy-writer
+    name: "Body Copy Writer"
+    role: "Tier 2 — Creation (Steps 8-9)"
+    description: "Writes body copy using block assembly method, incorporating benefits, proof, and story elements"
+    cognitive_type: "Creativity + Synthesis"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Write copy blocks (benefits, proof, story, offer, CTA)"
+      - "Apply Scissors and Tape assembly method"
+      - "Incorporate swipe file patterns"
+      - "Build AIDA progression through copy"
+      - "Create vivid, concrete, specific language"
+
+    decision_rules:
+      - "DR-050: Write blocks first, assemble second — never linear"
+      - "DR-051: Benefits ALWAYS lead over features"
+      - "DR-052: Every claim must have proof (testimonial, stat, or guarantee)"
+      - "DR-053: Conversational tone — write as if talking one-on-one"
+      - "DR-054: Paragraphs max 5 lines — break longer sections"
+      - "DR-055: Include prestige words where appropriate for premium positioning"
+
+    input_schema:
+      headline: "string — Approved headline"
+      feature_benefit_cards: "array — Prioritized cards"
+      damaging_admissions: "array — From offer-analyst"
+      customer_language: "array — Jargon and phrases to use"
+      proof_elements: "array — Testimonials, stats, credentials"
+
+    output_schema:
+      copy_blocks:
+        opening: "string — First 3-5 paragraphs"
+        benefits_section: "string — All benefits in priority order"
+        proof_section: "string — Testimonials, stats, credentials"
+        story_section: "string — Narrative element"
+        offer_section: "string — What's included, price, guarantee"
+        cta_section: "string — Call to action"
+      assembled_draft: "string — First complete draft"
+      word_count: "number"
+
+  objection-crusher:
+    id: objection-crusher
+    name: "Objection Crusher"
+    role: "Tier 2 — Creation (Steps 12-13)"
+    description: "Systematically addresses every possible objection and creates urgency triggers"
+    cognitive_type: "Analysis + Persuasion"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Build Q&A objection-handling sections"
+      - "Create urgency and scarcity triggers"
+      - "Design fast-action bonuses"
+      - "Craft deadline structures"
+      - "Neutralize 'too good to be true' reaction"
+
+    decision_rules:
+      - "DR-060: Every objection card must have a written response in the letter"
+      - "DR-061: Damaging Admission appears BEFORE the reader raises the objection"
+      - "DR-062: Urgency must be REAL — fake scarcity destroys credibility"
+      - "DR-063: Q&A format when 5+ objections need addressing"
+      - "DR-064: 'I'm not interested' is an objection — anticipate and answer it"
+
+    input_schema:
+      objection_cards: "array — From offer-analyst"
+      damaging_admissions: "array — From offer-analyst"
+      guarantee_structure: "object — From offer-analyst"
+      deadline_options: "object — Available real deadlines"
+
+    output_schema:
+      objection_responses: "array — Each objection with embedded response"
+      qa_section: "string — Formatted Q&A section"
+      urgency_triggers: "array — Deadline, scarcity, fast-action bonus"
+      guarantee_copy: "string — Guarantee section text"
+
+  copy-editor:
+    id: copy-editor
+    name: "Copy Editor"
+    role: "Tier 3 — Refinement (Steps 10-11, 17, 22)"
+    description: "Performs multiple editing passes for strategy, style, passion, and clarity"
+    cognitive_type: "Analysis + Polish"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Rewrite for strategic alignment (Step 10)"
+      - "Rewrite for style and readability (Step 11)"
+      - "Rewrite for passion and emotion (Step 17)"
+      - "Compare draft to proven examples (Step 18)"
+      - "Final editing pass (Step 22)"
+
+    decision_rules:
+      - "DR-070: 4 separate editing passes required — strategy, style, passion, final"
+      - "DR-071: No paragraph longer than 5 lines after editing"
+      - "DR-072: Every section must advance AIDA progression"
+      - "DR-073: Benchmark against 3+ swipe file examples before approval"
+      - "DR-074: If any section feels 'flat', inject specific story or number"
+
+    input_schema:
+      assembled_draft: "string — From body-copy-writer"
+      customer_profile: "object — For strategic alignment check"
+      swipe_file_examples: "array — Reference letters for benchmarking"
+
+    output_schema:
+      edited_draft: "string — After all 4 editing passes"
+      changes_log: "array — What changed in each pass and why"
+      readability_score: "number — Estimated reading level"
+      passion_score: "number 1-10 — Emotional impact assessment"
+
+  presentation-designer:
+    id: presentation-designer
+    name: "Presentation Designer"
+    role: "Tier 3 — Refinement (Steps 14-16, 20-21)"
+    description: "Handles P.S. strategy, graphic enhancement, and visual presentation"
+    cognitive_type: "Creativity + Detail"
+    executor_type: "Agent"
+
+    capabilities:
+      - "Craft strategic P.S. sections"
+      - "Design Johnson Box headlines"
+      - "Specify graphic enhancements (bold, underline, margin notes)"
+      - "Recommend photos vs illustrations"
+      - "Make the letter vivid and alive (Step 20)"
+
+    decision_rules:
+      - "DR-080: Minimum 1 P.S. required — restate main benefit or deadline"
+      - "DR-081: Use real photographs, NEVER illustrations, for proof elements"
+      - "DR-082: Johnson Box for headline if letter format allows"
+      - "DR-083: Margin annotations in handwriting style for key points"
+      - "DR-084: Graphic enhancements must support readability, not distract"
+
+    input_schema:
+      edited_draft: "string — From copy-editor"
+      key_benefits: "array — Top 3 benefits to reinforce in P.S."
+      deadline: "string — For urgency P.S."
+      visual_assets: "array — Available photos, testimonials, logos"
+
+    output_schema:
+      ps_sections: "array — 1-3 postscripts with strategic purpose"
+      graphic_spec: "object — Bold, underline, margin notes, Johnson Box"
+      photo_placement: "array — Where to place real photos"
+      final_formatted_letter: "string — Complete letter with all enhancements"
+
+  campaign-tester:
+    id: campaign-tester
+    name: "Campaign Tester"
+    role: "Tier 4 — Launch (Steps 19, 23-28)"
+    description: "Manages pre-testing, mockup mailing, cool-off, feedback, and production launch"
+    cognitive_type: "Execution + Analysis"
+    executor_type: "Hybrid"
+
+    capabilities:
+      - "Design pre-test splits"
+      - "Execute mockup mailing process"
+      - "Manage 24h+ cool-off period"
+      - "Collect and process external feedback"
+      - "Coordinate production and mailing"
+
+    decision_rules:
+      - "DR-090: Pre-test sample must be statistically meaningful for the list size"
+      - "DR-091: Physical mockup MUST be mailed to self before production"
+      - "DR-092: Minimum 24h cool-off — no exceptions"
+      - "DR-093: At least 2 external opinions from target demographic"
+      - "DR-094: A/B test headline as first priority if budget allows"
+
+    input_schema:
+      final_letter: "string — Complete formatted letter"
+      envelope_spec: "object — From delivery-engineer"
+      list_size: "number — Total mailing list size"
+      test_budget: "number — Budget allocated for testing"
+
+    output_schema:
+      test_plan: "object — Split test design"
+      mockup_results: "object — Physical mockup evaluation"
+      feedback_summary: "object — External feedback compilation"
+      production_spec: "object — Print and mailing specifications"
+      campaign_schedule: "object — Timeline for production through mailing"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  phase_1_research:
+    name: "Research & Preparation"
+    steps: "1-3"
+    duration: "1-3 days"
+    agents:
+      - customer-profiler
+      - offer-analyst
+    gate: "QG-001"
+
+    tasks:
+      - agent: "customer-profiler"
+        action: "Answer 10 Smart Questions with specificity"
+        duration: "4-8 hours"
+        deliverable: "Customer Profile Document"
+
+      - agent: "customer-profiler"
+        action: "Execute Theater In Your Mind visualization"
+        duration: "1 hour"
+        deliverable: "Customer Day-in-Life narrative"
+
+      - agent: "offer-analyst"
+        action: "Create Feature-to-Benefit cards"
+        duration: "2-4 hours"
+        deliverable: "Prioritized card deck"
+        parallel: true
+
+      - agent: "offer-analyst"
+        action: "Identify Damaging Admissions"
+        duration: "1-2 hours"
+        deliverable: "Damaging Admission statements"
+
+      - agent: "offer-analyst"
+        action: "Build Objection Anticipation cards"
+        duration: "2-3 hours"
+        deliverable: "10+ objection cards with responses"
+
+  phase_2_engineering:
+    name: "Delivery Engineering"
+    steps: "4-5"
+    duration: "2-4 hours"
+    agents:
+      - delivery-engineer
+    gate: "QG-002"
+
+    tasks:
+      - agent: "delivery-engineer"
+        action: "Select envelope strategy using Decision Tree"
+        duration: "1 hour"
+        deliverable: "Envelope Strategy Spec"
+
+      - agent: "delivery-engineer"
+        action: "Design grabber/lumpy mail if applicable"
+        duration: "1-3 hours"
+        deliverable: "Grabber specification and sourcing plan"
+
+  phase_3_creation:
+    name: "Copywriting & Assembly"
+    steps: "6-13"
+    duration: "1-2 days"
+    agents:
+      - headline-architect
+      - body-copy-writer
+      - objection-crusher
+    gate: "QG-003"
+
+    tasks:
+      - agent: "headline-architect"
+        action: "Create 3-5+ headline variations using 12 formulas"
+        duration: "2-4 hours"
+        deliverable: "Headline set with recommended pick"
+
+      - agent: "body-copy-writer"
+        action: "Write copy blocks and assemble first draft"
+        duration: "4-8 hours"
+        deliverable: "First complete draft"
+
+      - agent: "objection-crusher"
+        action: "Write objection responses and urgency triggers"
+        duration: "2-4 hours"
+        deliverable: "Objection section + urgency copy"
+        parallel: true
+
+  phase_4_refinement:
+    name: "Editing & Presentation"
+    steps: "14-22"
+    duration: "1-2 days"
+    agents:
+      - copy-editor
+      - presentation-designer
+    gate: "QG-004"
+
+    tasks:
+      - agent: "copy-editor"
+        action: "4 editing passes (strategy, style, passion, final)"
+        duration: "4-8 hours"
+        deliverable: "Polished draft"
+
+      - agent: "presentation-designer"
+        action: "Craft P.S. sections and graphic enhancements"
+        duration: "2-4 hours"
+        deliverable: "Final formatted letter"
+
+  phase_5_launch:
+    name: "Testing & Production"
+    steps: "23-28"
+    duration: "3-7 days"
+    agents:
+      - campaign-tester
+      - sales-letter-director
+    gate: "QG-005"
+
+    tasks:
+      - agent: "campaign-tester"
+        action: "Mail physical mockup to self"
+        duration: "2-3 days"
+        deliverable: "Mockup evaluation"
+
+      - agent: "campaign-tester"
+        action: "Execute 24h+ cool-off"
+        duration: "24-48 hours"
+        deliverable: "Fresh-eyes review notes"
+
+      - agent: "campaign-tester"
+        action: "Collect external feedback"
+        duration: "1-3 days"
+        deliverable: "Feedback summary"
+
+      - agent: "sales-letter-director"
+        action: "Final review and production approval"
+        duration: "2-4 hours"
+        deliverable: "GO/NO-GO decision"
+
+      - agent: "campaign-tester"
+        action: "Coordinate production and mailing"
+        duration: "1-3 days"
+        deliverable: "Campaign launched"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  QG-001:
+    name: "Research Completeness Gate"
+    transition: "Research → Engineering"
+    conditions:
+      - "All 10 Smart Questions answered with specificity"
+      - "Feature-to-Benefit cards created and prioritized"
+      - "Hidden Benefit identified"
+      - "At least 1 Damaging Admission crafted"
+      - "10+ Objection Anticipation cards with responses"
+    type: "blocking"
+
+  QG-002:
+    name: "Delivery Strategy Gate"
+    transition: "Engineering → Creation"
+    conditions:
+      - "Envelope strategy selected and fully specified"
+      - "Strategy matches list type (cold/warm/customer)"
+      - "No mixed signals (full Sneak-Up OR full Billboard)"
+    type: "blocking"
+
+  QG-003:
+    name: "Draft Completeness Gate"
+    transition: "Creation → Refinement"
+    conditions:
+      - "Minimum 3 headline variations created"
+      - "All copy blocks written and assembled"
+      - "All objections addressed in letter body"
+      - "Urgency triggers and deadline specified"
+      - "CTA clear and specific"
+    type: "blocking"
+
+  QG-004:
+    name: "Edit Quality Gate"
+    transition: "Refinement → Launch"
+    conditions:
+      - "4 editing passes completed"
+      - "P.S. section(s) present"
+      - "Graphic enhancements specified"
+      - "Letter benchmarked against swipe file examples"
+      - "No paragraph exceeds 5 lines"
+    type: "blocking"
+
+  QG-005:
+    name: "Launch Readiness Gate"
+    transition: "Launch → Production"
+    conditions:
+      - "Physical mockup mailed and evaluated"
+      - "24h+ cool-off completed"
+      - "External feedback collected and incorporated"
+      - "Final review approved by sales-letter-director"
+    type: "blocking"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICS & KPIs
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metrics:
+  production:
+    - name: "Research Completeness"
+      target: "10/10 Smart Questions answered"
+    - name: "Headline Variations"
+      target: "3-5 minimum"
+    - name: "Objection Coverage"
+      target: "10+ objections addressed"
+    - name: "Editing Passes"
+      target: "4 passes minimum"
+
+  performance:
+    cold_list:
+      - name: "Response Rate"
+        target: "1-2%"
+        excellent: "3-5%"
+        alert: "<0.5%"
+      - name: "Cost Per Acquisition"
+        target: "<3x LTGP"
+        alert: ">5x LTGP"
+    warm_list:
+      - name: "Response Rate"
+        target: "5-10%"
+        excellent: "15-25%"
+        alert: "<3%"
+    universal:
+      - name: "ROI"
+        target: "2:1"
+        excellent: "5:1+"
+        alert: "<1:1"
+
+  testing:
+    - name: "Elements to A/B Test"
+      priority_order:
+        1: "Headline"
+        2: "Offer/Price"
+        3: "Envelope strategy"
+        4: "Guarantee"
+        5: "P.S."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# KENNEDY MENTAL MODELS (Referenced)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+mental_models:
+  - id: "MM-SL-01"
+    name: "Salesperson in an Envelope"
+    application: "Every element of the letter maps to in-person selling"
+
+  - id: "MM-SL-02"
+    name: "Wastebasket Sort"
+    application: "Envelope/delivery engineering (Steps 4-5)"
+
+  - id: "MM-SL-03"
+    name: "Pest to Welcome Guest"
+    application: "Headline creation (Step 6)"
+
+  - id: "MM-SL-04"
+    name: "Scissors and Tape"
+    application: "Draft writing method (Step 9)"
+
+  - id: "MM-SL-05"
+    name: "Credibility Stock Market"
+    application: "Damaging Admissions and proof (Steps 3, 8)"
+
+  - id: "MM-SL-06"
+    name: "3x5 Card System"
+    application: "Brainstorming and organizing (Steps 1-3, 12)"
+
+  - id: "MM-SL-07"
+    name: "Never Be Half Pregnant"
+    application: "Envelope strategy commitment (Steps 4-5)"
+
+  - id: "MM-SL-08"
+    name: "One-Eyed Man in the Land of the Blind"
+    application: "Encouraging action over perfection"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES & INTEGRATIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  sops:
+    - "sop-28-step-sales-letter.md"
+    - "sop-headline-formulas.md"
+    - "sop-feature-to-benefit.md"
+    - "sop-damaging-admission.md"
+    - "sop-objection-anticipation.md"
+    - "sop-grabber-lumpy-mail.md"
+
+  kennedy_agents:
+    - "kennedy-sales-letter — Primary specialist"
+    - "kennedy-copy — Copywriting support"
+    - "kennedy-offers — Offer/guarantee design"
+    - "kennedy-media — Delivery/mail strategy"
+    - "kennedy-audit — Performance measurement"
+
+  tools:
+    - "3x5 index card system (physical or digital)"
+    - "Swipe file library"
+    - "Mailing list provider"
+    - "Print production vendor"
+    - "Postage/delivery service"
+
+integrations:
+  magnetic_marketing: "Sales letter as lead conversion mechanism"
+  referral_machine: "Sales letters for endorsed mailings"
+  affluent_attraction: "Premium positioning adaptations"
+  mind_hijacking: "Psychological trigger integration"
+  brand_building: "StorySelling elements in letter narrative"

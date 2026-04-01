@@ -1,0 +1,409 @@
+# Referral Machine Setup Workflow
+# Based on Dan Kennedy's Ultimate No BS Referral Machine — 11-Point System
+# Source: Ultimate No BS Referral Machine (20 transcriptions)
+# Version: 1.0.0
+
+id: wf-referral-machine
+name: "Referral Machine Setup"
+version: "1.0.0"
+duration: "3-5 days"
+description: |
+  Complete workflow to build a systematic referral machine using
+  Kennedy's 11-Point Referral System. Covers endorsed mailings,
+  champion circles of influence, lost customer reactivation,
+  and referral automation.
+
+  PHILOSOPHY: "A referral is not an accident — it's an engineered outcome."
+
+  RESULT: A complete referral system with referral triggers, endorsed
+  mailings, champion network, and lost customer reactivation program.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Building a systematic referral program from scratch"
+  - "Replacing 'hope and pray' referral approach with a system"
+  - "Creating endorsed mailing partnerships"
+  - "Reactivating lost or dormant customers"
+  - "Building a champion/influencer referral network"
+
+decision_matrix_fit:
+  complexity: medium-high
+  agents_required: 4
+  estimated_duration: "3-5 days"
+  user_involvement: "high (requires relationship data)"
+  prerequisites:
+    - "Existing customer base (even small)"
+    - "List of past customers and partners"
+    - "Willingness to incentivize referrals"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, strategic referral architecture"
+      phases: [0]
+
+    - agent: kennedy-referrals
+      role: "11-Point System, Champion Circle, endorsed mailings"
+      phases: [1, 2, 3]
+
+    - agent: kennedy-copy
+      role: "Referral letters, endorsed mailing copy, reactivation copy"
+      phases: [2, 3]
+
+    - agent: kennedy-media
+      role: "Multi-channel referral delivery, mail and digital integration"
+      phases: [3, 4]
+
+  synergies:
+    - agents: [kennedy-referrals, kennedy-copy]
+      pattern: "Referrals designs the system, Copy makes every referral request compelling"
+
+    - agents: [kennedy-referrals, kennedy-media]
+      pattern: "Referrals maps the program, Media delivers through optimal channels"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Discovery + Referral Audit"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Audit current referral situation. Most businesses get referrals
+      by accident. This phase maps the current state and identifies
+      the biggest opportunities.
+
+      PRINCIPLE: "The business that systematically engineers referrals
+      will always outgrow the one that hopes for them."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Current Referral Audit"
+        required: true
+        description: |
+          Assess current referral situation:
+          - What % of new business comes from referrals?
+          - Do you ask for referrals? When? How?
+          - Do you reward referrals? How?
+          - Do you track referral sources?
+          - Who are your top referrers? (Champions)
+          - What triggers a referral in your business?
+        output: "referral_audit.yaml"
+
+      - task_id: T0.2
+        name: "Map Customer Base for Referral Potential"
+        required: true
+        description: |
+          Segment customer base:
+          - A-tier: Active, happy, high-value (champion candidates)
+          - B-tier: Satisfied but passive (need activation)
+          - C-tier: Dormant/lost (reactivation candidates)
+          - Partners: Complementary businesses (endorsed mailing candidates)
+        output: "customer_segmentation.yaml"
+
+    handoff_to_phase-1:
+      from_agent: "auto"
+      to_agent: "kennedy-referrals"
+      to_phase: "PHASE-1"
+      trigger: "Discovery complete"
+      passes: "Referral program strategy"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Audit Complete"
+      criteria:
+        - "Current referral baseline established"
+        - "Customer base segmented"
+        - "Top referral opportunities identified"
+      human_review: true
+      veto_conditions:
+        - condition: "No existing customer base at all"
+          action: "REDIRECT - Build customer acquisition first (wf-magnetic-campaign)"
+
+  - id: PHASE-1
+    name: "11-Point Referral System Design"
+    days: "Day 1-2"
+    tier: 1
+    description: |
+      Design the complete 11-Point Referral System.
+
+      PRINCIPLE: "Referrals multiply when you have a SYSTEM, not
+      just goodwill."
+
+    agent: kennedy-referrals
+
+    tasks:
+      - task_id: T1.1
+        name: "Design 11-Point Referral System"
+        required: true
+        description: |
+          Map all 11 points of Kennedy's system:
+          1. Set referral expectations at onboarding
+          2. Deliver remarkable experience (referral-worthy)
+          3. Ask at the moment of maximum satisfaction
+          4. Make referring EASY (tools, scripts, templates)
+          5. Reward referrals immediately and tangibly
+          6. Recognize referrers publicly
+          7. Create referral events/occasions
+          8. Use endorsed mailings from champions
+          9. Provide referral tools (cards, links, kits)
+          10. Follow up with referred prospects immediately
+          11. Report back to referrer on outcome
+        output: "eleven_point_system.yaml"
+
+      - task_id: T1.2
+        name: "Build Champion Circle of Influence"
+        required: true
+        description: |
+          Identify and recruit Champions:
+          - Top 10-20 customers who already refer
+          - Strategic partners in complementary businesses
+          - Influencers in the target market
+          - Professional advisors (CPAs, attorneys, etc.)
+          Create VIP treatment program for Champions.
+        output: "champion_circle.yaml"
+
+      - task_id: T1.3
+        name: "Design Referral Incentive Structure"
+        required: true
+        description: |
+          Create referral rewards that motivate:
+          - Immediate rewards (gift cards, discounts, premiums)
+          - Cumulative rewards (VIP status, tier upgrades)
+          - Recognition rewards (wall of fame, events)
+          - Reciprocal referrals (I send you, you send me)
+          Kennedy: "People will refer more for a tangible gift
+          than for a discount on their next purchase."
+        output: "incentive_structure.yaml"
+
+    handoff_to_phase-2:
+      from_agent: "auto"
+      to_agent: "kennedy-referrals"
+      to_phase: "PHASE-2"
+      trigger: "Program designed and tested"
+      passes: "Referral mechanics and incentive structure"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "System Designed"
+      criteria:
+        - "All 11 points mapped with specific actions"
+        - "Champion Circle identified (minimum 10 candidates)"
+        - "Incentive structure defined"
+      human_review: true
+      veto_conditions:
+        - condition: "Referral 'system' is just 'ask people to refer'"
+          action: "BLOCK - Must have structured 11-point system"
+
+  - id: PHASE-2
+    name: "Copy + Endorsed Mailings"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Create all referral copy: request letters, endorsed mailings,
+      champion communications, and reactivation letters.
+
+    agent: kennedy-copy
+
+    tasks:
+      - task_id: T2.1
+        name: "Write Referral Request Letters"
+        required: true
+        description: |
+          Write letters for each referral touchpoint:
+          - Post-purchase referral request
+          - Annual referral campaign letter
+          - Champion-specific referral request
+          - "Share with a friend" insert/email
+          Each must feel personal, not corporate.
+        output: "referral_letters.md"
+
+      - task_id: T2.2
+        name: "Create Endorsed Mailing Templates"
+        required: true
+        description: |
+          Write endorsed mailing copy for partner distribution:
+          - Letter FROM the partner TO their list
+          - The partner endorses and introduces you
+          - Irresistible offer exclusive to partner's audience
+          Kennedy: "An endorsed mailing to someone else's list
+          can outpull your own house list 2-to-1."
+        output: "endorsed_mailing_templates.md"
+
+      - task_id: T2.3
+        name: "Write Lost Customer Reactivation Campaign"
+        required: true
+        description: |
+          Create a 3-step reactivation sequence:
+          - Letter 1: "We miss you" + special comeback offer
+          - Letter 2: "Did you receive our letter?" + urgency
+          - Letter 3: "Last chance" + best offer ever
+          Kennedy: "A lost customer is 6x cheaper to win back
+          than acquiring a new one."
+        output: "reactivation_campaign.md"
+
+    handoff_to_phase-3:
+      from_agent: "auto"
+      to_agent: "kennedy-referrals"
+      to_phase: "PHASE-3"
+      trigger: "Program live"
+      passes: "Tracking setup and reporting system"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Copy Complete"
+      criteria:
+        - "Referral request letters written (minimum 3 types)"
+        - "Endorsed mailing templates ready"
+        - "Reactivation campaign (3 steps)"
+      human_review: false
+      veto_conditions:
+        - condition: "Referral copy is generic/corporate-sounding"
+          action: "REWRITE - Must be personal and specific"
+
+  - id: PHASE-3
+    name: "Distribution + Tracking"
+    days: "Day 3-4"
+    tier: 2
+    description: |
+      Plan distribution channels and set up referral tracking.
+
+    agent: kennedy-media
+
+    tasks:
+      - task_id: T3.1
+        name: "Map Distribution Channels"
+        required: true
+        description: |
+          Plan how each referral element gets delivered:
+          - Physical mail for champion circle
+          - Email for mass referral requests
+          - In-person for high-value referral asks
+          - Digital tools for easy sharing
+        output: "distribution_plan.yaml"
+
+      - task_id: T3.2
+        name: "Set Up Referral Tracking"
+        required: true
+        description: |
+          Create tracking system:
+          - Unique codes per referrer
+          - Source tracking for every new lead
+          - Referral reward fulfillment automation
+          - Monthly referral report template
+        output: "referral_tracking.yaml"
+
+      - task_id: T3.3
+        name: "Create Referral Calendar"
+        required: true
+        description: |
+          Map a 12-month referral campaign calendar:
+          - Monthly referral asks
+          - Quarterly champion events
+          - Annual referral drive
+          - Holiday referral promotions
+          - Lost customer reactivation quarterly
+        output: "referral_calendar.yaml"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Distribution + Tracking Ready"
+      criteria:
+        - "Distribution channels mapped"
+        - "Tracking system configured"
+        - "12-month calendar planned"
+      human_review: true
+      veto_conditions:
+        - condition: "No tracking on referral sources"
+          action: "BLOCK - Must track every referral to optimize"
+
+  - id: PHASE-4
+    name: "Launch + Activation"
+    days: "Day 4-5"
+    tier: 3
+    description: |
+      Launch the referral system and activate the champion circle.
+
+    agent: kennedy-referrals
+
+    tasks:
+      - task_id: T4.1
+        name: "Champion Circle Activation"
+        required: true
+        description: |
+          Launch champion program:
+          - Personal outreach to top 10 champions
+          - VIP package delivery
+          - First endorsed mailing scheduled
+          - Referral incentive communicated
+        output: "champion_activation.md"
+
+      - task_id: T4.2
+        name: "System Launch Checklist"
+        required: true
+        description: |
+          Final launch verification:
+          - All copy pieces produced
+          - Tracking codes active
+          - Incentives stocked/ready
+          - Team trained on referral process
+          - First campaign scheduled
+        output: "launch_checklist.md"
+
+    checkpoint:
+      id: CP_PHASE_4
+      name: "Referral Machine Live"
+      criteria:
+        - "Champion circle activated"
+        - "Launch checklist complete"
+        - "First campaign scheduled"
+      human_review: true
+      veto_conditions:
+        - condition: "No champions identified or contacted"
+          action: "BLOCK - The champion circle is the engine"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "11-Point Referral System"
+      file: "eleven_point_system.yaml"
+      description: "Complete referral system design"
+    - name: "Referral Copy Kit"
+      file: "referral_copy_kit.md"
+      description: "All referral letters, endorsed mailings, reactivation"
+    - name: "Champion Circle Plan"
+      file: "champion_circle.yaml"
+      description: "Champion identification and VIP program"
+    - name: "12-Month Calendar"
+      file: "referral_calendar.yaml"
+      description: "Annual referral campaign schedule"
+  output_directory: "outputs/kennedy-referral-machine-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "Ultimate No BS Referral Machine — 11-Point System"
+    - "Magnetic Marketing — Champion Circle"
+    - "Ultimate Marketing Plan — Endorsed Mailings"
+  total_phases: 5
+  total_tasks: 13

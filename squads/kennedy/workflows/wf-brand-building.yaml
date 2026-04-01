@@ -1,0 +1,344 @@
+# Brand Building by Direct Response Workflow
+# Based on Dan Kennedy's No B.S. Brand-Building by Direct Response
+# Source: No B.S. Guide to Brand-Building by Direct Response (2014)
+# Version: 1.0.0
+
+id: wf-brand-building
+name: "Brand Building by Direct Response"
+version: "1.0.0"
+duration: "3-5 days"
+description: |
+  Complete workflow to build a brand that pays for itself using
+  Kennedy's Winning Formula: acquire customers through direct response,
+  retain them through brand experience. Not either/or — both.
+
+  PHILOSOPHY: "Branding that doesn't produce a measurable direct response
+  is just expensive wallpaper. But a brand built ON direct response is
+  an unassailable competitive moat."
+
+  RESULT: A brand strategy that combines DR customer acquisition with
+  brand-building retention, including StorySelling narrative, personal
+  branding, and measurable brand assets.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Building a brand without wasting money on institutional advertising"
+  - "Creating a personal brand that generates direct response"
+  - "Adding brand equity to an existing DR business"
+  - "Competing against big brands with DR-funded branding"
+  - "Building authority and celebrity in a market"
+
+decision_matrix_fit:
+  complexity: high
+  agents_required: 4
+  estimated_duration: "3-5 days"
+  user_involvement: "high (brand is personal)"
+  prerequisites:
+    - "Working DR marketing system (or building simultaneously)"
+    - "Clarity on personal/business values"
+    - "Stories worth telling"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, strategic brand direction"
+      phases: [0]
+
+    - agent: kennedy-brand
+      role: "Winning Formula, StorySelling, brand architecture"
+      phases: [1, 2]
+
+    - agent: kennedy-direct-response
+      role: "DR compliance, ensuring brand pays for itself"
+      phases: [2, 3]
+
+    - agent: kennedy-media
+      role: "Media strategy for DR-funded brand building"
+      phases: [3]
+
+  synergies:
+    - agents: [kennedy-brand, kennedy-direct-response]
+      pattern: "Brand designs the experience, DR ensures everything is measurable"
+
+    - agents: [kennedy-brand, kennedy-media]
+      pattern: "Brand creates the narrative, Media distributes with accountability"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Brand Discovery"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Establish the brand foundation using Kennedy's Winning Formula.
+
+      PRINCIPLE: "The Winning Formula: Acquire through Direct Response,
+      Retain through Brand Experience."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Winning Formula Assessment"
+        required: true
+        description: |
+          Evaluate current state:
+          - How are customers currently acquired? (DR, referral, organic?)
+          - How are customers retained? (Brand experience? None?)
+          - Is there a brand at all, or just a business?
+          - What is the brand promise?
+          - Is the brand promise delivered consistently?
+        output: "winning_formula_assessment.yaml"
+
+      - task_id: T0.2
+        name: "Competitive Brand Landscape"
+        required: true
+        description: |
+          Map the competitive brand landscape:
+          - Who are the brand leaders in this space?
+          - What brand positions are available/unoccupied?
+          - What can you OWN that nobody else can?
+          - Where is there brand confusion in the market?
+        output: "brand_landscape.yaml"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Discovery Complete"
+      criteria:
+        - "Winning Formula assessed"
+        - "Competitive landscape mapped"
+        - "Brand opportunity identified"
+      human_review: true
+      veto_conditions:
+        - condition: "No working DR system and no plan to build one"
+          action: "HALT - Brand without DR is just expense. Build DR first."
+
+  - id: PHASE-1
+    name: "Brand Architecture"
+    days: "Day 1-2"
+    tier: 1
+    description: |
+      Design the brand architecture using Kennedy's frameworks.
+
+      PRINCIPLE: "Your brand is not your logo. Your brand is the
+      complete experience of doing business with you, told through
+      stories that create emotional connections."
+
+    agent: kennedy-brand
+
+    tasks:
+      - task_id: T1.1
+        name: "StorySelling Framework (4 Key Factors)"
+        required: true
+        description: |
+          Build the brand narrative using StorySelling:
+          1. Backstory (where you came from, your journey)
+          2. Discovery Story (how you found/created the solution)
+          3. Transformation Stories (client successes)
+          4. Philosophy Story (what you stand for, your mission)
+          Each story must be TRUE and emotionally compelling.
+        output: "storyselling_framework.md"
+
+      - task_id: T1.2
+        name: "Personal Brand Architecture"
+        required: true
+        description: |
+          Design the personal brand elements:
+          - Celebrity positioning (expert + personality + media)
+          - Authority markers (books, speaking, media appearances)
+          - Signature systems (your proprietary frameworks)
+          - Voice and personality (consistent, authentic, memorable)
+          - Visual identity (professional but not corporate)
+          Kennedy: "People buy people. Brand the person, not just the company."
+        output: "personal_brand.yaml"
+
+      - task_id: T1.3
+        name: "Brand Promise + Brand Experience Design"
+        required: true
+        description: |
+          Define and operationalize:
+          - Brand promise (one sentence: what you guarantee)
+          - Brand experience at every touchpoint
+          - How the brand promise is PROVEN (not just stated)
+          - The Disney/Hefner Model: immersive brand world
+        output: "brand_promise.yaml"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Architecture Complete"
+      criteria:
+        - "StorySelling framework with 4 stories"
+        - "Personal brand architecture defined"
+        - "Brand promise articulated and operationalized"
+      human_review: true
+      veto_conditions:
+        - condition: "Brand is generic/indistinguishable from competitors"
+          action: "REWRITE - Brand must be uniquely ownable"
+        - condition: "No StorySelling narrative"
+          action: "BLOCK - Brand without story is just a name"
+        - condition: "Brand strategy lacks DR foundation (no lead generation mechanism)"
+          action: "HALT - Kennedy Rule: Brand must be DR-funded or it's expensive wallpaper"
+        - condition: "Positioning does not polarize or take a clear stand"
+          action: "REWRITE - Vanilla brands compete on price. You must own a position."
+
+    handoff_to_phase_2:
+      from_agent: "kennedy-brand"
+      to_agent: "kennedy-direct-response"
+      trigger: "Brand architecture complete"
+      passes: "Brand positioning, StorySelling framework, personal brand architecture"
+
+  - id: PHASE-2
+    name: "DR-Funded Brand Building"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Design brand-building activities that pay for themselves
+      through direct response.
+
+    agent: kennedy-direct-response
+
+    tasks:
+      - task_id: T2.1
+        name: "DR Brand-Building Campaigns"
+        required: true
+        description: |
+          Design brand campaigns that also produce DR results:
+          - Book funnel (authority + lead gen)
+          - Speaking engagements (brand + back-of-room sales)
+          - Podcast/media (brand + call to action)
+          - Content marketing (brand + lead magnet)
+          Every brand activity must have a measurable response element.
+        output: "dr_brand_campaigns.yaml"
+
+      - task_id: T2.2
+        name: "Brand Measurement Framework"
+        required: true
+        description: |
+          Define how brand impact is measured:
+          - Brand-attributed leads and sales
+          - Customer acquisition cost by brand channel
+          - Brand recall metrics
+          - Net Promoter Score tracking
+          - Referral rate as brand indicator
+          Kennedy: "If you can't measure the brand's contribution
+          to revenue, you can't justify spending on it."
+        output: "brand_measurement.yaml"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "DR Brand System Designed"
+      criteria:
+        - "Brand campaigns all have DR elements"
+        - "Measurement framework defined"
+      human_review: false
+      veto_conditions:
+        - condition: "Brand campaign with no direct response element"
+          action: "BLOCK - Every brand activity must be measurable"
+
+    handoff_to_phase_3:
+      from_agent: "kennedy-direct-response"
+      to_agent: "kennedy-media"
+      trigger: "DR brand system designed"
+      passes: "Brand campaigns, measurement framework, DR strategy"
+
+  - id: PHASE-3
+    name: "Media + Launch Plan"
+    days: "Day 3-5"
+    tier: 2
+    description: |
+      Plan the media strategy and launch for the brand.
+
+    agent: kennedy-media
+
+    tasks:
+      - task_id: T3.1
+        name: "Brand Media Strategy"
+        required: true
+        description: |
+          Map multi-channel brand media:
+          - Owned media (newsletter, podcast, blog)
+          - Earned media (PR, speaking, guest appearances)
+          - Paid media (ads with DR + brand elements)
+          - Social media (DR-compliant, not vanity)
+          Priority: owned > earned > paid.
+        output: "brand_media_strategy.yaml"
+
+      - task_id: T3.2
+        name: "Brand Launch Sequence"
+        required: true
+        description: |
+          Plan the brand launch:
+          - Internal launch (team alignment)
+          - Soft launch (existing customers)
+          - Public launch (market announcement)
+          - Ongoing brand maintenance calendar
+        output: "brand_launch_sequence.yaml"
+
+      - task_id: T3.3
+        name: "Brand Consistency Guide"
+        required: true
+        description: |
+          Create brand consistency guardrails:
+          - Voice and tone guidelines
+          - Visual standards
+          - Approved messaging
+          - Red lines (what the brand NEVER does)
+          - Review process for new materials
+        output: "brand_consistency_guide.md"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Brand Launch Ready"
+      criteria:
+        - "Media strategy with DR accountability"
+        - "Launch sequence planned"
+        - "Consistency guide created"
+      human_review: true
+      veto_conditions:
+        - condition: "Media strategy has no tracking/accountability"
+          action: "BLOCK - DR-funded means DR-measured"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Brand Strategy Document"
+      file: "brand_strategy.md"
+      description: "Complete DR-funded brand strategy"
+    - name: "StorySelling Narrative"
+      file: "storyselling_framework.md"
+      description: "4-story brand narrative"
+    - name: "Brand Consistency Guide"
+      file: "brand_consistency_guide.md"
+      description: "Voice, visual, and messaging standards"
+    - name: "Brand Launch Plan"
+      file: "brand_launch_sequence.yaml"
+      description: "Phased launch strategy"
+  output_directory: "outputs/kennedy-brand-building-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "No B.S. Brand-Building by Direct Response — Winning Formula"
+    - "StorySelling — 4 Key Factors"
+    - "Disney/Hefner Brand-Building Model"
+  total_phases: 4
+  total_tasks: 11

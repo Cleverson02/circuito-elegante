@@ -1,0 +1,369 @@
+version: 1
+default_profile: web_page
+
+# RAG mode defaults: when mode=rag and no chunk_strategy provided,
+# use source-aware defaults for optimal chunking.
+rag_defaults:
+  youtube_video: { chunk_strategy: sentence }
+  youtube_channel: { chunk_strategy: sentence }
+  url: { chunk_strategy: paragraph }
+  file: { chunk_strategy: paragraph }
+  site_crawl: { chunk_strategy: paragraph }
+  search_and_scrape: { chunk_strategy: paragraph }
+
+profiles:
+  youtube_video:
+    match:
+      source_kind: ["youtube_video"]
+      hints: ["youtube.com/watch", "youtu.be/", "11-char video id"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/youtube-transcript.js
+      args: ["{videoId}"]
+    fallback_chain:
+      - "retry with alternate language"
+    veto_conditions:
+      - "video private or deleted"
+      - "no captions available"
+
+  youtube_podcast:
+    match:
+      source_kind: ["youtube_video"]
+      when: "constraints.podcast == true OR source hints indicate interview/podcast"
+      hints: ["podcast", "entrevista", "episódio", "ep.", "interview"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/youtube-transcript.js
+      args: ["{videoId}", "--lang", "{constraints.language|pt}"]
+    transformer:
+      phase_1:
+        tool: node infrastructure/services/etl/bin/youtube-diarize.js
+        args: ["{extract_output}", "--format", "both"]
+        description: "Deterministic speaker attribution (zero cost, ~30ms)"
+      phase_2:
+        tool: node infrastructure/services/etl/bin/youtube-diarize.js
+        args: ["{extract_output}", "--llm-review", "--format", "both"]
+        description: "LLM review of low-confidence blocks (~$0.05/transcript)"
+        requires: "OPENROUTER_API_KEY"
+        optional: true
+    output_artifacts:
+      - kind: raw
+        format: json
+        description: "Raw transcript with segments"
+      - kind: diarized
+        format: json
+        description: "Speaker-attributed blocks with confidence scores"
+      - kind: diarized
+        format: md
+        description: "Readable markdown with speaker labels"
+    fallback_chain:
+      - "retry with alternate language"
+      - "skip phase_2 if OPENROUTER_API_KEY not set"
+    veto_conditions:
+      - "video private or deleted"
+      - "no captions available"
+      - "0 speaker change markers (>> not found)"
+
+  youtube_podcast_channel:
+    match:
+      source_kind: ["youtube_channel"]
+      when: "constraints.podcast == true"
+      hints: ["podcast channel", "all episodes"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/youtube-pipeline.js
+      args: ["@{handle}", "--limit", "{constraints.max_items|10}", "--skip-cleanup"]
+    transformer:
+      batch_diarize:
+        description: "Run youtube-diarize.js on each extracted transcript"
+        mode: "per-video"
+        tool: node infrastructure/services/etl/bin/youtube-diarize.js
+        args: ["{video_transcript}", "--llm-review", "-o", "{output_dir}/diarized/"]
+    output_dir: "outputs/youtube/{channel-slug}/"
+    fallback_chain:
+      - "retry with lower limit"
+      - "skip diarization if no >> markers found"
+    veto_conditions:
+      - "channel not found"
+      - "0 public videos"
+
+  youtube_channel:
+    match:
+      source_kind: ["youtube_channel"]
+      hints: ["youtube.com/@", "youtube.com/c/"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/youtube-pipeline.js
+      args: ["@{handle}", "--limit", "{constraints.max_items|10}"]
+    fallback_chain:
+      - "retry with lower limit"
+      - "skip cleanup if llm unavailable"
+    veto_conditions:
+      - "channel not found"
+      - "0 public videos"
+
+  youtube_metadata:
+    match:
+      source_kind: ["youtube_video"]
+      when: "source.metadata_only == true"
+    extractor:
+      tool: node infrastructure/services/etl/bin/youtube-metadata.js
+      args: ["{videoId}"]
+    fallback_chain:
+      - "innertube basic metadata"
+    veto_conditions:
+      - "invalid video id"
+
+  web_page:
+    match:
+      source_kind: ["url"]
+      hints: ["http://", "https://"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/fetch-page.js
+      args: ["{url}", "--format", "markdown"]
+    fallback_chain:
+      - tool: python3 infrastructure/services/etl/bin/scrapling-fetch.py
+        args: ["{url}", "--mode", "fast", "--format", "markdown"]
+        when: "fetch-page.js exits non-zero"
+      - "retry with --format json"
+    veto_conditions:
+      - "domain blocked"
+      - "timeout"
+      - "empty/minimal content"
+
+  web_page_protected:
+    match:
+      source_kind: ["url"]
+      hints: ["cloudflare", "captcha", "protected", "anti-bot", "waf", "blocked"]
+      when: "web_page profile returned exit 1 (blocked) OR constraints.stealth == true"
+    extractor:
+      tool: python3 infrastructure/services/etl/bin/scrapling-fetch.py
+      args: ["{url}", "--mode", "stealth", "--format", "markdown"]
+    fallback_chain:
+      - tool: python3 infrastructure/services/etl/bin/scrapling-fetch.py
+        args: ["{url}", "--mode", "dynamic", "--format", "markdown"]
+        when: "stealth mode exits non-zero"
+    veto_conditions:
+      - "URL blocked by robots.txt"
+      - "empty content after all modes exhausted"
+
+  ebook_epub:
+    match:
+      source_kind: ["file"]
+      extensions: [".epub"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/ebook-to-markdown.js
+      args: ["{filePath}"]
+    fallback_chain: []
+    veto_conditions:
+      - "file not found"
+      - "invalid epub"
+
+  audio_transcription:
+    match:
+      source_kind: ["file"]
+      extensions: [".mp3", ".wav", ".m4a", ".ogg"]
+    extractor:
+      tool: node infrastructure/services/etl/bin/transcribe.js
+      args: ["{filePath}"]
+    fallback_chain: []
+    veto_conditions:
+      - "file not found"
+      - "unsupported audio format"
+
+  pdf_document:
+    match:
+      source_kind: ["file"]
+      extensions: [".pdf"]
+    extractor:
+      api: infrastructure/services/etl/collectors/pdf-collector.js
+      call: "new PDFCollector().collect(filePath)"
+    fallback_chain: []
+    veto_conditions:
+      - "file not found"
+      - "parse returned empty"
+
+  generic_document:
+    match:
+      source_kind: ["file"]
+    extractor:
+      api: infrastructure/services/etl/collectors/document-collector.js
+      call: "new DocumentCollector().collect(filePath)"
+    fallback_chain: []
+    veto_conditions:
+      - "file not found"
+      - "unsupported document type"
+
+  # ============================================================================
+  # WEB EXTENDED PROFILES (Cloudflare /crawl + Firecrawl CLI)
+  # ============================================================================
+
+  web_page_js_heavy:
+    match:
+      source_kind: ["url"]
+      hints: ["SPA", "react app", "angular", "vue", "JS-heavy", "dynamic content"]
+      when: "web_page profile returned < min_extract_chars OR constraints.js_render == true"
+    extractor:
+      tool: bash infrastructure/services/etl/bin/cloudflare-crawl.sh
+      args: ["{url}", "--limit", "1", "--render", "--format", "markdown"]
+    fallback_chain:
+      - tool: python3 infrastructure/services/etl/bin/scrapling-fetch.py
+        args: ["{url}", "--mode", "dynamic", "--format", "markdown"]
+        when: "cloudflare-crawl.sh exits non-zero"
+      - tool: bash infrastructure/services/etl/bin/firecrawl-scrape.sh
+        args: ["{url}", "--format", "markdown"]
+        when: "scrapling-fetch.py exits non-zero"
+    veto_conditions:
+      - "CLOUDFLARE_API_TOKEN missing AND FIRECRAWL_API_KEY missing"
+      - "URL blocked by robots.txt"
+      - "empty content after render"
+
+  site_crawl:
+    match:
+      source_kind: ["url"]
+      hints: ["crawl site", "crawl entire", "all pages", "full site", "site map"]
+      when: "constraints.crawl == true"
+    extractor:
+      tool: bash infrastructure/services/etl/bin/cloudflare-crawl.sh
+      args: ["{url}", "--limit", "{constraints.max_pages|100}", "--depth", "{constraints.max_depth|3}", "--format", "markdown", "--output", "{output_dir}"]
+    fallback_chain:
+      - tool: "firecrawl crawl {url} --limit {constraints.max_pages|100} --max-depth {constraints.max_depth|3} --wait --progress"
+        when: "cloudflare-crawl.sh exits non-zero"
+    veto_conditions:
+      - "CLOUDFLARE_API_TOKEN missing AND FIRECRAWL_API_KEY missing"
+      - "0 pages discovered"
+      - "domain blocked by robots.txt"
+
+  search_and_scrape:
+    match:
+      source_kind: ["query"]
+      hints: ["search and scrape", "search + content", "find and extract", "research topic"]
+      when: "constraints.scrape_results == true"
+    extractor:
+      tool: bash infrastructure/services/etl/bin/firecrawl-search.sh
+      args: ["{query}", "--limit", "{constraints.max_results|10}", "--scrape", "--sources", "{constraints.sources|web}"]
+    fallback_chain:
+      - description: "EXA search → fetch-page.js per result (2 steps, manual orchestration)"
+        when: "firecrawl-search.sh exits non-zero"
+    veto_conditions:
+      - "FIRECRAWL_API_KEY missing"
+      - "0 search results"
+      - "all scraped pages returned empty"
+
+  # ============================================================================
+  # VIDEO PROFILES (non-YouTube)
+  # ============================================================================
+
+  direct_video_url:
+    match:
+      source_kind: ["url"]
+      extensions: [".mp4", ".mov", ".webm", ".mkv", ".avi"]
+      hints: ["direct video url", "cdn video", "hosted video"]
+    extractor:
+      tool: "wget + ffmpeg + whisper"
+      mode: sequential
+      steps:
+        - cmd: "wget -q -O {temp_dir}/{filename} {url}"
+          checkpoint: "file downloaded"
+        - cmd: "ffmpeg -i {temp_dir}/{filename} -vn -acodec pcm_s16le -ar 16000 -ac 1 {temp_dir}/{basename}.wav -y -loglevel quiet"
+          checkpoint: "audio extracted"
+        - cmd: "whisper {temp_dir}/{basename}.wav --model base --language {constraints.language|en} --output_format txt --output_dir {output_dir}"
+          checkpoint: "transcription complete"
+      cleanup:
+        - "{temp_dir}/{filename}"
+        - "{temp_dir}/{basename}.wav"
+    fallback_chain:
+      - "retry with --model small"
+      - "retry with --model medium"
+    veto_conditions:
+      - "download failed"
+      - "invalid video format"
+      - "audio extraction failed"
+      - "transcription returned empty"
+
+  video_transcription:
+    match:
+      source_kind: ["file"]
+      extensions: [".mp4", ".mov", ".webm", ".mkv", ".avi"]
+    extractor:
+      tool: "ffmpeg + whisper"
+      mode: sequential
+      steps:
+        - cmd: "ffmpeg -i {filePath} -vn -acodec pcm_s16le -ar 16000 -ac 1 {temp_dir}/{basename}.wav -y -loglevel quiet"
+          checkpoint: "audio extracted"
+        - cmd: "whisper {temp_dir}/{basename}.wav --model base --language {constraints.language|en} --output_format txt --output_dir {output_dir}"
+          checkpoint: "transcription complete"
+      cleanup:
+        - "{temp_dir}/{basename}.wav"
+    fallback_chain:
+      - "retry with --model small"
+    veto_conditions:
+      - "file not found"
+      - "invalid video format"
+      - "audio extraction failed"
+      - "transcription returned empty"
+
+  # ============================================================================
+  # MULTIMODAL VIDEO EXTRACTION (keyframes + transcript)
+  # ============================================================================
+
+  video_multimodal:
+    match:
+      source_kind: ["file", "url"]
+      extensions: [".mp4", ".mov", ".webm", ".mkv", ".avi"]
+      when: "constraints.extract_keyframes == true"
+    extractor:
+      mode: parallel
+      streams:
+        audio:
+          tool: "whisper"
+          cmd: "whisper {input} --model {constraints.whisper_model|base} --language {constraints.language|en} --word_timestamps true --output_format json --output_dir {output_dir}"
+          output: "transcript.json"
+          checkpoint: "transcript exists AND word_count > 0"
+
+        visual:
+          tool: "pyscenedetect"
+          strategy: "{constraints.keyframe_strategy|scene_detection}"
+          # THRESHOLD GUIDE (from acquisition_training learnings):
+          # - 0.3 (default): Edited videos, slides, courses with clear cuts
+          # - 0.1-0.15: Talking-head videos (subtle expression changes)
+          # - 0.4-0.5: High-motion content (sports, action)
+          # WARNING: Using 0.3 on talking-head = 0 frames extracted
+          strategies:
+            scene_detection:
+              cmd: "scenedetect -i {input} -o {output_dir} save-images"
+              threshold: "{constraints.scene_threshold|0.3}"
+            interval:
+              cmd: "ffmpeg -i {input} -vf \"fps=1/{constraints.interval_seconds|5}\" {output_dir}/frame_%05d.jpg"
+            ffmpeg_scene:
+              cmd: "ffmpeg -i {input} -vf \"select='gt(scene,{constraints.scene_threshold|0.3})'\" -vsync vfr {output_dir}/frame_%05d.jpg"
+          output: "keyframes/*.jpg"
+          checkpoint: "keyframe_count > 0"
+
+      post_process:
+        - name: "ssim_filter"
+          when: "constraints.filter_duplicates == true"
+          threshold: "{constraints.ssim_threshold|0.85}"
+          description: "Remove frames with SSIM similarity > threshold"
+
+        - name: "merge_av"
+          description: "Align keyframes with transcript timestamps"
+          output: "chunks.jsonl"
+
+    fallback_chain:
+      - strategy: "ffmpeg_scene"
+        when: "pyscenedetect not available"
+      - strategy: "interval"
+        when: "scene detection returns 0 frames"
+
+    veto_conditions:
+      - "file not found"
+      - "invalid video format"
+      - "0 keyframes extracted AND 0 transcript words"
+
+    output_artifacts:
+      - kind: "keyframes"
+        path: "{output_dir}/keyframes/"
+        format: "jpg"
+      - kind: "transcript"
+        path: "{output_dir}/transcript.json"
+        format: "json"
+      - kind: "chunks"
+        path: "{output_dir}/chunks.jsonl"
+        format: "jsonl"

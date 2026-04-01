@@ -1,0 +1,416 @@
+# Business Turnaround System Workflow
+# Based on Dan Kennedy's Business Turnaround System (8-step)
+# Source: The Ultimate No B.S. Business Success Book + Renegade Millionaire Course
+# Version: 1.0.0
+
+id: wf-business-turnaround
+name: "Business Turnaround System"
+version: "1.0.0"
+duration: "3-5 days"
+description: |
+  Complete workflow to diagnose and turnaround a struggling business
+  using Kennedy's 8-Step Turnaround System. Covers cash flow triage,
+  marketing overhaul, cost surgery, and growth acceleration.
+
+  PHILOSOPHY: "Every business is one marketing campaign away from
+  turning around. But you have to stop the bleeding first."
+
+  RESULT: A comprehensive turnaround plan with immediate cash flow
+  actions, marketing fixes, cost reductions, and 90-day growth roadmap.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Business experiencing declining revenue or profits"
+  - "Business bleeding cash with no clear growth plan"
+  - "Post-crisis recovery planning"
+  - "Business stuck at a revenue plateau"
+  - "Owner wanting to sell but business value is too low"
+
+decision_matrix_fit:
+  complexity: high
+  agents_required: 4
+  estimated_duration: "3-5 days"
+  user_involvement: "very high (requires full financial disclosure)"
+  prerequisites:
+    - "Complete financial data (P&L, cash flow)"
+    - "Honest assessment of current situation"
+    - "Commitment to make hard decisions"
+    - "Willingness to implement immediately"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, triage, strategic direction"
+      phases: [0]
+
+    - agent: kennedy-business
+      role: "8-Step Turnaround, cash flow, business maturity assessment"
+      phases: [1, 2, 3]
+
+    - agent: kennedy-audit
+      role: "Marketing audit, 5 Holes analysis, ROI tracking"
+      phases: [1, 2]
+
+    - agent: kennedy-advisor
+      role: "Renegade Millionaire mindset, strategic counsel, 25 Eternal Truths"
+      phases: [3, 4]
+
+  synergies:
+    - agents: [kennedy-business, kennedy-audit]
+      pattern: "Business diagnoses the overall health, Audit focuses on marketing leaks"
+
+    - agents: [kennedy-business, kennedy-advisor]
+      pattern: "Business handles operational turnaround, Advisor provides strategic vision"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Emergency Triage"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Immediate assessment of business health. How much time do we have?
+      What is bleeding the most? What can generate cash fastest?
+
+      PRINCIPLE: "In a turnaround, cash is oxygen. Without it, you die
+      before you can fix anything else."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Financial Emergency Assessment"
+        required: true
+        description: |
+          Assess immediate financial health:
+          - Current cash position
+          - Monthly burn rate
+          - Accounts receivable (immediate collection potential)
+          - Accounts payable (what can be deferred)
+          - Runway: How many months at current rate?
+          - Revenue trend (up, flat, declining — how fast?)
+        output: "financial_assessment.yaml"
+
+      - task_id: T0.2
+        name: "Business Maturity Assessment"
+        required: true
+        description: |
+          Where is the business on Kennedy's Business Maturity Framework:
+          - Stage 1: Startup (no systems, founder does everything)
+          - Stage 2: Growth (some systems, some delegation)
+          - Stage 3: Mature (systems run business, owner manages)
+          - Stage 4: Declining (systems broken, owner checked out)
+          Turnaround strategy depends on the stage.
+        output: "maturity_assessment.md"
+
+      - task_id: T0.3
+        name: "Identify Top 3 Cash Generators"
+        required: true
+        description: |
+          Kennedy's triage question: "What can generate cash in 7 days?"
+          - Reactivate lost customers (cheapest source of revenue)
+          - Upsell/cross-sell existing customers
+          - Convert pending proposals/quotes
+          - Fire sale of stale inventory
+          - Raise prices (yes, even in crisis)
+          Pick top 3 and execute IMMEDIATELY.
+        output: "immediate_cash_actions.yaml"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Triage Complete"
+      criteria:
+        - "Financial runway calculated"
+        - "Business maturity stage identified"
+        - "Top 3 immediate cash actions identified"
+      human_review: true
+      message: "Review triage findings. Immediate cash actions should start NOW."
+      veto_conditions:
+        - condition: "Business has less than 30 days cash runway and no action taken"
+          action: "EMERGENCY - Implement cash actions before continuing analysis"
+
+  - id: PHASE-1
+    name: "Diagnostic Deep Dive"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Full diagnostic using Kennedy's turnaround frameworks.
+
+      PRINCIPLE: "Every failing business has the same 5 holes.
+      Find them, plug them, and cash starts flowing."
+
+    agent: kennedy-business
+
+    tasks:
+      - task_id: T1.1
+        name: "5 Holes in the Bucket Analysis"
+        required: true
+        description: |
+          Identify and quantify each hole:
+          1. NO LEAD CAPTURE — How many visitors/contacts leave without trace?
+          2. NO FOLLOW-UP — How many leads go cold without follow-up?
+          3. NO BACK-END — Are customers buying only once?
+          4. NO REFERRAL SYSTEM — Where are the missing referrals?
+          5. NO REACTIVATION — How many dormant customers exist?
+          Estimate revenue leaked through each hole.
+        output: "five_holes_analysis.yaml"
+
+      - task_id: T1.2
+        name: "Five Keys to Multiplied Cash Flow"
+        required: true
+        description: |
+          Analyze Kennedy's 5 multiplication levers:
+          1. Generate more leads
+          2. Convert more leads to customers
+          3. Increase average transaction value
+          4. Increase purchase frequency
+          5. Increase customer retention
+          Even 10% improvement in each = 61% total improvement.
+          Identify the easiest lever to move first.
+        output: "five_keys_analysis.yaml"
+
+      - task_id: T1.3
+        name: "Cost Surgery Analysis"
+        required: true
+        description: |
+          Identify costs to cut immediately:
+          - Marketing spend with no ROI (image ads, vanity metrics)
+          - Overhead that doesn't produce revenue
+          - Staff/vendors underperforming
+          - Subscriptions/services unused
+          Kennedy: "Every dollar not producing measurable results
+          is a dollar stolen from your turnaround."
+        output: "cost_surgery.yaml"
+
+    handoff:
+      from: kennedy-business
+      to: kennedy-audit
+      template: templates/handoff-context-tmpl.yaml
+      required_data:
+        - "5 Holes quantified"
+        - "5 Keys analyzed"
+        - "Cost surgery list"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Diagnosis Complete"
+      criteria:
+        - "5 Holes quantified with revenue estimates"
+        - "5 Keys analyzed with improvement opportunities"
+        - "Cost surgery list with savings estimates"
+      human_review: true
+      veto_conditions:
+        - condition: "Diagnosis based on assumptions, not data"
+          action: "BLOCK - Use real numbers or don't diagnose"
+
+  - id: PHASE-2
+    name: "Marketing Overhaul"
+    days: "Day 1-2"
+    tier: 2
+    description: |
+      Redesign marketing to be fully direct response and accountable.
+
+    agent: kennedy-audit
+
+    tasks:
+      - task_id: T2.1
+        name: "Marketing Audit (Fast Version)"
+        required: true
+        description: |
+          Rapid marketing audit:
+          - 10 No B.S. Rules compliance
+          - Results Triangle alignment
+          - Current materials assessment
+          - Quick wins identification
+        output: "marketing_rapid_audit.md"
+        checklist: "checklists/marketing-audit-checklist.md"
+
+      - task_id: T2.2
+        name: "Design Quick-Win Campaigns"
+        required: true
+        description: |
+          Create 3-5 campaigns that can generate revenue in 7-30 days:
+          1. Lost customer reactivation (3-letter sequence)
+          2. Existing customer upsell campaign
+          3. Referral blitz (champion circle activation)
+          4. Shock-and-awe for pending prospects
+          5. Deadline-driven offer to fence-sitters
+        output: "quick_win_campaigns.yaml"
+
+      - task_id: T2.3
+        name: "Plug the Holes"
+        required: true
+        description: |
+          Create action plan to plug each of the 5 Holes:
+          - Hole 1: Lead capture mechanism
+          - Hole 2: Follow-up sequence (automated)
+          - Hole 3: Back-end offers and ascension path
+          - Hole 4: Referral system
+          - Hole 5: Reactivation campaign
+          Prioritize by estimated revenue recovery.
+        output: "plug_holes_plan.yaml"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Marketing Overhaul Planned"
+      criteria:
+        - "Marketing audit complete"
+        - "Quick-win campaigns designed"
+        - "Hole-plugging plan created"
+      human_review: true
+      veto_conditions:
+        - condition: "Quick-win campaigns don't have tracking"
+          action: "BLOCK - Rule #4: Track everything"
+
+  - id: PHASE-3
+    name: "Turnaround Execution Plan"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Create the 90-day turnaround execution plan.
+
+    agent: kennedy-business
+
+    tasks:
+      - task_id: T3.1
+        name: "8-Step Turnaround Plan"
+        required: true
+        description: |
+          Kennedy's 8-Step Turnaround System:
+          1. Stop the bleeding (cost cuts, cash preservation)
+          2. Generate immediate cash (reactivation, upsells)
+          3. Fix the marketing (DR overhaul)
+          4. Plug the holes (5 Holes)
+          5. Implement the 5 Keys (multiplication)
+          6. Build systems (remove owner dependency)
+          7. Optimize and scale (double down on what works)
+          8. Plan for growth (90-day sprints)
+        output: "turnaround_plan.yaml"
+
+      - task_id: T3.2
+        name: "90-Day Sprint Calendar"
+        required: true
+        description: |
+          Map the 90-day implementation:
+          - Days 1-7: Emergency cash actions
+          - Days 8-14: Marketing quick wins launch
+          - Days 15-30: Hole plugging implementation
+          - Days 31-60: System building
+          - Days 61-90: Optimization and scaling
+          Each week has specific deliverables and metrics.
+        output: "ninety_day_calendar.yaml"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Execution Plan Complete"
+      criteria:
+        - "8-Step plan detailed"
+        - "90-day calendar with weekly milestones"
+      human_review: true
+      veto_conditions:
+        - condition: "Plan starts with branding/website redesign instead of cash generation"
+          action: "BLOCK - Cash generation FIRST, cosmetics later"
+
+  - id: PHASE-4
+    name: "Strategic Review + Accountability"
+    days: "Day 3-5"
+    tier: 3
+    description: |
+      Final strategic review and accountability framework.
+
+    agent: kennedy-advisor
+
+    tasks:
+      - task_id: T4.1
+        name: "Renegade Millionaire Mindset Check"
+        required: true
+        description: |
+          Apply Kennedy's Renegade Millionaire principles:
+          - Are you thinking conventionally or contrarian?
+          - Are you protecting your time (Time Vampires)?
+          - Are you charging what you're worth?
+          - Are you marketing to the right people?
+          - Are you willing to fire bad customers?
+          Mindset shift often matters more than tactics.
+        output: "mindset_check.md"
+
+      - task_id: T4.2
+        name: "25 Eternal Truths Review"
+        required: true
+        description: |
+          Check alignment with Kennedy's 25 Eternal Truths:
+          - Truth #1: There is no free lunch
+          - Truth #5: Systems run the business, people run the systems
+          - Truth #12: You get paid in direct proportion to the difficulty of what you do
+          - Truth #18: You must control your time aggressively
+          Identify which truths are being violated.
+        output: "eternal_truths_review.md"
+
+      - task_id: T4.3
+        name: "Accountability Framework"
+        required: true
+        description: |
+          Establish accountability:
+          - Weekly KPI dashboard
+          - Monthly review cadence
+          - Quarterly strategic reviews
+          - Annual planning sessions
+          - Accountability partner/mastermind recommendation
+        output: "accountability_framework.yaml"
+
+    checkpoint:
+      id: CP_PHASE_4
+      name: "Turnaround System Complete"
+      criteria:
+        - "Mindset alignment checked"
+        - "Eternal Truths violations identified"
+        - "Accountability framework established"
+      human_review: true
+      veto_conditions:
+        - condition: "No accountability mechanism in place"
+          action: "BLOCK - Turnarounds fail without accountability"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Turnaround Plan"
+      file: "turnaround_plan.yaml"
+      description: "Complete 8-step turnaround strategy"
+    - name: "90-Day Calendar"
+      file: "ninety_day_calendar.yaml"
+      description: "Week-by-week implementation plan"
+    - name: "Quick Win Campaigns"
+      file: "quick_win_campaigns.yaml"
+      description: "Immediate revenue-generating campaigns"
+    - name: "Financial Dashboard"
+      file: "financial_assessment.yaml"
+      description: "Current state + projections"
+  output_directory: "outputs/kennedy-turnaround-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "Ultimate No B.S. Business Success — 8-Step Turnaround"
+    - "Renegade Millionaire — 25 Eternal Truths"
+    - "Midas Touch — 5 Holes, 5 Keys"
+  total_phases: 5
+  total_tasks: 14

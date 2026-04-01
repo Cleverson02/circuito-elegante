@@ -1,0 +1,584 @@
+# Blueprint: Information First Marketing Squad Blueprint
+# Source: Ultimate Marketing Plan + Magnetic Marketing Ch.7
+# Squad: kennedy | Version: 1.0 | Date: 2026-02-11
+
+---
+
+metadata:
+  name: "Information First Marketing Blueprint"
+  description: >
+    Blueprint for implementing Kennedy's educational marketing approach
+    where information leads and the sale follows naturally. Uses the
+    Lead Generation Magnet (4 Jobs) as the primary mechanism to
+    transform marketing from "buy my stuff" to "here is value for you."
+  version: "1.0"
+# source_sop: sop-information-first-marketing.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-information-first-marketing.md"
+  primary_agent: "kennedy-magnetic"
+  mental_model: "Lead Gen Magnet (4 Jobs) + Pest-to-Welcome-Guest"
+  source:
+    books:
+      - title: "The Ultimate Marketing Plan"
+        chapters: [1, 2]
+      - title: "Magnetic Marketing"
+        chapters: [7, 8, 9]
+
+# ---
+
+# Agent Assignments
+
+agents:
+  lead:
+    name: "kennedy-magnetic"
+    role: "Information First Strategist"
+    responsibilities:
+      - "Design the overall Information First system"
+      - "Coordinate LGM creation and distribution"
+      - "Oversee email nurture sequences"
+      - "Manage ongoing content calendar"
+
+  support:
+    - name: "kennedy-copy"
+      role: "Content Engine"
+      responsibilities:
+        - "Write Lead Generation Magnets"
+        - "Create email nurture sequences"
+        - "Produce authority content (articles, reports)"
+        - "Write newsletter content"
+        - "Create titles and headlines"
+
+    - name: "kennedy-media"
+      role: "Distribution Manager"
+      responsibilities:
+        - "Build and optimize landing pages"
+        - "Manage advertising campaigns"
+        - "Select and configure distribution channels"
+        - "Track and optimize cost per lead"
+
+    - name: "kennedy-offers"
+      role: "Offer Integration"
+      responsibilities:
+        - "Design LGM Widget (Level 1)"
+        - "Design Consultation offer embedded in sequence"
+        - "Create Direct Purchase offer for sequence end"
+        - "Manage Yes Ladder through content"
+
+    - name: "kennedy-direct-response"
+      role: "DR Compliance"
+      responsibilities:
+        - "Ensure all content has CTA (Rule #1)"
+        - "Verify urgency elements (Rule #2)"
+        - "Confirm tracking on everything (Rule #4)"
+        - "Test compliance with 10 Rules"
+
+    - name: "kennedy-audit"
+      role: "Performance Analyst"
+      responsibilities:
+        - "Track funnel metrics end-to-end"
+        - "Identify leaks and optimization opportunities"
+        - "A/B test recommendations"
+        - "ROI reporting"
+
+# ---
+
+# Workflow Phases
+
+workflow:
+  total_phases: 5
+  estimated_duration: "4-8 weeks initial setup + ongoing"
+  parallel_work: true
+
+  phases:
+    - phase: 1
+      name: "WHO Discovery & Pain Mapping"
+      duration: "2-3 days"
+      agent: "kennedy-magnetic"
+      description: >
+        Deep discovery of WHO psychology: fears, desires,
+        frustrations, and language. This determines everything
+        else -- wrong WHO understanding = wrong content.
+
+      inputs:
+        - "Existing customer data and feedback"
+        - "Sales conversation transcripts/notes"
+        - "Competitor content analysis"
+        - "Industry forums and social media conversations"
+
+      tasks:
+        - task: "5-psychographic-questions"
+          description: >
+            Answer Kennedy's 5 Psychographic Discovery Questions:
+            1. What keeps WHO awake at night?
+            2. What are they afraid of?
+            3. What/who are they angry at?
+            4. Top 3 daily frustrations?
+            5. What trend is occurring in their world?
+            Document with THEIR exact language, not yours.
+          source: "Magnetic Marketing, pp. 64-65"
+
+        - task: "who-real-want-discovery"
+          description: >
+            Apply the 15-Industry Matrix:
+            What WHO THINKS they buy vs. what they REALLY want.
+            Example: Insurance buyer THINKS they want a policy,
+            REALLY wants peace of mind their family is protected.
+          source: "Magnetic Marketing, pp. 48-58"
+
+        - task: "language-mining"
+          description: >
+            Collect the exact words and phrases WHO uses:
+            - From customer support tickets
+            - From reviews (yours and competitors')
+            - From social media discussions
+            - From sales call recordings
+            These exact words go into your LGM and emails.
+
+        - task: "pain-hierarchy"
+          description: >
+            Rank pains by intensity and prevalence:
+            1. Top pain (most intense, most common)
+            2. Secondary pains
+            3. Underlying fears
+            4. Aspirational desires
+            LGM addresses #1 primarily.
+
+      outputs:
+        - "WHO Psychographic Profile (5 answers)"
+        - "Real Want vs. Perceived Want mapping"
+        - "Language library (50+ phrases)"
+        - "Pain hierarchy (ranked)"
+
+      quality_gate:
+        criteria:
+          - "All 5 questions answered with specifics"
+          - "Real Want identified (emotional, not logical)"
+          - "Language library has 50+ WHO phrases"
+          - "Pain hierarchy clearly ranked"
+        reviewer: "kennedy-magnetic"
+
+    - phase: 2
+      name: "Lead Generation Magnet Creation"
+      duration: "1-2 weeks"
+      agent: "kennedy-copy"
+      description: >
+        Create the flagship Lead Generation Magnet that
+        is the centerpiece of the Information First system.
+
+      inputs:
+        - "WHO Psychographic Profile from Phase 1"
+        - "USP Statement"
+        - "Expertise and case studies"
+        - "Language library"
+
+      tasks:
+        - task: "title-creation-and-testing"
+          description: >
+            Create 7-10 title candidates using templates:
+            - Errors/Sins format
+            - Secrets format
+            - Guide format
+            - Truth format
+            - Numbers/Results format
+            - Warning format
+            - Question format
+            Test against criteria: curiosity, relevance,
+            urgency, tabloid/magazine-cover appeal.
+          source: "sop-information-first-marketing.md, Step 2b"
+
+        - task: "content-creation"
+          description: >
+            Write LGM content following 6-section structure:
+            1. Headline + credibility line
+            2. Empathetic intro (mirror their pain)
+            3. The Problem amplified (Job #2)
+            4. Why common solutions fail
+            5. Your framework/approach (Job #3 + #4)
+            6. CTA for next step (Job #4)
+
+            CRITICAL RULES:
+            - Say WHAT, not HOW
+            - Use WHO's language (from language library)
+            - 70% education / 30% persuasion
+            - Never mention your company in title
+            - Include mini case studies
+          source: "Magnetic Marketing, Cap. 7"
+
+        - task: "4-jobs-audit"
+          description: >
+            Validate each Job is fulfilled:
+            Job 1 (Generate response): Title compelling enough?
+            Job 2 (Amplify pain): Reader feels urgency after?
+            Job 3 (Establish expertise + empathy): Reader trusts you?
+            Job 4 (Predispose): Reader wants to take next step?
+
+        - task: "format-production"
+          description: >
+            Produce LGM in chosen format:
+            - PDF report (most common)
+            - Video (highest engagement)
+            - Interactive tool (highest perceived value)
+            - Audio (easiest to consume)
+            Professional design, not DIY-looking.
+
+      outputs:
+        - "Winning title (tested and selected)"
+        - "Complete LGM content"
+        - "4-Jobs audit passed"
+        - "Formatted/designed LGM asset"
+
+      quality_gate:
+        criteria:
+          - "Title would sell from magazine rack"
+          - "4/4 Jobs fulfilled"
+          - "Zero overeducation (WHAT not HOW)"
+          - "CTA clear and compelling"
+          - "Professional design quality"
+        reviewer: "kennedy-magnetic"
+
+    - phase: 3
+      name: "Distribution System"
+      duration: "1-2 weeks"
+      agent: "kennedy-media"
+      description: >
+        Build the distribution infrastructure: landing pages,
+        ad campaigns, and organic channels.
+
+      inputs:
+        - "LGM asset from Phase 2"
+        - "WHO targeting data from Phase 1"
+        - "Budget allocation"
+
+      tasks:
+        - task: "squeeze-page-creation"
+          description: >
+            Build landing page with ZERO distractions:
+            - No navigation menu
+            - No sidebar
+            - No links to other pages
+            - Headline from LGM title
+            - 3-5 bullet points (what they'll learn)
+            - Simple form (name + email)
+            - Trust elements (testimonials, credibility)
+            - Mobile-responsive
+          source: "Magnetic Marketing, pp. 108-109"
+
+        - task: "paid-channel-setup"
+          description: >
+            Configure paid advertising:
+            - Facebook/Instagram: Psychographic targeting
+            - LinkedIn: Professional/B2B targeting
+            - Google Search: Intent-based targeting
+            - Google Display: Retargeting
+            Start with $20-50/day per channel, scale winners.
+
+        - task: "organic-channel-setup"
+          description: >
+            Configure organic distribution:
+            - Blog posts linking to LGM
+            - Social media content promoting LGM
+            - YouTube videos with LGM CTA
+            - Podcast episodes with LGM mention
+            - Guest posts on industry sites
+            - Email to existing list
+
+        - task: "offline-distribution"
+          description: >
+            Configure offline channels (if applicable):
+            - Direct mail with LGM offer
+            - Print ads in industry publications
+            - Postcards to targeted list
+            - Speaking events with LGM handout
+            - Networking with LGM card
+
+        - task: "tracking-configuration"
+          description: >
+            Set up tracking for every channel:
+            - UTM parameters per source
+            - Conversion tracking on squeeze page
+            - Cost per lead per channel
+            - Dashboard for real-time monitoring
+
+      outputs:
+        - "Squeeze page (live and tested)"
+        - "Paid campaigns (launched)"
+        - "Organic distribution plan (active)"
+        - "Tracking dashboard (configured)"
+        - "Cost per lead baseline (per channel)"
+
+      quality_gate:
+        criteria:
+          - "Squeeze page converts > 20% (test)"
+          - "At least 2 paid channels active"
+          - "At least 3 organic channels active"
+          - "Tracking verified end-to-end"
+        reviewer: "kennedy-media"
+
+    - phase: 4
+      name: "Nurture System & Conversion"
+      duration: "1-2 weeks"
+      agent: "kennedy-copy"
+      description: >
+        Build the email nurture sequence and consultation
+        conversion system that transforms leads into clients.
+
+      inputs:
+        - "LGM content from Phase 2"
+        - "WHO profile from Phase 1"
+        - "Consultation/Widget offer"
+
+      tasks:
+        - task: "email-sequence-creation"
+          description: >
+            Create 6-email nurture sequence:
+            Email 1 (Day 0): LGM delivery + brief intro
+            Email 2 (Day 2): Amplify key point + new example
+            Email 3 (Day 4): Social proof (expanded testimonial)
+            Email 4 (Day 7): Cost of inaction (what's at stake)
+            Email 5 (Day 10): Consultation offer (Widget Level 2)
+            Email 6 (Day 14): Last chance + hard deadline
+
+            Each email:
+            - Has clear value (not just selling)
+            - References previous emails (linkage)
+            - Builds progressively toward offer
+            - Has personality and empathy
+            - Ends with CTA
+
+        - task: "ongoing-newsletter-plan"
+          description: >
+            Create monthly newsletter plan:
+            - Authority/USP content (minimum)
+            - Entertainment/engagement (enticement devices)
+            - New Widget/offer CTA
+            - Personal story/bond content
+            Physical mail preferred over email.
+          source: "Magnetic Marketing, pp. 120-122"
+
+        - task: "consultation-script"
+          description: >
+            Create consultation/assessment script that:
+            - Opens with WHO's pain (from LGM context)
+            - Diagnoses specific situation
+            - Presents recommendations (your solution)
+            - Makes Direct Purchase offer (Widget Level 3)
+            - Handles common objections
+
+        - task: "until-buy-or-die-system"
+          description: >
+            Create long-term nurture for non-converters:
+            - Weekly or biweekly content emails
+            - Monthly newsletter
+            - Periodic special offers
+            - Reactivation campaigns quarterly
+            "Until they buy or die" principle.
+          source: "Magnetic Marketing, p. 117"
+
+      outputs:
+        - "6-email nurture sequence (built)"
+        - "Monthly newsletter plan and template"
+        - "Consultation conversion script"
+        - "Long-term nurture system design"
+
+      quality_gate:
+        criteria:
+          - "6 emails built with linkage"
+          - "Each email has value + CTA"
+          - "Newsletter plan covers 4 content types"
+          - "Consultation script tested"
+          - "Long-term nurture designed"
+        reviewer: "kennedy-magnetic"
+
+    - phase: 5
+      name: "Launch, Measure & Scale"
+      duration: "Ongoing (30-day initial cycle)"
+      agent: "kennedy-audit"
+      description: >
+        Launch the complete Information First system,
+        measure end-to-end performance, and optimize.
+
+      inputs:
+        - "All systems from Phases 1-4"
+
+      tasks:
+        - task: "system-launch"
+          description: >
+            Coordinated launch:
+            - Activate landing pages
+            - Launch ad campaigns
+            - Activate email sequence
+            - Brief team on new lead handling
+            - Start content calendar
+
+        - task: "funnel-metrics-tracking"
+          description: >
+            Track full funnel daily/weekly:
+            - Impressions → Clicks → Downloads → Email opens
+            - Email clicks → Consultation bookings → Sales
+            - Revenue → ROI per channel
+            Identify biggest leak in funnel.
+
+        - task: "a-b-testing-plan"
+          description: >
+            Test systematically:
+            - Week 1-2: LGM title variations
+            - Week 3-4: Landing page variations
+            - Week 5-6: Email subject lines
+            - Week 7-8: Consultation offer variations
+            Only test 1 variable at a time.
+
+        - task: "scaling-decisions"
+          description: >
+            At 30 days:
+            - Kill channels with CPL > 2x average
+            - Scale channels with CPL < average
+            - Optimize emails with < 20% open rate
+            - Create LGM variations for different segments
+
+        - task: "quarterly-content-refresh"
+          description: >
+            Every 90 days:
+            - Create new LGM (different topic/angle)
+            - Refresh email sequence
+            - Update case studies and testimonials
+            - Review and optimize entire funnel
+
+      outputs:
+        - "30-day performance report"
+        - "A/B test results and winners"
+        - "Scaling decisions documented"
+        - "Quarterly refresh plan"
+        - "Revenue and ROI dashboard"
+
+      quality_gate:
+        criteria:
+          - "End-to-end funnel measured"
+          - "CPL within target range"
+          - "Positive ROI per active channel"
+          - "Optimization plan for next 30 days"
+        reviewer: "kennedy-chief"
+
+# ---
+
+# Quality Gates Summary
+
+quality_gates:
+  - gate: "WHO Understanding Deep"
+    phase: 1
+    criteria: "5 questions + real want + language library"
+    blocker: true
+
+  - gate: "LGM Created & Validated"
+    phase: 2
+    criteria: "4 Jobs passed, no overeducation"
+    blocker: true
+
+  - gate: "Distribution Live"
+    phase: 3
+    criteria: "Squeeze page + 2 paid + 3 organic channels"
+    blocker: true
+
+  - gate: "Nurture System Active"
+    phase: 4
+    criteria: "6 emails + newsletter + consultation script"
+    blocker: true
+
+  - gate: "Positive ROI Achieved"
+    phase: 5
+    criteria: "ROI > 1x within 60 days, scaling plan"
+    blocker: false
+
+# ---
+
+# Success Metrics
+
+metrics:
+  primary:
+    - name: "LGM Downloads per Month"
+      target: "Growing month-over-month"
+      measurement: "Total leads captured"
+
+    - name: "Landing Page Conversion"
+      target: "> 25%"
+      measurement: "Downloads / Unique visits"
+
+    - name: "Cost per Lead"
+      target: "Decrease month-over-month"
+      measurement: "Ad spend / Leads"
+
+  secondary:
+    - name: "Email Open Rate"
+      target: "> 30%"
+      measurement: "Opens / Delivered"
+
+    - name: "Consultation Booking Rate"
+      target: "> 15% of leads"
+      measurement: "Bookings / Leads"
+
+    - name: "Sales Conversion Rate"
+      target: "> 30% of consultations"
+      measurement: "Sales / Consultations"
+
+    - name: "Revenue per Lead"
+      target: "Increasing quarter-over-quarter"
+      measurement: "Total revenue / Total leads"
+
+    - name: "ROAS (Return on Ad Spend)"
+      target: "> 3x"
+      measurement: "Revenue / Total marketing spend"
+
+    - name: "Information-First Client LTV"
+      target: "> 1.5x cold-acquired client LTV"
+      measurement: "Compare LTV by acquisition source"
+
+# ---
+
+# Dependencies
+
+dependencies:
+  requires:
+    - "blueprint-usp-construction-squad-blueprint.yaml"
+    - "blueprint-widget-offer-squad-blueprint.yaml"
+  synergies:
+    - "blueprint-pest-to-welcome-guest-squad-blueprint.yaml"
+    - "blueprint-host-beneficiary-squad-blueprint.yaml"
+  enables:
+    - "Sustainable inbound lead generation"
+    - "Authority positioning in market"
+    - "Reduced dependence on cold outreach"
+
+# ---
+
+# Risk Mitigation
+
+risks:
+  - risk: "LGM title doesn't attract enough downloads"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Test 5-7 titles before scaling; use tabloid formula"
+
+  - risk: "Email sequence feels too salesy"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "70/30 rule: 70% genuine value, 30% persuasion"
+
+  - risk: "Overeducation (teaching HOW, losing need for you)"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Content review by kennedy-magnetic enforcing WHAT-not-HOW rule"
+
+  - risk: "Landing page distractions reduce conversion"
+    probability: "low"
+    impact: "high"
+    mitigation: "Squeeze page rule: zero navigation, zero links out"
+
+  - risk: "Content fatigue over time"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Quarterly LGM refresh; new angles; new formats"
+
+  - risk: "Ad costs escalate beyond profitability"
+    probability: "medium"
+    impact: "high"
+    mitigation: "Weekly CPL monitoring; kill underperformers fast; diversify organic"

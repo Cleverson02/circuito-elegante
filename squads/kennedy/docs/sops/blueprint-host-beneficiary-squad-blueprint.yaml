@@ -1,0 +1,560 @@
+# Blueprint: Host-Beneficiary Alliance Squad Blueprint
+# Source: Magnetic Marketing Ch.10 (pp.132-138) + Ultimate Marketing Plan
+# Squad: kennedy | Version: 1.0 | Date: 2026-02-11
+
+---
+
+metadata:
+  name: "Host-Beneficiary Alliance Blueprint"
+  description: >
+    Blueprint for building strategic marketing alliances using Kennedy's
+    Champion Circle of Influence and Endorsed Mailing system. Leverages
+    trusted relationships to access pre-qualified audiences with
+    100% delivery, 100% open, and 100% read rates.
+  version: "1.0"
+# source_sop: sop-host-beneficiary.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-host-beneficiary.md"
+  primary_agent: "kennedy-referrals"
+  mental_model: "Champion Circle of Influence"
+  source:
+    books:
+      - title: "Magnetic Marketing"
+        chapters: [10]
+        pages: "132-138"
+      - title: "The Ultimate Marketing Plan"
+        chapters: [12]
+
+# ---
+
+# Agent Assignments
+
+agents:
+  lead:
+    name: "kennedy-referrals"
+    role: "Alliance Architect"
+    responsibilities:
+      - "Champion identification and scoring"
+      - "Alliance strategy design"
+      - "Endorsed mailing campaign management"
+      - "Multi-step follow-up orchestration"
+
+  support:
+    - name: "kennedy-chief"
+      role: "Strategic Oversight"
+      responsibilities:
+        - "Validate alliance fits Marketing Triangle"
+        - "Approve Champion selections"
+        - "Review campaign ROI"
+
+    - name: "kennedy-copy"
+      role: "Endorsed Letter Copywriting"
+      responsibilities:
+        - "Draft endorsed letters in Champion's voice"
+        - "Create exclusive offer copy for Circle"
+        - "Write multi-step follow-up sequence"
+
+    - name: "kennedy-offers"
+      role: "Exclusive Offer Design"
+      responsibilities:
+        - "Design Widget exclusively for each Circle"
+        - "Ensure offer is genuinely exclusive"
+        - "Calculate ROI projections"
+
+    - name: "kennedy-magnetic"
+      role: "Follow-Up System"
+      responsibilities:
+        - "Design multi-step campaign post-endorsement"
+        - "Integrate leads into main conversion system"
+        - "Retention of Host-B acquired clients"
+
+# ---
+
+# Workflow Phases
+
+workflow:
+  total_phases: 6
+  estimated_duration: "3-6 weeks per campaign"
+  parallel_work: true
+  note: "Multiple Champion campaigns can run in parallel"
+
+  phases:
+    - phase: 1
+      name: "Champion Identification & Scoring"
+      duration: "3-5 days"
+      agent: "kennedy-referrals"
+      description: >
+        Systematically identify, evaluate, and score potential
+        Champions from existing customer base and strategic
+        alliance opportunities.
+
+      inputs:
+        - "Customer database with satisfaction data"
+        - "Industry association and group directories"
+        - "Business network contacts"
+        - "Existing testimonials and case studies"
+
+      tasks:
+        - task: "customer-champion-scan"
+          description: >
+            Scan customer base for Champion criteria:
+            - NPS 9-10 (extremely satisfied)
+            - Documented results (testimonial/case study)
+            - Member of association/group/community
+            - Influential within that group
+            - Already refers informally
+            - Respected reputation
+          source: "sop-host-beneficiary.md, Step 1"
+
+        - task: "strategic-alliance-mapping"
+          description: >
+            Map complementary businesses that serve the same WHO:
+            - Non-competing businesses with overlapping audience
+            - Professional service pairs (dentist-orthodontist)
+            - Industry cluster partnerships
+            - Authority/influencer endorsement targets
+
+        - task: "champion-scoring"
+          description: >
+            Score each candidate on:
+            - Satisfaction level (1-10)
+            - Circle size (number of contacts)
+            - Circle quality (alignment with WHO)
+            - Champion influence (reputation)
+            - Accessibility (willingness to participate)
+            - Result documentation (strength of proof)
+
+      outputs:
+        - "Ranked Champion list (minimum 5)"
+        - "Strategic Alliance candidate list (minimum 3)"
+        - "Score matrix with prioritization"
+        - "Top 3 Champions for immediate action"
+
+      quality_gate:
+        criteria:
+          - "Minimum 5 Champions identified and scored"
+          - "Top 3 have documented results"
+          - "Each top 3 has Circle of 100+ contacts"
+        reviewer: "kennedy-chief"
+
+    - phase: 2
+      name: "Champion Approach & Agreement"
+      duration: "1-2 weeks"
+      agent: "kennedy-referrals"
+      description: >
+        Approach top Champions with the proposal,
+        negotiate terms, and secure agreement.
+
+      inputs:
+        - "Ranked Champion list from Phase 1"
+        - "Approach scripts from SOP"
+        - "Value proposition for Champion"
+
+      tasks:
+        - task: "approach-preparation"
+          description: >
+            Prepare approach for each Champion:
+            - Personalize script with their specific results
+            - Define reciprocity offer (what Champion gets)
+            - Prepare example endorsed letter
+            - Prepare exclusive offer concept for their Circle
+
+        - task: "champion-meeting"
+          description: >
+            Execute approach meeting/call:
+            - Acknowledge their success with you
+            - Propose the endorsed mailing concept
+            - Explain: you handle everything, they just approve
+            - Present reciprocity benefit
+            - Secure agreement
+
+        - task: "agreement-documentation"
+          description: >
+            Document the agreement:
+            - Champion name and Circle details
+            - Circle contact list acquisition
+            - Timeline and logistics
+            - Reciprocity terms
+            - Approval process for materials
+
+      outputs:
+        - "Signed agreements with Champions"
+        - "Circle contact lists"
+        - "Timeline per Champion"
+        - "Reciprocity terms documented"
+
+      quality_gate:
+        criteria:
+          - "Minimum 1 Champion confirmed"
+          - "Circle contact list acquired"
+          - "Timeline agreed"
+          - "Reciprocity terms clear"
+        reviewer: "kennedy-referrals"
+
+    - phase: 3
+      name: "Endorsed Letter & Offer Creation"
+      duration: "1-2 weeks"
+      agent: "kennedy-copy"
+      description: >
+        Create the endorsed letter and exclusive offer
+        for each Champion's Circle.
+
+      inputs:
+        - "Champion agreements from Phase 2"
+        - "Champion's specific results/testimonial"
+        - "Circle demographics and characteristics"
+        - "USP and Widget specifications"
+
+      tasks:
+        - task: "endorsed-letter-drafting"
+          description: >
+            Draft endorsed letter containing:
+            - Champion's letterhead header
+            - Personal relationship reference
+            - Specific results Champion achieved
+            - Explicit recommendation
+            - Exclusive offer for Circle
+            - Clear action instructions
+            - Deadline / urgency
+            - Handwritten signature line
+            - P.S. with reinforcement
+          source: "sop-host-beneficiary.md, Step 4 template"
+
+        - task: "exclusive-offer-creation"
+          description: >
+            Create offer that is:
+            - Genuinely exclusive (not available elsewhere)
+            - References the Champion by name
+            - Has clear deadline
+            - Has clear redemption instructions
+            - Is trackable (unique code/URL)
+          source: "sop-host-beneficiary.md, Step 5"
+
+        - task: "multi-step-sequence"
+          description: >
+            Create 3-step follow-up sequence:
+            - Second Notice (day 10): References first letter
+            - Third Notice (day 20): Added proof + urgency
+            - Final Notice (day 30): FINAL + hard deadline
+            Each references the previous (linkage).
+          source: "Magnetic Marketing, pp. 108-115"
+
+        - task: "champion-approval"
+          description: >
+            Submit all materials to Champion for review:
+            - Endorsed letter draft
+            - Exclusive offer details
+            - Follow-up sequence overview
+            - Get Champion's signature/approval
+
+      outputs:
+        - "Approved endorsed letter (per Champion)"
+        - "Exclusive offer specification"
+        - "Multi-step follow-up sequence (3 notices)"
+        - "Champion approval signature"
+
+      quality_gate:
+        criteria:
+          - "Letter on Champion's letterhead"
+          - "Specific results mentioned"
+          - "Explicit recommendation included"
+          - "Exclusive offer is genuinely exclusive"
+          - "Champion has approved all materials"
+        reviewer: "kennedy-chief"
+
+    - phase: 4
+      name: "Production & Logistics"
+      duration: "1-2 weeks"
+      agent: "kennedy-referrals"
+      description: >
+        Produce all physical materials and coordinate
+        mailing logistics. You pay for everything.
+
+      inputs:
+        - "Approved materials from Phase 3"
+        - "Circle contact list"
+
+      tasks:
+        - task: "materials-production"
+          description: >
+            Produce:
+            - Letterhead printing (Champion's brand)
+            - Envelope printing (Champion's return address)
+            - Letter printing
+            - Insert materials (LGM, brochure, etc.)
+            - Real postage stamps (NEVER franking)
+
+        - task: "address-preparation"
+          description: >
+            Prepare addresses:
+            - Personal addressing (full name)
+            - Address verification (reduce returns)
+            - Segmentation if Circle is large
+            - Tracking codes per piece
+
+        - task: "mailing-schedule"
+          description: >
+            Schedule mailings:
+            - First Notice: Day 0
+            - Second Notice: Day 10-15
+            - Third/Final Notice: Day 25-30
+            - Coordinate with follow-up system
+
+      outputs:
+        - "Printed materials (letters + envelopes)"
+        - "Addressed and assembled mailings"
+        - "Mailing schedule confirmed"
+        - "Tracking codes assigned"
+        - "Budget reconciliation"
+
+      quality_gate:
+        criteria:
+          - "All materials on Champion's letterhead"
+          - "Real stamps (not franking)"
+          - "Personal addressing verified"
+          - "All 3 notices prepared"
+          - "You are paying 100% of costs"
+        reviewer: "kennedy-referrals"
+
+    - phase: 5
+      name: "Campaign Execution"
+      duration: "4-6 weeks (full multi-step)"
+      agent: "kennedy-referrals"
+      description: >
+        Execute the multi-step endorsed mailing campaign
+        and manage incoming responses.
+
+      inputs:
+        - "Prepared mailings from Phase 4"
+        - "Response handling system"
+
+      tasks:
+        - task: "first-notice-send"
+          description: >
+            Day 0: Send endorsed letter from Champion.
+            Activate response tracking system.
+            Brief team on expected incoming leads.
+
+        - task: "response-handling"
+          description: >
+            For each response:
+            - Log in tracking system
+            - Send Shock and Awe Package within 24h
+            - Schedule follow-up call within 48h
+            - Tag as "Host-B: [Champion Name]"
+
+        - task: "second-notice-send"
+          description: >
+            Day 10-15: Send Second Notice.
+            References first letter (linkage).
+            Adds urgency and additional proof.
+            Can be from you, referencing Champion's letter.
+
+        - task: "third-notice-send"
+          description: >
+            Day 25-30: Send Final Notice.
+            "FINAL NOTICE" stamped.
+            Maximum urgency + hard deadline.
+            References both previous notices.
+            "Many smart people have already responded."
+
+        - task: "lead-nurture-integration"
+          description: >
+            Non-responders after 3 notices:
+            Enter regular nurture sequence.
+            "Until they buy or die" principle.
+          source: "Magnetic Marketing, p. 117"
+
+      outputs:
+        - "Response tracking log"
+        - "Leads generated per notice"
+        - "Conversion pipeline"
+        - "Campaign performance dashboard"
+
+      quality_gate:
+        criteria:
+          - "All 3 notices sent on schedule"
+          - "Responses handled within 24-48h"
+          - "Shock and Awe sent to all responders"
+          - "All leads in tracking system"
+        reviewer: "kennedy-referrals"
+
+    - phase: 6
+      name: "Measurement, Optimization & Scaling"
+      duration: "1-2 weeks post-campaign"
+      agent: "kennedy-chief"
+      description: >
+        Measure campaign results, optimize for next round,
+        and scale to additional Champions and Circles.
+
+      inputs:
+        - "Campaign performance data from Phase 5"
+        - "Revenue and ROI data"
+
+      tasks:
+        - task: "roi-analysis"
+          description: >
+            Calculate:
+            - Response rate per notice
+            - Total leads generated
+            - Conversion rate (leads → customers)
+            - Revenue generated
+            - Cost per lead (vs. cold marketing)
+            - Cost per acquisition
+            - ROI (Revenue - Cost) / Cost
+            - Customer quality (LTV comparison)
+
+        - task: "champion-satisfaction"
+          description: >
+            Follow up with Champion:
+            - Share results
+            - Thank profusely
+            - Ask if they'd do it again
+            - Ask for referrals to other Champions
+            - Propose next campaign
+
+        - task: "optimization-plan"
+          description: >
+            Document lessons learned:
+            - What worked best
+            - What to improve
+            - Letter modifications
+            - Offer adjustments
+            - Timing changes
+
+        - task: "scaling-plan"
+          description: >
+            Plan expansion:
+            - Activate next 2-3 Champions
+            - Explore new Circles
+            - Build systematic pipeline
+            - Create repeatable playbook
+
+      outputs:
+        - "ROI report per campaign"
+        - "Champion satisfaction feedback"
+        - "Optimization recommendations"
+        - "Scaling plan with next 3 Champions"
+        - "Updated playbook"
+
+      quality_gate:
+        criteria:
+          - "ROI calculated and documented"
+          - "Champion relationship maintained"
+          - "Optimization plan actionable"
+          - "Next 3 Champions identified"
+        reviewer: "kennedy-chief"
+
+# ---
+
+# Quality Gates Summary
+
+quality_gates:
+  - gate: "Champions Identified"
+    phase: 1
+    criteria: "5+ scored, top 3 with documented results"
+    blocker: true
+
+  - gate: "Champion Agreement Secured"
+    phase: 2
+    criteria: "At least 1 confirmed Champion"
+    blocker: true
+
+  - gate: "Materials Approved"
+    phase: 3
+    criteria: "Champion approved letter + offer"
+    blocker: true
+
+  - gate: "Materials Produced"
+    phase: 4
+    criteria: "All printed, addressed, stamped"
+    blocker: true
+
+  - gate: "Campaign Executed"
+    phase: 5
+    criteria: "All 3 notices sent, responses handled"
+    blocker: true
+
+  - gate: "ROI Validated & Scaling Planned"
+    phase: 6
+    criteria: "ROI documented, next Champions identified"
+    blocker: false
+
+# ---
+
+# Success Metrics
+
+metrics:
+  primary:
+    - name: "Response Rate (per campaign)"
+      target: "> 15%"
+      measurement: "Responses / Letters sent"
+
+    - name: "Conversion Rate"
+      target: "> 30%"
+      measurement: "Customers / Responses"
+
+    - name: "ROI per Campaign"
+      target: "> 5x"
+      measurement: "(Revenue - Cost) / Cost"
+
+  secondary:
+    - name: "Cost per Lead Reduction"
+      target: "> 50% cheaper than cold marketing"
+      measurement: "Compare CPL Host-B vs. cold channels"
+
+    - name: "Client Quality (LTV)"
+      target: "> 1.5x average client LTV"
+      measurement: "Compare LTV of Host-B acquired vs. others"
+
+    - name: "Champion Repeat Rate"
+      target: "> 80% agree to do again"
+      measurement: "Champions who repeat / Total Champions"
+
+    - name: "Scaling Velocity"
+      target: "> 1 new Champion per month"
+      measurement: "New Champions activated per month"
+
+# ---
+
+# Dependencies
+
+dependencies:
+  requires:
+    - "blueprint-usp-construction-squad-blueprint.yaml"
+    - "blueprint-widget-offer-squad-blueprint.yaml"
+  enables:
+    - "Expanded referral network"
+    - "New client acquisition at premium quality"
+    - "Scalable alliance marketing system"
+
+# ---
+
+# Risk Mitigation
+
+risks:
+  - risk: "Champion declines participation"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Pipeline of 5+ Champions; approach multiple simultaneously"
+
+  - risk: "Low response rate from Circle"
+    probability: "low-medium"
+    impact: "medium"
+    mitigation: "Multi-step campaign; optimize offer; test with small batch first"
+
+  - risk: "Champion relationship damaged"
+    probability: "low"
+    impact: "high"
+    mitigation: "Always get approval; never misrepresent; share positive results"
+
+  - risk: "Offer not perceived as exclusive"
+    probability: "low"
+    impact: "medium"
+    mitigation: "Create genuinely unique offer; use Champion's name in offer"
+
+  - risk: "Logistics failure (late delivery, wrong address)"
+    probability: "low"
+    impact: "high"
+    mitigation: "Test batch first; verify addresses; buffer time in schedule"

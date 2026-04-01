@@ -1,0 +1,731 @@
+# Squad Blueprint: 10 No B.S. Rules Compliance Validation
+# Extraido de: No B.S. Direct Marketing, Third Edition, Ch.2-3, p.15-94
+# Versao: 1.0
+# Data: 2026-02-11
+
+metadata:
+  name: 10-rules-compliance-squad
+  version: "1.0"
+# source_sop: sop-10-rules-compliance.md
+  domain: "direct-marketing-quality-assurance"
+  source: "No B.S. Direct Marketing, Dan Kennedy, Third Edition"
+  sop_reference: "sop-10-rules-compliance.md"
+  description: >
+    Squad blueprint for validating any marketing campaign, asset, or material
+    against Dan Kennedy's 10 No B.S. Rules of Direct Marketing. Ensures every
+    piece of marketing contains an offer, urgency, clear instructions, tracking,
+    proper branding orientation, follow-up system, strong copy, correct format,
+    results-first mindset, and tough-minded discipline.
+
+# =============================================================================
+# AGENTS
+# =============================================================================
+
+agents:
+
+  - id: compliance-auditor
+    name: "10 Rules Compliance Auditor Agent"
+    role: "Audits any marketing material against all 10 No B.S. Rules and produces a compliance scorecard with pass/fail for each rule"
+    capabilities:
+      - "Rule-by-rule compliance checking"
+      - "Scorecard generation with detailed notes"
+      - "Classification (Elite/Strong/Mediocre/Weak/Institutional)"
+      - "Material inventory and tracking"
+      - "Historical compliance tracking"
+      - "Batch auditing of multiple materials"
+      - "Comparative analysis (before vs after)"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.2-3 (all 10 Rules, p.15-94)"
+      - "Rule 1: Always an Offer (p.15-22)"
+      - "Rule 2: Reason to Respond Now (p.23-28)"
+      - "Rule 3: Clear Instructions (p.29-34)"
+      - "Rule 4: Tracking and Measurement (p.35-42)"
+      - "Rule 5: Branding as By-Product (p.43-48)"
+      - "Rule 6: Follow-Up System (p.49-58)"
+      - "Rule 7: Strong Copy (p.59-72)"
+      - "Rule 8: Mail-Order Look (p.73-80)"
+      - "Rule 9: Results Rule (p.81-86)"
+      - "Rule 10: Tough-Minded Discipline (p.87-94)"
+    decision_rules:
+      - rule: "DR-CA-001"
+        description: "A material must score 8/10 or higher to be approved for launch. Below 8 = mandatory revision."
+      - rule: "DR-CA-002"
+        description: "Rules 1-4 are CRITICAL. Failure on any of Rules 1-4 is an automatic FAIL regardless of other scores."
+      - rule: "DR-CA-003"
+        description: "Score 0-3 materials must be eliminated entirely and rebuilt from scratch as DR pieces."
+      - rule: "DR-CA-004"
+        description: "No material receives N/A on Rules 1, 2, 3, or 4. These are ALWAYS applicable."
+      - rule: "DR-CA-005"
+        description: "Audit must be performed BEFORE any spend is committed to the material."
+      - rule: "DR-CA-006"
+        description: "Re-audit is mandatory after ANY changes to a previously audited material."
+    input_schema:
+      type: object
+      required:
+        - material_content
+        - material_type
+      properties:
+        material_content:
+          type: string
+          description: "The actual content of the marketing material to audit"
+        material_type:
+          type: string
+          enum:
+            - "website_page"
+            - "landing_page"
+            - "email"
+            - "direct_mail"
+            - "print_ad"
+            - "digital_ad"
+            - "social_media_post"
+            - "brochure"
+            - "sales_script"
+            - "proposal"
+            - "business_card"
+            - "video_script"
+            - "radio_script"
+            - "other"
+          description: "Type of marketing material"
+        target_market:
+          type: string
+          description: "Who this material is targeting"
+        campaign_objective:
+          type: string
+          description: "What this material is supposed to achieve"
+    output_schema:
+      type: object
+      properties:
+        scorecard:
+          type: object
+          properties:
+            rule_1_offer:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                has_direct_purchase_offer:
+                  type: boolean
+                has_lead_gen_offer:
+                  type: boolean
+                uses_hybrid_approach:
+                  type: boolean
+                notes:
+                  type: string
+            rule_2_urgency:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                urgency_type:
+                  type: string
+                is_credible:
+                  type: boolean
+                notes:
+                  type: string
+            rule_3_instructions:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                is_step_by_step:
+                  type: boolean
+                multiple_response_methods:
+                  type: boolean
+                notes:
+                  type: string
+            rule_4_tracking:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                tracking_mechanism:
+                  type: string
+                uniquely_identifiable:
+                  type: boolean
+                notes:
+                  type: string
+            rule_5_branding:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                primary_objective_is_response:
+                  type: boolean
+                notes:
+                  type: string
+            rule_6_followup:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                has_multi_step:
+                  type: boolean
+                has_multi_channel:
+                  type: boolean
+                step_count:
+                  type: integer
+                notes:
+                  type: string
+            rule_7_copy:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                fatal_errors_count:
+                  type: integer
+                dumb_defaults_count:
+                  type: integer
+                headline_strength:
+                  type: string
+                  enum: ["strong", "adequate", "weak", "missing"]
+                notes:
+                  type: string
+            rule_8_format:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                format_box:
+                  type: string
+                  enum: ["mail_order", "advertorial", "sales_letter", "none"]
+                has_sufficient_copy:
+                  type: boolean
+                notes:
+                  type: string
+            rule_9_results:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                success_measured_by_results:
+                  type: boolean
+                ego_elements_detected:
+                  type: boolean
+                notes:
+                  type: string
+            rule_10_discipline:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: ["PASS", "FAIL"]
+                all_9_rules_followed:
+                  type: boolean
+                exceptions_claimed:
+                  type: boolean
+                notes:
+                  type: string
+          description: "Complete scorecard with per-rule analysis"
+        total_score:
+          type: integer
+          description: "Total score out of 10"
+        classification:
+          type: string
+          enum: ["ELITE", "STRONG", "MEDIOCRE", "WEAK", "INSTITUTIONAL"]
+          description: "Classification based on score"
+        launch_approved:
+          type: boolean
+          description: "Whether material is approved for launch (score >= 8)"
+        priority_fixes:
+          type: array
+          items:
+            type: object
+            properties:
+              rule_number:
+                type: integer
+              priority:
+                type: string
+                enum: ["critical", "high", "medium"]
+              problem:
+                type: string
+              fix:
+                type: string
+          description: "Prioritized list of fixes for failed rules"
+
+  - id: copy-doctor
+    name: "Copy Doctor Agent"
+    role: "Diagnoses and fixes copy-level issues identified by the Compliance Auditor, specializing in Rules 1, 2, 3, 7, and 8"
+    capabilities:
+      - "Offer construction and optimization"
+      - "Urgency mechanism creation"
+      - "Clear instruction writing"
+      - "Headline strengthening"
+      - "Fatal Error elimination"
+      - "Dumb Default correction"
+      - "Format box selection and adaptation"
+      - "Hybrid Approach implementation"
+      - "Before/after transformation"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.2 (Rules 1-3, p.15-34)"
+      - "No B.S. Direct Marketing, Ch.3 (Rules 7-8, p.59-80)"
+      - "Four Chief Sales Copy Mistakes (p.59-68)"
+      - "Six Defaults of Dumb Copywriters (p.63-68)"
+      - "Three Ad Format Boxes (p.73-80)"
+      - "Two Types of Offers + Hybrid Approach (p.15-22)"
+      - "Threshold Resistance Continuum (p.15-22)"
+    decision_rules:
+      - rule: "DR-CD-001"
+        description: "Fix Rule 1 (Offer) FIRST. No offer = no results. Everything else is secondary."
+      - rule: "DR-CD-002"
+        description: "ALWAYS implement Hybrid Approach when fixing Rule 1. Both direct purchase AND lead-gen offers."
+      - rule: "DR-CD-003"
+        description: "Headlines must be fixed BEFORE body copy. 80% rule: headline determines if rest gets read."
+      - rule: "DR-CD-004"
+        description: "Prefer long copy over short. Interested people read everything. Uninterested don't buy anyway."
+      - rule: "DR-CD-005"
+        description: "Zero tolerance for 4 Fatal Errors. Any detected = immediate rewrite of affected section."
+      - rule: "DR-CD-006"
+        description: "Instructions must be step-by-step, numbered, with multiple response methods."
+    input_schema:
+      type: object
+      required:
+        - original_material
+        - failed_rules
+      properties:
+        original_material:
+          type: string
+          description: "The original marketing material content"
+        failed_rules:
+          type: array
+          items:
+            type: integer
+          description: "List of rule numbers that failed"
+        target_market:
+          type: string
+          description: "Target market for customization"
+        material_type:
+          type: string
+          description: "Type of material being fixed"
+    output_schema:
+      type: object
+      properties:
+        revised_material:
+          type: string
+          description: "Complete revised material with all fixes"
+        changes_log:
+          type: array
+          items:
+            type: object
+            properties:
+              rule_fixed:
+                type: integer
+              before:
+                type: string
+              after:
+                type: string
+              rationale:
+                type: string
+          description: "Detailed log of every change made"
+        re_audit_ready:
+          type: boolean
+          description: "Whether material is ready for re-audit"
+
+  - id: tracking-architect
+    name: "Tracking Architect Agent"
+    role: "Designs and implements tracking mechanisms for Rule 4 compliance, and configures follow-up systems for Rule 6"
+    capabilities:
+      - "Tracking code/URL/phone number design"
+      - "UTM parameter strategy"
+      - "Multi-channel attribution setup"
+      - "Follow-up sequence design (4-step system)"
+      - "Multi-media follow-up coordination"
+      - "ROI calculation framework"
+      - "A/B test tracking design"
+      - "Dashboard and reporting setup"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.3 (Rule 4: Tracking, p.35-42)"
+      - "No B.S. Direct Marketing, Ch.3 (Rule 6: Follow-Up, p.49-58)"
+      - "4-Step Follow-Up Campaign framework"
+      - "Five Holes in the Bucket (p.49-58)"
+      - "ROI calculation methodology"
+      - "Income At Will Position (p.135-142)"
+    decision_rules:
+      - rule: "DR-TA-001"
+        description: "Every channel, every piece, every variation must have UNIQUE tracking identifier."
+      - rule: "DR-TA-002"
+        description: "Follow-up system must have minimum 4 steps: Re-State, 2nd Notice, Final Notice, Change Offer."
+      - rule: "DR-TA-003"
+        description: "Follow-up must use MULTIPLE channels (email + physical mail + phone minimum)."
+      - rule: "DR-TA-004"
+        description: "Tracking must differentiate between lead-gen responses and direct purchase responses."
+      - rule: "DR-TA-005"
+        description: "All tracking data must feed into ROI calculation. Untrackable spend = unacceptable spend."
+      - rule: "DR-TA-006"
+        description: "Follow-up system must be AUTOMATED. Manual follow-up creates holes in the bucket."
+    input_schema:
+      type: object
+      required:
+        - campaign_channels
+        - material_variations
+      properties:
+        campaign_channels:
+          type: array
+          items:
+            type: string
+          description: "List of media channels being used"
+        material_variations:
+          type: array
+          items:
+            type: string
+          description: "List of material variations to track"
+        follow_up_requirements:
+          type: object
+          description: "Requirements for follow-up sequences"
+        existing_tracking_tools:
+          type: array
+          items:
+            type: string
+          description: "Currently available tracking tools/platforms"
+    output_schema:
+      type: object
+      properties:
+        tracking_plan:
+          type: object
+          properties:
+            codes:
+              type: array
+              description: "Unique tracking codes per channel/variation"
+            urls:
+              type: array
+              description: "Unique URLs with UTM parameters"
+            phone_numbers:
+              type: array
+              description: "Dedicated phone numbers per channel"
+            attribution_rules:
+              type: object
+              description: "How responses are attributed to sources"
+          description: "Complete tracking implementation plan"
+        follow_up_sequences:
+          type: array
+          items:
+            type: object
+            properties:
+              trigger:
+                type: string
+              step_1_restate:
+                type: object
+              step_2_second_notice:
+                type: object
+              step_3_final_notice:
+                type: object
+              step_4_change_offer:
+                type: object
+              channels:
+                type: array
+              timing:
+                type: object
+          description: "Complete follow-up sequences with timing"
+        roi_framework:
+          type: object
+          description: "ROI calculation setup per campaign"
+
+  - id: discipline-enforcer
+    name: "Discipline Enforcer Agent"
+    role: "Ensures Rule 10 compliance by institutionalizing the audit process, scheduling re-audits, and preventing exceptions"
+    capabilities:
+      - "Audit scheduling and enforcement"
+      - "Exception detection and rejection"
+      - "Team training on 10 Rules"
+      - "Historical compliance reporting"
+      - "Trend analysis (improving vs declining compliance)"
+      - "Process institutionalization"
+      - "6-Step Direct Marketing Diet enforcement"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.3 (Rule 10: Discipline, p.87-94)"
+      - "6-Step Direct Marketing Diet (p.87-94)"
+      - "All 10 Rules for systemic enforcement"
+    decision_rules:
+      - rule: "DR-DE-001"
+        description: "No material launches without audit scorecard on file. Zero exceptions."
+      - rule: "DR-DE-002"
+        description: "Claims of 'my business is different' are auto-rejected. Every business can apply DR."
+      - rule: "DR-DE-003"
+        description: "If average compliance score drops below 8.0, trigger mandatory team re-training."
+      - rule: "DR-DE-004"
+        description: "Designers and agencies cannot veto based on aesthetics. Only results justify changes."
+      - rule: "DR-DE-005"
+        description: "Monthly compliance report must be generated and reviewed by leadership."
+      - rule: "DR-DE-006"
+        description: "6-Step Diet must be followed in sequence: eliminate institutional > add offers > add urgency > add instructions > track everything > implement follow-up."
+    input_schema:
+      type: object
+      required:
+        - audit_results
+      properties:
+        audit_results:
+          type: array
+          items:
+            type: object
+          description: "Collection of audit scorecards"
+        team_size:
+          type: integer
+          description: "Number of people creating marketing"
+        audit_frequency:
+          type: string
+          description: "Current audit frequency"
+    output_schema:
+      type: object
+      properties:
+        compliance_report:
+          type: object
+          properties:
+            average_score:
+              type: number
+            elite_percentage:
+              type: number
+            institutional_percentage:
+              type: number
+            trend:
+              type: string
+              enum: ["improving", "stable", "declining"]
+          description: "Overall compliance metrics"
+        training_recommendations:
+          type: array
+          description: "Recommended training actions"
+        process_improvements:
+          type: array
+          description: "Suggested process improvements"
+        enforcement_calendar:
+          type: object
+          description: "Schedule for audits and re-audits"
+
+# =============================================================================
+# WORKFLOW
+# =============================================================================
+
+workflow:
+  name: "10 Rules Compliance Validation Process"
+  description: >
+    Systematic workflow to audit marketing materials against Kennedy's 10 Rules,
+    fix non-compliance, verify fixes, and institutionalize the process.
+
+  phases:
+
+    - name: "Phase 1: Inventory & Audit"
+      description: "Collect all marketing materials and audit each against 10 Rules"
+      agents: ["compliance-auditor"]
+      steps:
+        - "Inventory all active marketing materials"
+        - "Inventory all planned marketing materials"
+        - "Audit each material using 10 Rules Scorecard"
+        - "Score and classify each material"
+        - "Generate priority fix list sorted by critical rules first"
+        - "Identify materials scoring 0-3 for elimination"
+      checkpoint: "All materials audited, scored, and classified. Priority fixes identified."
+      outputs:
+        - "material_inventory"
+        - "scorecards"
+        - "priority_fixes"
+
+    - name: "Phase 2: Fix Non-Compliance"
+      description: "Fix all materials that scored below 8/10"
+      agents: ["copy-doctor", "tracking-architect"]
+      dependencies: ["Phase 1"]
+      steps:
+        - "Copy Doctor fixes Rules 1, 2, 3, 7, 8 issues (offer, urgency, instructions, copy, format)"
+        - "Tracking Architect fixes Rule 4 issues (tracking mechanisms)"
+        - "Tracking Architect fixes Rule 6 issues (follow-up system)"
+        - "Both agents coordinate on Rule 5 (branding orientation) and Rule 9 (results focus)"
+        - "Document all changes with before/after"
+      checkpoint: "All materials revised with documented changes. Ready for re-audit."
+      outputs:
+        - "revised_materials"
+        - "changes_log"
+        - "tracking_plan"
+        - "follow_up_sequences"
+
+    - name: "Phase 3: Re-Audit & Approve"
+      description: "Re-audit fixed materials and approve for launch"
+      agents: ["compliance-auditor"]
+      dependencies: ["Phase 2"]
+      steps:
+        - "Re-audit all revised materials"
+        - "Verify score >= 8/10 for each"
+        - "If any still below 8, return to Phase 2"
+        - "Issue launch approval for compliant materials"
+        - "Archive scorecards for historical tracking"
+      checkpoint: "All materials score >= 8/10. Launch approved."
+      outputs:
+        - "final_scorecards"
+        - "launch_approvals"
+
+    - name: "Phase 4: Institutionalize"
+      description: "Create permanent compliance process"
+      agents: ["discipline-enforcer"]
+      dependencies: ["Phase 3"]
+      steps:
+        - "Define pre-launch audit process"
+        - "Set audit frequency schedule"
+        - "Assign compliance responsibilities"
+        - "Create team training program"
+        - "Implement 6-Step Direct Marketing Diet"
+        - "Set up monthly compliance reporting"
+        - "Schedule first periodic re-audit"
+      checkpoint: "Permanent process established with schedule, responsibilities, and reporting."
+      outputs:
+        - "compliance_process_document"
+        - "audit_calendar"
+        - "training_plan"
+        - "reporting_dashboard"
+
+# =============================================================================
+# QUALITY GATES
+# =============================================================================
+
+quality_gates:
+
+  - gate: "QG-10R-001"
+    phase: "Phase 1"
+    description: "All active marketing materials must be inventoried and audited"
+    validation: "material_inventory.count > 0 AND scorecards.count == material_inventory.count"
+    failure_action: "Complete inventory before proceeding"
+
+  - gate: "QG-10R-002"
+    phase: "Phase 1"
+    description: "Rules 1-4 are CRITICAL gates. Any failure on Rules 1-4 triggers mandatory fix"
+    validation: "For each material: if rule_1 OR rule_2 OR rule_3 OR rule_4 == FAIL, material flagged as critical_fix"
+    failure_action: "Material cannot launch until Rules 1-4 all PASS"
+
+  - gate: "QG-10R-003"
+    phase: "Phase 2"
+    description: "Copy Doctor must verify zero Fatal Errors and zero Dumb Defaults after fix"
+    validation: "fatal_errors_count == 0 AND dumb_defaults_count == 0"
+    failure_action: "Continue revising until zero errors/defaults"
+
+  - gate: "QG-10R-004"
+    phase: "Phase 2"
+    description: "Every material variation must have unique tracking mechanism"
+    validation: "All tracking codes are unique; no duplicates across materials"
+    failure_action: "Assign unique tracking codes before launch"
+
+  - gate: "QG-10R-005"
+    phase: "Phase 2"
+    description: "Follow-up system must have minimum 4 steps using minimum 2 channels"
+    validation: "follow_up_sequences.step_count >= 4 AND follow_up_sequences.channels.count >= 2"
+    failure_action: "Expand follow-up sequence before launch"
+
+  - gate: "QG-10R-006"
+    phase: "Phase 3"
+    description: "All materials must score 8/10 or higher after revision"
+    validation: "MIN(scorecards.total_score) >= 8"
+    failure_action: "Return to Phase 2 for additional fixes"
+
+  - gate: "QG-10R-007"
+    phase: "Phase 3"
+    description: "Zero materials classified as INSTITUTIONAL (0-3) remaining active"
+    validation: "COUNT(classification == 'INSTITUTIONAL') == 0"
+    failure_action: "Eliminate or rebuild all institutional materials"
+
+  - gate: "QG-10R-008"
+    phase: "Phase 4"
+    description: "Permanent audit process must be documented with schedule and responsibilities"
+    validation: "compliance_process_document exists AND audit_calendar exists AND responsibilities assigned"
+    failure_action: "Document process before declaring institutionalization complete"
+
+  - gate: "QG-10R-009"
+    phase: "Phase 4"
+    description: "Average compliance score across all materials must be >= 8.0"
+    validation: "AVG(scorecards.total_score) >= 8.0"
+    failure_action: "Trigger team re-training and additional fixes"
+
+  - gate: "QG-10R-010"
+    phase: "Phase 4"
+    description: "6-Step Direct Marketing Diet must be fully implemented"
+    validation: "All 6 steps verified as active: no institutional ads, offers in everything, urgency in everything, instructions in everything, tracking on everything, follow-up system active"
+    failure_action: "Implement missing diet steps"
+
+# =============================================================================
+# KENNEDY PRINCIPLES (Embedded References)
+# =============================================================================
+
+kennedy_principles:
+
+  ten_rules:
+    - rule: 1
+      name: "There Will Always Be an Offer or Offers"
+      key_insight: "Use Hybrid Approach: Direct Purchase + Lead-Generation"
+      source: "p.15-22"
+    - rule: 2
+      name: "There Will Be a Reason to Respond Right Now"
+      key_insight: "Urgency eliminates natural consumer procrastination"
+      source: "p.23-28"
+    - rule: 3
+      name: "You Will Give Clear Instructions"
+      key_insight: "Step-by-step like a child following directions"
+      source: "p.29-34"
+    - rule: 4
+      name: "There Will Be Tracking and Measurement"
+      key_insight: "What's not tracked doesn't exist"
+      source: "p.35-42"
+    - rule: 5
+      name: "Branding Will Be a By-Product, Not an Objective"
+      key_insight: "Branding happens naturally from consistent DR marketing"
+      source: "p.43-48"
+    - rule: 6
+      name: "There Will Be Follow-Up"
+      key_insight: "4-Step System: Re-State, 2nd Notice, Final Notice, Change Offer"
+      source: "p.49-58"
+    - rule: 7
+      name: "There Will Be Strong Copy"
+      key_insight: "Avoid 4 Fatal Errors and 6 Dumb Defaults"
+      source: "p.59-72"
+    - rule: 8
+      name: "In General, It Will Look Like Mail-Order Advertising"
+      key_insight: "Three boxes: mail-order, advertorial, sales letter"
+      source: "p.73-80"
+    - rule: 9
+      name: "Results Rule, Period"
+      key_insight: "Ugly that sells > beautiful that doesn't"
+      source: "p.81-86"
+    - rule: 10
+      name: "You Will Be a Tough-Minded Disciplined Direct Marketer"
+      key_insight: "6-Step Diet for permanent discipline"
+      source: "p.87-94"
+
+  scoring_system:
+    elite: "10/10 -- exemplary campaign"
+    strong: "8-9/10 -- minor fixes needed"
+    mediocre: "6-7/10 -- major revision required"
+    weak: "4-5/10 -- mostly institutional, rebuild"
+    institutional: "0-3/10 -- eliminate and start over"
+
+  priority_order:
+    description: "Fix rules in this order for maximum impact"
+    order: [1, 4, 2, 3, 6, 7, 8, 5, 9, 10]
+    rationale: "Offer first (no offer = no result), then tracking (can't measure = can't improve), then urgency and instructions (convert more), then systems (follow-up, copy, format)"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  prerequisites:
+    - sop: "sop-great-divide-audit.md"
+      purpose: "Confirm orientation toward Direct Response before auditing compliance"
+
+  this_is_prerequisite_for:
+    - sop: "sop-results-triangle.md"
+      purpose: "Results Triangle requires all 10 Rules compliance"
+    - sop: "sop-direct-mail-campaign.md"
+      purpose: "Direct mail must pass scorecard before mailing"
+
+  uses_concepts_from:
+    - sop: "sop-money-pyramid-targeting.md"
+      purpose: "Rule 10 discipline includes maintaining correct pyramid tier"
+    - sop: "sop-great-divide-audit.md"
+      purpose: "Rule 5 (branding) and Rule 9 (results) reference the Great Divide"
+
+  audit_frequency:
+    new_materials: "Before EVERY launch"
+    active_materials: "Monthly"
+    website: "Quarterly"
+    complete_audit: "Bi-annually"

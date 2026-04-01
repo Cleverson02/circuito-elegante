@@ -1,0 +1,573 @@
+# Squad Blueprint: Results Triangle (Message + Market + Media)
+# Extraido de: No B.S. Direct Marketing, Third Edition, Ch.1, 4, 10-12
+# Versao: 1.0
+# Data: 2026-02-11
+
+metadata:
+  name: results-triangle-squad
+  version: "1.0"
+# source_sop: sop-results-triangle.md
+  domain: "direct-marketing-strategy"
+  source: "No B.S. Direct Marketing, Dan Kennedy, Third Edition"
+  sop_reference: "sop-results-triangle.md"
+  description: >
+    Squad blueprint for assembling, aligning, and optimizing the Results Triangle --
+    Kennedy's core strategic model that determines success or failure of any
+    direct marketing campaign. Results = RIGHT Message + RIGHT Market + RIGHT Media.
+
+# =============================================================================
+# AGENTS
+# =============================================================================
+
+agents:
+
+  - id: market-researcher
+    name: "Market Researcher Agent"
+    role: "Defines and segments the target market with surgical precision using Database DNA analysis and demographic/psychographic profiling"
+    capabilities:
+      - "Database DNA analysis (identify top 20% client patterns)"
+      - "Demographic profiling (age, income, location, profession)"
+      - "Psychographic profiling (fears, desires, frustrations, aspirations)"
+      - "Behavioral analysis (buying habits, media consumption)"
+      - "Micro-market segmentation (Level 4 customization)"
+      - "Money Pyramid tier classification"
+      - "Market sizing and accessibility assessment"
+      - "Competitor market analysis"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.10-11 (Market vertex)"
+      - "Database DNA framework (Richard Seppala, p.113-118)"
+      - "Money Pyramid model (p.5-8)"
+      - "Message-to-(Micro)-Market Match (p.110-120)"
+      - "Five Secrets for Professional Practice (Ben Glass, p.155-170)"
+    decision_rules:
+      - rule: "DR-MR-001"
+        description: "ALWAYS start with market definition before message or media. Market determines everything else."
+      - rule: "DR-MR-002"
+        description: "Target minimum Level 3 (niche) customization; prefer Level 4 (micro-market) when data is available."
+      - rule: "DR-MR-003"
+        description: "If existing customer database available, ALWAYS run Database DNA analysis first to find top 20% patterns."
+      - rule: "DR-MR-004"
+        description: "Verify market is accessible via available media channels before finalizing segment selection."
+      - rule: "DR-MR-005"
+        description: "Classify market in Money Pyramid tier. Never mix tiers in same campaign."
+      - rule: "DR-MR-006"
+        description: "Document the WHO before any copy is written. No exceptions."
+    input_schema:
+      type: object
+      required:
+        - product_or_service
+        - geographic_scope
+      properties:
+        product_or_service:
+          type: string
+          description: "What is being sold"
+        geographic_scope:
+          type: string
+          description: "Geographic area of operation"
+        existing_customer_data:
+          type: boolean
+          description: "Whether customer database exists for DNA analysis"
+        money_pyramid_tier:
+          type: string
+          enum: ["1_percent_ultra_rich", "4_percent_rich", "15_percent_comfortable", "60_percent_mass", "20_percent_base"]
+          description: "Target tier in Money Pyramid"
+        budget_range:
+          type: string
+          description: "Available marketing budget"
+    output_schema:
+      type: object
+      properties:
+        market_profile:
+          type: object
+          description: "Complete market profile with demographics, psychographics, behavior"
+        micro_segments:
+          type: array
+          items:
+            type: object
+          description: "List of micro-market segments ranked by potential"
+        database_dna_report:
+          type: object
+          description: "Patterns from top 20% customers (if data available)"
+        market_ficha:
+          type: string
+          description: "Completed Market Profile Card (Ficha de Mercado)"
+        recommended_pyramid_tier:
+          type: string
+          description: "Recommended Money Pyramid tier with justification"
+
+  - id: message-architect
+    name: "Message Architect Agent"
+    role: "Constructs the direct response message customized for the specific micro-market, including offer, urgency, instructions, headline, and copy format"
+    capabilities:
+      - "Headline creation (Kennedy 80% rule)"
+      - "Offer construction (Direct Purchase + Lead-Gen Hybrid)"
+      - "Urgency mechanism design"
+      - "Clear instruction crafting"
+      - "Message-to-(Micro)-Market customization"
+      - "Three Ad Format Box selection (mail-order, advertorial, letter)"
+      - "Copy quality assurance (avoid 4 Fatal Errors and 6 Dumb Defaults)"
+      - "Social proof integration"
+      - "WIFM (What's In It For Me) alignment"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.7-8 (Copy and Format Rules)"
+      - "No B.S. Direct Marketing, Ch.10 (Message vertex)"
+      - "Four Chief Sales Copy Mistakes (p.59-68)"
+      - "Six Defaults of Dumb Copywriters (p.63-68)"
+      - "Three Ad Format Boxes (p.73-80)"
+      - "Two Types of Offers + Hybrid Approach (p.15-22)"
+      - "Threshold Resistance Continuum (p.15-22)"
+      - "10 No B.S. Rules (Rules 1-3: Offer, Urgency, Instructions)"
+    decision_rules:
+      - rule: "DR-MA-001"
+        description: "EVERY message must contain: offer, urgency, clear instructions, headline, social proof, benefits. No exceptions."
+      - rule: "DR-MA-002"
+        description: "ALWAYS use Hybrid Approach -- include both direct purchase and lead-generation offers in every piece."
+      - rule: "DR-MA-003"
+        description: "Every ad must fit in one of 3 boxes: mail-order ad, advertorial, or sales letter. If it doesn't fit, it's wrong."
+      - rule: "DR-MA-004"
+        description: "Invest 80% of effort on headline. Headline determines if the rest gets read."
+      - rule: "DR-MA-005"
+        description: "Avoid all 4 Fatal Errors: boring copy, irrelevant focus, wrong format, weak headline."
+      - rule: "DR-MA-006"
+        description: "Avoid all 6 Dumb Defaults: clever over clear, feature-focused, no offer, no urgency, no instructions, beautiful over effective."
+      - rule: "DR-MA-007"
+        description: "Customize examples, testimonials, language, and problems for the SPECIFIC micro-market. Generic = ineffective."
+      - rule: "DR-MA-008"
+        description: "Long copy outsells short copy in nearly all DR contexts. Don't cut for aesthetics."
+    input_schema:
+      type: object
+      required:
+        - market_profile
+        - product_or_service
+        - offer_details
+      properties:
+        market_profile:
+          type: object
+          description: "Complete market profile from Market Researcher"
+        product_or_service:
+          type: string
+          description: "What is being sold"
+        offer_details:
+          type: object
+          description: "Core offer, price, bonuses, guarantee"
+        ad_format:
+          type: string
+          enum: ["mail_order", "advertorial", "sales_letter"]
+          description: "Preferred ad format box"
+        urgency_mechanism:
+          type: string
+          description: "Type of urgency (deadline, limited quantity, early-bird bonus)"
+    output_schema:
+      type: object
+      properties:
+        headline:
+          type: string
+          description: "Primary headline"
+        headline_variants:
+          type: array
+          items:
+            type: string
+          description: "3-5 headline variants for testing"
+        direct_purchase_offer:
+          type: string
+          description: "High-threshold direct purchase offer"
+        lead_gen_offer:
+          type: string
+          description: "Low-threshold lead generation offer"
+        urgency_copy:
+          type: string
+          description: "Urgency mechanism copy"
+        instructions:
+          type: string
+          description: "Clear step-by-step response instructions"
+        full_copy:
+          type: string
+          description: "Complete copy piece in selected format"
+        format_used:
+          type: string
+          description: "Which of the 3 boxes was used"
+        compliance_check:
+          type: object
+          description: "Verification against 10 Rules and anti-patterns"
+
+  - id: media-selector
+    name: "Media Selector Agent"
+    role: "Selects and prioritizes media channels that reach the target market with maximum efficiency and trackability"
+    capabilities:
+      - "Media channel evaluation (reach, cost, trackability, credibility)"
+      - "Match Bait to Critter analysis"
+      - "Cost per contact calculation"
+      - "Tracking mechanism design"
+      - "A/B test planning"
+      - "Budget allocation optimization"
+      - "Multi-channel campaign coordination"
+      - "Digital vs physical media assessment"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.10-12 (Media vertex)"
+      - "Basic Direct-Marketing Tools List (p.95-105)"
+      - "Eight Must-Haves for DR Websites (p.125-140)"
+      - "GKIC Sales Funnel Concept (p.141-158)"
+      - "Rule 4: Tracking and Measurement (p.35-42)"
+      - "Direct mail methodology (Ch.6-8)"
+    decision_rules:
+      - rule: "DR-MS-001"
+        description: "Select media based on WHERE the target market IS, not based on what's trendy or cheap."
+      - rule: "DR-MS-002"
+        description: "Every media channel must have tracking mechanism. Untrackable media = unacceptable."
+      - rule: "DR-MS-003"
+        description: "Verify media allows sufficient copy space for the complete message including offer, urgency, and instructions."
+      - rule: "DR-MS-004"
+        description: "Prioritize media that allows precise segmentation to reach micro-market."
+      - rule: "DR-MS-005"
+        description: "Physical mail often outperforms digital for high-value offers. Don't default to digital-only."
+      - rule: "DR-MS-006"
+        description: "Budget must allow minimum 3 test variations before scaling."
+    input_schema:
+      type: object
+      required:
+        - market_profile
+        - message_package
+        - budget
+      properties:
+        market_profile:
+          type: object
+          description: "Market profile from Market Researcher"
+        message_package:
+          type: object
+          description: "Complete message from Message Architect"
+        budget:
+          type: number
+          description: "Total available budget for campaign"
+        preferred_channels:
+          type: array
+          items:
+            type: string
+          description: "Any preferred or pre-committed channels"
+    output_schema:
+      type: object
+      properties:
+        media_plan:
+          type: array
+          items:
+            type: object
+            properties:
+              channel:
+                type: string
+              cost_per_contact:
+                type: number
+              estimated_reach:
+                type: number
+              tracking_mechanism:
+                type: string
+              priority:
+                type: string
+                enum: ["primary", "secondary", "test"]
+          description: "Prioritized media plan"
+        budget_allocation:
+          type: object
+          description: "Budget distribution across channels"
+        test_matrix:
+          type: object
+          description: "A/B test plan with variations"
+        tracking_setup:
+          type: array
+          description: "Tracking mechanisms per channel"
+
+  - id: triangle-aligner
+    name: "Triangle Alignment Agent"
+    role: "Verifies alignment between all three vertices and ensures the complete Results Triangle is optimized"
+    capabilities:
+      - "Cross-vertex alignment scoring (Message-Market, Market-Media, Message-Media)"
+      - "Triangle integrity assessment"
+      - "Misalignment diagnosis and correction"
+      - "10 Rules compliance verification"
+      - "Campaign launch readiness assessment"
+      - "Performance monitoring and optimization recommendations"
+      - "Scaling strategy development"
+    knowledge_sources:
+      - "No B.S. Direct Marketing, Ch.10-12 (Results Triangle complete)"
+      - "Seven Ways to Render Triangle Powerless (p.101-105)"
+      - "10 No B.S. Rules (all rules)"
+      - "Gordon Quinton case study (p.135-142)"
+      - "ROI calculation methodology"
+    decision_rules:
+      - rule: "DR-TA-001"
+        description: "All three vertices must score 7+ out of 10 on alignment before launch is approved."
+      - rule: "DR-TA-002"
+        description: "Campaign must comply with ALL 10 No B.S. Rules. Failure on any single rule = no launch."
+      - rule: "DR-TA-003"
+        description: "Check for all 7 powerlessness patterns. If any found, fix before launch."
+      - rule: "DR-TA-004"
+        description: "Follow-up system must be ready BEFORE campaign launches. No launching without follow-up."
+      - rule: "DR-TA-005"
+        description: "Test phase results must show positive ROI before scaling phase begins."
+      - rule: "DR-TA-006"
+        description: "Scale incrementally (2x, 3x, 5x) with monitoring at each level. Never go from test to full scale."
+    input_schema:
+      type: object
+      required:
+        - market_profile
+        - message_package
+        - media_plan
+      properties:
+        market_profile:
+          type: object
+          description: "From Market Researcher"
+        message_package:
+          type: object
+          description: "From Message Architect"
+        media_plan:
+          type: object
+          description: "From Media Selector"
+        follow_up_system:
+          type: object
+          description: "Follow-up system configuration"
+    output_schema:
+      type: object
+      properties:
+        alignment_scores:
+          type: object
+          properties:
+            message_market:
+              type: number
+            market_media:
+              type: number
+            message_media:
+              type: number
+            overall:
+              type: number
+          description: "Alignment scores (1-10)"
+        powerlessness_check:
+          type: array
+          description: "Check against 7 powerlessness patterns"
+        rules_compliance:
+          type: object
+          description: "Compliance with all 10 No B.S. Rules"
+        launch_recommendation:
+          type: string
+          enum: ["approved", "needs_fixes", "rejected"]
+        fixes_required:
+          type: array
+          description: "List of issues to fix before launch"
+        scaling_strategy:
+          type: object
+          description: "Phased scaling plan with budgets and targets"
+
+# =============================================================================
+# WORKFLOW
+# =============================================================================
+
+workflow:
+  name: "Results Triangle Assembly & Optimization"
+  description: >
+    Sequential workflow that builds the Results Triangle from Market (foundation)
+    through Message (customization) to Media (delivery), then aligns and tests.
+
+  phases:
+
+    - name: "Phase 1: Market Definition"
+      description: "Define and segment the target market"
+      agents: ["market-researcher"]
+      steps:
+        - "Gather existing customer data (if available)"
+        - "Run Database DNA analysis on top 20% customers"
+        - "Define demographic, psychographic, and behavioral profiles"
+        - "Identify micro-market segments (Level 3-4)"
+        - "Classify Money Pyramid tier"
+        - "Complete Market Profile Card (Ficha de Mercado)"
+        - "Verify market is accessible via available media"
+      checkpoint: "Market profile complete with micro-segments identified, pyramid tier classified, and accessibility confirmed"
+      outputs:
+        - "market_profile"
+        - "micro_segments"
+        - "market_ficha"
+
+    - name: "Phase 2: Message Construction"
+      description: "Build the customized direct response message"
+      agents: ["message-architect"]
+      dependencies: ["Phase 1"]
+      steps:
+        - "Define core offer (Direct Purchase)"
+        - "Define lead-generation offer"
+        - "Create Hybrid Approach structure"
+        - "Write primary headline (invest 80% time)"
+        - "Write 3-5 headline variants for testing"
+        - "Build urgency mechanism"
+        - "Write clear response instructions"
+        - "Customize all elements for micro-market"
+        - "Select ad format box (mail-order, advertorial, letter)"
+        - "Complete full copy piece"
+        - "Verify against 4 Fatal Errors"
+        - "Verify against 6 Dumb Defaults"
+      checkpoint: "Complete message with all mandatory elements, customized for micro-market, passing all anti-pattern checks"
+      outputs:
+        - "message_package"
+        - "headline_variants"
+        - "copy_piece"
+
+    - name: "Phase 3: Media Selection"
+      description: "Select and prioritize media channels"
+      agents: ["media-selector"]
+      dependencies: ["Phase 1", "Phase 2"]
+      steps:
+        - "Evaluate available media channels for target market"
+        - "Apply Match Bait to Critter analysis"
+        - "Calculate cost per contact for each channel"
+        - "Design tracking mechanisms for each channel"
+        - "Plan A/B test matrix"
+        - "Allocate budget across channels"
+        - "Prepare test campaign assets per channel"
+      checkpoint: "Media plan with tracking, budget allocation, and test matrix ready"
+      outputs:
+        - "media_plan"
+        - "budget_allocation"
+        - "test_matrix"
+        - "tracking_setup"
+
+    - name: "Phase 4: Triangle Alignment & Launch"
+      description: "Verify alignment, test, and scale"
+      agents: ["triangle-aligner"]
+      dependencies: ["Phase 1", "Phase 2", "Phase 3"]
+      steps:
+        - "Score Message-Market alignment (1-10)"
+        - "Score Market-Media alignment (1-10)"
+        - "Score Message-Media alignment (1-10)"
+        - "Check all 7 powerlessness patterns"
+        - "Verify compliance with all 10 No B.S. Rules"
+        - "Confirm follow-up system is ready"
+        - "Issue launch recommendation"
+        - "Execute test phase"
+        - "Analyze test results"
+        - "Develop scaling strategy"
+        - "Execute scale phases (2x, 3x, 5x)"
+      checkpoint: "All alignment scores 7+, all 10 Rules compliant, positive test ROI, scaling strategy defined"
+      outputs:
+        - "alignment_report"
+        - "launch_recommendation"
+        - "test_results"
+        - "scaling_strategy"
+
+# =============================================================================
+# QUALITY GATES
+# =============================================================================
+
+quality_gates:
+
+  - gate: "QG-RT-001"
+    phase: "Phase 1"
+    description: "Market profile must include demographics, psychographics, behavior, and be segmented to micro-market level (Level 3+)"
+    validation: "market_profile contains all required fields; micro_segments has >= 1 entry at Level 3+"
+    failure_action: "Return to market-researcher for additional segmentation"
+
+  - gate: "QG-RT-002"
+    phase: "Phase 2"
+    description: "Message must contain all 6 mandatory elements (offer, urgency, instructions, headline, proof, benefits) and use Hybrid Approach"
+    validation: "All 6 elements present; both direct purchase and lead-gen offers included"
+    failure_action: "Return to message-architect for completion"
+
+  - gate: "QG-RT-003"
+    phase: "Phase 2"
+    description: "Message must pass anti-pattern checks (0 of 4 Fatal Errors, 0 of 6 Dumb Defaults)"
+    validation: "Zero fatal errors detected; zero dumb defaults detected"
+    failure_action: "Return to message-architect for correction"
+
+  - gate: "QG-RT-004"
+    phase: "Phase 3"
+    description: "Every media channel must have trackable mechanism configured"
+    validation: "tracking_mechanism != null for every channel in media_plan"
+    failure_action: "Add tracking or remove channel"
+
+  - gate: "QG-RT-005"
+    phase: "Phase 3"
+    description: "Budget must allow minimum 3 test variations"
+    validation: "budget_allocation.test_count >= 3"
+    failure_action: "Reduce channel count or increase budget"
+
+  - gate: "QG-RT-006"
+    phase: "Phase 4"
+    description: "All three alignment scores must be 7+ out of 10"
+    validation: "message_market >= 7 AND market_media >= 7 AND message_media >= 7"
+    failure_action: "Identify weakest alignment and return to responsible agent for improvement"
+
+  - gate: "QG-RT-007"
+    phase: "Phase 4"
+    description: "Campaign must comply with ALL 10 No B.S. Rules"
+    validation: "All 10 rules checked = PASS"
+    failure_action: "Fix non-compliant rules before launch"
+
+  - gate: "QG-RT-008"
+    phase: "Phase 4"
+    description: "Follow-up system must be configured and tested before launch"
+    validation: "follow_up_system.status == 'ready' AND follow_up_system.tested == true"
+    failure_action: "Configure and test follow-up system before proceeding"
+
+  - gate: "QG-RT-009"
+    phase: "Phase 4"
+    description: "Test phase must show positive ROI before scaling"
+    validation: "test_results.roi > 0"
+    failure_action: "Analyze failures, adjust triangle, and re-test. Do NOT scale negative ROI."
+
+  - gate: "QG-RT-010"
+    phase: "Phase 4"
+    description: "Zero of 7 powerlessness patterns detected in final campaign"
+    validation: "powerlessness_check contains zero 'detected' items"
+    failure_action: "Fix detected pattern and re-check"
+
+# =============================================================================
+# KENNEDY PRINCIPLES (Embedded References)
+# =============================================================================
+
+kennedy_principles:
+  results_triangle:
+    formula: "Results = RIGHT Message + RIGHT Market + RIGHT Media"
+    source: "No B.S. Direct Marketing, Ch.10-12, p.101-115"
+
+  message_to_market_match:
+    principle: "Customize message to micro-market for maximum response"
+    levels: ["Generic (low)", "Segment (medium)", "Niche (high)", "Micro-Market (maximum)"]
+    source: "No B.S. Direct Marketing, Ch.12, p.110-120"
+
+  match_bait_to_critter:
+    principle: "Use the right bait for the right critter in the right water"
+    source: "No B.S. Direct Marketing, Ch.11, p.108-112"
+
+  seven_powerlessness_patterns:
+    patterns:
+      - "Weak message + wrong market"
+      - "Right market + wrong media"
+      - "Right media + generic message"
+      - "Not testing combinations"
+      - "Assuming one size fits all"
+      - "Ignoring market segmentation"
+      - "Not tracking which combination works"
+    source: "No B.S. Direct Marketing, Ch.10, p.101-105"
+
+  gordon_quinton_proof:
+    before: "Generic postcard to all → marginal ROI"
+    after: "Customized postcard per niche → 300% to 1300% ROI"
+    source: "No B.S. Direct Marketing, Ch.12, p.135-142"
+
+# =============================================================================
+# INTEGRATION
+# =============================================================================
+
+integration:
+  prerequisites:
+    - sop: "sop-great-divide-audit.md"
+      purpose: "Confirm campaign is Direct Response, not Institutional"
+    - sop: "sop-money-pyramid-targeting.md"
+      purpose: "Define Money Pyramid tier before market segmentation"
+    - sop: "sop-10-rules-compliance.md"
+      purpose: "Ensure all 10 Rules will be followed"
+
+  parallel_execution:
+    - sop: "sop-direct-mail-campaign.md"
+      condition: "When media plan includes direct mail"
+
+  downstream:
+    - output: "market_profile"
+      consumers: ["message-architect", "media-selector", "triangle-aligner"]
+    - output: "message_package"
+      consumers: ["media-selector", "triangle-aligner"]
+    - output: "media_plan"
+      consumers: ["triangle-aligner"]

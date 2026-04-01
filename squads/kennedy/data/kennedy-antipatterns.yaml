@@ -1,0 +1,413 @@
+# Kennedy Anti-Patterns Library
+# Source: Compiled from Dan Kennedy's No B.S. book series + courses
+# Use: Agents reference these to catch and reject wrong approaches
+# Version: 1.0
+
+metadata:
+  compiled_from:
+    - "No B.S. Direct Marketing"
+    - "No B.S. Guide to Brand-Building by Direct Response"
+    - "The Ultimate Marketing Plan"
+    - "The Ultimate Sales Letter"
+    - "Magnetic Marketing"
+    - "No B.S. Guide to Marketing to the Affluent"
+    - "No B.S. Trust-Based Marketing"
+    - "Renegade Millionaire"
+  total_antipatterns: 52
+
+# ═══════════════════════════════════════════════════════════════
+# CATEGORY 1: UNIVERSAL ANTI-PATTERNS
+# Apply across ALL Kennedy agents
+# ═══════════════════════════════════════════════════════════════
+
+universal:
+  - id: AP-U-001
+    name: "Institutional Marketing Disguised as DR"
+    description: "Any marketing that builds awareness without demanding a specific, trackable response"
+    kennedy_quote: "If you can't measure it, you can't manage it — and you definitely can't improve it"
+    detection_signals:
+      - "No call to action"
+      - "No deadline or urgency"
+      - "No tracking mechanism"
+      - "Brand awareness as primary goal"
+    correction: "Add specific offer + deadline + CTA + unique tracking code"
+    severity: CRITICAL
+    source: "No B.S. Direct Marketing, Chapter 1"
+
+  - id: AP-U-002
+    name: "Marketing by Committee"
+    description: "Letting multiple opinions dilute the directness and urgency of marketing"
+    kennedy_quote: "Committees are where good marketing goes to die"
+    detection_signals:
+      - "Watered-down language"
+      - "Removed urgency because someone was uncomfortable"
+      - "Added corporate disclaimers that kill momentum"
+      - "Consensus-driven creative decisions"
+    correction: "One decision-maker for marketing copy. Period."
+    severity: HIGH
+    source: "No B.S. Direct Marketing, Chapter 3"
+
+  - id: AP-U-003
+    name: "Prettiness Over Persuasion"
+    description: "Prioritizing design aesthetics over response-generating copy"
+    kennedy_quote: "Ugly that sells beats pretty that doesn't"
+    detection_signals:
+      - "Designer controls layout over copywriter"
+      - "White space prioritized over selling copy"
+      - "Clean look valued over long-form persuasion"
+      - "Art director removes testimonials for aesthetics"
+    correction: "Copy leads, design serves. Always."
+    severity: HIGH
+    source: "The Ultimate Sales Letter, Chapter 2"
+
+  - id: AP-U-004
+    name: "Following the Herd"
+    description: "Copying what competitors do instead of testing direct response approaches"
+    kennedy_quote: "If you want to be successful, look at what everyone else is doing and do the opposite"
+    detection_signals:
+      - "We do it because the industry does it"
+      - "Copying competitor's marketing format"
+      - "Afraid to be different or direct"
+      - "Matching industry norms without testing"
+    correction: "Test Kennedy's contrarian approach. Let results decide."
+    severity: MEDIUM
+    source: "Renegade Millionaire, Principle 1"
+
+  - id: AP-U-005
+    name: "Selling to Everyone"
+    description: "Refusing to narrow the target market for fear of excluding potential customers"
+    kennedy_quote: "The riches are in the niches"
+    detection_signals:
+      - "Target audience is everyone"
+      - "Afraid to exclude anyone"
+      - "Generic messaging"
+      - "No ideal customer avatar defined"
+    correction: "Define the WHO before the WHAT. Message-Market-Media match."
+    severity: CRITICAL
+    source: "The Ultimate Marketing Plan, Chapter 4"
+
+  - id: AP-U-006
+    name: "One-Shot Marketing"
+    description: "Sending one message and giving up if it doesn't work"
+    kennedy_quote: "Most businesses give up right before the follow-up that would have made the sale"
+    detection_signals:
+      - "Single touchpoint campaigns"
+      - "No follow-up sequence"
+      - "Abandoning leads after first contact"
+      - "No multi-step campaign architecture"
+    correction: "Minimum 7-touch follow-up sequence. Build campaigns, not ads."
+    severity: HIGH
+    source: "Magnetic Marketing, Follow-Up System"
+
+# ═══════════════════════════════════════════════════════════════
+# CATEGORY 2: COPY ANTI-PATTERNS
+# Agents: kennedy-copy, kennedy-sales-letter, kennedy-persuasion
+# ═══════════════════════════════════════════════════════════════
+
+copy:
+  - id: AP-C-001
+    name: "Clever Over Clear"
+    description: "Using puns, wordplay, or clever headlines instead of benefit-driven clarity"
+    kennedy_quote: "Clever doesn't sell. Clear sells."
+    detection_signals:
+      - "Headline is a pun or joke"
+      - "Reader has to think to understand the benefit"
+      - "Copywriter proud of cleverness over results"
+      - "Awards-worthy but response-poor"
+    correction: "State the biggest benefit clearly. Use Kennedy's headline formulas."
+    severity: HIGH
+    source: "The Ultimate Sales Letter, Chapter 6"
+
+  - id: AP-C-002
+    name: "Features Without Benefits"
+    description: "Listing what the product IS instead of what it DOES for the buyer"
+    kennedy_quote: "Nobody cares about your product. They care about what your product does for them."
+    detection_signals:
+      - "Technical specifications dominate"
+      - "No so what? or which means that... bridges"
+      - "Product-centric language"
+      - "Missing WIIFM (What's In It For Me)"
+    correction: "Every feature gets a bridge: which means that [BENEFIT]"
+    severity: CRITICAL
+    source: "The Ultimate Sales Letter, Chapter 8"
+
+  - id: AP-C-003
+    name: "Weak or Missing Guarantee"
+    description: "No risk reversal or a guarantee buried in small print"
+    kennedy_quote: "If you're not willing to guarantee your work, why should anyone trust you?"
+    detection_signals:
+      - "No guarantee mentioned"
+      - "Guarantee hidden in fine print"
+      - "Standard 30-day refund only"
+      - "Conditions make guarantee worthless"
+    correction: "Bold, prominent, named guarantee. Make it the star of the offer."
+    severity: HIGH
+    source: "No B.S. Trust-Based Marketing, Chapter 7"
+
+  - id: AP-C-004
+    name: "No Story Arc"
+    description: "Copy that jumps straight to selling without building emotional connection"
+    kennedy_quote: "Facts tell, stories sell"
+    detection_signals:
+      - "Opens with product description"
+      - "No protagonist or conflict"
+      - "No emotional journey"
+      - "Pure logic without narrative"
+    correction: "Lead with a story. Problem → Struggle → Discovery → Solution → Results"
+    severity: MEDIUM
+    source: "No B.S. Guide to Brand-Building by Direct Response, StorySelling"
+
+  - id: AP-C-005
+    name: "Corporate Voice"
+    description: "Writing in third person, passive voice, or corporate-speak"
+    kennedy_quote: "Write like you talk to a friend across the kitchen table"
+    detection_signals:
+      - "Third person (the company, we, our team)"
+      - "Passive voice dominates"
+      - "Formal, stilted language"
+      - "Sounds like a press release"
+    correction: "First person, conversational, direct. YOU and I language."
+    severity: MEDIUM
+    source: "The Ultimate Sales Letter, Chapter 4"
+
+  - id: AP-C-006
+    name: "Missing Urgency"
+    description: "No reason to act now — allowing procrastination to kill the sale"
+    kennedy_quote: "Without a deadline, there is no decision"
+    detection_signals:
+      - "No deadline mentioned"
+      - "Available anytime"
+      - "No scarcity elements"
+      - "Evergreen without false urgency alternatives"
+    correction: "Real deadline + real consequence for missing it. Legitimate scarcity."
+    severity: CRITICAL
+    source: "No B.S. Direct Marketing, Rule 7"
+
+  - id: AP-C-007
+    name: "Insufficient Proof"
+    description: "Making claims without preponderance of proof"
+    kennedy_quote: "Stack proof until a reasonable person cannot deny your claim"
+    detection_signals:
+      - "Claims without evidence"
+      - "Only one type of proof used"
+      - "Generic testimonials (great service!)"
+      - "No specific numbers or results"
+    correction: "Use 4+ proof types: testimonials, case studies, credentials, data, demonstrations, social proof, third-party"
+    severity: HIGH
+    source: "The Ultimate Marketing Plan, Proof Architecture"
+
+# ═══════════════════════════════════════════════════════════════
+# CATEGORY 3: OFFER ANTI-PATTERNS
+# Agents: kennedy-offers, kennedy-sales-letter
+# ═══════════════════════════════════════════════════════════════
+
+offers:
+  - id: AP-O-001
+    name: "Commodity Positioning"
+    description: "Presenting the offer as interchangeable with competitors"
+    kennedy_quote: "If you don't have a USP, you don't have a business — you have a commodity"
+    detection_signals:
+      - "No unique selling proposition"
+      - "Competes on price"
+      - "Me-too positioning"
+      - "No proprietary process or name"
+    correction: "Create USP via 4 pathways: Attribute, Price-Value, Use/Application, or User"
+    severity: CRITICAL
+    source: "The Ultimate Marketing Plan, USP Chapter"
+
+  - id: AP-O-002
+    name: "Single-Offer Laziness"
+    description: "Presenting one option instead of tiered or structured offers"
+    kennedy_quote: "Give people choices — but make the choice you want them to make the obvious winner"
+    detection_signals:
+      - "Only one price point"
+      - "No good-better-best structure"
+      - "No bonus stack"
+      - "No premium option to anchor pricing"
+    correction: "3 tiers minimum. Stack bonuses on preferred option. Anchor with premium."
+    severity: MEDIUM
+    source: "No B.S. Direct Marketing, Offer Construction"
+
+  - id: AP-O-003
+    name: "Weak Widget"
+    description: "Selling the raw service instead of a packaged, named, proprietary system"
+    kennedy_quote: "Package what you do into a THING — a widget — that can be sold"
+    detection_signals:
+      - "Selling hours or services"
+      - "No proprietary name for the process"
+      - "No visual representation of the system"
+      - "Sounds like every other provider"
+    correction: "Name it. Package it. Diagram it. Make it a THING, not a service."
+    severity: HIGH
+    source: "Magnetic Marketing, Widget Concept"
+
+  - id: AP-O-004
+    name: "Missing Bonuses"
+    description: "No bonus stack to increase perceived value beyond the core offer"
+    kennedy_quote: "Bonuses should make people feel like idiots for NOT buying"
+    detection_signals:
+      - "Core offer only, no extras"
+      - "Bonuses are weak or unrelated"
+      - "No stated value for bonuses"
+      - "Bonuses don't solve secondary problems"
+    correction: "3-5 bonuses with individual values stated. Each solves a related problem."
+    severity: MEDIUM
+    source: "No B.S. Direct Marketing, Offer Architecture"
+
+# ═══════════════════════════════════════════════════════════════
+# CATEGORY 4: MEDIA ANTI-PATTERNS
+# Agents: kennedy-media, kennedy-magnetic
+# ═══════════════════════════════════════════════════════════════
+
+media:
+  - id: AP-M-001
+    name: "Digital-Only Tunnel Vision"
+    description: "Ignoring direct mail and physical media in favor of digital-only campaigns"
+    kennedy_quote: "The mailbox is less crowded than the inbox. Smart marketers know this."
+    detection_signals:
+      - "No physical mail component"
+      - "All budget on digital"
+      - "Dismissing mail as old-fashioned"
+      - "Not testing lumpy mail"
+    correction: "Include direct mail in every campaign. Test lumpy mail for high-value prospects."
+    severity: HIGH
+    source: "No B.S. Direct Marketing, Chapter 12"
+
+  - id: AP-M-002
+    name: "B-Pile Mail"
+    description: "Direct mail that looks like junk and gets thrown away unopened"
+    kennedy_quote: "Your mail must get into the A-Pile — the pile people actually open"
+    detection_signals:
+      - "Standard #10 envelope"
+      - "Mailing label instead of handwritten look"
+      - "Bulk rate postage indicator"
+      - "No curiosity-building on envelope"
+    correction: "Use A-Pile strategies: personalization, hand-addressed look, stamps, curiosity teasers"
+    severity: HIGH
+    source: "The Ultimate Sales Letter, A-Pile/B-Pile System"
+
+  - id: AP-M-003
+    name: "Social Media as Strategy"
+    description: "Treating social media as a marketing strategy instead of a traffic channel"
+    kennedy_quote: "Social media is a tool, not a strategy. Building your business on rented land is insanity."
+    detection_signals:
+      - "Social media followers as KPI"
+      - "Engagement metrics without conversion tracking"
+      - "No list-building from social"
+      - "Content without call to action"
+    correction: "Every social post drives to owned media (email list, physical address). Track conversions, not likes."
+    severity: CRITICAL
+    source: "No B.S. Guide to Direct Response Social Media Marketing"
+
+  - id: AP-M-004
+    name: "Single Channel Dependence"
+    description: "Relying on one marketing channel for all leads and sales"
+    kennedy_quote: "If you're dependent on one channel, you're one algorithm change from bankruptcy"
+    detection_signals:
+      - "All leads from one source"
+      - "No multichannel campaigns"
+      - "Platform-dependent business"
+      - "No direct mail backup"
+    correction: "Minimum 3 active channels. Direct mail as foundation. Test and diversify."
+    severity: CRITICAL
+    source: "No B.S. Direct Marketing, Multichannel Imperative"
+
+  - id: AP-M-005
+    name: "Newsletter Without DR"
+    description: "Sending newsletters that inform but don't sell"
+    kennedy_quote: "Every issue of your newsletter should sell something"
+    detection_signals:
+      - "Newsletter is pure content"
+      - "No offers in newsletter"
+      - "No response mechanism"
+      - "Reads like a magazine, not a sales tool"
+    correction: "Every newsletter: 7 mandatory sections including offer + deadline + CTA"
+    severity: MEDIUM
+    source: "No B.S. Direct Marketing, Newsletter Design"
+
+# ═══════════════════════════════════════════════════════════════
+# CATEGORY 5: BUSINESS ANTI-PATTERNS
+# Agents: kennedy-business, kennedy-advisor, kennedy-affluent
+# ═══════════════════════════════════════════════════════════════
+
+business:
+  - id: AP-B-001
+    name: "Trading Time for Money"
+    description: "Business model that ties revenue directly to personal hours worked"
+    kennedy_quote: "If you have to be there for the money to come in, you don't own a business — you own a job"
+    detection_signals:
+      - "Revenue stops when owner stops"
+      - "No systems or delegation"
+      - "Owner doing $10/hour tasks"
+      - "No leverage in the model"
+    correction: "Calculate hourly value. Delegate everything below it. Build systems."
+    severity: HIGH
+    source: "Renegade Millionaire, Principle 3"
+
+  - id: AP-B-002
+    name: "Discounting as Strategy"
+    description: "Using price cuts to attract customers instead of adding value"
+    kennedy_quote: "Discounting attracts discount buyers who will leave for the next discount"
+    detection_signals:
+      - "Regular sales and discounts"
+      - "Price-matching competitors"
+      - "Coupon-dependent traffic"
+      - "Race to the bottom pricing"
+    correction: "Add value instead of cutting price. Position higher, not lower."
+    severity: HIGH
+    source: "No B.S. Guide to Marketing to the Affluent, Chapter 3"
+
+  - id: AP-B-003
+    name: "Ignoring Customer Lifetime Value"
+    description: "Evaluating marketing only on front-end ROI without calculating LTV"
+    kennedy_quote: "The person who can spend the most to acquire a customer wins"
+    detection_signals:
+      - "Only measuring first-sale ROI"
+      - "No back-end offers"
+      - "No ascension model"
+      - "No customer retention tracking"
+    correction: "Calculate LTV. Build back-end. Design ascension ladder. Invest in acquisition."
+    severity: CRITICAL
+    source: "No B.S. Direct Marketing, Economics Chapter"
+
+  - id: AP-B-004
+    name: "Time Vampire Tolerance"
+    description: "Allowing unproductive people and activities to consume revenue-producing time"
+    kennedy_quote: "Time vampires will suck the life — and the profit — out of your business"
+    detection_signals:
+      - "Open-door policy"
+      - "No phone screening"
+      - "Meetings without agendas"
+      - "Email checked constantly"
+      - "No time blocks for productive work"
+    correction: "Identify and eliminate time vampires. Protect productive time ruthlessly."
+    severity: MEDIUM
+    source: "No B.S. Time Management for Entrepreneurs"
+
+  - id: AP-B-005
+    name: "Neglecting Existing Customers"
+    description: "Spending all resources on acquisition while ignoring retention and referrals"
+    kennedy_quote: "It costs 5-7x more to get a new customer than to keep an existing one"
+    detection_signals:
+      - "No customer communication system"
+      - "No referral program"
+      - "No reactivation campaigns"
+      - "All budget on acquisition"
+      - "No VIP or loyalty program"
+    correction: "Monthly customer newsletter. Systematic referral program. Quarterly reactivation campaigns."
+    severity: HIGH
+    source: "The Ultimate No BS Referral Machine"
+
+  - id: AP-B-006
+    name: "Pricing Timidity"
+    description: "Pricing based on cost-plus or competitor matching instead of value"
+    kennedy_quote: "There is always a market for the most expensive option"
+    detection_signals:
+      - "Pricing based on costs"
+      - "Matching competitor prices"
+      - "Afraid to raise prices"
+      - "No premium tier"
+      - "Calculating by the hour"
+    correction: "Price on value delivered. Create premium tier. Position for affluent market segment."
+    severity: MEDIUM
+    source: "No B.S. Guide to Marketing to the Affluent, Money Pyramid"

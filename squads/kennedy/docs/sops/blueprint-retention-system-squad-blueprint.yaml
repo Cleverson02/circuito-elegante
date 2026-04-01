@@ -1,0 +1,237 @@
+# Blueprint: Magnetic Retention System
+# Dan Kennedy's 2-Pillar Retention + Reactivation System
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Retention System Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-retention-system.md"
+  source_courses:
+    - "Magnetic Marketing System"
+    - "Midas Touch"
+    - "Referral Machine (Rich Dealers Bonus)"
+  description: >
+    Blueprint para eliminar churn silencioso via contato sistematico 10-12x/ano
+    e construir dependency architecture que torna a saida dolorosa. Inclui
+    sistema de reativacao de 4 passos (13% recovery rate).
+  kennedy_quote: >
+    "A bored customer goes elsewhere. They forget about you. They don't talk
+    about you. They don't buy from you."
+
+agents:
+  primary_agent:
+    name: "retention-architect"
+    role: "Arquiteto de Retencao"
+    responsibilities:
+      - Diagnosticar taxa de retencao atual e gaps
+      - Desenhar calendario de contato 12 meses
+      - Implementar sistema de reativacao de 4 passos
+      - Construir dependency architecture em camadas
+      - Monitorar metricas de retencao mensalmente
+
+  supporting_agents:
+    - name: "widget-creator"
+      role: "Criador de Widgets Mensais"
+      responsibilities:
+        - Criar oferta nova empacotada a cada mes
+        - Definir nome, preco, urgencia para cada widget
+        - Coordenar promocao via newsletter e outros canais
+        - Rastrear performance por widget
+
+    - name: "community-builder"
+      role: "Construtor de Comunidade"
+      responsibilities:
+        - Planejar e executar eventos trimestrais para clientes
+        - Criar e gerenciar grupo privado
+        - Implementar sistema de gamificacao
+        - Cultivar identidade de grupo
+        - Facilitar conexoes entre membros
+
+    - name: "reactivation-specialist"
+      role: "Especialista em Reativacao"
+      responsibilities:
+        - Monitorar lista de inativos mensalmente
+        - Executar campanha de 4 passos
+        - Criar postcards com angulos variados
+        - Rastrear taxa de reativacao
+        - Otimizar sequencia com base em dados
+
+workflow_phases:
+
+  phase_1_audit:
+    name: "Auditoria de Retencao"
+    duration: "1 semana"
+    steps:
+      - step: "Definir threshold de inatividade"
+        action: "Determinar quando cliente e considerado perdido"
+        output: "Threshold documentado (ex: 12 meses)"
+        agent: "retention-architect"
+      - step: "Calcular metricas base"
+        action: "Taxa de retencao, churn, CLV, frequencia de contato atual"
+        output: "Dashboard baseline"
+        agent: "retention-architect"
+      - step: "Mapear camadas de dependencia existentes"
+        action: "Quantas camadas de valor o cliente depende?"
+        output: "Mapa de dependencia atual"
+        agent: "retention-architect"
+
+  phase_2_pillar_1:
+    name: "Ativar Pilar 1 - Contato Sistematico"
+    duration: "3-4 semanas"
+    steps:
+      - step: "Criar calendario 12 meses"
+        action: "Planejar newsletter + widgets + presentes + eventos"
+        output: "Calendario com 30+ touchpoints anuais"
+        agent: "retention-architect"
+      - step: "Configurar programa aniversarios"
+        action: "Importar datas no CRM, automatizar envios"
+        output: "Programa de aniversarios operacional"
+        agent: "retention-architect"
+      - step: "Criar primeiro widget do mes"
+        action: "Oferta empacotada para base existente"
+        output: "Widget #1 promovido"
+        agent: "widget-creator"
+      - step: "Lancar newsletter de retencao"
+        action: "Primeira edicao focada em relacao (nao vendas)"
+        output: "Newsletter #1 enviada"
+        agent: "retention-architect"
+
+  phase_3_pillar_2:
+    name: "Construir Pilar 2 - Dependency Architecture"
+    duration: "Meses 2-6"
+    steps:
+      - step: "Adicionar camada de simplificacao"
+        action: "Criar servico que faz coisas POR clientes"
+        output: "Nova camada de valor operacional"
+        agent: "retention-architect"
+      - step: "Construir comunidade"
+        action: "Grupo privado + primeiro evento trimestral"
+        output: "Comunidade ativa com interacao entre membros"
+        agent: "community-builder"
+      - step: "Implementar gamificacao"
+        action: "Niveis, trofeus, reconhecimento por participacao"
+        output: "Sistema de gamificacao operacional"
+        agent: "community-builder"
+      - step: "Cultivar identidade"
+        action: "Linguagem interna, materiais exclusivos, in-group identity"
+        output: "Identidade de grupo estabelecida"
+        agent: "community-builder"
+
+  phase_4_reactivation:
+    name: "Sistema de Reativacao"
+    duration: "2 semanas setup, ongoing execution"
+    steps:
+      - step: "Criar campanha de 4 passos"
+        action: "3 postcards + 1 email com angulos e ofertas diferentes"
+        output: "Campanha pronta para execucao automatica"
+        agent: "reactivation-specialist"
+      - step: "Configurar trigger no CRM"
+        action: "Automacao quando cliente cruza threshold"
+        output: "Trigger operacional"
+        agent: "reactivation-specialist"
+      - step: "Executar primeiro batch"
+        action: "Enviar para lista atual de inativos"
+        output: "Primeiro batch enviado com tracking"
+        agent: "reactivation-specialist"
+
+  phase_5_optimization:
+    name: "Otimizacao Continua"
+    duration: "Mensal"
+    steps:
+      - step: "Analisar metricas mensais"
+        action: "Retencao, churn, reativacao, CLV"
+        output: "Relatorio mensal de retencao"
+        agent: "retention-architect"
+      - step: "Criar widget do mes"
+        action: "Nova oferta empacotada"
+        output: "Widget promovido"
+        agent: "widget-creator"
+      - step: "Executar reativacao continua"
+        action: "Novos inativos entram na campanha automaticamente"
+        output: "Taxa de reativacao rastreada"
+        agent: "reactivation-specialist"
+
+quality_gates:
+
+  gate_1_audit_complete:
+    name: "Auditoria Completa"
+    criteria:
+      - "Threshold de inatividade definido"
+      - "Metricas baseline documentadas"
+      - "Camadas de dependencia mapeadas"
+    blocker: true
+
+  gate_2_pillar_1_active:
+    name: "Pilar 1 Ativo"
+    criteria:
+      - "Calendario 12 meses planejado"
+      - "Newsletter mensal ativa"
+      - "Programa de aniversarios configurado"
+      - "Widget do mes criado"
+    blocker: true
+
+  gate_3_reactivation_active:
+    name: "Reativacao Ativa"
+    criteria:
+      - "Campanha de 4 passos criada"
+      - "Trigger automatizado no CRM"
+      - "Primeiro batch enviado"
+      - "Metricas sendo rastreadas"
+    blocker: false
+
+  gate_4_pillar_2_building:
+    name: "Pilar 2 em Construcao"
+    criteria:
+      - "Pelo menos 1 nova camada de dependencia adicionada"
+      - "Comunidade iniciada"
+      - "Gamificacao implementada"
+    blocker: false
+
+metrics:
+  primary:
+    - name: "Retention Rate"
+      target: "+20% em 12 meses"
+    - name: "Monthly Churn"
+      target: "-50%"
+    - name: "Reactivation Rate"
+      target: "13%"
+    - name: "CLV"
+      target: "+80% em 12 meses"
+    - name: "Purchase Frequency"
+      target: "+50%"
+  secondary:
+    - "Contacts per year per client"
+    - "Event attendance rate"
+    - "Community engagement score"
+    - "Gamification participation"
+    - "Widget conversion rate"
+
+resources:
+  monthly_budget:
+    newsletter: "$500-2.000"
+    widgets_promotion: "$200-500"
+    gifts_program: "$200-500"
+    events: "$500-2.000 (trimestral)"
+    reactivation_postcards: "$100-300"
+    community_platform: "$50-200"
+    total: "$1.500-5.000/mes"
+
+dependencies:
+  feeds_into:
+    - sop: "sop-referral-machine.md"
+      reason: "Clientes retidos sao a base do referral machine"
+  complemented_by:
+    - sop: "sop-follow-up-sequence.md"
+      reason: "Reativacao usa principios de follow-up multi-touch"
+  synergy_with:
+    - sop: "sop-affluent-attraction.md"
+      reason: "Retencao premium para clientes high-value"
+
+sources:
+  - "dan-kennedy-magnetic-marketing/dan-kennedy-magnetic-marketing-summary.md"
+  - "dan-kennedy-referral-machine/dan-kennedy-referral-machine-summary.md"
+  - "dan-kennedy-referral-machine/raw-data-package/frameworks-extract.md"
+  - "dan-kennedy-referral-machine/raw-data-package/quotes-fragment.md"
+  - "dan-kennedy-midas-touch/dan-kennedy-midas-touch-summary.md"

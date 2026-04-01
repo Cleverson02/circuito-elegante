@@ -1,0 +1,414 @@
+# Affluent Client Attraction Workflow
+# Based on Dan Kennedy's Affluent Client Attraction Playbook
+# Source: Affluent Client Attraction Playbook (10 transcriptions)
+# Version: 1.0.0
+
+id: wf-affluent-attraction
+name: "Affluent Client Attraction"
+version: "1.0.0"
+duration: "3-5 days"
+description: |
+  Complete workflow to attract and convert affluent clients using
+  Kennedy's premium positioning framework. Covers affluent psychology,
+  premium packaging, authority building, and luxury marketing tactics.
+
+  PHILOSOPHY: "Stop competing on price. Compete on value, exclusivity,
+  and the experience of doing business with you."
+
+  RESULT: A complete affluent attraction system with premium positioning,
+  authority materials, shock-and-awe package, and conversion strategy
+  designed for high-net-worth prospects.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Repositioning a business to attract higher-paying clients"
+  - "Launching a premium or luxury offer"
+  - "Moving up the Money Pyramid (from bottom 60% to top 20%)"
+  - "Creating authority positioning in a market"
+  - "Building a practice that attracts affluent clientele"
+
+decision_matrix_fit:
+  complexity: high
+  agents_required: 5
+  estimated_duration: "3-5 days"
+  user_involvement: "high (requires positioning decisions)"
+  prerequisites:
+    - "Quality product or service worth premium pricing"
+    - "Willingness to turn away non-ideal clients"
+    - "Commitment to premium experience delivery"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, Money Pyramid analysis, strategic positioning"
+      phases: [0]
+
+    - agent: kennedy-affluent
+      role: "Affluent psychology, premium positioning, luxury marketing"
+      phases: [1, 2]
+
+    - agent: kennedy-offers
+      role: "Premium offer construction, exclusivity mechanics"
+      phases: [2, 3]
+
+    - agent: kennedy-copy
+      role: "Authority copy, affluent-tone messaging, prestige materials"
+      phases: [3]
+
+    - agent: kennedy-brand
+      role: "Brand building by DR, personal branding, StorySelling"
+      phases: [3, 4]
+
+  synergies:
+    - agents: [kennedy-affluent, kennedy-offers]
+      pattern: "Affluent maps the psychology, Offers designs irresistible premium packages"
+
+    - agents: [kennedy-affluent, kennedy-brand]
+      pattern: "Affluent defines positioning, Brand builds the perception and authority"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Discovery + Money Pyramid Analysis"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Analyze the Money Pyramid position and identify the affluent
+      segment to target. Understanding affluent psychology is prerequisite
+      to everything else.
+
+      PRINCIPLE: "The top 20% control 80% of the wealth. Market to them,
+      not to the bottom 80% who can barely afford to buy."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Money Pyramid Market Analysis"
+        required: true
+        description: |
+          Map the Money Pyramid for this industry:
+          - 1% Ultra-rich: who are they? what do they buy?
+          - 4% Rich: who are they? what do they want?
+          - 15% Comfortable: who are they? what aspirations?
+          - Identify which tier is the sweet spot for this business
+        output: "money_pyramid_analysis.yaml"
+
+      - task_id: T0.2
+        name: "Affluent Psychology Profile"
+        required: true
+        description: |
+          Map the psychology of the target affluent segment:
+          - What they value (time, exclusivity, status, convenience)
+          - What they hate (waiting, being sold to, being one of many)
+          - How they make buying decisions (peer influence, credentials)
+          - Where they consume information (private networks, advisors)
+          - Price sensitivity (they are NOT price sensitive — they are value sensitive)
+        output: "affluent_psychology.yaml"
+
+      - task_id: T0.3
+        name: "Current Positioning Gap Analysis"
+        required: true
+        description: |
+          Evaluate the gap between current positioning and affluent expectations:
+          - Brand perception audit
+          - Pricing structure analysis
+          - Service delivery assessment
+          - Competitive positioning review
+        output: "positioning_gap.md"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Discovery Complete"
+      criteria:
+        - "Money Pyramid tier selected with rationale"
+        - "Affluent psychology profiled"
+        - "Positioning gap identified"
+      human_review: true
+      veto_conditions:
+        - condition: "Business fundamentally cannot serve affluent (quality issues)"
+          action: "HALT - Fix product/service quality before affluent positioning"
+        - condition: "No clear Money Pyramid tier selected"
+          action: "BLOCK - Must define target tier before proceeding"
+
+  - id: PHASE-1
+    name: "Premium Positioning Architecture"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Build the premium positioning framework including authority
+      elements, exclusivity mechanics, and price architecture.
+
+      PRINCIPLE: "Price is a story you tell. Affluent clients pay more
+      for a better story, not a better product."
+
+    agent: kennedy-affluent
+
+    tasks:
+      - task_id: T1.1
+        name: "Design Premium Positioning"
+        required: true
+        description: |
+          Create the premium positioning framework:
+          - Authority positioning (expert, celebrity, advisor)
+          - Exclusivity mechanics (application required, limited spots)
+          - Scarcity design (real, not manufactured)
+          - Premium pricing architecture (anchor high)
+          - Waiting list / intake process
+        output: "premium_positioning.yaml"
+
+      - task_id: T1.2
+        name: "Create Authority Building Plan"
+        required: true
+        description: |
+          Map the authority-building elements:
+          - Book/book strategy (authority = author)
+          - Speaking/events strategy
+          - Media/PR plan
+          - Testimonials from high-status clients
+          - Awards/credentials display
+          - Association with other high-status entities
+        output: "authority_plan.yaml"
+
+      - task_id: T1.3
+        name: "Design Affluent Client Experience"
+        required: true
+        description: |
+          Map the end-to-end affluent client experience:
+          - First impression (website, office, materials)
+          - Intake process (application, not begging)
+          - Onboarding (white-glove, personal)
+          - Ongoing service (proactive, not reactive)
+          - Communication cadence (respectful of time)
+          Kennedy: "Affluent clients buy the experience
+          of doing business with you."
+        output: "affluent_experience.yaml"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Positioning Complete"
+      criteria:
+        - "Premium positioning defined"
+        - "Authority building plan mapped"
+        - "Affluent experience designed"
+      human_review: true
+      veto_conditions:
+        - condition: "Still using discount/value language"
+          action: "REWRITE - Premium positioning demands premium language"
+
+  - id: PHASE-2
+    name: "Offer + Package Design"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Create the premium offer and materials that attract
+      and convert affluent clients.
+
+    agent: kennedy-offers
+
+    tasks:
+      - task_id: T2.1
+        name: "Design Premium Offer Suite"
+        required: true
+        description: |
+          Create tiered premium offers:
+          - Signature Service (flagship premium offer)
+          - VIP/Platinum tier (highest-touch, highest price)
+          - Retainer/advisory option (ongoing relationship)
+          Each must justify premium pricing with unique value.
+          NO DISCOUNTING. Add value instead of reducing price.
+        output: "premium_offers.yaml"
+
+      - task_id: T2.2
+        name: "Create Affluent Shock-and-Awe Package"
+        required: true
+        description: |
+          Design a premium shock-and-awe package:
+          - Must LOOK expensive (quality materials, packaging)
+          - Includes: hardcover book, personalized letter, case studies
+          - Premium widget (branded, high-quality item)
+          - Exclusive invitation (not available to everyone)
+          Kennedy: "The shock-and-awe for affluent must scream
+          quality before they read a single word."
+        output: "affluent_shock_awe.yaml"
+
+      - task_id: T2.3
+        name: "Design Application/Intake Process"
+        required: true
+        description: |
+          Create the application-based intake:
+          - Application form (they apply to work with you)
+          - Qualification criteria (not everyone accepted)
+          - Interview/discovery call script
+          - Acceptance letter
+          - Rejection letter (polite but firm)
+          The affluent respect gatekeeping.
+        output: "intake_process.yaml"
+
+    handoff:
+      from: kennedy-offers
+      to: kennedy-copy
+      template: templates/handoff-context-tmpl.yaml
+      required_data:
+        - "Premium offer suite designed"
+        - "Shock-and-awe package specified"
+        - "Intake process mapped"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Offer + Package Complete"
+      criteria:
+        - "Premium offer suite with minimum 2 tiers"
+        - "Affluent shock-and-awe package designed"
+        - "Application-based intake process ready"
+      human_review: true
+      veto_conditions:
+        - condition: "Pricing still at commodity level"
+          action: "BLOCK - Premium positioning requires premium pricing"
+        - condition: "No application/gatekeeping process"
+          action: "BLOCK - Affluent clients expect exclusivity"
+
+  - id: PHASE-3
+    name: "Copy + Brand Materials"
+    days: "Day 3-4"
+    tier: 2
+    description: |
+      Create copy and brand materials in the affluent tone.
+
+    agent: kennedy-brand
+
+    tasks:
+      - task_id: T3.1
+        name: "Write Affluent-Tone Copy"
+        required: true
+        description: |
+          Write marketing copy for affluent audience:
+          - Avoid: hype, screaming headlines, desperation
+          - Use: sophistication, confidence, social proof from peers
+          - Tone: authoritative, respectful, exclusive
+          - Length: longer is fine if every word earns its place
+          Kennedy: "Don't yell at the affluent. Whisper. They lean in."
+        output: "affluent_copy.md"
+
+      - task_id: T3.2
+        name: "Create StorySelling Narrative"
+        required: true
+        description: |
+          Build the brand story using Kennedy's StorySelling framework:
+          - Origin story (how you became the authority)
+          - Client transformation stories (high-status social proof)
+          - Philosophy story (what you believe, why you're different)
+          - Results story (specifics, numbers, outcomes)
+        output: "storyselling_narrative.md"
+
+      - task_id: T3.3
+        name: "Design Brand Identity Touchpoints"
+        required: true
+        description: |
+          Map all brand touchpoints for premium perception:
+          - Business cards (quality, weight, finish)
+          - Website (clean, authoritative, not cluttered)
+          - Office/environment (if applicable)
+          - Email signature and communication style
+          - Social media presence (selective, not desperate)
+        output: "brand_touchpoints.yaml"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Copy + Brand Ready"
+      criteria:
+        - "Affluent-tone copy written"
+        - "StorySelling narrative complete"
+        - "Brand touchpoints mapped"
+      human_review: true
+      veto_conditions:
+        - condition: "Copy sounds like mass-market discount advertising"
+          action: "REWRITE - Affluent copy must be understated and authoritative"
+
+  - id: PHASE-4
+    name: "Launch Strategy"
+    days: "Day 4-5"
+    tier: 3
+    description: |
+      Plan the launch and ongoing affluent attraction strategy.
+
+    agent: kennedy-brand
+
+    tasks:
+      - task_id: T4.1
+        name: "Design Launch Sequence"
+        required: true
+        description: |
+          Plan the affluent market launch:
+          - Soft launch to existing high-value clients
+          - Referral launch through champion network
+          - Authority launch through content/media
+          - Direct outreach to identified affluent prospects
+        output: "launch_sequence.md"
+
+      - task_id: T4.2
+        name: "Create Ongoing Attraction Calendar"
+        required: true
+        description: |
+          Map 12-month affluent attraction calendar:
+          - Monthly authority content
+          - Quarterly VIP events
+          - Ongoing referral system
+          - Semi-annual price increases (signals premium)
+        output: "attraction_calendar.yaml"
+
+    checkpoint:
+      id: CP_PHASE_4
+      name: "Affluent Attraction System Ready"
+      criteria:
+        - "Launch sequence planned"
+        - "12-month calendar mapped"
+      human_review: true
+      veto_conditions:
+        - condition: "Launch relies on discounting to attract first clients"
+          action: "BLOCK - Never discount to attract affluent. Add value instead."
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Affluent Attraction Blueprint"
+      file: "affluent_blueprint.md"
+      description: "Complete affluent positioning and attraction system"
+    - name: "Premium Offer Suite"
+      file: "premium_offers.yaml"
+      description: "Tiered premium offers with pricing"
+    - name: "Authority Building Plan"
+      file: "authority_plan.yaml"
+      description: "12-month authority development roadmap"
+    - name: "Affluent Shock-and-Awe"
+      file: "affluent_shock_awe.yaml"
+      description: "Premium package for affluent prospects"
+  output_directory: "outputs/kennedy-affluent-attraction-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "Affluent Client Attraction Playbook"
+    - "No B.S. Brand-Building by Direct Response — StorySelling"
+    - "No B.S. Direct Marketing — Money Pyramid"
+  total_phases: 5
+  total_tasks: 14

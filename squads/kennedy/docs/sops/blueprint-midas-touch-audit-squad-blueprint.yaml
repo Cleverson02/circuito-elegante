@@ -1,0 +1,222 @@
+# Blueprint: Midas Touch Marketing Audit + 5 Holes in the Bucket
+# Dan Kennedy's Revenue Leak Diagnostic System
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Midas Touch Audit Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-midas-touch-audit.md"
+  source_courses:
+    - "No B.S. Direct Marketing, Third Edition"
+    - "Midas Touch Course Reference"
+  description: >
+    Blueprint para diagnosticar onde o negocio esta perdendo dinheiro atraves dos
+    5 Buracos no Balde (sem follow-up, follow-up lento, follow-up insuficiente,
+    sem retencao, sem referencia) e otimizar ativos existentes antes de gastar
+    mais em geracao de leads.
+  kennedy_quote: >
+    "A maioria dos negocios investe TUDO em gerar leads e NADA em tapar os buracos
+    por onde os leads e clientes vazam. E como encher um balde cheio de buracos."
+
+agents:
+  primary_agent:
+    name: "midas-touch-auditor"
+    role: "Auditor Midas Touch"
+    responsibilities:
+      - Diagnosticar cada um dos 5 buracos com dados concretos
+      - Quantificar vazamento de receita por buraco
+      - Priorizar reparos por impacto e facilidade
+      - Coordenar implementacao dos reparos
+      - Monitorar melhoria pos-reparo
+
+  supporting_agents:
+    - name: "lead-flow-analyst"
+      role: "Analista de Fluxo de Leads"
+      responsibilities:
+        - Rastrear jornada de cada lead dos ultimos 30 dias
+        - Medir velocidade de primeiro contato
+        - Contar numero de follow-ups por lead
+        - Identificar pontos de abandono
+
+    - name: "retention-analyst"
+      role: "Analista de Retencao"
+      responsibilities:
+        - Calcular taxa de recompra em 12 meses
+        - Identificar clientes inativos
+        - Avaliar comunicacao regular com base de clientes
+        - Avaliar programa de referencia existente
+
+    - name: "repair-engineer"
+      role: "Engenheiro de Reparos"
+      responsibilities:
+        - Implementar autoresponders e sequencias automaticas
+        - Configurar SLAs de velocidade de resposta
+        - Criar programa de retencao e newsletter
+        - Implementar programa de referencia estruturado
+
+workflow_phases:
+
+  phase_1_diagnostic:
+    name: "Diagnostico dos 5 Buracos"
+    duration: "1 semana"
+    steps:
+      - step: "Auditar Buraco #1 - Sem Follow-Up"
+        action: "Verificar % de leads contatados nos ultimos 30 dias"
+        output: "Diagnostico Buraco #1 com dados"
+        agent: "lead-flow-analyst"
+
+      - step: "Auditar Buraco #2 - Follow-Up Lento"
+        action: "Medir tempo medio de primeiro contato por canal"
+        output: "Diagnostico Buraco #2 com benchmarks"
+        agent: "lead-flow-analyst"
+
+      - step: "Auditar Buraco #3 - Follow-Up Insuficiente"
+        action: "Contar media de contatos por lead antes de desistir"
+        output: "Diagnostico Buraco #3 com dados de persistencia"
+        agent: "lead-flow-analyst"
+
+      - step: "Auditar Buraco #4 - Sem Retencao"
+        action: "Calcular taxa de recompra, inatividade, comunicacao regular"
+        output: "Diagnostico Buraco #4 com metricas de retencao"
+        agent: "retention-analyst"
+
+      - step: "Auditar Buraco #5 - Sem Referencia"
+        action: "Avaliar programa de referral, % de novos clientes de referral"
+        output: "Diagnostico Buraco #5 com dados de referral"
+        agent: "retention-analyst"
+
+  phase_2_quantification:
+    name: "Quantificacao do Vazamento"
+    duration: "3 dias"
+    steps:
+      - step: "Calcular vazamento por buraco"
+        action: >
+          Usar formula: (Volume perdido) x (Valor potencial) = Vazamento
+          para cada um dos 5 buracos
+        output: "Vazamento total quantificado em $"
+        agent: "midas-touch-auditor"
+
+      - step: "Priorizar reparos"
+        action: "Ordenar buracos por impacto e facilidade de reparo"
+        output: "Matriz de priorizacao"
+        agent: "midas-touch-auditor"
+
+  phase_3_repair:
+    name: "Reparo Priorizado"
+    duration: "4-6 semanas"
+    steps:
+      - step: "Tapar Buraco #1"
+        action: "Implementar autoresponder + responsavel designado"
+        output: "100% dos leads recebendo follow-up"
+        agent: "repair-engineer"
+
+      - step: "Tapar Buraco #2"
+        action: "Definir SLAs de velocidade + automacao de primeiro contato"
+        output: "Tempo de resposta < 15 min"
+        agent: "repair-engineer"
+
+      - step: "Tapar Buraco #3"
+        action: "Implementar sequencia de 4+ steps multicanal"
+        output: "Media de 4+ contatos por lead"
+        agent: "repair-engineer"
+
+      - step: "Tapar Buraco #4"
+        action: "Newsletter mensal + WOW package + campanha reativacao"
+        output: "Sistema de retencao operacional"
+        agent: "repair-engineer"
+
+      - step: "Tapar Buraco #5"
+        action: "Programa de referencia com incentivo + mecanismo facil"
+        output: "Programa de referral ativo"
+        agent: "repair-engineer"
+
+  phase_4_monitoring:
+    name: "Monitoramento Continuo"
+    duration: "Ongoing"
+    steps:
+      - step: "Medir melhoria"
+        action: "Comparar metricas pre e pos-reparo"
+        output: "Relatorio de ROI dos reparos"
+        agent: "midas-touch-auditor"
+
+      - step: "Audit mensal"
+        action: "Verificar se nenhum buraco reabriu"
+        output: "Score mensal de saude dos 5 buracos"
+        agent: "midas-touch-auditor"
+
+quality_gates:
+
+  gate_1_diagnostic_complete:
+    name: "Diagnostico Completo"
+    criteria:
+      - "Todos os 5 buracos diagnosticados com dados"
+      - "Vazamento quantificado em $ para cada buraco"
+      - "Priorizacao definida"
+    blocker: true
+
+  gate_2_critical_holes_patched:
+    name: "Buracos Criticos Tapados"
+    criteria:
+      - "Buraco #1 (sem follow-up) tapado: 100% leads contatados"
+      - "Buraco #2 (lento) tapado: primeiro contato < 15 min"
+      - "Buraco #3 (insuficiente) tapado: 4+ contatos/lead"
+    blocker: true
+
+  gate_3_all_holes_patched:
+    name: "Todos os Buracos Tapados"
+    criteria:
+      - "Buraco #4 tapado: sistema de retencao ativo"
+      - "Buraco #5 tapado: programa de referral ativo"
+      - "Monitoramento mensal configurado"
+    blocker: false
+
+metrics:
+  per_hole:
+    hole_1_no_followup:
+      metric: "% leads contatados"
+      before: "Baseline"
+      target: "100%"
+    hole_2_slow_followup:
+      metric: "Tempo medio 1o contato"
+      before: "Baseline"
+      target: "< 15 min"
+    hole_3_insufficient_followup:
+      metric: "Media contatos/lead"
+      before: "Baseline"
+      target: "4+"
+    hole_4_no_retention:
+      metric: "Taxa recompra 12 meses"
+      before: "Baseline"
+      target: "> 40%"
+    hole_5_no_referral:
+      metric: "% novos clientes de referral"
+      before: "Baseline"
+      target: "> 25%"
+
+  global:
+    - "Vazamento total ($) -- meta: reduzir 80%"
+    - "Receita recuperada ($)"
+    - "ROI dos reparos"
+
+resources:
+  tools:
+    - "CRM com automacao de sequencias"
+    - "Sistema de autoresponder"
+    - "Plataforma de newsletter (print recomendado)"
+    - "Template de programa de referral"
+    - "Dashboard de monitoramento dos 5 buracos"
+
+dependencies:
+  prerequisite:
+    - sop: "sop-great-divide-audit.md"
+  repairs_use:
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-retention-system.md"
+    - sop: "sop-referral-machine.md"
+    - sop: "sop-shock-and-awe-package.md"
+
+sources:
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"
+  - "dan-kennedy-ultimate-no-bs-business-success-frameworks.md"

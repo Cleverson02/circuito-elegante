@@ -1,0 +1,478 @@
+# 3-Step Letter Sequence Squad Blueprint — Dan Kennedy
+# Pattern: KN-SB-004 (Kennedy Squad Blueprint Standard)
+# Source: Magnetic Marketing — Dan Kennedy, Chapter 8
+# Version: 1.0.0
+# Generated: 2026-02-11
+# source_sop: sop-3-step-letter-sequence.md
+
+squad:
+  name: 3-step-letter-sequence
+  purpose: "Implement Kennedy's 3-Step Letter Sequence that converts leads to buyers through escalating urgency, linkage, and the collection industry model"
+  domain: conversion-system
+  source_playbook: "Magnetic Marketing — Dan Kennedy, Chapter 8"
+
+  core_definition: |
+    3-Step Letter Sequence = First Notice (Introduction + Offer)
+                            + Second Notice (Urgency + Proof + Reference to 1st)
+                            + Third/Final Notice (FINAL NOTICE + Hard Deadline)
+                            WITH: Linkage between each step
+                            AND: Progressively escalating urgency
+
+  business_impact: |
+    - 3x+ more conversions vs single marketing piece
+    - Collection industry model adapted for value marketing
+    - Systematic follow-up eliminates lost leads
+    - "Until they buy or die" philosophy maximizes investment
+
+# ===============================================================================
+# TIER STRUCTURE
+# ===============================================================================
+
+tier_structure:
+  orchestrator:
+    - agent: sequence-architect
+      role: "Orchestrate complete 3-Step Letter Sequence from planning to post-campaign"
+      decisions:
+        - "Approve offer and deadline"
+        - "Validate linkage between steps"
+        - "Ensure urgency progression"
+        - "Manage list hygiene (remove converters)"
+      kpis:
+        - "Total sequence conversion rate (>10%)"
+        - "Incremental lift vs single piece (>3x)"
+        - "Cost per conversion"
+
+  tier_0_diagnosis:
+    - agent: list-analyzer
+      role: "Analyze and qualify lead list before sequence launch"
+      inputs:
+        - "Lead list from LGM or other sources"
+        - "Lead source and qualification data"
+        - "Contact completeness"
+      outputs:
+        - "Qualified list ready for sequence"
+        - "Contact data completeness report"
+        - "List segmentation recommendations"
+
+    - agent: offer-strategist
+      role: "Define the offer, deadline, and urgency elements"
+      inputs:
+        - "Core offer details"
+        - "Competitive landscape"
+        - "Historical conversion data"
+      outputs:
+        - "Offer definition with real deadline"
+        - "Urgency progression plan (low → medium → maximum)"
+        - "Proof elements schedule (different per notice)"
+
+  tier_1_execution:
+    - agent: first-notice-writer
+      role: "Write the First Notice — cordial introduction with offer"
+      specialization: "Opening communication that generates initial interest"
+      capabilities:
+        - "Write context-appropriate opening (how they arrived)"
+        - "Present problem in WHO's psychographic language"
+        - "Include 2-3 testimonials"
+        - "Add light urgency in P.S."
+        - "Configure tracking code"
+      tone: "Cordial, professional, generous — friend offering something valuable"
+      source: "Magnetic Marketing Cap.8, p.108-115"
+
+    - agent: second-notice-writer
+      role: "Write the Second Notice — urgency escalation with linkage"
+      specialization: "Follow-up with explicit reference to first notice"
+      capabilities:
+        - "Open with explicit linkage to First Notice"
+        - "Add NEW proof elements (different from first)"
+        - "Include social proof (X people already acted)"
+        - "Escalate urgency to medium level"
+      tone: "More direct, slightly concerned — genuinely worried they're missing out"
+      source: "Magnetic Marketing Cap.8, p.108-115"
+
+    - agent: final-notice-writer
+      role: "Write the Third/Final Notice — maximum urgency with hard deadline"
+      specialization: "FINAL NOTICE with rubber-stamp urgency"
+      capabilities:
+        - "Add visual FINAL NOTICE marking"
+        - "Reference BOTH previous notices (complete linkage)"
+        - "Include massive social proof"
+        - "Set hard, non-negotiable deadline"
+        - "Include summary of complete offer"
+        - "Attach copies/summary of previous notices"
+      tone: "Urgent and firm, respectful — last chance to help"
+      source: "Magnetic Marketing Cap.8, p.112-115"
+
+    - agent: channel-manager
+      role: "Configure delivery channels and hybrid strategy"
+      specialization: "Multi-channel delivery optimization"
+      capabilities:
+        - "Configure mail, email, SMS, phone channels"
+        - "Design hybrid strategy (mail + email per notice)"
+        - "Setup tracking codes per channel per notice"
+        - "Manage send schedule"
+
+    - agent: list-hygienist
+      role: "Maintain list hygiene — remove converters before each send"
+      specialization: "List management and segmentation"
+      capabilities:
+        - "Remove converted leads before each notice"
+        - "Track response status per lead"
+        - "Segment for post-sequence nurture"
+        - "Flag opt-outs for removal"
+
+  tier_2_judgment:
+    - agent: linkage-validator
+      role: "Validate linkage chain between all 3 notices"
+      responsibilities:
+        - "Verify Second Notice explicitly references First"
+        - "Verify Third Notice references BOTH previous"
+        - "Check urgency escalation (low → medium → maximum)"
+        - "Ensure proof elements are DIFFERENT per notice"
+      validation_checklist:
+        - "Does Second Notice say 'X days ago, I sent you...'?"
+        - "Does Third Notice say 'In the past X weeks, I sent TWO...'?"
+        - "Is urgency higher in each subsequent notice?"
+        - "Are testimonials/proofs different in each?"
+
+    - agent: copy-enforcer
+      role: "Ensure all copy follows Kennedy's bold, emotional standard"
+      responsibilities:
+        - "Check for Casper Milquetoast violations (timid copy)"
+        - "Verify conversational, emotional tone"
+        - "Confirm Rule #3 (clear instructions)"
+        - "Validate Rule #7 (strong copy)"
+        - "Check Rule #2 (real urgency, not fake)"
+      source: "Magnetic Marketing Cap.6, Rules #2, #3, #7"
+
+    - agent: tracking-auditor
+      role: "Verify tracking is configured and functional before each send"
+      responsibilities:
+        - "Unique codes per notice per channel"
+        - "Response attribution is accurate"
+        - "Conversion tracking is live"
+        - "Post-sequence nurture tracking active"
+
+    - agent: post-sequence-planner
+      role: "Plan 'until they buy or die' nurture for non-converters"
+      responsibilities:
+        - "Design long-term nurture plan"
+        - "Schedule periodic re-contact"
+        - "Plan re-entry into new sequences with different offers"
+        - "Ensure no lead is abandoned"
+      philosophy: |
+        "Every unconverted lead continues receiving communication.
+        Continue sending until they buy or die." — Dan Kennedy
+      source: "Magnetic Marketing Cap.8, p.117"
+
+# ===============================================================================
+# EXECUTOR MATRIX
+# ===============================================================================
+
+executor_matrix:
+  # Pre-Sequence
+  - task: "Qualify and clean lead list"
+    executor: Hybrid
+    automation: HIGH
+    guardrails: "Remove duplicates, verify contact data"
+
+  - task: "Define offer with real deadline"
+    executor: Human
+    automation: LOW
+    guardrails: "Deadline must be real and enforceable"
+
+  - task: "Select different proof elements per notice"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "No repeated testimonials across notices"
+
+  # Notice Writing
+  - task: "Write First Notice"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Template-guided, human reviews tone"
+
+  - task: "Write Second Notice"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must have linkage to First"
+
+  - task: "Write Third Notice"
+    executor: Hybrid
+    automation: MEDIUM
+    guardrails: "Must have linkage to both, FINAL NOTICE marking"
+
+  # Execution
+  - task: "Configure channels and tracking"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Unique codes verified before send"
+
+  - task: "Send First Notice"
+    executor: Worker
+    automation: HIGH
+    guardrails: "List verified, tracking live"
+
+  - task: "Remove converters before Second Notice"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Zero converted leads in send list"
+
+  - task: "Send Second Notice"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Only non-converters receive"
+
+  - task: "Remove converters before Third Notice"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Zero converted leads in send list"
+
+  - task: "Send Third Notice"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Only non-converters receive"
+
+  # Post-Sequence
+  - task: "Process responses and schedule sales"
+    executor: Human
+    automation: LOW
+    guardrails: "Respond within 24h"
+
+  - task: "Move non-converters to nurture"
+    executor: Worker
+    automation: HIGH
+    guardrails: "Until they buy or die"
+
+# ===============================================================================
+# QUALITY GATES
+# ===============================================================================
+
+quality_gates:
+  QG-001:
+    name: "List Readiness Gate"
+    transition: "List Prep -> First Notice"
+    condition: "list_qualified AND contact_data_complete AND tracking_configured"
+    type: blocking
+    failure_action: "Clean list and complete missing data"
+
+  QG-002:
+    name: "Linkage Validation Gate"
+    transition: "Notice Writing -> Send"
+    condition: "second_references_first AND third_references_both AND urgency_escalates"
+    type: blocking
+    failure_action: "Rewrite notices to include proper linkage"
+
+  QG-003:
+    name: "Copy Quality Gate"
+    transition: "Each Notice -> Send"
+    condition: "not_casper_milquetoast AND has_offer AND has_urgency AND has_clear_cta"
+    type: blocking
+    failure_action: "Rewrite with bold, emotional, direct tone"
+
+  QG-004:
+    name: "List Hygiene Gate"
+    transition: "Before Each Subsequent Notice"
+    condition: "converters_removed AND opt_outs_removed"
+    type: blocking
+    failure_action: "Update list before sending"
+
+  QG-005:
+    name: "Deadline Integrity Gate"
+    transition: "Third Notice Deadline"
+    condition: "deadline_is_real AND will_be_enforced"
+    type: blocking
+    failure_action: "Set real deadline or remove fake one"
+
+# ===============================================================================
+# WORKFLOWS
+# ===============================================================================
+
+workflows:
+  three_step_execution:
+    trigger: "Qualified leads ready for conversion sequence"
+    steps:
+      - step: 1
+        name: "List Preparation"
+        agent: list-analyzer
+        action: "Qualify list, verify data, segment"
+        output: "Clean, qualified send list"
+        gate: QG-001
+
+      - step: 2
+        name: "Offer & Urgency Planning"
+        agent: offer-strategist
+        action: "Define offer, deadline, proof schedule"
+        output: "Offer brief with urgency plan"
+        gate: null
+
+      - step: 3
+        name: "Write All 3 Notices"
+        agents: [first-notice-writer, second-notice-writer, final-notice-writer]
+        action: "Write all 3 notices with linkage"
+        output: "3 notices ready for review"
+        gate: QG-002
+
+      - step: 4
+        name: "Copy Review"
+        agent: copy-enforcer
+        action: "Validate copy quality across all notices"
+        output: "Approved copy"
+        gate: QG-003
+
+      - step: 5
+        name: "Channel Configuration"
+        agent: channel-manager
+        action: "Setup channels and tracking"
+        output: "Channels and tracking live"
+        gate: null
+
+      - step: 6
+        name: "First Notice Send (Day 0)"
+        agent: channel-manager
+        action: "Send First Notice to full list"
+        output: "First Notice delivered"
+        gate: null
+
+      - step: 7
+        name: "List Hygiene (Day 14)"
+        agent: list-hygienist
+        action: "Remove converters and opt-outs"
+        output: "Clean list for Second Notice"
+        gate: QG-004
+
+      - step: 8
+        name: "Second Notice Send (Day 15)"
+        agent: channel-manager
+        action: "Send Second Notice to non-converters"
+        output: "Second Notice delivered"
+        gate: null
+
+      - step: 9
+        name: "List Hygiene (Day 29)"
+        agent: list-hygienist
+        action: "Remove converters and opt-outs"
+        output: "Clean list for Final Notice"
+        gate: QG-004
+
+      - step: 10
+        name: "Final Notice Send (Day 30)"
+        agent: channel-manager
+        action: "Send Final Notice to remaining non-converters"
+        output: "Final Notice delivered"
+        gate: QG-005
+
+      - step: 11
+        name: "Post-Sequence Nurture"
+        agent: post-sequence-planner
+        action: "Move non-converters to long-term nurture"
+        output: "Nurture plan active"
+        gate: null
+
+# ===============================================================================
+# KPIs & SUCCESS METRICS
+# ===============================================================================
+
+kpis:
+  primary:
+    total_sequence_conversion:
+      formula: "Total conversions / Initial list size"
+      target: ">10% for services, >5% for products"
+
+    incremental_lift:
+      formula: "3-step conversion rate / Single piece conversion rate"
+      target: ">3x"
+
+    cost_per_conversion:
+      formula: "Total sequence cost / Total conversions"
+      target: "< 10% of average ticket"
+
+  by_notice:
+    first_notice_response:
+      formula: "Responses after 1st / List size"
+      target: ">3%"
+      typical_share: "~40% of total conversions"
+
+    second_notice_response:
+      formula: "Responses after 2nd / Remaining list"
+      target: ">5% cumulative"
+      typical_share: "~35% of total conversions"
+
+    third_notice_response:
+      formula: "Responses after 3rd / Remaining list"
+      target: ">8% cumulative total"
+      typical_share: "~25% of total conversions"
+
+  secondary:
+    response_velocity:
+      formula: "Average days from notice to response"
+      target: "< 5 days per notice"
+
+    channel_effectiveness:
+      formula: "Responses per channel / Sends per channel"
+      target: "Identify best channel"
+
+    post_sequence_reactivation:
+      formula: "Later conversions from nurture / Non-converters"
+      target: ">5% within 6 months"
+
+# ===============================================================================
+# TROUBLESHOOTING
+# ===============================================================================
+
+troubleshooting:
+  - symptom: "Zero response after First Notice"
+    possible_causes:
+      - "Offer not compelling"
+      - "Wrong audience (list quality)"
+      - "Copy too timid"
+      - "Delivery failure (mail not arriving)"
+    solutions:
+      - "Strengthen offer before Second Notice"
+      - "Verify list quality"
+      - "Rewrite with bolder copy"
+      - "Check delivery confirmation"
+
+  - symptom: "Good First Notice, no lift from Second"
+    possible_causes:
+      - "Second Notice lacks proper linkage"
+      - "Same proof elements repeated"
+      - "Urgency not escalated enough"
+    solutions:
+      - "Add explicit reference to First Notice"
+      - "Use completely different testimonials/proof"
+      - "Increase urgency language"
+
+  - symptom: "Third Notice underperforms"
+    possible_causes:
+      - "Deadline not believable"
+      - "FINAL NOTICE marking missing"
+      - "Social proof insufficient"
+    solutions:
+      - "Ensure deadline is real and enforced"
+      - "Add bold visual FINAL NOTICE marking"
+      - "Add massive social proof (N people already acted)"
+
+  - symptom: "High response but low close rate"
+    possible_causes:
+      - "Sequence attracts tire-kickers"
+      - "Sales process weak after response"
+      - "Offer promise exceeds delivery"
+    solutions:
+      - "Tighten qualifying language in notices"
+      - "Improve sales process (add Shock & Awe)"
+      - "Align copy promises with reality"
+
+# ===============================================================================
+# VALIDATION
+# ===============================================================================
+
+validation:
+  sop_parts_complete: 10/10
+  notices_documented: 3/3
+  linkage_framework: documented
+  quality_gates_defined: 5
+  workflows_documented: 1
+  agents_defined: 11
+  templates_provided: 3
+
+  blueprint_status: "READY FOR SQUAD EXECUTION"

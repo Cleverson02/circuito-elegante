@@ -1,0 +1,418 @@
+# Kennedy Squad — Veto Conditions (Centralized)
+# These gates BLOCK execution. No exceptions. No "maybe". No "it depends".
+# Version: 1.0.0
+# Created: 2026-02-11
+# Auditor: kennedy-chief
+
+# ===============================================================================
+# PHILOSOPHY: "If it can't be measured, it can't be managed, and it
+# sure as hell shouldn't be funded." — Dan Kennedy
+# Every marketing dollar must be accountable. Every campaign must have
+# a direct response mechanism. No institutional advertising. No vanity.
+# ===============================================================================
+
+veto_conditions:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # TIER 0: UNIVERSAL VETOS (Apply to ALL agents, ALL workflows)
+  # These are non-negotiable. They represent Kennedy's core principles.
+  # ───────────────────────────────────────────────────────────────────────────
+  tier_0_universal:
+    - id: "VT0-001"
+      name: "NO RESULTS TRIANGLE = NO CAMPAIGN"
+      trigger: "Any marketing campaign, ad, letter, or strategy request"
+      condition: "Message + Market + Media not defined"
+      action: "BLOCK"
+      message: |
+        VETO: Campanha sem Results Triangle e chute.
+        Coletando primeiro:
+        - MESSAGE: Qual a mensagem central? (USP + Big Promise)
+        - MARKET: Quem e o publico-alvo? (Starving crowd?)
+        - MEDIA: Qual o canal de distribuicao? (Rastreavel?)
+        "Resultados = Mensagem CERTA + Mercado CERTO + Midia CERTA."
+      enforcement: "runtime"
+      bypass: false
+
+    - id: "VT0-002"
+      name: "NO USP = NO DIFFERENTIATION"
+      trigger: "Any offer, positioning, or campaign creation"
+      condition: "USP not defined (cannot answer 'Why you vs. everyone else?')"
+      action: "BLOCK"
+      message: |
+        VETO: Sem USP voce e uma commodity competindo por preco.
+        Responda: "Por que eu deveria fazer negocios com voce
+        vs. toda e qualquer outra opcao, incluindo nao fazer nada?"
+        Use os 4 Caminhos de USP do Kennedy:
+        1. Seja o primeiro
+        2. Seja o melhor (com prova)
+        3. Seja diferente
+        4. Seja especializado
+      enforcement: "runtime"
+      bypass: false
+
+    - id: "VT0-003"
+      name: "NO OFFER = NO RESPONSE"
+      trigger: "Any marketing piece, ad, letter, or content creation"
+      condition: "No clear offer with call to action"
+      action: "BLOCK"
+      message: |
+        VETO: Marketing sem oferta e publicidade institucional.
+        Regra #1 do Kennedy: "There will always be an offer."
+        Toda peca de marketing DEVE ter:
+        - Uma oferta clara
+        - Uma razao para responder AGORA
+        - Instrucoes claras de como responder
+        - Mecanismo de rastreamento
+      enforcement: "content_check"
+      bypass: false
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # TIER 1: WORKFLOW VETOS (Apply to specific workflows)
+  # Sequential gates that enforce Kennedy's methodology order.
+  # ───────────────────────────────────────────────────────────────────────────
+  tier_1_workflow:
+    - id: "VT1-001"
+      name: "RESULTS TRIANGLE GATE"
+      checkpoint: "CP_PHASE_0"
+      workflow: "wf-sales-letter"
+      condition: "Results Triangle incomplete (Message/Market/Media any missing)"
+      action: "BLOCK_PHASE_1"
+      message: |
+        VETO: Nao pode escrever sales letter sem Results Triangle.
+        Tres perguntas obrigatorias:
+        1. MENSAGEM: Qual a promessa central?
+        2. MERCADO: Quem e a multidao faminta?
+        3. MIDIA: Como esta carta chega ao prospect?
+      auto_check: true
+      auto_check_method: "check_results_triangle_fields"
+
+    - id: "VT1-002"
+      name: "HEADLINE TEST BATCH GATE"
+      checkpoint: "CP_PHASE_1"
+      workflow: "wf-sales-letter"
+      condition: "Fewer than 20 headline candidates generated"
+      action: "BLOCK_PHASE_2"
+      message: |
+        VETO: Selecao de headline sem volume e roleta russa.
+        Kennedy exige minimo 20 candidatos usando as
+        12 Formulas de Headline Prontas.
+        Atual: [N] headlines. Minimo: 20.
+      auto_check: true
+      auto_check_method: "count_headline_candidates"
+
+    - id: "VT1-003"
+      name: "A-PILE COMPLIANCE GATE"
+      checkpoint: "CP_PHASE_1"
+      workflow: "wf-direct-mail"
+      condition: "Mail piece fails A-Pile sort test"
+      action: "BLOCK_PHASE_2"
+      message: |
+        VETO: Mala direta que cai no B-Pile e dinheiro jogado fora.
+        Sua carta tem 3 segundos para ser classificada.
+        A-Pile = aberta. B-Pile = lixo.
+        Revise: envelope, formato, enderecamento.
+      auto_check: true
+      auto_check_method: "check_apile_criteria"
+
+    - id: "VT1-004"
+      name: "9 FATAL MISTAKES GATE"
+      checkpoint: "CP_PHASE_0"
+      workflow: "wf-magnetic-campaign"
+      condition: "9 Fatal Mistakes assessment not completed"
+      action: "BLOCK_PHASE_1"
+      message: |
+        VETO: Construir campanha magnetica sem diagnosticar os
+        9 Erros Fatais e repetir os mesmos erros.
+        Avalie cada um dos 9 antes de prosseguir.
+      auto_check: true
+      auto_check_method: "check_fatal_mistakes_assessed"
+
+    - id: "VT1-005"
+      name: "3-PILLAR SYSTEM COMPLETE GATE"
+      checkpoint: "CP_PHASE_3"
+      workflow: "wf-magnetic-campaign"
+      condition: "Any of the 3 Pillars (Attract/Convert/Retain) incomplete"
+      action: "BLOCK_PHASE_4"
+      message: |
+        VETO: Sistema magnetico incompleto.
+        Os 3 Pilares DEVEM estar todos funcionando:
+        - ATRAIR: Lead magnets + USP + Ads
+        - CONVERTER: Shock-awe + Follow-up + Oferta
+        - RETER: Newsletter + VIP + Referrals
+        Pilar faltando: [PILAR]. Complete antes de auditar.
+      auto_check: true
+      auto_check_method: "check_three_pillars"
+
+    - id: "VT1-006"
+      name: "MONEY PYRAMID TIER DEFINED"
+      checkpoint: "CP_PHASE_0"
+      workflow: "wf-affluent-attraction"
+      condition: "Money Pyramid target tier not selected"
+      action: "BLOCK_PHASE_1"
+      message: |
+        VETO: Marketing para affluent sem saber QUAL tier do
+        Money Pyramid voce esta mirando e desperdicar municio.
+        1% ultra-rich / 4% rich / 15% comfortable
+        Selecione o tier E justifique.
+      auto_check: true
+      auto_check_method: "check_money_pyramid_tier"
+
+    - id: "VT1-007"
+      name: "CASH TRIAGE BEFORE STRATEGY"
+      checkpoint: "CP_PHASE_0"
+      workflow: "wf-business-turnaround"
+      condition: "Financial emergency assessment not completed"
+      action: "BLOCK_PHASE_1"
+      message: |
+        VETO: Turnaround sem triage financeira e operar cego.
+        Calcule primeiro:
+        - Cash atual
+        - Burn rate mensal
+        - Runway (quantos meses tem?)
+        - Top 3 acoes de caixa imediatas
+        Dinheiro e oxigenio. Sem ele, nada mais importa.
+      auto_check: true
+      auto_check_method: "check_financial_triage"
+
+    - id: "VT1-008"
+      name: "ANTIPATTERN SCREENING GATE"
+      checkpoint: "CP_PHASE_FINAL"
+      workflow: "all"
+      condition: "Any critical antipattern detected in audit"
+      action: "HALT_WORKFLOW"
+      message: |
+        VETO: Antipattern detectado.
+        [ANTIPATTERN_NAME]: [DESCRIPTION]
+        Nao pode lancar campanha ate corrigir.
+        Execute: python scripts/validate-antipattern.py --interactive
+      auto_check: true
+      auto_check_method: "run_antipattern_screening"
+      mandatory_checklist: "checklists/marketing-audit-checklist.md"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # TIER 2: AGENT-SPECIFIC VETOS
+  # Each specialist has domain-specific gates that prevent bad output.
+  # ───────────────────────────────────────────────────────────────────────────
+  tier_2_agent_specific:
+    kennedy-sales-letter:
+      - id: "VT2-SL-001"
+        name: "NO SALES LETTER WITHOUT 28-STEP STRUCTURE"
+        trigger: "Creating any sales letter"
+        condition: "28-Step structure not mapped before writing"
+        action: "FORCE_STRUCTURE_FIRST"
+        message: |
+          VETO: Sales letter sem estrutura de 28 passos e improvisacao.
+          "A Ultimate Sales Letter e um SISTEMA de 28 passos.
+          Pular passos e pular degraus de uma escada no escuro."
+          Mapeie todos os 28 passos antes de escrever.
+        enforcement: "pre_output"
+
+    kennedy-copy:
+      - id: "VT2-COP-001"
+        name: "NO COPY WITHOUT FASCINATION BULLETS"
+        trigger: "Any long-form sales copy or letter"
+        condition: "Fascination bullet set not created"
+        action: "FORCE_FASCINATION_FIRST"
+        message: |
+          VETO: Copy sem fascination bullets e carne sem tempero.
+          Kennedy exige fascination bullets em toda copy longa.
+          Crie minimo 30 bullets ANTES de montar a copy final.
+          Tipos: blind, revelation, contrarian, specificity, fear, how-to.
+        enforcement: "pre_output"
+
+    kennedy-offers:
+      - id: "VT2-OFF-001"
+        name: "NO OFFER WITHOUT RISK REVERSAL"
+        trigger: "Creating or presenting any offer"
+        condition: "No guarantee or risk reversal element"
+        action: "FORCE_GUARANTEE_DESIGN"
+        message: |
+          VETO: Oferta sem garantia e pedir para o prospect assumir todo o risco.
+          Kennedy: "Se voce realmente acredita no seu produto,
+          oferca a garantia mais forte possivel."
+          Opcoes: money-back, better-than-risk-reversal, condicional.
+        enforcement: "pre_output"
+
+    kennedy-media:
+      - id: "VT2-MED-001"
+        name: "NO MEDIA WITHOUT TRACKING"
+        trigger: "Any media channel recommendation or ad creation"
+        condition: "No tracking mechanism defined for the channel"
+        action: "BLOCK"
+        message: |
+          VETO: Canal de midia sem rastreamento e jogar dinheiro pela janela.
+          Regra #4 do Kennedy: "There will be tracking and measurement."
+          Cada canal DEVE ter: codigo unico, URL rastreavel, telefone rastreavel.
+          Se nao pode medir, nao faca.
+        enforcement: "runtime"
+
+    kennedy-magnetic:
+      - id: "VT2-MAG-001"
+        name: "NO SHOCK-AWE WITHOUT MINIMUM 5 ELEMENTS"
+        trigger: "Creating shock-and-awe package"
+        condition: "Package has fewer than 5 elements"
+        action: "FORCE_EXPANSION"
+        message: |
+          VETO: Shock-and-Awe com menos de 5 elementos nao impressiona.
+          Minimo: carta de boas-vindas, material de autoridade,
+          testimoniais, FAQ/objecoes, oferta + premium.
+          Kennedy: "O pacote deve SOBRECARREGAR com valor e prova."
+        enforcement: "pre_output"
+
+    kennedy-referrals:
+      - id: "VT2-REF-001"
+        name: "NO REFERRAL WITHOUT SYSTEM"
+        trigger: "Any referral request or referral campaign"
+        condition: "11-Point Referral System not mapped"
+        action: "FORCE_SYSTEM_DESIGN"
+        message: |
+          VETO: Pedir referral sem sistema e depender de sorte.
+          Kennedy: "Referral NAO e acidente — e resultado engenheirado."
+          Mapeie os 11 Pontos do Referral System antes de pedir qualquer referral.
+        enforcement: "runtime"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # TIER 3: HANDOFF VETOS (Between Specialists)
+  # Context MUST transfer completely between agents.
+  # ───────────────────────────────────────────────────────────────────────────
+  tier_3_handoff:
+    - id: "VT3-001"
+      name: "HANDOFF CONTEXT REQUIRED"
+      trigger: "Specialist-to-specialist handoff"
+      condition: "Handoff template not populated"
+      action: "BLOCK_HANDOFF"
+      message: |
+        VETO: Handoff sem contexto = trabalho perdido.
+        Preencher templates/handoff-context-tmpl.yaml antes de transferir.
+        Campos obrigatorios:
+        - source_agent, target_agent
+        - marketing_data_status (completeness)
+        - current_phase
+        - key_decisions
+        - context_for_target.primary_objective
+        - veto_check.all_phase_vetos_passed
+      mandatory_fields:
+        - "source_agent"
+        - "target_agent"
+        - "marketing_data_status"
+        - "current_phase"
+        - "key_decisions"
+        - "blockers"
+      enforcement: "handoff_validation"
+
+# ===============================================================================
+# ENFORCEMENT MATRIX
+# ===============================================================================
+
+enforcement:
+  levels:
+    runtime:
+      description: "Checked at execution time, blocks immediately"
+      blocking: true
+      notification: "inline"
+
+    content_check:
+      description: "Checked in output content before delivery"
+      blocking: true
+      notification: "inline"
+
+    output_validation:
+      description: "Validated before final output"
+      blocking: false
+      notification: "warning"
+
+    mode_switch:
+      description: "Checked when switching operational modes"
+      blocking: true
+      notification: "inline"
+
+    pre_output:
+      description: "Forced before any recommendation or deliverable"
+      blocking: true
+      notification: "inline"
+
+    workflow_gate:
+      description: "Checked at workflow phase checkpoints"
+      blocking: true
+      notification: "checkpoint"
+
+    handoff_validation:
+      description: "Validated before agent-to-agent handoff"
+      blocking: true
+      notification: "inline"
+
+# ===============================================================================
+# ERROR HANDLING
+# ===============================================================================
+
+error_handling:
+  on_veto_triggered:
+    - log_veto: true
+    - notify_user: true
+    - provide_remediation: true
+    - block_execution: true
+
+  veto_message_format: |
+    VETO: [VETO_NAME]
+    Condicao violada: [CONDITION]
+    Acao: [ACTION]
+    Para resolver: [REMEDIATION]
+
+  escalation:
+    max_consecutive_vetos: 3
+    escalate_to: "kennedy-chief"
+    escalation_message: "Multiplos vetos consecutivos. Revisao de abordagem necessaria."
+
+# ===============================================================================
+# VETO INTERACTION MAP
+# Which vetos cascade into which workflows
+# ===============================================================================
+
+interaction_map:
+  results_triangle_cascade:
+    trigger: "VT0-001"
+    blocks:
+      - "wf-sales-letter"
+      - "wf-magnetic-campaign"
+      - "wf-direct-mail"
+      - "wf-affluent-attraction"
+      - "wf-mind-hijacking"
+    rationale: "Results Triangle is the foundation of all Kennedy methodology"
+
+  usp_cascade:
+    trigger: "VT0-002"
+    blocks:
+      - "wf-sales-letter (PHASE-1+)"
+      - "wf-magnetic-campaign (PHASE-1+)"
+      - "wf-affluent-attraction (PHASE-1+)"
+    rationale: "Cannot differentiate or attract without USP"
+
+  offer_cascade:
+    trigger: "VT0-003"
+    blocks:
+      - "wf-sales-letter"
+      - "wf-direct-mail"
+      - "wf-magnetic-campaign"
+      - "wf-mind-hijacking"
+    rationale: "All marketing must have a direct response offer"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  purpose: "Centralizar veto conditions para impossibilitar caminhos errados no universo Kennedy"
+  source_frameworks:
+    - "No B.S. Direct Marketing — 10 Rules, Results Triangle"
+    - "Magnetic Marketing — 3-Pillar System, 9 Fatal Mistakes"
+    - "Ultimate Sales Letter — 28-Step System"
+    - "Midas Touch — Money Pyramid, 5 Holes"
+  total_vetos: 18
+  tiers:
+    tier_0_universal: 3
+    tier_1_workflow: 8
+    tier_2_agent_specific: 6
+    tier_3_handoff: 1

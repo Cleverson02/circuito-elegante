@@ -1,0 +1,174 @@
+# Blueprint: Great Divide Audit System
+# Dan Kennedy's DR vs Institutional Marketing Classification
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "Great Divide Audit Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-great-divide-audit.md"
+  source_courses:
+    - "No B.S. Direct Marketing, Third Edition"
+  description: >
+    Blueprint para auditar todo o marketing de uma empresa e classificar cada
+    peca/campanha como Direct Response ou Institucional, eliminando todo marketing
+    que esta do lado errado do Grande Abismo. Pre-requisito para todos os demais SOPs.
+  kennedy_quote: >
+    "Ha um abismo intransponivel entre esses dois mundos. Voce deve escolher
+    de qual lado esta e viver nele. Misturar os dois e o caminho mais rapido
+    para a falencia."
+
+agents:
+  primary_agent:
+    name: "great-divide-auditor"
+    role: "Auditor do Grande Abismo"
+    responsibilities:
+      - Catalogar 100% dos gastos de marketing da empresa
+      - Classificar cada peca como DR ou Institucional
+      - Quantificar desperdicio em marketing institucional
+      - Criar plano de migracao para 100% DR
+      - Estimar economia e ROI da transformacao
+
+  supporting_agents:
+    - name: "marketing-inventory-analyst"
+      role: "Analista de Inventario de Marketing"
+      responsibilities:
+        - Coletar todos os materiais de marketing em uso
+        - Catalogar gastos por canal e por tipo
+        - Verificar existencia de tracking em cada peca
+        - Documentar ofertas (ou falta de) em cada material
+
+    - name: "dr-compliance-checker"
+      role: "Verificador de Conformidade DR"
+      responsibilities:
+        - Testar cada peca contra as 10 Regras de Kennedy
+        - Verificar presenca de oferta, urgencia, instrucoes, tracking
+        - Classificar nivel de conformidade (0-100%)
+        - Recomendar correcoes especificas por peca
+
+workflow_phases:
+
+  phase_1_inventory:
+    name: "Inventario Completo"
+    duration: "1 semana"
+    steps:
+      - step: "Coletar todos os materiais"
+        action: "Reunir toda peca de marketing em uso (print, digital, midia, eventos)"
+        output: "Inventario completo de marketing"
+        agent: "marketing-inventory-analyst"
+
+      - step: "Catalogar gastos"
+        action: "Documentar custo mensal/anual de cada atividade"
+        output: "Planilha de gastos por canal"
+        agent: "marketing-inventory-analyst"
+
+  phase_2_classification:
+    name: "Classificacao DR vs Institucional"
+    duration: "3-5 dias"
+    steps:
+      - step: "Teste das 4 Perguntas"
+        action: >
+          Para cada peca: (1) Tem oferta? (2) Tem urgencia?
+          (3) Tem instrucoes? (4) Tem tracking?
+        output: "Score de conformidade por peca"
+        agent: "dr-compliance-checker"
+
+      - step: "Classificar cada peca"
+        action: "DR (4/4 criterios) vs Institucional (<4 criterios)"
+        output: "Mapa de classificacao completo"
+        agent: "great-divide-auditor"
+
+      - step: "Quantificar desperdicio"
+        action: "Somar gastos em pecas classificadas como Institucional"
+        output: "Total de desperdicio quantificado"
+        agent: "great-divide-auditor"
+
+  phase_3_migration_plan:
+    name: "Plano de Migracao"
+    duration: "1 semana"
+    steps:
+      - step: "Priorizar correcoes"
+        action: "Ordenar pecas institucionais por gasto e potencial de conversao"
+        output: "Lista priorizada de correcoes"
+        agent: "great-divide-auditor"
+
+      - step: "Planejar eliminacao ou reforma"
+        action: "Para cada peca: eliminar, reformar com DR, ou substituir"
+        output: "Plano de acao por peca com timeline"
+        agent: "great-divide-auditor"
+
+      - step: "Estimar economia e ROI"
+        action: "Projetar economia (gastos cortados) + receita adicional (DR)"
+        output: "Business case para a transformacao"
+        agent: "great-divide-auditor"
+
+  phase_4_execution:
+    name: "Execucao e Verificacao"
+    duration: "4-8 semanas"
+    steps:
+      - step: "Executar correcoes"
+        action: "Eliminar institucionais, reformar com DR, substituir"
+        output: "Marketing 100% DR"
+        agent: "great-divide-auditor"
+
+      - step: "Verificacao final"
+        action: "Re-auditar 100% dos materiais"
+        output: "Certificacao Great Divide Compliant"
+        agent: "dr-compliance-checker"
+
+quality_gates:
+
+  gate_1_inventory_complete:
+    name: "Inventario Completo"
+    criteria:
+      - "100% dos materiais de marketing catalogados"
+      - "100% dos gastos documentados"
+      - "Nenhum canal de marketing omitido"
+    blocker: true
+
+  gate_2_classification_done:
+    name: "Classificacao Concluida"
+    criteria:
+      - "Toda peca testada contra 4 criterios"
+      - "Toda peca classificada como DR ou Institucional"
+      - "Desperdicio total quantificado em $"
+    blocker: true
+
+  gate_3_migration_complete:
+    name: "Migracao Completa"
+    criteria:
+      - "Zero gastos em marketing institucional"
+      - "100% dos materiais com oferta + urgencia + instrucoes + tracking"
+      - "Verificacao final concluida"
+    blocker: false
+
+metrics:
+  audit_metrics:
+    percentage_dr_before: "Baseline"
+    percentage_dr_after: "100%"
+    waste_eliminated: "$ total de gastos institucionais cortados"
+    pieces_reformed: "Numero de pecas convertidas de institucional para DR"
+
+  tracking:
+    - "% de materiais em conformidade DR"
+    - "$ em gastos institucionais (meta: zero)"
+    - "ROI de cada peca apos reforma para DR"
+    - "Tempo para completar migracao"
+
+resources:
+  tools:
+    - "Planilha de inventario de marketing"
+    - "Template de classificacao DR vs Institucional"
+    - "Checklist das 10 Regras de Kennedy"
+
+dependencies:
+  feeds_into:
+    - sop: "sop-6-step-dr-diet.md"
+    - sop: "sop-10-rules-compliance.md"
+    - sop: "sop-midas-touch-audit.md"
+  prerequisite_for:
+    - "Todos os demais SOPs Kennedy (marketing deve ser 100% DR primeiro)"
+
+sources:
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"

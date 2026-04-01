@@ -1,0 +1,465 @@
+# ============================================================================
+# BLUEPRINT: Personal Branding by Direct Response Squad Blueprint
+# Source: No B.S. Brand-Building by Direct Response, Ch.5-6, Ch.17, Ch.20
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+# ============================================================================
+
+metadata:
+  name: "Personal Branding by Direct Response Squad Blueprint"
+  version: "1.0"
+# source_sop: sop-personal-branding-dr.md
+  created: "2026-02-11"
+  squad: "kennedy"
+  sop_reference: "sop-personal-branding-dr.md"
+  description: >
+    Blueprint para construcao de personal brand que paga por si mesmo
+    atraves de direct response. Combina as 6 estrategias de Toby Keith
+    com o Disney/Hefner Model e Winning Formula de Kennedy.
+  source:
+    book: "No B.S. Guide to Brand-Building by Direct Response"
+    chapters: "Ch.5-6, Ch.17, Ch.20, Ch.21"
+    frameworks:
+      - "Toby Keith Personal Brand Strategies (6)"
+      - "Disney/Hefner Brand-Building Model (7)"
+      - "Winning Formula"
+      - "StorySelling 4 Key Factors"
+
+# ============================================================================
+# AGENTS
+# ============================================================================
+
+agents:
+  primary:
+    name: "kennedy-brand"
+    role: "Personal Brand Architect"
+    responsibilities:
+      - "Design da estrategia de personal brand via DR"
+      - "Integracao das 6 Toby Keith strategies"
+      - "Aplicacao do Disney/Hefner Model"
+      - "Validacao de Winning Formula alignment"
+      - "Brand protection e manutencao"
+    source_knowledge:
+      - "Brand-Building by DR, Framework 10 - Toby Keith Strategies"
+      - "Brand-Building by DR, Framework 8 - Disney/Hefner Model"
+      - "Brand-Building by DR, Framework 5 - Winning Formula"
+
+  supporting:
+    - name: "kennedy-copy"
+      role: "Personal Brand Copywriter"
+      responsibilities:
+        - "Escreve Origin Story em multiplos formatos"
+        - "Cria bios, headlines, e copy de posicionamento"
+        - "Produz conteudo pilar e newsletter copy"
+        - "Aplica brand voice em toda comunicacao"
+      source_knowledge:
+        - "Copywriting Academy - Personal positioning copy"
+        - "Brand-Building by DR, Framework 7 - StorySelling"
+
+    - name: "kennedy-persuasion"
+      role: "Polarization & Positioning Specialist"
+      responsibilities:
+        - "Define posicao de polarizacao estrategica"
+        - "Identifica inimigo do WHO para posicionamento"
+        - "Aplica Controversy as Brand Builder framework"
+        - "Valida que polarizacao eh deliberada, nao acidental"
+      source_knowledge:
+        - "Mind Hijacking Course - Belief Shifting"
+        - "Brand-Building by DR, Heuristica - Trump Technique"
+
+    - name: "kennedy-affluent"
+      role: "Premium Positioning Specialist"
+      responsibilities:
+        - "Implementa Scarcity + Premium Pricing"
+        - "Design de application process para servicos"
+        - "Posicionamento para mercado affluent"
+        - "Pricing strategy e value perception"
+      source_knowledge:
+        - "Affluent Client Attraction Playbook"
+        - "Brand-Building by DR, Heuristica - Scarcity + Premium Pricing"
+
+    - name: "kennedy-media"
+      role: "Multi-Channel Distribution"
+      responsibilities:
+        - "Implementa YOUbiquity strategy"
+        - "Own Your Media checklist"
+        - "Content calendar design e execucao"
+        - "Garante diversificacao de canais (<20% per channel)"
+      source_knowledge:
+        - "Brand-Building by DR, Heuristica - YOUbiquity"
+        - "DR Social Media, Framework 4 - Count as One Rule"
+
+# ============================================================================
+# WORKFLOW PHASES
+# ============================================================================
+
+workflow:
+  total_estimated_time: "10-14 hours initial + ongoing"
+
+  phase_1:
+    name: "Personal Brand Foundation"
+    duration: "90-120 min"
+    agent: "kennedy-brand + kennedy-persuasion"
+    inputs:
+      - "Personal expertise and experience inventory"
+      - "WHO profile (target market)"
+      - "Competitive landscape analysis"
+      - "Available proof materials (results, testimonials)"
+    activities:
+      - step: "Define expertise positioning"
+        detail: "Specific area of expertise, not generic"
+      - step: "Create WHO profile with psychographics"
+        detail: "5 Psychographic Questions answered"
+      - step: "Craft USP statement"
+        detail: "Why you vs every other option?"
+      - step: "Define polarization position"
+        detail: "What you're against, what you defend, who's the enemy"
+      - step: "Articulate clear point of view"
+        detail: "Non-negotiable vision for your space"
+      - step: "Design brand voice"
+        detail: "Tone, language, personality, catchphrases"
+    outputs:
+      - "Personal Brand Foundation Document"
+      - "Polarization Position Statement"
+      - "Brand Voice Guidelines"
+      - "USP Statement"
+    quality_gate: "gate_1"
+
+  phase_2:
+    name: "Origin Story & Narrative"
+    duration: "60-90 min"
+    agent: "kennedy-copy + kennedy-brand"
+    inputs:
+      - "Personal Brand Foundation (from Phase 1)"
+      - "Raw story materials (experiences, turning points)"
+      - "Proof materials"
+    activities:
+      - step: "Extract Origin Story elements"
+        detail: "Situation, conflict, discovery, result"
+      - step: "Apply StorySelling 4 Key Factors"
+        detail: "Simplicity, Authenticity, Visibility, Relevancy"
+      - step: "Write long-form Origin Story"
+        detail: "Full narrative, 2000-3000 words"
+      - step: "Create condensed versions"
+        detail: "Medium (500 words), short (100 words), elevator (25 words)"
+      - step: "Draft multiple bio versions"
+        detail: "25 words, 100 words, 250 words"
+    outputs:
+      - "Origin Story (4 versions)"
+      - "Bio (3 versions)"
+      - "4 Key Factors Validation Report"
+    quality_gate: "gate_2"
+
+  phase_3:
+    name: "Asset Creation"
+    duration: "180-240 min"
+    agent: "kennedy-copy + kennedy-media"
+    inputs:
+      - "Personal Brand Foundation (from Phase 1)"
+      - "Origin Story (from Phase 2)"
+      - "Available content and expertise"
+    activities:
+      - step: "Create Lead Generation Magnet"
+        detail: "Branded LGM with personal authority positioning"
+      - step: "Design welcome email sequence"
+        detail: "5-7 emails introducing personal brand story and expertise"
+      - step: "Compile testimonials and proof"
+        detail: "Minimum 10 testimonials formatted and ready"
+      - step: "Create content pillar"
+        detail: "First major piece: article, video, or podcast (3000+ words)"
+      - step: "Design Shock and Awe digital package"
+        detail: "Authority materials for new leads"
+      - step: "Set up owned media"
+        detail: "Email list, newsletter system, website/landing pages"
+    outputs:
+      - "Lead Generation Magnet"
+      - "Email Welcome Sequence (5-7 emails)"
+      - "Testimonial Compilation"
+      - "Content Pillar (first piece)"
+      - "Shock and Awe Digital Package"
+      - "Owned Media Setup Documentation"
+    quality_gate: "gate_3"
+
+  phase_4:
+    name: "Premium Positioning"
+    duration: "45-60 min"
+    agent: "kennedy-affluent"
+    inputs:
+      - "Personal Brand Foundation (from Phase 1)"
+      - "Current pricing structure"
+      - "Competitive pricing data"
+    activities:
+      - step: "Audit current pricing"
+        detail: "Compare to perceived value and competition"
+      - step: "Design premium pricing structure"
+        detail: "Minimum 20% increase with value justification"
+      - step: "Create application/qualification process"
+        detail: "For premium services -- not everyone gets in"
+      - step: "Design scarcity elements"
+        detail: "Limited slots, exclusive access, waitlist"
+      - step: "Apply 4 Business Transformation Levers"
+        detail: "Positioning, Pricing, Target Market, Media"
+    outputs:
+      - "Premium Pricing Structure"
+      - "Application/Qualification Process"
+      - "Scarcity Framework"
+      - "Transformation Levers Action Plan"
+    quality_gate: "gate_4"
+
+  phase_5:
+    name: "Distribution & YOUbiquity"
+    duration: "60-90 min"
+    agent: "kennedy-media"
+    inputs:
+      - "All brand assets (from Phase 3)"
+      - "WHO media habits"
+      - "Available time and budget"
+    activities:
+      - step: "Select primary channels"
+        detail: "3+ channels where WHO is (1+ owned)"
+      - step: "Create content calendar"
+        detail: "Weekly + monthly + quarterly cadence"
+      - step: "Design synergy map"
+        detail: "How each activity feeds other activities"
+      - step: "Configure tracking per channel"
+        detail: "Unique tracking for attribution"
+      - step: "Plan first 4-week content rollout"
+        detail: "Day-by-day plan for initial launch"
+    outputs:
+      - "Channel Selection with Rationale"
+      - "Content Calendar (weekly/monthly/quarterly)"
+      - "Synergy Map"
+      - "Tracking Configuration"
+      - "4-Week Launch Plan"
+    quality_gate: "gate_5"
+
+  phase_6:
+    name: "Launch & Ongoing Optimization"
+    duration: "Ongoing (90-day initial cycle)"
+    agent: "all agents"
+    inputs:
+      - "All systems and assets ready"
+      - "Distribution plan active"
+    activities:
+      - step: "Execute 4-week launch plan"
+        detail: "Follow content calendar strictly"
+      - step: "Monitor weekly metrics"
+        detail: "Leads, conversions, engagement, revenue"
+      - step: "Collect and deploy new proof"
+        detail: "Testimonials, results, case studies"
+      - step: "Adjust polarization based on response"
+        detail: "Double down on what resonates, refine what doesn't"
+      - step: "Monthly brand health check"
+        detail: "Consistency, quality, 'what's new?'"
+      - step: "Quarterly strategy review"
+        detail: "Full assessment of all 6 strategies"
+    outputs:
+      - "Weekly Metrics Report"
+      - "Monthly Brand Health Report"
+      - "Quarterly Strategy Review"
+      - "Updated Proof Compilation"
+    quality_gate: "gate_final"
+
+# ============================================================================
+# QUALITY GATES
+# ============================================================================
+
+quality_gates:
+  gate_1:
+    name: "Foundation Validated"
+    phase: "phase_1"
+    criteria:
+      - "Expertise is specific (not generic)"
+      - "WHO profile complete with psychographics"
+      - "USP answers 'why you vs every alternative'"
+      - "Polarization position is clear and deliberate"
+      - "Brand voice defined (tone, language, personality)"
+      - "Point of view is non-negotiable and articulated"
+    blocker: true
+    failure_action: "Refine positioning until all criteria met"
+
+  gate_2:
+    name: "Story Ready"
+    phase: "phase_2"
+    criteria:
+      - "Origin Story passes 4 Key Factors test"
+      - "  Simplicity: Retellable in 2-3 sentences"
+      - "  Authenticity: 100% verifiable"
+      - "  Visibility: Works in 4+ formats"
+      - "  Relevancy: Connects to WHO pain points"
+      - "4 versions created (long, medium, short, elevator)"
+      - "3 bio versions ready"
+    blocker: true
+    failure_action: "Revise story until all factors validated"
+
+  gate_3:
+    name: "Assets Ready"
+    phase: "phase_3"
+    criteria:
+      - "Lead Generation Magnet published and functional"
+      - "Email welcome sequence configured and tested"
+      - "10+ testimonials compiled and formatted"
+      - "1+ content pillar published"
+      - "Owned media set up (email list + website minimum)"
+    blocker: true
+    failure_action: "Complete missing assets before launch"
+
+  gate_4:
+    name: "Premium Positioning Set"
+    phase: "phase_4"
+    criteria:
+      - "Pricing increased minimum 20% from previous"
+      - "Application/qualification process designed"
+      - "Scarcity elements defined"
+      - "4 Transformation Levers action plan created"
+    blocker: false
+    failure_action: "Can launch with current pricing, upgrade within 30 days"
+
+  gate_5:
+    name: "Distribution Ready"
+    phase: "phase_5"
+    criteria:
+      - "3+ channels selected (1+ owned)"
+      - "Content calendar complete (4+ weeks)"
+      - "Synergy map shows all activities interconnected"
+      - "Tracking configured per channel"
+      - "No channel planned for >20% dependency"
+    blocker: true
+    failure_action: "Add channels or adjust plan"
+
+  gate_final:
+    name: "Personal Brand Validated by Results"
+    phase: "phase_6"
+    criteria:
+      - "90-day data collected"
+      - "Inbound inquiries growing month-over-month"
+      - "Premium pricing accepted by >70% of qualified prospects"
+      - "Content production consistent (no gaps >2 weeks)"
+      - "Referrals growing month-over-month"
+      - "DR system producing positive ROI"
+    blocker: false
+    failure_action: "Diagnose specific underperformance and adjust"
+
+# ============================================================================
+# VETO CONDITIONS
+# ============================================================================
+
+veto_conditions:
+  universal:
+    - condition: "Personal brand without any DR mechanism"
+      severity: "BLOCKER"
+      rationale: "Brand without DR = expensive hobby, not business"
+      source: "Brand-Building by DR, Core Thesis"
+
+    - condition: "Zero polarization / trying to please everyone"
+      severity: "BLOCKER"
+      rationale: "Vanilla is only successful for ice cream"
+      source: "Brand-Building by DR, Ch.20"
+
+    - condition: "100% dependent on third-party platforms"
+      severity: "BLOCKER"
+      rationale: "Own Your Media or risk total loss"
+      source: "Brand-Building by DR, Heuristica"
+
+    - condition: "Inauthentic Origin Story"
+      severity: "BLOCKER"
+      rationale: "Inauthentic stories destroy brands"
+      source: "Brand-Building by DR, Framework 7"
+
+  warnings:
+    - condition: "Content production gap >2 weeks"
+      severity: "WARNING"
+      rationale: "Prolific Output requires consistency"
+
+    - condition: "Pricing below market average"
+      severity: "WARNING"
+      rationale: "Low price = commodity positioning"
+
+    - condition: "Single channel >20% of leads"
+      severity: "WARNING"
+      rationale: "Danger of One -- diversify"
+
+    - condition: "No synergy between activities"
+      severity: "WARNING"
+      rationale: "Every activity should feed another"
+
+# ============================================================================
+# INTEGRATION MAP
+# ============================================================================
+
+integrations:
+  depends_on:
+    - sop: "sop-brand-by-dr.md"
+      provides: "Winning Formula (DR Acquisition + Brand Retention)"
+    - sop: "sop-storyselling.md"
+      provides: "StorySelling 4 Key Factors for Origin Story"
+
+  feeds_into:
+    - sop: "sop-dr-social-media.md"
+      provides: "Personal brand as driver for social DR content"
+    - sop: "sop-newsletter-content.md"
+      provides: "Personal brand stories and content for newsletter"
+
+  shared_frameworks:
+    - name: "Toby Keith Strategies"
+      usage: "6 core strategies for personal brand"
+    - name: "Disney/Hefner Model"
+      usage: "7 amplification strategies"
+    - name: "StorySelling 4 Key Factors"
+      usage: "Origin Story validation"
+    - name: "Winning Formula"
+      usage: "DR front-end + Brand back-end"
+    - name: "Scarcity + Premium Pricing"
+      usage: "Premium positioning"
+    - name: "YOUbiquity"
+      usage: "Multi-channel presence"
+    - name: "4 Business Transformation Levers"
+      usage: "Positioning, Pricing, Target, Media"
+
+# ============================================================================
+# METRICS & KPIs
+# ============================================================================
+
+metrics:
+  acquisition:
+    - name: "Inbound Inquiries per Month"
+      target: "Growing 15% month-over-month"
+    - name: "Cost per Lead"
+      target: "Decreasing quarter-over-quarter"
+    - name: "Premium Pricing Acceptance Rate"
+      target: "> 70%"
+
+  authority:
+    - name: "Interview/Speaking Invitations"
+      target: "2+ per month"
+    - name: "Spontaneous Referrals"
+      target: "5+ per month"
+    - name: "New Testimonials"
+      target: "3+ per month"
+    - name: "Google Search Volume for Name"
+      target: "Growing monthly"
+
+  retention:
+    - name: "Client Retention (12 months)"
+      target: "> 85%"
+    - name: "Recompra Rate"
+      target: "> 40%"
+    - name: "Client LTV"
+      target: "3x+ front-end value"
+
+  production:
+    - name: "Content Pieces per Week"
+      target: "4-5 minimum"
+    - name: "Newsletter per Month"
+      target: "1 minimum"
+    - name: "YOUbiquity Score (active channels)"
+      target: "3+ active"
+
+# ============================================================================
+# VERSION HISTORY
+# ============================================================================
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-11"
+    changes: "Initial blueprint creation"
+    author: "kennedy squad"

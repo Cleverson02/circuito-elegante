@@ -1,0 +1,31 @@
+{
+  "proVersion": "1.0.0",
+  "installedAt": "2026-04-01T20:37:20.000Z",
+  "previousVersion": "0.2.0",
+  "fileCount": 10064,
+  "squadCount": 21,
+  "agentCount": 142,
+  "squads": {
+    "asaas-payment": { "version": "1.0.0", "agents": 4, "icon": "💳" },
+    "audio-reels": { "version": "2.0.0", "agents": 7, "icon": "🎬" },
+    "curator": { "version": "3.4.0", "agents": 12, "icon": "🎬" },
+    "db-sage": { "version": "1.2.0", "agents": 1, "icon": "🗄️" },
+    "deep-research": { "version": "1.0.0", "agents": 11, "icon": "🔬" },
+    "design": { "version": "2.1.0", "agents": 8, "icon": "🎨" },
+    "design-amorin": { "version": "3.0.0", "agents": 10, "icon": "🎨" },
+    "design-antigo": { "version": "2.1.0", "agents": 9, "icon": "🎨" },
+    "dispatch": { "version": "1.0.0", "agents": 4, "icon": "⚡" },
+    "education": { "version": "1.0.0", "agents": 16, "icon": "🧠" },
+    "etl-data-collector": { "version": "1.0.0", "agents": 6, "icon": "📦" },
+    "etl-ops": { "version": "1.0.0", "agents": 3, "icon": "🔧" },
+    "etl-squad": { "version": "1.0.0", "agents": 6, "icon": "🔄" },
+    "kaizen": { "version": "1.3.0", "agents": 7, "icon": "📊" },
+    "kennedy": { "version": "1.0.0", "agents": 14, "icon": "📬" },
+    "marketing-opes": { "version": "1.1.0", "agents": 12, "icon": "👑" },
+    "seo": { "version": "1.0.0", "agents": 8, "icon": "🔍" },
+    "squad-creator": { "version": "4.0.0", "agents": 1, "icon": "🏗️" },
+    "squad-creator-pro": { "version": "3.1.0", "agents": 4, "icon": "🏗️" },
+    "tech-research": { "version": "1.0.0", "agents": 0, "icon": "🔎", "type": "skill" },
+    "zona-genialidade": { "version": "1.0.0", "agents": 8, "icon": "🌟" }
+  }
+}

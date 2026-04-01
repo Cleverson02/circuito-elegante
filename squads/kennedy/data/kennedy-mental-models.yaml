@@ -1,0 +1,510 @@
+# Kennedy Mental Models Library
+# Source: Compiled from Dan Kennedy's complete body of work
+# Use: Agents reference these when making strategic decisions
+# Version: 1.0
+# Aligned with: config.yaml mental_models section
+
+metadata:
+  total_models: 12
+  organized_by: "Decision context"
+  cross_reference: "squads/kennedy/config.yaml → mental_models"
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 1: THE RESULTS TRIANGLE
+# ═══════════════════════════════════════════════════════════════
+
+results_triangle:
+  name: "The Results Triangle"
+  source: "The Ultimate Marketing Plan"
+  agents: [kennedy-chief, kennedy-audit]
+  use_when: "Starting any marketing initiative or diagnosing why marketing isn't working"
+
+  model:
+    pillar_1:
+      name: "Message"
+      definition: "What you say and how you say it"
+      key_question: "Is the message compelling, clear, and benefit-driven?"
+      components:
+        - "USP (Unique Selling Proposition)"
+        - "Offer construction"
+        - "Copy quality"
+        - "Proof elements"
+      diagnostic: "If message is weak → no amount of media or market targeting fixes it"
+
+    pillar_2:
+      name: "Market"
+      definition: "Who you're saying it to"
+      key_question: "Are you reaching the right people with buying capacity and intent?"
+      components:
+        - "Target audience definition"
+        - "List quality"
+        - "Buyer psychology understanding"
+        - "Segmentation"
+      diagnostic: "If market is wrong → perfect message to wrong people = zero results"
+
+    pillar_3:
+      name: "Media"
+      definition: "How you deliver the message"
+      key_question: "Is this the best channel to reach this market with this message?"
+      components:
+        - "Channel selection"
+        - "Multichannel coordination"
+        - "Timing and frequency"
+        - "Format appropriateness"
+      diagnostic: "If media is wrong → right message, right market, wrong delivery = waste"
+
+  decision_rule: |
+    ALWAYS diagnose the triangle before changing anything.
+    Fix the weakest pillar first. One weak pillar ruins the other two.
+    The order of importance: Message > Market > Media
+
+  visualization: |2
+       MESSAGE
+        /\
+       /  \
+      /    \
+     /      \
+    /________\
+    MARKET    MEDIA
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 2: THE 10 NO B.S. RULES OF DIRECT MARKETING
+# ═══════════════════════════════════════════════════════════════
+
+ten_nobs_rules:
+  name: "The 10 No B.S. Rules of Direct Marketing"
+  source: "No B.S. Direct Marketing"
+  agents: [kennedy-direct-response, kennedy-audit]
+  use_when: "Evaluating any marketing piece or campaign for DR compliance"
+
+  rules:
+    1: "There Will Always Be An Offer (or Offers)"
+    2: "There Will Be A Reason To Respond Right Now"
+    3: "You Will Give Clear Instructions (Tell them exactly what to do)"
+    4: "There Will Be Tracking and Measurement"
+    5: "Only No-Cost Brand-Building (brand is byproduct, not goal)"
+    6: "There Will Be Follow-Up"
+    7: "There Will Be Strong Copy (not delegated to amateurs)"
+    8: "It Will Look Like Mail-Order Advertising (ugly that sells)"
+    9: "Results Rule (not opinions, not creative awards)"
+    10: "You Will Be A Tough-Minded Disciplinarian"
+
+  decision_rule: |
+    Score each rule 0-5. Total /50.
+    Below 30 = NOT direct response marketing, reject.
+    30-39 = Needs work, fix gaps before deploying.
+    40-50 = Compliant DR campaign, deploy.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 3: A-PILE / B-PILE SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+a_pile_b_pile:
+  name: "A-Pile / B-Pile Mail System"
+  source: "The Ultimate Sales Letter"
+  agents: [kennedy-media, kennedy-sales-letter]
+  use_when: "Designing any direct mail piece — especially the envelope/outer"
+
+  model:
+    a_pile:
+      definition: "Mail that gets opened — personal, important-looking, curious"
+      characteristics:
+        - "Hand-addressed or looks hand-addressed"
+        - "First-class stamp (not bulk rate)"
+        - "No corporate logo"
+        - "Curiosity-building teaser or no teaser"
+        - "Lumpy or dimensional"
+        - "Personal feel"
+
+    b_pile:
+      definition: "Mail that gets trashed — obviously advertising, bulk, impersonal"
+      death_markers:
+        - "Mailing label"
+        - "Bulk rate postage"
+        - "Corporate return address with logo"
+        - "Window envelope"
+        - "Obvious sales material visible"
+        - "Standard #10 white envelope"
+
+  decision_rule: |
+    Every mail piece MUST pass the A-Pile test BEFORE the copy inside matters.
+    If it doesn't get opened, the best sales letter in the world is worthless.
+    Count B-Pile death markers: 0 = A-Pile. 1-2 = risky. 3+ = B-Pile, redesign.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 4: THE MONEY PYRAMID
+# ═══════════════════════════════════════════════════════════════
+
+money_pyramid:
+  name: "The Money Pyramid"
+  source: "No B.S. Guide to Marketing to the Affluent"
+  agents: [kennedy-affluent, kennedy-audit]
+  use_when: "Positioning business and pricing strategy"
+
+  model:
+    tier_1_bottom:
+      name: "Mass Market"
+      percentage: "80% of population"
+      characteristics: "Price-sensitive, commodity buyers, high volume low margin"
+      strategy: "Avoid unless you have massive scale"
+
+    tier_2_middle:
+      name: "Mass Affluent"
+      percentage: "15% of population"
+      characteristics: "Value-conscious, will pay more for quality, responsive to expertise"
+      strategy: "Good target for most businesses. Value-based pricing."
+
+    tier_3_upper:
+      name: "Affluent"
+      percentage: "4% of population"
+      characteristics: "Convenience-driven, status-aware, will pay premium for best"
+      strategy: "Position as specialist. Premium pricing. Exclusive access."
+
+    tier_4_top:
+      name: "Ultra-Affluent"
+      percentage: "1% of population"
+      characteristics: "Money is not a factor. Buy the best. Demand exclusivity."
+      strategy: "Invitation-only. Maximum premium. Concierge service."
+
+  decision_rule: |
+    ALWAYS move UP the pyramid, never down.
+    Each tier requires different: messaging, media, offer structure, and proof.
+    It's easier to sell $10,000 to 10 people than $100 to 1,000 people.
+    Marketing to the affluent requires: authority, exclusivity, and social proof.
+
+  visualization: |2
+          /\
+         /  \  Ultra-Affluent (1%)
+        /____\
+       /      \  Affluent (4%)
+      /________\
+     /          \  Mass Affluent (15%)
+    /____________\
+    /              \  Mass Market (80%)
+    /________________\
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 5: MAGNETIC MARKETING 3-PILLAR SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+magnetic_3_pillar:
+  name: "Magnetic Marketing 3-Pillar System"
+  source: "Magnetic Marketing"
+  agents: [kennedy-magnetic, kennedy-chief]
+  use_when: "Building or auditing a complete marketing system"
+
+  model:
+    pillar_1:
+      name: "ATTRACT"
+      purpose: "Generate leads and capture attention"
+      components:
+        - "Lead generation magnets"
+        - "Shock and Awe packages"
+        - "Advertising that demands response"
+        - "Referral systems"
+        - "Strategic alliances"
+      metric: "Cost per lead, lead quality, response rate"
+
+    pillar_2:
+      name: "CONVERT"
+      purpose: "Turn leads into paying customers"
+      components:
+        - "Sales presentations"
+        - "Sales letters and VSLs"
+        - "Webinars and events"
+        - "Consultative selling"
+        - "Follow-up sequences"
+      metric: "Conversion rate, average transaction value"
+
+    pillar_3:
+      name: "RETAIN"
+      purpose: "Maximize customer lifetime value"
+      components:
+        - "Monthly newsletter"
+        - "Ascension ladder"
+        - "Referral program"
+        - "Reactivation campaigns"
+        - "VIP/continuity programs"
+      metric: "Customer lifetime value, retention rate, referral rate"
+
+  decision_rule: |
+    All 3 pillars must be active simultaneously.
+    Pillar 1 without Pillar 2 = wasted leads.
+    Pillar 2 without Pillar 3 = leaving money on the table.
+    Pillar 3 without Pillar 1 = dying business.
+    Diagnose: which pillar is weakest? Fix that first.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 6: THE 9 FATAL MISTAKES
+# ═══════════════════════════════════════════════════════════════
+
+nine_fatal_mistakes:
+  name: "The 9 Fatal Mistakes in Marketing"
+  source: "Magnetic Marketing"
+  agents: [kennedy-magnetic, kennedy-audit]
+  use_when: "Quick diagnostic on why marketing is failing"
+
+  mistakes:
+    1:
+      name: "Boring Message"
+      symptom: "Nobody pays attention to your marketing"
+      fix: "Lead with a bold, specific, benefit-driven promise"
+
+    2:
+      name: "Wrong Target"
+      symptom: "Lots of interest, no sales"
+      fix: "Narrow your market. Target people who CAN and WILL buy"
+
+    3:
+      name: "No USP"
+      symptom: "You compete on price"
+      fix: "Create a USP using Kennedy's 4 pathways"
+
+    4:
+      name: "No Follow-Up"
+      symptom: "Leads go cold after first contact"
+      fix: "Build automated multi-step follow-up system"
+
+    5:
+      name: "No Deadline"
+      symptom: "People say they'll think about it"
+      fix: "Real deadline with real consequences for missing it"
+
+    6:
+      name: "No Offer"
+      symptom: "Marketing informs but doesn't sell"
+      fix: "Every piece must have a specific, compelling offer"
+
+    7:
+      name: "No Proof"
+      symptom: "Claims feel unbelievable"
+      fix: "Stack proof: testimonials, data, credentials, demonstrations"
+
+    8:
+      name: "No CTA"
+      symptom: "Reader doesn't know what to do next"
+      fix: "Explicit, detailed call to action. Tell them EXACTLY what to do."
+
+    9:
+      name: "No Tracking"
+      symptom: "Don't know what works"
+      fix: "Unique tracking for every channel, offer, and campaign"
+
+  decision_rule: |
+    GUILTY of 0-2 = Good marketing, optimize.
+    GUILTY of 3-5 = Significant problems, fix before scaling.
+    GUILTY of 6-9 = Marketing emergency, rebuild from scratch.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 7: THE USP 4 PATHWAYS
+# ═══════════════════════════════════════════════════════════════
+
+usp_4_pathways:
+  name: "USP 4 Pathways"
+  source: "The Ultimate Marketing Plan"
+  agents: [kennedy-offers, kennedy-chief]
+  use_when: "Creating or refining a Unique Selling Proposition"
+
+  pathways:
+    1:
+      name: "Attribute"
+      definition: "A unique characteristic of the product/service"
+      example: "The only CPA firm that guarantees your refund is maximized or we pay the difference"
+      test: "Can a competitor honestly make the same claim?"
+
+    2:
+      name: "Price-Value"
+      definition: "A unique price/value relationship"
+      example: "Fresh, hot pizza in 30 minutes or less, or it's FREE (Domino's)"
+      test: "Is the value proposition quantifiably different?"
+
+    3:
+      name: "Use/Application"
+      definition: "A unique way the product is used or applied"
+      example: "The chiropractor who makes house calls — in a fully equipped mobile clinic"
+      test: "Is the application genuinely different from standard delivery?"
+
+    4:
+      name: "User"
+      definition: "A unique market segment served"
+      example: "Financial planning exclusively for dentists within 5 years of retirement"
+      test: "Is the niche specific enough to exclude competitors?"
+
+  decision_rule: |
+    Start with Pathway 4 (User) — easiest to differentiate by niche.
+    Then layer Pathway 1 (Attribute) for maximum differentiation.
+    A USP must be: specific, meaningful to the buyer, defensible, and communicable in one sentence.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 8: THE WIDGET CONCEPT
+# ═══════════════════════════════════════════════════════════════
+
+widget_concept:
+  name: "The Widget Concept"
+  source: "Magnetic Marketing"
+  agents: [kennedy-magnetic, kennedy-offers]
+  use_when: "Packaging services into sellable products"
+
+  model:
+    problem: "Services are intangible, hard to compare, and easy to commoditize"
+    solution: "Package your service into a named, visual, proprietary THING (a widget)"
+
+    widget_requirements:
+      - "Proprietary name (trademarked feel)"
+      - "Visual representation (diagram, flowchart, steps)"
+      - "Defined process with numbered steps"
+      - "Clear before/after transformation"
+      - "Deliverables list"
+
+    examples:
+      - "Instead of 'consulting' → The Strategic Profit Acceleration System"
+      - "Instead of 'coaching' → The 90-Day Business Breakthrough Blueprint"
+      - "Instead of 'therapy' → The 5-Phase Emotional Freedom Protocol"
+
+  decision_rule: |
+    If you're selling a service, you MUST widgetize it.
+    A widget is sellable. A service is commoditized.
+    Name it → Diagram it → Number the steps → Package it → Price it as a product.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 9: SHOCK AND AWE PACKAGE
+# ═══════════════════════════════════════════════════════════════
+
+shock_and_awe:
+  name: "Shock and Awe Package"
+  source: "Magnetic Marketing"
+  agents: [kennedy-magnetic, kennedy-sales-letter]
+  use_when: "Converting qualified leads into appointments or sales"
+
+  model:
+    purpose: "Overwhelm prospects with so much proof, value, and professionalism that they pre-sell themselves"
+    timing: "Sent after lead capture, before sales conversation"
+
+    mandatory_contents:
+      - "Cover letter (personal, references their inquiry)"
+      - "Your story / company story"
+      - "Testimonials and case studies (thick stack)"
+      - "Media mentions and press"
+      - "Free report or valuable content"
+      - "FAQ addressing objections"
+      - "Clear next step with deadline"
+
+    optional_power_elements:
+      - "Book or published materials"
+      - "DVD or video access"
+      - "Product samples"
+      - "Comparison charts"
+      - "Award certificates"
+      - "Lumpy/dimensional items"
+
+  decision_rule: |
+    The Shock and Awe package must be PHYSICALLY impressive.
+    When the prospect holds it, they should think: "This company is serious."
+    Minimum 8 pieces. More is better. Weight and size matter.
+    It must arrive within 24 hours of lead capture.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 10: THE GREAT DIVIDE
+# ═══════════════════════════════════════════════════════════════
+
+great_divide:
+  name: "The Great Divide"
+  source: "No B.S. Direct Marketing"
+  agents: [kennedy-direct-response, kennedy-audit]
+  use_when: "Classifying and evaluating any marketing initiative"
+
+  model:
+    side_a:
+      name: "Direct Response Marketing"
+      characteristics:
+        - "Measurable results"
+        - "Specific offers"
+        - "Deadlines and urgency"
+        - "Clear CTAs"
+        - "ROI-trackable"
+        - "Copy-driven"
+      philosophy: "Every dollar spent must produce a measurable return"
+
+    side_b:
+      name: "Institutional / Brand Marketing"
+      characteristics:
+        - "Awareness-focused"
+        - "No specific offer"
+        - "No deadline"
+        - "No tracking"
+        - "Image-driven"
+        - "Design-led"
+      philosophy: "Build awareness and the sales will follow (eventually, maybe)"
+
+  decision_rule: |
+    ALWAYS stay on Side A (Direct Response).
+    If any piece crosses to Side B, it must be fixed or killed.
+    Brand is a BYPRODUCT of good direct response, not a goal.
+    The only acceptable brand-building is no-cost brand-building that happens
+    as a side effect of response-generating marketing.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 11: STORYSELLING SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+storyselling:
+  name: "StorySelling System"
+  source: "No B.S. Guide to Brand-Building by Direct Response"
+  agents: [kennedy-brand, kennedy-copy]
+  use_when: "Building brand through narrative-driven direct response"
+
+  model:
+    four_factors:
+      1:
+        name: "Connection"
+        definition: "Emotional bond between brand and customer"
+        how: "Shared values, origin story, vulnerability, common enemies"
+
+      2:
+        name: "Fascination"
+        definition: "Magnetic quality that makes people want to know more"
+        how: "Contrarian positions, unexpected backgrounds, bold predictions"
+
+      3:
+        name: "Persuasion"
+        definition: "Ability to move people to action through story"
+        how: "Problem-struggle-discovery-solution arc, proof woven in"
+
+      4:
+        name: "Profit"
+        definition: "Story that sells, not just entertains"
+        how: "Every story has a moral → and the moral leads to the offer"
+
+  decision_rule: |
+    A StorySelling piece must hit all 4 factors.
+    Connection without Persuasion = nice but unprofitable.
+    Persuasion without Fascination = forgettable.
+    Any story without Profit = entertainment, not marketing.
+
+# ═══════════════════════════════════════════════════════════════
+# MODEL 12: RENEGADE MILLIONAIRE SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+renegade_millionaire:
+  name: "Renegade Millionaire System"
+  source: "Renegade Millionaire"
+  agents: [kennedy-advisor, kennedy-business]
+  use_when: "Making business strategy and lifestyle design decisions"
+
+  principles:
+    1: "Go opposite the herd — contrarian positioning wins"
+    2: "Guard your time ruthlessly — it's your only non-renewable resource"
+    3: "Build systems that work without you"
+    4: "Associate only with positive, ambitious, successful people"
+    5: "Invest in yourself first — education, skills, mentors"
+    6: "Multiple income streams — never depend on one source"
+    7: "Market to the affluent — bigger margins, better clients"
+    8: "Sell outcomes, not processes"
+    9: "Take imperfect action — done beats perfect"
+    10: "Design your ideal lifestyle first, then build the business to support it"
+
+  decision_rule: |
+    When facing a business decision, check against all 10 principles.
+    If the decision violates 3+ principles, reject it.
+    The Renegade Millionaire optimizes for: freedom + income + impact.
+    Never sacrifice lifestyle for revenue. Build the business to serve the life.

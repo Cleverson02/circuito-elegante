@@ -1,0 +1,214 @@
+# Blueprint: 9 Fatal Marketing Mistakes Audit System
+# Dan Kennedy's Magnetic Marketing Diagnostic
+# Version: 1.0 | Date: 2026-02-11 | Squad: kennedy
+
+metadata:
+  name: "9 Fatal Mistakes Audit Blueprint"
+  version: "1.0"
+  created: "2026-02-11"
+  squad: kennedy
+  source_sop: "sop-9-fatal-mistakes-audit.md"
+  source_courses:
+    - "Magnetic Marketing: How To Attract A Flood Of New Customers"
+  description: >
+    Blueprint para auditar o marketing atual contra os 9 Erros Fatais identificados
+    por Kennedy no Magnetic Marketing. Diagnostico sistematico com score de gravidade
+    por erro e plano de correcao priorizado. Primeiro passo antes de construir
+    qualquer sistema novo.
+  kennedy_quote: >
+    "Apenas 1% dos negocios alcancam sucesso tremendo, 4% vao muito bem,
+    15% vao bem, 60% lutam para sobreviver e 20% falham completamente.
+    A diferenca nao esta no produto -- esta no SISTEMA DE MARKETING."
+
+agents:
+  primary_agent:
+    name: "fatal-mistakes-auditor"
+    role: "Auditor de Erros Fatais de Marketing"
+    responsibilities:
+      - Avaliar marketing atual contra cada um dos 9 erros fatais
+      - Atribuir score de gravidade (1-10) por erro
+      - Priorizar erros por impacto e facilidade de correcao
+      - Criar plano de correcao sequenciado
+      - Monitorar progresso na eliminacao dos erros
+
+  supporting_agents:
+    - name: "marketing-diagnostician"
+      role: "Diagnosticador de Marketing"
+      responsibilities:
+        - Coletar evidencias de cada erro (pecas, metricas, depoimentos)
+        - Comparar praticas atuais com padrao Kennedy
+        - Documentar gap entre estado atual e estado desejado
+        - Quantificar impacto financeiro de cada erro
+
+    - name: "correction-planner"
+      role: "Planejador de Correcoes"
+      responsibilities:
+        - Desenhar solucao especifica para cada erro identificado
+        - Estimar custo e prazo de correcao
+        - Sequenciar correcoes por prioridade
+        - Definir metricas de sucesso por correcao
+
+workflow_phases:
+
+  phase_1_evidence_collection:
+    name: "Coleta de Evidencias"
+    duration: "1 semana"
+    steps:
+      - step: "Inventario de marketing"
+        action: "Reunir todos os materiais, campanhas e metricas de marketing atuais"
+        output: "Dossie completo de marketing"
+        agent: "marketing-diagnostician"
+
+      - step: "Entrevistas internas"
+        action: "Conversar com equipe de vendas, marketing e atendimento"
+        output: "Relatorio de percepcoes internas"
+        agent: "marketing-diagnostician"
+
+      - step: "Analise de metricas"
+        action: "Revisar resultados de ultimos 12 meses por canal"
+        output: "Dashboard de performance historica"
+        agent: "marketing-diagnostician"
+
+  phase_2_diagnosis:
+    name: "Diagnostico por Erro"
+    duration: "1 semana"
+    steps:
+      - step: "Avaliar cada erro fatal"
+        action: >
+          Testar marketing atual contra cada um dos 9 erros:
+          (1) Sem sistema, (2) Sem USP, (3) Sem follow-up,
+          (4) Marketing institucional, (5) Sem oferta, (6) Sem urgencia,
+          (7) Sem tracking, (8) Sem lista, (9) Sem Magnetic Marketing System
+        output: "Score de gravidade (1-10) por erro"
+        agent: "fatal-mistakes-auditor"
+
+      - step: "Quantificar impacto"
+        action: "Estimar perda de receita atribuivel a cada erro"
+        output: "Impacto financeiro por erro"
+        agent: "marketing-diagnostician"
+
+      - step: "Priorizar erros"
+        action: "Ordenar por impacto x facilidade de correcao"
+        output: "Matriz de priorizacao"
+        agent: "fatal-mistakes-auditor"
+
+  phase_3_correction_plan:
+    name: "Plano de Correcao"
+    duration: "1 semana"
+    steps:
+      - step: "Desenhar solucoes"
+        action: "Solucao especifica referenciando SOPs Kennedy para cada erro"
+        output: "Plano de correcao por erro"
+        agent: "correction-planner"
+
+      - step: "Sequenciar implementacao"
+        action: "Definir timeline de correcoes (mais criticas primeiro)"
+        output: "Cronograma de implementacao"
+        agent: "correction-planner"
+
+      - step: "Definir metricas de sucesso"
+        action: "KPIs para medir se cada erro foi corrigido"
+        output: "Dashboard de correcoes"
+        agent: "correction-planner"
+
+  phase_4_execution:
+    name: "Execucao e Monitoramento"
+    duration: "8-12 semanas"
+    steps:
+      - step: "Implementar correcoes"
+        action: "Executar plano sequenciado de correcoes"
+        output: "Erros corrigidos"
+        agent: "fatal-mistakes-auditor"
+
+      - step: "Re-auditar"
+        action: "Re-executar diagnostico apos correcoes"
+        output: "Score atualizado por erro"
+        agent: "fatal-mistakes-auditor"
+
+      - step: "Monitorar continuamente"
+        action: "Audit trimestral para prevenir regressao"
+        output: "Relatorio trimestral de conformidade"
+        agent: "fatal-mistakes-auditor"
+
+quality_gates:
+
+  gate_1_evidence_collected:
+    name: "Evidencias Coletadas"
+    criteria:
+      - "Todos os materiais de marketing reunidos"
+      - "Metricas de 12 meses disponveis"
+      - "Entrevistas internas conduzidas"
+    blocker: true
+
+  gate_2_diagnosis_complete:
+    name: "Diagnostico Completo"
+    criteria:
+      - "Score de gravidade atribuido a cada um dos 9 erros"
+      - "Impacto financeiro estimado"
+      - "Priorizacao definida"
+    blocker: true
+
+  gate_3_corrections_implemented:
+    name: "Correcoes Implementadas"
+    criteria:
+      - "Todos os erros criticos (score 7+) corrigidos"
+      - "Re-audit mostra melhoria em score total"
+      - "Dashboard de monitoramento ativo"
+    blocker: false
+
+metrics:
+  audit_metrics:
+    total_score_before: "Soma dos scores dos 9 erros (max: 90 = todos criticos)"
+    total_score_after: "Meta: < 18 (media < 2 por erro)"
+    revenue_impact: "Receita recuperada apos correcoes"
+
+  per_error:
+    - error: "Sem sistema de marketing"
+      score_range: "1-10"
+      correction_sop: "sop-magnetic-system-setup.md"
+    - error: "Sem USP"
+      score_range: "1-10"
+      correction_sop: "sop-usp-construction.md"
+    - error: "Sem follow-up"
+      score_range: "1-10"
+      correction_sop: "sop-follow-up-sequence.md"
+    - error: "Marketing institucional"
+      score_range: "1-10"
+      correction_sop: "sop-great-divide-audit.md"
+    - error: "Sem oferta"
+      score_range: "1-10"
+      correction_sop: "sop-10-rules-compliance.md"
+    - error: "Sem urgencia"
+      score_range: "1-10"
+      correction_sop: "sop-10-rules-compliance.md"
+    - error: "Sem tracking"
+      score_range: "1-10"
+      correction_sop: "sop-6-step-dr-diet.md"
+    - error: "Sem lista"
+      score_range: "1-10"
+      correction_sop: "sop-lead-magnet-creation.md"
+    - error: "Sem Magnetic Marketing System"
+      score_range: "1-10"
+      correction_sop: "sop-magnetic-system-setup.md"
+
+resources:
+  tools:
+    - "Template de auditoria dos 9 erros"
+    - "Planilha de scoring com peso"
+    - "Matriz de priorizacao (impacto x facilidade)"
+    - "Dashboard de monitoramento trimestral"
+
+dependencies:
+  prerequisite_for:
+    - sop: "sop-magnetic-system-setup.md"
+    - sop: "sop-6-step-dr-diet.md"
+  uses_correction_sops:
+    - sop: "sop-usp-construction.md"
+    - sop: "sop-follow-up-sequence.md"
+    - sop: "sop-great-divide-audit.md"
+    - sop: "sop-10-rules-compliance.md"
+    - sop: "sop-lead-magnet-creation.md"
+
+sources:
+  - "Magnetic Marketing: How To Attract A Flood Of New Customers"
+  - "dan-kennedy-no-bs-direct-marketing-frameworks.md"

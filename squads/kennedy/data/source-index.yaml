@@ -1,0 +1,296 @@
+# Kennedy Squad — Source Material Index
+# Complete index of all Dan Kennedy source materials used
+# Version: 1.0.0
+# Created: 2026-02-11
+
+# ============================================================================
+# BOOKS (7 titles)
+# ============================================================================
+
+books:
+
+  - id: SRC-B01
+    title: "No B.S. Direct Marketing"
+    edition: "3rd Edition"
+    year: 2018
+    isbn: "978-1-59918-610-5"
+    pages: 336
+    primary_agent: kennedy-direct-response
+    secondary_agents: [kennedy-chief, kennedy-audit]
+    key_frameworks:
+      - "10 No B.S. Rules of Direct Marketing"
+      - "Results Triangle (Message + Market + Media)"
+      - "Money Pyramid"
+      - "The Great Divide (DR vs Institutional)"
+    chapters_of_note:
+      - ch: 1
+        topic: "The Big Switch — The Great Divide"
+      - ch: 2-3
+        topic: "The 10 No B.S. Rules"
+      - ch: 5
+        topic: "Money Pyramid and Market Selection"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-no-bs-direct-marketing-frameworks.md"
+
+  - id: SRC-B02
+    title: "Magnetic Marketing"
+    edition: "1st Edition"
+    year: 2018
+    isbn: "978-1-64588-102-3"
+    pages: 272
+    primary_agent: kennedy-magnetic
+    secondary_agents: [kennedy-chief, kennedy-audit]
+    key_frameworks:
+      - "3-Pillar System (Attract-Convert-Retain)"
+      - "9 Fatal Marketing Mistakes"
+      - "Shock-and-Awe Package"
+      - "Pest-to-Welcome-Guest"
+    chapters_of_note:
+      - ch: 1-3
+        topic: "The 9 Fatal Marketing Mistakes"
+      - ch: 4-6
+        topic: "The 3-Pillar System"
+      - ch: 9
+        topic: "Shock-and-Awe Package Design"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-magnetic-marketing-frameworks.md"
+
+  - id: SRC-B03
+    title: "The Ultimate Sales Letter"
+    edition: "3rd Edition"
+    year: 2006
+    isbn: "978-1-59337-499-1"
+    pages: 224
+    primary_agent: kennedy-sales-letter
+    secondary_agents: [kennedy-copy]
+    key_frameworks:
+      - "28-Step Sales Letter System"
+      - "12 Fill-in-the-Blank Headline Formulas"
+      - "A-Pile / B-Pile Framework"
+      - "Pest-to-Welcome-Guest Technique"
+    chapters_of_note:
+      - ch: 1-6
+        topic: "Preparation Steps (1-6)"
+      - ch: 7-18
+        topic: "Writing Steps (7-18)"
+      - ch: 19-28
+        topic: "Closing + Review Steps (19-28)"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-ultimate-sales-letter-frameworks.md"
+
+  - id: SRC-B04
+    title: "The Ultimate Marketing Plan"
+    edition: "3rd Edition"
+    year: 2006
+    isbn: "978-1-59337-598-1"
+    pages: 192
+    primary_agent: kennedy-offers
+    secondary_agents: [kennedy-media, kennedy-magnetic]
+    key_frameworks:
+      - "USP Construction (4 Pathways)"
+      - "Widget Concept (Irresistible Offer)"
+      - "Multimedia/Multichannel Imperative"
+      - "Classic Mail-Order Ad Structure"
+    chapters_of_note:
+      - ch: 2
+        topic: "USP — Your Secret Weapon"
+      - ch: 5
+        topic: "Direct Mail Mastery"
+      - ch: 7
+        topic: "The Widget and Premium Concept"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-ultimate-marketing-plan-frameworks.md"
+
+  - id: SRC-B05
+    title: "No B.S. Guide to Brand-Building by Direct Response"
+    edition: "1st Edition"
+    year: 2014
+    isbn: "978-1-59918-528-3"
+    pages: 304
+    primary_agent: kennedy-brand
+    secondary_agents: [kennedy-direct-response]
+    key_frameworks:
+      - "Winning Formula (Acquisition via DR, Retention via Brand)"
+      - "StorySelling (4 Key Factors)"
+      - "Disney/Hefner Brand-Building Model"
+      - "Brand-Building by Direct Response"
+    chapters_of_note:
+      - ch: 1-3
+        topic: "The Winning Formula"
+      - ch: 7-8
+        topic: "StorySelling Framework"
+      - ch: 12
+        topic: "Disney/Hefner Model"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-no-bs-brand-building-by-direct-response-frameworks.md"
+
+  - id: SRC-B06
+    title: "No B.S. Guide to Direct Response Social Media Marketing"
+    edition: "1st Edition"
+    year: 2015
+    isbn: "978-1-59918-570-2"
+    pages: 256
+    primary_agent: kennedy-media
+    secondary_agents: [kennedy-direct-response]
+    key_frameworks:
+      - "DR Social Media Principles"
+      - "Social Media as DR Channel"
+      - "Content That Converts (not just engages)"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-no-bs-direct-response-social-media-frameworks.md"
+
+  - id: SRC-B07
+    title: "The Ultimate No B.S. Business Success Book"
+    edition: "1st Edition"
+    year: 2004
+    isbn: "978-1-932156-76-4"
+    pages: 320
+    primary_agent: kennedy-business
+    secondary_agents: [kennedy-advisor]
+    key_frameworks:
+      - "25 Eternal Truths"
+      - "Business Maturity Framework"
+      - "Business Turnaround System (8-step)"
+      - "Five Keys to Multiplied Cash Flow"
+    extracted_frameworks_file: "outputs/extracted/dan-kennedy-ultimate-no-bs-business-success-frameworks.md"
+
+# ============================================================================
+# COURSES (10 courses)
+# ============================================================================
+
+courses:
+
+  - id: SRC-C01
+    title: "Copywriting Academy"
+    transcription_count: 15
+    primary_agent: kennedy-copy
+    secondary_agents: [kennedy-sales-letter]
+    key_frameworks:
+      - "Fascination Bullet System"
+      - "Client Management System"
+      - "Copywriter's Toolbox"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/copywriting-academy/"
+    course_summary_path: "outputs/courses/dan-kennedy-copywriting-academy/"
+
+  - id: SRC-C02
+    title: "Mind Hijacking"
+    transcription_count: 22
+    primary_agent: kennedy-persuasion
+    key_frameworks:
+      - "Mind Hijacking System"
+      - "Fascination Marketing Triggers"
+      - "Emotional Trigger Architecture"
+      - "Belief Shifting Sequence"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/mind-hijacking/"
+    course_summary_path: "outputs/courses/dan-kennedy-mind-hijacking/"
+
+  - id: SRC-C03
+    title: "Fascination Marketing System"
+    transcription_count: 12
+    primary_agent: kennedy-persuasion
+    secondary_agents: [kennedy-copy]
+    key_frameworks:
+      - "Fascination Marketing Triggers"
+      - "Fascination Bullet Types"
+      - "Curiosity Loop System"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/fascination-marketing/"
+    course_summary_path: "outputs/courses/dan-kennedy-fascination-marketing/"
+
+  - id: SRC-C04
+    title: "Magnetic Marketing System"
+    transcription_count: 0
+    notes: "Russell Brunson Edition — book + course hybrid"
+    primary_agent: kennedy-magnetic
+    key_frameworks:
+      - "Magnetic Marketing Triangle"
+      - "Shock-and-Awe Package Design"
+      - "Multi-Step Campaign Construction"
+
+  - id: SRC-C05
+    title: "Affluent Client Attraction Playbook"
+    transcription_count: 10
+    primary_agent: kennedy-affluent
+    key_frameworks:
+      - "Affluent Client Attraction System"
+      - "Premium Positioning Framework"
+      - "Affluent Psychology Map"
+      - "Money Pyramid Deep Dive"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/affluent-client-attraction/"
+    course_summary_path: "outputs/courses/dan-kennedy-affluent-client-attraction/"
+
+  - id: SRC-C06
+    title: "The Ultimate No BS Referral Machine"
+    transcription_count: 20
+    primary_agent: kennedy-referrals
+    key_frameworks:
+      - "11-Point Referral System"
+      - "Champion Circle of Influence"
+      - "Endorsed Mailing System"
+      - "Lost Customer Reactivation"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/referral-machine/"
+    course_summary_path: "outputs/courses/dan-kennedy-referral-machine/"
+
+  - id: SRC-C07
+    title: "Renegade Millionaire"
+    transcription_count: 0
+    notes: "Audio course, principles referenced from book and transcripts"
+    primary_agent: kennedy-advisor
+    key_frameworks:
+      - "Renegade Millionaire System"
+      - "25 Eternal Truths"
+      - "Peak Productivity System"
+      - "Time Vampires Framework"
+
+  - id: SRC-C08
+    title: "Midas Touch"
+    transcription_count: 14
+    primary_agent: kennedy-audit
+    secondary_agents: [kennedy-business]
+    key_frameworks:
+      - "Money Pyramid Analysis"
+      - "Marketing Triangle Audit"
+      - "6-Step Direct Marketing Diet"
+      - "5 Holes in the Bucket"
+    transcription_path: "/Users/uafrias/Documents/CURSOS-MENTES-LENDARIAS/transcricoes-cursos/dan-kennedy/midas-touch/"
+    course_summary_path: "outputs/courses/dan-kennedy-midas-touch/"
+
+  - id: SRC-C09
+    title: "Brass Balls"
+    transcription_count: 0
+    notes: "Offer and pricing courage course"
+    primary_agent: kennedy-offers
+    key_frameworks:
+      - "Pricing Courage Framework"
+      - "Three Types of Offers"
+      - "Preponderance of Proof"
+
+  - id: SRC-C10
+    title: "Magnetic Marketing (Russell Brunson Edition)"
+    transcription_count: 0
+    notes: "Updated version with Russell Brunson commentary"
+    primary_agent: kennedy-magnetic
+    key_frameworks:
+      - "Modern Magnetic Marketing Application"
+      - "Digital + Direct Mail Integration"
+
+# ============================================================================
+# EXTRACTED FRAMEWORKS (from books)
+# ============================================================================
+
+extracted_frameworks:
+  path: "outputs/extracted/"
+  files:
+    - "dan-kennedy-no-bs-direct-marketing-frameworks.md"
+    - "dan-kennedy-magnetic-marketing-frameworks.md"
+    - "dan-kennedy-ultimate-sales-letter-frameworks.md"
+    - "dan-kennedy-ultimate-marketing-plan-frameworks.md"
+    - "dan-kennedy-no-bs-brand-building-by-direct-response-frameworks.md"
+    - "dan-kennedy-no-bs-direct-response-social-media-frameworks.md"
+    - "dan-kennedy-ultimate-no-bs-business-success-frameworks.md"
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  total_sources: 17
+  total_books: 7
+  total_courses: 10
+  total_transcriptions: 93
+  total_frameworks_extracted: 45

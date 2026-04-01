@@ -1,0 +1,220 @@
+name: etl-ops
+version: "1.0.0"
+entry_agent: etl-chief
+slashPrefix: etlOps
+title: "ETL Operations Squad"
+description: >-
+  Squad operacional para execução de pipelines ETL usando a infraestrutura
+  existente em infrastructure/services/etl/. Três agentes funcionais que
+  sabem operar CLIs, collectors e ETLService API. Sem mind clones —
+  heurísticas operacionais e de qualidade como fundação.
+author: Alan Nicolas
+icon: "pipeline"
+type: pipeline
+
+metadata:
+  version: "1.0.0"
+  score: 3.8
+
+workspace_integration:
+  level: workspace_first
+  rationale: >-
+    ETL-OPS extrai dados de múltiplas fontes e deve ancorar saídas canônicas
+    no workspace quando houver contexto de negócio, mantendo fallback legado
+    em outputs/etl para execuções sem slug.
+  handoff:
+    target: workspace-chief
+    condition: "Quando squad é instalado em ambiente com workspace/ ativo"
+    contract: "ETL-OPS declara write_paths; workspace-chief valida e integra"
+  read_paths:
+    - workspace/businesses/
+    - workspace/domains/
+    - workspace/_templates/
+    - docs/
+    - squads/etl-ops/data/
+    - infrastructure/services/etl/
+  write_paths:
+    - workspace/businesses/
+    - workspace/_templates/etl/
+    - outputs/etl/
+    - docs/etl/
+  template_namespace: etl
+  canonical_outputs_root: workspace/businesses/{slug}/etl/
+  custom_outputs_root: docs/etl/{slug}/
+  legacy_outputs_root: outputs/etl/{run_id}/
+  bootstrap:
+    required: true
+    script: "scripts/bootstrap-etl-workspace.sh"
+  essentials_validation:
+    required: true
+    script: "scripts/validate-etl-essentials.sh"
+  env_bootstrap:
+    required: false
+    script: "scripts/etl-env-bootstrap.sh"
+
+# Infrastructure Reference
+infrastructure:
+  service_path: infrastructure/services/etl
+  service_version: "2.6.0"
+  cli_tools:
+    - bin/youtube-transcript.js
+    - bin/youtube-channel.js
+    - bin/youtube-metadata.js
+    - bin/youtube-clean-transcript.js
+    - bin/youtube-pipeline.js
+    - bin/youtube-diarize.js
+    - bin/youtube-diarize-autoheal.js
+    - bin/fetch-page.js
+    - bin/transcribe.js
+    - bin/ebook-to-markdown.js
+    - bin/firecrawl-scrape.sh
+    - bin/firecrawl-search.sh
+    - bin/cloudflare-crawl.sh
+    - bin/scrapling-fetch.py
+  collectors:
+    - collectors/web-collector.js
+    - collectors/pdf-collector.js
+    - collectors/epub-collector.js
+    - collectors/ebook-collector.js
+    - collectors/zlibrary-collector.js
+    - collectors/chatwoot-collector.js
+    - collectors/document-collector.js
+    - collectors/transcribe-collector.js
+  api_class: service.js  # ETLService
+
+  # External tools (system dependencies)
+  external_tools:
+    - name: ffmpeg
+      purpose: "Video/audio processing, scene detection, frame extraction"
+      install: "brew install ffmpeg (macOS) / apt install ffmpeg (Linux)"
+      required_for: [video_transcription, direct_video_url, video_multimodal, extract-keyframes]
+    - name: whisper
+      purpose: "Speech-to-text transcription"
+      install: "pip install openai-whisper"
+      required_for: [video_transcription, direct_video_url, video_multimodal]
+    - name: scenedetect
+      purpose: "Advanced scene detection with multiple algorithms"
+      install: "pip install scenedetect[opencv]"
+      required_for: [video_multimodal, extract-keyframes]
+      fallback: "ffmpeg scene filter"
+    - name: firecrawl-cli
+      purpose: "Web scraping, search+scrape, site crawling for AI agents"
+      install: "npx -y firecrawl-cli@latest init --all --browser"
+      required_for: [search_and_scrape, web_page_js_heavy, site_crawl]
+      fallback: "fetch-page.js (single page) / EXA (search only)"
+      auth: "FIRECRAWL_API_KEY or firecrawl login --browser"
+      pricing: "500 free credits, then $9/mo for 3K credits"
+    - name: cloudflare-crawl
+      purpose: "Site crawling at scale, JS rendering, incremental re-crawl"
+      install: "Cloudflare account + API token with Browser Rendering permission"
+      required_for: [site_crawl, web_page_js_heavy]
+      fallback: "firecrawl crawl"
+      auth: "CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID"
+      pricing: "render:false free (beta), render:true = $0.09/hr + $2/concurrent browser"
+
+# Pattern Library
+pattern_library:
+  prefix: EO
+  naming_convention:
+    format: "{PREFIX}-{CATEGORY}-{NUMBER}"
+    example: "EO-TP-001"
+  categories:
+    - id: TP
+      name: "Task Patterns"
+      description: "Patterns for ETL task structure"
+    - id: VP
+      name: "Veto Patterns"
+      description: "Veto conditions for ETL operations"
+    - id: CP
+      name: "Checkpoint Patterns"
+      description: "Validation checkpoints between phases"
+
+# Task Standards
+task_standards:
+  enforce_anatomy: true
+  validator: "EO-TP-001"
+  required_fields:
+    - task_name
+    - status
+    - responsible_executor
+    - execution_type
+    - input
+    - output
+    - action_items
+    - acceptance_criteria
+
+# Executor Types
+executor_types:
+  agent:
+    id: "EO-EP-001"
+    name: "ETL Agent"
+    use_for: ["Pipeline orchestration", "Source analysis", "Quality validation"]
+  worker:
+    id: "EO-EP-002"
+    name: "ETL Worker"
+    use_for: ["CLI execution", "File operations", "Batch processing"]
+
+# Workflow Configuration
+workflow_config:
+  checkpoint_policy: always_active
+  fail_fast: true
+  allow_manual_override: false
+  local_quality_gate:
+    command: "npm run validate:etl-ops"
+    required_before_completion: true
+    enforcement_layer: "agents+tasks+workflows"
+
+# Task Catalog
+task_catalog:
+  public_tasks:
+    - id: load-workspace-context
+      path: tasks/load-workspace-context.md
+      entrypoint: false
+      modes: [single, batch, rag]
+    - id: process
+      path: tasks/process.md
+      entrypoint: true
+      modes: [single, batch, rag]
+    - id: compile
+      path: tasks/compile.md
+      entrypoint: false
+      modes: [batch]
+    - id: enrich
+      path: tasks/enrich.md
+      entrypoint: false
+      modes: [single, batch]
+    - id: extract-keyframes
+      path: tasks/extract-keyframes.md
+      entrypoint: false
+      modes: [single, batch]
+      strategies: [scene_detection, interval, adaptive]
+    - id: extract-podcast
+      path: tasks/extract-podcast.md
+      entrypoint: true
+      modes: [single, batch]
+      phases: [extract, diarize_deterministic, diarize_llm_review, autoheal]
+    - id: etl-env-bootstrap
+      path: tasks/etl-env-bootstrap.md
+      entrypoint: true
+      modes: [single]
+  contracts:
+    input_schema: data/process.schema.json
+    routing_profiles: data/routing-profiles.yaml
+    checkpoints: data/checkpoints.yaml
+    output_contract: data/output-contract.yaml
+    enriched_transcript_schema: data/enriched-transcript.schema.json
+
+# Heuristic Foundation
+heuristics:
+  operational:
+    - "VERIFY PHYSICALLY BEFORE THEORIZING - ls, curl, node antes de assumir"
+    - "DISCOVERY BEFORE IMPLEMENTATION - mapear sistemas existentes antes de construir"
+    - "DETERMINISM FIRST - Script > Query > Regex > LLM (ultimo recurso)"
+    - "ETL FIRST - fetch-page.js (zero tokens) > WebFetch (gasta tokens)"
+    - "NEVER MOCK WHEN REAL DATA EXISTS"
+  quality:
+    - "ZERO WRONG PATHS - impossibilitar caminhos errados"
+    - "VETO CONDITIONS - cada checkpoint tem condicoes de bloqueio"
+    - "UNIDIRECTIONAL FLOW - nada volta, so avanca"
+    - "CHECKPOINT COVERAGE - validar entre cada fase"
+    - "ZERO TIME GAPS - handoffs automaticos sem espera"

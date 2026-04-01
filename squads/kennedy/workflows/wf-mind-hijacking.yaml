@@ -1,0 +1,380 @@
+# Persuasion & Mind Hijacking Campaign Workflow
+# Based on Dan Kennedy's Mind Hijacking Course + Fascination Marketing System
+# Source: Mind Hijacking (22 transcriptions) + Fascination Marketing (12 transcriptions)
+# Version: 1.0.0
+
+id: wf-mind-hijacking
+name: "Persuasion & Mind Hijacking Campaign"
+version: "1.0.0"
+duration: "2-3 days"
+description: |
+  Complete workflow to create a persuasion-heavy marketing campaign
+  using Kennedy's Mind Hijacking and Fascination Marketing systems.
+  Builds psychologically-driven copy with emotional triggers, fascination
+  bullets, and belief-shifting mechanisms.
+
+  PHILOSOPHY: "All buying is emotional. Logic is used to justify
+  the emotional decision already made."
+
+  RESULT: A complete persuasion campaign with psychological triggers,
+  fascination sequences, belief architecture, and conversion copy
+  designed to hijack the prospect's mind.
+
+# ===============================================================================
+# WHEN TO USE THIS WORKFLOW
+# ===============================================================================
+
+best_for:
+  - "Creating high-persuasion sales copy or campaigns"
+  - "Launching in a skeptical or oversaturated market"
+  - "Building belief-shifting marketing sequences"
+  - "Creating fascination-driven lead magnets or content"
+  - "Re-engaging a jaded audience"
+
+decision_matrix_fit:
+  complexity: medium-high
+  agents_required: 4
+  estimated_duration: "2-3 days"
+  user_involvement: "medium"
+  prerequisites:
+    - "Deep understanding of prospect's beliefs and objections"
+    - "Product/service with genuine proof of results"
+    - "Willingness to use aggressive persuasion ethically"
+
+# ===============================================================================
+# AGENTS INVOLVED
+# ===============================================================================
+
+clone_combinations:
+  primary:
+    - agent: kennedy-chief
+      role: "Orchestration, ethical persuasion guardrails"
+      phases: [0]
+
+    - agent: kennedy-persuasion
+      role: "Mind hijacking framework, emotional triggers, belief architecture"
+      phases: [1, 2]
+
+    - agent: kennedy-copy
+      role: "Fascination bullets, persuasion copy, emotional sequences"
+      phases: [2, 3]
+
+    - agent: kennedy-offers
+      role: "Offer framing with psychological anchoring"
+      phases: [3]
+
+  synergies:
+    - agents: [kennedy-persuasion, kennedy-copy]
+      pattern: "Persuasion maps the psychological architecture, Copy implements with words"
+
+    - agents: [kennedy-persuasion, kennedy-offers]
+      pattern: "Persuasion creates desire, Offers channels it into action"
+
+# ===============================================================================
+# PHASES
+# ===============================================================================
+
+phases:
+  - id: PHASE-0
+    name: "Psychological Discovery"
+    days: "Day 0"
+    tier: 0
+    description: |
+      Map the prospect's psychological landscape: beliefs, fears,
+      desires, objections, and emotional triggers.
+
+      PRINCIPLE: "Before you can hijack someone's mind, you must
+      first understand what's already in it."
+
+    agent: kennedy-chief
+
+    tasks:
+      - task_id: T0.1
+        name: "Prospect Belief Mapping"
+        required: true
+        description: |
+          Map the prospect's current beliefs:
+          - What do they believe about the problem?
+          - What do they believe about the solution?
+          - What do they believe about YOU?
+          - What false beliefs must be broken?
+          - What new beliefs must be installed?
+        output: "belief_map.yaml"
+
+      - task_id: T0.2
+        name: "Emotional Trigger Inventory"
+        required: true
+        description: |
+          Identify the dominant emotional triggers:
+          - Fear (of loss, failure, missing out)
+          - Greed (desire for gain, advantage, wealth)
+          - Guilt (not doing enough, letting down others)
+          - Anger (frustration with current situation)
+          - Pride (desire for recognition, status)
+          - Exclusivity (being part of the select few)
+          Rank by intensity for this specific audience.
+        output: "emotional_triggers.yaml"
+
+      - task_id: T0.3
+        name: "Objection Architecture"
+        required: true
+        description: |
+          Map every objection the prospect will have:
+          - Price objections
+          - Trust objections
+          - "I can do it myself" objections
+          - Timing objections
+          - Spousal/partner objections
+          For each, prepare the pre-emptive counter.
+        output: "objection_architecture.yaml"
+
+    handoff_to_phase-1:
+      from_agent: "auto"
+      to_agent: "kennedy-persuasion"
+      to_phase: "PHASE-1"
+      trigger: "Discovery complete"
+      passes: "Target audience psychology profile"
+
+    checkpoint:
+      id: CP_PHASE_0
+      name: "Psychological Discovery Complete"
+      criteria:
+        - "Belief map with current and target beliefs"
+        - "Emotional triggers ranked"
+        - "Objection architecture with counters"
+      human_review: true
+      veto_conditions:
+        - condition: "No understanding of prospect's current beliefs"
+          action: "BLOCK - Cannot shift beliefs you don't understand"
+
+  - id: PHASE-1
+    name: "Mind Hijacking Architecture"
+    days: "Day 1"
+    tier: 1
+    description: |
+      Design the persuasion architecture using Kennedy's Mind Hijacking
+      framework.
+
+      PRINCIPLE: "You don't change minds by arguing. You change minds
+      by telling stories that create new internal experiences."
+
+    agent: kennedy-persuasion
+
+    tasks:
+      - task_id: T1.1
+        name: "Design Mind Hijacking Sequence"
+        required: true
+        description: |
+          Build the mind hijacking sequence:
+          1. Pattern Interrupt (break the current thought pattern)
+          2. Fascination Opening (create irresistible curiosity)
+          3. Belief Shift (challenge existing belief with story/proof)
+          4. New Reality Installation (paint the new possibility)
+          5. Desire Amplification (make them FEEL the new reality)
+          6. Action Bridge (seamless transition to offer)
+        output: "mind_hijacking_sequence.yaml"
+
+      - task_id: T1.2
+        name: "Build Fascination Trigger Map"
+        required: true
+        description: |
+          Map fascination triggers for each stage:
+          - What creates curiosity at each point?
+          - What proof shatters the old belief?
+          - What stories make the new reality vivid?
+          - What makes saying "no" feel painful?
+          Use Kennedy's Fascination Marketing triggers.
+        output: "fascination_trigger_map.yaml"
+
+      - task_id: T1.3
+        name: "Design Emotional Escalation Curve"
+        required: true
+        description: |
+          Map the emotional journey:
+          - Start: Mild curiosity / recognition of problem
+          - Build: Growing frustration with status quo
+          - Peak: Intense desire for transformation
+          - Bridge: Excitement about the solution
+          - Close: Urgency to act NOW
+          Every piece of copy must move them along this curve.
+        output: "emotional_curve.yaml"
+
+    handoff_to_phase-2:
+      from_agent: "auto"
+      to_agent: "kennedy-persuasion"
+      to_phase: "PHASE-2"
+      trigger: "Messaging framework defined"
+      passes: "Psychological triggers mapped"
+
+    checkpoint:
+      id: CP_PHASE_1
+      name: "Architecture Complete"
+      criteria:
+        - "Mind hijacking sequence designed (6 stages)"
+        - "Fascination triggers mapped"
+        - "Emotional curve plotted"
+      human_review: true
+      veto_conditions:
+        - condition: "Persuasion architecture relies only on logic/features"
+          action: "BLOCK - Kennedy demands emotional architecture first"
+
+  - id: PHASE-2
+    name: "Persuasion Copy Creation"
+    days: "Day 1-2"
+    tier: 2
+    description: |
+      Write the persuasion-heavy copy using the architecture.
+
+    agent: kennedy-copy
+
+    tasks:
+      - task_id: T2.1
+        name: "Write Fascination Bullet Arsenal"
+        required: true
+        description: |
+          Create 50+ fascination bullets:
+          - Blind fascinations ("The 3-word phrase that...")
+          - Revelation fascinations ("Why everything you know about...")
+          - Contrarian fascinations ("Why the 'experts' are wrong...")
+          - Specificity fascinations ("How a 43-year-old plumber...")
+          - Fear fascinations ("The hidden danger in...")
+          Kennedy: "Fascination bullets are the machine guns of copy."
+        output: "fascination_arsenal.md"
+
+      - task_id: T2.2
+        name: "Write Belief-Shifting Sequences"
+        required: true
+        description: |
+          For each false belief that needs breaking:
+          - Story that challenges the belief
+          - Proof that demolishes it
+          - New belief that replaces it
+          - Evidence that reinforces the new belief
+          Use Kennedy's "proof layering" technique.
+        output: "belief_shift_copy.md"
+
+      - task_id: T2.3
+        name: "Write Complete Campaign Copy"
+        required: true
+        description: |
+          Assemble the full campaign:
+          - Main sales piece (letter, page, or script)
+          - Supporting pieces (emails, ads, follow-ups)
+          - All copy follows the mind hijacking sequence
+          - Every paragraph earns the next
+        output: "campaign_copy.md"
+
+    handoff_to_phase-3:
+      from_agent: "auto"
+      to_agent: "kennedy-copy"
+      to_phase: "PHASE-3"
+      trigger: "Triggers and stories defined"
+      passes: "Ready for copywriting implementation"
+
+    checkpoint:
+      id: CP_PHASE_2
+      name: "Copy Complete"
+      criteria:
+        - "50+ fascination bullets created"
+        - "Belief-shifting sequences written"
+        - "Complete campaign copy assembled"
+      human_review: false
+      veto_conditions:
+        - condition: "Fewer than 50 fascination bullets"
+          action: "BLOCK - Volume creates options. Write more."
+
+  - id: PHASE-3
+    name: "Offer Integration + Launch"
+    days: "Day 2-3"
+    tier: 2
+    description: |
+      Integrate the offer into the persuasion framework and
+      prepare for launch.
+
+    agent: kennedy-offers
+
+    tasks:
+      - task_id: T3.1
+        name: "Frame Offer with Psychological Anchoring"
+        required: true
+        description: |
+          Present the offer using persuasion principles:
+          - Price anchoring (compare to higher alternatives)
+          - Loss framing (what they lose by NOT buying)
+          - Social proof stacking (others who already decided)
+          - Scarcity mechanics (real limits, not fake)
+          - Guarantee as confidence signal
+        output: "offer_framing.md"
+
+      - task_id: T3.2
+        name: "Create Urgency Architecture"
+        required: true
+        description: |
+          Build genuine urgency:
+          - Real deadline with real consequence
+          - Fast-action bonus (disappears first)
+          - Limited quantity (actual limit)
+          - Price increase schedule (published)
+          Kennedy: "Fake urgency insults intelligence.
+          Real urgency compels action."
+        output: "urgency_architecture.yaml"
+
+      - task_id: T3.3
+        name: "Final Campaign Assembly"
+        required: true
+        description: |
+          Assemble and review complete campaign:
+          - Verify mind hijacking sequence flows
+          - Check emotional curve is maintained
+          - Confirm offer integration is seamless
+          - Validate all fascination bullets placed
+        output: "final_campaign.md"
+
+    checkpoint:
+      id: CP_PHASE_3
+      name: "Campaign Ready"
+      criteria:
+        - "Offer framed with psychological anchoring"
+        - "Urgency is genuine and compelling"
+        - "Complete campaign assembled and reviewed"
+      human_review: true
+      veto_conditions:
+        - condition: "Urgency is manufactured/fake"
+          action: "REWRITE - Real urgency only"
+        - condition: "Offer not integrated into persuasion flow"
+          action: "BLOCK - Offer must feel like natural conclusion"
+
+# ===============================================================================
+# FINAL OUTPUT
+# ===============================================================================
+
+final_output:
+  deliverables:
+    - name: "Mind Hijacking Campaign"
+      file: "final_campaign.md"
+      description: "Complete persuasion campaign"
+    - name: "Fascination Arsenal"
+      file: "fascination_arsenal.md"
+      description: "50+ fascination bullets for reuse"
+    - name: "Belief Architecture"
+      file: "belief_shift_copy.md"
+      description: "Belief-shifting sequences"
+    - name: "Emotional Curve Map"
+      file: "emotional_curve.yaml"
+      description: "Emotional journey documentation"
+  output_directory: "outputs/kennedy-mind-hijacking-{timestamp}/"
+
+# ===============================================================================
+# METADATA
+# ===============================================================================
+
+metadata:
+  version: "1.0.0"
+  created: "2026-02-11"
+  author: "kennedy-squad"
+  source_frameworks:
+    - "Mind Hijacking Course — Persuasion Architecture"
+    - "Fascination Marketing System — Triggers and Bullets"
+    - "Copywriting Academy — Emotional Copy Techniques"
+  total_phases: 4
+  total_tasks: 12
