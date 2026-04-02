@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "tsx watch backend/src/server.ts",
-    "start": "node dist/server.js",
+    "start": "node dist/backend/src/server.js",
     "build": "tsc",
     "lint": "eslint backend/src/**/*.ts config/**/*.ts",
     "lint:fix": "eslint --fix backend/src/**/*.ts config/**/*.ts",

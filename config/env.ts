@@ -7,35 +7,35 @@ export const env = createEnv({
     PORT: z.coerce.number().default(3000),
     LOG_LEVEL: z.enum(['error', 'warn', 'info', 'debug']).default('info'),
 
-    // Database (Supabase)
-    DATABASE_URL: z.string().url(),
-    SUPABASE_URL: z.string().url(),
-    SUPABASE_ANON_KEY: z.string().min(1),
-    SUPABASE_SERVICE_ROLE_KEY: z.string().min(1),
+    // Database (Supabase) — required from Story 1.2+
+    DATABASE_URL: z.string().url().optional(),
+    SUPABASE_URL: z.string().url().optional(),
+    SUPABASE_ANON_KEY: z.string().min(1).optional(),
+    SUPABASE_SERVICE_ROLE_KEY: z.string().min(1).optional(),
 
-    // Redis
+    // Redis — required from Story 1.5+
     REDIS_URL: z.string().default('redis://localhost:6379'),
 
-    // OpenAI
-    OPENAI_API_KEY: z.string().min(1),
+    // OpenAI — required from Story 1.4+
+    OPENAI_API_KEY: z.string().min(1).optional(),
 
-    // Evolution API
-    EVOLUTION_API_URL: z.string().url(),
-    EVOLUTION_API_KEY: z.string().min(1),
+    // Evolution API — required from Epic 2+
+    EVOLUTION_API_URL: z.string().url().optional(),
+    EVOLUTION_API_KEY: z.string().min(1).optional(),
     EVOLUTION_INSTANCE_NAME: z.string().default('stella-whatsapp'),
 
-    // Elevare API
-    ELEVARE_API_URL: z.string().url(),
-    ELEVARE_API_KEY: z.string().min(1),
+    // Elevare API — required from Epic 2+
+    ELEVARE_API_URL: z.string().url().optional(),
+    ELEVARE_API_KEY: z.string().min(1).optional(),
 
-    // Chatwoot
-    CHATWOOT_API_URL: z.string().url(),
-    CHATWOOT_API_TOKEN: z.string().min(1),
+    // Chatwoot — required from Epic 2+
+    CHATWOOT_API_URL: z.string().url().optional(),
+    CHATWOOT_API_TOKEN: z.string().min(1).optional(),
     CHATWOOT_ACCOUNT_ID: z.coerce.number().default(1),
 
-    // Google Drive (FAQ Sync)
-    GOOGLE_DRIVE_FOLDER_ID: z.string().min(1),
-    GOOGLE_SERVICE_ACCOUNT_KEY: z.string().min(1),
+    // Google Drive (FAQ Sync) — required from Story 1.4+
+    GOOGLE_DRIVE_FOLDER_ID: z.string().min(1).optional(),
+    GOOGLE_SERVICE_ACCOUNT_KEY: z.string().min(1).optional(),
 
     // Sentry
     SENTRY_DSN: z.string().url().optional(),

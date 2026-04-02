@@ -49,8 +49,7 @@ export async function registerHealthRoutes(app: FastifyInstance): Promise<void> 
       });
     }
 
-    const statusCode = result.status === 'ok' ? 200 : 200;
-    return reply.status(statusCode).send(result);
+    return reply.send(result);
   });
 
   app.get('/health/ready', async (_request, reply) => {
