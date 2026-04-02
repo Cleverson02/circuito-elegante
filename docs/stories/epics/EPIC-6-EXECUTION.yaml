@@ -1,0 +1,216 @@
+# Epic 6: Production Hardening & Launch — Execution Plan
+# Status: READY (blocked by Epic 5)
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-6
+  title: "Production Hardening & Launch"
+  description: "Monitoring, alertas, LGPD, deploy final, runbook — Stella vai ao ar"
+  status: ready
+  priority: P1-high
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-6"
+
+  dependencies:
+    external:
+      - "Digital Ocean Droplet provisionado"
+      - "Cloudflare DNS configurado"
+      - "Sentry project criado"
+      - "Dominio stella.circuitoelegante.com.br disponivel"
+    internal:
+      - "EPIC-5 completo (Chatwoot + handover funcional)"
+
+  success_criteria:
+    - "Stella rodando em producao (Docker Compose na Digital Ocean)"
+    - "Monitoring Sentry com alertas configurados"
+    - "LGPD compliance: anonimizacao 24 meses + endpoint exclusao"
+    - "Smoke tests em producao passando"
+    - "Playbooks e runbook documentados"
+    - "Soft launch com 5 hoteis piloto"
+
+  estimated_effort: "4-6 dias de desenvolvimento"
+
+waves:
+  - wave: 1
+    name: "Observability (Paralelo)"
+    stories: ["6.1", "6.2"]
+    parallel: true
+    rationale: "Sentry alerts e health check expandido sao independentes"
+
+  - wave: 2
+    name: "Compliance & Performance (Paralelo)"
+    stories: ["6.3", "6.4"]
+    parallel: true
+    rationale: "LGPD e performance tuning sao independentes"
+
+  - wave: 3
+    name: "Documentation & Deploy (Paralelo)"
+    stories: ["6.5", "6.6"]
+    parallel: true
+    rationale: "Playbooks e deploy sao independentes"
+
+  - wave: 4
+    name: "Validation & Launch"
+    stories: ["6.7", "6.8"]
+    parallel: true
+    rationale: "Smoke tests prod e runbook podem ser paralelos"
+
+stories:
+  - id: "6.1"
+    title: "Sentry Alerts (Elevare latencia, rate limit, injection)"
+    agent: "@dev"
+    wave: 1
+    nfr_coverage: ["NFR6"]
+    estimated_effort: "S (~2-4h)"
+    acceptance_criteria:
+      - "Sentry SDK configurado com performance tracing"
+      - "Alertas: Elevare latencia > 8s, HTTP 5xx rate > 1%"
+      - "Alertas: prompt injection detectada, Safety Agent rejection > 10%"
+      - "Alertas: Redis connection lost, BullMQ job failure > 5%"
+      - "Webhook Discord/Slack para alertas criticos"
+      - "Metricas pipeline: latencia por agente em agent_metrics"
+
+  - id: "6.2"
+    title: "Health Check Expandido (todas as deps)"
+    agent: "@dev"
+    wave: 1
+    estimated_effort: "S (~2h)"
+    acceptance_criteria:
+      - "GET /health verifica: database, redis, evolution_api, chatwoot, elevare, openai"
+      - "Status degraded se qualquer dep nao-critica falha"
+      - "Status down se dep critica falha (database, redis)"
+      - "Metricas de latencia por dep no health response"
+
+  - id: "6.3"
+    title: "LGPD Compliance (anonimizacao 24 meses, endpoint exclusao)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: []
+    nfr_coverage: ["NFR10"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "Cron mensal: anonimiza guest_profiles com last_interaction_at > 24 meses"
+      - "Anonimizacao: nome→null, email→null, phone→hash, preferences→{}"
+      - "Seta anonimized_at timestamp"
+      - "DELETE /api/admin/guests/:id endpoint para exclusao sob demanda"
+      - "Registra em data_deletion_requests com auditoria completa"
+      - "Teste: anonimizacao preserva conversations (dados agregados)"
+
+  - id: "6.4"
+    title: "Performance Tuning (cache, connection pooling)"
+    agent: "@dev"
+    wave: 2
+    nfr_coverage: ["NFR1", "NFR7", "NFR8"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "Connection pooling Supabase pgBouncer validado"
+      - "Redis cache hit rate monitorado"
+      - "Pipeline latencia < 5s (p95)"
+      - "Hotel list cache (TTL 1h) implementado"
+      - "Embedding cache (Redis TTL 1h) para queries frequentes"
+      - "Load test basico: 50 msgs concorrentes sem degradacao"
+
+  - id: "6.5"
+    title: "Playbooks para Concierges"
+    agent: "@dev"
+    wave: 3
+    estimated_effort: "S (~2-4h)"
+    acceptance_criteria:
+      - "Playbook: como usar Chatwoot com contexto Stella"
+      - "Playbook: quando Stella escalona (e porque)"
+      - "Playbook: FAQ sobre comportamento da Stella"
+      - "Formato: Markdown em docs/playbooks/"
+
+  - id: "6.6"
+    title: "Deploy Final (Docker Compose → Digital Ocean)"
+    agent: "@devops"
+    wave: 3
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "Docker Compose producao: app + worker + redis + evolution"
+      - "Deploy automatizado via GitHub Actions (push to main)"
+      - "SSL via Cloudflare"
+      - "Environment variables em GitHub Secrets"
+      - "Volume persistente Redis"
+      - "Auto-restart on failure"
+      - "Backup strategy documentada (Supabase automatico)"
+
+  - id: "6.7"
+    title: "Smoke Tests em Producao"
+    agent: "@qa"
+    wave: 4
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["6.6"]
+    acceptance_criteria:
+      - "Health check 200 com todas as deps green"
+      - "92 hoteis no database"
+      - "FAQ embeddings presentes"
+      - "Pipeline responde a mensagem de teste"
+      - "WhatsApp recebe e envia mensagens"
+      - "Chatwoot handover funciona"
+
+  - id: "6.8"
+    title: "Runbook de Incidentes"
+    agent: "@dev"
+    wave: 4
+    estimated_effort: "S (~2-4h)"
+    acceptance_criteria:
+      - "Runbook: Elevare API down → fallback + alert"
+      - "Runbook: Redis down → impact + recovery"
+      - "Runbook: OpenAI API down → fallback responses"
+      - "Runbook: Evolution API down → queue + retry"
+      - "Runbook: Prompt injection detectada → containment"
+      - "Formato: Markdown em docs/playbooks/runbook.md"
+
+  - id: "6.9"
+    title: "Metrics Dashboard — KPIs do PRD em Tempo Real"
+    agent: "@dev"
+    wave: 2
+    nfr_coverage: ["NFR1", "NFR3", "NFR4", "NFR5"]
+    estimated_effort: "M (~4-8h)"
+    note: "Sprint 0: Story adicionada pela validacao Pax. Sem metricas, soft launch nao tem dados para go/no-go"
+    acceptance_criteria:
+      - "Endpoint GET /api/admin/metrics retorna KPIs agregados"
+      - "Metricas: tempo medio resposta pipeline (NFR1), taxa handover (NFR3), taxa resolucao sem humano (NFR5)"
+      - "Metricas: Safety Agent rejection rate (NFR4), volume por canal (whatsapp/website)"
+      - "Metricas: top intents, top hotels consultados, idiomas detectados"
+      - "Dados sourced de agent_metrics + conversations tables"
+      - "Periodo configuravel (hoje, 7d, 30d)"
+      - "Formato JSON (dashboard UI pode ser Grafana ou pagina simples futura)"
+      - "Autenticacao admin basica"
+
+    files_to_create:
+      - "backend/src/api/admin-metrics.ts"
+      - "tests/unit/admin-metrics.test.ts"
+
+quality_gates:
+  post_wave_4:
+    - "Smoke tests producao verde"
+    - "Runbook completo"
+    - "Metrics endpoint retornando KPIs corretos"
+    - "LAUNCH READY"
+
+  launch_plan:
+    soft_launch:
+      - "5 hoteis piloto (mix: 3 API + 2 manuais)"
+      - "Criterios selecao: volume de atendimento, FAQs disponiveis, concierge treinado"
+      - "Duracao: 2 semanas"
+      - "Metricas go/no-go: resolucao rate >50%, handover com contexto >95%, zero prompt injection, latencia p95 <10s"
+    full_launch:
+      - "92 hoteis"
+      - "Apos soft launch com metricas go/no-go atingidas"
+    post_launch:
+      - "Monitoring intensivo (1 semana)"
+      - "Retroalimentacao (FR13) para melhorar prompts"
+
+agent_assignments:
+  "@dev":
+    stories: ["6.1", "6.2", "6.3", "6.4", "6.5", "6.8", "6.9"]
+    note: "Story 6.9 (Metrics Dashboard) adicionada no Sprint 0"
+  "@devops":
+    stories: ["6.6"]
+    note: "EXCLUSIVO: deploy e CI/CD sao dominio do @devops"
+  "@qa":
+    stories: ["6.7"]
+    gate: "post_wave_4"
+    note: "Gate final antes do launch"

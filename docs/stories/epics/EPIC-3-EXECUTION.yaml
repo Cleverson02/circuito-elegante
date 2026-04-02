@@ -1,0 +1,197 @@
+# Epic 3: Integracao Elevare — O Fluxo de Ouro — Execution Plan
+# Status: READY (blocked by Epic 2)
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-3
+  title: "Integracao Elevare — O Fluxo de Ouro"
+  description: "Pipeline completo de reservas: /search → /customers → /quotations, curadoria, webhooks"
+  status: ready
+  priority: P0-critical
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-3"
+
+  dependencies:
+    external:
+      - "Elevare API credentials (API Key)"
+      - "Postman collection salva em tests/fixtures/"
+    internal:
+      - "EPIC-2 completo (pipeline multi-agente funcional)"
+
+  success_criteria:
+    - "Fluxo completo: search → customer → quotation → payment link"
+    - "Curadoria apresenta 3-4 opcoes representativas"
+    - "Correfencia: 'quero a segunda' resolve para offerId correto"
+    - "Webhooks Elevare processados e armazenados"
+    - "Fallback elegante quando API falha"
+
+  estimated_effort: "5-8 dias de desenvolvimento"
+
+waves:
+  - wave: 1
+    name: "Elevare Client Foundation"
+    stories: ["3.1", "3.2", "3.3"]
+    parallel: false
+    rationale: "Search→Customer→Quotation e sequencial (Golden Discovery #2)"
+
+  - wave: 2
+    name: "UX Intelligence (Paralelo)"
+    stories: ["3.4", "3.5", "3.6"]
+    parallel: true
+    rationale: "Curadoria, correfencia e upsell sao features independentes sobre o client base"
+
+  - wave: 3
+    name: "Events & Recovery (Paralelo)"
+    stories: ["3.7", "3.8", "3.9"]
+    parallel: true
+    rationale: "Webhooks, fallback e pos-venda sao independentes"
+
+  - wave: 4
+    name: "Integration Tests"
+    stories: ["3.10"]
+    parallel: false
+    rationale: "Testes de integracao validam tudo junto"
+
+stories:
+  - id: "3.1"
+    title: "ElevareClient — Search + requestId Management"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR2", "FR22", "FR31"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "ElevareClient.search() chama GET /search com parametros"
+      - "Retorna requestId + results com fotos (Golden Discovery #1)"
+      - "requestId armazenado no Redis (TTL 30min)"
+      - "Multi-search por cidade/regiao (FR31)"
+      - "Retry logic (3 tentativas, backoff exponencial)"
+      - "Timeout: 8s (NFR1)"
+
+  - id: "3.2"
+    title: "ElevareClient — Customer Registration"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: []
+    estimated_effort: "S (~2h)"
+    blocked_by: ["3.1"]
+    acceptance_criteria:
+      - "ElevareClient.registerCustomer() chama POST /customers"
+      - "Dados extraidos do guest_profiles + sessao"
+      - "Retorna customerId"
+      - "Idempotente (nao duplica customer)"
+
+  - id: "3.3"
+    title: "ElevareClient — Quotation (Link de Pagamento)"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR3", "FR29", "FR30"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["3.2"]
+    acceptance_criteria:
+      - "ElevareClient.createQuotation() com requestId + offerId + customerId"
+      - "Retorna quotationId + paymentLink + expiresAt"
+      - "Regeneracao de link (FR29): PUT /quotations/{id}/payment-link"
+      - "Extensao de validade (FR30): PUT /quotations/{id}/extend"
+
+  - id: "3.4"
+    title: "Motor de Curadoria (3-4 opcoes representativas)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR16"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["3.1"]
+    acceptance_criteria:
+      - "Quando Elevare retorna multiplas opcoes, curadoria automatica"
+      - "Minimo 3, maximo 4 opcoes"
+      - "Representatividade de preco: menor, intermediaria, maior/exclusiva"
+      - "Permite hospede pedir 'ver mais opcoes'"
+
+  - id: "3.5"
+    title: "Mapeamento de Estado Oculto (Correfencia)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR18"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["3.1"]
+    acceptance_criteria:
+      - "Mapa interno: cada opcao → payload tecnico (roomId, ratePlanId, total)"
+      - "'Quero a segunda' → resolve para offerId exato sem confirmacao"
+      - "WhatsApp Reply a imagem especifica → resolve corretamente"
+      - "Armazenado em Redis session (TTL session)"
+
+  - id: "3.6"
+    title: "Upsell Elegante"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR19"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["3.4"]
+    acceptance_criteria:
+      - "Detecta opcao premium com pequena diferenca de preco"
+      - "Mencao sutil via Persona Agent (nao forca)"
+      - "Sem gatilhos de escassez"
+
+  - id: "3.7"
+    title: "Webhook Listener & Auto-Follow-Up"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR25"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["3.3"]
+    acceptance_criteria:
+      - "POST /webhooks/elevare recebe eventos"
+      - "Eventos armazenados em webhook_events (audit trail)"
+      - "quote_expiring → notifica hospede elegantemente"
+      - "reservation_confirmed → parabens + proximos passos"
+      - "payment_failed → oferece retry + novo link"
+      - "Deduplicacao de eventos (idempotente)"
+
+  - id: "3.8"
+    title: "Fallback & Recovery Elegante"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR20"]
+    estimated_effort: "S (~2-4h)"
+    acceptance_criteria:
+      - "Quando API falha: resposta elegante (nunca 'Erro de conexao')"
+      - "Handover silencioso para Chatwoot"
+      - "Fallback responses em PT/EN/ES"
+      - "Log Sentry com contexto completo"
+
+  - id: "3.9"
+    title: "Consulta de Status de Reservas (Pos-Venda)"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR4"]
+    estimated_effort: "S (~2-4h)"
+    acceptance_criteria:
+      - "Hospede consulta status por codigo ou email"
+      - "Tool check_reservation no Orchestrator"
+      - "Resposta formatada pela Persona (sem IDs tecnicos)"
+
+  - id: "3.10"
+    title: "Integration Tests (Postman Fixture)"
+    agent: "@qa"
+    wave: 4
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["3.7", "3.8", "3.9"]
+    acceptance_criteria:
+      - "Postman collection como fixture de testes"
+      - "Fluxo completo: search → select → quotation → payment"
+      - "Webhook handling testado"
+      - "Fallback testado (mock API down)"
+      - "Correfencia testada ('quero a segunda')"
+
+quality_gates:
+  post_wave_1:
+    - "Fluxo search→customer→quotation funciona com Elevare"
+  post_wave_4:
+    - "Integration tests 100% verde"
+    - "QA gate: PASS para iniciar Epic 4"
+
+agent_assignments:
+  "@dev":
+    stories: ["3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9"]
+  "@qa":
+    stories: ["3.10"]
+    gate: "post_wave_4"

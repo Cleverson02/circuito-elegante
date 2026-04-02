@@ -1,0 +1,1031 @@
+{
+	"info": {
+		"_postman_id": "2ba09d67-2d11-4393-95c7-a3a263ac138c",
+		"name": "Elevare API - Global Agent",
+		"description": "Collection completa dos endpoints do Global Agent para testes no Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1390727"
+	},
+	"item": [
+		{
+			"name": "1. Hotel Search & Availability",
+			"item": [
+				{
+					"name": "Global Search (Single Hotel)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/search?CheckIn=01122025&CheckOut=04122025&ad=2&ch=1&ag=5&q=136599",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"search"
+							],
+							"query": [
+								{
+									"key": "CheckIn",
+									"value": "01122025",
+									"description": "Check-in date (DDMMYYYY or YYYY-MM-DD)"
+								},
+								{
+									"key": "CheckOut",
+									"value": "04122025",
+									"description": "Check-out date (DDMMYYYY or YYYY-MM-DD)"
+								},
+								{
+									"key": "ad",
+									"value": "2",
+									"description": "Number of adults (string)"
+								},
+								{
+									"key": "ch",
+									"value": "1",
+									"description": "Number of children (optional, string)"
+								},
+								{
+									"key": "ag",
+									"value": "5",
+									"description": "Children ages (comma-separated, optional)"
+								},
+								{
+									"key": "lang",
+									"value": "pt-BR",
+									"description": "Language (optional)",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "PROMO_CODE",
+									"description": "Promo code (optional)",
+									"disabled": true
+								},
+								{
+									"key": "q",
+									"value": "136599"
+								}
+							]
+						},
+						"description": "Search availability for a single hotel. Returns rooms, prices and availability data. Cached for 10 minutes."
+					},
+					"response": []
+				},
+				{
+					"name": "Multi-Search (Multiple Hotels)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/multi-search?city=Sao Paulo&checkIn=2025-01-01&checkOut=2025-01-05&adults=2&children=1&maxResults=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"multi-search"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Sao Paulo",
+									"description": "City name (optional)"
+								},
+								{
+									"key": "region",
+									"value": "Southeast",
+									"description": "Region name (optional)",
+									"disabled": true
+								},
+								{
+									"key": "checkIn",
+									"value": "2025-01-01",
+									"description": "Check-in date (YYYY-MM-DD)"
+								},
+								{
+									"key": "checkOut",
+									"value": "2025-01-05",
+									"description": "Check-out date (YYYY-MM-DD)"
+								},
+								{
+									"key": "adults",
+									"value": "2",
+									"description": "Number of adults (number)"
+								},
+								{
+									"key": "children",
+									"value": "1",
+									"description": "Number of children (optional)"
+								},
+								{
+									"key": "maxResults",
+									"value": "5",
+									"description": "Maximum results (optional)"
+								}
+							]
+						},
+						"description": "Search multiple hotels by city or region"
+					},
+					"response": []
+				},
+				{
+					"name": "List Available Hotels",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/hotels?active=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Paraty",
+									"description": "Filter by city (optional)",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"description": "Filter by active status (optional)"
+								}
+							]
+						},
+						"description": "List all available hotels in the system with optional filters"
+					},
+					"response": []
+				},
+				{
+					"name": "Debug Cache by RequestId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/debug-cache/{{request_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"debug-cache",
+								"{{request_id}}"
+							]
+						},
+						"description": "Debug endpoint to check cache state by requestId (temporary)"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para busca de hotéis e disponibilidade"
+		},
+		{
+			"name": "2. Customer Management",
+			"item": [
+				{
+					"name": "Create/Update Customer (Upsert)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"if (response.data && response.data.customerId) {",
+									"    pm.collectionVariables.set('customer_id', response.data.customerId);",
+									"    console.log('Customer ID saved:', response.data.customerId);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"primaryPhone\": \"+5511999887766\",\n  \"firstName\": \"João\",\n  \"lastName\": \"Silva\",\n  \"email\": \"joao.silva@email.com\",\n  \"cpf\": \"12345678901\",\n  \"birthDate\": \"1990-05-15\",\n  \"gender\": \"M\",\n  \"rg\": \"123456789\",\n  \"documentNumber\": \"12345678901\",\n  \"documentType\": \"CPF\",\n  \"address\": {\n    \"street\": \"Rua das Flores\",\n    \"number\": \"123\",\n    \"neighborhood\": \"Centro\",\n    \"city\": \"São Paulo\",\n    \"state\": \"SP\",\n    \"zipcode\": \"01234-567\",\n    \"country\": \"Brasil\"\n  },\n  \"notes\": \"Cliente VIP\",\n  \"reservationCheckIn\": \"2025-02-01\",\n  \"reservationCheckOut\": \"2025-02-05\",\n  \"reservationAdults\": 2,\n  \"reservationChildren\": 1,\n  \"reservationChildrenAges\": [5],\n  \"preferredHotelId\": \"HOTEL_CODE\",\n  \"preferredCity\": \"São Paulo\",\n  \"reservationNotes\": \"Prefere quarto com vista para o mar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"customers"
+							]
+						},
+						"description": "Create or update customer data. Uses primaryPhone as unique identifier."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by Phone",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/customers/phone/+5511999999999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"customers",
+								"phone",
+								"+5511999999999"
+							]
+						},
+						"description": "Retrieve customer data by phone number"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer (Overwrite)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"primaryPhone\": \"+5511999999999\",\n  \"firstName\": \"João Pedro\",\n  \"lastName\": \"Silva Santos\",\n  \"email\": \"joao.pedro@email.com\",\n  \"notes\": \"Informações atualizadas pelo agente\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"customers"
+							]
+						},
+						"description": "Update existing customer data (overwrites fields)"
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Customer Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/customers/phone/+5511999999999/validate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"customers",
+								"phone",
+								"+5511999999999",
+								"validate"
+							]
+						},
+						"description": "Validate if customer has all required fields (firstName, lastName, cpf, address)"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gestão de clientes (Customer Management)"
+		},
+		{
+			"name": "3. Quotations (Cotações)",
+			"item": [
+				{
+					"name": "Create Quotation (Simple)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"if (response.data && response.data.id) {",
+									"    pm.collectionVariables.set('quotation_id', response.data.id);",
+									"    console.log('Quotation ID saved:', response.data.id);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerId\": \"{{customer_id}}\",\n  \"offerId\": 0,\n  \"requestId\": \"{{request_id}}\",\n  \"validityDays\": 1,\n  \"includePaymentLink\": true,\n  \"customerMessage\": \"Segue sua cotação conforme solicitado. O pagamento deve ser realizado em até 24 horas.\",\n  \"internalNotes\": \"Cliente solicitou quarto com vista para o mar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/quotations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"quotations"
+							]
+						},
+						"description": "Create simplified quotation for AI Agent. Automatically fetches data from cache using requestId and offerId."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Quotation Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/quotations/{{quotation_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"quotations",
+								"{{quotation_id}}"
+							]
+						},
+						"description": "Get quotation status and details"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate New Payment Link",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"validityDays\": 2,\n  \"reason\": \"Cliente solicitou extensão do prazo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/quotations/{{quotation_id}}/payment-link",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"quotations",
+								"{{quotation_id}}",
+								"payment-link"
+							]
+						},
+						"description": "Generate new payment link for existing quotation"
+					},
+					"response": []
+				},
+				{
+					"name": "Extend Quotation Validity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"additionalDays\": 1,\n  \"generateNewPaymentLink\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/quotations/{{quotation_id}}/extend",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"quotations",
+								"{{quotation_id}}",
+								"extend"
+							]
+						},
+						"description": "Extend quotation validity period"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gestão de cotações (Quotation Management)"
+		},
+		{
+			"name": "4. Bookings (Reservas)",
+			"item": [
+				{
+					"name": "Create Booking (Standard)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"hotelId\": \"HOTEL_CODE\",\n  \"cityId\": \"SAO_PAULO\",\n  \"checkIn\": \"2025-02-01\",\n  \"checkOut\": \"2025-02-05\",\n  \"adults\": 2,\n  \"children\": 1,\n  \"childrenAges\": \"5\",\n  \"roomGuest\": [\n    {\n      \"name\": \"João Silva\",\n      \"lastName\": \"Silva\",\n      \"email\": \"joao.silva@email.com\",\n      \"phone\": \"+5511999887766\",\n      \"cpf\": \"12345678901\"\n    }\n  ],\n  \"payment\": {\n    \"method\": \"credit_card\",\n    \"cardNumber\": \"4111111111111111\",\n    \"cardHolder\": \"JOAO SILVA\",\n    \"expiryDate\": \"12/28\",\n    \"cvv\": \"123\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/bookings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"bookings"
+							]
+						},
+						"description": "Create standard booking (original flow)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Booking from Cache (AI Agent)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"hotelId\": \"HOTEL_CODE\",\n  \"checkIn\": \"2025-02-01\",\n  \"checkOut\": \"2025-02-05\",\n  \"adults\": 2,\n  \"childrenAges\": [5],\n  \"offerId\": 0,\n  \"requestId\": \"{{request_id}}\",\n  \"cityId\": \"SAO_PAULO\",\n  \"roomGuest\": [\n    {\n      \"name\": \"João\",\n      \"lastName\": \"Silva\",\n      \"email\": \"joao.silva@email.com\",\n      \"phone\": \"+5511999887766\",\n      \"cpf\": \"12345678901\",\n      \"birthDate\": \"1990-05-15\",\n      \"gender\": \"M\",\n      \"rg\": \"123456789\",\n      \"documentNumber\": \"12345678901\",\n      \"documentType\": \"CPF\",\n      \"address\": {\n        \"street\": \"Rua das Flores\",\n        \"number\": \"123\",\n        \"neighborhood\": \"Centro\",\n        \"city\": \"São Paulo\",\n        \"state\": \"SP\",\n        \"zipcode\": \"01234-567\",\n        \"country\": \"Brasil\"\n      }\n    }\n  ],\n  \"payment\": {\n    \"method\": \"credit_card\",\n    \"cardNumber\": \"4111111111111111\",\n    \"cardHolder\": \"JOAO SILVA\",\n    \"expiryDate\": \"12/28\",\n    \"cvv\": \"123\",\n    \"installments\": 1\n  },\n  \"source\": \"ai_agent_whatsapp\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/bookings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"bookings"
+							]
+						},
+						"description": "Create booking using cached search data (simplified method for AI Agent)"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Global Reservations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/reservations?limit=10&email=joao.silva@email.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "confirmationNumber",
+									"value": "ABC123",
+									"description": "Filter by confirmation number (optional)",
+									"disabled": true
+								},
+								{
+									"key": "hotelId",
+									"value": "HOTEL_CODE",
+									"description": "Filter by hotel (optional)",
+									"disabled": true
+								},
+								{
+									"key": "guestName",
+									"value": "João Silva",
+									"description": "Filter by guest name (optional)",
+									"disabled": true
+								},
+								{
+									"key": "checkInFrom",
+									"value": "2025-01-01",
+									"description": "Filter check-in from date (optional)",
+									"disabled": true
+								},
+								{
+									"key": "checkInTo",
+									"value": "2025-12-31",
+									"description": "Filter check-in to date (optional)",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Max results (optional)"
+								},
+								{
+									"key": "email",
+									"value": "joao.silva@email.com"
+								}
+							]
+						},
+						"description": "Search bookings globally with multiple filter options"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gestão de reservas (Booking Management)"
+		},
+		{
+			"name": "5. Webhooks & Follow-ups",
+			"item": [
+				{
+					"name": "Webhook - Payment Status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"quotationId\": \"{{quotation_id}}\",\n  \"paymentLinkToken\": \"payment_token_xyz123\",\n  \"status\": \"paid\",\n  \"paymentId\": \"pay_xyz789\",\n  \"paidAmount\": 1500.00,\n  \"currency\": \"BRL\",\n  \"timestamp\": \"2025-01-15T14:30:00Z\",\n  \"paymentDetails\": {\n    \"method\": \"credit_card\",\n    \"lastDigits\": \"1111\",\n    \"brand\": \"visa\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/webhook/payment-status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"webhook",
+								"payment-status"
+							]
+						},
+						"description": "Webhook to receive payment status notifications. Status can be: paid, failed, or expired."
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook - Payment Failed",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"quotationId\": \"{{quotation_id}}\",\n  \"paymentLinkToken\": \"payment_token_xyz123\",\n  \"status\": \"failed\",\n  \"paymentId\": \"pay_xyz789\",\n  \"timestamp\": \"2025-01-15T14:30:00Z\",\n  \"failureReason\": \"insufficient_funds\",\n  \"paymentDetails\": {\n    \"method\": \"credit_card\",\n    \"errorCode\": \"INSUFFICIENT_FUNDS\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/webhook/payment-status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"webhook",
+								"payment-status"
+							]
+						},
+						"description": "Example of payment failure webhook"
+					},
+					"response": []
+				},
+				{
+					"name": "Trigger Follow-up (Manual)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"quotationId\": \"{{quotation_id}}\",\n  \"triggerEvent\": \"payment_reminder\",\n  \"context\": {\n    \"message\": \"Lembramos que sua cotação expira em breve\",\n    \"expiresIn\": \"2 horas\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/follow-up/trigger",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"follow-up",
+								"trigger"
+							]
+						},
+						"description": "Manually trigger a follow-up message. Events: payment_paid, payment_failed, link_expired, payment_reminder"
+					},
+					"response": []
+				},
+				{
+					"name": "Follow-up Callback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"followUpId\": \"{{follow_up_id}}\",\n  \"messageDelivered\": true,\n  \"userResponse\": \"Obrigado, vou efetuar o pagamento agora\",\n  \"timestamp\": \"2025-01-15T15:00:00Z\",\n  \"whatsappMessageId\": \"wamid.XYZ123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/global-agent/follow-up/callback",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"follow-up",
+								"callback"
+							]
+						},
+						"description": "Process follow-up response callback"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Follow-up Statistics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-client-id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "x-client-secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/global-agent/follow-up/stats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"global-agent",
+								"follow-up",
+								"stats"
+							]
+						},
+						"description": "Get follow-up statistics and metrics"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para webhooks e follow-ups automáticos"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Script para gerar requestId único se necessário",
+					"if (!pm.collectionVariables.get('request_id')) {",
+					"    const uuid = require('uuid');",
+					"    pm.collectionVariables.set('request_id', uuid.v4());",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3003/api/v1"
+		},
+		{
+			"key": "client_id",
+			"value": "YOUR_GLOBAL_AGENT_CLIENT_ID"
+		},
+		{
+			"key": "client_secret",
+			"value": "YOUR_GLOBAL_AGENT_CLIENT_SECRET"
+		},
+		{
+			"key": "customer_id",
+			"value": ""
+		},
+		{
+			"key": "quotation_id",
+			"value": ""
+		},
+		{
+			"key": "follow_up_id",
+			"value": ""
+		},
+		{
+			"key": "request_id",
+			"value": ""
+		}
+	]
+}

@@ -26,4 +26,7 @@ Thumbs.db
 # AIOX Local (AIOX)
 .aiox-core/local/
 .claude/settings.local.json
-.aiox/install-log.txt
+.aiox/
+
+# Test coverage
+coverage/

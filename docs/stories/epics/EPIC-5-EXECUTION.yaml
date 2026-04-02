@@ -1,0 +1,186 @@
+# Epic 5: Chatwoot, Evolution API & Handover — Execution Plan
+# Status: READY (blocked by Epic 4)
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-5
+  title: "Chatwoot, Evolution API & Handover (O Controle da Mansao)"
+  description: "Escalacao inteligente para concierges humanos via Chatwoot com contexto completo"
+  status: ready
+  priority: P1-high
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-5"
+
+  dependencies:
+    external:
+      - "Chatwoot instance configurada (self-hosted ou cloud)"
+      - "Evolution API ↔ Chatwoot integracao nativa habilitada"
+    internal:
+      - "EPIC-4 completo (WhatsApp funcional)"
+
+  success_criteria:
+    - "Handover para Chatwoot com contexto completo (entity memory)"
+    - "Transfer rules engine decide quando escalonar"
+    - "Marketing intelligence extraida de cada conversa"
+    - "Retroalimentacao: respostas humanas melhoram Stella"
+
+  estimated_effort: "4-6 dias de desenvolvimento"
+
+waves:
+  - wave: 0
+    name: "Infrastructure Setup"
+    stories: ["5.8"]
+    parallel: false
+    rationale: "Sprint 0: Chatwoot ↔ Evolution API setup e prerequisito para todo o epic. @devops exclusivo"
+
+  - wave: 1
+    name: "Chatwoot Integration"
+    stories: ["5.1", "5.2"]
+    parallel: false
+    rationale: "API integration (5.1) antes de transfer rules (5.2). Depende de 5.8 (infra)"
+
+  - wave: 2
+    name: "Intelligence Layer + State Machine (Paralelo)"
+    stories: ["5.3", "5.4", "5.5", "5.7"]
+    parallel: true
+    rationale: "Escalacao silenciosa, marketing intel, retroalimentacao e Handover State Machine sao independentes. 5.7 adicionada Sprint 0"
+
+  - wave: 3
+    name: "Dashboard"
+    stories: ["5.6"]
+    parallel: false
+
+stories:
+  - id: "5.1"
+    title: "Integracao Chatwoot API (criacao conversa + contexto)"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR9", "FR33"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "ChatwootClient: createContact(), createConversation(), sendMessage()"
+      - "Conversa criada com contexto completo: guest, history, hotel_focus, preferences"
+      - "Evolution API ↔ Chatwoot integracao nativa (mensagens fluem bidirecionalmente)"
+      - "Presenca online dinamica: online quando humano ativo no Chatwoot (FR35)"
+
+  - id: "5.2"
+    title: "Transfer Rules Engine (quando escalonar)"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR9"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["5.1"]
+    acceptance_criteria:
+      - "Regras configuráveis: hotel_manual, guest_requested, low_confidence (<0.6), api_failure, sensitive_topic"
+      - "Threshold de confianca configuravel"
+      - "Deteccao de frustracao (palavras-chave + sentiment)"
+      - "Max attempts antes de auto-escalar (3 loops sem resolucao)"
+      - "Logging de cada decisao de transfer"
+
+  - id: "5.3"
+    title: "Escalacao Silenciosa (FR9 — linguagem premium)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR9", "FR20"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["5.2"]
+    acceptance_criteria:
+      - "Nunca diz 'erro' ou 'transferindo para suporte'"
+      - "Linguagem: 'Vou conectar voce com um de nossos especialistas...'"
+      - "Transicao invisivel — hospede nao percebe troca IA→humano"
+      - "Contexto chega ao concierge ANTES da primeira mensagem humana"
+
+  - id: "5.4"
+    title: "Extracao Marketing Intelligence (FR10)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR10"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "De cada conversa extrai: nome, email, telefone, historico, nro pessoas"
+      - "Tipo data especial/aniversarios, hotel desejado, preferencias"
+      - "Valor gasto acumulado"
+      - "Salvo em guest_profiles (JSONB fields)"
+      - "Extracao incremental (nao sobrescreve dados existentes)"
+
+  - id: "5.5"
+    title: "Retroalimentacao de Aprendizado (FR13)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR13"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "Historico de interacoes resolvidas por humano armazenado"
+      - "Formato: pergunta original + resposta humana + resolucao"
+      - "Dados disponíveis para iteracao futura de prompts"
+      - "Nao e ML automatico — e curadoria manual de few-shots"
+
+  - id: "5.7"
+    title: "Handover State Machine — Transicao IA↔Humano (FR36)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR36"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["5.2"]
+    note: "Sprint 0: Story adicionada pela validacao Pax. Sem state machine, hospede fica em limbo apos handover"
+    acceptance_criteria:
+      - "3 estados em Redis por sessao: STELLA_ACTIVE, HUMAN_ACTIVE, STELLA_FALLBACK"
+      - "Transicao STELLA_ACTIVE → HUMAN_ACTIVE: trigger de handover (Story 5.2)"
+      - "Transicao HUMAN_ACTIVE → STELLA_ACTIVE: concierge fecha conversa no Chatwoot (webhook)"
+      - "Transicao HUMAN_ACTIVE → STELLA_FALLBACK: timeout 15min sem resposta humana"
+      - "Em HUMAN_ACTIVE: novas mensagens do hospede vao para Chatwoot, NAO para pipeline Stella"
+      - "Em STELLA_FALLBACK: Stella envia mensagem elegante e reenfileira para humano"
+      - "Logging de cada transicao em conversations.metadata"
+      - "Testes: transicao normal, timeout, mensagem durante HUMAN_ACTIVE"
+
+    files_to_create:
+      - "backend/src/state/handover-state-machine.ts"
+      - "tests/unit/handover-state-machine.test.ts"
+
+  - id: "5.8"
+    title: "Chatwoot ↔ Evolution API Integration Setup"
+    agent: "@devops"
+    wave: 1
+    fr_coverage: ["FR33"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: []
+    note: "Sprint 0: Story adicionada pela validacao Aria. Integracao nativa bidirecional e prerequisito para todo o handover"
+    acceptance_criteria:
+      - "Chatwoot inbox configurado apontando para Evolution API instance"
+      - "Webhook Evolution API → Chatwoot configurado e testado"
+      - "Mensagem enviada pelo concierge no Chatwoot chega ao WhatsApp do hospede"
+      - "Mensagem do hospede no WhatsApp aparece na conversa Chatwoot"
+      - "Custom attributes no Chatwoot: guest_name, hotel_focus, language, conversation_summary"
+      - "Teste bidirecional: WhatsApp → Chatwoot → WhatsApp (round trip)"
+
+  - id: "5.6"
+    title: "Dashboard Basico para Concierges"
+    agent: "@dev"
+    wave: 3
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["5.4"]
+    acceptance_criteria:
+      - "Pagina web simples com metricas: conversas/dia, handovers, resolucoes"
+      - "Lista de conversas ativas com contexto"
+      - "Integrado com Chatwoot (ou extensao Chatwoot)"
+      - "Autenticacao basica"
+
+quality_gates:
+  post_wave_1:
+    - "Chatwoot ↔ Evolution API bidirecional funcional (5.8)"
+  post_wave_2:
+    - "Handover funciona com contexto completo"
+    - "Handover State Machine transicoes corretas (5.7)"
+    - "Marketing intelligence sendo extraida"
+  post_wave_3:
+    - "QA gate: PASS para iniciar Epic 6"
+
+agent_assignments:
+  "@dev":
+    stories: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7"]
+    note: "Stories 5.7 (Handover State Machine) adicionada no Sprint 0"
+  "@devops":
+    stories: ["5.8"]
+    note: "Sprint 0: Chatwoot ↔ Evolution setup e exclusivo do @devops"
+  "@qa":
+    gate: "post_wave_3"

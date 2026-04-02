@@ -1,0 +1,304 @@
+# Epic 1: Foundation & Data Layer — Execution Plan
+# Status: READY FOR DEVELOPMENT
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-1
+  title: "Foundation & Data Layer"
+  description: "Repo, DB, data ingestao, health check — fundacao para todos os epics subsequentes"
+  status: ready
+  priority: P0-critical
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-1"
+  architecture_reference: "docs/architecture/architecture.md"
+  schema_reference: "docs/architecture/SCHEMA.md"
+
+  dependencies:
+    external:
+      - Supabase project criado (DATABASE_URL disponivel)
+      - OpenAI API key (para embeddings no Story 1.4)
+      - Google Drive folder ID (para FAQs no Story 1.4)
+      - Planilha 92 hoteis (CSV) disponivel em data/
+    internal: []
+
+  success_criteria:
+    - GET /health retorna status consolidado de todas as dependencias
+    - 92 hoteis inseridos no PostgreSQL (32 has_api + 60 manuais)
+    - ~430 FAQ embeddings no pgvector com HNSW index
+    - Redis sessions funcionando com TTL
+    - CI pipeline verde (lint + test + smoke)
+
+  estimated_effort: "3-5 dias de desenvolvimento"
+
+# ============================================================
+# WAVE PLAN — Desenvolvimento Paralelo
+# ============================================================
+
+waves:
+  - wave: 1
+    name: "Scaffold + Infraestrutura"
+    stories: ["1.1"]
+    parallel: false
+    rationale: "Story 1.1 e prerequisito para tudo — scaffold, Docker, CI"
+
+  - wave: 2
+    name: "Data Layer (Sequencial)"
+    stories: ["1.2", "1.5"]
+    parallel: false
+    rationale: "Schema PG (1.2) deve executar ANTES de Redis (1.5) para evitar merge conflict em health.ts. Identificado na validacao Pre-Flight R1 da Story 1.5"
+
+  - wave: 3
+    name: "Data Ingestion (Paralelo)"
+    stories: ["1.3", "1.4"]
+    parallel: true
+    rationale: "Ingestao de hoteis (1.3) e FAQs (1.4) sao independentes. Ambas dependem de 1.2"
+
+  - wave: 4
+    name: "Validation"
+    stories: ["1.6"]
+    parallel: false
+    rationale: "Smoke test valida tudo — depende de todas as stories anteriores"
+
+# ============================================================
+# STORIES DETALHADAS
+# ============================================================
+
+stories:
+  - id: "1.1"
+    title: "Scaffold do Monorepo & Configuracao Base"
+    agent: "@dev"
+    wave: 1
+    status: pending
+    fr_coverage: []
+    nfr_coverage: []
+    estimated_effort: "M (~4-8h)"
+
+    acceptance_criteria:
+      - "Repositorio segue estrutura docs/architecture/architecture.md secao 2.2"
+      - "Fastify server responde GET /health com { status: 'ok', timestamp }"
+      - "Docker Compose: app (Fastify) + redis (Redis 7 Alpine)"
+      - ".env.example com todas as variaveis de docs/architecture/architecture.md secao 15"
+      - "config/ valida env vars com Zod (falha no boot se obrigatoria ausente)"
+      - "ESLint + Prettier configurados"
+      - "Jest configurado como test runner"
+      - "GitHub Actions CI: lint + test em push/PR"
+      - "Winston logger (JSON estruturado)"
+      - "Sentry SDK inicializado"
+      - "README.md com instrucoes de setup local"
+      - "Drizzle ORM + drizzle.config.ts apontando para DATABASE_URL"
+      - "Supabase JS Client instalado"
+      - "TypeScript 5.5+ com tsconfig strict"
+
+    files_to_create:
+      - "package.json"
+      - "tsconfig.json"
+      - "drizzle.config.ts"
+      - ".env.example"
+      - "backend/src/api/routes.ts"
+      - "backend/src/api/health.ts"
+      - "backend/src/middleware/logging.ts"
+      - "config/index.ts"
+      - "config/env.ts"
+      - "infra/docker-compose.yml"
+      - "infra/Dockerfile"
+      - ".github/workflows/ci.yml"
+      - ".eslintrc.js"
+      - ".prettierrc"
+      - "jest.config.ts"
+      - "README.md"
+
+  - id: "1.2"
+    title: "Schema PostgreSQL & Setup Supabase"
+    agent: "@data-engineer"
+    wave: 2
+    status: pending
+    fr_coverage: []
+    nfr_coverage: ["NFR9"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["1.1"]
+
+    acceptance_criteria:
+      - "Extensoes: uuid-ossp, vector, pg_trgm habilitadas"
+      - "7 tabelas criadas conforme docs/architecture/SCHEMA.md (hotels, guest_profiles, conversations, faq_embeddings, data_deletion_requests, webhook_events, agent_metrics)"
+      - "25+ indices criados conforme SCHEMA.md secao 3"
+      - "3 triggers: updated_at, message_count, guest_interaction"
+      - "CHECK constraints em enums (channel, region, experience, status)"
+      - "FKs com ON DELETE strategy (CASCADE ou SET NULL)"
+      - "Migrations versionadas via Drizzle Kit (11 arquivos ordenados)"
+      - "Connection pooling via Supabase pgBouncer"
+      - "Health check expandido: { database: 'connected' }"
+      - "Drizzle schema TypeScript em backend/src/database/schema.ts conforme SCHEMA.md secao 5"
+
+    files_to_create:
+      - "backend/src/database/schema.ts"
+      - "backend/src/database/client.ts"
+      - "data/migrations/001-extensions.sql"
+      - "data/migrations/002-hotels.sql"
+      - "data/migrations/003-guest-profiles.sql"
+      - "data/migrations/004-conversations.sql"
+      - "data/migrations/005-faq-embeddings.sql"
+      - "data/migrations/006-data-deletion.sql"
+      - "data/migrations/007-webhook-events.sql"
+      - "data/migrations/008-agent-metrics.sql"
+      - "data/migrations/009-indexes.sql"
+      - "data/migrations/010-triggers.sql"
+      - "data/migrations/011-comments.sql"
+
+    notes: |
+      IMPORTANTE: Usar schema da Dara (SCHEMA.md), NAO o schema original da Aria.
+      Dara corrigiu 12 problemas: numeric(12,2) para precos, FK guest_id,
+      tabelas webhook_events e agent_metrics adicionadas, indices detalhados.
+
+  - id: "1.3"
+    title: "Ingestao de Dados — 92 Hoteis (CSV → PostgreSQL)"
+    agent: "@dev"
+    wave: 3
+    status: pending
+    fr_coverage: ["FR1", "FR32"]
+    nfr_coverage: ["NFR2"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["1.2"]
+
+    acceptance_criteria:
+      - "Script data/scripts/ingest-hotels.ts le CSV/XLSX"
+      - "Upsert na tabela hotels com campos mapeados"
+      - "Validacao: rejeita linhas com campos obrigatorios ausentes"
+      - "92 hoteis inseridos (32 has_api: true, 60 has_api: false)"
+      - "Flags Bradesco mapeados corretamente"
+      - "JSONB data populados com metadados extras"
+      - "Script idempotente (safe to re-run)"
+      - "Log: total inseridos, atualizados, rejeitados"
+      - "Query verificacao: COUNT WHERE has_api = true retorna 32"
+      - "Teste unitario para parsing e mapeamento"
+
+    files_to_create:
+      - "data/scripts/ingest-hotels.ts"
+      - "tests/unit/ingest-hotels.test.ts"
+
+  - id: "1.4"
+    title: "Ingestao de FAQs — Google Drive → pgvector"
+    agent: "@dev"
+    wave: 3
+    status: pending
+    fr_coverage: ["FR5"]
+    nfr_coverage: []
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["1.2"]
+
+    acceptance_criteria:
+      - "Script data/scripts/ingest-faq.ts conecta Google Drive API v3"
+      - "Baixa FAQs de pasta configuravel (.md, .txt, .docx)"
+      - "Semantic chunking por secao logica (## headings)"
+      - "Max 500 tokens por chunk"
+      - "Embeddings via text-embedding-3-small (1536 dims)"
+      - "Armazenados em faq_embeddings com content_hash (SHA-256) para upsert"
+      - "Upsert logic usando UNIQUE(hotel_id, content_hash)"
+      - "Log: arquivos processados, chunks gerados, embeddings criados"
+      - "Teste: query 'piscina aquecida' retorna chunk correto"
+      - "Health check: { vectordb: 'X embeddings loaded' }"
+
+    files_to_create:
+      - "data/scripts/ingest-faq.ts"
+      - "backend/src/vectordb/embedding.ts"
+      - "backend/src/vectordb/chunker.ts"
+      - "tests/unit/ingest-faq.test.ts"
+      - "tests/integration/rag-pipeline.test.ts"
+
+  - id: "1.5"
+    title: "Redis Setup & Session State Foundation"
+    agent: "@dev"
+    wave: 2
+    status: pending
+    fr_coverage: ["FR7"]
+    nfr_coverage: []
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["1.1"]
+
+    acceptance_criteria:
+      - "Redis 7 Alpine via Docker Compose com volume persistente"
+      - "Conexao com retry logic (reconecta automaticamente)"
+      - "Key patterns definidos: session:{id}, request:{id}, typing_job:{id}, rate_limit:{id}"
+      - "Helper functions: getSession(), setSession(), getRequest(), setRequest()"
+      - "Rate limiting middleware (30 msgs/min por usuario)"
+      - "Health check: { redis: 'connected' }"
+      - "Testes unitarios para helpers"
+
+    files_to_create:
+      - "backend/src/state/redis-client.ts"
+      - "backend/src/state/session-manager.ts"
+      - "backend/src/state/cache-helpers.ts"
+      - "backend/src/middleware/rate-limit.ts"
+      - "tests/unit/session-manager.test.ts"
+      - "tests/unit/rate-limit.test.ts"
+
+  - id: "1.6"
+    title: "Health Check Consolidado & Smoke Test"
+    agent: "@dev"
+    wave: 4
+    status: pending
+    fr_coverage: []
+    nfr_coverage: []
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["1.2", "1.3", "1.4", "1.5"]
+
+    acceptance_criteria:
+      - "GET /health retorna status consolidado (database, redis, vectordb, hotels_count)"
+      - "Status 'degraded' se qualquer dep falha (nao 500)"
+      - "GET /health/ready (readiness probe para Docker)"
+      - "GET /health/live (liveness probe para Docker)"
+      - "Smoke test suite: health 200, 92 hoteis, embeddings exist, Redis OK"
+      - "CI atualizado para rodar smoke tests"
+
+    files_to_create:
+      - "backend/src/api/health.ts (update)"
+      - "tests/e2e/smoke-test.test.ts"
+      - ".github/workflows/ci.yml (update)"
+
+# ============================================================
+# QUALITY GATES
+# ============================================================
+
+quality_gates:
+  pre_development:
+    - "Supabase project criado e DATABASE_URL configurado"
+    - "CSV de 92 hoteis disponivel em data/"
+    - "Google Drive folder ID configurado"
+    - "OpenAI API key disponivel"
+
+  post_wave_1:
+    - "docker compose up funciona sem erros"
+    - "GET /health retorna 200"
+    - "CI pipeline verde"
+
+  post_wave_2:
+    - "Drizzle migrations aplicadas com sucesso"
+    - "Redis ping retorna PONG"
+    - "7 tabelas criadas no Supabase"
+
+  post_wave_3:
+    - "COUNT hotels = 92"
+    - "COUNT faq_embeddings >= 400"
+    - "RAG query retorna resultados relevantes"
+
+  post_wave_4:
+    - "Smoke tests 100% verde"
+    - "Health check consolidado 200 com todas as deps"
+    - "CI pipeline completo verde"
+
+# ============================================================
+# AGENT ASSIGNMENTS
+# ============================================================
+
+agent_assignments:
+  "@dev":
+    stories: ["1.1", "1.3", "1.4", "1.5", "1.6"]
+    note: "Implementacao principal — scaffold, scripts, middleware"
+  "@data-engineer":
+    stories: ["1.2"]
+    note: "Schema design e migrations — usar SCHEMA.md da Dara"
+  "@devops":
+    stories: ["1.6"]
+    note: "CI/CD updates e Docker health checks (colaboracao com @dev)"
+  "@qa":
+    gate: "post_wave_4"
+    note: "QA gate apos smoke tests — validar antes de iniciar Epic 2"

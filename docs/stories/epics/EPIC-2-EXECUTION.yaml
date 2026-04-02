@@ -1,0 +1,353 @@
+# Epic 2: Stella Core — Pipeline Multi-Agente — Execution Plan
+# Status: READY (blocked by Epic 1)
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-2
+  title: "Stella Core — Pipeline Multi-Agente"
+  description: "O cerebro de Stella: 4 subagentes (Intent, Orchestrator, Persona, Safety) + tools + multimodal"
+  status: ready
+  priority: P0-critical
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-2"
+  architecture_reference: "docs/architecture/architecture.md#5-agent-pipeline-architecture"
+  research_reference: "docs/research/2026-04-02-stella-github-repos-agent-orchestration/"
+
+  dependencies:
+    external:
+      - "OpenAI API key (GPT-5 family: nano, turbo, pro)"
+      - "@openai/agents npm package instalado"
+    internal:
+      - "EPIC-1 completo (schema, Redis, health check)"
+
+  success_criteria:
+    - "Pipeline Intent→Orchestrator→Persona→Safety funciona end-to-end"
+    - "Intent Agent classifica 6 intencoes com confidence > 0.85"
+    - "Tools search_hotels, query_knowledge_base, transfer_to_human funcionais"
+    - "Persona gera prosa AAA sem IDs tecnicos"
+    - "Safety Agent bloqueia alucinacoes e persona breaks"
+    - "Multimodal: audio e imagem processados corretamente"
+    - "Pipeline total < 5s (NFR1: < 10s p95)"
+
+  estimated_effort: "8-12 dias de desenvolvimento"
+
+waves:
+  - wave: 1
+    name: "SDK Foundation + Intent Agent"
+    stories: ["2.1"]
+    parallel: false
+    rationale: "OpenAI Agents SDK setup + Intent Agent (Decision D6: SDK nativo, nao LLM Client custom)"
+
+  - wave: 2
+    name: "Tools + Persona (Paralelo)"
+    stories: ["2.2", "2.3", "2.4", "2.5"]
+    parallel: true
+    rationale: "3 tools (2.2, 2.3, 2.4) e Persona Agent (2.5) sao independentes. Todos dependem de 2.1"
+
+  - wave: 3
+    name: "Orchestrator + Safety (Paralelo)"
+    stories: ["2.11", "2.8", "2.9"]
+    parallel: true
+    rationale: "Orchestrator Agent (2.11) registra tools e testa individualmente. Safety (2.8, 2.9) sao independentes. Sprint 0: Orchestrator extraido de 2.6 para reduzir scope"
+
+  - wave: 4
+    name: "Pipeline Integration"
+    stories: ["2.6", "2.7"]
+    parallel: true
+    rationale: "Multi-intencoes (2.6) e session state (2.7) integram pipeline completo — dependem de waves 1-3. 2.6 agora foca APENAS em multi-intent + pipeline wiring (Orchestrator ja criado em 2.11)"
+
+  - wave: 5
+    name: "Multimodal"
+    stories: ["2.10"]
+    parallel: false
+    rationale: "Processamento multimodal e feature final — depende do pipeline completo"
+
+stories:
+  - id: "2.1"
+    title: "LLM Client Agnostico & Intent Agent (GPT-5-nano)"
+    agent: "@dev"
+    wave: 1
+    status: pending
+    fr_coverage: ["FR6", "FR8"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["1.1"]
+
+    acceptance_criteria:
+      - "Interface LLMClient agnostica: complete() + toolCall()"
+      - "OpenAI provider implementado (GPT-5 family)"
+      - "Intent Agent com GPT-5-nano classifica: RAG, API_SEARCH, API_BOOKING, CHAT, MULTIMODAL, HANDOVER, STATUS"
+      - "Deteccao de idioma (pt/en/es) na resposta"
+      - "Multi-intencao: subIntents array"
+      - "Latencia < 100ms"
+      - "Guardrails (relevance + jailbreak) configurados conforme architecture.md secao 5.3"
+      - "Testes: intencao simples, multi-intencao, deteccao idioma"
+
+    files_to_create:
+      - "backend/src/agents/llm-client.ts"
+      - "backend/src/agents/intent-agent.ts"
+      - "backend/src/agents/guardrails.ts"
+      - "backend/src/prompts/intent-agent.md"
+      - "tests/unit/intent-agent.test.ts"
+
+  - id: "2.2"
+    title: "Tool — search_hotels (SQL Query)"
+    agent: "@dev"
+    wave: 2
+    status: pending
+    fr_coverage: ["FR1", "FR32"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["2.1"]
+
+    acceptance_criteria:
+      - "Funcao searchHotels com filtros dinamicos via Drizzle"
+      - "Filtros: experience, region, destination, petFriendly, poolHeated, bradescoCoupon"
+      - "Sem filtro → top 10"
+      - "Sem resultado → array vazio (nao erro)"
+      - "Latencia < 100ms"
+      - "Testes para cada combinacao de filtro"
+
+    files_to_create:
+      - "backend/src/tools/search-hotels.ts"
+      - "tests/unit/search-hotels.test.ts"
+
+  - id: "2.3"
+    title: "Tool — query_knowledge_base (RAG / pgvector)"
+    agent: "@dev"
+    wave: 2
+    status: pending
+    fr_coverage: ["FR5"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["2.1"]
+
+    acceptance_criteria:
+      - "queryKnowledgeBase com fuzzy match de hotel"
+      - "Gera embedding da pergunta via OpenAI"
+      - "Query pgvector com cosineDistance, filtro hotel_id"
+      - "Top 3 chunks com similarity > 0.7"
+      - "Se nenhum resultado: suggestion 'transfer_to_human'"
+      - "Fuzzy match: 'tiradentes' e 'Hotel Tiradentes' → mesmo hotel"
+      - "Latencia < 500ms"
+      - "Cache de embeddings frequentes (Redis TTL 1h)"
+      - "Testes cenarios variados"
+
+    files_to_create:
+      - "backend/src/tools/query-knowledge-base.ts"
+      - "tests/unit/query-knowledge-base.test.ts"
+      - "tests/integration/rag-query.test.ts"
+
+  - id: "2.4"
+    title: "Tool — transfer_to_human (Preparacao Handover)"
+    agent: "@dev"
+    wave: 2
+    status: pending
+    fr_coverage: ["FR9"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["2.1"]
+
+    acceptance_criteria:
+      - "transferToHuman compila contexto da sessao Redis"
+      - "Summary estruturado: guest, conversation, hotel_focus, intent, reason, preferences"
+      - "Razoes: hotel_manual, guest_requested, low_confidence, api_failure, sensitive_topic"
+      - "Summary salvo em conversations com handover: true"
+      - "Marketing Intelligence extraida e salva em guest_profiles"
+      - "Retorna objeto pronto para Chatwoot (Epic 5)"
+      - "Testes para cada cenario"
+
+    files_to_create:
+      - "backend/src/tools/transfer-to-human.ts"
+      - "tests/unit/transfer-to-human.test.ts"
+
+  - id: "2.5"
+    title: "Persona Agent (GPT-5-pro) — Voz da Stella"
+    agent: "@dev"
+    wave: 2
+    status: pending
+    fr_coverage: ["FR14", "FR16", "FR19"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["2.1"]
+
+    acceptance_criteria:
+      - "Persona Agent com GPT-5-pro/creative"
+      - "System prompt AAA: Acolhedora, Conhecedora, Discreta"
+      - "generateResponse({ toolResults, sessionContext, language })"
+      - "Persona blindada (FR14): nunca admite ser IA"
+      - "Curadoria 3-4 opcoes quando multiplos resultados"
+      - "Upsell elegante e discreto (FR19)"
+      - "Deteccao e manutencao de idioma (PT/EN/ES)"
+      - "Testes: sem IDs tecnicos, persona defense, idioma correto"
+      - "Max tokens configuravel (default 500)"
+      - "Persona NUNCA acessa tools diretamente"
+
+    files_to_create:
+      - "backend/src/agents/persona-agent.ts"
+      - "backend/src/prompts/persona-system.md"
+      - "tests/unit/persona-agent.test.ts"
+
+  - id: "2.6"
+    title: "Pipeline Integration & Multi-Intencoes"
+    agent: "@dev"
+    wave: 4
+    status: pending
+    fr_coverage: ["FR8", "FR15"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["2.11", "2.5", "2.9"]
+    note: "Sprint 0: Scope reduzido — Orchestrator Agent agora em Story 2.11. Esta story foca em pipeline wiring + multi-intent"
+
+    acceptance_criteria:
+      - "Pipeline end-to-end: Intent → Orchestrator (2.11) → Persona → Safety → Response"
+      - "Multi-intencao: subIntents decompostos e tools executados em paralelo (Promise.all)"
+      - "Tools dependentes executam em sequencia automaticamente"
+      - "Persona gera resposta UNIFICADA para multi-intencao (nao respostas separadas)"
+      - "Se todos os tools falham → fallback elegante via Safety Agent"
+      - "Runner.run() orquestra pipeline completo com tracing"
+      - "Testes E2E: 1 intencao, 2 paralelas, 3 com 1 falha"
+
+    files_to_create:
+      - "backend/src/agents/pipeline.ts"
+      - "tests/e2e/pipeline.test.ts"
+
+  - id: "2.7"
+    title: "Session State & Context Persistence"
+    agent: "@dev"
+    wave: 4
+    status: pending
+    fr_coverage: ["FR7"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["2.1", "1.5"]
+
+    acceptance_criteria:
+      - "Session Manager integrado com pipeline"
+      - "hotelFocus atualizado automaticamente"
+      - "Follow-up sem hotel usa hotelFocus"
+      - "conversationHistory max 20 msgs (sliding window)"
+      - "Preferencias acumuladas"
+      - "Session TTL 24h, snapshot em conversations ao expirar"
+      - "Testes: context persistence, hotel switching"
+
+    files_to_create:
+      - "backend/src/state/session-manager.ts (update)"
+      - "tests/unit/session-context.test.ts"
+
+  - id: "2.8"
+    title: "Middleware de Seguranca (Sanitizacao & Rate Limiting)"
+    agent: "@dev"
+    wave: 3
+    status: pending
+    fr_coverage: ["FR11"]
+    nfr_coverage: ["NFR4"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["2.1"]
+
+    acceptance_criteria:
+      - "Sanitize middleware: remove control chars, detecta injection, max 2000 chars"
+      - "Se injection detectada: log Sentry + resposta persona intacta"
+      - "Rate limiting: 30 msgs/min, 500 msgs/dia"
+      - "Se excedido: resposta educada"
+      - "Parametros tools sanitizados (Drizzle parameterized)"
+      - "Testes para cada vetor de ataque"
+
+    files_to_create:
+      - "backend/src/middleware/sanitize.ts"
+      - "backend/src/middleware/rate-limit.ts (update)"
+      - "tests/unit/sanitize.test.ts"
+
+  - id: "2.9"
+    title: "Safety & Validation Agent (GPT-5-nano)"
+    agent: "@dev"
+    wave: 3
+    status: pending
+    fr_coverage: ["FR14"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["2.5"]
+
+    acceptance_criteria:
+      - "Safety Agent com GPT-5-nano (~50ms)"
+      - "Checklist: persona, dados, tom, seguranca, idioma"
+      - "Cross-check dados Persona vs Orchestrator"
+      - "APPROVED → typing queue | REJECTED → resposta safe"
+      - "Logging rejeicoes em Sentry + agent_metrics"
+      - "Metricas: taxa rejeicao por categoria"
+      - "Testes: IA mencionada→REJECTED, preco inventado→REJECTED, escassez→REJECTED"
+
+    files_to_create:
+      - "backend/src/agents/safety-agent.ts"
+      - "backend/src/prompts/safety-agent.md"
+      - "tests/unit/safety-agent.test.ts"
+
+  - id: "2.11"
+    title: "Orchestrator Agent (GPT-5-turbo) — Tool Registration & Handoffs"
+    agent: "@dev"
+    wave: 3
+    status: pending
+    fr_coverage: ["FR8", "FR15"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["2.2", "2.3", "2.4"]
+    note: "Sprint 0: Extraido de Story 2.6 para reduzir scope. Cria Orchestrator como agente standalone."
+
+    acceptance_criteria:
+      - "Orchestrator Agent definido via OpenAI Agents SDK: new Agent({ model: 'gpt-5-turbo', tools, handoffs })"
+      - "Registra todas as tools: searchHotels, queryKnowledgeBase, checkAvailability, transferToHuman, checkReservation"
+      - "Handoff configurado: Orchestrator → Persona Agent"
+      - "System prompt inclui regras: NUNCA inventar dados, usar APENAS resultados de tools"
+      - "Tool calls individuais testados via Runner.run(orchestratorAgent, input)"
+      - "Timeout por tool: 5s"
+      - "Logging: tool usado, latencia, resultado"
+      - "Testes: 1 tool call simples, fallback quando tool falha"
+
+    files_to_create:
+      - "backend/src/agents/orchestrator.ts"
+      - "backend/src/prompts/orchestrator.md"
+      - "tests/unit/orchestrator.test.ts"
+
+  - id: "2.10"
+    title: "Processamento Multimodal Nativo (Visao & Audio)"
+    agent: "@dev"
+    wave: 5
+    status: pending
+    fr_coverage: ["FR26", "FR27", "FR28"]
+    nfr_coverage: ["NFR12"]
+    estimated_effort: "L (~2-3d)"
+    blocked_by: ["2.6"]
+
+    acceptance_criteria:
+      - "Input Handler: detecta tipo (texto/audio/imagem)"
+      - "Audio: transcoding → GPT-5-nano encoder → texto + contexto emocional"
+      - "Imagem: GPT-5 Vision → descricao em tokens visuais"
+      - "Intent Agent trata inputs mistos"
+      - "Safety Agent valida imagens apropriadas"
+      - "Testes: audio→intent, foto hotel→identificacao, OCR comprovante, input misto"
+
+    files_to_create:
+      - "backend/src/agents/input-handler.ts"
+      - "tests/unit/input-handler.test.ts"
+      - "tests/e2e/multimodal.test.ts"
+
+quality_gates:
+  post_wave_1:
+    - "Intent Agent classifica intencoes corretamente"
+    - "Guardrails bloqueiam jailbreak"
+    - "@architect review: SDK setup e Intent Agent pattern corretos"
+  post_wave_2:
+    - "Cada tool retorna dados corretos"
+    - "Persona gera prosa AAA"
+  post_wave_3:
+    - "Orchestrator Agent registra todas as tools e executa tool calls individuais"
+    - "Safety Agent rejeita respostas com persona break ou alucinacao"
+    - "@architect review: Orchestrator + Safety Agent design aprovado"
+  post_wave_4:
+    - "Pipeline end-to-end < 5s"
+    - "Multi-intencao funciona"
+  post_wave_5:
+    - "Audio e imagem processados"
+    - "QA gate: PASS para iniciar Epic 3"
+
+agent_assignments:
+  "@dev":
+    stories: ["2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "2.11"]
+    note: "Epic inteiro e implementacao — core AI pipeline. Story 2.11 (Orchestrator) adicionada no Sprint 0"
+  "@architect":
+    review: ["post_wave_1", "post_wave_3"]
+    note: "Sprint 0: Review do pipeline design apos wave 1, e do Orchestrator apos wave 3"
+  "@qa":
+    gate: "post_wave_5"
+    note: "QA gate final — validar pipeline antes de Epic 3"

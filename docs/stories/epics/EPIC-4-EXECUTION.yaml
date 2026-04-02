@@ -1,0 +1,197 @@
+# Epic 4: Multi-Canal — WhatsApp & Website — Execution Plan
+# Status: READY (blocked by Epic 3)
+# Owner: @pm (Morgan)
+# Created: 2026-04-02
+
+epic:
+  id: EPIC-4
+  title: "Multi-Canal — WhatsApp & Website"
+  description: "Conectar Stella aos canais reais: WhatsApp (Evolution API) + Website chat widget"
+  status: ready
+  priority: P0-critical
+  prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-4"
+
+  dependencies:
+    external:
+      - "Evolution API instance configurada (Docker ou cloud)"
+      - "WhatsApp Business number registrado"
+    internal:
+      - "EPIC-3 completo (Elevare integration funcional)"
+
+  success_criteria:
+    - "Mensagens WhatsApp recebidas e processadas pelo pipeline"
+    - "Buffer 20s concatena mensagens picadas corretamente"
+    - "Human-Typing Simulation funciona com cadencia natural"
+    - "Imagens renderizadas como midia nativa no WhatsApp"
+    - "Chat widget website basico funcional"
+
+  estimated_effort: "5-8 dias de desenvolvimento"
+
+waves:
+  - wave: 1
+    name: "WhatsApp Foundation"
+    stories: ["4.1", "4.2"]
+    parallel: false
+    rationale: "Recepcao (4.1) e buffer (4.2) sao sequenciais — buffer depende de recepcao"
+
+  - wave: 2
+    name: "Output Layer (Paralelo)"
+    stories: ["4.3", "4.4"]
+    parallel: true
+    rationale: "Typing simulation (4.3) e renderizacao premium (4.4) sao independentes"
+
+  - wave: 3
+    name: "UX Features (Paralelo)"
+    stories: ["4.5", "4.6", "4.7"]
+    parallel: true
+    rationale: "Correfencia WhatsApp Reply, widget website e fora expediente sao independentes"
+
+  - wave: 4
+    name: "E2E Validation"
+    stories: ["4.8"]
+    parallel: false
+
+stories:
+  - id: "4.1"
+    title: "WhatsApp Business API — Recepcao de Mensagens"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR12", "FR33"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "POST /webhook/whatsapp recebe eventos da Evolution API"
+      - "Parse de mensagens: texto, audio, imagem, reply"
+      - "Extrai phone_number, message content, media URLs"
+      - "Read receipts inteligentes (FR34): marca lido apos buffer, nao no recebimento"
+      - "Presenca online dinamica (FR35): online apenas durante processamento"
+      - "Log estruturado de cada mensagem recebida"
+
+  - id: "4.2"
+    title: "Buffer de Concatenacao (20s para mensagens picadas)"
+    agent: "@dev"
+    wave: 1
+    fr_coverage: ["FR12"]
+    nfr_coverage: ["NFR7"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["4.1"]
+    acceptance_criteria:
+      - "Buffer por sessionId com window de 20s"
+      - "Concatena mensagens do mesmo usuario"
+      - "Timer resetado a cada nova mensagem"
+      - "Apos 20s sem mensagem: consolida e envia ao pipeline"
+      - "Teste: 3 mensagens em 15s → 1 mensagem consolidada"
+
+  - id: "4.3"
+    title: "Human-Typing Simulation (BullMQ + Worker)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR21"]
+    estimated_effort: "L (~2-3d)"
+    blocked_by: ["4.1"]
+    acceptance_criteria:
+      - "Chunking engine: quebra resposta em blocos 300-400 chars"
+      - "Calculo delay: chars/10 ± 20% variacao"
+      - "BullMQ queue com jobs delayed"
+      - "Worker: typing event → delay → sendText"
+      - "Mensagem curta (< 50 chars) envia instantaneo"
+      - "Multiplos blocos (> 6) agrupados em max 4-5"
+      - "Imagem + legenda: imagem instantanea, legenda com cadencia"
+      - "Conforme architecture.md secao 8 (design completo da Aria)"
+
+  - id: "4.4"
+    title: "Renderizacao Premium (Imagem + Legenda WhatsApp)"
+    agent: "@dev"
+    wave: 2
+    fr_coverage: ["FR17", "FR22"]
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["4.1"]
+    acceptance_criteria:
+      - "Download imagem da Elevare e renderiza como midia nativa"
+      - "Legenda formatada: nome suite, valor BRL, resumo bullets"
+      - "Fallback se imagem indisponivel"
+      - "3-4 opcoes com imagem cada"
+
+  - id: "4.5"
+    title: "Correfencia via WhatsApp Reply"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR18"]
+    estimated_effort: "S (~2-4h)"
+    blocked_by: ["4.4"]
+    acceptance_criteria:
+      - "Hospede faz Reply a imagem especifica → resolve para offerId"
+      - "Integracao com mapeamento de estado oculto (Story 3.5)"
+      - "Teste: reply a imagem 2 → offerId correto"
+
+  - id: "4.6"
+    title: "Chat Widget Website (basico)"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR12"]
+    estimated_effort: "M (~4-8h)"
+    acceptance_criteria:
+      - "Widget embed HTML/JS simples"
+      - "Conecta via WebSocket ao Fastify"
+      - "Envia/recebe mensagens texto"
+      - "Sem buffer 20s (website = resposta imediata)"
+      - "Responsivo mobile/desktop"
+      - "Cor primary verde CE (#289548)"
+
+  - id: "4.7"
+    title: "Fallback de Fora de Expediente"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: []
+    estimated_effort: "S (~2h)"
+    acceptance_criteria:
+      - "Detecta horario (config: expediente 8h-22h)"
+      - "Fora de expediente: mensagem elegante + promessa de follow-up"
+      - "Registra lead para atendimento no primeiro horario"
+
+  - id: "4.9"
+    title: "WhatsApp Template Messages (FR37)"
+    agent: "@dev"
+    wave: 3
+    fr_coverage: ["FR37"]
+    estimated_effort: "S (~2-4h)"
+    note: "Sprint 0: Story adicionada pela validacao Aria/Pax. Sem templates aprovados pelo Meta, mensagens proativas nao funcionam"
+    acceptance_criteria:
+      - "Templates definidos para: follow_up_quote_expiring, reservation_confirmed, out_of_hours_followup, reengagement"
+      - "Template renderer: substitui variaveis (guest_name, hotel_name, expiry_time)"
+      - "Integracao com Evolution API sendTemplate endpoint"
+      - "Fallback se template nao aprovado: log warning + skip (nao quebra fluxo)"
+      - "Documentacao: lista de templates com variaveis para submissao ao Meta"
+      - "Teste: template renderizado com variaveis corretas"
+
+    files_to_create:
+      - "backend/src/integrations/whatsapp-templates.ts"
+      - "backend/src/integrations/templates/"
+      - "tests/unit/whatsapp-templates.test.ts"
+      - "docs/playbooks/whatsapp-templates.md"
+
+  - id: "4.8"
+    title: "E2E Tests Multi-Canal"
+    agent: "@qa"
+    wave: 4
+    estimated_effort: "M (~4-8h)"
+    blocked_by: ["4.3", "4.5", "4.6", "4.7", "4.9"]
+    acceptance_criteria:
+      - "Fluxo WhatsApp end-to-end (mensagem → pipeline → typing → resposta)"
+      - "Buffer 20s testado"
+      - "Typing simulation com timing correto"
+      - "Widget website funcional"
+      - "Fora de expediente testado"
+      - "Template messages renderizadas corretamente"
+
+quality_gates:
+  post_wave_4:
+    - "E2E tests verde"
+    - "QA gate: PASS para iniciar Epic 5"
+
+agent_assignments:
+  "@dev":
+    stories: ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.9"]
+    note: "Story 4.9 (WhatsApp Templates) adicionada no Sprint 0"
+  "@qa":
+    stories: ["4.8"]
+    gate: "post_wave_4"
