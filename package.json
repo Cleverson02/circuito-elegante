@@ -1,0 +1,51 @@
+{
+  "name": "circuito-elegante-stella",
+  "version": "0.1.0",
+  "description": "Stella — Concierge Digital do Circuito Elegante",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch backend/src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "lint": "eslint backend/src/**/*.ts config/**/*.ts",
+    "lint:fix": "eslint --fix backend/src/**/*.ts config/**/*.ts",
+    "format": "prettier --write \"backend/src/**/*.ts\" \"config/**/*.ts\"",
+    "format:check": "prettier --check \"backend/src/**/*.ts\" \"config/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:unit": "jest --testPathPattern \"\\.(unit\\.test|test)\\.ts$\"",
+    "test:integration": "jest --testPathPattern tests/integration",
+    "test:e2e": "jest --testPathPattern tests/e2e",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@sentry/node": "^9.0.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "@t3-oss/env-core": "^0.12.0",
+    "drizzle-orm": "^0.44.0",
+    "fastify": "^5.3.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "drizzle-kit": "^0.31.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.0",
+    "ts-jest": "^29.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
