@@ -1,0 +1,128 @@
+# hotel-enrichment v1.0 — Hotel Data Collection & Enrichment for Stella Concierge
+# 4 functional agents: orchestrate, scrape, extract, validate
+# Data: 2026-04-03
+
+name: hotel-enrichment
+display_name: "Hotel Enrichment Squad"
+description: "Squad especializado em coletar, extrair e enriquecer dados dos 92 hotéis do Circuito Elegante para consumo pelo concierge digital Stella. ZERO INVENÇÃO — só preenche campos com dados reais encontrados."
+domain: "Hotel Data Collection, Web Scraping, Data Extraction, Knowledge Enrichment"
+version: "2.0.0"
+author: "Cleverson Silva"
+entry_agent: enrichment-chief
+tested: false
+audit: "Pedro Valério — 2026-04-03 — veto_01-07 applied"
+
+# CONSTITUTIONAL PRINCIPLE
+constitution:
+  article_zero: "ZERO INVENÇÃO — campo sem dado encontrado = null. NUNCA fabricar, inferir ou inventar dados. Só preencher o que tiver evidência real na fonte."
+
+methodology:
+  name: "Hotel Enrichment Pipeline v1.0"
+  sources:
+    - name: "Ryan Mitchell"
+      framework: "Web Scraping Decision Framework"
+      applied_to: "Estratégia de scraping por tipo de site"
+    - name: "Tobias Mayer (Apify)"
+      framework: "Actor Model + Crawlee"
+      applied_to: "Cada fonte de dados = 1 Actor isolado e composável"
+    - name: "Oren Etzioni"
+      framework: "Open Information Extraction (OpenIE)"
+      applied_to: "Extrair dados estruturados de texto livre"
+    - name: "Abe Gong (Great Expectations)"
+      framework: "Expectations-based validation"
+      applied_to: "Validação declarativa de cada campo coletado"
+    - name: "Carlo Batini"
+      framework: "Data Quality Dimensions"
+      applied_to: "Score de qualidade: accuracy, completeness, consistency"
+    - name: "Pramod Sadalage"
+      framework: "Aggregate-Oriented Design"
+      applied_to: "Decisão de o que vai no JSONB vs schema relacional"
+    - name: "Natalya Noy"
+      framework: "Ontology 101"
+      applied_to: "Validação da taxonomia de 58 campos"
+  references:
+    - "Schema.org Hotel/LodgingBusiness vocabulary"
+    - "OpenTravel Alliance OTA codes (amenidades, tipos de quarto)"
+
+  description: |
+    Pipeline v2 de 6 fases em cascata: Local → CE → Hotel (full crawl) → OTA → Chatbot → Validate+Store.
+    6 fontes: formulário local (~33), XLSX (92), site CE, sites oficiais, OTA, chatbot.
+    Inferência legítima com rastreabilidade. 58 campos, 10 categorias.
+
+agents:
+  - id: enrichment-chief
+    tier: 0
+    role: "Pipeline orchestrator — coordena coleta por hotel, tracked progress"
+  - id: chatbot-interviewer
+    tier: 1
+    role: "Detecta chatbot do hotel e conduz entrevista com 25 perguntas mapeadas aos 58 campos"
+  - id: web-scraper
+    tier: 1
+    role: "Web scraping multi-fonte — full crawl hotel sites, CE, OTA platforms"
+  - id: data-extractor
+    tier: 1
+    role: "Extração literal + inferência rastreável — múltiplas fontes → 58 campos"
+  - id: data-validator
+    tier: 2
+    role: "Quality gate — completeness, accuracy, consistency, inference audit"
+
+pipelines:
+  - scrape-ce-website        # Raspar site do Circuito Elegante (92 hotéis)
+  - scrape-hotel-website      # Raspar site oficial de cada hotel
+  - process-drive-form        # Processar formulários do Google Drive
+  - extract-hotel-data        # Extrair dados estruturados do conteúdo raw
+  - validate-hotel-data       # Validar qualidade dos dados extraídos
+  - enrich-hotel-record       # Gravar dados enriquecidos no PostgreSQL JSONB
+
+data_sources:
+  local_forms:
+    path: "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md"
+    description: "Formulários respondidos pelos hotéis (~33 hotéis, Q1-Q30)"
+    priority: P0
+    coverage: "~33 hotéis"
+    data_quality: "Alta — dados fornecidos pelo próprio hotel"
+  local_xlsx:
+    path: "data/lista-hoteis-circuito-elegante.xlsx"
+    description: "Planilha com 92 hotéis (já ingerida no schema PostgreSQL)"
+    priority: P0
+    coverage: "92 hotéis"
+    data_quality: "Alta — dados básicos validados"
+  circuito_elegante:
+    description: "Site circuitoelegante.com.br — dados já publicados"
+    priority: P1
+    coverage: "92 hotéis"
+    data_quality: "Média — dados públicos, podem estar desatualizados"
+  hotel_websites:
+    description: "Sites oficiais de cada hotel — FULL CRAWL com link discovery"
+    priority: P2
+    coverage: "Variável"
+    data_quality: "Alta — dados do próprio hotel, múltiplas subpáginas"
+  ota_platforms:
+    description: "Booking, Trivago, Google Hotels, TripAdvisor, Airbnb"
+    priority: P3
+    coverage: "Maioria dos hotéis"
+    data_quality: "Média — pode estar desatualizado. Complementar apenas."
+  chatbot:
+    description: "Chatbot do hotel (se disponível) — queries pré-definidas para gaps"
+    priority: P4
+    coverage: "Hotéis com chatbot no site"
+    data_quality: "Média-Alta — respostas diretas do hotel"
+
+taxonomy:
+  document: "docs/architecture/HOTEL-DATA-TAXONOMY.md"
+  total_fields: 58
+  categories: 10
+  schema_fields: 11  # já existem como colunas
+  jsonb_fields: 47   # novos, armazenados no campo data
+
+keywords:
+  - hotel-enrichment
+  - hotel-data
+  - web-scraping
+  - concierge
+  - circuito-elegante
+  - stella
+  - data-collection
+  - jsonb-enrichment
+  - hospitality
+  - taxonomy

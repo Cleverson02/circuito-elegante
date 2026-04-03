@@ -1,0 +1,437 @@
+# Hotel Enrichment Pipeline Workflow v2.0
+# Purpose: Pipeline completo para coletar e enriquecer dados de um hotel
+# Trigger: *enrich {hotel_slug} ou *enrich-all
+# Total phases: 6 (redesenhado após auditoria Pedro Valério)
+# Audit: veto_01-05 aplicados, link discovery, OTA, chatbot, inferência rastreável
+
+name: wf-hotel-enrichment-pipeline
+display_name: "Hotel Enrichment Pipeline v2"
+version: "2.0.0"
+squad: hotel-enrichment
+
+description: |
+  Pipeline de 6 fases para enriquecer os dados de um hotel no Circuito Elegante.
+  Coleta de até 6 fontes em cascata: local files → site CE → site oficial (full crawl)
+  → OTA platforms → chatbot do hotel.
+  Suporta inferência LEGÍTIMA com rastreabilidade (fonte + lógica documentada).
+
+  PRINCÍPIO: ZERO INVENÇÃO — campo sem dado = null com rastreabilidade.
+  PRINCÍPIO: INFERÊNCIA LEGÍTIMA — dedução rastreável ≠ invenção.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INPUTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+inputs:
+  required:
+    - name: hotel_slug
+      type: string
+      description: "Slug do hotel (ex: pousada-alma-charme-atins)"
+  optional:
+    - name: sources
+      type: array
+      default: ["local_forms", "local_xlsx", "ce_website", "hotel_website", "ota_platforms", "chatbot"]
+      description: "Fontes a consultar em cascata"
+    - name: force_refresh
+      type: boolean
+      default: false
+      description: "Ignorar cache e re-scraping completo"
+    - name: target_completeness
+      type: number
+      default: 0.60
+      description: "Meta de completeness. Se atingida após uma fase, pode pular fases seguintes."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DATA SOURCES (em ordem de prioridade e confiabilidade)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+data_sources:
+  local_forms:
+    path: "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md"
+    format: "Markdown com Q1-Q30 por hotel, separados por heading # NomeDoHotel"
+    coverage: "~33 hotéis"
+    confidence: 1.0
+    priority: P0
+    note: "Dados fornecidos pelo próprio hotel. Fonte mais confiável."
+
+  local_xlsx:
+    path: "data/lista-hoteis-circuito-elegante.xlsx"
+    format: "XLSX com 92 hotéis, colunas básicas (nome, cidade, UF, região, experiência, destino, flags)"
+    coverage: "92 hotéis"
+    confidence: 1.0
+    priority: P0
+    note: "Já ingerido pelo script ingest-hotels.ts. Dados no schema PostgreSQL."
+
+  ce_website:
+    base_url: "https://circuitoelegante.com.br"
+    coverage: "92 hotéis"
+    confidence: 0.85
+    priority: P1
+    strategy: "Descobrir URL pattern dos hotéis, scrape completo de cada página"
+
+  hotel_website:
+    coverage: "Variável (depende de cada hotel ter site)"
+    confidence: 0.90
+    priority: P2
+    strategy: |
+      LINK DISCOVERY AUTOMÁTICO:
+      1. Partir da homepage
+      2. Crawl TODOS os links internos (mesmo domínio)
+      3. Categorizar cada página por tipo (suites, FAQ, eventos, galeria, sobre, políticas, etc.)
+      4. Extrair texto + imagens de CADA página
+      NÃO usar lista fixa de URLs. Descobrir dinamicamente.
+    critical_pages:
+      - "FAQ / Perguntas frequentes (frequentemente tem dados ricos)"
+      - "Suítes / Quartos / Acomodações (tipos, capacidade, amenities)"
+      - "Eventos / Casamentos (espaço, capacidade)"
+      - "Galeria de fotos (URLs das imagens)"
+      - "Gastronomia / Restaurante (culinária, refeições)"
+      - "Lazer / Experiências / Atividades"
+      - "Como chegar / Localização"
+      - "Blog / Notícias (prêmios, sustentabilidade)"
+
+  ota_platforms:
+    sites:
+      - name: "Booking.com"
+        search_pattern: "https://www.booking.com/searchresults.html?ss={hotel_name}"
+        data_available: ["room_types", "amenities", "policies", "reviews_summary", "star_rating", "price_tier"]
+      - name: "Trivago"
+        search_pattern: "https://www.trivago.com.br/search?search={hotel_name}"
+        data_available: ["star_rating", "price_tier", "amenities", "photos"]
+      - name: "Google Hotels"
+        search_pattern: "Google search: {hotel_name} hotel"
+        data_available: ["star_rating", "reviews", "amenities", "check_in_out", "price_tier", "photos"]
+      - name: "TripAdvisor"
+        search_pattern: "https://www.tripadvisor.com.br/Search?q={hotel_name}"
+        data_available: ["reviews", "awards", "star_rating", "amenities", "nearby_attractions"]
+      - name: "Airbnb"
+        search_pattern: "Busca por nome do hotel"
+        data_available: ["room_types", "amenities", "check_in_out", "policies", "photos"]
+    confidence: 0.75
+    priority: P3
+    note: "OTA pode ter dados desatualizados. Usar apenas para COMPLEMENTAR, nunca sobrescrever fonte superior."
+
+  chatbot:
+    strategy: |
+      Se hotel tem chatbot no site:
+      1. Identificar widget de chat (Tawk.to, Zendesk, WhatsApp widget, custom)
+      2. Enviar queries pré-definidas para preencher campos null
+      3. Registrar respostas como source_type=chatbot
+    confidence: 0.80
+    priority: P4
+    predefined_queries:
+      - "Qual a idade mínima para crianças?"
+      - "Vocês aceitam pets? Qual a política?"
+      - "Tem Wi-Fi gratuito? A conexão é boa?"
+      - "Qual o horário de check-in e check-out?"
+      - "Tem estacionamento? É gratuito?"
+      - "Tem opções para veganos/celíacos no restaurante?"
+      - "É possível fazer early check-in ou late checkout?"
+      - "Qual a política de cancelamento?"
+      - "Vocês oferecem transfer do aeroporto?"
+      - "O hotel é acessível para cadeirantes?"
+      - "Tem academia ou espaço fitness?"
+      - "Quais atividades/passeios vocês oferecem?"
+      - "Tem day use disponível?"
+      - "Vocês fazem eventos/casamentos?"
+      - "Qual a distância do aeroporto mais próximo?"
+    note: "Só executar para campos que ficaram null após fases 1-5"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES (6 fases em cascata — cada fase preenche o que a anterior não cobriu)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+phase_order: |
+  FLUXO v3 (otimizado — chatbot como fase prioritária):
+  Phase 1: LOCAL files (formulário MD + XLSX) — ~33 hotéis ricos, 92 básicos
+  Phase 2: CHATBOT do hotel (se tem) — entrevista direta, alta eficiência
+  Phase 3: SITE OFICIAL (full crawl) — só campos ainda null após 1+2
+  Phase 4: OTA platforms — complementar com Booking/Trivago/etc
+  Phase 5: SITE CE — dados publicados
+  Phase 6: VALIDATE + STORE — quality gate + JSONB upsert
+
+phases:
+  - id: phase_1_local
+    name: "Local Data — Formulários + XLSX"
+    agent: "@data-extractor"
+    description: |
+      Extrair dados dos arquivos LOCAIS que já temos.
+      Fonte mais confiável (hotel respondeu diretamente).
+
+    steps:
+      - step: "1.1 — Parse formulário MD"
+        action: |
+          Ler data/faqs/Questionário...md
+          Localizar seção do hotel por heading (# NomeDoHotel)
+          Mapear Q1-Q30 → 58 campos da taxonomia
+          Confidence: 1.0 (fonte primária)
+        condition: "Hotel está no arquivo de formulários"
+
+      - step: "1.2 — Parse XLSX"
+        action: |
+          Dados já no schema PostgreSQL via ingest-hotels.ts
+          Campos: name, municipality, uf, region, experience, destination, has_api, pet_friendly, pool_heated, bradesco_coupon
+          Confidence: 1.0
+        note: "Sempre disponível para os 92 hotéis"
+
+      - step: "1.3 — Calcular cobertura parcial"
+        action: "Contar campos preenchidos vs total. Se >= target_completeness, marcar hotel como 'enriquecido parcial'."
+
+    output: "Dados locais extraídos + lista de campos ainda null"
+
+    checkpoint:
+      name: "Local Data Complete"
+      condition: "Parse executado sem erro"
+      metric: "Registrar completeness após fase 1"
+
+  - id: phase_2_chatbot
+    name: "Chatbot Interview — Entrevista Direta"
+    agent: "@chatbot-interviewer"
+    description: |
+      FASE PRIORITÁRIA: Se hotel tem chatbot, entrevistar ANTES de crawl.
+      Mais eficiente que scraping — pergunta direta, resposta direta.
+      Cobre até 30 campos em 1 sessão de 3-5 minutos.
+
+    steps:
+      - step: "2.1 — Detectar chatbot"
+        action: |
+          Usar Playwright para carregar site do hotel com JS completo.
+          Buscar widgets de chat (Tawk.to, Zendesk, Intercom, WhatsApp, custom).
+          Se chatbot_detected=false → pular para Phase 3.
+          Se whatsapp_only → flag para follow-up manual, pular para Phase 3.
+
+      - step: "2.2 — Entrevista direcionada"
+        action: |
+          Filtrar perguntas baseado nos campos null após Phase 1.
+          Enviar perguntas high priority primeiro.
+          Delay de 3-5s entre perguntas.
+          Máximo 25 perguntas por sessão.
+          Adaptar follow-ups baseado nas respostas.
+
+      - step: "2.3 — Extract respostas"
+        action: |
+          @data-extractor mapeia respostas para campos.
+          Confidence: 0.85-0.90 (resposta direta do hotel).
+          Merge com dados de Phase 1.
+
+    checkpoint:
+      condition: "Chatbot detectado e pelo menos 1 resposta obtida"
+      on_fail: "Se não tem chatbot → pular para Phase 3 (normal)"
+      metric: "Registrar campos preenchidos via chatbot"
+
+  - id: phase_3_hotel_website
+    name: "Site Oficial — Full Crawl (só gaps)"
+    agent: "@web-scraper"
+    description: |
+      LINK DISCOVERY AUTOMÁTICO do site oficial.
+      SÓ busca dados para campos que ficaram null após Phase 1+2.
+
+    steps:
+      - step: "2.1 — Descobrir URL do hotel no CE"
+        action: "Buscar listagem no CE, identificar URL pattern, localizar hotel"
+      - step: "2.2 — Scrape completo da página"
+        action: "Extrair texto, imagens, links"
+      - step: "2.3 — Extract + merge"
+        action: "@data-extractor mapeia para campos null. Não sobrescreve dados de fase 1."
+
+    checkpoint:
+      condition: "Página encontrada e scraped"
+
+  - id: phase_3b_ce_website
+    name: "Site Circuito Elegante"
+    agent: "@web-scraper"
+    description: "Complementar com dados do site CE para campos ainda null."
+
+    steps:
+      - step: "3.1 — Obter URL do site oficial"
+        action: "Buscar em: formulário Q4, XLSX, Google search '{hotel_name} site oficial'"
+
+      - step: "3.2 — Link discovery"
+        action: |
+          A partir da homepage, descobrir TODOS os links internos.
+          Seguir até profundidade 3.
+          Categorizar cada página encontrada por tipo:
+          suites, faq, eventos, galeria, gastronomia, lazer, sobre, políticas, blog, contato, como-chegar
+
+      - step: "3.3 — Scrape ALL pages"
+        action: "Fetch e parse de CADA página descoberta (não só as óbvias)"
+        rate_limit: "2-5s entre requests, respeitar robots.txt"
+
+      - step: "3.4 — Extract + inferências"
+        action: |
+          @data-extractor mapeia para campos null.
+          INFERÊNCIAS LEGÍTIMAS permitidas nesta fase:
+          - UF=MA → region=nordeste (geográfico, 100% certo)
+          - "30km de BH" + "campo" no nome → experience=campo
+          - "Atins, Lençóis Maranhenses" → experience=praia
+          - "Piscina aquecida" na FAQ → pool_heated=true
+          CADA inferência registrada com inference_logic + sources
+
+    checkpoint:
+      condition: "Site encontrado e pelo menos homepage scraped"
+      on_fail: "Se hotel não tem site → pular para fase 4"
+
+  - id: phase_4_ota
+    name: "OTA Platforms — Booking, Trivago, Google, TripAdvisor, Airbnb"
+    agent: "@web-scraper"
+    description: |
+      Complementar com dados de plataformas OTA.
+      Usar APENAS para campos ainda null após fases 1-3.
+
+    steps:
+      - step: "4.1 — Buscar hotel em cada OTA"
+        action: |
+          Para cada plataforma (Booking, Trivago, Google Hotels, TripAdvisor, Airbnb):
+          1. Buscar hotel por nome
+          2. Se encontrar: scrape da página do hotel
+          3. Extrair: amenities, room_types, star_rating, reviews, policies, photos
+
+      - step: "4.2 — Extract + merge"
+        action: |
+          @data-extractor mapeia APENAS campos ainda null.
+          NUNCA sobrescrever dado de fonte superior (local > CE > site oficial).
+          OTA confidence: 0.75 (pode estar desatualizado)
+
+      - step: "4.3 — Extrair objeções de reviews"
+        action: |
+          De TripAdvisor e Booking reviews:
+          - Identificar reclamações/objeções recorrentes
+          - Categorizar: PREÇO, INFRAESTRUTURA, LOCALIZAÇÃO, ATENDIMENTO
+          - Buscar respostas do hotel nos reviews (se disponível)
+          - Mapear para campo 9.2 (common_objections)
+
+    checkpoint:
+      condition: "Pelo menos 1 OTA consultada"
+      on_fail: "Se nenhuma OTA acessível → pular para fase 5"
+
+  - id: phase_5_chatbot
+    name: "Chatbot do Hotel — Queries para Gaps"
+    agent: "@web-scraper"
+    description: |
+      Consultar chatbot do hotel para preencher campos que ficaram null.
+      ÚLTIMA FASE antes de aceitar null definitivo.
+    condition: "Hotel tem chatbot identificado no site E ainda há campos null importantes"
+
+    steps:
+      - step: "5.1 — Identificar chatbot"
+        action: "Verificar se site tem widget de chat (Tawk.to, Zendesk, WhatsApp, custom)"
+
+      - step: "5.2 — Queries direcionadas"
+        action: |
+          Para cada campo null IMPORTANTE, enviar pergunta pré-definida.
+          Registrar resposta como source_type=chatbot, confidence=0.80
+
+      - step: "5.3 — Extract respostas"
+        action: "@data-extractor mapeia respostas para campos null"
+
+    checkpoint:
+      condition: "Chatbot respondeu pelo menos 1 pergunta"
+      on_fail: "Se não tem chatbot ou não respondeu → aceitar null"
+      note: "Esta fase é OPCIONAL. Null legítimo após 5 fases é aceitável."
+
+  - id: phase_6_validate_store
+    name: "Validate + Store"
+    agent: "@data-validator → @enrichment-chief"
+    description: "Validar qualidade final e gravar no PostgreSQL."
+
+    steps:
+      - step: "6.1 — Validate"
+        action: |
+          @data-validator executa:
+          - Field-level validation (tipos, formatos)
+          - Geographic consistency (UF ↔ region)
+          - Cross-source consistency
+          - Zero Invention Audit
+          - Inference Audit (toda inferência tem logic + sources?)
+          - Quality scoring (accuracy, completeness, consistency, currency)
+
+      - step: "6.2 — Store"
+        action: |
+          @enrichment-chief executa:
+          - Prepare JSONB com _meta (sources, quality_score, enriched_at)
+          - Upsert: UPDATE hotels SET data = data || enrichment WHERE slug = ?
+          - Update schema columns se encontrou pet_friendly/pool_heated com confidence >= 0.9
+
+      - step: "6.3 — Report"
+        action: "Gerar relatório: campos preenchidos, fontes usadas, inferências feitas, null restantes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INFERENCE RULES (Pedro Valério audit fix)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+inference_rules:
+  description: |
+    Inferência LEGÍTIMA ≠ invenção.
+    Inferência legítima = dedução lógica rastreável a partir de dados concretos.
+    TODA inferência DEVE ter: sources[] + inference_logic (string explicativa).
+
+  allowed_inferences:
+    geographic:
+      - pattern: "UF → region"
+        example: "UF=MA → region=nordeste"
+        confidence: 1.0
+        logic: "Mapeamento geográfico fixo do Brasil"
+      - pattern: "UF sem litoral → experience ≠ praia"
+        example: "UF=MG → experience ≠ praia"
+        confidence: 1.0
+        logic: "Minas Gerais não tem litoral"
+      - pattern: "Localidade + contexto → experience"
+        example: "'Atins, Lençóis Maranhenses' → experience=praia"
+        confidence: 0.95
+        logic: "Atins é vilarejo no litoral do Maranhão"
+
+    contextual:
+      - pattern: "Clima local → pool_heated"
+        example: "'Clima em Atins é sempre quente' → pool_heated=false"
+        confidence: 0.95
+        logic: "Hotel explica que não aquece piscina por causa do clima"
+      - pattern: "Preço médio OTA → price_tier"
+        example: "Diária média R$800-1500 no Booking → price_tier=$$$"
+        confidence: 0.80
+        logic: "Faixa de preço observada em OTA"
+      - pattern: "Nome + contexto → lodging_type"
+        example: "'Pousada boutique localizada...' → lodging_type=pousada boutique"
+        confidence: 1.0
+        logic: "Hotel se auto-descreve como pousada boutique"
+
+  forbidden_inferences:
+    - "Inferir amenities baseado em 'hotéis similares na região'"
+    - "Inferir pet_friendly sem dado explícito"
+    - "Inferir preço sem fonte (nem OTA)"
+    - "Copiar dados de um hotel para outro"
+    - "Completar FAQ com perguntas inventadas"
+
+  output_format:
+    literal:
+      confidence_type: "literal"
+      source_text: "Texto exato da fonte"
+    inferred:
+      confidence_type: "inferred"
+      inference_logic: "Explicação da dedução"
+      sources: ["URLs ou paths que fundamentam a inferência"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VETO CONDITIONS (Pedro Valério audit)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+veto_conditions:
+  veto_01: "Marcar campo null sem consultar TODAS as fontes aplicáveis → VETO"
+  veto_02: "Inferência sem inference_logic documentada → VETO"
+  veto_03: "Sobrescrever dado de fonte superior com fonte inferior → VETO"
+  veto_04: "Scraper usar lista fixa de URLs sem link discovery → VETO"
+  veto_05: "Dado fabricado sem source_text nem inference_logic → VETO (gravíssimo)"
+  veto_06: "Pular fase sem motivo documentado → VETO"
+  veto_07: "OTA data sobrescrever formulário local → VETO"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BATCH MODE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+batch_config:
+  trigger: "*enrich-all"
+  concurrency: 3
+  order:
+    - "1. Hotéis com formulário local (~33) — dados mais ricos"
+    - "2. Hotéis restantes (~59) — precisam de mais scraping"
+  resume: true
+  progress_file: "data/enrichment-progress.json"
