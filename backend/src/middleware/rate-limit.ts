@@ -39,7 +39,7 @@ export async function rateLimitHook(
   reply.header('X-RateLimit-Reset', ttl);
 
   if (current > limit) {
-    reply.status(429).send({
+    return reply.status(429).send({
       error: 'Too Many Requests',
       message: `Rate limit exceeded. Max ${limit} requests per minute.`,
       retryAfter: ttl,
