@@ -2,7 +2,6 @@ import postgres from 'postgres';
 import * as XLSX from 'xlsx';
 import { join } from 'node:path';
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 const XLSX_PATH = join(__dirname, '..', 'lista-hoteis-circuito-elegante.xlsx');
 
 // --- Types ---
@@ -52,7 +51,7 @@ function yesNo(value: unknown): boolean {
 }
 
 function normalizeRegion(value: string): string {
-  const normalized = value.trim().toLowerCase().replace('-', '-');
+  const normalized = value.trim().toLowerCase();
   const valid = ['nordeste', 'sudeste', 'sul', 'centro-oeste', 'norte'];
   const match = valid.find((v) => v === normalized);
   if (match) return match;
@@ -102,8 +101,6 @@ export function parseXlsx(filePath: string): RawRow[] {
       inSection = true;
       // Section 1 has "hotel_ID" in column 5, Section 2 has "ENVIAR PARA CONCIERGE"
       const col5 = String(row[5] ?? '').trim().toLowerCase();
-      sectionHasHotelId = col5.includes('hotel_id') || col5.match(/^\d+$/) !== null;
-      // Actually re-check: header says "hotel_ID" for section 1
       sectionHasHotelId = col5 === 'hotel_id';
       continue;
     }

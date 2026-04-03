@@ -32,9 +32,6 @@ importers:
       winston:
         specifier: ^3.17.0
         version: 3.19.0
-      xlsx:
-        specifier: ^0.18.5
-        version: 0.18.5
       zod:
         specifier: ^3.24.0
         version: 3.25.76
@@ -78,6 +75,9 @@ importers:
       typescript:
         specifier: ^5.8.0
         version: 5.9.3
+      xlsx:
+        specifier: ^0.18.5
+        version: 0.18.5
 
 packages:
 
