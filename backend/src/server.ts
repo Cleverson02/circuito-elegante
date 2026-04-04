@@ -3,7 +3,9 @@ import * as Sentry from '@sentry/node';
 import { env } from '../../config/env.js';
 import { logger } from './middleware/logging.js';
 import { registerLogging } from './middleware/logging.js';
+import { registerRateLimiting } from './middleware/rate-limit.js';
 import { registerRoutes } from './api/routes.js';
+import { getRedisClient, disconnectRedis } from './state/redis-client.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -16,6 +18,9 @@ async function bootstrap(): Promise<void> {
     logger.info('Sentry initialized');
   }
 
+  // Initialize Redis (registers health checker)
+  getRedisClient();
+
   const app = Fastify({
     logger: false, // Using Winston instead
     genReqId: () => crypto.randomUUID(),
@@ -23,6 +28,7 @@ async function bootstrap(): Promise<void> {
 
   // Register middleware
   await registerLogging(app);
+  await registerRateLimiting(app);
 
   // Register routes
   await registerRoutes(app);
@@ -32,6 +38,7 @@ async function bootstrap(): Promise<void> {
   for (const signal of signals) {
     process.on(signal, async () => {
       logger.info(`Received ${signal}, shutting down gracefully`);
+      await disconnectRedis();
       await app.close();
       process.exit(0);
     });

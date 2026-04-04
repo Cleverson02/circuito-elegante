@@ -1,0 +1,70 @@
+schema: 1
+story: '1.5'
+story_title: 'Redis Setup & Session State Foundation'
+gate: PASS
+status_reason: 'All 7 ACs met. SEC-001 resolved. 15 unit tests passing. Lint and typecheck clean. No CRITICAL/HIGH issues. Re-confirmed 2026-04-04.'
+reviewer: 'Quinn (Test Architect)'
+updated: '2026-04-04T12:00:00Z'
+
+quality_score: 90
+expires: '2026-04-18T12:00:00Z'
+
+top_issues:
+  - id: 'SEC-001'
+    severity: low
+    finding: 'RESOLVED — rateLimitHook returns after 429 response (rate-limit.ts:42)'
+    suggested_action: 'No action needed'
+    suggested_owner: dev
+  - id: 'REL-001'
+    severity: low
+    finding: 'JSON.parse without try/catch in session-manager and cache-helpers'
+    suggested_action: 'Wrap JSON.parse calls for resilience in future hardening'
+    suggested_owner: dev
+  - id: 'TEST-002'
+    severity: low
+    finding: 'cache-helpers.ts has no dedicated unit tests (5 wrapper functions)'
+    suggested_action: 'Add tests if cache-helpers grow in complexity'
+    suggested_owner: dev
+  - id: 'PERF-001'
+    severity: low
+    finding: '3 Redis calls per request in rate-limiter (INCR, EXPIRE, TTL)'
+    suggested_action: 'Consider Lua script to reduce to 1 call in future optimization'
+    suggested_owner: dev
+  - id: 'ARCH-001'
+    severity: low
+    finding: 'Module-level singleton in redis-client.ts'
+    suggested_action: 'Consider DI pattern for testability in future refactor'
+    suggested_owner: dev
+
+waiver: { active: false }
+
+evidence:
+  tests_reviewed: 15
+  risks_identified: 0
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7]
+    ac_gaps: []
+
+nfr_validation:
+  security:
+    status: PASS
+    notes: 'SEC-001 fixed. Rate limiting with proper headers. No hardcoded secrets.'
+  performance:
+    status: PASS
+    notes: 'O(1) INCR-based limiter. Reasonable TTLs. 3 Redis calls/req acceptable for MVP.'
+  reliability:
+    status: PASS
+    notes: 'Retry with exponential backoff. Reconnect on ECONNRESET/ECONNREFUSED. Graceful shutdown.'
+  maintainability:
+    status: PASS
+    notes: 'Clean separation of concerns. Types exported. Well-organized module structure.'
+
+recommendations:
+  immediate: []
+  future:
+    - action: 'Add try/catch around JSON.parse in session-manager and cache-helpers'
+      refs: ['backend/src/state/session-manager.ts', 'backend/src/state/cache-helpers.ts']
+    - action: 'Consolidate rate-limiter Redis calls with Lua script'
+      refs: ['backend/src/middleware/rate-limit.ts']
+    - action: 'Add unit tests for cache-helpers when complexity grows'
+      refs: ['backend/src/state/cache-helpers.ts']
