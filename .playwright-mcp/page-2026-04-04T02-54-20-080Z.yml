@@ -1,0 +1,787 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#primary"
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "Circuito Elegante" [ref=e6] [cursor=pointer]:
+          - /url: https://www.circuitoelegante.com.br
+          - img "Circuito Elegante" [ref=e8]
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "Hotéis" [ref=e12] [cursor=pointer]:
+              - /url: https://www.circuitoelegante.com.br/hoteis/
+          - listitem [ref=e13]:
+            - link "Restaurantes" [ref=e14] [cursor=pointer]:
+              - /url: https://www.circuitoelegante.com.br/restaurantes/
+          - listitem [ref=e15]:
+            - link "Agências" [ref=e16] [cursor=pointer]:
+              - /url: https://www.circuitoelegante.com.br/agencias/
+        - generic [ref=e17]:
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Selo XIS" [ref=e21] [cursor=pointer]:
+                - /url: https://www.circuitoelegante.com.br/selo-xis/
+            - listitem [ref=e22]:
+              - link "Revista" [ref=e23] [cursor=pointer]:
+                - /url: https://www.circuitoelegante.com.br/revista/
+            - listitem [ref=e24]:
+              - link "Sobre" [ref=e25] [cursor=pointer]:
+                - /url: https://www.circuitoelegante.com.br/sobre/
+            - listitem [ref=e26]:
+              - link "Cart 0 item" [ref=e27] [cursor=pointer]:
+                - /url: https://www.circuitoelegante.com.br/?page_id=4451
+                - img "Cart" [ref=e28]: 
+                - generic [ref=e29]: 0 item
+          - button "Entrar" [ref=e31] [cursor=pointer]
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - heading "Hotéis" [level=1] [ref=e35]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Hotel
+            - textbox "Hotel" [ref=e40]:
+              - /placeholder: Digite o nome do hotel, cidade ou região
+          - generic [ref=e41]:
+            - generic [ref=e42]: Check-in
+            - textbox "Check-in" [ref=e43]: 2026-04-04
+          - generic [ref=e44]:
+            - generic [ref=e45]: Check-out
+            - textbox "Check-out" [ref=e46]: 2026-04-05
+          - generic [ref=e47]:
+            - generic [ref=e48]: Hóspedes
+            - button "2 adultos" [ref=e49] [cursor=pointer]
+          - button "Reservar" [ref=e51] [cursor=pointer]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]: Tipo de hotel
+            - combobox [ref=e57]:
+              - option "Todos" [selected]
+              - option "Business"
+              - option "Casa de Temporada"
+              - option "Eco Refúgio"
+              - option "Glamping"
+              - option "Hotel"
+              - option "Hotel Boutique"
+              - option "Hotel Fazenda"
+              - option "Pousada"
+              - option "Resort"
+              - option "Romântico"
+              - option "Spa"
+          - generic [ref=e58]:
+            - generic [ref=e59]: Região
+            - combobox [ref=e60]:
+              - option "Todas" [selected]
+              - option "Centro-oeste"
+              - option "Nordeste"
+              - option "Norte"
+              - option "Sudeste"
+              - option "Sul"
+          - generic [ref=e61]:
+            - generic [ref=e62]: "Buscar:"
+            - textbox "Digite aqui para buscar o hotel por nome ou localidade" [ref=e63]
+        - generic [ref=e64]:
+          - link "Alma Charme Atins Atins - Lençóis Maranhenses / Maranhão" [ref=e66] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/alma-charme-atins-lencois-maranhenses-ma/
+            - generic [ref=e67]:
+              - img [ref=e68]
+              - generic [ref=e69]:
+                - heading "Alma Charme Atins" [level=4] [ref=e70]
+                - paragraph [ref=e71]: Atins - Lençóis Maranhenses / Maranhão
+          - link "Baía das Caraúbas Glamping Camocim / Ceará" [ref=e73] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/baia-das-caraubas-glamping-camocim-ce/
+            - generic [ref=e74]:
+              - img [ref=e75]
+              - generic [ref=e76]:
+                - heading "Baía das Caraúbas Glamping" [level=4] [ref=e77]
+                - paragraph [ref=e78]: Camocim / Ceará
+          - link "Belmond Copacabana Palace Rio de Janeiro / RJ" [ref=e80] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/belmond-copacabana-palace-rio-de-janeirorj/
+            - generic [ref=e81]:
+              - img [ref=e82]
+              - generic [ref=e83]:
+                - heading "Belmond Copacabana Palace" [level=4] [ref=e84]
+                - paragraph [ref=e85]: Rio de Janeiro / RJ
+          - link "Belmond Hotel das Cataratas Foz do Iguaçu / Paraná" [ref=e87] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/belmond-hotel-das-cataratas-foz-do-iguacupr/
+            - generic [ref=e88]:
+              - img [ref=e89]
+              - generic [ref=e90]:
+                - heading "Belmond Hotel das Cataratas" [level=4] [ref=e91]
+                - paragraph [ref=e92]: Foz do Iguaçu / Paraná
+          - link "Borgo 28 Gramado / RS" [ref=e94] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/borgo-28/
+            - generic [ref=e95]:
+              - img [ref=e96]
+              - generic [ref=e97]:
+                - heading "Borgo 28" [level=4] [ref=e98]
+                - paragraph [ref=e99]: Gramado / RS
+          - link "Borgo Del Vino Hotel & Vinícola Areal - Rio de janeiro" [ref=e101] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/borgo-del-vino-hotel-e-vinicola/
+            - generic [ref=e102]:
+              - img [ref=e103]
+              - generic [ref=e104]:
+                - heading "Borgo Del Vino Hotel & Vinícola" [level=4] [ref=e105]
+                - paragraph [ref=e106]: Areal - Rio de janeiro
+          - link "Botanique Hotel Experience Campos do Jordão / São Paulo" [ref=e108] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/botanique-hotel-experience-campos-do-jordaosp/
+            - generic [ref=e109]:
+              - img [ref=e110]
+              - generic [ref=e111]:
+                - heading "Botanique Hotel Experience" [level=4] [ref=e112]
+                - paragraph [ref=e113]: Campos do Jordão / São Paulo
+          - link "Bupitanga Hotel Praia da Pipa - Tibau do Sul / Rio Grande do Norte" [ref=e115] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/bupitanga-hotel-praia-da-pipa-rn/
+            - generic [ref=e116]:
+              - img [ref=e117]
+              - generic [ref=e118]:
+                - heading "Bupitanga Hotel" [level=4] [ref=e119]
+                - paragraph [ref=e120]: Praia da Pipa - Tibau do Sul / Rio Grande do Norte
+          - link "Cabanas do Vale Itaipava / Rio de Janeiro" [ref=e122] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/cabanas-do-vale-petropolis-rj/
+            - generic [ref=e123]:
+              - img [ref=e124]
+              - generic [ref=e125]:
+                - heading "Cabanas do Vale" [level=4] [ref=e126]
+                - paragraph [ref=e127]: Itaipava / Rio de Janeiro
+          - link "Caiman, Pantanal Miranda / Mato Grosso do Sul" [ref=e129] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/caiman-pantanal-miranda-ms/
+            - generic [ref=e130]:
+              - img [ref=e131]
+              - generic [ref=e132]:
+                - heading "Caiman, Pantanal" [level=4] [ref=e133]
+                - paragraph [ref=e134]: Miranda / Mato Grosso do Sul
+          - link "Canto do Irerê Boutique Hotel Atibaia / São Paulo" [ref=e136] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/canto-do-irere-boutique-hotel-atibaiasp/
+            - generic [ref=e137]:
+              - img [ref=e138]
+              - generic [ref=e139]:
+                - heading "Canto do Irerê Boutique Hotel" [level=4] [ref=e140]
+                - paragraph [ref=e141]: Atibaia / São Paulo
+          - link "Capim do Mato Pousada & Spa Serra do Cipó / Minas Gerais" [ref=e143] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/capim-do-mato-pousada-spa-serra-do-cipomg/
+            - generic [ref=e144]:
+              - img [ref=e145]
+              - generic [ref=e146]:
+                - heading "Capim do Mato Pousada & Spa" [level=4] [ref=e147]
+                - paragraph [ref=e148]: Serra do Cipó / Minas Gerais
+          - link "Carmel Charme Resort Aquiraz / Ceará" [ref=e150] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/carmel-charme-resort-aquirazce/
+            - generic [ref=e151]:
+              - img [ref=e152]
+              - generic [ref=e153]:
+                - heading "Carmel Charme Resort" [level=4] [ref=e154]
+                - paragraph [ref=e155]: Aquiraz / Ceará
+          - link "Carmel Taíba Exclusive Resort Taíba - São Gonçalo do Amarante / Ceará" [ref=e157] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/carmel-taiba-exclusive-resort-taiba-sao-goncalo-do-amarante-ce/
+            - generic [ref=e158]:
+              - img [ref=e159]
+              - generic [ref=e160]:
+                - heading "Carmel Taíba Exclusive Resort" [level=4] [ref=e161]
+                - paragraph [ref=e162]: Taíba - São Gonçalo do Amarante / Ceará
+          - link "Casa de Santo Antônio Hotel Boutique Parnaíba / Piauí" [ref=e164] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casa-de-santo-antonio-hotel-boutique-parnaibapi/
+            - generic [ref=e165]:
+              - img [ref=e166]
+              - generic [ref=e167]:
+                - heading "Casa de Santo Antônio Hotel Boutique" [level=4] [ref=e168]
+                - paragraph [ref=e169]: Parnaíba / Piauí
+          - link "Casa Näh_Praia Praia do Marceneiro - Passo de Camaragibe/AL" [ref=e171] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casa-naeh-praia-praia-do-marceneiro-passo-de-camaragibeal/
+            - generic [ref=e172]:
+              - img [ref=e173]
+              - generic [ref=e174]:
+                - heading "Casa Näh_Praia" [level=4] [ref=e175]
+                - paragraph [ref=e176]: Praia do Marceneiro - Passo de Camaragibe/AL
+          - link "Casa Poema Chapada dos Veadeiros / Goiás" [ref=e178] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casa-poema-chapada-dos-veadeiros-go/
+            - generic [ref=e179]:
+              - img [ref=e180]
+              - generic [ref=e181]:
+                - heading "Casa Poema" [level=4] [ref=e182]
+                - paragraph [ref=e183]: Chapada dos Veadeiros / Goiás
+          - link "Casa Rosa Hotel Boutique Petrópolis / Rio de Janeiro" [ref=e185] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casa-rosa-hotel-boutique-petropolisrj/
+            - generic [ref=e186]:
+              - img [ref=e187]
+              - generic [ref=e188]:
+                - heading "Casa Rosa Hotel Boutique" [level=4] [ref=e189]
+                - paragraph [ref=e190]: Petrópolis / Rio de Janeiro
+          - link "Casa Turquesa Maison D’Hôtes Paraty / Rio de Janeiro" [ref=e192] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casa-turquesa-paratyrj/
+            - generic [ref=e193]:
+              - img [ref=e194]
+              - generic [ref=e195]:
+                - heading "Casa Turquesa Maison D’Hôtes" [level=4] [ref=e196]
+                - paragraph [ref=e197]: Paraty / Rio de Janeiro
+          - link "Casas Brancas Boutique Hotel & Spa Búzios / Rio de Janeiro" [ref=e199] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/casas-brancas-boutique-hotel-spa/
+            - generic [ref=e200]:
+              - img [ref=e201]
+              - generic [ref=e202]:
+                - heading "Casas Brancas Boutique Hotel & Spa" [level=4] [ref=e203]
+                - paragraph [ref=e204]: Búzios / Rio de Janeiro
+          - link "Castelo Saint Andrews Gramado / Rio Grande do Sul" [ref=e206] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/saint-andrews-hotel-exclusive-house-gramadors/
+            - generic [ref=e207]:
+              - img [ref=e208]
+              - generic [ref=e209]:
+                - heading "Castelo Saint Andrews" [level=4] [ref=e210]
+                - paragraph [ref=e211]: Gramado / Rio Grande do Sul
+          - link "Clara Arte Resort Inhotim - Brumadinho / Minas Gerais" [ref=e213] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/clara-arte-resort-inhotim-brumadinhomg/
+            - generic [ref=e214]:
+              - img [ref=e215]
+              - generic [ref=e216]:
+                - heading "Clara Arte Resort" [level=4] [ref=e217]
+                - paragraph [ref=e218]: Inhotim - Brumadinho / Minas Gerais
+          - link "Clara Dourado Resort Dourado / São Paulo" [ref=e220] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/clara-dourado-resort-douradosp/
+            - generic [ref=e221]:
+              - img [ref=e222]
+              - generic [ref=e223]:
+                - heading "Clara Dourado Resort" [level=4] [ref=e224]
+                - paragraph [ref=e225]: Dourado / São Paulo
+          - link "Clara Ibiúna Resort Ibiúna / São Paulo" [ref=e227] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/clara-ibiuna-resort-ibunasp/
+            - generic [ref=e228]:
+              - img [ref=e229]
+              - generic [ref=e230]:
+                - heading "Clara Ibiúna Resort" [level=4] [ref=e231]
+                - paragraph [ref=e232]: Ibiúna / São Paulo
+          - link "Fazenda Moréias Camocim / Ceará" [ref=e234] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/fazenda-moreias-camocim-ce/
+            - generic [ref=e235]:
+              - img [ref=e236]
+              - generic [ref=e237]:
+                - heading "Fazenda Moréias" [level=4] [ref=e238]
+                - paragraph [ref=e239]: Camocim / Ceará
+          - link "Fazenda São Luiz da Boa Sorte Vassouras / Rio de Janeiro" [ref=e241] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/fazenda-sao-luiz-da-boa-sorte-vassouras-rj/
+            - generic [ref=e242]:
+              - img [ref=e243]
+              - generic [ref=e244]:
+                - heading "Fazenda São Luiz da Boa Sorte" [level=4] [ref=e245]
+                - paragraph [ref=e246]: Vassouras / Rio de Janeiro
+          - link "Figueira da Serra Pousada Boutique Campos do Jordão / São Paulo" [ref=e248] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/figueira-da-serra-pousada-boutique-campos-do-jordao-sp/
+            - generic [ref=e249]:
+              - img [ref=e250]
+              - generic [ref=e251]:
+                - heading "Figueira da Serra Pousada Boutique" [level=4] [ref=e252]
+                - paragraph [ref=e253]: Campos do Jordão / São Paulo
+          - link "Grande Hotel Termas de Araxá Araxá / Minas Gerais" [ref=e255] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/grande-hotel-termas-de-araxa-araxa-mg/
+            - generic [ref=e256]:
+              - img [ref=e257]
+              - generic [ref=e258]:
+                - heading "Grande Hotel Termas de Araxá" [level=4] [ref=e259]
+                - paragraph [ref=e260]: Araxá / Minas Gerais
+          - link "HCM Hotel Corais de Manaíra João Pessoa / Paraíba" [ref=e262] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-corais-de-manaira-joao-pessoa-pb/
+            - generic [ref=e263]:
+              - img [ref=e264]
+              - generic [ref=e265]:
+                - heading "HCM Hotel Corais de Manaíra" [level=4] [ref=e266]
+                - paragraph [ref=e267]: João Pessoa / Paraíba
+          - link "Hotel Boutique & Spa Ponta de Inhambupe by Slaviero Hotéis Baixio / Bahia" [ref=e269] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-boutique-spa-ponta-de-inhambupe-baixio-ba/
+            - generic [ref=e270]:
+              - img [ref=e271]
+              - generic [ref=e272]:
+                - heading "Hotel Boutique & Spa Ponta de Inhambupe by Slaviero Hotéis" [level=4] [ref=e273]
+                - paragraph [ref=e274]: Baixio / Bahia
+          - link "Hotel Boutique Bahia Bonita Trancoso - Porto Seguro / Bahia" [ref=e276] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-boutique-bahia-bonita-quadrado-trancoso-ba/
+            - generic [ref=e277]:
+              - img [ref=e278]
+              - generic [ref=e279]:
+                - heading "Hotel Boutique Bahia Bonita" [level=4] [ref=e280]
+                - paragraph [ref=e281]: Trancoso - Porto Seguro / Bahia
+          - link "Hotel Boutique Quebra-Noz Campos do Jordão / São Paulo" [ref=e283] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-boutique-quebra-noz-campos-do-jordao-sp/
+            - generic [ref=e284]:
+              - img [ref=e285]
+              - generic [ref=e286]:
+                - heading "Hotel Boutique Quebra-Noz" [level=4] [ref=e287]
+                - paragraph [ref=e288]: Campos do Jordão / São Paulo
+          - link "Hotel Casa da Montanha Gramado / Rio Grande do Sul" [ref=e290] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-casa-da-montanha-gramadors/
+            - generic [ref=e291]:
+              - img [ref=e292]
+              - generic [ref=e293]:
+                - heading "Hotel Casa da Montanha" [level=4] [ref=e294]
+                - paragraph [ref=e295]: Gramado / Rio Grande do Sul
+          - link "Hotel Casa dos Arandis Maraú / Bahia" [ref=e297] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-casa-dos-arandis-marau-ba/
+            - generic [ref=e298]:
+              - img [ref=e299]
+              - generic [ref=e300]:
+                - heading "Hotel Casa dos Arandis" [level=4] [ref=e301]
+                - paragraph [ref=e302]: Maraú / Bahia
+          - link "Hotel Emiliano Rio de Janeiro / RJ" [ref=e304] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-emiliano-rio-de-janeirorj/
+            - generic [ref=e305]:
+              - img [ref=e306]
+              - generic [ref=e307]:
+                - heading "Hotel Emiliano" [level=4] [ref=e308]
+                - paragraph [ref=e309]: Rio de Janeiro / RJ
+          - link "Hotel Emiliano São Paulo / SP" [ref=e311] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-emiliano-sao-paulosp/
+            - generic [ref=e312]:
+              - img [ref=e313]
+              - generic [ref=e314]:
+                - heading "Hotel Emiliano" [level=4] [ref=e315]
+                - paragraph [ref=e316]: São Paulo / SP
+          - link "Hotel Fairmont Rio de Janeiro Rio de Janeiro / RJ" [ref=e318] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fairmont-rio-de-janeiro-rio-de-janeiro-rj/
+            - generic [ref=e319]:
+              - img [ref=e320]
+              - generic [ref=e321]:
+                - heading "Hotel Fairmont Rio de Janeiro" [level=4] [ref=e322]
+                - paragraph [ref=e323]: Rio de Janeiro / RJ
+          - link "Hotel Fasano Rio de Janeiro / RJ" [ref=e325] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fasano-rio-de-janeirorj/
+            - generic [ref=e326]:
+              - img [ref=e327]
+              - generic [ref=e328]:
+                - heading "Hotel Fasano" [level=4] [ref=e329]
+                - paragraph [ref=e330]: Rio de Janeiro / RJ
+          - link "Hotel Fasano São Paulo / SP" [ref=e332] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fasano-sao-paulosp/
+            - generic [ref=e333]:
+              - img [ref=e334]
+              - generic [ref=e335]:
+                - heading "Hotel Fasano" [level=4] [ref=e336]
+                - paragraph [ref=e337]: São Paulo / SP
+          - link "Hotel Fasano Belo Horizonte / Minas Gerais" [ref=e339] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fasano-belo-horizonte-mg/
+            - generic [ref=e340]:
+              - img [ref=e341]
+              - generic [ref=e342]:
+                - heading "Hotel Fasano" [level=4] [ref=e343]
+                - paragraph [ref=e344]: Belo Horizonte / Minas Gerais
+          - link "Hotel Fasano Angra dos Reis Frade - Angra dos Reis / Rio de Janeiro" [ref=e346] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fasano-angra-dos-reis-frade-angra-dos-reisrj/
+            - generic [ref=e347]:
+              - img [ref=e348]
+              - generic [ref=e349]:
+                - heading "Hotel Fasano Angra dos Reis" [level=4] [ref=e350]
+                - paragraph [ref=e351]: Frade - Angra dos Reis / Rio de Janeiro
+          - link "Hotel Fasano Boa Vista Porto Feliz / São Paulo" [ref=e353] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/fasano-fazenda-boa-vista-porto-felizsp/
+            - generic [ref=e354]:
+              - img [ref=e355]
+              - generic [ref=e356]:
+                - heading "Hotel Fasano Boa Vista" [level=4] [ref=e357]
+                - paragraph [ref=e358]: Porto Feliz / São Paulo
+          - link "Hotel Fasano Salvador Salvador / Bahia" [ref=e360] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-fasano-salvador-salvadorba/
+            - generic [ref=e361]:
+              - img [ref=e362]
+              - generic [ref=e363]:
+                - heading "Hotel Fasano Salvador" [level=4] [ref=e364]
+                - paragraph [ref=e365]: Salvador / Bahia
+          - link "Hotel Gran Marquise Fortaleza / Ceará" [ref=e367] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-gran-marquise-fortalezace/
+            - generic [ref=e368]:
+              - img [ref=e369]
+              - generic [ref=e370]:
+                - heading "Hotel Gran Marquise" [level=4] [ref=e371]
+                - paragraph [ref=e372]: Fortaleza / Ceará
+          - link "Hotel Santa Teresa MGallery Rio de Janeiro / RJ" [ref=e374] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/santa-teresa-hotel-rj-mgallery-rio-de-janeirorj/
+            - generic [ref=e375]:
+              - img [ref=e376]
+              - generic [ref=e377]:
+                - heading "Hotel Santa Teresa MGallery" [level=4] [ref=e378]
+                - paragraph [ref=e379]: Rio de Janeiro / RJ
+          - link "Hotel Unique São Paulo / SP" [ref=e381] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-unique-sao-paulosp/
+            - generic [ref=e382]:
+              - img [ref=e383]
+              - generic [ref=e384]:
+                - heading "Hotel Unique" [level=4] [ref=e385]
+                - paragraph [ref=e386]: São Paulo / SP
+          - link "Hotel Valle D’incanto Gramado / Rio Grande do Sul" [ref=e388] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-valle-dincanto-gramado-rs/
+            - generic [ref=e389]:
+              - img [ref=e390]
+              - generic [ref=e391]:
+                - heading "Hotel Valle D’incanto" [level=4] [ref=e392]
+                - paragraph [ref=e393]: Gramado / Rio Grande do Sul
+          - link "Ibiti Projeto Conceição do Ibitipoca / Minas Gerais" [ref=e395] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-comuna-do-ibitipoca-conceicao-do-ibitipocamg/
+            - generic [ref=e396]:
+              - img [ref=e397]
+              - generic [ref=e398]:
+                - heading "Ibiti Projeto" [level=4] [ref=e399]
+                - paragraph [ref=e400]: Conceição do Ibitipoca / Minas Gerais
+          - link "Ilha dos Poldros Delta do Parnaíba / Maranhão" [ref=e402] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/ilha-dos-poldros-delta-do-parnaiba-ma/
+            - generic [ref=e403]:
+              - img [ref=e404]
+              - generic [ref=e405]:
+                - heading "Ilha dos Poldros" [level=4] [ref=e406]
+                - paragraph [ref=e407]: Delta do Parnaíba / Maranhão
+          - link "Insólito Boutique Hotel Búzios / Rio de Janeiro" [ref=e409] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/insolito-boutique-hotel-armacao-dos-buziosrj/
+            - generic [ref=e410]:
+              - img [ref=e411]
+              - generic [ref=e412]:
+                - heading "Insólito Boutique Hotel" [level=4] [ref=e413]
+                - paragraph [ref=e414]: Búzios / Rio de Janeiro
+          - link "Kenoa Resort Barra de São Miguel / Alagoas" [ref=e416] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/kenoa-exclusive-beach-spa-resort-barra-de-sao-miguelal/
+            - generic [ref=e417]:
+              - img [ref=e418]
+              - generic [ref=e419]:
+                - heading "Kenoa Resort" [level=4] [ref=e420]
+                - paragraph [ref=e421]: Barra de São Miguel / Alagoas
+          - 'link "Kurotel: Centro Contemporâneo de Saúde e Bem-Estar Gramado / Rio Grande do Sul" [ref=e423] [cursor=pointer]':
+            - /url: https://www.circuitoelegante.com.br/hotel/kurotel-spa/
+            - generic [ref=e424]:
+              - img [ref=e425]
+              - generic [ref=e426]:
+                - 'heading "Kurotel: Centro Contemporâneo de Saúde e Bem-Estar" [level=4] [ref=e427]'
+                - paragraph [ref=e428]: Gramado / Rio Grande do Sul
+          - link "LK Design Hotel Florianópolis / Santa Catarina" [ref=e430] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/lk-design-hotel-florianopolis-sc/
+            - generic [ref=e431]:
+              - img [ref=e432]
+              - generic [ref=e433]:
+                - heading "LK Design Hotel" [level=4] [ref=e434]
+                - paragraph [ref=e435]: Florianópolis / Santa Catarina
+          - link "Manoá Eco Villa Mucuri / Bahia" [ref=e437] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/manoa-eco-villas/
+            - generic [ref=e438]:
+              - img [ref=e439]
+              - generic [ref=e440]:
+                - heading "Manoá Eco Villa" [level=4] [ref=e441]
+                - paragraph [ref=e442]: Mucuri / Bahia
+          - link "Mata N’ativa Pousada Trancoso - Porto Seguro / Bahia" [ref=e444] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/mata-nativa-pousada-trancosoba/
+            - generic [ref=e445]:
+              - img [ref=e446]
+              - generic [ref=e447]:
+                - heading "Mata N’ativa Pousada" [level=4] [ref=e448]
+                - paragraph [ref=e449]: Trancoso - Porto Seguro / Bahia
+          - link "Naatooh Hotel Boutique Florianópolis / Santa Catarina" [ref=e451] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/naatooh-guest-houses-florianopolis-sc/
+            - generic [ref=e452]:
+              - img [ref=e453]
+              - generic [ref=e454]:
+                - heading "Naatooh Hotel Boutique" [level=4] [ref=e455]
+                - paragraph [ref=e456]: Florianópolis / Santa Catarina
+          - link "Nanii Hotel São Miguel do Gostoso / Rio Grande do Norte" [ref=e458] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/nanii-hotel-sao-miguel-do-gostoso-rn/
+            - generic [ref=e459]:
+              - img [ref=e460]
+              - generic [ref=e461]:
+                - heading "Nanii Hotel" [level=4] [ref=e462]
+                - paragraph [ref=e463]: São Miguel do Gostoso / Rio Grande do Norte
+          - link "Nomaa Hotel Curitiba / Paraná" [ref=e465] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/nomaa-hotel-curitibapr/
+            - generic [ref=e466]:
+              - img [ref=e467]
+              - generic [ref=e468]:
+                - heading "Nomaa Hotel" [level=4] [ref=e469]
+                - paragraph [ref=e470]: Curitiba / Paraná
+          - link "Nór Hotel & Spa São Roque / São Paulo" [ref=e472] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/nor-hotel-spa/
+            - generic [ref=e473]:
+              - img [ref=e474]
+              - generic [ref=e475]:
+                - heading "Nór Hotel & Spa" [level=4] [ref=e476]
+                - paragraph [ref=e477]: São Roque / São Paulo
+          - link "Parador Cambará do Sul Cambará do Sul / Rio Grande do Sul" [ref=e479] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/parador-cambara-do-sul-cambara-do-sul-rs/
+            - generic [ref=e480]:
+              - img [ref=e481]
+              - generic [ref=e482]:
+                - heading "Parador Cambará do Sul" [level=4] [ref=e483]
+                - paragraph [ref=e484]: Cambará do Sul / Rio Grande do Sul
+          - link "Parador Lumiar Hotel & SPA Nova Friburgo / Rio de Janeiro" [ref=e486] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/parador-lumiar-nova-friburgo-rj/
+            - generic [ref=e487]:
+              - img [ref=e488]
+              - generic [ref=e489]:
+                - heading "Parador Lumiar Hotel & SPA" [level=4] [ref=e490]
+                - paragraph [ref=e491]: Nova Friburgo / Rio de Janeiro
+          - link "Pousada Cantelli Bento Gonçalves / Rio Grande do Sul" [ref=e493] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-cantelli-bento-goncalves-rs/
+            - generic [ref=e494]:
+              - img [ref=e495]
+              - generic [ref=e496]:
+                - heading "Pousada Cantelli" [level=4] [ref=e497]
+                - paragraph [ref=e498]: Bento Gonçalves / Rio Grande do Sul
+          - link "Pousada do Ouro Paraty / Rio de Janeiro" [ref=e500] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-do-ouro-paratyrj/
+            - generic [ref=e501]:
+              - img [ref=e502]
+              - generic [ref=e503]:
+                - heading "Pousada do Ouro" [level=4] [ref=e504]
+                - paragraph [ref=e505]: Paraty / Rio de Janeiro
+          - link "Pousada do Outeiro Caraíva - Porto Seguro / Bahia" [ref=e507] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-do-outeiro-porto-seguroba/
+            - generic [ref=e508]:
+              - img [ref=e509]
+              - generic [ref=e510]:
+                - heading "Pousada do Outeiro" [level=4] [ref=e511]
+                - paragraph [ref=e512]: Caraíva - Porto Seguro / Bahia
+          - link "Pousada Inácia Chapada dos Veadeiros / Goiás" [ref=e514] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-inacia-chapada-dos-veadeiros-go/
+            - generic [ref=e515]:
+              - img [ref=e516]
+              - generic [ref=e517]:
+                - heading "Pousada Inácia" [level=4] [ref=e518]
+                - paragraph [ref=e519]: Chapada dos Veadeiros / Goiás
+          - link "Pousada Vila Kalango Jericoacoara / Ceará" [ref=e521] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-vila-kalango-jericoacoarace/
+            - generic [ref=e522]:
+              - img [ref=e523]
+              - generic [ref=e524]:
+                - heading "Pousada Vila Kalango" [level=4] [ref=e525]
+                - paragraph [ref=e526]: Jericoacoara / Ceará
+          - link "Primitivo Hotel & Villas Passo de Camaragibe / AL" [ref=e528] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/primitivo-hotel-villas/
+            - generic [ref=e529]:
+              - img [ref=e530]
+              - generic [ref=e531]:
+                - heading "Primitivo Hotel & Villas" [level=4] [ref=e532]
+                - paragraph [ref=e533]: Passo de Camaragibe / AL
+          - link "Rancho do Peixe Praia do Preá, Jericoacoara / Ceará" [ref=e535] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/rancho-do-peixe-praia-do-prea-jericoacoara-ce/
+            - generic [ref=e536]:
+              - img [ref=e537]
+              - generic [ref=e538]:
+                - heading "Rancho do Peixe" [level=4] [ref=e539]
+                - paragraph [ref=e540]: Praia do Preá, Jericoacoara / Ceará
+          - link "Refúgio na Serra Boutique Hotel Chapada Diamantina - Mucugê / Bahia" [ref=e542] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/refugio-na-serra-boutique-hotel-mucuge-ba/
+            - generic [ref=e543]:
+              - img [ref=e544]
+              - generic [ref=e545]:
+                - heading "Refúgio na Serra Boutique Hotel" [level=4] [ref=e546]
+                - paragraph [ref=e547]: Chapada Diamantina - Mucugê / Bahia
+          - link "Rituaali Itatiaia / Rio de Janeiro" [ref=e549] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/rituaali-itatiaiarj/
+            - generic [ref=e550]:
+              - img [ref=e551]
+              - generic [ref=e552]:
+                - heading "Rituaali" [level=4] [ref=e553]
+                - paragraph [ref=e554]: Itatiaia / Rio de Janeiro
+          - link "Tiradentes Boutique Hotel Tiradentes / Minas Gerais" [ref=e556] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/tiradentes-boutique-hotel/
+            - generic [ref=e557]:
+              - img [ref=e558]
+              - generic [ref=e559]:
+                - heading "Tiradentes Boutique Hotel" [level=4] [ref=e560]
+                - paragraph [ref=e561]: Tiradentes / Minas Gerais
+          - link "Tivoli Mofarrej São Paulo Hotel São Paulo / SP" [ref=e563] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/tivoli-mofarrej-sao-paulo-sao-paulosp/
+            - generic [ref=e564]:
+              - img [ref=e565]
+              - generic [ref=e566]:
+                - heading "Tivoli Mofarrej São Paulo Hotel" [level=4] [ref=e567]
+                - paragraph [ref=e568]: São Paulo / SP
+          - link "Txai Resort Itacaré / Bahia" [ref=e570] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/txai-resort-itacareba/
+            - generic [ref=e571]:
+              - img [ref=e572]
+              - generic [ref=e573]:
+                - heading "Txai Resort" [level=4] [ref=e574]
+                - paragraph [ref=e575]: Itacaré / Bahia
+          - link "Unique Garden Mairiporã / São Paulo" [ref=e577] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/unique-garden-mairipora-sp/
+            - generic [ref=e578]:
+              - img [ref=e579]
+              - generic [ref=e580]:
+                - heading "Unique Garden" [level=4] [ref=e581]
+                - paragraph [ref=e582]: Mairiporã / São Paulo
+          - link "Vila Cerrado Chapada dos Veadeiros / Goiás" [ref=e584] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/vila-cerrado-alto-paraiso-de-goias-go/
+            - generic [ref=e585]:
+              - img [ref=e586]
+              - generic [ref=e587]:
+                - heading "Vila Cerrado" [level=4] [ref=e588]
+                - paragraph [ref=e589]: Chapada dos Veadeiros / Goiás
+          - link "Vila de Alter Pousada Boutique Amazônia Alter do Chão / Pará" [ref=e591] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/vila-de-alter-pousada-boutique-amazonia-santarempa/
+            - generic [ref=e592]:
+              - img [ref=e593]
+              - generic [ref=e594]:
+                - heading "Vila de Alter Pousada Boutique Amazônia" [level=4] [ref=e595]
+                - paragraph [ref=e596]: Alter do Chão / Pará
+          - link "Villa D’Ozio Hotel Praia Brava - Itajaí / Santa Catarina" [ref=e598] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/villa-dozio-praia-brava-sc/
+            - generic [ref=e599]:
+              - img [ref=e600]
+              - generic [ref=e601]:
+                - heading "Villa D’Ozio Hotel" [level=4] [ref=e602]
+                - paragraph [ref=e603]: Praia Brava - Itajaí / Santa Catarina
+          - link "Villa do Vale Boutique Hotel Blumenau / Santa Catarina" [ref=e605] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/villa-do-vale-boutique-hotel-bistro-blumenau-sc/
+            - generic [ref=e606]:
+              - img [ref=e607]
+              - generic [ref=e608]:
+                - heading "Villa do Vale Boutique Hotel" [level=4] [ref=e609]
+                - paragraph [ref=e610]: Blumenau / Santa Catarina
+          - link "Villa dos Nativos Boutique Hotel Praia dos Nativos, Trancoso / Bahia" [ref=e612] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/villa-dos-nativos-boutique-hotel-praia-dos-nativos-trancoso-ba/
+            - generic [ref=e613]:
+              - img [ref=e614]
+              - generic [ref=e615]:
+                - heading "Villa dos Nativos Boutique Hotel" [level=4] [ref=e616]
+                - paragraph [ref=e617]: Praia dos Nativos, Trancoso / Bahia
+          - link "Villa Kandui Boutique Hotel Maraú / Bahia" [ref=e619] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/villa-kandui-boutique-hotel-marau-ba/
+            - generic [ref=e620]:
+              - img [ref=e621]
+              - generic [ref=e622]:
+                - heading "Villa Kandui Boutique Hotel" [level=4] [ref=e623]
+                - paragraph [ref=e624]: Maraú / Bahia
+          - link "Villa Rasa Búzios / Rio de Janeiro" [ref=e626] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/pousada-villa-rasa-armacao-dos-buziosrj/
+            - generic [ref=e627]:
+              - img [ref=e628]
+              - generic [ref=e629]:
+                - heading "Villa Rasa" [level=4] [ref=e630]
+                - paragraph [ref=e631]: Búzios / Rio de Janeiro
+          - link "Village Le Canton Teresópolis / Rio de Janeiro" [ref=e633] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-le-canton-teresopolisrj/
+            - generic [ref=e634]:
+              - img [ref=e635]
+              - generic [ref=e636]:
+                - heading "Village Le Canton" [level=4] [ref=e637]
+                - paragraph [ref=e638]: Teresópolis / Rio de Janeiro
+          - link "Wood Hotel Gramado / Rio Grande do Sul" [ref=e640] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/hotel-wood-gramado-rs/
+            - generic [ref=e641]:
+              - img [ref=e642]
+              - generic [ref=e643]:
+                - heading "Wood Hotel" [level=4] [ref=e644]
+                - paragraph [ref=e645]: Gramado / Rio Grande do Sul
+          - link "Zendaya Resort Búzios / Rio de Janeiro" [ref=e647] [cursor=pointer]:
+            - /url: https://www.circuitoelegante.com.br/hotel/zendaya-resort-buziosrj/
+            - generic [ref=e648]:
+              - img [ref=e649]
+              - generic [ref=e650]:
+                - heading "Zendaya Resort" [level=4] [ref=e651]
+                - paragraph [ref=e652]: Búzios / Rio de Janeiro
+    - generic [ref=e657]:
+      - link [ref=e660] [cursor=pointer]:
+        - /url: http://www.stampato.com.br/#!/
+        - img [ref=e661]
+      - link [ref=e664] [cursor=pointer]:
+        - /url: https://www.nespresso.com/br/pt/home
+        - img [ref=e665]
+      - link [ref=e668] [cursor=pointer]:
+        - /url: https://shoppingleblon.com.br/
+        - img [ref=e669]
+      - link [ref=e672] [cursor=pointer]:
+        - /url: https://www.fairfax.com.br/
+        - img [ref=e673]
+      - link [ref=e676] [cursor=pointer]:
+        - /url: https://vinicolauvva.com.br/
+        - img [ref=e677]
+      - link [ref=e680] [cursor=pointer]:
+        - /url: https://www.shoppingvillagemall.com.br/
+        - img [ref=e681]
+      - link [ref=e684] [cursor=pointer]:
+        - /url: https://www.trousseau.com.br/
+        - img [ref=e685]
+      - link [ref=e688] [cursor=pointer]:
+        - /url: https://banco.bradesco/html/classic/produtos-servicos/cartoes/meu-cartao.shtm
+        - img [ref=e689]
+      - link [ref=e692] [cursor=pointer]:
+        - /url: https://www.dokabathworks.com.br/
+        - img [ref=e693]
+      - link [ref=e696] [cursor=pointer]:
+        - /url: https://www.mitsubishimotors.com.br/
+        - img [ref=e697]
+      - link [ref=e700] [cursor=pointer]:
+        - /url: https://www.institutodacrianca.org.br/
+        - img [ref=e701]
+      - link [ref=e704] [cursor=pointer]:
+        - /url: http://www.stampato.com.br/#!/
+        - img [ref=e705]
+      - link [ref=e708] [cursor=pointer]:
+        - /url: https://www.nespresso.com/br/pt/home
+        - img [ref=e709]
+      - link [ref=e712] [cursor=pointer]:
+        - /url: https://shoppingleblon.com.br/
+        - img [ref=e713]
+      - link [ref=e716] [cursor=pointer]:
+        - /url: https://www.fairfax.com.br/
+        - img [ref=e717]
+      - link [ref=e720] [cursor=pointer]:
+        - /url: https://vinicolauvva.com.br/
+        - img [ref=e721]
+      - link [ref=e724] [cursor=pointer]:
+        - /url: https://www.shoppingvillagemall.com.br/
+        - img [ref=e725]
+      - link [ref=e728] [cursor=pointer]:
+        - /url: https://www.trousseau.com.br/
+        - img [ref=e729]
+      - link [ref=e732] [cursor=pointer]:
+        - /url: https://banco.bradesco/html/classic/produtos-servicos/cartoes/meu-cartao.shtm
+        - img [ref=e733]
+      - link [ref=e736] [cursor=pointer]:
+        - /url: https://www.dokabathworks.com.br/
+        - img [ref=e737]
+      - link [ref=e740] [cursor=pointer]:
+        - /url: https://www.mitsubishimotors.com.br/
+        - img [ref=e741]
+      - link [ref=e744] [cursor=pointer]:
+        - /url: https://www.institutodacrianca.org.br/
+        - img [ref=e745]
+      - link [ref=e748] [cursor=pointer]:
+        - /url: http://www.stampato.com.br/#!/
+        - img [ref=e749]
+      - link [ref=e752] [cursor=pointer]:
+        - /url: https://www.nespresso.com/br/pt/home
+        - img [ref=e753]
+      - link [ref=e756] [cursor=pointer]:
+        - /url: https://shoppingleblon.com.br/
+        - img [ref=e757]
+      - link [ref=e760] [cursor=pointer]:
+        - /url: https://www.fairfax.com.br/
+        - img [ref=e761]
+      - link [ref=e764] [cursor=pointer]:
+        - /url: https://vinicolauvva.com.br/
+        - img [ref=e765]
+    - generic [ref=e768]:
+      - generic [ref=e769]:
+        - heading "Assine nossa newsletter" [level=2] [ref=e770]:
+          - strong [ref=e771]: Assine nossa newsletter
+        - paragraph [ref=e772]: Deixe sua caixa de entrada ainda mais elegante!
+      - iframe [ref=e774]:
+        - text: 
+    - contentinfo [ref=e775]:
+      - generic [ref=e777]:
+        - paragraph [ref=e779]: Copyright © 2023 Circuito Elegante
+        - list [ref=e781]:
+          - listitem [ref=e782]:
+            - link [ref=e783] [cursor=pointer]:
+              - /url: https://www.facebook.com/circuitoelegante
+              - img [ref=e785]
+          - listitem [ref=e787]:
+            - link [ref=e788] [cursor=pointer]:
+              - /url: https://twitter.com/circuitoelegant
+              - img [ref=e790]
+          - listitem [ref=e792]:
+            - link [ref=e793] [cursor=pointer]:
+              - /url: https://www.instagram.com/circuitoelegante/
+              - img [ref=e795]
+          - listitem [ref=e797]:
+            - link [ref=e798] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/circuito-elegante/
+              - img [ref=e800]
+        - list [ref=e803]:
+          - listitem
+          - listitem [ref=e804]:
+            - link "Termos de uso" [ref=e805] [cursor=pointer]:
+              - /url: https://www.circuitoelegante.com.br/termos/
+  - status [ref=e806]

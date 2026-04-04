@@ -23,16 +23,21 @@
         "phase_xlsx": true,
         "phase_md": false,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907199",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Lençóis Maranhenses"
+      "destination": "Lençóis Maranhenses",
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/alma-charme-atins-lencois-maranhenses-ma/",
+        "location_ce": "Atins - Lençóis Maranhenses / Maranhão"
+      }
     },
     "rancharia-charme-beach": {
       "id": "rancharia-charme-beach",
@@ -277,13 +282,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907345",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
@@ -341,6 +347,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Aceitamos pagamentos com dinheiro, transferências bancárias/PIX, cartão de débito ou cartão de crédito. Aceitamos Visa, Mastercard, Elo e American Express. Não aceitamos cheques."
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/bupitanga-hotel-praia-da-pipa-rn/",
+        "location_ce": "Praia da Pipa - Tibau do Sul / Rio Grande do Norte"
       }
     },
     "casa-turquesa": {
@@ -363,13 +373,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907355",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "praia",
@@ -431,6 +442,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Pagamento 100% antecipado, aceitamos cartões Amex , Visa e Master parcelamentos podem ser feitos em até 03 vezes, somente nas bandeiras Visa ou Master"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-turquesa-paratyrj/",
+        "location_ce": "Paraty / Rio de Janeiro"
       }
     },
     "clara-dourado-resort": {
@@ -484,13 +499,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907386",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "campo",
@@ -552,6 +568,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Pagamento via cartão de crédito, sempre no ato da reserva."
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/clara-ibiuna-resort-ibunasp/",
+        "location_ce": "Ibiúna / São Paulo"
       }
     },
     "insolito-boutique-hotel": {
@@ -574,13 +594,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907395",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "praia",
@@ -634,6 +655,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Como formas de pagamento temos:"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/insolito-boutique-hotel-armacao-dos-buziosrj/",
+        "location_ce": "Búzios / Rio de Janeiro"
       }
     },
     "le-canton-hotel": {
@@ -957,13 +982,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907445",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
@@ -1025,6 +1051,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Pagamento antecipado via cartão de crédito em até 3x sem juros ou via pix."
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/nanii-hotel-sao-miguel-do-gostoso-rn/",
+        "location_ce": "São Miguel do Gostoso / Rio Grande do Norte"
       }
     },
     "nomaa-hotel": {
@@ -1109,13 +1139,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907473",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "serra",
@@ -1169,6 +1200,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Como formas de pagamento temos:"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/parador-lumiar-nova-friburgo-rj/",
+        "location_ce": "Nova Friburgo / Rio de Janeiro"
       }
     },
     "ponta-de-inhambupe-hotel-boutique-&-spa": {
@@ -1284,13 +1319,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907521",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
@@ -1356,6 +1392,10 @@
           "q": "Diferenciais do hotel",
           "a": "Arquitetura sustentável com bangalôs construídos em palafitas e cobertos com palha de carnaúba, integrando-se harmoniosamente à paisagem natural."
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/rancho-do-peixe-praia-do-prea-jericoacoara-ce/",
+        "location_ce": "Praia do Preá, Jericoacoara / Ceará"
       }
     },
     "saint-andrews-hotel": {
@@ -1409,13 +1449,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907556",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "campo",
@@ -1481,6 +1522,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "O pagamento da hospedagem deve ser antecipado através de pix, transferência bancária ou cartão de crédito através de link. No cartão ser parcelado em até seis vezes sem juros"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/unique-garden-mairipora-sp/",
+        "location_ce": "Mairiporã / São Paulo"
       }
     },
     "valle-d'incanto-hotel": {
@@ -1503,13 +1548,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907566",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sul",
       "experience": "serra",
@@ -1567,6 +1613,10 @@
           "q": "Diferenciais do hotel",
           "a": "\\- Arquitetura inspirada na Toscana com ambientação romântica   \\- Atendimento altamente personalizado e exclusivo   \\- Piscina aquecida coberta e restaurante com gastronomia italiana   \\- Um dos hotéis mais bem avaliados do Brasil em hospitalidade e charme   \\- já eleito o hotel mais romântico do mundo"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/hotel-valle-dincanto-gramado-rs/",
+        "location_ce": "Gramado / Rio Grande do Sul"
       }
     },
     "vila-cerrado": {
@@ -1725,13 +1775,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907610",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
@@ -1781,6 +1832,10 @@
           "q": "Diferenciais do hotel",
           "a": "- Localização privilegiada a poucos metros da Praia dos Nativos - Capela exclusiva para celebrações íntimas - Piscina com pedras balinesas naturalmente aquecidas - Decoração exclusiva com artesanato local e peças de Bali"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/villa-dos-nativos-boutique-hotel-praia-dos-nativos-trancoso-ba/",
+        "location_ce": "Praia dos Nativos, Trancoso / Bahia"
       }
     },
     "villa-kandui": {
@@ -1803,16 +1858,21 @@
         "phase_xlsx": true,
         "phase_md": false,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907620",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Taipu de Fora"
+      "destination": "Taipu de Fora",
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/villa-kandui-boutique-hotel-marau-ba/",
+        "location_ce": "Maraú / Bahia"
+      }
     },
     "villa-rasa": {
       "id": "villa-rasa",
@@ -1834,13 +1894,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907629",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "praia",
@@ -1890,6 +1951,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "cartão de crédito em até 3x"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/pousada-villa-rasa-armacao-dos-buziosrj/",
+        "location_ce": "Búzios / Rio de Janeiro"
       }
     },
     "wood": {
@@ -1943,13 +2008,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907648",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "praia",
@@ -2007,6 +2073,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Como formas de pagamento temos:"
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/zendaya-resort-buziosrj/",
+        "location_ce": "Búzios / Rio de Janeiro"
       }
     },
     "estabelecimentos": {
@@ -2091,16 +2161,21 @@
         "phase_xlsx": true,
         "phase_md": false,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907677",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "praia",
-      "destination": "Copacabana"
+      "destination": "Copacabana",
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/belmond-copacabana-palace-rio-de-janeirorj/",
+        "location_ce": "Rio de Janeiro / RJ"
+      }
     },
     "botanique-hotel-experience": {
       "id": "botanique-hotel-experience",
@@ -3548,16 +3623,21 @@
         "phase_xlsx": true,
         "phase_md": false,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.908201",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Serra Fluminense"
+      "destination": "Serra Fluminense",
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/rituaali-itatiaiarj/",
+        "location_ce": "Itatiaia / Rio de Janeiro"
+      }
     },
     "santa-teresa-rj-mgallery": {
       "id": "santa-teresa-rj-mgallery",
@@ -3734,16 +3814,21 @@
         "phase_xlsx": true,
         "phase_md": false,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.908393",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "ce_site"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Itacaré"
+      "destination": "Itacaré",
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/txai-resort-itacareba/",
+        "location_ce": "Itacaré / Bahia"
+      }
     },
     "unique-sp": {
       "id": "unique-sp",
@@ -3889,13 +3974,14 @@
         "phase_xlsx": true,
         "phase_md": true,
         "phase_chatbot": false,
-        "phase_ce_site": false,
+        "phase_ce_site": true,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.908471",
       "sources": [
         "xlsx",
-        "md"
+        "md",
+        "ce_site"
       ],
       "region": "sudeste",
       "experience": "serra",
@@ -3957,6 +4043,10 @@
           "q": "Política de pagamento (parcelamento, formas aceitas)",
           "a": "Trabalhamos com 100% do pagamento no ato da solicitação da reserva, parcelamos em até 3x via link cartão, pagamentos via pix e transferências bancaria são aceitos também."
         }
+      },
+      "ce_data": {
+        "ce_page_url": "https://www.circuitoelegante.com.br/hotel/tiradentes-boutique-hotel/",
+        "location_ce": "Tiradentes / Minas Gerais"
       }
     }
   }
