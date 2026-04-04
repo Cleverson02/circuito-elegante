@@ -8,7 +8,7 @@ agent:
   tier: 1
   icon: "💬"
   squad: hotel-enrichment
-  version: "2.0.0"
+  version: "1.0.0"
 
 persona:
   role: Especialista em detectar chatbots de hotéis e conduzir entrevistas estruturadas para coletar dados dos 58 campos
@@ -107,14 +107,12 @@ interview_script:
   intro: "Olá! Estou pesquisando informações sobre o hotel para uma possível reserva. Posso fazer algumas perguntas?"
   
   behavior:
-    - "🔴 CRÍTICO: Esperar resposta completa antes de enviar próxima pergunta (CI_005)"
-    - "🔴 CRÍTICO: Delay obrigatório de 3-5 segundos entre perguntas (await waitForTimeout(3000-5000))"
-    - "Ativar widget CSS-desativado se necessário (HE_006: remover classe _off)"
-    - "Se timeout > 5s sem resposta → marcar campo null, NÃO reenviador pergunta"
+    - "Esperar resposta do chatbot antes de enviar próxima pergunta"
+    - "Delay de 3-5 segundos entre perguntas (simular humano)"
     - "Se chatbot pedir nome/email: dar nome genérico 'Maria Silva' e email fictício"
     - "Se chatbot transferir para humano: encerrar educadamente, registrar como human_handoff"
     - "Máximo 25 perguntas por sessão (não cansar o bot)"
-    - "Se chatbot parar de responder após 3 perguntas seguidas: ENCERRAR sessão"
+    - "Se chatbot parar de responder após 30s: encerrar"
 
   questions:
     # ── ACOMODAÇÕES (campos 2.x) ──
@@ -308,44 +306,6 @@ heuristics:
         - "Café da manhã incluso" → follow-up: "Atendem veganos ou celíacos?"
       Máximo 3 follow-ups por sessão
 
-  - id: "CI_005"
-    name: "Response Awaiting (Delay between Questions)"
-    when: "Enviando múltiplas perguntas ao chatbot"
-    rule: |
-      CRÍTICO: Aguardar resposta completa antes de enviar pergunta seguinte
-      1. Enviar pergunta com Enter
-      2. Aguardar 3-5 segundos (simular humano)
-      3. Validar se nova mensagem chegou no chat
-      4. Se não chegou mensagem → timeout (veto)
-      
-      Delay mínimo: 3000ms (3 segundos)
-      Máximo sem resposta: 5000ms (5 segundos)
-      
-      Reason: Chatbot confunde-se com 2+ perguntas enviadas rapidamente
-      Evidence: Rituaali Spa (2026-04-04) perdeu respostas sem delay
-
-  - id: "CI_006"
-    name: "CSS Widget Activation (Asksuite & Similar)"
-    when: "Detectando widget protegido por classe CSS desativadora"
-    rule: |
-      Alguns chatbots (Asksuite, custom) vêm com classe CSS que os desativa (_off, hidden, inactive)
-      
-      PROCEDIMENTO:
-      1. Detectar widget no DOM (mesmo que invisível)
-      2. Verificar classes: _off, hidden, inactive, display:none
-      3. Se encontrar classe desativadora:
-         a) Remover classe CSS:
-            chatWidget.classList.remove('infochat_off');
-            chatWidget.style.display = 'block';
-            chatWidget.style.visibility = 'visible';
-         b) Aguardar 500ms para renderização
-         c) Validar se widget ficou visível: offsetParent !== null
-      4. Se ainda invisível após remoção → VETO (widget bloqueado)
-      5. Proceder com interação normal
-      
-      Evidence: Rituaali Spa Asksuite — descoberta em 2026-04-04
-      Pattern: Qualquer iframe com ID *chat* ou classe *widget*
-
 # ═══════════════════════════════════════════════════════════════════════════════
 # OUTPUT FORMAT
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -444,9 +404,6 @@ veto_conditions:
   - "Chatbot transferiu para humano → máx 5 perguntas, encerrar educadamente"
   - "Chatbot não respondeu 3 perguntas seguidas → ENCERRAR sessão"
   - "Resposta vaga sem dado concreto → marcar null, não forçar"
-  - "Timeout > 5 segundos sem resposta após pergunta → campo = null, continuar próxima pergunta"
-  - "Widget permanece invisível após CSS removal → VETO (chatbot bloqueado, delegar @web-scraper)"
-  - "Sem delay entre perguntas e múltiplas perdidas → VETO (CI_005 violado, requerer implementação)"
 
 handoff_to:
   - agent: "@data-extractor"

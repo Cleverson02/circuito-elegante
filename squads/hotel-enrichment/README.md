@@ -45,15 +45,40 @@ Scrape (3 fontes) → Extract (58 campos) → Validate (quality gate) → Store 
 | Pramod Sadalage | Aggregate Design | JSONB boundaries |
 | Natalya Noy | Ontology 101 | Taxonomia validation |
 
+## Status
+
+**Version:** 2.0.0  
+**Agent: chatbot-interviewer** — CSS Widget Activation (HE_006) + Response Awaiting (HE_005)  
+**Validation:** ✅ Phase 5 Test #1 (Rituaali Spa) — Both heuristics 100% success  
+**Readiness:** ✅ **PRODUCTION READY — Batch enrichment of 92 hotels approved**
+
 ## Quick Start
 
 ```
 @hotel-enrichment:enrichment-chief
 *enrich pousada-alma-charme-atins    # Um hotel
-*enrich-all                           # Todos os 92
+*enrich-batch 1-10                    # Batch initial (Phase 6a)
+*enrich-all                           # Todos os 92 (após validar batch)
 *status                               # Progresso
 *coverage-report                      # Campos preenchidos vs vazios
 ```
+
+## What's New in v2.0.0
+
+| Feature | Purpose | Status |
+|---------|---------|--------|
+| **HE_006** | Remove CSS classes desativadoras (infochat_off, hidden, etc) | ✅ Validated |
+| **HE_005** | Enforce 3-5 segunda delays entre perguntas → zero message loss | ✅ Validated |
+| **Veto Conditions** | Hard stops para widget bloqueado, timeout, delay violation | ✅ Implemented |
+| **Fallback** | Se chatbot falha ou não existe → @web-scraper | ✅ Ready |
+
+## Production Deployment
+
+See `outputs/squad_upgrade/hotel-enrichment/PRODUCTION-READINESS.md` for:
+- Validation results (Phase 3-5)
+- Batch rollout strategy (Phase 6a-6c)
+- Success criteria & monitoring
+- Fallback strategy (→ web-scraper)
 
 ## Output
 
