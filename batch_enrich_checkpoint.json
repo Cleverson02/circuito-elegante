@@ -83,18 +83,97 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907323",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Lençóis Maranhenses"
+      "destination": "Lençóis Maranhenses",
+      "qa_data": {
+        "1": {
+          "q": "Nome comercial do hotel",
+          "a": "Alma Charme Atins"
+        },
+        "2": {
+          "q": "Cidade",
+          "a": "Atins \\- Barreirinhas"
+        },
+        "3": {
+          "q": "Estado",
+          "a": "Maranhão"
+        },
+        "4": {
+          "q": "Site oficial",
+          "a": "https://charmeatins.com.br"
+        },
+        "5": {
+          "q": "Link do Google Maps (localização exata)",
+          "a": "[https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368,79m/data=\\!3m1\\!1e3\\!4m9\\!3m8\\!1s0x7f1ef26e17f414d:0xc2950f74689b6e14\\!5m2\\!4m1\\!1i2\\!8m2\\!3d-2.5730157\\!4d-42.7473023\\!16s%2Fg%2F11hzzxkxl6?authuser=0\\&entry=ttu\\&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D](https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368,79m/data=!3m1!1e3!4m9!3m8!1s0x7f1ef26e17f414d:0xc2950f74689b6e14!5m2!4m1!1i2!8m2!3d-2.5730157!4d-42.7473023!16s%2Fg%2F11hzzxkxl6?authuser=0&entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D)"
+        },
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "A Alma Charme Atins é uma pousada boutique localizada no vilarejo de Atins, nos Lençóis Maranhenses. Com conceito exclusivo e estilo rústico-chique, oferece apenas 8 chalés amplos e artesanais, cercados por paisagismo nativo e equipados com piscinas privativas."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Pousada Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Alma Charme Atins"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Shampoo, Condicionador, Sabonete em barra, Hidratante e Sabonete líquido    Linha Terra Organics – Realgems"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, gratuito."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "A Alma Charme Atins conta com piscinas comuns em áreas compartilhadas e piscinas privativas em cada um dos 8 bangalôs."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O grupo Charme Atins oferece uma variedade gastronômica, da culinária regional à internacional. O Beach Bar traz pratos nordestinos, drinks autorais e música ao vivo. Na Vila Charme, o Ça-Vá mistura sabores mediterrâneos com temperos maranhenses. O Sushi Charme Atins é o único japonês da região, com peixes frescos e toque nordestino. Já o Mirante Charme Atins, dentro da pousada, oferece uma cozinha internacional, ideal para momentos intimistas ou em família."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã à la carte, servido exclusivamente na varanda do quarto."
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Sim, temos espaço de spa no local com massagistas parceiras, academia, espaço de yoga, piscina privativa com hidromassagem."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Nosso check-in a partir das 14 h e check-out até 12 h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "O aeroporto mais usado é o aeroporto Internacional de São Luis – Marechal Cunha Machado, neste caso, depois há um percurso de carro, de 3h30, até Barreirinhas."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Política de Cancelamento:"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Não trabalhamos com camas extras."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "link cartão de crédito – ato da reserva"
+        }
+      }
     },
     "bahia-bonita-hotel-boutique-quadrado": {
       "id": "bahia-bonita-hotel-boutique-quadrado",
@@ -114,18 +193,69 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907335",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Trancoso"
+      "destination": "Trancoso",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Hotel Boutique Bahia Bonita, em Trancoso, está a 400 metros da praia e a 100 metros do charmoso Quadrado. Oferece vista para o mar, piscina, jardim e terraço, além de quartos rodeados por natureza, alguns com piscina privativa ou hidromassagem. O café da manhã é servido até às 13h com mais de 100 itens preparados na hora. O hotel conta ainda com lounge bar, massagem, concierge, estacionamento e experiências exclusivas, como passeios de bike, cavalo, quadriciclo e até helicóptero."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "- Bangalô com Piscina Privativa e Jacuzzi \\- Com 135m² e capacidade para 04 pessoas - Suite com Piscina Aquecida Vista Mar \\- Com 135m² e capacidade para 04 pessoas - Duplex com Hidromassagem Vista Mar \\- Com 110m² e capacidade para 04 pessoas - Suite com Hidromassagem e Vista Mar \\- Com 90m² e capacidade para 05 pessoas - Suite Luxo Superior com Varanda \\- Com 48m² e capacidade para 02 pessoas - Suite Master com Vista Mar \\- Com 68m² e capacidade para 04 pessoas - Suite Luxo Térreo com Varanda \\- Com 65m² e capacidade para 04 pessoas - Além das casas que acomodam até 14 hóspedes."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Kit de amenities premium (Shampoo, Condicionador, Hidratante, Sabonete líquido e em barra, kit de maquiagem, toalha demaquilante), enxovais de alta qualidade que oferecem todo o conforto para nossos hóspedes, TV, Frigobar, Roupão, Ferro de passar."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O Hotel Boutique Bahia Bonita redefine a experiência gastronômica com suas ofertas exclusivas. O café da manhã a la carte com mais de 100 opções de tapiocas, omeletes, cuscuz, ovos, frutas, sucos feito na hora, servido até as 13h, é uma verdadeira obra de arte culinária, com uma variedade de pratos deliciosos e frescos que satisfazem todos os paladares. Os hóspedes também são mimados com um mimo de chá da tarde às 16h, onde podem desfrutar de uma seleção de chás, café e petiscos saborosos em um ambiente encantador e relaxante."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Cafe da manhã e Chá da tarde"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Sim, serviços de massagens podem ser contratados à parte."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in a partir das 15h e check-out até às 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "80km do Aeroporto de Porto Seguro."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "- Inferior a 30 dias, não será devolvido o valor pago. - Superior 30 dias, será emitida carta de crédito equivalente a 50% do adiantamento. - Superior a 60 dias, será emitida carta de crédito equivalente a 70% do adiantamento."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Crianças até 5 anos é free, cama extra custo adicional de 25%"
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Após a confirmação da reserva é necessário que em até 24 horas seja efetuado o pagamento via cartão de crédito do valor total da reserva para garantir o apartamento."
+        }
+      }
     },
     "bupitanga-hotel": {
       "id": "bupitanga-hotel",
@@ -145,18 +275,73 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907345",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Pipa"
+      "destination": "Pipa",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "Melhor do que visitar o principal ponto turístico da Praia da Pipa é ficar hospedado nele. No Bupitanga Hotel, onde a natureza e o conforto se encontram para proporcionar a você dias de muita paz no maior cartão postal da região."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique na praia"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "- Bangalô com piscina particular, com uma cama de casal 2,00x2,00m (não acomodamos crianças nestes bangalôs), 10 unidades que acomodam até duas pessoas por bangalô - Bangalô com mezanino, com uma cama de casal 2,00x2,00m no mezanino e sofá/leito 1,00x1,90m no térreo, 12 unidades que acomodam até três pessoas por bangalô"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Estacionamento gratuito para até 30 veículos, apenas para hóspedes."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Complexo de piscinas com raia de 25 metros, cascata e hidromassagem, bar molhado, sauna úmida e piscina infantil."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O Ibá Pitanga é o restaurante do Bupitanga Hotel, em Pipa, onde a culinária brasileira ganha toques asiáticos com a assinatura do chef Walter Dantas e execução do chef Rairon Barbosa. De forma simples e refinada, cada prato é uma ode aos sabores e cores do Brasil, inspirado na natureza.   Venha saborear o melhor da nossa terra."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã incluído no valor da diária."
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Massagens, com custo adicional."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check in a partir das 14 horas e check out até meio-dia."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aeroporto de Natal/RN a 100 km   Aeroporto de João Pessoa/PB a 140 km"
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Prazo para cancelamento/alteração sem ônus: até 30 dias antes do início da estadia. Após este prazo não haverá devolução do valor pago."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Cortesia para uma criança de até cinco anos no mesmo bangalô dos pais ou responsáveis (exceto bangalô com piscina particular). Acima desta idade ou para segunda criança, haverá um acréscimo de 30% do valor da diária. Não temos cama extra. Disponibilizamos berço mediante reserva prévia."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Aceitamos pagamentos com dinheiro, transferências bancárias/PIX, cartão de débito ou cartão de crédito. Aceitamos Visa, Mastercard, Elo e American Express. Não aceitamos cheques."
+        }
+      }
     },
     "casa-turquesa": {
       "id": "casa-turquesa",
@@ -176,18 +361,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907355",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "praia",
-      "destination": "Centro Histórico de Paraty"
+      "destination": "Centro Histórico de Paraty",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "A Casa Turquesa é um hotel de luxo intimista que combina elegância clássica com o charme discreto de um refúgio exclusivo. Com apenas 09 suítes cuidadosamente decoradas, o hotel oferece uma experiência personalizada e tranquila, ideal para hóspedes exigentes que buscam conforto, privacidade e sofisticação."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Suítes Luxo / Master e Master com Hidromassagem. Acomodações para 2 ou 3 pessoas."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Roupas de cama e tolhas Trussard, havaianas, ecobags, chocolates, livro de receita da Casa, todos personalizados. Shampoo, condicionador, hidratante, sabonete líquido/ sabonetes barra Muru muru da marca Avatim."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Informamos que não temos estacionamento privativo em nossas dependências. Nossos hóspedes normalmente estacionam na rua a 30 metros da Casa Turquesa no sistema rotativo ou em um estacionamento público, não coberto, localizado à 50 metros."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "A pousada possui piscina/jacuzzi, na área central da Casa."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "Temos serviços de bar com comidinhas variadas feitas na Casa, assim como saladas, raviólis, quiches, casquinha de siri, ceviche, dadinhos de tapioca, colherinhas de carne seca etc."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã e chá da tarde com bolinhos feitos na hora."
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "São terceirizados, porém, são feitos na pousada;"
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in 14:30 e Check-out 12:00"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aeroporto de Paraty para aviões de pequeno porte, localizado a 1700m, de carro a 08 minutos da pousada."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Política de cancelamento:"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Por não termos estrutura para atendê-los, recebemos crianças/adolescentes a partir dos 12 anos de idade"
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Pagamento 100% antecipado, aceitamos cartões Amex , Visa e Master parcelamentos podem ser feitos em até 03 vezes, somente nas bandeiras Visa ou Master"
+        }
+      }
     },
     "clara-dourado-resort": {
       "id": "clara-dourado-resort",
@@ -238,18 +482,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907386",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "campo",
-      "destination": "Interior de São Paulo"
+      "destination": "Interior de São Paulo",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "Localizado em Ibiúna (SP), com vista para a Represa de Itupararanga, o Clara Ibiúna Resort oferece uma combinação única de lazer, conforto e contato com a natureza, a apenas 70 km da capital paulista."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Resort"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "- Suíte Presidencial 1 \\- Com 165 a 226m², comporta até 05 pessoas - Suíte Presidencial 2 \\- Com 165 a 226m², comporta até 05 pessoas - Master Garden \\- Com 67m², comporta até 05 pessoas - Superior Vila da Mata \\- Com 54m², comporta até 05 pessoas - Master Vila da Mata \\- Com 77m², comporta ate 05 pessoas - Garden Vila da Mata \\- Com 54m², comparta até 05 pessoas - Apartamento Superior Península \\- Com 42m², comporta até 03 pessoas - Apartamento Superior Represa \\- Com 55m², comporta até 05 pessoas - Suíte Master \\- Com 69m², comporta até 05 pessoas - Suíte da Mata \\- Com 30 a 35m², comporta até 03 pessoas - Suíte da Mata Conjugada \\- Com 51m², comporta até 4 pessoas - Suíte Represa \\- Com 39m², comporta até 03 pessoas - Suíte Sede \\- Com 24 a 26m², comporta até 03 pessoas"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Todas as nossas acomodações contam com alguns itens de conforto padrão, como:"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Temos estacionamentos próximos a todos os quartos, em área aberta e gratuita."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Temos 1 piscina aquecida e coberta, 1 jacuzzi coberta; 2 piscinas climatizadas em ambiente aberto e 1 jacuzzi em ambiente aberto."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "Restaurante tipo buffet, comida caseira."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "O Clara Ibiúna Resort opera no sistema de pensão completa, oferecendo quatro refeições por dia: café da manhã, almoço, chá da tarde e jantar."
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Temos SPA, com tratamentos by L’Occitane."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in às 18h e Check-out às 15h."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Recomendamos o acesso com carro próprio, os aeroportos mais próximos são Congonhas, (85km), Guarulhos (115km) e Viracopos (119km)"
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Trabalhamos com duas opções de tarifa:"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "- Crianças até 2 anos são free, mas contam como ocupação devido ao uso de cama ou berço. - Crianças de 03 a 11 anos pagam um adicional sobre a tarifa base. - A partir de 12 anos, consideramos adultos."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Pagamento via cartão de crédito, sempre no ato da reserva."
+        }
+      }
     },
     "insolito-boutique-hotel": {
       "id": "insolito-boutique-hotel",
@@ -269,18 +572,69 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907395",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "praia",
-      "destination": "Búzios"
+      "destination": "Búzios",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Insólito Boutique Hotel, em Búzios, é um refúgio sofisticado à beira da Praia da Ferradura. Une arte, cultura brasileira e design contemporâneo em um ambiente exclusivo e intimista. Cada suíte é única, decorada com inspiração na música, literatura e arte nacional. Com vista privilegiada, gastronomia autoral e experiências personalizadas, é ideal para quem busca conforto, charme e autenticidade."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Classic (Até 2 pessoas)    Superior (Até 3 pessoas)    Deluxe (Até 3 pessoas)    Master (Até 3 pessoas)    Insólito (Até 4 pessoas)    Insólito With Pool (Até 4 pessoas)"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Amenities L’Occitane (Shower gel, shampoo, condicionador e loção corporal), sais de banho Granado para quartos com banheira, enxoval premium para maior conforto dos nossos hóspedes, máquina de café, TV."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, possui estacionamento para aproximadamente 20 carros."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Sim. Duas piscinas, uma em frente ao restaurante (aquecida) e outra na ala terra brasil."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã"
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in a partir de 15h e Check-out 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Do Aeroporto de Cabo Frio (CFB): A 30 km (\\~40 min) a melhor opção para quem busca praticidade. Use táxi, Uber ou transfer."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Na tarifa não reembolsável, após os 7 dias corridos da feitura da reserva, o valor não é reembolsado em casos de cancelamento."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Uma criança por reserva, de até 5 anos, se hospeda de forma gratuita, pois se acomodam na cama existente na suíte. Caso deseje uma cama extra, é cobrada uma taxa de 30% do valor da reserva."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Como formas de pagamento temos:"
+        }
+      }
     },
     "le-canton-hotel": {
       "id": "le-canton-hotel",
@@ -300,18 +654,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907405",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Serra Fluminense"
+      "destination": "Serra Fluminense",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O LK Design Hotel é a expressão do estilo minimalista sofisticado. Construído em 2020 o hotel está situado na melhor região de Florianopolis, na Av Beira Mar Norte com vistas privilegiadas da Baía. O LK Design Hotel dispõe de 164 quartos, rooftop com vista mar e seis espaços para eventos com uma arquitetura cosmopolita e arrojada. Tudo para oferecer a comodidade e o conforto que quem viaja de férias ou a negócios busca em um quarto de hotel executivo. Com objetivo de oferecer atendimento de excelência, o complexo ainda é composto pelo Osli Restaurante, com gastronomia conceitual, e pelo LK Café Bar."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel de alto padrão."
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Superior Vista Jardim Família (Conjugado) – até 4 pessoas sendo 1 quarto com 1 cama casal \\+ 1 quarto com duas camas de solteiro.   Superior Vista Jardim Twin – até 2 pessoas em duas camas   Superior Vista Jardim King – até 2 pessoas cama casal   Superior Vista Jardim King PCD – até 2 pessoas   Superior Vista Lateral Mar King – até 2 pessoas cama casal   Superior Vista Lateral Mar Twin – até 2 pessoas em duas camas de solteiro   Superior Vista Lateral Mar Família – até 3 pessoas sendo 1 menor de até 16 anos.   Luxo Frente Mar King – até 2 pessoas   Suíte Junior – até 2 pessoas.   Suíte Júnior Família – até 3 pessoas sendo um menor até 16 anos."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Amenities L’Occitane Francesa"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, temos estacionamento coberto com seguro, serviço de valet e com estação de recarga para carros elétricos. Diária das 13h às 13h, sendo R$ 59,00 por veículo e adicional de 15 reais a hora adicional."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Possui piscina de borda infinita, revestida com pedras naturais vindas de Bali e climatizada, localizada no rooftop."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "No térreo do LK Design Hotel o Osli Restaurante abriu suas portas em 2021, como uma cozinha contemporânea que valoriza os produtos locais e de Santa Catarina. Pautado sobre a tríade de uma cozinha saborosa, saudável e surpreendente, o Chef Felipe Silva exerce sua criatividade a partir de insumos regionais, a fim de oferecer aos clientes produtos frescos e resultados autênticos."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Diárias com café da manhã incluso"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Oferecemos uma variedade de tratamentos terapêuticos para que você se desconecte do mundo para se conectar consigo mesmo. Nosso menu de terapias é elaborado para atender às necessidades individuais de cada hóspede, proporcionando uma experiência única e revitalizante, um momento sinestésico que cativa os sentidos e nutre a alma."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in:15h   Check-out: 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aproximadamente 9 km de distância do aeroporto de Florianópolis, com cerca de 14 minutos de carro."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Reservas individuais sem ônus, com 48h de antecedência a data do check-in. Já para reservas de grupos realizamos acordos pontuais."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Não trabalhamos com camas extras. Crianças de até 10 anos ganham cortesia na hospedagem, com acomodação na mesma cama que o casal ou em categorias específicas para família."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Após a reserva, enviamos link de pagamento disponível para pix e cartão de crédito. Parcelamos em até 5x sem juros, com parcelas mínimas de 300 reais."
+        }
+      }
     },
     "hotel-fazenda-suíça-le-canton": {
       "id": "hotel-fazenda-suíça-le-canton",
@@ -331,18 +744,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907415",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Serra Fluminense"
+      "destination": "Serra Fluminense",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O LK Design Hotel é a expressão do estilo minimalista sofisticado. Construído em 2020 o hotel está situado na melhor região de Florianopolis, na Av Beira Mar Norte com vistas privilegiadas da Baía. O LK Design Hotel dispõe de 164 quartos, rooftop com vista mar e seis espaços para eventos com uma arquitetura cosmopolita e arrojada. Tudo para oferecer a comodidade e o conforto que quem viaja de férias ou a negócios busca em um quarto de hotel executivo. Com objetivo de oferecer atendimento de excelência, o complexo ainda é composto pelo Osli Restaurante, com gastronomia conceitual, e pelo LK Café Bar."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel de alto padrão."
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Superior Vista Jardim Família (Conjugado) – até 4 pessoas sendo 1 quarto com 1 cama casal \\+ 1 quarto com duas camas de solteiro.   Superior Vista Jardim Twin – até 2 pessoas em duas camas   Superior Vista Jardim King – até 2 pessoas cama casal   Superior Vista Jardim King PCD – até 2 pessoas   Superior Vista Lateral Mar King – até 2 pessoas cama casal   Superior Vista Lateral Mar Twin – até 2 pessoas em duas camas de solteiro   Superior Vista Lateral Mar Família – até 3 pessoas sendo 1 menor de até 16 anos.   Luxo Frente Mar King – até 2 pessoas   Suíte Junior – até 2 pessoas.   Suíte Júnior Família – até 3 pessoas sendo um menor até 16 anos."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Amenities L’Occitane Francesa"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, temos estacionamento coberto com seguro, serviço de valet e com estação de recarga para carros elétricos. Diária das 13h às 13h, sendo R$ 59,00 por veículo e adicional de 15 reais a hora adicional."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Possui piscina de borda infinita, revestida com pedras naturais vindas de Bali e climatizada, localizada no rooftop."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "No térreo do LK Design Hotel o Osli Restaurante abriu suas portas em 2021, como uma cozinha contemporânea que valoriza os produtos locais e de Santa Catarina. Pautado sobre a tríade de uma cozinha saborosa, saudável e surpreendente, o Chef Felipe Silva exerce sua criatividade a partir de insumos regionais, a fim de oferecer aos clientes produtos frescos e resultados autênticos."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Diárias com café da manhã incluso"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Oferecemos uma variedade de tratamentos terapêuticos para que você se desconecte do mundo para se conectar consigo mesmo. Nosso menu de terapias é elaborado para atender às necessidades individuais de cada hóspede, proporcionando uma experiência única e revitalizante, um momento sinestésico que cativa os sentidos e nutre a alma."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in:15h   Check-out: 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aproximadamente 9 km de distância do aeroporto de Florianópolis, com cerca de 14 minutos de carro."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Reservas individuais sem ônus, com 48h de antecedência a data do check-in. Já para reservas de grupos realizamos acordos pontuais."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Não trabalhamos com camas extras. Crianças de até 10 anos ganham cortesia na hospedagem, com acomodação na mesma cama que o casal ou em categorias específicas para família."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Após a reserva, enviamos link de pagamento disponível para pix e cartão de crédito. Parcelamos em até 5x sem juros, com parcelas mínimas de 300 reais."
+        }
+      }
     },
     "hotel-village-le-canton": {
       "id": "hotel-village-le-canton",
@@ -362,18 +834,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907426",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Serra Fluminense"
+      "destination": "Serra Fluminense",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O LK Design Hotel é a expressão do estilo minimalista sofisticado. Construído em 2020 o hotel está situado na melhor região de Florianopolis, na Av Beira Mar Norte com vistas privilegiadas da Baía. O LK Design Hotel dispõe de 164 quartos, rooftop com vista mar e seis espaços para eventos com uma arquitetura cosmopolita e arrojada. Tudo para oferecer a comodidade e o conforto que quem viaja de férias ou a negócios busca em um quarto de hotel executivo. Com objetivo de oferecer atendimento de excelência, o complexo ainda é composto pelo Osli Restaurante, com gastronomia conceitual, e pelo LK Café Bar."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel de alto padrão."
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Superior Vista Jardim Família (Conjugado) – até 4 pessoas sendo 1 quarto com 1 cama casal \\+ 1 quarto com duas camas de solteiro.   Superior Vista Jardim Twin – até 2 pessoas em duas camas   Superior Vista Jardim King – até 2 pessoas cama casal   Superior Vista Jardim King PCD – até 2 pessoas   Superior Vista Lateral Mar King – até 2 pessoas cama casal   Superior Vista Lateral Mar Twin – até 2 pessoas em duas camas de solteiro   Superior Vista Lateral Mar Família – até 3 pessoas sendo 1 menor de até 16 anos.   Luxo Frente Mar King – até 2 pessoas   Suíte Junior – até 2 pessoas.   Suíte Júnior Família – até 3 pessoas sendo um menor até 16 anos."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Amenities L’Occitane Francesa"
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, temos estacionamento coberto com seguro, serviço de valet e com estação de recarga para carros elétricos. Diária das 13h às 13h, sendo R$ 59,00 por veículo e adicional de 15 reais a hora adicional."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Possui piscina de borda infinita, revestida com pedras naturais vindas de Bali e climatizada, localizada no rooftop."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "No térreo do LK Design Hotel o Osli Restaurante abriu suas portas em 2021, como uma cozinha contemporânea que valoriza os produtos locais e de Santa Catarina. Pautado sobre a tríade de uma cozinha saborosa, saudável e surpreendente, o Chef Felipe Silva exerce sua criatividade a partir de insumos regionais, a fim de oferecer aos clientes produtos frescos e resultados autênticos."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Diárias com café da manhã incluso"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Oferecemos uma variedade de tratamentos terapêuticos para que você se desconecte do mundo para se conectar consigo mesmo. Nosso menu de terapias é elaborado para atender às necessidades individuais de cada hóspede, proporcionando uma experiência única e revitalizante, um momento sinestésico que cativa os sentidos e nutre a alma."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in:15h   Check-out: 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aproximadamente 9 km de distância do aeroporto de Florianópolis, com cerca de 14 minutos de carro."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Reservas individuais sem ônus, com 48h de antecedência a data do check-in. Já para reservas de grupos realizamos acordos pontuais."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Não trabalhamos com camas extras. Crianças de até 10 anos ganham cortesia na hospedagem, com acomodação na mesma cama que o casal ou em categorias específicas para família."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Após a reserva, enviamos link de pagamento disponível para pix e cartão de crédito. Parcelamos em até 5x sem juros, com parcelas mínimas de 300 reais."
+        }
+      }
     },
     "lk-design-hotel": {
       "id": "lk-design-hotel",
@@ -424,18 +955,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907445",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "São Miguel do Gostoso"
+      "destination": "São Miguel do Gostoso",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "Situado na região de São Roque em São Paulo, é ideal para quem busca um respiro a   poucos quilômetros da capital paulista. Com um design moderno, conforto e aconchego, as   suítes do NÓR são cercadas por área verde e trazem o mesmo luxo informal das demais   áreas do hotel. Seja para usufruir de um momento de descanso, trabalhar remotamente, se   exercitar, apreciar os prazeres da mesa ou simplesmente aproveitar a vida, NÓR oferece   uma hospitalidade e gastronomia intrinsecamente conectada com a natureza."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "· Suíte Kai Vista Mar / Kai Vista Jardim    30 m² de área interna \\+ 6 m² de varanda. Ideal para casais, com opção de vista mar ou jardim. Capacidade: 2 adultos \\+ 1 criança.    ⠀"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Disponibilizamos Shampoo, Condicionador, gel de banho e sabonete em barra Loccitane,   cápsulas de café Nespresso e Chá Iaman."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Estacionamento cortesia, acomoda até 25 carros."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "O hotel possui uma piscina aquecida em área aberta."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "Restaurante contemporâneo."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "A diária inclui café da manhã."
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Temos o serviço de massagens disponível com os produtos Loccitane."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Nosso check in é às 15:00 e o check out é às 12:00."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aeroporto Congonhas, distância de aproximadamente 1h e 19 min (77,1 km) via BR-374,   Aeroporto Viracopos 1 h 18 min (98,0 km) via Rod. Santos Dumont."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Cancelamento com devolução de valor, até 7 dias úteis após a compra. Para a   troca/alteração de data, é necessário comunicar com até 7 dias de antecedência da data do   Check in, conforme disponibilidade no hotel e fora de datas de pacotes/ feriados\\! O não   comparecimento na estada, acarretará em cobrança de No- show.   Se for informado alteração de data ou troca em cima da data por motivos médicos ou de   óbito, precisamos da declaração sempre.   Em casos de COVID, precisamos de testes realizados em farmácias.   Se o hóspede não conseguir comparecer, o valor pago da reserva ficará para cobrança de   No-Show."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Crianças até 12 anos são cortesia, acima de 12 anos é cotado como adultos. Uso de berços   mediante a solicitação prévia."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Pagamento antecipado via cartão de crédito em até 3x sem juros ou via pix."
+        }
+      }
     },
     "nomaa-hotel": {
       "id": "nomaa-hotel",
@@ -517,18 +1107,69 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907473",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Serra Fluminense"
+      "destination": "Serra Fluminense",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Parador Lumiar é um hotel boutique na serra de Lumiar (RJ), com apenas 15 chalés distribuídos em meio à natureza. Seu conceito une conforto rústico, exclusividade e bem-estar. Oferece spa, piscina aquecida, restaurante próprio e atividades como trilhas e cachoeiras. Ideal para quem busca tranquilidade, romantismo e contato com a natureza, com serviço acolhedor e atmosfera intimista."
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Chalé Luxo (Até 4 pessoas)    Chalé Lago (Até 4 pessoas)    Chalé Ofurô (Até 3 pessoas)"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Amenities premium (Disco de algodão, cotonetes, lixa de unha, touca de banho, pantufas, xampu, condicionador, sabonete, sabonete líquido e hidratante corporal), elegante enxoval Trousseau para maior conforto dos nossos hóspedes."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, temos parceiros que oferecem passeios de Jeep, quadriciclos e também oferecemos um menu de massagens."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Sim, uma piscina aquecida na área externa do hotel."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "A gastronomia do Parador Lumiar é uma experiência que vai além do paladar: é um mergulho na essência da Serra Fluminense. Nosso restaurante em Lumiar combina o frescor dos peixes pescados localmente com a pureza dos ingredientes colhidos na horta orgânica do hotel, trazendo à mesa pratos que traduzem o verdadeiro sabor da região."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã"
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in a partir de 15h e Check-out 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "O Parador Lumiar fica a cerca de 2h15 a 3h de carro do Rio de Janeiro:"
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Na tarifa não reembolsável, após os 7 dias corridos da feitura da reserva, o valor não é reembolsado em casos de cancelamento."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Uma Criança por reserva, de até 5 anos se hospeda de forma gratuita, pois se acomodam na cama existente na suíte. Caso deseje uma cama extra, é cobrada uma taxa de 30% do valor da reserva."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Como formas de pagamento temos:"
+        }
+      }
     },
     "ponta-de-inhambupe-hotel-boutique-&-spa": {
       "id": "ponta-de-inhambupe-hotel-boutique-&-spa",
@@ -641,18 +1282,81 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907521",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Praia do Preá"
+      "destination": "Praia do Preá",
+      "qa_data": {
+        "1": {
+          "q": "Nome comercial do hotel",
+          "a": "Rancho do Peixe"
+        },
+        "4": {
+          "q": "Site oficial",
+          "a": "[https://ranchodopeixe.com.br](https://ranchodopeixe.com.br)"
+        },
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Rancho do Peixe é um refúgio de paz e bons ventos, localizado na tranquila Praia do Preá, a 12 km de Jericoacoara. Com uma filosofia eco consciente, o hotel ocupa apenas 8% de sua área total de 67.000 m², preservando a natureza ao seu redor. Seus bangalôs rústicos e charmosos são construídos com materiais locais e projetados para permitir a circulação natural do vento, eliminando a necessidade de ar-condicionado."
+        },
+        "7": {
+          "q": "Tipo de hospedagem",
+          "a": "Pousada boutique de luxo com foco em sustentabilidade e integração com a natureza."
+        },
+        "8": {
+          "q": "Tipos de acomodações e capacidade máxima de hóspedes por tipo",
+          "a": "\\- Bangalô com Vista para o Jardim: até 4 pessoas   \\- Bangalô com Vista para o Mar: até 4 pessoas"
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O restaurante oferece pratos criados com frutos do mar e temperos locais, valorizando ingredientes frescos e da região. À noite, o bar da praia serve pizzas feitas no forno a lenha."
+        },
+        "14": {
+          "q": "Refeições inclusas nas diárias",
+          "a": "Café da manhã incluso, servido das 7h30 às 10h, com sucos, frutas, café, leite, iogurte, granola, bolos, pães, omeletes, crepes, panquecas, waffles e tapioca."
+        },
+        "21": {
+          "q": "Horário de check-in e check-out",
+          "a": "\\- Check-in: a partir das 14h   \\- Check-out: até 12h"
+        },
+        "22": {
+          "q": "Early check-in ou late check-out",
+          "a": "Disponível mediante solicitação e sujeito à disponibilidade."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "\\- Aeroporto de Jericoacoara (JJD): aproximadamente 20 km   \\- Aeroporto Internacional de Fortaleza (FOR): aproximadamente 285 km   \\- Acesso recomendado via transfer privativo ou táxi."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "As políticas de cancelamento e pré-pagamento variam de acordo com o tipo de acomodação e tarifa selecionada. Recomenda-se verificar as condições específicas no momento da reserva. ​"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Crianças de todas as idades são bem-vindas."
+        },
+        "28": {
+          "q": "Políticas para pets",
+          "a": "O hotel aceita animais de estimação mediante solicitação. Pode haver cobrança adicional. ​"
+        },
+        "29": {
+          "q": "Política de pagamento",
+          "a": "São aceitos os principais cartões de crédito e débito, incluindo American Express, Visa, Mastercard, Diners Club, Maestro, Hipercard, Elo e pagamentos em dinheiro. ​"
+        },
+        "30": {
+          "q": "Diferenciais do hotel",
+          "a": "Arquitetura sustentável com bangalôs construídos em palafitas e cobertos com palha de carnaúba, integrando-se harmoniosamente à paisagem natural."
+        }
+      }
     },
     "saint-andrews-hotel": {
       "id": "saint-andrews-hotel",
@@ -703,18 +1407,81 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907556",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "campo",
-      "destination": "Interior de São Paulo"
+      "destination": "Interior de São Paulo",
+      "qa_data": {
+        "5": {
+          "q": "Link do Google Maps (localização exata)",
+          "a": "[https://maps.app.goo.gl/d7HDeXDvkB2npLdF6](https://maps.app.goo.gl/d7HDeXDvkB2npLdF6)"
+        },
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "Para conhecer o Unique Garden mergulhamos num universo próprio, repleto de projetos emocionais, sociais e ambientais, autoalimentados por desejos, paixões e razões de todos que se somam aqui. Ele nasceu por acaso, mas de propósito."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Hotel Boutique"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "VILA MEDITERRÂNEA: 14 chalés cercados por jardins no entorno da Fonte da Juventude. Varanda para leitura e descanso"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Granado e Trousseau são nossos amenities de chalés e a bucha vegetal é produzida e embalada de forma sustentável no hotel."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Nosso estacionamento tem 64 vagas, é gratuito."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "\\- Piscina Quatro Estações: Como uma praia em meio ao verde de água oligomineral das fontes do hotel."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "Restaurante Kitanda: Com lounge e uma varanda voltada para a piscina, atende os serviços de café da manhã e almoço, com cozinha contemporânea"
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã e almoço estão inclusos na diária, à partir do dia seguinte ao check in, servidos no Restaurante do hotel"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "PACOTE RECONNECT: uma oportunidade única para despertar e fortalecer as qualidades que permitem uma vida saudável e plena."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check in 16h00 | Check out 13h00"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "\\- Aeroporto Internacional de Guarulhos: 52km de distância, melhor acesso Rodovia Presidente Dutra, seguido para Rodovia Fernão Dias"
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "O prazo para cancelamento e alterações de reservas é de até 48h de antecedência da data prevista da chegada e, em feriados, de até 10 dias."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Crianças até 7 anos tem cortesia de hospedagem"
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "O pagamento da hospedagem deve ser antecipado através de pix, transferência bancária ou cartão de crédito através de link. No cartão ser parcelado em até seis vezes sem juros"
+        }
+      }
     },
     "valle-d'incanto-hotel": {
       "id": "valle-d'incanto-hotel",
@@ -734,18 +1501,73 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907566",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sul",
       "experience": "serra",
-      "destination": "Gramado"
+      "destination": "Gramado",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Valle D'Incanto Hotel é um refúgio de charme e sofisticação em Gramado, inspirado na região da Toscana, na Itália. Com uma arquitetura que remete à elegância europeia, o hotel oferece uma experiência única de hospedagem, integrando-se harmoniosamente à natureza exuberante da Serra Gaúcha. Cada detalhe foi cuidadosamente pensado para proporcionar momentos inesquecíveis aos hóspedes, desde a decoração até o atendimento personalizado."
+        },
+        "7": {
+          "q": "Tipo de hospedagem",
+          "a": "Hotel boutique de luxo com foco em experiências românticas e personalizadas."
+        },
+        "8": {
+          "q": "Tipos de acomodações e capacidade máxima de hóspedes por tipo",
+          "a": "\\- Suíte Deluxe: até 2 pessoas   \\- Suíte Romântica: até 2 pessoas   \\- Suíte Panorâmica: até 2 pessoas   \\- Apartamento Super Luxo: até 2 pessoas"
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O restaurante Osteria di Lucca oferece uma culinária que valoriza os sabores italianos, com pratos elaborados a partir de ingredientes frescos e regionais, proporcionando uma experiência gastronômica autêntica."
+        },
+        "14": {
+          "q": "Refeições inclusas nas diárias",
+          "a": "Café da manhã incluso, servido com uma variedade de opções frescas e regionais."
+        },
+        "21": {
+          "q": "Horário de check-in e check-out",
+          "a": "\\- Check-in: a partir das 14h   \\- Check-out: até 12h"
+        },
+        "22": {
+          "q": "Early check-in ou late check-out",
+          "a": "Disponível mediante solicitação e sujeito à disponibilidade."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "\\- Aeroporto de Caxias do Sul (CXJ): aproximadamente 70 km   \\- Aeroporto Internacional Salgado Filho (POA): aproximadamente 120 km   \\- Acesso recomendado via transfer privativo ou táxi."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Políticas flexíveis, conforme período e tarifa escolhida. Detalhes são informados no ato da reserva."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "O hotel é voltado para casais e adultos, não sendo recomendado para crianças."
+        },
+        "28": {
+          "q": "Políticas para pets",
+          "a": "O hotel não aceita animais de estimação."
+        },
+        "29": {
+          "q": "Política de pagamento",
+          "a": "São aceitos os principais cartões de crédito e débito. Reservas podem ser garantidas com pagamento parcial antecipado ou através de links de pagamento seguro."
+        },
+        "30": {
+          "q": "Diferenciais do hotel",
+          "a": "\\- Arquitetura inspirada na Toscana com ambientação romântica   \\- Atendimento altamente personalizado e exclusivo   \\- Piscina aquecida coberta e restaurante com gastronomia italiana   \\- Um dos hotéis mais bem avaliados do Brasil em hospitalidade e charme   \\- já eleito o hotel mais romântico do mundo"
+        }
+      }
     },
     "vila-cerrado": {
       "id": "vila-cerrado",
@@ -796,18 +1618,61 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907590",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Jericoacoara"
+      "destination": "Jericoacoara",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Vila Kalango é um refúgio de charme e sofisticação em Jericoacoara, onde o estilo rústico se encontra com o conforto contemporâneo. Localizado entre a Praia de Jericoacoara e a Duna do Pôr do Sol, o hotel oferece uma experiência única de hospedagem, integrando-se harmoniosamente à natureza exuberante da região. Cada detalhe foi cuidadosamente pensado para proporcionar momentos inesquecíveis aos hóspedes, desde a arquitetura até o atendimento personalizado."
+        },
+        "7": {
+          "q": "Tipo de hospedagem",
+          "a": "Hotel boutique de luxo com foco em experiências personalizadas e integração com a natureza."
+        },
+        "8": {
+          "q": "Tipos de acomodações e capacidade máxima de hóspedes por tipo",
+          "a": "\\- Apartamento: até 3 pessoas   \\- Bangalô: até 3 pessoas   \\- Palafita Baixa: até 2 pessoas   \\- Palafita Alta (Duna ou Mar): até 2 pessoas   \\- Palafita Conforto: até 4 pessoas   \\- Apartamento Conforto: até 4 pessoas"
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O restaurante Vila K oferece uma culinária que valoriza os sabores locais, com pratos elaborados a partir de ingredientes frescos e regionais, incluindo peixes frescos e frutos do mar."
+        },
+        "14": {
+          "q": "Refeições inclusas nas diárias",
+          "a": "Café da manhã incluso, servido com uma variedade de opções frescas e regionais."
+        },
+        "21": {
+          "q": "Horário de check-in e check-out",
+          "a": "\\- Check-in: a partir das 14h   \\- Check-out: até 12h"
+        },
+        "22": {
+          "q": "Early check-in ou late check-out",
+          "a": "Disponível mediante solicitação e sujeito à disponibilidade."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "\\- Aeroporto de Jericoacoara (JJD): aproximadamente 33 km   \\- Aeroporto de Fortaleza (FOR): aproximadamente 300 km   \\- Acesso recomendado via transfer privativo ou táxi."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Políticas flexíveis, conforme período e tarifa escolhida. Detalhes são informados no ato da reserva."
+        },
+        "30": {
+          "q": "Diferenciais do hotel",
+          "a": "- Localização privilegiada entre a duna do pôr do sol e a praia de Jeri - Arquitetura rústica integrada à natureza - Escola de esportes aquáticos exclusiva (WSC Brasil) - Palafitas únicas com vistas espetaculares"
+        }
+      }
     },
     "villa-do-valle-boutique-hotel": {
       "id": "villa-do-valle-boutique-hotel",
@@ -858,18 +1723,65 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907610",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "nordeste",
       "experience": "praia",
-      "destination": "Trancoso"
+      "destination": "Trancoso",
+      "qa_data": {
+        "5": {
+          "q": "Link do Google Maps",
+          "a": "[https://maps.app.goo.gl/gPo4s6SGBvkfHqL29](https://maps.app.goo.gl/gPo4s6SGBvkfHqL29)"
+        },
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "A Villa dos Nativos é um refúgio de charme e sofisticação em Trancoso, onde o estilo minimalista se encontra com a essência rústica da Bahia. Localizado a poucos passos da Praia dos Nativos, o hotel oferece uma experiência única de hospedagem, integrando-se harmoniosamente à natureza exuberante da região. Cada detalhe foi cuidadosamente pensado para proporcionar momentos inesquecíveis aos hóspedes, desde a arquitetura até o atendimento personalizado."
+        },
+        "7": {
+          "q": "Tipo de hospedagem",
+          "a": "Hotel boutique de luxo com foco em experiências personalizadas e integração com a natureza."
+        },
+        "8": {
+          "q": "Tipos de acomodações e capacidade máxima de hóspedes por tipo",
+          "a": "\\- Bangalô Luxo: até 3 pessoas   \\- Bangalô Super Luxo: até 4 pessoas   \\- Bangalô Master: até 4 pessoas"
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O restaurante dos Nativos oferece uma culinária que valoriza os sabores locais, com pratos elaborados a partir de ingredientes frescos e regionais. As entradas são destaque, trazendo uma mistura de especiarias e produtos típicos da Bahia."
+        },
+        "14": {
+          "q": "Refeições inclusas nas diárias",
+          "a": "Café da manhã gourmet incluso, servido à beira da piscina com uma variedade de opções frescas e regionais."
+        },
+        "21": {
+          "q": "Horário de check-in e check-out",
+          "a": "\\- Check-in: a partir das 15h   \\- Check-out: até 12h"
+        },
+        "22": {
+          "q": "Early check-in ou late check-out",
+          "a": "Disponível mediante solicitação e sujeito à disponibilidade."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "\\- Aeroporto de Porto Seguro: aproximadamente 24 km   \\- Acesso recomendado via transfer privativo ou táxi."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Políticas flexíveis, conforme período e tarifa escolhida. Detalhes são informados no ato da reserva."
+        },
+        "30": {
+          "q": "Diferenciais do hotel",
+          "a": "- Localização privilegiada a poucos metros da Praia dos Nativos - Capela exclusiva para celebrações íntimas - Piscina com pedras balinesas naturalmente aquecidas - Decoração exclusiva com artesanato local e peças de Bali"
+        }
+      }
     },
     "villa-kandui": {
       "id": "villa-kandui",
@@ -920,18 +1832,65 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907629",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "praia",
-      "destination": "Búzios"
+      "destination": "Búzios",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "A Villa Rasa fica localizada na Praia Rasa, região exclusiva do balneário, de frente para o mar. A proposta aqui é a estada em uma praia praticamente privativa com estrutura completa, perfeita para uma viagem que preza por conforto e bem-estar. Composta por duas ‘villas’: Villa da Praia e Villa do Jardim. Na Villa da Praia (lado mar), encontram-se 20 apartamentos e suítes e a maioria das áreas comuns da pousada: recepção, restaurante, piscina, sauna a vapor, spa, uma brinquedoteca, acesso a praia e padaria. Cruzando a rua, localiza-se a Villa do Jardim, com mais 15 apartamentos standards, uma deliciosa piscina integrada à sauna, salão de eventos e estacionamento com vagas limitadas (De acordo com a disponibilidade no momento do check in) Sobre o valor da diária deverá ser acrescido \\+ 10% de taxa de serviço (opcional)."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Pousada"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "- 15 apartamentos standard \\- capacidade máxima de 03 pessoas - 07 apartamentos superiores \\- capacidade máxima de 02 pessoas - 04 apartamentos superiores com varanda \\- capacidade máxima de 03 pessoas - 03 suítes luxo- capacidade máxima de 03 pessoas - 03 suítes masters- capacidade máxima de 03 pessoas - 02 suítes masters com banheira- capacidade máxima de 03 pessoas - 01 suíte da villa- capacidade máxima de 03 pessoas"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Linha Florence Blanc da Realgems: Shampoo, Condicionador, Sabonete e Hidratante corporal. Kit beleza (algodão, lixa e cotonete) e touca de banho Realgems."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Gratuito, descoberto e com vagas limitadas."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "02, uma na Villa do jardim e uma na Villa da praia"
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O restaurante Mero oferece uma experiência de culinária contemporânea com influências brasileiras e mediterrâneas, valorizando ingredientes frescos, locais e sazonais. Com um menu autoral à beira-mar, celebra a sofisticação descomplicada em pratos que combinam técnica, sabor e identidade regional."
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Aeroporto Internacional de Cabo Frio: 25km"
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Tarifas reembolsáveis: 72h antes da data de check in"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "1 chd free até 5 anos"
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "cartão de crédito em até 3x"
+        }
+      }
     },
     "wood": {
       "id": "wood",
@@ -982,18 +1941,73 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.907648",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "praia",
-      "destination": "Búzios"
+      "destination": "Búzios",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "O Zendaya Resort é um refúgio de luxo em Búzios, que une sofisticação à beira-mar, bem-estar, esportes e alta gastronomia, com atendimento impecável e estrutura completa para casais, famílias e experiências exclusivas."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "Resort"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "- Classic (Até 3 pessoas) - Deluxe (Até 3 pessoas) - Deluxe Golf View (Até 3 pessoas) - Deluxe com Banheira (Até 3 pessoas) - Deluxe Golf View com Banheira (Até 3 pessoas) - Golf Villas (Até 4 pessoas) - Unique (Até 4 pessoas) - Master (Até 4 pessoas)"
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Oferecemos secador de cabelo, roupão, bolsa de praia, pantufas, amenities premium e enxoval confortável para melhor experiência dos nossos hóspedes."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Sim, estacionamento gratuito para aproximadamente 20 carros."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Sim. Duas piscinas, uma em frente a recepção (aquecida) e outra ao lado da praia (climatizada.) as duas piscinas são grandes."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "Possuímos dois restaurantes, The Juls (culinária diversas) e Sushi 11 (culinária asiática)"
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Café da manhã"
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check-in a partir de 15h e Check-out 12h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Do Aeroporto de Cabo Frio (CFB): A 30 km (\\~40 min) a melhor opção para quem busca praticidade. Use táxi, Uber ou transfer do resort."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "Na tarifa não reembolsável, após os 7 dias corridos da feitura da reserva, o valor não é reembolsado em casos de cancelamento."
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Uma criança por reserva, de até 5 anos, se hospeda de forma gratuita, pois se acomodam na cama existente na suíte. Caso deseje uma cama extra, é cobrada uma taxa de 30% do valor da reserva."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Como formas de pagamento temos:"
+        }
+      }
     },
     "estabelecimentos": {
       "id": "estabelecimentos",
@@ -2873,18 +3887,77 @@
       },
       "enrichment_status": {
         "phase_xlsx": true,
-        "phase_md": false,
+        "phase_md": true,
         "phase_chatbot": false,
         "phase_ce_site": false,
         "phase_hotel_site": false
       },
       "created_at": "2026-04-03T23:09:40.908471",
       "sources": [
-        "xlsx"
+        "xlsx",
+        "md"
       ],
       "region": "sudeste",
       "experience": "serra",
-      "destination": "Centro Histórico de Tiradentes"
+      "destination": "Centro Histórico de Tiradentes",
+      "qa_data": {
+        "6": {
+          "q": "Descreva brevemente o hotel, seu conceito, estilo e o que o torna especial",
+          "a": "LOCALIZADO NO CENTRO HISTÓRICO DA QUERIDA TIRADENTES- MG, TIRADENTES BOUTIQUE HOTEL POSSUI UM CONCEITO ÚNICO E INOVADOR, UNE O ENCANTO HISTÓRICO DA CIDADE COM O CONFORTO E REQUINTE CONTEMPORÂNEO."
+        },
+        "7": {
+          "q": "Tipo de hospedagem (Boutique, Resort, Pousada de Charme, etc.)",
+          "a": "HOTEL BOUTIQUE"
+        },
+        "8": {
+          "q": "Tipos de acomodações disponíveis e capacidade máxima de hóspedes por tipo",
+          "a": "Só possuímos 1 categoria de acomodação que comporta até 04 pessoas."
+        },
+        "9": {
+          "q": "Quais amenities são oferecidos nos quartos? (mencionar marcas, diferenciais etc.)",
+          "a": "Composto com o que há de melhor para o conforto, acolhimento, estrutura e experiências de nossos hóspedes: cama super king, TV Smart de 65” e com suporte articulado, banheira de imersão com visualização da TV, ar condicionado (frio/quente), secador de cabelo, amenities italianos Bvlgari, frigobar retrô, cafeteira, além de um enxoval extremamente delicado e aconchegante."
+        },
+        "10": {
+          "q": "O hotel possui estacionamento? Qual a capacidade e se é gratuito ou pago",
+          "a": "Possuímos estacionamento gratuito para os hóspedes e com carregador elétrico, espaço para todos os veículos de hóspedes."
+        },
+        "11": {
+          "q": "O hotel possui piscina? Descreva brevemente (número, tamanho, localização)",
+          "a": "Semi Olímpica, 25 m de comprimento, 1.6 m de profundidade, aquecida."
+        },
+        "13": {
+          "q": "Tipos de restaurante e culinária oferecida",
+          "a": "O café da manhã do Tiradentes Boutique Hotel é uma experiência única, que une o sabor da culinária mineira com a sofisticação de um Hotel Boutique."
+        },
+        "14": {
+          "q": "Quais refeições estão inclusas nas diárias? (Café da manhã, meia pensão, etc.)",
+          "a": "Diárias incluem café da manhã"
+        },
+        "17": {
+          "q": "O hotel oferece serviços de bem-estar? (spa, massagens, terapias)",
+          "a": "Sim, temos banheira de imersão em todos os quartos, serviços de massagens com agendamentos antecipado, sauna, hidromassagem, piquenique, piscina semi olímpica aquecida.."
+        },
+        "21": {
+          "q": "Horário padrão de check-in e check-out",
+          "a": "Check in a partir das 15h ( mas se o hóspede chegar antes e o quarto tiver liberado, realizamos o check in) Check out até 12:00h"
+        },
+        "23": {
+          "q": "Distância dos principais aeroportos e acesso recomendado",
+          "a": "Cidade histórica, não temos aeroporto próximo, temos uma pista de pouso de helicóptero a 150m, onde o santíssimo resort nos permite pousar."
+        },
+        "26": {
+          "q": "Política de cancelamento e alteração de reservas",
+          "a": "DEVERÁ SER COMUNICADO A CENTRAL DE RESERVAS"
+        },
+        "27": {
+          "q": "Regras para crianças e camas extras",
+          "a": "Crianças até 5 anos não pagam, deixamos claro que aceitamos crianças, mas não temos estrutura (recreação, brinquedoteca) , cama extra consultar valores..."
+        },
+        "28": {
+          "q": "Política de pagamento (parcelamento, formas aceitas)",
+          "a": "Trabalhamos com 100% do pagamento no ato da solicitação da reserva, parcelamos em até 3x via link cartão, pagamentos via pix e transferências bancaria são aceitos também."
+        }
+      }
     }
   }
 }

@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-04-03T23:08:26.038097",
+  "total_hotels": 93,
+  "fields_taxonomy": 31,
+  "total_filled": 93,
+  "total_gaps": 2790,
+  "avg_coverage": "3.2%",
+  "hotels_complete": 0,
+  "top_gaps": [
+    [
+      {
+        "cat": "Identidade",
+        "field": "name",
+        "source": "schema",
+        "type": "string"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "municipality",
+        "source": "schema",
+        "type": "string"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "uf",
+        "source": "schema",
+        "type": "string"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "website",
+        "source": "form_q4",
+        "type": "url"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "google_maps_url",
+        "source": "form_q5",
+        "type": "url"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "description",
+        "source": "form_q6",
+        "type": "text"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Identidade",
+        "field": "accommodation_type",
+        "source": "form_q7",
+        "type": "string"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Acomodacoes",
+        "field": "room_types",
+        "source": "form_q8",
+        "type": "array"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Acomodacoes",
+        "field": "room_amenities",
+        "source": "form_q9",
+        "type": "text"
+      },
+      0
+    ],
+    [
+      {
+        "cat": "Infraestrutura",
+        "field": "parking",
+        "source": "form_q10",
+        "type": "object"
+      },
+      0
+    ]
+  ]
+}
