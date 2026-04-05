@@ -9,12 +9,16 @@ export const REDIS_KEYS = {
   rateLimit: (id: string) => `rate_limit:${id}`,
   offers: (sessionId: string) => `offers:${sessionId}`,
   upsellOffered: (sessionId: string) => `upsell_offered:${sessionId}`,
+  webhookDedup: (hash: string) => `webhook_dedup:${hash}`,
+  webhookRateLimit: (ip: string) => `rate_limit:webhook:${ip}`,
 } as const;
 
 /** Default TTLs in seconds */
 export const REDIS_TTL = {
-  session: 24 * 60 * 60,     // 24h
-  request: 5 * 60,           // 5min
-  typingJob: 30,             // 30s
-  rateLimit: 60,             // 1min (sliding window)
+  session: 24 * 60 * 60,       // 24h
+  request: 5 * 60,             // 5min
+  typingJob: 30,               // 30s
+  rateLimit: 60,               // 1min (sliding window)
+  webhookDedup: 24 * 60 * 60,  // 24h — webhook idempotency window
+  webhookRateLimit: 60,        // 1min — per-IP webhook rate limit window
 } as const;
