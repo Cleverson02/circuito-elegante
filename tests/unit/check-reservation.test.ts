@@ -13,6 +13,7 @@ import {
 import {
   CheckReservationParams,
   createCheckReservationTool,
+  executeCheckReservation,
   type CheckReservationResponse,
 } from '../../backend/src/tools/check-reservation';
 
@@ -670,9 +671,8 @@ describe('check_reservation tool', () => {
     it('should pass structured data to Persona (no prose generation)', async () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
 
-      const response = (await tool.execute({
+      const response = (await executeCheckReservation(client, logger, CREDS, {
         identifier: 'ABC123',
       })) as CheckReservationResponse;
 
@@ -688,9 +688,8 @@ describe('check_reservation tool', () => {
     it('should return not-found structured response (with front_desk suggestion)', async () => {
       const client = makeClient({ reservations: [] });
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
 
-      const response = (await tool.execute({
+      const response = (await executeCheckReservation(client, logger, CREDS, {
         identifier: 'NOMATCH',
       })) as CheckReservationResponse;
 
@@ -706,9 +705,8 @@ describe('check_reservation tool', () => {
         new ElevareTimeoutError(8000, '/global-agent/reservations'),
       );
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
 
-      const response = (await tool.execute({
+      const response = (await executeCheckReservation(client, logger, CREDS, {
         identifier: 'ABC123',
       })) as CheckReservationResponse;
 
@@ -723,9 +721,8 @@ describe('check_reservation tool', () => {
     it('should trim whitespace from identifier before lookup', async () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
 
-      await tool.execute({ identifier: '  ABC123  ' });
+      await executeCheckReservation(client, logger, CREDS, { identifier: '  ABC123  ' });
 
       const callArgs = client.request.mock.calls[0];
       expect(callArgs[0]).toContain('confirmationNumber=ABC123');

@@ -50,6 +50,40 @@ export type CheckReservationResponse =
  * language-specific phrasing, status-aware messaging) is the Persona
  * Agent's responsibility.
  */
+/**
+ * Execute logic extracted so tests can invoke it directly without the
+ * runtime overhead of the FunctionTool wrapper (which exposes `invoke`
+ * with a JSON-string signature, not `execute`).
+ */
+export async function executeCheckReservation(
+  client: ElevareClient,
+  logger: Logger,
+  credentials: { clientId?: string; clientSecret?: string },
+  params: CheckReservationParams,
+): Promise<CheckReservationResponse> {
+  const result = await getReservations(
+    client,
+    logger,
+    params.identifier,
+    credentials,
+  );
+
+  if (!result.found) {
+    return {
+      found: false,
+      error: result.error ?? false,
+      suggestion: 'front_desk',
+      message: 'No reservations found for this identifier.',
+    };
+  }
+
+  return {
+    found: true,
+    reservations: result.reservations,
+    count: result.reservations.length,
+  };
+}
+
 export function createCheckReservationTool(
   client: ElevareClient,
   logger: Logger,
@@ -64,28 +98,7 @@ export function createCheckReservationTool(
       'Agent to format as a human-readable response in the session language. ' +
       'Use when the classified intent is STATUS.',
     parameters: CheckReservationParams,
-    execute: async (params): Promise<CheckReservationResponse> => {
-      const result = await getReservations(
-        client,
-        logger,
-        params.identifier,
-        credentials,
-      );
-
-      if (!result.found) {
-        return {
-          found: false,
-          error: result.error ?? false,
-          suggestion: 'front_desk',
-          message: 'No reservations found for this identifier.',
-        };
-      }
-
-      return {
-        found: true,
-        reservations: result.reservations,
-        count: result.reservations.length,
-      };
-    },
+    execute: async (params): Promise<CheckReservationResponse> =>
+      executeCheckReservation(client, logger, credentials, params),
   });
 }

@@ -9,6 +9,19 @@
  * / failure-evoking term in any language (AC8).
  */
 
+// Mock @sentry/node BEFORE importing modules that use it. `jest.spyOn` does
+// not work on ESM namespace imports (non-configurable bindings) — we must
+// replace the module exports directly.
+jest.mock('@sentry/node', () => {
+  const actual = jest.requireActual('@sentry/node') as Record<string, unknown>;
+  return {
+    ...actual,
+    getClient: jest.fn(),
+    withScope: jest.fn(),
+    captureException: jest.fn(),
+  };
+});
+
 import * as Sentry from '@sentry/node';
 
 import {
@@ -426,18 +439,12 @@ describe('triggerSilentHandover — AC9/AC10', () => {
 // ─── Sentry Integration (AC11/AC12) ────────────────────────────
 
 describe('Sentry integration — AC11/AC12', () => {
-  const getClientSpy = jest.spyOn(Sentry, 'getClient');
-  const withScopeSpy = jest.spyOn(Sentry, 'withScope');
-  const captureSpy = jest.spyOn(Sentry, 'captureException');
+  const getClientSpy = Sentry.getClient as jest.Mock;
+  const withScopeSpy = Sentry.withScope as jest.Mock;
+  const captureSpy = Sentry.captureException as jest.Mock;
 
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  afterAll(() => {
-    getClientSpy.mockRestore();
-    withScopeSpy.mockRestore();
-    captureSpy.mockRestore();
   });
 
   it('#29 — calls captureException with fingerprint', async () => {

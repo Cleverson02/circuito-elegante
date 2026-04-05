@@ -264,9 +264,6 @@ export async function handleWebhookRequest(
   }
 
   // AC2: signature validation (401 on invalid)
-  const rawBody = (request as FastifyRequest & { rawBody?: string }).rawBody
-    ?? (typeof request.body === 'string' ? request.body : JSON.stringify(request.body));
-
   const signatureHeader = request.headers[SIGNATURE_HEADER];
   const signatureFromHeader = Array.isArray(signatureHeader)
     ? signatureHeader[0]
@@ -279,7 +276,21 @@ export async function handleWebhookRequest(
     return reply.status(401).send({ error: 'Unauthorized', message: 'Missing signature' });
   }
 
-  const valid = validateWebhookSignature(rawBody, signature, webhookSecret);
+  // When signature comes from the body, it cannot be part of the signed
+  // payload (self-reference). Strip the signature field and re-serialize
+  // for HMAC validation. When signature comes from header, use rawBody as-is.
+  let bodyForValidation: string;
+  if (signatureFromHeader) {
+    bodyForValidation = (request as FastifyRequest & { rawBody?: string }).rawBody
+      ?? (typeof request.body === 'string' ? request.body : JSON.stringify(request.body));
+  } else {
+    const bodyObj = request.body as Record<string, unknown>;
+    const { signature: _sig, ...bodyWithoutSig } = bodyObj;
+    void _sig;
+    bodyForValidation = JSON.stringify(bodyWithoutSig);
+  }
+
+  const valid = validateWebhookSignature(bodyForValidation, signature, webhookSecret);
   if (!valid) {
     logger.warn('webhook_signature_invalid', { ip, eventType: validated.eventType });
     return reply.status(401).send({ error: 'Unauthorized', message: 'Invalid signature' });

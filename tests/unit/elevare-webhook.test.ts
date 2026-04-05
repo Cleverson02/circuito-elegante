@@ -29,9 +29,9 @@ import {
 
 jest.mock('../../backend/src/webhooks/elevare-repository', () => ({
   insertWebhookEvent: jest.fn(),
-  updateWebhookEventStatus: jest.fn(),
-  updateWebhookEventContext: jest.fn(),
-  findHistoricalEventByQuotationId: jest.fn(),
+  updateWebhookEventStatus: jest.fn().mockResolvedValue(undefined),
+  updateWebhookEventContext: jest.fn().mockResolvedValue(undefined),
+  findHistoricalEventByQuotationId: jest.fn().mockResolvedValue(null),
 }));
 
 jest.mock('../../backend/src/state/cache-helpers', () => ({
@@ -117,7 +117,8 @@ interface MockRedisOptions {
 }
 
 function makeRedis(opts: MockRedisOptions = {}): any {
-  const setNxReturn = opts.setNxReturns ?? 'OK';
+  // Use explicit undefined check — `??` would coerce `null` (a valid dedup-hit value) to 'OK'
+  const setNxReturn = 'setNxReturns' in opts ? opts.setNxReturns : 'OK';
   const incrReturn = opts.incrReturns ?? 1;
 
   return {
@@ -264,7 +265,13 @@ describe('Elevare Webhook Handler — Security & Validation', () => {
     const req = makeRequest();
     const reply = makeReply();
 
-    await handleWebhookRequest(req, reply, makeDeps(redis, logger, undefined));
+    // Override webhookSecret explicitly — passing `undefined` to makeDeps
+    // triggers its default parameter (JS semantics), so build deps directly.
+    const deps: WebhookHandlerDeps = {
+      ...makeDeps(redis, logger),
+      webhookSecret: undefined,
+    };
+    await handleWebhookRequest(req, reply, deps);
 
     expect(reply.status).toHaveBeenCalledWith(503);
     expect(logger.warn).toHaveBeenCalledWith(

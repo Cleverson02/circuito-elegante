@@ -17,7 +17,7 @@
     "format:check": "prettier --check \"backend/src/**/*.ts\" \"config/**/*.ts\"",
     "typecheck": "tsc --noEmit",
     "test": "jest",
-    "test:unit": "jest --testPathPattern \"\\.(unit\\.test|test)\\.ts$\"",
+    "test:unit": "jest --testPathPattern tests/unit",
     "test:integration": "jest --testPathPattern tests/integration",
     "test:e2e": "jest --testPathPattern tests/e2e",
     "db:generate": "drizzle-kit generate",
