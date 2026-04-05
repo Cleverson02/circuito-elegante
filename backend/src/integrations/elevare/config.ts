@@ -4,6 +4,8 @@ import { env } from '../../../../config/env.js';
 const ElevareConfigSchema = z.object({
   apiUrl: z.string().url(),
   apiKey: z.string().min(1),
+  clientId: z.string().optional(),
+  clientSecret: z.string().optional(),
   timeoutMs: z.number().int().positive().default(8000),
   maxRetries: z.number().int().min(0).max(10).default(3),
 });
@@ -18,6 +20,8 @@ export function getElevareConfig(): ElevareConfig {
   const raw = {
     apiUrl: env.ELEVARE_API_URL ?? 'https://api.elevare.com.br/v1',
     apiKey: env.ELEVARE_API_KEY ?? '',
+    clientId: env.ELEVARE_CLIENT_ID,
+    clientSecret: env.ELEVARE_CLIENT_SECRET,
     timeoutMs: env.ELEVARE_TIMEOUT_MS ?? 8000,
     maxRetries: env.ELEVARE_MAX_RETRIES ?? 3,
   };

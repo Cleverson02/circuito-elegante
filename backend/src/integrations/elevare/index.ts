@@ -59,6 +59,21 @@ export type {
   QuotationState,
 } from './quotations.js';
 
+export {
+  getReservations,
+  detectIdentifierType,
+  mapStatus,
+  maskPII,
+} from './reservations.js';
+
+export type {
+  ReservationStatus,
+  ReservationStatusData,
+  ReservationLookupResult,
+  IdentifierType,
+  IdentifierInfo,
+} from './reservations.js';
+
 export type {
   ElevareSearchParams,
   ElevareMultiSearchParams,

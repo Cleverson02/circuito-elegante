@@ -27,6 +27,8 @@ export const env = createEnv({
     // Elevare API — required from Epic 3+
     ELEVARE_API_URL: z.string().url().optional(),
     ELEVARE_API_KEY: z.string().min(1).optional(),
+    ELEVARE_CLIENT_ID: z.string().min(1).optional(),
+    ELEVARE_CLIENT_SECRET: z.string().min(1).optional(),
     ELEVARE_TIMEOUT_MS: z.coerce.number().int().positive().default(8000),
     ELEVARE_MAX_RETRIES: z.coerce.number().int().min(0).max(10).default(3),
 

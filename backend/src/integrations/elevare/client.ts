@@ -129,13 +129,20 @@ export class ElevareClient {
    * Low-level request method — exposed for domain-specific wrappers
    * (e.g., customers.ts, quotations.ts). Inherits auth, retry, circuit
    * breaker, timeout, and logging from the base client.
+   *
+   * Options:
+   *   - headers: extra headers merged with default auth (X-Api-Key)
+   *   - overrideAuth: when true, omits X-Api-Key entirely so caller can
+   *     supply its own auth headers (e.g., x-client-id/x-client-secret
+   *     required by /global-agent endpoints).
    */
   async request<T>(
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
+    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
-    return this.fetchWithResilience<T>(endpoint, method, body);
+    return this.fetchWithResilience<T>(endpoint, method, body, options);
   }
 
   getCircuitBreakerState(): CircuitBreakerState {
@@ -174,6 +181,7 @@ export class ElevareClient {
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
+    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
     this.checkCircuitBreaker();
 
@@ -181,7 +189,7 @@ export class ElevareClient {
 
     for (let attempt = 0; attempt <= this.config.maxRetries; attempt++) {
       try {
-        const result = await this.executeFetch<T>(endpoint, method, body);
+        const result = await this.executeFetch<T>(endpoint, method, body, options);
         this.onSuccess();
         return result;
       } catch (error) {
@@ -218,6 +226,7 @@ export class ElevareClient {
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
+    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
     const url = `${this.config.apiUrl}${endpoint}`;
     const controller = new AbortController();
@@ -235,9 +244,16 @@ export class ElevareClient {
     });
 
     const headers: Record<string, string> = {
-      'X-Api-Key': this.config.apiKey,
       'Accept': 'application/json',
     };
+    if (!options?.overrideAuth) {
+      headers['X-Api-Key'] = this.config.apiKey;
+    }
+    if (options?.headers) {
+      for (const [k, v] of Object.entries(options.headers)) {
+        headers[k] = v;
+      }
+    }
 
     const init: RequestInit = {
       method,
