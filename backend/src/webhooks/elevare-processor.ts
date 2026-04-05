@@ -17,6 +17,7 @@
  */
 
 import { cacheGet } from '../state/cache-helpers.js';
+import { getSession } from '../state/session-manager.js';
 import { QUOTATION_REDIS_KEYS, type QuotationState } from '../integrations/elevare/quotations.js';
 import {
   findHistoricalEventByQuotationId,
@@ -76,11 +77,50 @@ function getDeps(): ProcessorDeps {
 
 // ─── Guest Resolution (AC12) ────────────────────────────────────
 
+const SUPPORTED_LANGUAGES: readonly string[] = ['pt', 'en', 'es'];
+
+/**
+ * Validates a raw language string and coerces to the supported union.
+ * Falls back to 'pt' (mercado principal) when the value is missing or
+ * unsupported — aligned with Story 3.8 fallback-messages convention.
+ */
+function validateLanguage(raw: string | undefined): 'pt' | 'en' | 'es' {
+  if (raw && SUPPORTED_LANGUAGES.includes(raw)) {
+    return raw as 'pt' | 'en' | 'es';
+  }
+  return 'pt';
+}
+
+/**
+ * Builds the GuestContext by looking up the session's language and
+ * guest name once the sessionId is known. Never throws — on any failure
+ * returns the caller's sessionId + pt language + undefined guestName.
+ */
+async function buildGuestContext(
+  sessionId: string,
+  guestId: string | null,
+): Promise<GuestContext> {
+  const session = await getSession(sessionId).catch(() => null);
+  const language = validateLanguage(session?.language);
+
+  const rawGuestName = session?.context?.['guestName'];
+  const guestName =
+    typeof rawGuestName === 'string' && rawGuestName.length > 0
+      ? rawGuestName
+      : undefined;
+
+  return { sessionId, guestId, guestName, language };
+}
+
 /**
  * Resolves guest context from a `quotationId`:
- *   1. Fast path: Redis `quotation:{quotationId}` → sessionId/customerId
+ *   1. Fast path: Redis `quotation:{quotationId}` → sessionId
  *   2. Fallback: DB historical `webhook_events` scan
  *   3. Otherwise: null (event stored, no follow-up sent)
+ *
+ * After resolving sessionId, looks up the session in Redis to extract
+ * language and guestName — avoids the hardcoded 'pt' language that
+ * previously defeated AC16 (PT/EN/ES prose generation).
  */
 export async function resolveGuestContext(
   quotationId: string,
@@ -91,23 +131,14 @@ export async function resolveGuestContext(
   ).catch(() => null);
 
   if (quotationState?.sessionId) {
-    return {
-      sessionId: quotationState.sessionId,
-      guestId: null, // customerId is an Elevare id, not our guestId
-      guestName: undefined,
-      language: 'pt',
-    };
+    // customerId is an Elevare id, not our guestId → pass null
+    return buildGuestContext(quotationState.sessionId, null);
   }
 
   // Step 2: DB historical fallback
   const historical = await findHistoricalEventByQuotationId(quotationId).catch(() => null);
   if (historical?.sessionId) {
-    return {
-      sessionId: historical.sessionId,
-      guestId: historical.guestId,
-      guestName: undefined,
-      language: 'pt',
-    };
+    return buildGuestContext(historical.sessionId, historical.guestId);
   }
 
   // Step 3: unresolved

@@ -1,21 +1,21 @@
 schema: 1
 story: '3.7'
 story_title: 'Webhook Listener & Auto-Follow-Up'
-gate: CONCERNS
-status_reason: 'All 17 ACs met with comprehensive test coverage (52 unit tests). HMAC-SHA256 + timing-safe comparison + fail-closed secret + idempotency + rate limit all verified. 1 MEDIUM concern: guest language hardcoded to pt (breaks AC16 multilingual promise). 2 LOW concerns: env validation inconsistency, raw-body parser override.'
+gate: PASS
+status_reason: 'All 17 ACs met with comprehensive test coverage (55 unit tests, +3 new language resolution tests). HMAC-SHA256 + timing-safe comparison + fail-closed secret + idempotency + rate limit all verified. I18N-001 resolved: guest language now resolved from session.language via buildGuestContext helper, falls back to pt for unsupported values. Remaining items are LOW severity future-hardening.'
 reviewer: 'Quinn (Test Architect)'
-updated: '2026-04-05T21:00:00Z'
+updated: '2026-04-05T22:15:00Z'
 
-quality_score: 85
-expires: '2026-04-19T21:00:00Z'
+quality_score: 92
+expires: '2026-04-19T22:15:00Z'
 
 top_issues:
   - id: 'I18N-001'
-    severity: medium
-    finding: 'guestContext.language hardcoded to "pt" in both Redis fast path (elevare-processor.ts:98) and DB fallback (elevare-processor.ts:109). Contradicts AC16 which promises PT/EN/ES prose via Persona Agent — all webhook follow-ups will be in Portuguese regardless of guest language.'
-    suggested_action: 'Add `language` field to QuotationState (Story 3.3) or look up session.language via cacheGet before building GuestContext. Short-term: document as known limitation.'
+    severity: low
+    finding: 'RESOLVED — resolveGuestContext now calls getSession() for each resolved sessionId and validates language against the supported set (pt/en/es). Falls back to pt only when session missing or language unsupported. 3 new unit tests cover: en resolution, unsupported language fallback, session lookup failure.'
+    suggested_action: 'No action needed'
     suggested_owner: dev
-    refs: ['backend/src/webhooks/elevare-processor.ts:85-115']
+    refs: ['backend/src/webhooks/elevare-processor.ts:77-140']
   - id: 'CONFIG-001'
     severity: low
     finding: 'ELEVARE_WEBHOOK_SECRET read via process.env directly in routes.ts:14, bypassing the Zod env schema in config/env.ts. Other Elevare vars (API_URL, API_KEY, CLIENT_ID) are validated — inconsistent pattern.'
@@ -37,8 +37,8 @@ top_issues:
 waiver: { active: false }
 
 evidence:
-  tests_reviewed: 52
-  risks_identified: 1
+  tests_reviewed: 55
+  risks_identified: 0
   trace:
     ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
     ac_gaps: []
@@ -58,9 +58,7 @@ nfr_validation:
     notes: 'Clean separation: handler / processor / repository / types. Discriminated unions for events. Dependency injection via configureProcessorDeps. Exhaustive switch with `_exhaustive: never` guard.'
 
 recommendations:
-  immediate:
-    - action: 'Fix guest language resolution to avoid hardcoded pt in processor'
-      refs: ['backend/src/webhooks/elevare-processor.ts']
+  immediate: []
   future:
     - action: 'Move ELEVARE_WEBHOOK_SECRET into config/env.ts Zod schema'
       refs: ['config/env.ts', 'backend/src/api/routes.ts']

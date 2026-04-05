@@ -38,6 +38,10 @@ jest.mock('../../backend/src/state/cache-helpers', () => ({
   cacheGet: jest.fn(),
 }));
 
+jest.mock('../../backend/src/state/session-manager', () => ({
+  getSession: jest.fn().mockResolvedValue(null),
+}));
+
 jest.mock('../../backend/src/webhooks/elevare-processor', () => {
   const actual = jest.requireActual('../../backend/src/webhooks/elevare-processor');
   return {
@@ -59,6 +63,10 @@ const repo = jest.requireMock('../../backend/src/webhooks/elevare-repository') a
 
 const cacheHelpers = jest.requireMock('../../backend/src/state/cache-helpers') as {
   cacheGet: jest.Mock;
+};
+
+const sessionManager = jest.requireMock('../../backend/src/state/session-manager') as {
+  getSession: jest.Mock;
 };
 
 const processorMock = jest.requireMock('../../backend/src/webhooks/elevare-processor') as {
@@ -1018,6 +1026,69 @@ describe('Elevare Webhook Processor — Guest Resolution (AC12)', () => {
     const result = await processorModule.resolveGuestContext('quot_missing');
 
     expect(result).toBeNull();
+  });
+
+  // AC16: language must come from the session, not a hardcoded default
+  it('resolves language from session.language when available', async () => {
+    cacheHelpers.cacheGet.mockResolvedValueOnce({
+      sessionId: 'sess-en',
+      customerId: 'c1',
+      quotationId: 'quot_abc123',
+    });
+    sessionManager.getSession.mockResolvedValueOnce({
+      hotelId: 'h1',
+      guestPhone: '+5511999999999',
+      language: 'en',
+      context: { guestName: 'John Smith' },
+      createdAt: '2026-04-05T10:00:00Z',
+      updatedAt: '2026-04-05T10:00:00Z',
+    });
+
+    const result = await processorModule.resolveGuestContext('quot_abc123');
+
+    expect(result).toMatchObject({
+      sessionId: 'sess-en',
+      language: 'en',
+      guestName: 'John Smith',
+    });
+    expect(sessionManager.getSession).toHaveBeenCalledWith('sess-en');
+  });
+
+  it('defaults to pt when session.language is unsupported', async () => {
+    cacheHelpers.cacheGet.mockResolvedValueOnce({
+      sessionId: 'sess-fr',
+      customerId: 'c1',
+      quotationId: 'quot_abc123',
+    });
+    sessionManager.getSession.mockResolvedValueOnce({
+      hotelId: 'h1',
+      guestPhone: '+33612345678',
+      language: 'fr',
+      context: {},
+      createdAt: '2026-04-05T10:00:00Z',
+      updatedAt: '2026-04-05T10:00:00Z',
+    });
+
+    const result = await processorModule.resolveGuestContext('quot_abc123');
+
+    expect(result).toMatchObject({ language: 'pt' });
+  });
+
+  it('defaults to pt and undefined guestName when session lookup fails', async () => {
+    cacheHelpers.cacheGet.mockResolvedValueOnce({
+      sessionId: 'sess-fail',
+      customerId: 'c1',
+      quotationId: 'quot_abc123',
+    });
+    sessionManager.getSession.mockRejectedValueOnce(new Error('redis down'));
+
+    const result = await processorModule.resolveGuestContext('quot_abc123');
+
+    expect(result).toMatchObject({
+      sessionId: 'sess-fail',
+      language: 'pt',
+      guestName: undefined,
+    });
   });
 });
 
