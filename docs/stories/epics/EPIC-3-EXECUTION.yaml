@@ -1,5 +1,5 @@
 # Epic 3: Integracao Elevare — O Fluxo de Ouro — Execution Plan
-# Status: READY (blocked by Epic 2)
+# Status: STORIES_DRAFTED — 10 stories created (3.1-3.10) — 2026-04-05
 # Owner: @pm (Morgan)
 # Created: 2026-04-02
 
@@ -7,7 +7,7 @@ epic:
   id: EPIC-3
   title: "Integracao Elevare — O Fluxo de Ouro"
   description: "Pipeline completo de reservas: /search → /customers → /quotations, curadoria, webhooks"
-  status: ready
+  status: stories_drafted
   priority: P0-critical
   prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-3"
 
