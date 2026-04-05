@@ -152,11 +152,6 @@ function getString(payload: Record<string, unknown>, key: string): string | null
   return typeof v === 'string' && v.length > 0 ? v : null;
 }
 
-function getNumber(payload: Record<string, unknown>, key: string): number | null {
-  const v = payload[key];
-  return typeof v === 'number' && Number.isFinite(v) ? v : null;
-}
-
 // ─── Follow-Up Delivery ─────────────────────────────────────────
 
 async function sendFollowUp(
