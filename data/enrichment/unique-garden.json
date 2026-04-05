@@ -1,0 +1,154 @@
+{
+  "hotel_slug": "unique-garden",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-03T15:30:00Z",
+  "sources_consulted": ["local_form", "local_xlsx", "hotel_website", "hotel_website_habitar", "hotel_website_sentir", "hotel_website_pet", "hotel_website_casamentos"],
+  "quality_score": 0.92,
+  "completeness": 0.86,
+  "fields_filled": 50,
+  "fields_total": 58,
+  "fields_null": 8,
+
+  "enrichment": {
+    "website_url": "https://www.uniquegarden.com.br/pt-br",
+    "google_maps_url": "https://maps.app.goo.gl/d7HDeXDvkB2npLdF6",
+    "description": "Para conhecer o Unique Garden mergulhamos num universo próprio, repleto de projetos emocionais, sociais e ambientais, autoalimentados por desejos, paixões e razões de todos que se somam aqui. Ele nasceu por acaso, mas de propósito.",
+    "lodging_type": "Hotel Boutique",
+
+    "room_types": [
+      {"name": "Vila Mediterrânea", "units": 14, "description": "Chalés cercados por jardins no entorno da Fonte da Juventude. Varanda para leitura e descanso."},
+      {"name": "Vila Contemporânea", "units": 10, "description": "Chalés projetados por Ruy Ohtake, todos com Jacuzzi. Living com acabamentos em madeira, mármore ou estilo oriental."},
+      {"name": "Cabana do Bosque", "units": 1, "size_m2": 60, "description": "No coração do bosque. Dois quartos com suíte e área de living."},
+      {"name": "Chalé Shiva", "units": 1, "size_m2": 30, "description": "Chalé privativo com piscina e ofurô na área externa."},
+      {"name": "Chalé do Golfe", "units": 1, "size_m2": 58, "description": "Projeto exclusivo Ruy Ohtake em cores vibrantes. Piscina com vista para o lago."},
+      {"name": "Chalé do Lago", "units": 1, "size_m2": 156, "bedrooms": 3, "description": "Duplex Ruy Ohtake com vista para o lago. Piscina com borda infinita."},
+      {"name": "Casa de Shiraz", "units": 1, "size_m2": 480, "description": "Um quarto com suíte, closet, living com teto de vidro e lareira, piscina particular e mirante. Banheira em mármore Napoleon Bordeaux, cama Auping."},
+      {"name": "Chalé Cristal", "units": 1, "size_m2": 600, "bedrooms": 2, "description": "Vista panorâmica, inteiramente de vidro. Duas suítes, ampla sala, duas piscinas privativas (interna e externa)."}
+    ],
+    "total_rooms": 30,
+    "room_amenities": "Granado e Trousseau. Bucha vegetal produzida e embalada de forma sustentável no hotel. Cama Auping (Casa de Shiraz). Jacuzzi (Vila Contemporânea).",
+
+    "parking": {"has_parking": true, "capacity": 64, "is_free": true},
+    "pool_description": "Piscina Quatro Estações (água oligomineral das fontes do hotel) + Piscina Aquecida central + piscinas privativas em 3 chalés (Shiva, Golfe, Lago, Shiraz, Cristal).",
+    "wellness": "Spa Pandora com 20+ terapias em 7 pilares (Contemplar, Despertar, Fluir, Harmonizar, Purificar, Relaxar, Renovar). Pacote Reconnect (3+ dias). Ritos Tibetanos, Hatha Yoga, Lian Gong, alongamento.",
+    "event_space": {
+      "has_events": true,
+      "spaces": ["Nirvana", "Board Room", "Parthenon", "Sala Mara", "Olimpo", "Casa de Shiraz", "Chalé Cristal"],
+      "max_capacity": 250,
+      "types": ["casamentos", "corporativos", "sociais", "mini wedding"],
+      "mini_wedding": {"shiraz": 60, "cristal": 30, "nirvana": 60}
+    },
+    "wifi": {"included": true, "quality": "Sinal e velocidade bons para atender todos os hóspedes"},
+    "accessibility": null,
+    "gym": {"has_gym": true, "description": "Fitness Center + Fitness Garden com programação diária (caminhadas, alongamentos, atividades indoor e outdoor)"},
+    "leisure_items": ["tours sensoriais guiados (300.000m²)", "tour jardinagem/hortas", "tour mantenedouro conservacionista", "projeto Encontrei um Amigo (resgate animal)", "yoga", "ritos tibetanos", "tênis", "beach tennis", "bicicleta", "deck do pôr do sol", "caminhadas na mata", "oficinas de chás e temperos", "colheita nas hortas"],
+
+    "restaurants": [
+      {"name": "Kitanda", "cuisine": "Contemporânea", "meals": "Café da manhã e almoço", "description": "Lounge e varanda voltada para a piscina"},
+      {"name": "Chez Victor", "cuisine": "Fusão de sabores e culturas", "meals": "Jantar", "description": "Lareira, piano, bar com drinques especiais"},
+      {"name": "Relais Jardin", "cuisine": "Não especificado", "meals": "Não especificado"}
+    ],
+    "meals_included": "Café da manhã e almoço inclusos na diária, a partir do dia seguinte ao check-in",
+    "special_dining": [
+      "Menu Degustação: 7 tempos pelo chef Daniel Aquino no Chez Victor",
+      "Piquenique Unique Garden: toalha, cestinho, puffs. Finger sandwich, suco, queijos, nozes, frutas. Indoor/outdoor/varanda do chalé",
+      "Experiência Aquecer: ao redor do fogo, tábua de queijos, pães e nuts",
+      "Jantar dos Sentidos: conversa com nutricionista, menu surpresa com olhos vendados após meditação"
+    ],
+    "room_service": null,
+    "dietary_options": "Oficinas com nutricionista sobre propriedades e preparos. Hortas próprias, farm-to-table. Talk com nutricionista disponível.",
+
+    "check_in_out": {"check_in": "16:00", "check_out": "13:00"},
+    "early_late_checkout": "Mediante disponibilidade com cobrança de meia diária",
+    "cancellation_policy": "48h de antecedência (normal). 10 dias (feriados). 30 dias (Natal e Réveillon).",
+    "children_policy": "Recebemos crianças em datas pontuais, mediante consulta. Até 7 anos: cortesia. A partir de 8 anos: pagante.",
+    "pet_policy": {
+      "accepts_pets": true,
+      "fee": "R$400 por animal (taxa única, independente do porte)",
+      "age_minimum": "6 meses",
+      "requirements": "Vacinação V10/V8 e antirrábica em dia. Vermifugação e antipulgas recomendados.",
+      "restrictions": "Aves não aceitas. Animais doentes, no cio ou gestantes não recomendados. Raças grandes (Pitbull, Rottweiler, Dobermann, Pastor Alemão) exigem focinheira.",
+      "amenities": "Cama, comedouro e bebedouro disponíveis para uso ou compra",
+      "restricted_areas": "Restaurantes, Spa Pandora, Fitness, piscinas, áreas de conservação, estufas, Ohtake Garden",
+      "cleaning_fee": "R$800 mínimo em caso de danos ou limpeza pesada"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Guarulhos 52km (Dutra→Fernão Dias). Congonhas 62km (corredor norte-sul→Marginal Tietê→Dutra→Fernão Dias). Viracopos 98km (Dom Pedro→Fernão Dias).",
+    "transfer": {"available": true, "is_free": false, "description": "Transfer terceirizado pago. Heliporto disponível para chegada de helicóptero."},
+    "nearby_attractions": "Maior reserva urbana de Mata Atlântica de São Paulo. Serra da Cantareira. 300.000m² de área verde.",
+    "how_to_get_there": "Rodovia Fernão Dias km 54, Estrada Laramara 3500, Mairiporã SP 07666-280",
+
+    "special_programming": "Crianças em datas pontuais. Adultos: yoga diário, ritos tibetanos, fitness garden, oficinas de chás/temperos/sucos, talk nutricionista.",
+    "hotel_concierge_services": "Guest Service agenda todas as experiências de lazer e bem-estar.",
+    "activities_tours": ["tours sensoriais guiados", "colheita nas hortas e ervanário", "tênis e beach tennis", "bicicleta", "caminhadas na mata", "deck do pôr do sol", "oficinas gastronômicas"],
+    "day_use": null,
+    "special_packages": ["Reconnect (3+ dias wellness com nutricionista e educador físico)", "Tiradentes", "Dia dos Namorados", "Dia das Mães", "Férias de julho", "Natal e Réveillon", "Lua de mel (decoração romântica, champagne, presente do chef, playlist curada)"],
+
+    "highlights": "Atendimento personalizado, gastronomia afetiva, café da manhã e almoço inclusos, produção das verduras e legumes no hotel, arquitetura Ruy Ohtake, paisagismo Burle Marx.",
+    "awards_certifications": null,
+    "sustainability": "Programa Zero CO². Preservação de Mata Atlântica. Hortas orgânicas (Hortas de Ceres, Horta do Morro). Ervanário. Bucha vegetal sustentável. Mantenedouro conservacionista de animais silvestres.",
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {"q": "O hotel aceita crianças?", "a": "Em datas pontuais, mediante consulta. Até 7 anos cortesia, 8+ pagante."},
+      {"q": "Qual prazo para cancelamento?", "a": "48h normal, 10 dias feriados, 30 dias Natal/Réveillon."},
+      {"q": "Quais atividades o hotel oferece?", "a": "Tours, yoga, spa, fitness, tênis, beach tennis, bicicleta, oficinas gastronômicas."},
+      {"q": "Vocês são hotel SPA?", "a": "Hotel Boutique com Spa Pandora (20+ terapias)."},
+      {"q": "Tem pacote de emagrecimento?", "a": "Pacote Reconnect com nutricionista e educador físico."},
+      {"q": "Quanto tempo de distância de SP?", "a": "52km de Guarulhos, ~1h de carro."},
+      {"q": "O acesso ao hotel é em estrada de terra?", "a": "Acesso pela Fernão Dias km 54, Estrada Laramara 3500."}
+    ],
+    "common_objections": [
+      {"category": "CRIANÇAS", "objection": "Não aceita crianças sempre", "response": "Recebemos em datas pontuais. Até 7 anos cortesia.", "source": "formulário Q25+Q27"},
+      {"category": "ACESSO", "objection": "Estrada de terra / longe de SP", "response": "Acesso pela Fernão Dias, 52km de GRU. Heliporto disponível.", "source": "formulário Q25+Q23"},
+      {"category": "CONCEITO", "objection": "É hotel SPA? Tem emagrecimento?", "response": "Hotel Boutique com Spa Pandora. Pacote Reconnect com nutricionista.", "source": "formulário Q25+Q17"}
+    ],
+    "attention_points": [
+      "Crianças APENAS em datas pontuais — confirmar antes de prometer",
+      "Pet: raças grandes exigem focinheira. Aves NÃO aceitas. R$400/animal",
+      "Cancelamento Natal/Réveillon: 30 dias de antecedência",
+      "Early/late checkout cobra meia diária"
+    ],
+    "sales_arguments_by_profile": null,
+
+    "ce_page_url": null,
+    "photo_urls": ["https://www.uniquegarden.com.br/pt-br/habitar (galeria completa no site)"],
+
+    "_meta": {
+      "enriched_at": "2026-04-03T15:30:00Z",
+      "pipeline_version": "2.0",
+      "sources": {
+        "local_form": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md (linhas 2681-2877)",
+        "hotel_website": "https://www.uniquegarden.com.br/pt-br",
+        "hotel_website_habitar": "https://www.uniquegarden.com.br/pt-br/habitar",
+        "hotel_website_sentir": "https://www.uniquegarden.com.br/pt-br/sentir",
+        "hotel_website_pet": "https://www.uniquegarden.com.br/pt-br/hospedagem-pet",
+        "hotel_website_casamentos": "https://www.uniquegarden.com.br/pt-br/lp/casamentos-unique-garden"
+      },
+      "quality_score": 0.92,
+      "completeness": 0.86,
+      "fields_literal": 39,
+      "fields_inferred": 11,
+      "fields_null": 8,
+      "inferences": [
+        {"field": "region", "value": "sudeste", "logic": "UF=SP → region=sudeste"},
+        {"field": "experience", "value": "serra", "logic": "Interior SP, Mata Atlântica, Serra da Cantareira, 52km GRU, não tem praia nem é cidade"},
+        {"field": "price_tier", "value": "$$$$", "logic": "Chalés 480-600m², arquiteto Ruy Ohtake, Granado+Trousseau, cama Auping, heliporto, Spa Pandora"},
+        {"field": "dietary_options", "value": "inferido", "logic": "Oficinas com nutricionista + hortas próprias + farm-to-table implica atendimento a restrições"}
+      ],
+      "null_reasons": {
+        "accessibility": "Nenhuma fonte mencionou",
+        "room_service": "Nenhuma fonte mencionou",
+        "smoking_policy": "Nenhuma fonte mencionou",
+        "min_age_solo": "Nenhuma fonte mencionou",
+        "day_use": "Nenhuma fonte mencionou",
+        "awards_certifications": "TripAdvisor retornou 403",
+        "star_rating": "Hotel não classificado por estrelas",
+        "sales_arguments_by_profile": "Requer criação baseada nos dados coletados"
+      }
+    }
+  }
+}

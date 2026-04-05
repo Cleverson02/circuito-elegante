@@ -1,0 +1,482 @@
+{
+  "stats": {
+    "timestamp": "2026-04-03T23:51:05.063849",
+    "total_hotels": 93,
+    "with_xlsx": 93,
+    "with_md": 19,
+    "with_both": 19,
+    "avg_sources_per_hotel": 1.2,
+    "avg_fields_per_hotel": 3.7,
+    "sources_distribution": {
+      "xlsx": 93,
+      "md": 19
+    }
+  },
+  "coverage_by_hotel": {
+    "pousada-alma-charme-atins": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "rancharia-charme-beach": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "atins-charme": {
+      "sources": 2,
+      "fields": 20,
+      "completion": "60%"
+    },
+    "bahia-bonita-hotel-boutique-quadrado": {
+      "sources": 2,
+      "fields": 13,
+      "completion": "39%"
+    },
+    "bupitanga-hotel": {
+      "sources": 2,
+      "fields": 14,
+      "completion": "42%"
+    },
+    "casa-turquesa": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "clara-dourado-resort": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "clara-ibiúna-resort": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "insolito-boutique-hotel": {
+      "sources": 2,
+      "fields": 13,
+      "completion": "39%"
+    },
+    "le-canton-hotel": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "hotel-fazenda-suíça-le-canton": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "hotel-village-le-canton": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "lk-design-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "nanii": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    },
+    "nomaa-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "nor-hotel-e-spa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "parador-lumiar": {
+      "sources": 2,
+      "fields": 13,
+      "completion": "39%"
+    },
+    "ponta-de-inhambupe-hotel-boutique-&-spa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-capim-do-mato": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-mata-n'-ativa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "rancho-do-peixe": {
+      "sources": 2,
+      "fields": 16,
+      "completion": "48%"
+    },
+    "saint-andrews-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "unique-garden": {
+      "sources": 2,
+      "fields": 16,
+      "completion": "48%"
+    },
+    "valle-d'incanto-hotel": {
+      "sources": 2,
+      "fields": 14,
+      "completion": "42%"
+    },
+    "vila-cerrado": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "vila-kalango": {
+      "sources": 2,
+      "fields": 11,
+      "completion": "33%"
+    },
+    "villa-do-valle-boutique-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "villa-dos-nativos": {
+      "sources": 2,
+      "fields": 12,
+      "completion": "36%"
+    },
+    "villa-kandui": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "villa-rasa": {
+      "sources": 2,
+      "fields": 12,
+      "completion": "36%"
+    },
+    "wood": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "zendaya-resort": {
+      "sources": 2,
+      "fields": 14,
+      "completion": "42%"
+    },
+    "estabelecimentos": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "baia-das-caraubas": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "belmond-copacabana-palace": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "botanique-hotel-experience": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "cabanas-do-vale": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "caiman-pantanal": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "canto-do-irere-boutique-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "carmel-charme": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "carmel-taiba-exclusive-resort": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-da-montanha-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-de-santo-antonio": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-do-arandis": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-marambaia": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-nah-praia": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-poema": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "casa-rosa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "clara-arte-resort": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "faimont-rio-de-janeiro-copacabana": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano---rj": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano---ssa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano---bh": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano---boavista": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano---sp": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fasano-angra-dos-reis": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fazenda-moreias": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "fazenda-sao-luiz-da-boasorte": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "grande-hotel-termas-araxa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "hcm-hotel-corais-de-manaíra": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "hotel-belmond-cataratas": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "hotel-emiliano---rj": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "hotel-emiliano---sp": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "hotel-gran-marquise": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "ilha-dos-poldros-pousada": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "kenoa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "kurotel-spa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "madeiro-beach-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "manoa-eco-villa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "naatooh-guest-houses": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "parador-cambara-do-sul": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-cantelli": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-do-ouro": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-figueira-da-serra": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-inacia": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-outeiro": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-rabo-do-lagarto": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "pousada-tankamana": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "projeto-ibiti---hospedagem": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "quebra-noz-hotel-boutique": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "refugio-na-serra": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "rituaali-spa": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "santa-teresa-rj-mgallery": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "segredo-na-serra": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "solar-do-imperio": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "tivoli-mofarrej": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "tuju-boutique-hotel": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "txai-resort": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "unique-sp": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "vila-de-alter": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "vila-entre-chaves": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "villa-d'ozio": {
+      "sources": 1,
+      "fields": 1,
+      "completion": "3%"
+    },
+    "tiradentes-boutique": {
+      "sources": 2,
+      "fields": 15,
+      "completion": "45%"
+    }
+  }
+}

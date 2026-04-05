@@ -1,0 +1,347 @@
+# Hotel Taxonomy Fields — Machine-readable reference
+# Source: docs/architecture/HOTEL-DATA-TAXONOMY.md (validated 2026-04-03)
+# Total: 58 fields across 10 categories
+# Schema fields: 11 (already in PostgreSQL columns)
+# JSONB fields: 47 (stored in hotels.data)
+
+version: "1.0.0"
+taxonomy_doc: "docs/architecture/HOTEL-DATA-TAXONOMY.md"
+total_fields: 58
+schema_fields: 11
+jsonb_fields: 47
+
+categories:
+  identity_location:
+    name: "Identidade & Localização"
+    id_prefix: "1"
+    fields:
+      - id: "1.1"
+        name: name
+        storage: schema_column
+        type: text
+        required: true
+      - id: "1.2"
+        name: municipality
+        storage: schema_column
+        type: text
+        required: true
+      - id: "1.3"
+        name: uf
+        storage: schema_column
+        type: char(2)
+        required: true
+      - id: "1.4"
+        name: region
+        storage: schema_column
+        type: enum
+        values: [nordeste, sudeste, sul, centro-oeste, norte]
+        required: true
+      - id: "1.5"
+        name: destination
+        storage: schema_column
+        type: text
+        required: true
+      - id: "1.6"
+        name: experience
+        storage: schema_column
+        type: enum
+        values: [praia, campo, serra, cidade]
+        required: true
+      - id: "1.7"
+        name: website_url
+        storage: jsonb
+        type: url
+        form_question: Q4
+      - id: "1.8"
+        name: google_maps_url
+        storage: jsonb
+        type: url
+        form_question: Q5
+      - id: "1.9"
+        name: description
+        storage: jsonb
+        type: text_long
+        form_question: Q6
+      - id: "1.10"
+        name: lodging_type
+        storage: jsonb
+        type: string
+        form_question: Q7
+        examples: [boutique, resort, pousada de charme, hotel fazenda]
+
+  accommodations:
+    name: "Acomodações"
+    id_prefix: "2"
+    fields:
+      - id: "2.1"
+        name: room_types
+        storage: jsonb
+        type: array_objects
+        form_question: Q8
+      - id: "2.2"
+        name: max_capacity_per_type
+        storage: jsonb
+        type: object
+        form_question: Q8
+      - id: "2.3"
+        name: room_amenities
+        storage: jsonb
+        type: text_or_array
+        form_question: Q9
+      - id: "2.4"
+        name: total_rooms
+        storage: jsonb
+        type: number
+
+  infrastructure_leisure:
+    name: "Infraestrutura & Lazer"
+    id_prefix: "3"
+    fields:
+      - id: "3.1"
+        name: parking
+        storage: jsonb
+        type: object
+        form_question: Q10
+        subfields: [has_parking, capacity, is_free]
+      - id: "3.2"
+        name: pool_description
+        storage: jsonb
+        type: text
+        form_question: Q11
+      - id: "3.3"
+        name: pool_heated
+        storage: schema_column
+        type: boolean
+        form_question: Q12
+      - id: "3.4"
+        name: leisure_items
+        storage: jsonb
+        type: array
+        form_question: Q16
+      - id: "3.5"
+        name: wellness
+        storage: jsonb
+        type: text_or_array
+        form_question: Q17
+      - id: "3.6"
+        name: event_space
+        storage: jsonb
+        type: object
+        form_question: Q20
+        subfields: [has_events, description]
+      - id: "3.7"
+        name: wifi
+        storage: jsonb
+        type: object
+        form_question: Q29
+        subfields: [included, quality]
+      - id: "3.8"
+        name: accessibility
+        storage: jsonb
+        type: object
+        subfields: [has_accessibility, description]
+      - id: "3.9"
+        name: gym
+        storage: jsonb
+        type: object
+        subfields: [has_gym, description]
+
+  gastronomy:
+    name: "Gastronomia"
+    id_prefix: "4"
+    fields:
+      - id: "4.1"
+        name: restaurants
+        storage: jsonb
+        type: array_objects
+        form_question: Q13
+      - id: "4.2"
+        name: meals_included
+        storage: jsonb
+        type: text_or_enum
+        form_question: Q14
+      - id: "4.3"
+        name: special_dining
+        storage: jsonb
+        type: text_or_array
+        form_question: Q15
+      - id: "4.4"
+        name: room_service
+        storage: jsonb
+        type: object
+        subfields: [available, hours]
+      - id: "4.5"
+        name: dietary_options
+        storage: jsonb
+        type: array
+        examples: [vegano, celíaco, kosher, vegetariano]
+
+  policies_rules:
+    name: "Políticas & Regras"
+    id_prefix: "5"
+    fields:
+      - id: "5.1"
+        name: check_in_out
+        storage: jsonb
+        type: object
+        form_question: Q21
+        subfields: [check_in, check_out]
+      - id: "5.2"
+        name: early_late_checkout
+        storage: jsonb
+        type: text
+        form_question: Q22
+      - id: "5.3"
+        name: cancellation_policy
+        storage: jsonb
+        type: text
+        form_question: Q26
+      - id: "5.4"
+        name: children_policy
+        storage: jsonb
+        type: text
+        form_question: Q27
+      - id: "5.5"
+        name: pet_policy
+        storage: jsonb
+        type: object
+        note: "schema has pet_friendly boolean; JSONB has details"
+        subfields: [accepts_pets, fee, size_restrictions, pet_amenities]
+      - id: "5.6"
+        name: smoking_policy
+        storage: jsonb
+        type: text
+      - id: "5.7"
+        name: min_age_solo
+        storage: jsonb
+        type: number_or_text
+
+  access_transport:
+    name: "Acesso & Transporte"
+    id_prefix: "6"
+    fields:
+      - id: "6.1"
+        name: airport_distance
+        storage: jsonb
+        type: text
+        form_question: Q23
+      - id: "6.2"
+        name: transfer
+        storage: jsonb
+        type: object
+        form_question: Q24
+        subfields: [available, is_free, description]
+      - id: "6.3"
+        name: nearby_attractions
+        storage: jsonb
+        type: array_or_text
+      - id: "6.4"
+        name: how_to_get_there
+        storage: jsonb
+        type: text
+
+  experiences_programming:
+    name: "Experiências & Programação"
+    id_prefix: "7"
+    fields:
+      - id: "7.1"
+        name: special_programming
+        storage: jsonb
+        type: text
+        form_question: Q18
+      - id: "7.2"
+        name: hotel_concierge_services
+        storage: jsonb
+        type: text
+        form_question: Q19
+      - id: "7.3"
+        name: activities_tours
+        storage: jsonb
+        type: array
+      - id: "7.4"
+        name: day_use
+        storage: jsonb
+        type: object
+        subfields: [available, conditions]
+      - id: "7.5"
+        name: special_packages
+        storage: jsonb
+        type: array_or_text
+        examples: [lua de mel, aniversário, réveillon]
+
+  differentials_reputation:
+    name: "Diferenciais & Reputação"
+    id_prefix: "8"
+    fields:
+      - id: "8.1"
+        name: highlights
+        storage: jsonb
+        type: text
+        form_question: Q30
+      - id: "8.2"
+        name: awards_certifications
+        storage: jsonb
+        type: array
+      - id: "8.3"
+        name: sustainability
+        storage: jsonb
+        type: text
+      - id: "8.4"
+        name: star_rating
+        storage: jsonb
+        type: number
+      - id: "8.5"
+        name: price_tier
+        storage: jsonb
+        type: enum
+        values: ["$$", "$$$", "$$$$"]
+
+  concierge_knowledge:
+    name: "Conhecimento do Concierge"
+    id_prefix: "9"
+    fields:
+      - id: "9.1"
+        name: guest_faqs
+        storage: jsonb
+        type: array_qa
+        form_question: Q25
+      - id: "9.2"
+        name: common_objections
+        storage: jsonb
+        type: array_objects
+        subfields: [category, objection, response, source]
+      - id: "9.3"
+        name: attention_points
+        storage: jsonb
+        type: array
+        note: "O que NÃO prometer ao hóspede"
+      - id: "9.4"
+        name: sales_arguments_by_profile
+        storage: jsonb
+        type: object
+        subfields: [casal, familia, corporativo]
+
+  ce_integration:
+    name: "Integração Circuito Elegante"
+    id_prefix: "10"
+    fields:
+      - id: "10.1"
+        name: has_api
+        storage: schema_column
+        type: boolean
+      - id: "10.2"
+        name: elevare_hotel_id
+        storage: schema_column
+        type: text
+      - id: "10.3"
+        name: bradesco_coupon
+        storage: schema_column
+        type: boolean
+      - id: "10.4"
+        name: ce_page_url
+        storage: jsonb
+        type: url
+      - id: "10.5"
+        name: photo_urls
+        storage: jsonb
+        type: array_urls

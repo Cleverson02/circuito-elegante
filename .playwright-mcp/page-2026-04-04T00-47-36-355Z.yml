@@ -1,0 +1,728 @@
+- generic [ref=e1]:
+  - link "Pular para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - navigation "Menu" [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Programa" [ref=e11] [cursor=pointer]:
+              - /url: https://rituaali.com.br/programas/
+          - listitem [ref=e12]:
+            - link "Acomodação" [ref=e13] [cursor=pointer]:
+              - /url: https://rituaali.com.br/acomodacoes/
+          - listitem [ref=e14]:
+            - link "Estrutura" [ref=e15] [cursor=pointer]:
+              - /url: https://rituaali.com.br/infraestrutura/
+          - listitem [ref=e16]:
+            - link "Ofertas" [ref=e17] [cursor=pointer]:
+              - /url: https://rituaali.com.br/ofertas/
+          - listitem [ref=e18]:
+            - link "Blog | VIVA" [ref=e19] [cursor=pointer]:
+              - /url: https://viva.rituaali.com.br/blog/
+          - listitem [ref=e20]:
+            - link "Empório" [ref=e21] [cursor=pointer]:
+              - /url: https://emporio.rituaali.com.br/?utm_source=site-rituaali&utm_medium=header
+      - link [ref=e25] [cursor=pointer]:
+        - /url: https://rituaali.com.br
+      - generic [ref=e26]:
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - button "Pesquisar" [ref=e31] [cursor=pointer]:
+              - img [ref=e33]
+            - generic:
+              - generic: Pesquisar
+              - searchbox "Pesquisar"
+        - link [ref=e38] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es...
+          - img [ref=e39]
+        - list [ref=e43]:
+          - listitem [ref=e44]:
+            - link "(24) 2107 3883" [ref=e45] [cursor=pointer]:
+              - /url: tel:2421073883
+              - img [ref=e47]
+              - generic [ref=e49]: (24) 2107 3883
+        - link "RESERVAR" [ref=e53] [cursor=pointer]:
+          - /url: https://rituaali.com.br/reserva/
+          - generic [ref=e55]: RESERVAR
+        - navigation "Menu" [ref=e58]:
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - link "pt_BR" [ref=e61] [cursor=pointer]:
+                - /url: https://rituaali.com.br/
+                - img "pt_BR" [ref=e63]
+            - listitem [ref=e64]:
+              - link "en_US" [ref=e65] [cursor=pointer]:
+                - /url: https://rituaali.com.br/en/
+                - img "en_US" [ref=e67]
+            - listitem [ref=e68]:
+              - link "es_ES" [ref=e69] [cursor=pointer]:
+                - /url: https://rituaali.com.br/es/
+                - img "es_ES" [ref=e71]
+  - generic [ref=e72]:
+    - 'heading "UM LUGAR DE {RE}PENSAR" [level=1] [ref=e78]':
+      - text: UM LUGAR
+      - text: "DE {RE}PENSAR"
+    - generic [ref=e83]:
+      - img "Classificado como 5 de 5" [ref=e87]:
+        - generic [ref=e88]:
+          - img [ref=e90]
+          - img [ref=e93]
+        - generic [ref=e95]:
+          - img [ref=e97]
+          - img [ref=e100]
+        - generic [ref=e102]:
+          - img [ref=e104]
+          - img [ref=e107]
+        - generic [ref=e109]:
+          - img [ref=e111]
+          - img [ref=e114]
+        - generic [ref=e116]:
+          - img [ref=e118]
+          - img [ref=e121]
+      - heading "Descubra seu Rituaali" [level=2] [ref=e125]
+      - generic [ref=e127]:
+        - paragraph [ref=e128]:
+          - text: Você sente que precisa se
+          - strong [ref=e129]: refazer?
+          - text: Ou que precisa
+          - strong [ref=e130]: repensar
+          - text: hábitos e atitudes? Talvez se
+          - strong [ref=e131]: reeducar
+          - text: para se nutrir melhor? Ou até tirar um tempo para
+          - strong [ref=e132]: repensar
+          - text: escolhas, se
+          - strong [ref=e133]: reconectar
+          - text: com a vida ou se
+          - strong [ref=e134]: reencontrar
+          - text: com quem você, ou vocês, já foram. Existe lugar para isso.
+        - paragraph [ref=e135]:
+          - strong [ref=e136]: Venha descobrir o seu Rituaali.
+      - link "Reservar" [ref=e140] [cursor=pointer]:
+        - /url: https://rituaali.com.br/reservas/
+        - generic [ref=e142]: Reservar
+    - generic [ref=e152]:
+      - heading "O que é o Rituaali?" [level=2] [ref=e155]
+      - paragraph [ref=e158]: O Rituaali é um lugar único, capaz de trazer você de volta aos hábitos, às práticas e às percepções que muitas vezes se perdem na rotina!
+      - link [ref=e162] [cursor=pointer]:
+        - /url: "#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJ0eXBlIjoidmlkZW8iLCJ2aWRlb1R5cGUiOiJ5b3V0dWJlIiwidXJsIjoiaHR0cHM6XC9cL3d3dy55b3V0dWJlLmNvbVwvZW1iZWRcL050MGo1X0FLNUJ3P2ZlYXR1cmU9b2VtYmVkIn0%3D"
+        - img [ref=e163]
+      - heading "Assista ao vídeo e entenda" [level=3] [ref=e169]
+    - generic [ref=e172]:
+      - heading "Programas" [level=2] [ref=e175]
+      - paragraph [ref=e178]: Cada programa é idealizado para te ajudar a desbloquear todo o seu potencial e vivenciar uma experiência única de bem-estar, vitalidade e paz interior.
+      - generic [ref=e180]:
+        - link "Principal +Saúde Nosso programa principal. Perfeito para você que deseja fazer um detox, dar um reset no organismo e melhorar sua saúde como um todo! Mínimo 7 noites" [ref=e181] [cursor=pointer]:
+          - /url: https://rituaali.com.br/programas/mais-saude/
+          - generic [ref=e183]: Principal
+          - generic [ref=e185]:
+            - heading "+Saúde" [level=2] [ref=e188]
+            - paragraph [ref=e191]:
+              - text: Nosso programa principal. Perfeito para você que deseja fazer um
+              - emphasis [ref=e192]: detox
+              - text: ", dar um"
+              - emphasis [ref=e193]: reset
+              - text: no organismo e melhorar sua saúde como um todo!
+            - list [ref=e200]:
+              - listitem [ref=e201]:
+                - img [ref=e203]
+                - generic [ref=e205]: Mínimo 7 noites
+        - link "+Bem-estar Representa a pausa perfeita para renovar as suas energias, desestressar e experimentar um relaxamento profundo! 4 a 6 noites" [ref=e206] [cursor=pointer]:
+          - /url: https://rituaali.com.br/programas/bem-estar/
+          - heading "+Bem-estar" [level=2] [ref=e209]
+          - paragraph [ref=e212]: Representa a pausa perfeita para renovar as suas energias, desestressar e experimentar um relaxamento profundo!
+          - list [ref=e219]:
+            - listitem [ref=e220]:
+              - img [ref=e222]
+              - generic [ref=e224]: 4 a 6 noites
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - heading "Ofertas e Semanas Especiais" [level=2] [ref=e230]
+        - link "Ver tudo" [ref=e234] [cursor=pointer]:
+          - /url: https://rituaali.com.br/ofertas/
+          - generic [ref=e235]:
+            - img [ref=e237]
+            - generic [ref=e239]: Ver tudo
+      - paragraph [ref=e242]: Descubra ofertas exclusivas e semanas especiais para desfrutar de momentos únicos e transformadores. Aproveite a oferta e eleve sua experiência de bem-estar.
+      - generic [ref=e244]:
+        - list [ref=e245]:
+          - generic [ref=e246]:
+            - group [ref=e884]:
+              - generic [ref=e885]:
+                - button [ref=e889]:
+                  - generic [ref=e891]: Semana Especial
+                - heading [level=1] [ref=e894]: Ciência da Felicidade
+                - generic [ref=e896]: Aprenda como hábitos, relações e propósito influenciam diretamente sua felicidade e descubra caminhos práticos para construir uma vida mais leve, significativa e equilibrada.
+                - generic [ref=e901]:
+                  - list [ref=e904]:
+                    - listitem [ref=e905]:
+                      - img [ref=e907]
+                      - generic [ref=e909]: DE 24.06 A 01.07
+                  - link [ref=e913] [cursor=pointer]:
+                    - /url: https://rituaali.com.br/lp/ciencia-da-felicidade/
+                    - generic [ref=e914]:
+                      - img [ref=e916]
+                      - generic [ref=e918]: SAIBA MAIS
+            - group [ref=e1091]:
+              - generic [ref=e248]:
+                - button [ref=e1092]:
+                  - generic [ref=e254]: Oferta
+                - heading [level=1] [ref=e1093]: Páscoa no Rituaali
+                - generic [ref=e259]: Celebre o espírito da Páscoa e viva dias especiais em um tempo dedicado a você, com experiências que despertam os sentidos e tornam cada momento inesquecível.
+                - generic [ref=e264]:
+                  - list [ref=e267]:
+                    - listitem [ref=e268]:
+                      - img [ref=e270]
+                      - generic [ref=e272]: DE 29.03 A 05.04
+                  - link [ref=e1094] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20P%C3%A1scoa%20no%20Rituaali.
+                    - generic [ref=e277]:
+                      - img [ref=e279]
+                      - generic [ref=e281]: SAIBA MAIS
+            - group [ref=e1220]:
+              - generic [ref=e283]:
+                - button [ref=e1221]:
+                  - generic [ref=e289]: Semana Especial
+                - heading [level=1] [ref=e1222]: Nutrição e Emagrecimento
+                - generic [ref=e294]: Redescubra o prazer de nutrir-se em uma jornada de detox consciente que transforma sua relação com a comida e estabelece as bases para uma vitalidade duradoura.
+                - generic [ref=e299]:
+                  - list [ref=e302]:
+                    - listitem [ref=e303]:
+                      - img [ref=e305]
+                      - generic [ref=e307]: DE 05 A 12.04
+                  - link [ref=e1223] [cursor=pointer]:
+                    - /url: https://rituaali.com.br/lp/nutricao-e-emagrecimento/
+                    - generic [ref=e312]:
+                      - img [ref=e314]
+                      - generic [ref=e316]: SAIBA MAIS
+            - group [ref=e1224]:
+              - generic [ref=e318]:
+                - button [ref=e1225]:
+                  - generic [ref=e324]: Oferta
+                - heading [level=1] [ref=e1226]: Tiradentes e São Jorge
+                - generic [ref=e329]: Neste feriado prolongado, permita-se desacelerar e reconectar-se com o essencial. Dias ideais para cuidar da saúde, restaurar o equilíbrio e renovar as energias.
+                - generic [ref=e334]:
+                  - list [ref=e337]:
+                    - listitem [ref=e338]:
+                      - img [ref=e340]
+                      - generic [ref=e342]: DE 19 A 26.04
+                  - link [ref=e1227] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20feriados%20no%20Rituaali.
+                    - generic [ref=e347]:
+                      - img [ref=e349]
+                      - generic [ref=e351]: SAIBA MAIS
+            - group [ref=e1234]:
+              - generic [ref=e353]:
+                - button [ref=e1235]:
+                  - generic [ref=e359]: Oferta
+                - heading [level=1] [ref=e1236]: Dia do Trabalho
+                - generic [ref=e364]: Transforme a pausa em um momento de autocuidado. Uma oportunidade para restaurar o corpo, clarear a mente e fortalecer sua vitalidade.
+                - generic [ref=e369]:
+                  - list [ref=e372]:
+                    - listitem [ref=e373]:
+                      - img [ref=e375]
+                      - generic [ref=e377]: DE 26.04 A 03.05
+                  - link [ref=e1237] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20feriados%20no%20Rituaali.
+                    - generic [ref=e382]:
+                      - img [ref=e384]
+                      - generic [ref=e386]: SAIBA MAIS
+            - group "5 / 8" [ref=e1154]:
+              - generic [ref=e388]:
+                - button "Semana Especial" [ref=e1155]:
+                  - generic [ref=e394]: Semana Especial
+                - heading "Semana do Sono" [level=1] [ref=e1156]
+                - generic [ref=e399]: Redescubra o poder de noites verdadeiramente restauradoras. Aprenda a regular seu ritmo biológico e desperte para dias com mais energia, clareza mental e equilíbrio.
+                - generic [ref=e404]:
+                  - list [ref=e407]:
+                    - listitem [ref=e408]:
+                      - img [ref=e410]
+                      - generic [ref=e412]: DE 03 A 10.05
+                  - link "SAIBA MAIS" [ref=e1157] [cursor=pointer]:
+                    - /url: https://rituaali.com.br/lp/semana-do-sono/
+                    - generic [ref=e417]:
+                      - img [ref=e419]
+                      - generic [ref=e421]: SAIBA MAIS
+            - group "6 / 8" [ref=e1158]:
+              - generic [ref=e423]:
+                - button "Semana Especial" [ref=e1159]:
+                  - generic [ref=e429]: Semana Especial
+                - heading "Prazer à Mesa" [level=1] [ref=e1160]
+                - generic [ref=e434]: Redescubra o prazer de comer bem e aprenda como a gastronomia vital pode transformar a alimentação em um caminho natural para mais energia, equilíbrio e bem-estar.
+                - generic [ref=e439]:
+                  - list [ref=e442]:
+                    - listitem [ref=e443]:
+                      - img [ref=e445]
+                      - generic [ref=e447]: DE 10 A 17.05
+                  - link "SAIBA MAIS" [ref=e1161] [cursor=pointer]:
+                    - /url: https://rituaali.com.br/lp/prazer-a-mesa/
+                    - generic [ref=e452]:
+                      - img [ref=e454]
+                      - generic [ref=e456]: SAIBA MAIS
+            - group "7 / 8" [ref=e1162]:
+              - generic [ref=e458]:
+                - button "Oferta" [ref=e1163]:
+                  - generic [ref=e464]: Oferta
+                - heading "Corpus Christi" [level=1] [ref=e1164]
+                - generic [ref=e469]: Durante o feriado, viva um tempo de tranquilidade, reflexão e cuidado integral. Um convite para desacelerar e renovar corpo, mente e espírito.
+                - generic [ref=e474]:
+                  - list [ref=e477]:
+                    - listitem [ref=e478]:
+                      - img [ref=e480]
+                      - generic [ref=e482]: DE 31.05 A 07.06
+                  - link "SAIBA MAIS" [ref=e1165] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20feriados%20no%20Rituaali.
+                    - generic [ref=e487]:
+                      - img [ref=e489]
+                      - generic [ref=e491]: SAIBA MAIS
+            - group "8 / 8" [ref=e926]:
+              - generic [ref=e493]:
+                - button "Semana Especial" [ref=e497]:
+                  - generic [ref=e499]: Semana Especial
+                - heading "Ciência da Felicidade" [level=1] [ref=e502]
+                - generic [ref=e504]: Aprenda como hábitos, relações e propósito influenciam diretamente sua felicidade e descubra caminhos práticos para construir uma vida mais leve, significativa e equilibrada.
+                - generic [ref=e509]:
+                  - list [ref=e512]:
+                    - listitem [ref=e513]:
+                      - img [ref=e515]
+                      - generic [ref=e517]: DE 24.06 A 01.07
+                  - link "SAIBA MAIS" [ref=e521] [cursor=pointer]:
+                    - /url: https://rituaali.com.br/lp/ciencia-da-felicidade/
+                    - generic [ref=e522]:
+                      - img [ref=e524]
+                      - generic [ref=e526]: SAIBA MAIS
+            - group "1 / 8" [ref=e927]:
+              - generic [ref=e928]:
+                - button "Oferta" [ref=e932]:
+                  - generic [ref=e934]: Oferta
+                - heading "Páscoa no Rituaali" [level=1] [ref=e937]
+                - generic [ref=e939]: Celebre o espírito da Páscoa e viva dias especiais em um tempo dedicado a você, com experiências que despertam os sentidos e tornam cada momento inesquecível.
+                - generic [ref=e944]:
+                  - list [ref=e947]:
+                    - listitem [ref=e948]:
+                      - img [ref=e950]
+                      - generic [ref=e952]: DE 29.03 A 05.04
+                  - link "SAIBA MAIS" [ref=e956] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20P%C3%A1scoa%20no%20Rituaali.
+                    - generic [ref=e957]:
+                      - img [ref=e959]
+                      - generic [ref=e961]: SAIBA MAIS
+        - button "Slide anterior" [ref=e962] [cursor=pointer]:
+          - img [ref=e528]
+        - button "Próximo slide" [ref=e963] [cursor=pointer]:
+          - img [ref=e531]
+        - generic [ref=e964]:
+          - button "Ir para o slide 1" [ref=e965] [cursor=pointer]
+          - button "Ir para o slide 2" [ref=e966] [cursor=pointer]
+          - button "Ir para o slide 3" [ref=e967] [cursor=pointer]
+          - button "Ir para o slide 4" [ref=e968] [cursor=pointer]
+          - button "Ir para o slide 5" [ref=e969] [cursor=pointer]
+          - button "Ir para o slide 6" [ref=e970] [cursor=pointer]
+          - button "Ir para o slide 7" [ref=e971] [cursor=pointer]
+          - button "Ir para o slide 8" [ref=e972] [cursor=pointer]
+    - generic [ref=e534]:
+      - generic [ref=e536]:
+        - heading "Estrutura" [level=2] [ref=e539]
+        - link "Ver tudo" [ref=e543] [cursor=pointer]:
+          - /url: https://rituaali.com.br/infraestrutura/
+          - generic [ref=e544]:
+            - img [ref=e546]
+            - generic [ref=e548]: Ver tudo
+      - heading "Toda nossa estrutura é preparada para sua renovação." [level=3] [ref=e551]
+      - paragraph [ref=e554]: O Rituaali é cercado pela Mata Atlântica e possui mais de 155mil m² de diversidade de árvores e plantas.
+      - generic [ref=e560]:
+        - heading "Acomodações" [level=2] [ref=e563]
+        - link "Ver tudo" [ref=e567] [cursor=pointer]:
+          - /url: https://rituaali.com.br/acomodacoes
+          - generic [ref=e568]:
+            - img [ref=e570]
+            - generic [ref=e572]: Ver tudo
+      - heading "Toda nossa estrutura é preparada para sua renovação." [level=3] [ref=e575]
+      - paragraph [ref=e578]: Suítes concebidas para te ajudar a dormir melhor, relaxar a mente e promover o bem-estar.
+      - generic [ref=e580]:
+        - list [ref=e581]:
+          - generic [ref=e582]:
+            - group [ref=e973]:
+              - link [ref=e974] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/chale-jarvi/
+                - generic [ref=e975]:
+                  - heading [level=2] [ref=e984]: Chalé Jarvi
+                  - generic [ref=e986]: Vista deslumbrante para o lago
+                  - generic [ref=e988]: "Categoria: Chalé Black"
+            - group [ref=e989]:
+              - link [ref=e990] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/parantaa/
+                - generic [ref=e991]:
+                  - heading [level=2] [ref=e1000]: Chalé Parantaa
+                  - generic [ref=e1002]: Cercada pela natureza, sinônimo de aconchego.
+                  - generic [ref=e1004]: "Categoria: Chalé Special"
+            - group [ref=e1005]:
+              - link [ref=e1006] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/rakkaus/
+                - generic [ref=e1007]:
+                  - heading [level=2] [ref=e1016]: Chalé Rakkaus
+                  - generic [ref=e1018]: Acessibilidade e localização plana.
+                  - generic [ref=e1020]: "Categoria: Chalé Special"
+            - group [ref=e1095]:
+              - link [ref=e1096] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/ap-luxo/
+                - generic [ref=e585]:
+                  - heading [level=2] [ref=e1097]: Apartamento
+                  - generic [ref=e596]: Suítes com varandas
+                  - generic [ref=e598]: "Categoria: Apartamento Luxo"
+            - group [ref=e1098]:
+              - link [ref=e1099] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/arkki/
+                - generic [ref=e601]:
+                  - heading [level=2] [ref=e1100]: Chalé Arkki
+                  - generic [ref=e612]: Acomodação mais ampla do Rituaali
+                  - generic [ref=e614]: "Categoria: Chalé Black"
+            - group [ref=e1101]:
+              - link [ref=e1102] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/chale-jarvi/
+                - generic [ref=e617]:
+                  - heading [level=2] [ref=e1103]: Chalé Jarvi
+                  - generic [ref=e628]: Vista deslumbrante para o lago
+                  - generic [ref=e630]: "Categoria: Chalé Black"
+            - group [ref=e1238]:
+              - link [ref=e1239] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/parantaa/
+                - generic [ref=e633]:
+                  - heading [level=2] [ref=e1240]: Chalé Parantaa
+                  - generic [ref=e644]: Cercada pela natureza, sinônimo de aconchego.
+                  - generic [ref=e646]: "Categoria: Chalé Special"
+            - group [ref=e1241]:
+              - link [ref=e1242] [cursor=pointer]:
+                - /url: https://rituaali.com.br/acomodacoes/rakkaus/
+                - generic [ref=e649]:
+                  - heading [level=2] [ref=e1243]: Chalé Rakkaus
+                  - generic [ref=e660]: Acessibilidade e localização plana.
+                  - generic [ref=e662]: "Categoria: Chalé Special"
+            - group "1 / 5" [ref=e1026]:
+              - 'link "Apartamento Suítes com varandas Categoria: Apartamento Luxo" [ref=e1027] [cursor=pointer]':
+                - /url: https://rituaali.com.br/acomodacoes/ap-luxo/
+                - generic [ref=e1028]:
+                  - heading "Apartamento" [level=2] [ref=e1037]
+                  - generic [ref=e1039]: Suítes com varandas
+                  - generic [ref=e1041]: "Categoria: Apartamento Luxo"
+            - group "2 / 5" [ref=e1042]:
+              - 'link "Chalé Arkki Acomodação mais ampla do Rituaali Categoria: Chalé Black" [ref=e1043] [cursor=pointer]':
+                - /url: https://rituaali.com.br/acomodacoes/arkki/
+                - generic [ref=e1044]:
+                  - heading "Chalé Arkki" [level=2] [ref=e1053]
+                  - generic [ref=e1055]: Acomodação mais ampla do Rituaali
+                  - generic [ref=e1057]: "Categoria: Chalé Black"
+            - group "3 / 5" [ref=e1058]:
+              - 'link "Chalé Jarvi Vista deslumbrante para o lago Categoria: Chalé Black" [ref=e1059] [cursor=pointer]':
+                - /url: https://rituaali.com.br/acomodacoes/chale-jarvi/
+                - generic [ref=e1060]:
+                  - heading "Chalé Jarvi" [level=2] [ref=e1069]
+                  - generic [ref=e1071]: Vista deslumbrante para o lago
+                  - generic [ref=e1073]: "Categoria: Chalé Black"
+        - generic [ref=e1074]:
+          - button "Ir para o slide 1" [ref=e1075] [cursor=pointer]
+          - button "Ir para o slide 2" [ref=e1076] [cursor=pointer]
+    - generic [ref=e665]:
+      - heading "O que os clientes estão falando?" [level=2] [ref=e668]
+      - region "Depoimentos" [ref=e674]:
+        - generic [ref=e675]:
+          - generic [ref=e676]:
+            - generic [ref=e677]:
+              - heading "Depoimentos" [level=2] [ref=e678]
+              - generic [ref=e680]: 5 Vídeos
+            - tablist [ref=e682]:
+              - tab "Larissa Ayres no Rituaali Larissa Ayres no Rituaali 2:42" [selected] [ref=e683] [cursor=pointer]:
+                - img "Larissa Ayres no Rituaali" [ref=e685]
+                - heading "Larissa Ayres no Rituaali" [level=4] [ref=e686]:
+                  - button "Larissa Ayres no Rituaali" [ref=e687]
+                - generic [ref=e688]: 2:42
+              - tab "Recuperação e Reencontro após a Ultramaratona Recuperação e Reencontro após a Ultramaratona 1:58" [ref=e689] [cursor=pointer]:
+                - img "Recuperação e Reencontro após a Ultramaratona" [ref=e691]
+                - heading "Recuperação e Reencontro após a Ultramaratona" [level=4] [ref=e692]:
+                  - button "Recuperação e Reencontro após a Ultramaratona" [ref=e693]
+                - generic [ref=e694]: 1:58
+              - tab "\"Eu não quero mais ir embora daqui\" \"Eu não quero mais ir embora daqui\" 2:48" [ref=e695] [cursor=pointer]:
+                - img "\"Eu não quero mais ir embora daqui\"" [ref=e697]
+                - heading "\"Eu não quero mais ir embora daqui\"" [level=4] [ref=e698]:
+                  - button "\"Eu não quero mais ir embora daqui\"" [ref=e699]
+                - generic [ref=e700]: 2:48
+              - tab "Um lugar para se reconectar Um lugar para se reconectar 2:48" [ref=e701] [cursor=pointer]:
+                - img "Um lugar para se reconectar" [ref=e703]
+                - heading "Um lugar para se reconectar" [level=4] [ref=e704]:
+                  - button "Um lugar para se reconectar" [ref=e705]
+                - generic [ref=e706]: 2:48
+              - tab "De Volta ao Paraíso De Volta ao Paraíso 2:42" [ref=e707] [cursor=pointer]:
+                - img "De Volta ao Paraíso" [ref=e709]
+                - heading "De Volta ao Paraíso" [level=4] [ref=e710]:
+                  - button "De Volta ao Paraíso" [ref=e711]
+                - generic [ref=e712]: 2:42
+          - tablist [ref=e713]
+      - link "Reservar" [ref=e715] [cursor=pointer]:
+        - /url: https://rituaali.com.br/reservas/
+        - generic [ref=e717]: Reservar
+    - generic [ref=e719]:
+      - generic [ref=e721]:
+        - heading "Localização" [level=2] [ref=e724]
+        - link "Como chegar" [ref=e728] [cursor=pointer]:
+          - /url: https://rituaali.com.br/localizacao/
+          - generic [ref=e729]:
+            - img [ref=e731]
+            - generic [ref=e733]: Como chegar
+      - generic [ref=e735]:
+        - generic [ref=e739]:
+          - paragraph [ref=e740]: O Rituaali está localizado em Penedo, a poucas horas de carro do Rio de Janeiro e de São Paulo.
+          - paragraph [ref=e741]: Cercado pelo Parque Nacional de Itatiaia, em meio a uma natureza exuberante, ar puro e silêncio das montanhas.
+        - iframe [ref=e747]:
+          
+  - contentinfo [ref=e749]:
+    - generic [ref=e751]:
+      - generic [ref=e752]:
+        - list [ref=e755]:
+          - listitem [ref=e756]:
+            - link "Instagram" [ref=e757] [cursor=pointer]:
+              - /url: https://www.instagram.com/orituaali/
+              - generic [ref=e758]: Instagram
+              - img [ref=e759]
+          - listitem [ref=e761]:
+            - link "Facebook" [ref=e762] [cursor=pointer]:
+              - /url: https://www.facebook.com/orituaali
+              - generic [ref=e763]: Facebook
+              - img [ref=e764]
+          - listitem [ref=e766]:
+            - link "Youtube" [ref=e767] [cursor=pointer]:
+              - /url: https://www.youtube.com/@Rituaali
+              - generic [ref=e768]: Youtube
+              - img [ref=e769]
+        - paragraph [ref=e773]:
+          - text: Dra. Gabriela Raimann
+          - text: CRM 52-1226282-RJ
+          - strong [ref=e774]: Responsável Técnico
+      - generic [ref=e777]:
+        - heading "Navegue aqui" [level=2] [ref=e780]
+        - list [ref=e783]:
+          - listitem [ref=e784]:
+            - link "Reservar" [ref=e785] [cursor=pointer]:
+              - /url: https://rituaali.com.br/reservas/
+              - generic [ref=e786]: Reservar
+          - listitem [ref=e787]:
+            - link "Programas" [ref=e788] [cursor=pointer]:
+              - /url: https://rituaali.com.br/programas
+              - generic [ref=e789]: Programas
+          - listitem [ref=e790]:
+            - link "Acomodações" [ref=e791] [cursor=pointer]:
+              - /url: https://rituaali.com.br/acomodacoes
+              - generic [ref=e792]: Acomodações
+          - listitem [ref=e793]:
+            - link "Estrutura" [ref=e794] [cursor=pointer]:
+              - /url: https://rituaali.com.br/infraestrutura/
+              - generic [ref=e795]: Estrutura
+          - listitem [ref=e796]:
+            - link "Localização" [ref=e797] [cursor=pointer]:
+              - /url: https://rituaali.com.br/localizacao/
+              - generic [ref=e798]: Localização
+          - listitem [ref=e799]:
+            - link "Rituaali na Mídia" [ref=e800] [cursor=pointer]:
+              - /url: https://rituaali.com.br/midia/
+              - generic [ref=e801]: Rituaali na Mídia
+          - listitem [ref=e802]:
+            - link "Blog" [ref=e803] [cursor=pointer]:
+              - /url: https://viva.rituaali.com.br/blog/
+              - generic [ref=e804]: Blog
+          - listitem [ref=e805]:
+            - link "LGPD" [ref=e806] [cursor=pointer]:
+              - /url: https://rituaali.com.br/politica-privacidade/
+              - generic [ref=e807]: LGPD
+          - listitem [ref=e808]:
+            - link "Trabalhe Conosco" [ref=e809] [cursor=pointer]:
+              - /url: https://rituaa.li/trabalhe-conosco-formulario
+              - generic [ref=e810]: Trabalhe Conosco
+      - generic [ref=e811]:
+        - heading "Endereço" [level=2] [ref=e814]
+        - paragraph [ref=e817]:
+          - text: Acesso A, 310
+          - text: Penedo – Itatiaia – RJ
+        - heading "Reservar" [level=2] [ref=e820]
+        - list [ref=e823]:
+          - listitem [ref=e824]:
+            - link "(24) 2107 3883" [ref=e825] [cursor=pointer]:
+              - /url: tel:2421073883
+              - img [ref=e827]
+              - generic [ref=e829]: (24) 2107 3883
+          - listitem [ref=e830]:
+            - link "(24) 98815 3728" [ref=e831] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send?phone=5524988153728&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es...
+              - img [ref=e833]
+              - generic [ref=e835]: (24) 98815 3728
+          - listitem [ref=e836]:
+            - link "contato@rituaali.com.br" [ref=e837] [cursor=pointer]:
+              - /url: mailto:contato@rituaali.com.br
+              - img [ref=e839]
+              - generic [ref=e841]: contato@rituaali.com.br
+        - heading "Recepção Rituaali" [level=2] [ref=e844]
+        - list [ref=e847]:
+          - listitem [ref=e848]:
+            - link "(24) 3351 9200" [ref=e849] [cursor=pointer]:
+              - /url: tel:2433519200
+              - img [ref=e851]
+              - generic [ref=e853]: (24) 3351 9200
+    - generic [ref=e859]:
+      - heading "Inscreva-se na nossa newsletter" [level=2] [ref=e866]
+      - paragraph [ref=e869]:
+        - text: Receba conteúdos relevantes, descomplicados e objetivos sobre qualidade de vida e longevidade.
+        - strong [ref=e870]: Toda segunda, às 05:40.
+      - iframe [ref=e877]:
+        - generic [ref=f2e3]:
+          - generic [ref=f2e4]:
+            - generic [ref=f2e5]: Email
+            - textbox "Insira seu melhor e-mail" [ref=f2e6]
+          - button "Assinar" [ref=f2e8] [cursor=pointer]
+    - paragraph [ref=e883]: ® 2025 – Todos os Direitos Reservados | Rituaali
+  - text: 
+  - generic [ref=e1077]: desktop
+  - iframe [ref=e1078]:
+    
+  - iframe [active] [ref=e1115]:
+    - generic [ref=f9e6]:
+      - generic [ref=f9e7]:
+        - generic [ref=f9e8]:
+          - list [ref=f9e9]:
+            - listitem [ref=f9e10] [cursor=pointer]:
+              - listitem [ref=f9e11]:
+                - img [ref=f9e13]
+          - img [ref=f9e17] [cursor=pointer]
+        - generic [ref=f9e25]: Rituaali Clinica & Spa
+      - generic [ref=f9e28]:
+        - generic [ref=f9e33]:
+          - paragraph [ref=f9e35]:
+            - text: Seja bem-vindo! Eu sou a Rita, assistente digital do Rituaali Clínica & Spa. 😊
+            - text: Nossos programas têm o período mínimo de 4 noites, para você poder desfrutar da experiência completa de cuidado do corpo, mente e espírito.
+          - generic [ref=f9e36]: 21:44:39
+          - generic [ref=f9e42]:
+            - button "🩺 Programas" [ref=f9e43] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e44] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e45] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e46] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e47] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e48] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e49] [cursor=pointer]
+            - button "⏱️Horário de atendimento comercial" [ref=f9e50] [cursor=pointer]
+        - generic [ref=f9e79]:
+          - generic [ref=f9e84]: Qual é a política de cancelamento de reservas?
+          - generic [ref=f9e85]: 21:45:35
+        - generic [ref=f9e90]:
+          - paragraph [ref=f9e98]: Você precisa cancelar realmente ou quer apenas se informar sobre nossa política de cancelamento?
+          - generic [ref=f9e99]: 21:45:57
+          - generic [ref=f9e105]:
+            - button "Só me informar" [ref=f9e106] [cursor=pointer]
+            - button "Preciso Cancelar" [ref=f9e107] [cursor=pointer]
+        - generic [ref=f9e108]:
+          - generic [ref=f9e113]: Só me informar
+          - generic [ref=f9e114]: 21:46:03
+        - generic [ref=f9e115]:
+          - generic [ref=f9e120]:
+            - paragraph [ref=f9e121]:
+              - strong [ref=f9e122]: "Cancelamento em até 7 dias após a reserva:"
+            - list [ref=f9e123]:
+              - listitem [ref=f9e124]: Valor pago revertido em crédito válido por 6 meses.
+              - listitem [ref=f9e125]:
+                - text: Devolução integral do valor possível conforme o art. 49 do CDC (direito de arrependimento).
+                - strong [ref=f9e126]: "Cancelamento após 7 dias da reserva até o check-in:"
+              - listitem [ref=f9e127]: Valor revertido em crédito válido por 6 meses.
+              - listitem [ref=f9e128]:
+                - text: Possibilidade de devolução de 70% do valor pago.
+                - strong [ref=f9e129]: "Remarcação com menos de 7 dias ou No Show:"
+              - listitem [ref=f9e130]: Sem estorno ou crédito, exceto em casos fortuitos de força maior.
+          - generic [ref=f9e131]: 21:46:19
+        - generic [ref=f9e136]:
+          - paragraph [ref=f9e138]: Consegui esclarecer sua dúvida?
+          - generic [ref=f9e139]: 21:46:19
+          - generic [ref=f9e145]:
+            - button "Sim" [ref=f9e146] [cursor=pointer]
+            - button "Não" [ref=f9e147] [cursor=pointer]
+        - generic [ref=f9e148]:
+          - generic [ref=f9e153]: Sim
+          - generic [ref=f9e154]: 21:46:20
+        - generic [ref=f9e159]:
+          - paragraph [ref=f9e161]: Posso ajudar em algo mais?
+          - generic [ref=f9e162]: 21:46:36
+          - generic [ref=f9e168]:
+            - button "🩺Programas" [ref=f9e169] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e170] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e171] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e172] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e173] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e174] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e175] [cursor=pointer]
+        - generic [ref=f9e176]:
+          - generic [ref=f9e181]: Sim
+          - generic [ref=f9e182]: 21:46:25
+        - generic [ref=f9e187]:
+          - paragraph [ref=f9e189]: Posso ajudar em algo mais?
+          - generic [ref=f9e190]: 21:46:41
+          - generic [ref=f9e196]:
+            - button "🩺Programas" [ref=f9e197] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e198] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e199] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e200] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e201] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e202] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e203] [cursor=pointer]
+        - generic [ref=f9e204]:
+          - generic [ref=f9e209]: Sim
+          - generic [ref=f9e210]: 21:47:02
+        - generic [ref=f9e215]:
+          - paragraph [ref=f9e217]: Posso ajudar em algo mais?
+          - generic [ref=f9e218]: 21:47:18
+          - generic [ref=f9e224]:
+            - button "🩺Programas" [ref=f9e225] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e226] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e227] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e228] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e229] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e230] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e231] [cursor=pointer]
+        - generic [ref=f9e232]:
+          - generic [ref=f9e237]: Vocês aceitam pets?
+          - generic [ref=f9e238]: 21:47:05
+        - generic [ref=f9e243]:
+          - paragraph [ref=f9e251]: Certo! Se quiser trazer seu pet para o Rituaali, ele precisa ser pequenininho, até 8kg, e só um pet por quarto. Cobramos uma taxa fixa de R$120,00 por noite. Além disso, temos acomodações específicas, para quem quer vir com o pet; 🐕
+          - generic [ref=f9e252]: 21:47:24
+          - generic [ref=f9e258]:
+            - button "Obrigado" [ref=f9e259] [cursor=pointer]
+            - button "Mais regras" [ref=f9e260] [cursor=pointer]
+            - button "Reiniciar conversa" [ref=f9e261] [cursor=pointer]
+        - generic [ref=f9e262]:
+          - generic [ref=f9e267]: Obrigado
+          - generic [ref=f9e268]: 21:47:24
+        - generic [ref=f9e273]:
+          - paragraph [ref=f9e275]: Posso ajudar em algo mais?
+          - generic [ref=f9e276]: 21:47:39
+          - generic [ref=f9e282]:
+            - button "🩺Programas" [ref=f9e283] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e284] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e285] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e286] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e287] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e288] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e289] [cursor=pointer]
+        - generic [ref=f9e290]:
+          - generic [ref=f9e295]: O hotel tem Wi-Fi gratuito?
+          - generic [ref=f9e296]: 21:47:27
+        - generic [ref=f9e301]:
+          - paragraph [ref=f9e310]: "Para que eu possa te entender melhor, digite perguntas mais curtas, como: “formas de pagamento”, “fazer cotação” etc, ou siga clicando:"
+          - generic [ref=f9e311]: 21:47:49
+          - generic [ref=f9e317]:
+            - button "🩺Programas" [ref=f9e318] [cursor=pointer]
+            - button "💆🏻‍♀️ Tratamentos de Spa" [ref=f9e319] [cursor=pointer]
+            - button "Sobre o Rituaali" [ref=f9e320] [cursor=pointer]
+            - button "📅 Reservas" [ref=f9e321] [cursor=pointer]
+            - button "📍 Localização" [ref=f9e322] [cursor=pointer]
+            - button "🎁 Pacotes e Ofertas" [ref=f9e323] [cursor=pointer]
+            - button "👤 Falar com assessora de reservas" [ref=f9e324] [cursor=pointer]
+      - generic:
+        - generic [ref=f9e51]:
+          - textbox "Digite sua mensagem" [active] [ref=f9e53]
+          - img [ref=f9e55] [cursor=pointer]
+        - link [ref=f9e61] [cursor=pointer]:
+          - /url: http://asksuite.com/
+          - img [ref=f9e62]

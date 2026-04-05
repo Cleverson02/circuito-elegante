@@ -1,0 +1,35 @@
+name: hotel-enrichment
+display_name: Hotel Enrichment Squad
+version: "1.0.0"
+domain: Hotel Data Collection & Enrichment
+
+chief: enrichment-chief
+
+settings:
+  greeting_mode: named
+  show_commands: quick
+  auto_start: false
+
+defaults:
+  scrape_timeout_ms: 30000
+  retry_attempts: 3
+  retry_delay_ms: 2000
+  concurrent_scrapes: 3
+  respect_robots_txt: true
+  user_agent: "CircuitoElegante-DataCollector/1.0"
+  cache_enabled: true
+  cache_ttl_hours: 72
+
+quality:
+  min_completeness_score: 0.3  # Mínimo 30% dos campos preenchidos
+  min_accuracy_score: 0.8      # Dados presentes devem ser 80%+ precisos
+  zero_invention_policy: true   # NUNCA fabricar dados
+
+output:
+  format: jsonb
+  destination: postgresql
+  table: hotels
+  field: data
+  upsert_key: slug
+
+taxonomy_ref: "docs/architecture/HOTEL-DATA-TAXONOMY.md"
