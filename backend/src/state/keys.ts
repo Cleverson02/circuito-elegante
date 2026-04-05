@@ -8,6 +8,7 @@ export const REDIS_KEYS = {
   typingJob: (id: string) => `typing_job:${id}`,
   rateLimit: (id: string) => `rate_limit:${id}`,
   offers: (sessionId: string) => `offers:${sessionId}`,
+  upsellOffered: (sessionId: string) => `upsell_offered:${sessionId}`,
 } as const;
 
 /** Default TTLs in seconds */
