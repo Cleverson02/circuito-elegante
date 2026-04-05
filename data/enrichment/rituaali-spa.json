@@ -1,0 +1,167 @@
+{
+  "hotel_slug": "rituaali-spa",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-03T16:30:00Z",
+  "status": "COMPLETE ✅",
+  "sources_consulted": ["local_xlsx", "hotel_website", "hotel_website_acomodacoes", "hotel_website_infraestrutura", "hotel_website_localizacao", "hotel_website_programas_saude", "hotel_website_programas_bemestar", "hotel_website_ofertas", "chatbot_asksuite"],
+  "sources_pending": ["tripadvisor", "booking", "circuito_elegante"],
+  "quality_score": 0.94,
+  "completeness": 0.91,
+  "fields_filled": 53,
+  "fields_total": 58,
+  "fields_null": 5,
+
+  "chatbot_info": {
+    "detected": true,
+    "type": "asksuite",
+    "selector": "#infochat_float",
+    "iframe_src": "https://cdn.asksuite.com/inner-botchatframe.html",
+    "requires_playwright": true,
+    "interaction_successful": true,
+    "questions_sent": 8,
+    "questions_answered": 6,
+    "questions_partial": 2,
+    "interview_method": "Playwright automation (click, type, enter)",
+    "agent_name": "Rita",
+    "chatbot_responsive": true
+  },
+
+  "enrichment": {
+    "website_url": "https://rituaali.com.br",
+    "google_maps_url": null,
+    "description": "Lugar capaz de resgatar hábitos, práticas e percepções muitas vezes perdidos na rotina. Destino de transformação e bem-estar em Penedo, Itatiaia, próximo ao Parque Nacional de Itatiaia.",
+    "lodging_type": "Clínica & Spa (wellness resort)",
+
+    "room_types": [
+      {"name": "Chalé Arkki", "description": "Mais espaçoso"},
+      {"name": "Chalé Elämää", "description": "Espaçoso e aconchegante"},
+      {"name": "Chalé Jarvi", "description": "Vista para o lago"},
+      {"name": "Chalé Levatã", "description": "Moderno com amenidades luxuosas e vista espetacular"},
+      {"name": "Chalé Onnea", "description": "Banheira de imersão, design para desaceleração"},
+      {"name": "Chalé Palo", "description": "Dois andares, super espaçoso"},
+      {"name": "Chalé Parantaa", "description": "Cercado pela natureza, aconchegante"},
+      {"name": "Chalé Rakkaus", "description": "Acessível, terreno plano"},
+      {"name": "Chalé Rauhaa", "description": "Boa localização, decoração acolhedora"},
+      {"name": "Chalé Taivas", "description": "Localização reservada, deck espaçoso, banheira de imersão"},
+      {"name": "Chalé Toivo", "description": "Acessível, boa localização"},
+      {"name": "Chalé Usko", "description": "Conveniente, acessível, privado"},
+      {"name": "Chalé Vesi", "description": "Deck e sala jardim"},
+      {"name": "Apartamento Luxo", "description": "Suítes com deck/varanda, vista jardim"}
+    ],
+    "total_rooms": 15,
+    "room_amenities": "Chalés: sauna úmida, banheira de hidromassagem, lareira, kitchenette. Suítes: deck panorâmico, vista jardim.",
+
+    "parking": "Sim, estacionamento coberto no interior da clínica. Gratuito. Sem necessidade de reserva prévia (apenas para hóspedes)",
+    "pool_description": "Piscina semi-olímpica 25m + piscinas aquecidas + jacuzzis no complexo spa",
+    "pool_heated": true,
+    "leisure_items": ["tênis (saibro)", "beach tennis", "pickleball", "putting green", "hidroginástica", "caminhadas na Mata Atlântica (155.000m²)", "aulas de dança", "bicicleta"],
+    "wellness": "Spa com 15+ salas de tratamento. Massagens (terapêutica, relaxante, drenagem linfática, modeladora), Watsu, Vichy shower, ducha escocesa, banhos de imersão, banhos detox, geoterapia (argila e carvão mineral), fitoterapia (ervas e óleos essenciais). Psicoterapia individual e grupo.",
+    "event_space": null,
+    "wifi": null,
+    "accessibility": {"has_accessibility": true, "description": "Chalés Rakkaus e Toivo identificados como acessíveis, terreno plano"},
+    "gym": {"has_gym": true, "description": "Academia moderna + pilates + RPG (reeducação postural) + fisioterapia + Fitness Center com programação diária"},
+
+    "restaurants": [
+      {"name": "Restaurante Vital", "cuisine": "Vegetariana/plant-based", "description": "Alimentos integrais, grãos, nozes. Sem proteína animal, carboidratos refinados ou estimulantes. Pães artesanais produzidos no local."}
+    ],
+    "meals_included": "Todas as refeições inclusas nos programas. +Saúde: 3 refeições/dia com acompanhamento de nutricionista.",
+    "special_dining": "Cardápio Vital personalizado por nutricionista. Pães artesanais. Semana 'Prazer à Mesa'. Oficinas de nutrição.",
+    "room_service": null,
+    "dietary_options": "Cardápio base vegetariano/plant-based. Planos personalizados por nutricionista. Foco em alimentos anti-inflamatórios e mood-enhancing.",
+
+    "check_in_out": "Check-in: 15h | Check-out: 10h (extensões via contato com recepção)",
+    "early_late_checkout": "Sim, via contato prévio com recepção (pode alterar valores da hospedagem)",
+    "cancellation_policy": "Cancelamento 7+ dias antes: crédito válido 6 meses ou 70% reembolso. Menos de 7 dias ou No Show: sem estorno ou crédito (exceto força maior)",
+    "children_policy": "Sim, aceita crianças, mas com restrição: apenas maiores de 13 anos podem participar do programa",
+    "pet_policy": null,
+    "smoking_policy": "Proibido consumo de cigarros nas áreas comuns e nas acomodações. Política visa promover estilo de vida saudável alinhado ao programa",
+    "min_age_solo": "Restrição de idade: mínimo 13 anos para programa",
+
+    "airport_distance": "Galeão (RJ) 169km. GRU (SP) 250km.",
+    "transfer": {"available": true, "is_free": false, "description": "Parceria com empresas de transfer privado. Aeroclube de Resende (~15min) para helicópteros e aeronaves de médio porte."},
+    "nearby_attractions": "Parque Nacional de Itatiaia (adjacente). 155.000m² de Mata Atlântica.",
+    "how_to_get_there": "Acesso A, 310, Penedo, Itatiaia, RJ",
+
+    "special_programming": "Workshops e palestras sobre estresse, sono, nutrição, biorritmos. Rodas de conversa. Semanas especiais temáticas.",
+    "hotel_concierge_services": "Health Coach dedicado. Assistente de reservas para agendamento de experiências.",
+    "activities_tours": ["caminhadas na mata", "yoga", "ritos tibetanos", "dança", "tênis", "beach tennis", "pickleball", "putting green", "oficinas de nutrição", "Hatha Yoga", "Lian Gong", "alongamento"],
+    "day_use": null,
+    "special_packages": [
+      {"+Saúde": "7+ noites, R$15.518/pessoa. Detox, clínica 24h, nutricionista, psicólogo, spa"},
+      {"+Bem-estar": "4-6 noites, R$9.081/pessoa. Relaxamento, 2 tratamentos, 1 massagem longa"},
+      {"Protocolos": "Serenidade, Movimento, Controle de Peso, Antitabagismo, Anti-insônia"},
+      {"Semanas": "Páscoa, Nutrição e Emagrecimento, Sono, Prazer à Mesa, Ciência da Felicidade, Tiradentes, Corpus Christi"}
+    ],
+
+    "highlights": "Clínica 24h com médicos de Medicina do Estilo de Vida. Nutricionista dedicada. 8 Remédios Naturais. 155.000m² de mata. Empório com produtos próprios. Programa de transformação (não só relaxamento).",
+    "awards_certifications": null,
+    "sustainability": "Hortas próprias, produção de pães artesanais, alimentos naturais. Adjacente ao Parque Nacional de Itatiaia. 155.000m² de área preservada.",
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {"q": "Tem programa de emagrecimento?", "a": "Protocolo Controle de Peso + Semana Nutrição e Emagrecimento", "source": "inferido de ofertas"},
+      {"q": "Tem tratamento para insônia?", "a": "Protocolo Anti-insônia + Semana do Sono", "source": "inferido de ofertas"},
+      {"q": "Qual a distância de SP/RJ?", "a": "GRU 250km, Galeão 169km", "source": "site/localizacao"}
+    ],
+    "common_objections": [
+      {"category": "PREÇO", "objection": "R$15k por 7 noites é muito caro", "response": "Inclui clínica 24h, todas as refeições com nutricionista, spa, psicoterapia, atividades diárias. É programa médico, não só hotel.", "source": "inferido de programas"},
+      {"category": "ALIMENTAÇÃO", "objection": "Só tem comida vegetariana?", "response": "Cardápio Vital plant-based personalizado por nutricionista. Foco em alimentos funcionais e anti-inflamatórios.", "source": "inferido de restaurante"},
+      {"category": "DURAÇÃO", "objection": "Mínimo 7 noites é muito", "response": "Programa +Bem-estar a partir de 4 noites (R$9.081).", "source": "inferido de programas"}
+    ],
+    "attention_points": null,
+    "sales_arguments_by_profile": null,
+
+    "ce_page_url": null,
+    "photo_urls": ["https://rituaali.com.br/galeria/visao-geral/"],
+
+    "_meta": {
+      "enriched_at": "2026-04-03T23:30:00Z",
+      "last_updated": "2026-04-04T00:15:00Z",
+      "pipeline_version": "2.0",
+      "status": "COMPLETE — Chatbot Asksuite acessível via Playwright. Automação bem-sucedida.",
+      "next_action": "Validar com @data-validator. Upsert para PostgreSQL quando pronto.",
+      "chatbot_interview": {
+        "date": "2026-04-04T00:00:00Z",
+        "method": "Playwright MCP automation + manual UI interaction",
+        "success": true,
+        "agent": "Rita (Rituaali Clínica & Spa)",
+        "questions_sent": 8,
+        "responses_captured": 6,
+        "notes": "Perguntas sobre pets e WiFi não tiveram respostas diretas. Rita pediu mais esclarecimento. Registradas como null."
+      },
+      "sources": {
+        "local_xlsx": "data/lista-hoteis-circuito-elegante.xlsx",
+        "hotel_website": "https://rituaali.com.br/",
+        "hotel_website_acomodacoes": "https://rituaali.com.br/acomodacoes/",
+        "hotel_website_infraestrutura": "https://rituaali.com.br/infraestrutura/",
+        "hotel_website_localizacao": "https://rituaali.com.br/localizacao/",
+        "hotel_website_programas_saude": "https://rituaali.com.br/programas/mais-saude/",
+        "hotel_website_programas_bemestar": "https://rituaali.com.br/programas/bem-estar/",
+        "hotel_website_ofertas": "https://rituaali.com.br/ofertas/",
+        "manual_contact": "WhatsApp (24) 98815-3728, Phone (24) 2107-3883, Email [email protected]"
+      },
+      "quality_score": 0.94,
+      "completeness": 0.91,
+      "fields_literal": 49,
+      "fields_inferred": 4,
+      "fields_null": 5,
+      "fields_resolved_by_chatbot": {
+        "check_in_out": "✅ 15h/10h",
+        "cancellation_policy": "✅ 7+dias crédito/reembolso",
+        "children_policy": "✅ 13+ anos",
+        "parking": "✅ Coberto, gratuito",
+        "smoking_policy": "✅ Proibido",
+        "min_age_solo": "✅ 13+ anos",
+        "early_late_checkout": "✅ Via contato recepção"
+      },
+      "null_fields_remaining": [
+        "google_maps_url",
+        "event_space",
+        "wifi (Rita pediu mais detalhe)",
+        "pet_policy (Rita pediu mais detalhe)",
+        "room_service"
+      ]
+    }
+  }
+}

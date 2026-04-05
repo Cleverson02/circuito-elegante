@@ -1,0 +1,1490 @@
+{
+  "pousada-alma-charme-atins": {
+    "name": "Pousada Alma Charme Atins",
+    "city": "",
+    "state": "MA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Alma Charme Atins",
+      "MUNICÍPIO": "Barreirinhas",
+      "UF": "MA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "21992.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Lençóis Maranhenses"
+    }
+  },
+  "rancharia-charme-beach": {
+    "name": "Rancharia Charme Beach",
+    "city": "",
+    "state": "MA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Rancharia Charme Beach",
+      "MUNICÍPIO": "Barreirinhas",
+      "UF": "MA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "17873.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Lençóis Maranhenses"
+    }
+  },
+  "atins-charme": {
+    "name": "Atins Charme",
+    "city": "",
+    "state": "MA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Atins Charme",
+      "MUNICÍPIO": "Barreirinhas",
+      "UF": "MA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "17874.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Lençóis Maranhenses"
+    }
+  },
+  "bahia-bonita-hotel-boutique-quadrado": {
+    "name": "Bahia Bonita Hotel Boutique Quadrado",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Bahia Bonita Hotel Boutique Quadrado",
+      "MUNICÍPIO": "Trancoso",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "6588.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Trancoso"
+    }
+  },
+  "bupitanga-hotel": {
+    "name": "Bupitanga Hotel",
+    "city": "",
+    "state": "RN",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Bupitanga Hotel",
+      "MUNICÍPIO": "Praia da Pipa",
+      "UF": "RN",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "8574.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Pipa"
+    }
+  },
+  "casa-turquesa": {
+    "name": "Casa Turquesa",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa Turquesa",
+      "MUNICÍPIO": "Paraty",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "2612.0",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Centro Histórico de Paraty"
+    }
+  },
+  "clara-dourado-resort": {
+    "name": "Clara Dourado Resort",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Clara Dourado Resort",
+      "MUNICÍPIO": "Dourado",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "13652.0",
+      "Região": "sudeste",
+      "Experiência": "Campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "clara-ibiúna-resort": {
+    "name": "Clara Ibiúna Resort",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Clara Ibiúna Resort",
+      "MUNICÍPIO": "Ibiúna",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "13663.0",
+      "Região": "sudeste",
+      "Experiência": "Campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "insolito-boutique-hotel": {
+    "name": "Insólito Boutique Hotel",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Insólito Boutique Hotel",
+      "MUNICÍPIO": "Armação de Búzios",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "6027.0",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Búzios"
+    }
+  },
+  "le-canton-hotel": {
+    "name": "Le Canton Hotel",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Le Canton Hotel",
+      "MUNICÍPIO": "Teresópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "8795.0",
+      "Região": "sudeste",
+      "Experiência": "Serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "hotel-fazenda-suíça-le-canton": {
+    "name": "Hotel Fazenda Suíça Le Canton",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Fazenda Suíça Le Canton",
+      "MUNICÍPIO": "Teresópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "5461.0",
+      "Região": "sudeste",
+      "Experiência": "Serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "hotel-village-le-canton": {
+    "name": "Hotel Village Le Canton",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Village Le Canton",
+      "MUNICÍPIO": "Teresópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "5462.0",
+      "Região": "sudeste",
+      "Experiência": "Serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "lk-design-hotel": {
+    "name": "LK Design Hotel",
+    "city": "",
+    "state": "SC",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "LK Design Hotel",
+      "MUNICÍPIO": "Florianópolis",
+      "UF": "SC",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "12469.0",
+      "Região": "sul",
+      "Experiência": "praia",
+      "Destino": "Florianópolis"
+    }
+  },
+  "nanii": {
+    "name": "Nanii",
+    "city": "",
+    "state": "RN",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Nanii",
+      "MUNICÍPIO": "São Miguel do Gostoso",
+      "UF": "RN",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "19217.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "São Miguel do Gostoso"
+    }
+  },
+  "nomaa-hotel": {
+    "name": "Nomaa Hotel",
+    "city": "",
+    "state": "PR",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Nomaa Hotel",
+      "MUNICÍPIO": "Curitiba",
+      "UF": "PR",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "18677.0",
+      "Região": "sul",
+      "Experiência": "cidade",
+      "Destino": "Curitiba"
+    }
+  },
+  "nor-hotel-e-spa": {
+    "name": "NOR Hotel e SPA",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "NOR Hotel e SPA",
+      "MUNICÍPIO": "São Roque",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "18305.0",
+      "Região": "sudeste",
+      "Experiência": "Campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "parador-lumiar": {
+    "name": "Parador Lumiar",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Parador Lumiar",
+      "MUNICÍPIO": "Nova Friburgo",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "18732.0",
+      "Região": "sudeste",
+      "Experiência": "Serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "ponta-de-inhambupe-hotel-boutique-&-spa": {
+    "name": "Ponta de Inhambupe Hotel Boutique & SPA",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Ponta de Inhambupe Hotel Boutique & SPA",
+      "MUNICÍPIO": "Esplanada",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "14221.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "pousada-capim-do-mato": {
+    "name": "Pousada Capim do Mato",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Capim do Mato",
+      "MUNICÍPIO": "Jaboticatubas",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "6865.0",
+      "Região": "sudeste",
+      "Experiência": "Serra",
+      "Destino": "Serra do Cipó"
+    }
+  },
+  "pousada-mata-n'-ativa": {
+    "name": "Pousada Mata N' Ativa",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Mata N' Ativa",
+      "MUNICÍPIO": "Trancoso",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "6208.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Trancoso"
+    }
+  },
+  "rancho-do-peixe": {
+    "name": "Rancho do Peixe",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Rancho do Peixe",
+      "MUNICÍPIO": "Cruz",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "3088.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Praia do Preá"
+    }
+  },
+  "saint-andrews-hotel": {
+    "name": "Saint Andrews Hotel",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Saint Andrews Hotel",
+      "MUNICÍPIO": "Gramado",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "4372.0",
+      "Região": "sul",
+      "Experiência": "Serra",
+      "Destino": "Gramado"
+    }
+  },
+  "unique-garden": {
+    "name": "Unique Garden",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Unique Garden",
+      "MUNICÍPIO": "Mairiporã",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "6564.0",
+      "Região": "sudeste",
+      "Experiência": "Campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "valle-d'incanto-hotel": {
+    "name": "Valle D'Incanto Hotel",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Valle D'Incanto Hotel",
+      "MUNICÍPIO": "Gramado",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "5718.0",
+      "Região": "sul",
+      "Experiência": "serra",
+      "Destino": "Gramado"
+    }
+  },
+  "vila-cerrado": {
+    "name": "Vila Cerrado",
+    "city": "",
+    "state": "GO",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Vila Cerrado",
+      "MUNICÍPIO": "Alto Paraiso de Goiás",
+      "UF": "GO",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "18750.0",
+      "Região": "centro-oeste",
+      "Experiência": "Campo",
+      "Destino": "Chapada dos Veadeiros"
+    }
+  },
+  "vila-kalango": {
+    "name": "Vila Kalango",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Vila Kalango",
+      "MUNICÍPIO": "Jericoacoara",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "3089.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Jericoacoara"
+    }
+  },
+  "villa-do-valle-boutique-hotel": {
+    "name": "Villa do Valle Boutique Hotel",
+    "city": "",
+    "state": "SC",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Villa do Valle Boutique Hotel",
+      "MUNICÍPIO": "Blumenau",
+      "UF": "SC",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "8535.0",
+      "Região": "sul",
+      "Experiência": "Serra",
+      "Destino": "Blumenau"
+    }
+  },
+  "villa-dos-nativos": {
+    "name": "Villa dos Nativos",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Villa dos Nativos",
+      "MUNICÍPIO": "Porto Seguro",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "12210.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Trancoso"
+    }
+  },
+  "villa-kandui": {
+    "name": "Villa Kandui",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Villa Kandui",
+      "MUNICÍPIO": "Maraú",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "15602.0",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Taipu de Fora"
+    }
+  },
+  "villa-rasa": {
+    "name": "Villa Rasa",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Villa Rasa",
+      "MUNICÍPIO": "Armação de Búzios",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "21103.0",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Búzios"
+    }
+  },
+  "wood": {
+    "name": "Wood",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Wood",
+      "MUNICÍPIO": "Gramado",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "7033.0",
+      "Região": "sul",
+      "Experiência": "Serra",
+      "Destino": "Gramado"
+    }
+  },
+  "zendaya-resort": {
+    "name": "Zendaya Resort",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Zendaya Resort",
+      "MUNICÍPIO": "Armação de Búzios",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "SIM",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "9811.0",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Búzios"
+    }
+  },
+  "estabelecimentos": {
+    "name": "ESTABELECIMENTOS",
+    "city": "",
+    "state": "UF",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "ESTABELECIMENTOS",
+      "MUNICÍPIO": "MUNICÍPIO",
+      "UF": "UF",
+      "Tem Reserva integrada por API?": "Tem reserva integrada API?",
+      "Cupom BRADESCO": "cupom BRADESCO",
+      "hotel_ID": "ENVIAR PARA CONCIERGE",
+      "Região": "Região",
+      "Experiência": "Experiência",
+      "Destino": "Destino"
+    }
+  },
+  "baia-das-caraubas": {
+    "name": "Baia das Caraubas",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Baia das Caraubas",
+      "MUNICÍPIO": "Camocin",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Rota das Emoções"
+    }
+  },
+  "belmond-copacabana-palace": {
+    "name": "Belmond Copacabana Palace",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Belmond Copacabana Palace",
+      "MUNICÍPIO": "Rio de Janeiro",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Copacabana"
+    }
+  },
+  "botanique-hotel-experience": {
+    "name": "Botanique Hotel Experience",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Botanique Hotel Experience",
+      "MUNICÍPIO": "Bairro dos Mellos",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Campos do Jordão"
+    }
+  },
+  "cabanas-do-vale": {
+    "name": "Cabanas do Vale",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Cabanas do Vale",
+      "MUNICÍPIO": "Petrópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Itaipava"
+    }
+  },
+  "caiman-pantanal": {
+    "name": "Caiman Pantanal",
+    "city": "",
+    "state": "MS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Caiman Pantanal",
+      "MUNICÍPIO": "Miranda",
+      "UF": "MS",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "Centro-oeste",
+      "Experiência": "campo",
+      "Destino": "Pantanal "
+    }
+  },
+  "canto-do-irere-boutique-hotel": {
+    "name": "Canto do Irere Boutique Hotel",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Canto do Irere Boutique Hotel",
+      "MUNICÍPIO": "Atibaia",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "carmel-charme": {
+    "name": "Carmel Charme",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Carmel Charme",
+      "MUNICÍPIO": "Aquiraz",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Aquiraz"
+    }
+  },
+  "carmel-taiba-exclusive-resort": {
+    "name": "Carmel Taiba Exclusive Resort",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Carmel Taiba Exclusive Resort",
+      "MUNICÍPIO": "São Gonçalo do Amarante",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Praia da Taíba"
+    }
+  },
+  "casa-da-montanha-hotel": {
+    "name": "Casa da Montanha Hotel",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa da Montanha Hotel",
+      "MUNICÍPIO": "Gramado",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "serra",
+      "Destino": "Gramado"
+    }
+  },
+  "casa-de-santo-antonio": {
+    "name": "Casa de Santo Antonio",
+    "city": "",
+    "state": "PI",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa de Santo Antonio",
+      "MUNICÍPIO": "Parnaiba",
+      "UF": "PI",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Delta do Parnaíba"
+    }
+  },
+  "casa-do-arandis": {
+    "name": "Casa do Arandis",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa do Arandis",
+      "MUNICÍPIO": "Maraú",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Algodões"
+    }
+  },
+  "casa-marambaia": {
+    "name": "Casa Marambaia",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa Marambaia",
+      "MUNICÍPIO": "Petropolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Correas"
+    }
+  },
+  "casa-nah-praia": {
+    "name": "Casa NAH Praia",
+    "city": "",
+    "state": "AL",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa NAH Praia",
+      "MUNICÍPIO": "Passo de Camaragibe",
+      "UF": "AL",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Praia do Marceneiro"
+    }
+  },
+  "casa-poema": {
+    "name": "Casa Poema",
+    "city": "",
+    "state": "GO",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa Poema",
+      "MUNICÍPIO": "Alto Paraiso de Goiás",
+      "UF": "GO",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "Centro-oeste",
+      "Experiência": "campo",
+      "Destino": "Chapada dos Veadeiros"
+    }
+  },
+  "casa-rosa": {
+    "name": "Casa Rosa",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Casa Rosa",
+      "MUNICÍPIO": "Petrópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "clara-arte-resort": {
+    "name": "Clara Arte Resort",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Clara Arte Resort",
+      "MUNICÍPIO": "Brumadinho",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "campo",
+      "Destino": "Inhotim"
+    }
+  },
+  "faimont-rio-de-janeiro-copacabana": {
+    "name": "Faimont Rio de Janeiro Copacabana",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Faimont Rio de Janeiro Copacabana",
+      "MUNICÍPIO": "Rio de Janeiro",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Copacabana"
+    }
+  },
+  "fasano---rj": {
+    "name": "Fasano - RJ",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano - RJ",
+      "MUNICÍPIO": "Rio de Janeiro",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Ipanema"
+    }
+  },
+  "fasano---ssa": {
+    "name": "Fasano - SSA",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano - SSA",
+      "MUNICÍPIO": "Salvador",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "cidade",
+      "Destino": "Salvador"
+    }
+  },
+  "fasano---bh": {
+    "name": "Fasano - BH",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano - BH",
+      "MUNICÍPIO": "Belo Horizonte",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Lourdes"
+    }
+  },
+  "fasano---boavista": {
+    "name": "Fasano - Boavista",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano - Boavista",
+      "MUNICÍPIO": "Porto Feliz",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "campo",
+      "Destino": "Interior de São Paulo"
+    }
+  },
+  "fasano---sp": {
+    "name": "Fasano - SP",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano - SP",
+      "MUNICÍPIO": "São Paulo",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Cerqueira César"
+    }
+  },
+  "fasano-angra-dos-reis": {
+    "name": "Fasano Angra dos Reis",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fasano Angra dos Reis",
+      "MUNICÍPIO": "Angra dos Reis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Angra"
+    }
+  },
+  "fazenda-moreias": {
+    "name": "Fazenda Moréias",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fazenda Moréias",
+      "MUNICÍPIO": "Camocim",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Camocim"
+    }
+  },
+  "fazenda-sao-luiz-da-boasorte": {
+    "name": "Fazenda São Luiz da Boasorte",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Fazenda São Luiz da Boasorte",
+      "MUNICÍPIO": "Vassouras",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "serra Fluminense"
+    }
+  },
+  "grande-hotel-termas-araxa": {
+    "name": "Grande Hotel Termas Araxa",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Grande Hotel Termas Araxa",
+      "MUNICÍPIO": "Araxa",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "campo",
+      "Destino": "Araxá"
+    }
+  },
+  "hcm-hotel-corais-de-manaíra": {
+    "name": "HCM Hotel Corais de Manaíra",
+    "city": "",
+    "state": "PB",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "HCM Hotel Corais de Manaíra",
+      "MUNICÍPIO": "João Pessoa",
+      "UF": "PB",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Manaíra"
+    }
+  },
+  "hotel-belmond-cataratas": {
+    "name": "Hotel Belmond Cataratas",
+    "city": "",
+    "state": "PR",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Belmond Cataratas",
+      "MUNICÍPIO": "Foz do Iguaçu",
+      "UF": "PR",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "campo",
+      "Destino": "Cataratas do Iguaçu"
+    }
+  },
+  "hotel-emiliano---rj": {
+    "name": "Hotel Emiliano - RJ",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Emiliano - RJ",
+      "MUNICÍPIO": "Rio de Janeiro",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Copacabana"
+    }
+  },
+  "hotel-emiliano---sp": {
+    "name": "Hotel Emiliano - SP",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Emiliano - SP",
+      "MUNICÍPIO": "São Paulo",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Jardim Paulista"
+    }
+  },
+  "hotel-gran-marquise": {
+    "name": "Hotel Gran Marquise",
+    "city": "",
+    "state": "CE",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Hotel Gran Marquise",
+      "MUNICÍPIO": "Fortaleza",
+      "UF": "CE",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Mucuripe"
+    }
+  },
+  "ilha-dos-poldros-pousada": {
+    "name": "Ilha dos Poldros Pousada",
+    "city": "",
+    "state": "MA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Ilha dos Poldros Pousada",
+      "MUNICÍPIO": "Arraioses",
+      "UF": "MA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Delta do Parnaíba"
+    }
+  },
+  "kenoa": {
+    "name": "Kenoa",
+    "city": "",
+    "state": "AL",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Kenoa",
+      "MUNICÍPIO": "Barra de São Miguel",
+      "UF": "AL",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Barra de São Miguel "
+    }
+  },
+  "kurotel-spa": {
+    "name": "Kurotel SPA",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Kurotel SPA",
+      "MUNICÍPIO": "Gramado",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "serra",
+      "Destino": "Gramado"
+    }
+  },
+  "madeiro-beach-hotel": {
+    "name": "Madeiro Beach Hotel",
+    "city": "",
+    "state": "RN",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Madeiro Beach Hotel",
+      "MUNICÍPIO": "Tibau do Sul",
+      "UF": "RN",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Pipa"
+    }
+  },
+  "manoa-eco-villa": {
+    "name": "Manoá Eco-Villa",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Manoá Eco-Villa",
+      "MUNICÍPIO": "Mucuri",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Costa Dourada"
+    }
+  },
+  "naatooh-guest-houses": {
+    "name": "Naatooh Guest Houses",
+    "city": "",
+    "state": "SC",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Naatooh Guest Houses",
+      "MUNICÍPIO": "Florianópolis",
+      "UF": "SC",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "praia",
+      "Destino": "Florianópolis"
+    }
+  },
+  "parador-cambara-do-sul": {
+    "name": "Parador Cambará do Sul",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Parador Cambará do Sul",
+      "MUNICÍPIO": "Cambará do Sul",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "serra",
+      "Destino": "Cânions Aparados da Serra"
+    }
+  },
+  "pousada-cantelli": {
+    "name": "Pousada Cantelli",
+    "city": "",
+    "state": "RS",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Cantelli",
+      "MUNICÍPIO": "Bento Gonçalves",
+      "UF": "RS",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "serra",
+      "Destino": "Caminho das Pedras"
+    }
+  },
+  "pousada-do-ouro": {
+    "name": "Pousada do Ouro",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada do Ouro",
+      "MUNICÍPIO": "Paraty",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "praia",
+      "Destino": "Centro Histórico de Paraty"
+    }
+  },
+  "pousada-figueira-da-serra": {
+    "name": "Pousada Figueira da Serra",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Figueira da Serra",
+      "MUNICÍPIO": "Campos do Jordão",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Campos do Jordão"
+    }
+  },
+  "pousada-inacia": {
+    "name": "Pousada Inácia",
+    "city": "",
+    "state": "GO",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Inácia",
+      "MUNICÍPIO": "Alto Paraiso de Goiás",
+      "UF": "GO",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "Centro-oeste",
+      "Experiência": "campo",
+      "Destino": "Chapada dos Veadeiros"
+    }
+  },
+  "pousada-outeiro": {
+    "name": "Pousada Outeiro",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Outeiro",
+      "MUNICÍPIO": "Porto Seguro",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Caraíva"
+    }
+  },
+  "pousada-rabo-do-lagarto": {
+    "name": "Pousada Rabo do Lagarto",
+    "city": "",
+    "state": "ES",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Rabo do Lagarto",
+      "MUNICÍPIO": "São Paulo do Aracê",
+      "UF": "ES",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Pedra Azul"
+    }
+  },
+  "pousada-tankamana": {
+    "name": "Pousada Tankamana",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Pousada Tankamana",
+      "MUNICÍPIO": "Petrópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Itaipava"
+    }
+  },
+  "projeto-ibiti---hospedagem": {
+    "name": "Projeto Ibiti - Hospedagem",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Projeto Ibiti - Hospedagem",
+      "MUNICÍPIO": "Lima Duarte",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Serra do Ibitipoca"
+    }
+  },
+  "quebra-noz-hotel-boutique": {
+    "name": "Quebra Nóz Hotel Boutique",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Quebra Nóz Hotel Boutique",
+      "MUNICÍPIO": "Campos do Jordão",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Campos do Jordão"
+    }
+  },
+  "refugio-na-serra": {
+    "name": "Refugio na Serra",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Refugio na Serra",
+      "MUNICÍPIO": "Mucugê",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "serra",
+      "Destino": "Chapada Diamantina"
+    }
+  },
+  "rituaali-spa": {
+    "name": "Rituaali Spa",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Rituaali Spa",
+      "MUNICÍPIO": "Itatiaia",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "santa-teresa-rj-mgallery": {
+    "name": "Santa Teresa RJ MGallery",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Santa Teresa RJ MGallery",
+      "MUNICÍPIO": "Rio de Janeiro",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Santa Teresa"
+    }
+  },
+  "segredo-na-serra": {
+    "name": "Segredo na Serra",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Segredo na Serra",
+      "MUNICÍPIO": "Tiradentes",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Centro Histórico de Tiradentes"
+    }
+  },
+  "solar-do-imperio": {
+    "name": "Solar do Império",
+    "city": "",
+    "state": "RJ",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Solar do Império",
+      "MUNICÍPIO": "Petrópolis",
+      "UF": "RJ",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Serra Fluminense"
+    }
+  },
+  "tivoli-mofarrej": {
+    "name": "Tivoli Mofarrej",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Tivoli Mofarrej",
+      "MUNICÍPIO": "São Paulo",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Cerqueira César"
+    }
+  },
+  "tuju-boutique-hotel": {
+    "name": "Tuju Boutique Hotel",
+    "city": "",
+    "state": "AL",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Tuju Boutique Hotel",
+      "MUNICÍPIO": "Passo do Camaragibe",
+      "UF": "AL",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Praia do Marceneiro"
+    }
+  },
+  "txai-resort": {
+    "name": "Txai Resort",
+    "city": "",
+    "state": "BA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Txai Resort",
+      "MUNICÍPIO": "Ilheus",
+      "UF": "BA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Itacaré"
+    }
+  },
+  "unique-sp": {
+    "name": "Unique SP",
+    "city": "",
+    "state": "SP",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Unique SP",
+      "MUNICÍPIO": "São Paulo",
+      "UF": "SP",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "cidade",
+      "Destino": "Jardim Paulista"
+    }
+  },
+  "vila-de-alter": {
+    "name": "Vila de Alter",
+    "city": "",
+    "state": "PA",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Vila de Alter",
+      "MUNICÍPIO": "Santarem",
+      "UF": "PA",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "norte",
+      "Experiência": "praia",
+      "Destino": "Alter do Chão"
+    }
+  },
+  "vila-entre-chaves": {
+    "name": "Vila Entre Chaves",
+    "city": "",
+    "state": "AL",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Vila Entre Chaves",
+      "MUNICÍPIO": "Passo do Camaragibe",
+      "UF": "AL",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "nordeste",
+      "Experiência": "praia",
+      "Destino": "Costa dos Corais"
+    }
+  },
+  "villa-d'ozio": {
+    "name": "Villa D'Ozio",
+    "city": "",
+    "state": "SC",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Villa D'Ozio",
+      "MUNICÍPIO": "Itajaí",
+      "UF": "SC",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "SIM",
+      "hotel_ID": "SIM",
+      "Região": "sul",
+      "Experiência": "praia",
+      "Destino": "Praia Brava"
+    }
+  },
+  "tiradentes-boutique": {
+    "name": "Tiradentes Boutique",
+    "city": "",
+    "state": "MG",
+    "raw_xlsx": {
+      "ESTABELECIMENTOS": "Tiradentes Boutique",
+      "MUNICÍPIO": "Tiradentes",
+      "UF": "MG",
+      "Tem Reserva integrada por API?": "NÃO",
+      "Cupom BRADESCO": "NÃO",
+      "hotel_ID": "SIM",
+      "Região": "sudeste",
+      "Experiência": "serra",
+      "Destino": "Centro Histórico de Tiradentes"
+    }
+  }
+}

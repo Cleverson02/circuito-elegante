@@ -6,6 +6,7 @@ import { registerLogging } from './middleware/logging.js';
 import { registerRateLimiting } from './middleware/rate-limit.js';
 import { registerRoutes } from './api/routes.js';
 import { getRedisClient, disconnectRedis } from './state/redis-client.js';
+import { registerVectordbHealthChecker } from './vectordb/faq-store.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -20,6 +21,9 @@ async function bootstrap(): Promise<void> {
 
   // Initialize Redis (registers health checker)
   getRedisClient();
+
+  // Register vectordb health checker
+  registerVectordbHealthChecker();
 
   const app = Fastify({
     logger: false, // Using Winston instead
