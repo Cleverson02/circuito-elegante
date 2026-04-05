@@ -8,21 +8,30 @@ export function registerHealthChecker(name: string, checker: HealthChecker): voi
   healthCheckers.set(name, checker);
 }
 
+interface CheckResult {
+  status: string;
+  details?: Record<string, unknown>;
+}
+
 interface HealthCheckResult {
   status: 'ok' | 'degraded';
   timestamp: string;
-  checks: Record<string, { status: string; details?: Record<string, unknown> }>;
+  checks: Record<string, CheckResult>;
 }
 
 async function runHealthChecks(): Promise<HealthCheckResult> {
-  const checks: HealthCheckResult['checks'] = {};
-  let hasFailed = false;
+  const checks: Record<string, CheckResult> = {};
+  let hasDegraded = false;
 
   for (const [name, checker] of healthCheckers) {
     try {
-      checks[name] = await checker();
+      const result = await checker();
+      checks[name] = result;
+      if (result.status !== 'connected' && result.status !== 'ok' && result.status !== 'alive') {
+        hasDegraded = true;
+      }
     } catch (error) {
-      hasFailed = true;
+      hasDegraded = true;
       checks[name] = {
         status: 'error',
         details: { message: error instanceof Error ? error.message : 'Unknown error' },
@@ -31,7 +40,7 @@ async function runHealthChecks(): Promise<HealthCheckResult> {
   }
 
   return {
-    status: hasFailed ? 'degraded' : 'ok',
+    status: hasDegraded ? 'degraded' : 'ok',
     timestamp: new Date().toISOString(),
     checks,
   };
@@ -40,15 +49,6 @@ async function runHealthChecks(): Promise<HealthCheckResult> {
 export async function registerHealthRoutes(app: FastifyInstance): Promise<void> {
   app.get('/health', async (_request, reply) => {
     const result = await runHealthChecks();
-
-    // If no checkers registered yet, return basic ok
-    if (healthCheckers.size === 0) {
-      return reply.send({
-        status: 'ok',
-        timestamp: new Date().toISOString(),
-      });
-    }
-
     return reply.send(result);
   });
 

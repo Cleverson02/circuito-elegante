@@ -22,7 +22,7 @@ export function getDatabase() {
 
   db = drizzle(sql, { schema });
 
-  // Register health checker
+  // Register health checkers
   registerHealthChecker('database', async () => {
     try {
       const client = getPostgresClient();
@@ -32,6 +32,23 @@ export function getDatabase() {
       return {
         status: 'error',
         details: { message: error instanceof Error ? error.message : 'Connection failed' },
+      };
+    }
+  });
+
+  registerHealthChecker('hotels_count', async () => {
+    try {
+      const client = getPostgresClient();
+      const result = await client`SELECT COUNT(*)::int as count FROM hotels`;
+      const count = (result[0]?.['count'] as number) ?? 0;
+      return {
+        status: 'connected',
+        details: { hotels_count: count },
+      };
+    } catch (error) {
+      return {
+        status: 'error',
+        details: { message: error instanceof Error ? error.message : 'Query failed' },
       };
     }
   });
