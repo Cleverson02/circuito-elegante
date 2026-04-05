@@ -44,6 +44,7 @@
  *   ```
  */
 
+import { createHash } from 'node:crypto';
 import * as Sentry from '@sentry/node';
 import { logger } from '../middleware/logging.js';
 import type { SessionData } from '../state/session-manager.js';
@@ -140,6 +141,31 @@ const DEFAULT_CONFIG: FallbackConfig = Object.freeze({
 
 /** Unknown endpoint marker — when the error does not carry one. */
 const UNKNOWN_ENDPOINT = 'unknown';
+
+// ─── PII Masking ────────────────────────────────────────────────
+
+/**
+ * Hashes a guest phone number for correlation purposes without shipping
+ * PII to Sentry or log aggregators (LGPD). Returns the first 16 hex
+ * chars of SHA-256(phone) — 64 bits of entropy, collision-safe for SaaS
+ * scale, not reversible.
+ *
+ * Accepts empty/undefined input defensively to keep the fallback path
+ * resilient even when session data is partial.
+ */
+function hashPhone(phone: string | undefined | null): string {
+  if (!phone || phone.length === 0) return 'unknown';
+  return createHash('sha256').update(phone, 'utf8').digest('hex').slice(0, 16);
+}
+
+/**
+ * Builds a privacy-safe correlation id as `{hotelId}:{hashedPhone}`.
+ * Used in Sentry tags/extras and structured logs so operators can group
+ * events from the same guest session without exposing the phone number.
+ */
+function buildCorrelationId(sessionData: SessionData): string {
+  return `${sessionData.hotelId}:${hashPhone(sessionData.guestPhone)}`;
+}
 
 // ─── Error Classification (AC2) ─────────────────────────────────
 
@@ -320,7 +346,7 @@ export function triggerSilentHandover(
 
   const baseSummary = buildHandoverSummary(transferParams);
 
-  const sessionId = `${sessionData.hotelId}:${sessionData.guestPhone}`;
+  const sessionId = buildCorrelationId(sessionData);
   const errorContext: ErrorContext = Object.freeze({
     errorType,
     originalError: error instanceof Error ? error.message : String(error),
@@ -378,8 +404,9 @@ export function reportToSentry(
     scope.setTag('errorType', errorType);
     scope.setTag('language', language);
 
-    // Extras — visible per event.
-    const sessionId = `${sessionData.hotelId}:${sessionData.guestPhone}`;
+    // Extras — visible per event. sessionId is hashed to avoid shipping
+    // raw guestPhone (PII) to Sentry.
+    const sessionId = buildCorrelationId(sessionData);
     scope.setExtra('sessionId', sessionId);
     scope.setExtra('errorType', errorType);
     scope.setExtra('language', language);
@@ -462,7 +489,7 @@ export async function handleElevareFailure<TRetry = unknown>(
       }
       const retryResult = await retryFn();
       logger.info('fallback_retry_succeeded', {
-        sessionId: sessionData.guestPhone,
+        sessionId: hashPhone(sessionData.guestPhone),
         hotelId: sessionData.hotelId,
       });
       return {
@@ -474,7 +501,7 @@ export async function handleElevareFailure<TRetry = unknown>(
       };
     } catch (retryError) {
       logger.warn('fallback_retry_failed', {
-        sessionId: sessionData.guestPhone,
+        sessionId: hashPhone(sessionData.guestPhone),
         hotelId: sessionData.hotelId,
         originalErrorType: classified,
       });
@@ -509,7 +536,7 @@ export async function handleElevareFailure<TRetry = unknown>(
   logger.warn('elevare_fallback_triggered', {
     errorType: classified,
     language: validLanguage,
-    sessionId: sessionData.guestPhone,
+    sessionId: hashPhone(sessionData.guestPhone),
     hotelId: sessionData.hotelId,
     handoverTriggered,
     sentryEventId,

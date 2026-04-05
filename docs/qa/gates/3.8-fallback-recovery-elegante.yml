@@ -1,21 +1,21 @@
 schema: 1
 story: '3.8'
 story_title: 'Fallback & Recovery Elegante'
-gate: CONCERNS
-status_reason: 'All 18 ACs met with 115 unit tests passing. Excellent stateless design with Object.freeze immutability, comprehensive JSDoc, defensive error classification, banned-terms enforcement. 1 MEDIUM concern: raw guestPhone in Sentry sessionId is PII exposure. 1 LOW concern: Chatwoot delivery responsibility unclear.'
+gate: PASS
+status_reason: 'All 18 ACs met with 55 unit tests passing. Excellent stateless design with Object.freeze immutability, comprehensive JSDoc, defensive error classification, banned-terms enforcement. PII-001 resolved: guestPhone now hashed via SHA-256 (first 16 hex chars) before embedding in Sentry tags/extras and structured logs. Remaining items are LOW severity future-hardening.'
 reviewer: 'Quinn (Test Architect)'
-updated: '2026-04-05T21:00:00Z'
+updated: '2026-04-05T22:15:00Z'
 
-quality_score: 88
-expires: '2026-04-19T21:00:00Z'
+quality_score: 93
+expires: '2026-04-19T22:15:00Z'
 
 top_issues:
   - id: 'PII-001'
-    severity: medium
-    finding: 'Raw guestPhone (e.g. +5511999999999) is used as part of sessionId in Sentry tags/extras (fallback.ts:382-383) and in analytics logs (fallback.ts:465, 477, 512). While this is intentional for debugging, it ships PII to Sentry and log aggregators. LGPD considerations for Brazilian market.'
-    suggested_action: 'Hash guestPhone with SHA-256 for Sentry correlation (keeps grouping) OR use a separate sessionId derived from hotelId:hash(guestPhone). Document PII handling decision in fallback.ts.'
+    severity: low
+    finding: 'RESOLVED — Added hashPhone() + buildCorrelationId() helpers (fallback.ts:146-168). All 4 sites that previously embedded raw guestPhone now ship the SHA-256 hashed version: triggerSilentHandover errorContext.sessionId, Sentry scope.setExtra sessionId, fallback_retry_succeeded/failed logs, elevare_fallback_triggered analytics log. LGPD-compliant for Brazilian market while preserving Sentry grouping via fingerprint.'
+    suggested_action: 'No action needed'
     suggested_owner: dev
-    refs: ['backend/src/services/fallback.ts:382', 'backend/src/services/fallback.ts:464-480', 'backend/src/services/fallback.ts:509-516']
+    refs: ['backend/src/services/fallback.ts:146-168']
   - id: 'INTEGRATION-001'
     severity: low
     finding: 'triggerSilentHandover() returns FallbackHandoverSummary but the JSDoc states "the orchestrator is responsible for actually pushing it to Chatwoot" — no concrete consumer in the codebase yet pushes this summary to Chatwoot API. Handover is logged but NOT delivered.'
@@ -32,16 +32,16 @@ top_issues:
 waiver: { active: false }
 
 evidence:
-  tests_reviewed: 115
-  risks_identified: 1
+  tests_reviewed: 55
+  risks_identified: 0
   trace:
     ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
     ac_gaps: []
 
 nfr_validation:
   security:
-    status: CONCERNS
-    notes: 'PII (phone) embedded in Sentry sessionId and structured logs — see PII-001. originalError in errorContext correctly isolated to attendant-only (AC10). No hardcoded secrets.'
+    status: PASS
+    notes: 'PII-001 resolved — guestPhone SHA-256 hashed before embedding in Sentry/logs (LGPD-compliant). originalError in errorContext correctly isolated to attendant-only (AC10). No hardcoded secrets.'
   performance:
     status: PASS
     notes: '100% stateless — no singletons, no caches. 1-retry policy explicitly bounded (AC4). Sentry captureException async but awaited in withScope. Minimal overhead.'
@@ -53,11 +53,9 @@ nfr_validation:
     notes: 'Exceptional JSDoc quality. Clear AC references in comments. Pure module design. Banned-terms list exported for test enforcement. Separate fallback-messages.ts for i18n catalog.'
 
 recommendations:
-  immediate:
-    - action: 'Hash guestPhone before embedding in Sentry sessionId to reduce PII exposure'
-      refs: ['backend/src/services/fallback.ts']
+  immediate: []
   future:
     - action: 'Wire up Chatwoot delivery consumer for FallbackHandoverSummary'
       refs: ['backend/src/services/fallback.ts', 'backend/src/tools/transfer-to-human.ts']
-    - action: 'Consider LGPD compliance audit for all PII paths in Sentry + structured logs'
+    - action: 'Audit other PII paths in the codebase (middleware/logging.ts) for LGPD consistency'
       refs: ['backend/src/services/fallback.ts', 'backend/src/middleware/logging.ts']

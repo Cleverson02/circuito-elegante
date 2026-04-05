@@ -22,7 +22,17 @@ jest.mock('@sentry/node', () => {
   };
 });
 
+import { createHash } from 'node:crypto';
 import * as Sentry from '@sentry/node';
+
+/**
+ * Mirrors the production `hashPhone()` helper — first 16 hex chars of
+ * SHA-256. Used to compute expected correlation ids in assertions
+ * without shipping the raw phone number into test fixtures.
+ */
+function expectedHashedPhone(phone: string): string {
+  return createHash('sha256').update(phone, 'utf8').digest('hex').slice(0, 16);
+}
 
 import {
   classifyError,
@@ -386,8 +396,9 @@ describe('triggerSilentHandover — AC9/AC10', () => {
   it('#28 — errorContext contains sessionId, errorType, timestamp, endpoint', () => {
     const err = new ElevareApiError('503', 503, '/search');
     const summary = triggerSilentHandover(makeSession(), err, 'api_error');
+    // PII-safe correlation: hashed phone, not raw (LGPD)
     expect(summary.errorContext.sessionId).toBe(
-      'hotel-abc:+5511999999999',
+      `hotel-abc:${expectedHashedPhone('+5511999999999')}`,
     );
     expect(summary.errorContext.errorType).toBe<ElevareErrorType>('api_error');
     expect(summary.errorContext.timestamp).toMatch(/^\d{4}-\d{2}-\d{2}T/);
@@ -490,7 +501,9 @@ describe('Sentry integration — AC11/AC12', () => {
 
     const extraCalls = fakeScope.setExtra.mock.calls;
     const extraMap = new Map(extraCalls.map((c) => [c[0], c[1]]));
-    expect(extraMap.get('sessionId')).toBe('hotel-abc:+5511999999999');
+    expect(extraMap.get('sessionId')).toBe(
+      `hotel-abc:${expectedHashedPhone('+5511999999999')}`,
+    );
     expect(extraMap.get('errorType')).toBe('api_error');
     expect(extraMap.get('language')).toBe('en');
 
@@ -550,7 +563,7 @@ describe('Logging — AC15', () => {
       const payload = match?.[1] as Record<string, unknown>;
       expect(payload['errorType']).toBe('api_error');
       expect(payload['language']).toBe('pt');
-      expect(payload['sessionId']).toBe('+5511999999999');
+      expect(payload['sessionId']).toBe(expectedHashedPhone('+5511999999999'));
       expect(payload['hotelId']).toBe('hotel-abc');
       expect(payload['handoverTriggered']).toBe(true);
     } finally {
