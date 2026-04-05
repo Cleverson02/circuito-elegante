@@ -33,6 +33,32 @@ export type {
   ElevareCustomerResponse,
 } from './customers.js';
 
+export {
+  createQuotation,
+  regeneratePaymentLink,
+  extendQuotationValidity,
+  getQuotationStatus,
+  getStoredQuotationState,
+  deriveQuotationStatus,
+  QuotationApiError,
+  RequestExpiredError,
+  InvalidOfferError,
+  QuotationNotFoundError,
+  QUOTATION_REDIS_KEYS,
+} from './quotations.js';
+
+export type {
+  CreateQuotationParams,
+  CreateQuotationResult,
+  RegeneratePaymentLinkParams,
+  RegeneratePaymentLinkResult,
+  ExtendQuotationParams,
+  ExtendQuotationResult,
+  GetQuotationStatusResult,
+  QuotationStatus,
+  QuotationState,
+} from './quotations.js';
+
 export type {
   ElevareSearchParams,
   ElevareMultiSearchParams,
