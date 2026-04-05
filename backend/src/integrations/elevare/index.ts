@@ -18,6 +18,21 @@ export {
   getStoredSearchResult,
 } from './search.js';
 
+export {
+  extractCustomerData,
+  registerCustomer,
+  createRegisterCustomerTool,
+  RegisterCustomerParams,
+  ElevareCustomerValidationError,
+  ELEVARE_CUSTOMER_REDIS_KEY,
+  ELEVARE_CUSTOMER_CACHE_TTL,
+} from './customers.js';
+
+export type {
+  ElevareCustomerPayload,
+  ElevareCustomerResponse,
+} from './customers.js';
+
 export type {
   ElevareSearchParams,
   ElevareMultiSearchParams,

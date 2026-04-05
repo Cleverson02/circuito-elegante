@@ -104,6 +104,7 @@ export class ElevareClient {
     });
     return this.fetchWithResilience<ElevareSearchResponse>(
       `/search?${queryParams.toString()}`,
+      'GET',
     );
   }
 
@@ -120,7 +121,21 @@ export class ElevareClient {
     queryParams.set('children', String(params.children));
     return this.fetchWithResilience<ElevareMultiSearchResponse>(
       `/multi-search?${queryParams.toString()}`,
+      'GET',
     );
+  }
+
+  /**
+   * Low-level request method — exposed for domain-specific wrappers
+   * (e.g., customers.ts, quotations.ts). Inherits auth, retry, circuit
+   * breaker, timeout, and logging from the base client.
+   */
+  async request<T>(
+    endpoint: string,
+    method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
+    body?: unknown,
+  ): Promise<T> {
+    return this.fetchWithResilience<T>(endpoint, method, body);
   }
 
   getCircuitBreakerState(): CircuitBreakerState {
@@ -155,14 +170,18 @@ export class ElevareClient {
 
   // ─── Resilient Fetch (retry + circuit breaker + timeout) ────
 
-  private async fetchWithResilience<T>(endpoint: string): Promise<T> {
+  private async fetchWithResilience<T>(
+    endpoint: string,
+    method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
+    body?: unknown,
+  ): Promise<T> {
     this.checkCircuitBreaker();
 
     let lastError: Error | null = null;
 
     for (let attempt = 0; attempt <= this.config.maxRetries; attempt++) {
       try {
-        const result = await this.executeFetch<T>(endpoint);
+        const result = await this.executeFetch<T>(endpoint, method, body);
         this.onSuccess();
         return result;
       } catch (error) {
@@ -195,7 +214,11 @@ export class ElevareClient {
     throw lastError ?? new Error('Unexpected: no attempts made');
   }
 
-  private async executeFetch<T>(endpoint: string): Promise<T> {
+  private async executeFetch<T>(
+    endpoint: string,
+    method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
+    body?: unknown,
+  ): Promise<T> {
     const url = `${this.config.apiUrl}${endpoint}`;
     const controller = new AbortController();
     const timeoutId = setTimeout(
@@ -206,20 +229,29 @@ export class ElevareClient {
     const startMs = Date.now();
 
     this.logger.info('elevare_request', {
-      method: 'GET',
+      method,
       endpoint,
       // API key intentionally REDACTED from all logs
     });
 
+    const headers: Record<string, string> = {
+      'X-Api-Key': this.config.apiKey,
+      'Accept': 'application/json',
+    };
+
+    const init: RequestInit = {
+      method,
+      headers,
+      signal: controller.signal,
+    };
+
+    if (body !== undefined && method !== 'GET') {
+      headers['Content-Type'] = 'application/json';
+      init.body = JSON.stringify(body);
+    }
+
     try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'X-Api-Key': this.config.apiKey,
-          'Accept': 'application/json',
-        },
-        signal: controller.signal,
-      });
+      const response = await fetch(url, init);
 
       const durationMs = Date.now() - startMs;
 
