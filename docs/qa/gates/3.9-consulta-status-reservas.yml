@@ -1,0 +1,62 @@
+schema: 1
+story: '3.9'
+story_title: 'Consulta de Status de Reservas (Pós-Venda)'
+gate: PASS
+status_reason: 'All 15 ACs met with 61 unit tests passing. Exceptional anti-leak design: ReservationStatusData type deliberately omits all technical IDs (hotelId, customerId, quotationId, requestId, offerId) — protection by absence. PII masking implemented for all identifier types. Status mapping robust with aliases. Never-throws contract for Persona Agent safety. No blocking issues.'
+reviewer: 'Quinn (Test Architect)'
+updated: '2026-04-05T21:00:00Z'
+
+quality_score: 92
+expires: '2026-04-19T21:00:00Z'
+
+top_issues:
+  - id: 'UX-001'
+    severity: low
+    finding: 'Default `hotelName: "Hotel"` when Elevare response lacks it (reservations.ts:198). If the real hotel name is missing, the Persona Agent generates a message with a generic "Hotel" label, which could confuse the guest.'
+    suggested_action: 'Either (1) filter out reservations with no hotelName (treat as data error, log warning), OR (2) return empty string and let Persona Agent detect + handle gracefully. Current defensive default is pragmatic but may mask upstream data issues.'
+    suggested_owner: dev
+    refs: ['backend/src/integrations/elevare/reservations.ts:198']
+  - id: 'DETECT-001'
+    severity: low
+    finding: 'Identifier detection precedence: email → phone → confirmationNumber. A guest typing an email like "123456789012@example" (digits-only local part) would match EMAIL first (correct). Strict digit-only inputs correctly match phone. Confirmation numbers accept any non-email/non-phone format — no length validation.'
+    suggested_action: 'Consider minimum length check for confirmationNumber (e.g., 4+ chars) to reject accidental typos like single character. Current behavior acceptable for MVP.'
+    suggested_owner: dev
+    refs: ['backend/src/integrations/elevare/reservations.ts:70-98']
+  - id: 'TEST-001'
+    severity: low
+    finding: 'No end-to-end test with real Elevare /global-agent/reservations endpoint. Unit tests mock ElevareClient.request.'
+    suggested_action: 'Add Postman collection test in Story 3.10 for real API validation.'
+    suggested_owner: qa
+
+waiver: { active: false }
+
+evidence:
+  tests_reviewed: 61
+  risks_identified: 0
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    ac_gaps: []
+
+nfr_validation:
+  security:
+    status: PASS
+    notes: 'PII masking for email (first-char + domain) and phone (prefix + last 4). Credentials from env (never hardcoded). Anti-leak type design prevents technical ID exposure. Never-throws contract prevents error detail leakage.'
+  performance:
+    status: PASS
+    notes: 'No cache by design (real-time consultation required — reservations mutate). Single API call per lookup. DEFAULT_LIMIT=10 bounds response size. ElevareClient handles retry/circuit-breaker/timeout at the transport layer.'
+  reliability:
+    status: PASS
+    notes: 'Graceful degradation for all error paths: 404 → not-found (no error flag); 5xx/timeout/circuit → error: true; 401/missing creds → error: true with specific logging; unknown errors → also mapped to graceful result. Response schema flexible (reservations OR results key).'
+  maintainability:
+    status: PASS
+    notes: 'Clear type definitions with documented invariants. Status mapping table extensible. Identifier detection isolated in named function. PII masking reusable. ElevareClient overrideAuth option properly documented.'
+
+recommendations:
+  immediate: []
+  future:
+    - action: 'Consider minimum length validation for confirmation codes'
+      refs: ['backend/src/integrations/elevare/reservations.ts']
+    - action: 'Evaluate strategy for reservations with missing hotelName (filter vs default)'
+      refs: ['backend/src/integrations/elevare/reservations.ts']
+    - action: 'Integration test with real Elevare sandbox (Story 3.10 scope)'
+      refs: ['tests/integration/']

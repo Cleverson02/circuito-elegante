@@ -1,0 +1,63 @@
+schema: 1
+story: '3.8'
+story_title: 'Fallback & Recovery Elegante'
+gate: CONCERNS
+status_reason: 'All 18 ACs met with 115 unit tests passing. Excellent stateless design with Object.freeze immutability, comprehensive JSDoc, defensive error classification, banned-terms enforcement. 1 MEDIUM concern: raw guestPhone in Sentry sessionId is PII exposure. 1 LOW concern: Chatwoot delivery responsibility unclear.'
+reviewer: 'Quinn (Test Architect)'
+updated: '2026-04-05T21:00:00Z'
+
+quality_score: 88
+expires: '2026-04-19T21:00:00Z'
+
+top_issues:
+  - id: 'PII-001'
+    severity: medium
+    finding: 'Raw guestPhone (e.g. +5511999999999) is used as part of sessionId in Sentry tags/extras (fallback.ts:382-383) and in analytics logs (fallback.ts:465, 477, 512). While this is intentional for debugging, it ships PII to Sentry and log aggregators. LGPD considerations for Brazilian market.'
+    suggested_action: 'Hash guestPhone with SHA-256 for Sentry correlation (keeps grouping) OR use a separate sessionId derived from hotelId:hash(guestPhone). Document PII handling decision in fallback.ts.'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:382', 'backend/src/services/fallback.ts:464-480', 'backend/src/services/fallback.ts:509-516']
+  - id: 'INTEGRATION-001'
+    severity: low
+    finding: 'triggerSilentHandover() returns FallbackHandoverSummary but the JSDoc states "the orchestrator is responsible for actually pushing it to Chatwoot" — no concrete consumer in the codebase yet pushes this summary to Chatwoot API. Handover is logged but NOT delivered.'
+    suggested_action: 'Either (1) add a consumer that delivers via Chatwoot client, OR (2) document this as deliberate split — the calling orchestrator (future story) will handle delivery. Add TODO referencing the future story.'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:285-344']
+  - id: 'LOGIC-001'
+    severity: low
+    finding: 'handleElevareFailure signature expects `language: unknown` and validates via validateLanguage. Type-safety could be strengthened by accepting `string | unknown` with runtime validation. Current design defensively accepts unknown which is correct but loses IntelliSense.'
+    suggested_action: 'Consider changing to `language: string | SupportedLanguage` with runtime validation. Low priority — current design works.'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:440']
+
+waiver: { active: false }
+
+evidence:
+  tests_reviewed: 115
+  risks_identified: 1
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+    ac_gaps: []
+
+nfr_validation:
+  security:
+    status: CONCERNS
+    notes: 'PII (phone) embedded in Sentry sessionId and structured logs — see PII-001. originalError in errorContext correctly isolated to attendant-only (AC10). No hardcoded secrets.'
+  performance:
+    status: PASS
+    notes: '100% stateless — no singletons, no caches. 1-retry policy explicitly bounded (AC4). Sentry captureException async but awaited in withScope. Minimal overhead.'
+  reliability:
+    status: PASS
+    notes: 'Defensive classification: unknown errors → api_error (triggers handover — safe default). Object.freeze prevents mutation. Per-call independence allows safe concurrency.'
+  maintainability:
+    status: PASS
+    notes: 'Exceptional JSDoc quality. Clear AC references in comments. Pure module design. Banned-terms list exported for test enforcement. Separate fallback-messages.ts for i18n catalog.'
+
+recommendations:
+  immediate:
+    - action: 'Hash guestPhone before embedding in Sentry sessionId to reduce PII exposure'
+      refs: ['backend/src/services/fallback.ts']
+  future:
+    - action: 'Wire up Chatwoot delivery consumer for FallbackHandoverSummary'
+      refs: ['backend/src/services/fallback.ts', 'backend/src/tools/transfer-to-human.ts']
+    - action: 'Consider LGPD compliance audit for all PII paths in Sentry + structured logs'
+      refs: ['backend/src/services/fallback.ts', 'backend/src/middleware/logging.ts']
