@@ -27,6 +27,7 @@
     "ingest:faq": "node --env-file=.env --import=tsx data/scripts/ingest-faq.ts"
   },
   "dependencies": {
+    "@openai/agents": "^0.8.2",
     "@sentry/node": "^9.0.0",
     "@supabase/supabase-js": "^2.49.0",
     "@t3-oss/env-core": "^0.12.0",
@@ -37,7 +38,7 @@
     "openai": "^6.33.0",
     "postgres": "^3.4.8",
     "winston": "^3.17.0",
-    "zod": "^3.24.0"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
