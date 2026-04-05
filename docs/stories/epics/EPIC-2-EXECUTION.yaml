@@ -1,5 +1,5 @@
 # Epic 2: Stella Core — Pipeline Multi-Agente — Execution Plan
-# Status: READY (blocked by Epic 1)
+# Status: IN PROGRESS (Epic 1 complete 2026-04-04)
 # Owner: @pm (Morgan)
 # Created: 2026-04-02
 
@@ -7,7 +7,7 @@ epic:
   id: EPIC-2
   title: "Stella Core — Pipeline Multi-Agente"
   description: "O cerebro de Stella: 4 subagentes (Intent, Orchestrator, Persona, Safety) + tools + multimodal"
-  status: ready
+  status: in_progress
   priority: P0-critical
   prd_reference: "docs/prd/PRD-Concierge-Digital-Stella.md#epic-2"
   architecture_reference: "docs/architecture/architecture.md#5-agent-pipeline-architecture"
