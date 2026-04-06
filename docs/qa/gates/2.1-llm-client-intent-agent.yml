@@ -1,0 +1,8 @@
+schema: 1
+story: '2.1'
+gate: PASS
+status_reason: 'All 8 ACs met. Intent Agent with OpenAI Agents SDK, 7 intent classification, multi-intent, guardrails, 66 tests passing.'
+reviewer: 'Quinn'
+updated: '2026-04-06T12:00:00Z'
+top_issues: []
+waiver: { active: false }
