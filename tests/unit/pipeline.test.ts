@@ -92,6 +92,10 @@ function makeIntent(overrides: Partial<IntentOutput> = {}): IntentOutput {
   };
 }
 
+function orchResult(output: string, toolOutputs: Record<string, unknown> = {}) {
+  return { output, toolOutputs };
+}
+
 const DEFAULT_INPUT: PipelineInput = {
   message: 'Quais hotéis pet-friendly na Serra Gaúcha?',
   sessionId: 'sess-001',
@@ -111,7 +115,7 @@ beforeEach(() => {
 describe('Pipeline response schema', () => {
   it('returns all required fields in PipelineResult', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('Encontrei 3 hotéis pet-friendly.');
+    mockOrchestrator.mockResolvedValue(orchResult('Encontrei 3 hotéis pet-friendly.'));
     mockValidate.mockResolvedValue({
       approved: true,
       response: 'Encontrei 3 hotéis pet-friendly.',
@@ -133,7 +137,7 @@ describe('Pipeline response schema', () => {
   it('includes the classified intent in result', async () => {
     const intent = makeIntent({ intent: 'RAG', confidence: 0.88 });
     mockClassify.mockResolvedValue(intent);
-    mockOrchestrator.mockResolvedValue('Resposta FAQ.');
+    mockOrchestrator.mockResolvedValue(orchResult('Resposta FAQ.'));
     mockValidate.mockResolvedValue({ approved: true, response: 'Resposta FAQ.' });
 
     const result = await processMessage(DEFAULT_INPUT);
@@ -149,7 +153,7 @@ describe('Pipeline response schema', () => {
 describe('Single intent pipeline — AC1, AC6', () => {
   it('chains Intent → Orchestrator → Safety for single intent', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('Hotel Laje de Pedra aceita pets.');
+    mockOrchestrator.mockResolvedValue(orchResult('Hotel Laje de Pedra aceita pets.'));
     mockValidate.mockResolvedValue({
       approved: true,
       response: 'Hotel Laje de Pedra aceita pets.',
@@ -180,7 +184,7 @@ describe('Single intent pipeline — AC1, AC6', () => {
 
   it('does NOT call generateResponse for single intent (orchestrator handles persona handoff)', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('Resposta.');
+    mockOrchestrator.mockResolvedValue(orchResult('Resposta.'));
     mockValidate.mockResolvedValue({ approved: true, response: 'Resposta.' });
 
     await processMessage(DEFAULT_INPUT);
@@ -190,7 +194,7 @@ describe('Single intent pipeline — AC1, AC6', () => {
 
   it('logs intent classification with sessionId', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('OK');
+    mockOrchestrator.mockResolvedValue(orchResult('OK'));
     mockValidate.mockResolvedValue({ approved: true, response: 'OK' });
 
     await processMessage(DEFAULT_INPUT);
@@ -206,7 +210,7 @@ describe('Single intent pipeline — AC1, AC6', () => {
 
   it('logs pipeline completion with latency', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('OK');
+    mockOrchestrator.mockResolvedValue(orchResult('OK'));
     mockValidate.mockResolvedValue({ approved: true, response: 'OK' });
 
     await processMessage(DEFAULT_INPUT);
@@ -240,7 +244,7 @@ describe('Multi-intent decomposition — AC2, AC3, AC4', () => {
       callOrder.push(`start-${params.intent}`);
       await new Promise((r) => setTimeout(r, 10));
       callOrder.push(`end-${params.intent}`);
-      return `Result for ${params.intent}`;
+      return orchResult(`Result for ${params.intent}`);
     });
 
     mockPersona.mockResolvedValue('Resposta unificada sobre hotéis e FAQ.');
@@ -272,7 +276,7 @@ describe('Multi-intent decomposition — AC2, AC3, AC4', () => {
       subIntents: ['API_SEARCH', 'RAG'],
     });
     mockClassify.mockResolvedValue(intent);
-    mockOrchestrator.mockResolvedValue('Result');
+    mockOrchestrator.mockResolvedValue(orchResult('Result'));
     mockPersona.mockResolvedValue('Unified');
     mockValidate.mockResolvedValue({ approved: true, response: 'Unified' });
 
@@ -292,7 +296,7 @@ describe('Multi-intent decomposition — AC2, AC3, AC4', () => {
     const callOrder: string[] = [];
     mockOrchestrator.mockImplementation(async (params) => {
       callOrder.push(params.intent);
-      return `Result for ${params.intent}`;
+      return orchResult(`Result for ${params.intent}`);
     });
 
     mockPersona.mockResolvedValue('Unified');
@@ -407,7 +411,7 @@ describe('Multi-intent: partial failure — AC7', () => {
 
     mockOrchestrator.mockImplementation(async (params) => {
       if (params.intent === 'RAG') throw new Error('KB unavailable');
-      return `Result for ${params.intent}`;
+      return orchResult(`Result for ${params.intent}`);
     });
 
     mockPersona.mockResolvedValue('Encontrei hotéis. Sobre a FAQ, não consegui encontrar no momento.');
@@ -444,7 +448,7 @@ describe('Multi-intent: partial failure — AC7', () => {
 
     mockOrchestrator.mockImplementation(async (params) => {
       if (params.intent === 'RAG') throw new Error('KB down');
-      return 'OK';
+      return orchResult('OK');
     });
 
     mockPersona.mockResolvedValue('Partial response');
@@ -466,7 +470,7 @@ describe('Multi-intent: partial failure — AC7', () => {
 describe('Safety validation integration', () => {
   it('returns safety-rejected response when validation fails', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue('Resposta com hallucination.');
+    mockOrchestrator.mockResolvedValue(orchResult('Resposta com hallucination.'));
     mockValidate.mockResolvedValue({
       approved: false,
       response: 'Estou verificando as informações...',
@@ -482,13 +486,15 @@ describe('Safety validation integration', () => {
     expect(result.response).toBe('Estou verificando as informações...');
   });
 
-  it('passes toolResults to safety for cross-check in multi-intent', async () => {
+  it('passes structured toolOutputs to safety for cross-check in multi-intent', async () => {
     const intent = makeIntent({
       intent: 'API_SEARCH',
       subIntents: ['RAG'],
     });
     mockClassify.mockResolvedValue(intent);
-    mockOrchestrator.mockResolvedValue('Result');
+    mockOrchestrator.mockResolvedValue(orchResult('Result', {
+      search_hotels: { hotels: [{ name: 'Hotel X' }], count: 1 },
+    }));
     mockPersona.mockResolvedValue('Unified response');
     mockValidate.mockResolvedValue({ approved: true, response: 'Unified response' });
 
@@ -497,8 +503,7 @@ describe('Safety validation integration', () => {
     expect(mockValidate).toHaveBeenCalledWith(
       expect.objectContaining({
         toolResults: expect.objectContaining({
-          API_SEARCH: 'Result',
-          RAG: 'Result',
+          search_hotels: expect.objectContaining({ count: 1 }),
         }),
       }),
     );
@@ -518,7 +523,7 @@ describe('Pipeline source verification — AC6', () => {
       'utf-8',
     );
 
-    expect(source).toContain("import { runOrchestrator }");
+    expect(source).toContain("import { runOrchestrator");
     expect(source).toContain("import { classifyIntent }");
     expect(source).toContain("import { generateResponse }");
     expect(source).toContain("import { validateResponse, SAFE_FALLBACKS }");
@@ -533,5 +538,110 @@ describe('Pipeline source verification — AC6', () => {
     );
 
     expect(source).toContain('Promise.all');
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════
+// Story 2.7 — Hotel Focus E2E via Pipeline (F1 fix)
+// ═══════════════════════════════════════════════════════════════
+
+describe('Story 2.7 — hotelFocus tracking end-to-end', () => {
+  it('extracts hotelFocus from single-intent searchHotels result', async () => {
+    mockClassify.mockResolvedValue(makeIntent({ intent: 'API_SEARCH' }));
+    mockOrchestrator.mockResolvedValue(orchResult(
+      'Encontrei o Hotel Laje de Pedra na Serra Gaúcha.',
+      {
+        search_hotels: {
+          hotels: [{ id: 'h1', name: 'Hotel Laje de Pedra', region: 'Serra Gaúcha' }],
+          count: 1,
+        },
+      },
+    ));
+    mockValidate.mockResolvedValue({
+      approved: true,
+      response: 'Encontrei o Hotel Laje de Pedra na Serra Gaúcha.',
+    });
+
+    const result = await processMessage({
+      message: 'Hotéis na Serra Gaúcha',
+      sessionId: 'sess-focus-001',
+    });
+
+    expect(result.hotelFocus).toBe('Hotel Laje de Pedra');
+  });
+
+  it('extracts hotelFocus from multi-intent with searchHotels', async () => {
+    mockClassify.mockResolvedValue(makeIntent({
+      intent: 'API_SEARCH',
+      subIntents: ['RAG'],
+    }));
+    mockOrchestrator.mockImplementation(async (params) => {
+      if (params.intent === 'API_SEARCH') {
+        return orchResult('Hotels found', {
+          search_hotels: {
+            hotels: [{ name: 'Hotel Serrano' }],
+            count: 1,
+          },
+        });
+      }
+      return orchResult('FAQ answer');
+    });
+    mockPersona.mockResolvedValue('Unified response');
+    mockValidate.mockResolvedValue({ approved: true, response: 'Unified response' });
+
+    const result = await processMessage({
+      message: 'Hotéis com piscina e horário do check-in',
+      sessionId: 'sess-focus-002',
+    });
+
+    expect(result.hotelFocus).toBe('Hotel Serrano');
+  });
+
+  it('follow-up without hotel uses persisted hotelFocus', async () => {
+    // Simulate existing session context with hotelFocus
+    const existingCtx = {
+      hotelFocus: 'Hotel Laje de Pedra',
+      conversationHistory: [],
+      preferences: {},
+      updatedAt: '2026-04-06T00:00:00.000Z',
+    };
+    mockSessionRedis.get.mockResolvedValueOnce(JSON.stringify(existingCtx));
+
+    mockClassify.mockResolvedValue(makeIntent({ intent: 'RAG' }));
+    mockOrchestrator.mockResolvedValue(orchResult('O check-in é às 15h.'));
+    mockValidate.mockResolvedValue({
+      approved: true,
+      response: 'O check-in é às 15h.',
+    });
+
+    await processMessage({
+      message: 'Qual o horário do check-in?',
+      sessionId: 'sess-followup',
+    });
+
+    // Orchestrator should receive the persisted hotelFocus
+    expect(mockOrchestrator).toHaveBeenCalledWith(
+      expect.objectContaining({
+        sessionContext: expect.objectContaining({
+          hotelFocus: 'Hotel Laje de Pedra',
+        }),
+      }),
+    );
+  });
+
+  it('returns null hotelFocus when no hotels in results', async () => {
+    mockClassify.mockResolvedValue(makeIntent({ intent: 'CHAT' }));
+    mockOrchestrator.mockResolvedValue(orchResult('Bom dia! Como posso ajudar?'));
+    mockValidate.mockResolvedValue({
+      approved: true,
+      response: 'Bom dia! Como posso ajudar?',
+    });
+
+    const result = await processMessage({
+      message: 'Bom dia',
+      sessionId: 'sess-no-hotel',
+    });
+
+    expect(result.hotelFocus).toBeNull();
   });
 });

@@ -174,6 +174,28 @@ export const orchestratorAgent = new Agent({
     'Orchestrates hotel search, FAQ lookup, and human transfer. Hands off to the Persona Agent for natural language response generation.',
 });
 
+// ─── Tool Output Collection (Story 2.7) ──────────────────────
+
+interface RunItemLike {
+  type: string;
+  rawItem?: { type?: string; name?: string };
+  output?: unknown;
+}
+
+function collectToolOutputs(newItems: RunItemLike[]): Record<string, unknown> {
+  const outputs: Record<string, unknown> = {};
+  for (const item of newItems) {
+    if (
+      item.type === 'tool_call_output_item' &&
+      item.rawItem?.type === 'function_call_result' &&
+      item.rawItem.name
+    ) {
+      outputs[item.rawItem.name] = item.output;
+    }
+  }
+  return outputs;
+}
+
 // ─── Public API ───────────────────────────────────────────────
 
 export interface OrchestratorInput {
@@ -186,9 +208,14 @@ export interface OrchestratorInput {
   };
 }
 
+export interface OrchestratorResult {
+  output: string;
+  toolOutputs: Record<string, unknown>;
+}
+
 export async function runOrchestrator(
   input: OrchestratorInput,
-): Promise<string> {
+): Promise<OrchestratorResult> {
   const contextParts: string[] = [
     `Intent: ${input.intent}`,
     `Language: ${input.language}`,
@@ -211,13 +238,21 @@ export async function runOrchestrator(
     const result = await run(orchestratorAgent, message);
     const latency = Date.now() - start;
 
+    const toolOutputs = collectToolOutputs(
+      result.newItems as unknown as RunItemLike[],
+    );
+
     logger.info('orchestrator_run_complete', {
       intent: input.intent,
       language: input.language,
       latencyMs: latency,
+      toolsCollected: Object.keys(toolOutputs),
     });
 
-    return result.finalOutput as string;
+    return {
+      output: result.finalOutput as string,
+      toolOutputs,
+    };
   } catch (err) {
     const latency = Date.now() - start;
 
