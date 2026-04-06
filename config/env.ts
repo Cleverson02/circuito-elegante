@@ -23,6 +23,7 @@ export const env = createEnv({
     EVOLUTION_API_URL: z.string().url().optional(),
     EVOLUTION_API_KEY: z.string().min(1).optional(),
     EVOLUTION_INSTANCE_NAME: z.string().default('stella-whatsapp'),
+    EVOLUTION_WEBHOOK_SECRET: z.string().min(1).optional(), // Story 4.1 — webhook HMAC validation
 
     // Elevare API — required from Epic 3+
     ELEVARE_API_URL: z.string().url().optional(),
