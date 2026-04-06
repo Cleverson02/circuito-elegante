@@ -1,0 +1,12 @@
+schema: 1
+story: '2.6'
+gate: CONCERNS
+status_reason: 'All 7 ACs met. Pipeline E2E functional with multi-intent parallel execution. Minor concern: error context in catch blocks could distinguish failure types for better fallback routing.'
+reviewer: 'Quinn'
+updated: '2026-04-06T12:00:00Z'
+top_issues:
+  - id: 'MNT-001'
+    severity: low
+    finding: 'Pipeline catch block uses generic error logging without distinguishing timeout vs API failure vs invalid params'
+    suggested_action: 'Consider adding ToolFailureReason enum for richer error context in future iteration'
+waiver: { active: false }

@@ -1,0 +1,12 @@
+schema: 1
+story: '2.9'
+gate: CONCERNS
+status_reason: 'All 7 ACs met in code (commit b8df4c7). Safety Agent with 5-point checklist, cross-check validation, APPROVED/REJECTED flow implemented. Concern: story file tasks not marked as completed by @dev.'
+reviewer: 'Quinn'
+updated: '2026-04-06T12:00:00Z'
+top_issues:
+  - id: 'DOC-002'
+    severity: low
+    finding: 'Story file 2.9.story.md has all task checkboxes unchecked despite code being implemented and committed'
+    suggested_action: '@dev should update story checkboxes to reflect completed state'
+waiver: { active: false }

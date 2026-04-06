@@ -4,6 +4,7 @@
  */
 export const REDIS_KEYS = {
   session: (id: string) => `session:${id}`,
+  sessionCtx: (id: string) => `session_ctx:${id}`,
   request: (id: string) => `request:${id}`,
   typingJob: (id: string) => `typing_job:${id}`,
   rateLimit: (id: string) => `rate_limit:${id}`,
