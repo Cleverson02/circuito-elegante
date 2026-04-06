@@ -7,6 +7,11 @@ import { registerRateLimiting } from './middleware/rate-limit.js';
 import { registerRoutes } from './api/routes.js';
 import { getRedisClient, disconnectRedis } from './state/redis-client.js';
 import { registerVectordbHealthChecker } from './vectordb/faq-store.js';
+import { configureProcessorDeps } from './webhooks/elevare-processor.js';
+import { generateResponse } from './agents/persona-agent.js';
+import { regeneratePaymentLink } from './integrations/elevare/quotations.js';
+import { getElevareConfig } from './integrations/elevare/config.js';
+import { ElevareClient } from './integrations/elevare/client.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -20,10 +25,35 @@ async function bootstrap(): Promise<void> {
   }
 
   // Initialize Redis (registers health checker)
-  getRedisClient();
+  const redisClient = getRedisClient();
 
   // Register vectordb health checker
   registerVectordbHealthChecker();
+
+  // Configure webhook processor dependencies (Story 3.7 — FR25)
+  try {
+    const elevareConfig = getElevareConfig();
+    const elevareClient = new ElevareClient(elevareConfig, logger);
+    configureProcessorDeps({
+      generateResponse,
+      regeneratePaymentLink: (quotationId: string) =>
+        regeneratePaymentLink(elevareClient, redisClient, logger, quotationId),
+      deliverMessage: async (sessionId: string, message: string): Promise<void> => {
+        // TODO: integrate with Evolution API / Agent Pipeline when available (Epic 4).
+        // For now, log delivery intent so webhooks process cleanly in dev/staging.
+        logger.info('webhook_follow_up_delivery', {
+          sessionId,
+          messageLength: message.length,
+        });
+      },
+      logger,
+    });
+    logger.info('Webhook processor configured');
+  } catch (err) {
+    logger.warn('Webhook processor not configured — Elevare webhook follow-ups disabled', {
+      error: err instanceof Error ? err.message : String(err),
+    });
+  }
 
   const app = Fastify({
     logger: false, // Using Winston instead

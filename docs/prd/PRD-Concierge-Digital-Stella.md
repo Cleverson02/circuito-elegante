@@ -995,7 +995,7 @@ STEP 3: POST /quotations → { quotationId, paymentLink, expiresAt }
 - 3.9: Consulta de Status de Reservas (Pós-Venda)
 - 3.10: Integration Tests (Postman Fixture)
 
-**Detalhamento completo:** Pendente aprovação Epic 2.
+**Detalhamento completo:** ✅ `docs/stories/epics/EPIC-3.md` (formalizado 2026-04-05)
 
 ---
 

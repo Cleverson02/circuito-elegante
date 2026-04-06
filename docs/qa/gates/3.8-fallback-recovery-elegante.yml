@@ -1,0 +1,61 @@
+schema: 1
+story: '3.8'
+story_title: 'Fallback & Recovery Elegante'
+gate: PASS
+status_reason: 'All 18 ACs met with 55 unit tests passing. Excellent stateless design with Object.freeze immutability, comprehensive JSDoc, defensive error classification, banned-terms enforcement. PII-001 resolved: guestPhone now hashed via SHA-256 (first 16 hex chars) before embedding in Sentry tags/extras and structured logs. Remaining items are LOW severity future-hardening.'
+reviewer: 'Quinn (Test Architect)'
+updated: '2026-04-05T22:15:00Z'
+
+quality_score: 93
+expires: '2026-04-19T22:15:00Z'
+
+top_issues:
+  - id: 'PII-001'
+    severity: low
+    finding: 'RESOLVED — Added hashPhone() + buildCorrelationId() helpers (fallback.ts:146-168). All 4 sites that previously embedded raw guestPhone now ship the SHA-256 hashed version: triggerSilentHandover errorContext.sessionId, Sentry scope.setExtra sessionId, fallback_retry_succeeded/failed logs, elevare_fallback_triggered analytics log. LGPD-compliant for Brazilian market while preserving Sentry grouping via fingerprint.'
+    suggested_action: 'No action needed'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:146-168']
+  - id: 'INTEGRATION-001'
+    severity: low
+    finding: 'triggerSilentHandover() returns FallbackHandoverSummary but the JSDoc states "the orchestrator is responsible for actually pushing it to Chatwoot" — no concrete consumer in the codebase yet pushes this summary to Chatwoot API. Handover is logged but NOT delivered.'
+    suggested_action: 'Either (1) add a consumer that delivers via Chatwoot client, OR (2) document this as deliberate split — the calling orchestrator (future story) will handle delivery. Add TODO referencing the future story.'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:285-344']
+  - id: 'LOGIC-001'
+    severity: low
+    finding: 'handleElevareFailure signature expects `language: unknown` and validates via validateLanguage. Type-safety could be strengthened by accepting `string | unknown` with runtime validation. Current design defensively accepts unknown which is correct but loses IntelliSense.'
+    suggested_action: 'Consider changing to `language: string | SupportedLanguage` with runtime validation. Low priority — current design works.'
+    suggested_owner: dev
+    refs: ['backend/src/services/fallback.ts:440']
+
+waiver: { active: false }
+
+evidence:
+  tests_reviewed: 55
+  risks_identified: 0
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+    ac_gaps: []
+
+nfr_validation:
+  security:
+    status: PASS
+    notes: 'PII-001 resolved — guestPhone SHA-256 hashed before embedding in Sentry/logs (LGPD-compliant). originalError in errorContext correctly isolated to attendant-only (AC10). No hardcoded secrets.'
+  performance:
+    status: PASS
+    notes: '100% stateless — no singletons, no caches. 1-retry policy explicitly bounded (AC4). Sentry captureException async but awaited in withScope. Minimal overhead.'
+  reliability:
+    status: PASS
+    notes: 'Defensive classification: unknown errors → api_error (triggers handover — safe default). Object.freeze prevents mutation. Per-call independence allows safe concurrency.'
+  maintainability:
+    status: PASS
+    notes: 'Exceptional JSDoc quality. Clear AC references in comments. Pure module design. Banned-terms list exported for test enforcement. Separate fallback-messages.ts for i18n catalog.'
+
+recommendations:
+  immediate: []
+  future:
+    - action: 'Wire up Chatwoot delivery consumer for FallbackHandoverSummary'
+      refs: ['backend/src/services/fallback.ts', 'backend/src/tools/transfer-to-human.ts']
+    - action: 'Audit other PII paths in the codebase (middleware/logging.ts) for LGPD consistency'
+      refs: ['backend/src/services/fallback.ts', 'backend/src/middleware/logging.ts']

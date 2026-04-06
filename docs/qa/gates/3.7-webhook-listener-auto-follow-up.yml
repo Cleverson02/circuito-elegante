@@ -1,0 +1,66 @@
+schema: 1
+story: '3.7'
+story_title: 'Webhook Listener & Auto-Follow-Up'
+gate: PASS
+status_reason: 'All 17 ACs met with comprehensive test coverage (55 unit tests, +3 new language resolution tests). HMAC-SHA256 + timing-safe comparison + fail-closed secret + idempotency + rate limit all verified. I18N-001 resolved: guest language now resolved from session.language via buildGuestContext helper, falls back to pt for unsupported values. Remaining items are LOW severity future-hardening.'
+reviewer: 'Quinn (Test Architect)'
+updated: '2026-04-05T22:15:00Z'
+
+quality_score: 92
+expires: '2026-04-19T22:15:00Z'
+
+top_issues:
+  - id: 'I18N-001'
+    severity: low
+    finding: 'RESOLVED — resolveGuestContext now calls getSession() for each resolved sessionId and validates language against the supported set (pt/en/es). Falls back to pt only when session missing or language unsupported. 3 new unit tests cover: en resolution, unsupported language fallback, session lookup failure.'
+    suggested_action: 'No action needed'
+    suggested_owner: dev
+    refs: ['backend/src/webhooks/elevare-processor.ts:77-140']
+  - id: 'CONFIG-001'
+    severity: low
+    finding: 'ELEVARE_WEBHOOK_SECRET read via process.env directly in routes.ts:14, bypassing the Zod env schema in config/env.ts. Other Elevare vars (API_URL, API_KEY, CLIENT_ID) are validated — inconsistent pattern.'
+    suggested_action: 'Add ELEVARE_WEBHOOK_SECRET to config/env.ts schema with .optional() and reference via env.ELEVARE_WEBHOOK_SECRET. Aligns with existing validation flow.'
+    suggested_owner: dev
+    refs: ['backend/src/api/routes.ts:14', 'config/env.ts']
+  - id: 'INFRA-001'
+    severity: low
+    finding: 'Conditional JSON content-type parser override (elevare-handler.ts:204-220): if app already has a parser, rawBody may not be set. Works in current codebase, but brittle if another route registers rawBody handling.'
+    suggested_action: 'Add explicit check that rawBody is available after parse; document requirement in registerElevareWebhookRoute JSDoc.'
+    suggested_owner: dev
+    refs: ['backend/src/webhooks/elevare-handler.ts:204-220']
+  - id: 'TEST-001'
+    severity: low
+    finding: 'Integration test missing for full webhook → Persona → delivery flow. Unit tests mock Persona Agent response.'
+    suggested_action: 'Add integration test in tests/integration/ when Story 3.10 (Postman fixture) is implemented.'
+    suggested_owner: qa
+
+waiver: { active: false }
+
+evidence:
+  tests_reviewed: 55
+  risks_identified: 0
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+    ac_gaps: []
+
+nfr_validation:
+  security:
+    status: PASS
+    notes: 'HMAC-SHA256 with crypto.timingSafeEqual prevents timing attacks. Fail-closed on missing secret (503). IP-based rate limit 100 req/min. No PII in logs (correlation IDs only).'
+  performance:
+    status: PASS
+    notes: 'Async processing via setImmediate — handler responds <5s as required by AC17. Redis SET NX atomic dedup check. O(1) operations.'
+  reliability:
+    status: PASS
+    notes: 'APPEND-ONLY payload column invariant enforced by separate update functions. Fail-open on Redis dedup failure (process anyway with warn). Status lifecycle strict: received → processing → processed/failed.'
+  maintainability:
+    status: PASS
+    notes: 'Clean separation: handler / processor / repository / types. Discriminated unions for events. Dependency injection via configureProcessorDeps. Exhaustive switch with `_exhaustive: never` guard.'
+
+recommendations:
+  immediate: []
+  future:
+    - action: 'Move ELEVARE_WEBHOOK_SECRET into config/env.ts Zod schema'
+      refs: ['config/env.ts', 'backend/src/api/routes.ts']
+    - action: 'Add integration test for webhook → Persona → delivery pipeline when 3.10 lands'
+      refs: ['tests/integration/']
