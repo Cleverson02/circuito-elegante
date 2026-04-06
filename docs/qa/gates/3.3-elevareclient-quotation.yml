@@ -1,0 +1,12 @@
+schema: 1
+story: '3.3'
+gate: CONCERNS
+status_reason: 'All 15 ACs met. Quotation CRUD with state machine, dynamic TTL, requestId isolation (FR24), payment link regeneration (FR29), validity extension (FR30). Moderate concern: regeneratePaymentLink and extendQuotationValidity lack retry logic for transient 5xx failures.'
+reviewer: 'Quinn'
+updated: '2026-04-06T16:00:00Z'
+top_issues:
+  - id: 'REL-001'
+    severity: medium
+    finding: 'regeneratePaymentLink() and extendQuotationValidity() make direct API calls without retry. Transient 5xx in webhook recovery path leaves guest without payment link.'
+    suggested_action: 'Wrap with single retry + backoff, or delegate to fallback module retry logic'
+waiver: { active: false }
