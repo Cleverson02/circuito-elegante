@@ -34,6 +34,25 @@ export const GuardrailOutput = z.object({
 });
 export type GuardrailOutput = z.infer<typeof GuardrailOutput>;
 
+// --- Safety Agent Types ---
+
+export const SafetyCategory = z.enum([
+  'persona_break',
+  'hallucination',
+  'inappropriate_tone',
+  'security_concern',
+  'language_mismatch',
+]);
+export type SafetyCategory = z.infer<typeof SafetyCategory>;
+
+export const SafetyOutput = z.object({
+  approved: z.boolean(),
+  category: SafetyCategory.optional(),
+  explanation: z.string().optional(),
+  safeResponse: z.string().optional(),
+});
+export type SafetyOutput = z.infer<typeof SafetyOutput>;
+
 // --- Model Configuration ---
 
 export const MODELS = {
