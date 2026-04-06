@@ -221,6 +221,15 @@ describe('Orchestrator tool logging — AC7', () => {
     expect(successCalls).toBe(3);
     expect(errorCalls).toBe(3);
   });
+
+  it('uses logger.warn for error cases (F1 fix)', () => {
+    const source = readFileSync(
+      join(__dirname, '../../backend/src/agents/orchestrator.ts'),
+      'utf-8',
+    );
+    // logToolCall routes to logger.warn when success=false
+    expect(source).toContain('success ? logger.info.bind(logger) : logger.warn.bind(logger)');
+  });
 });
 
 // ═════���═════════════════════════════════════════════════════════
@@ -276,5 +285,39 @@ describe('Orchestrator tool fallback — AC8', () => {
     expect(source).toMatch(
       /catch.*err[\s\S]*?return\s*\{[\s\S]*?transferred:\s*false/,
     );
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════
+// runOrchestrator Error Handling (F2 fix)
+// ═══════════════════════════════════════════════════════════════
+
+describe('runOrchestrator error handling — F2 fix', () => {
+  it('wraps run() in try/catch', () => {
+    const source = readFileSync(
+      join(__dirname, '../../backend/src/agents/orchestrator.ts'),
+      'utf-8',
+    );
+    // Verify try/catch around run(orchestratorAgent, message)
+    expect(source).toMatch(
+      /try\s*\{[\s\S]*?run\(orchestratorAgent,\s*message\)[\s\S]*?\}\s*catch/,
+    );
+  });
+
+  it('logs failure with logger.warn on run() error', () => {
+    const source = readFileSync(
+      join(__dirname, '../../backend/src/agents/orchestrator.ts'),
+      'utf-8',
+    );
+    expect(source).toContain("logger.warn('orchestrator_run_failed'");
+  });
+
+  it('uses Language type from types.ts (F3 fix)', () => {
+    const source = readFileSync(
+      join(__dirname, '../../backend/src/agents/orchestrator.ts'),
+      'utf-8',
+    );
+    expect(source).toContain("type Language } from './types.js'");
+    expect(source).toContain('language: Language');
   });
 });

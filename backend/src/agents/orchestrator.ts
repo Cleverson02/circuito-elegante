@@ -11,7 +11,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { Agent, run, tool } from '@openai/agents';
-import { MODELS } from './types.js';
+import { MODELS, type Language } from './types.js';
 import { personaAgent } from './persona-agent.js';
 import { SearchHotelsParams, searchHotels } from '../tools/search-hotels.js';
 import { QueryKBParams, queryKnowledgeBase } from '../tools/query-knowledge-base.js';
@@ -56,7 +56,8 @@ function logToolCall(
   success: boolean,
   meta?: Record<string, unknown>,
 ): void {
-  logger.info('orchestrator_tool_call', {
+  const logFn = success ? logger.info.bind(logger) : logger.warn.bind(logger);
+  logFn('orchestrator_tool_call', {
     tool: toolName,
     latencyMs,
     success,
@@ -178,7 +179,7 @@ export const orchestratorAgent = new Agent({
 export interface OrchestratorInput {
   intent: string;
   message: string;
-  language: 'pt' | 'en' | 'es';
+  language: Language;
   sessionContext?: {
     guestName?: string;
     hotelFocus?: string;
@@ -205,14 +206,28 @@ export async function runOrchestrator(
   const message = contextParts.join('\n');
 
   const start = Date.now();
-  const result = await run(orchestratorAgent, message);
-  const latency = Date.now() - start;
 
-  logger.info('orchestrator_run_complete', {
-    intent: input.intent,
-    language: input.language,
-    latencyMs: latency,
-  });
+  try {
+    const result = await run(orchestratorAgent, message);
+    const latency = Date.now() - start;
 
-  return result.finalOutput as string;
+    logger.info('orchestrator_run_complete', {
+      intent: input.intent,
+      language: input.language,
+      latencyMs: latency,
+    });
+
+    return result.finalOutput as string;
+  } catch (err) {
+    const latency = Date.now() - start;
+
+    logger.warn('orchestrator_run_failed', {
+      intent: input.intent,
+      language: input.language,
+      latencyMs: latency,
+      error: err instanceof Error ? err.message : String(err),
+    });
+
+    throw err;
+  }
 }
