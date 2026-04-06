@@ -8,10 +8,8 @@
  * Agent module (which uses import.meta — incompatible with ts-jest CJS).
  */
 
-import { z } from 'zod';
 import {
   SafetyOutput,
-  SafetyCategory,
 } from '../../backend/src/agents/types';
 
 // ─── Mock external deps ────────────────────────────────────────
