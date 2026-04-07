@@ -1,0 +1,221 @@
+{
+  "hotel_slug": "casa-turquesa",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:35:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.99,
+  "completeness": 0.95,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+  "enrichment": {
+    "website_url": "https://www.casaturquesa.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/xC9VV8KNUJvt3kAS9",
+    "description": "Hotel de luxo intimista que combina elegância clássica com o charme discreto de um refúgio exclusivo. Com apenas 09 suítes cuidadosamente decoradas, oferece uma experiência personalizada e tranquila, ideal para hóspedes exigentes que buscam conforto, privacidade e sofisticação.",
+    "lodging_type": "Hotel Boutique",
+    "room_types": [
+      {
+        "name": "Suíte Luxo",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Master",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Master com Hidromassagem",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte para 3 pessoas",
+        "max_guests": 3
+      }
+    ],
+    "total_rooms": 9,
+    "room_amenities": "Roupas de cama e toalhas Trussard, havaianas, ecobags, chocolates personalizados, livro de receita da Casa. Shampoo, condicionador, hidratante, sabonete líquido/em barra Murumuru da marca Avatim. TV, minibar.",
+    "parking": {
+      "has_parking": false,
+      "description": "Sem estacionamento privativo. Hóspedes estacionam em rua (sistema rotativo, R$3/hora) ou estacionamento público a 50m. Sugestão: descarregar bagagens na porta e estacionar depois. App Paraty Rotativo recomendado."
+    },
+    "pool_description": "Piscina/jacuzzi aquecida na área central da Casa",
+    "pool_heated": true,
+    "leisure_items": [
+      "passeios de barco",
+      "massagens",
+      "trilhas",
+      "praias",
+      "alambiques",
+      "quilombo"
+    ],
+    "wellness": "Massagens terceirizadas, porém realizadas na pousada",
+    "event_space": {
+      "has_events": false,
+      "description": "Espaços sociais disponíveis, mas não promovem eventos na Casa"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Boas condições e velocidade"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Bar Casa Turquesa",
+        "cuisine": "Comidinhas variadas",
+        "description": "Bar com comidinhas variadas feitas na Casa: saladas, raviólis, quiches, casquinha de siri, ceviche, dadinhos de tapioca, colherinhas de carne seca"
+      }
+    ],
+    "meals_included": "Café da manhã e chá da tarde com bolinhos feitos na hora",
+    "special_dining": "Cesta de piquenique para passeios de barcos e praias. Indicações de restaurantes parceiros com excelentes experiências gastronômicas.",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:30",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, sem cobrança adicional quando possível",
+    "cancellation_policy": "30 dias antes: reembolso total (-5% se cartão crédito). 29-15 dias: carta de crédito válida 1 ano. Menos de 15 dias: sem reembolso.",
+    "children_policy": "Aceita crianças/adolescentes a partir de 12 anos apenas (sem estrutura para menores)",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aeroporto de Paraty (pequeno porte) a 1700m = 8 minutos de carro",
+    "transfer": {
+      "available": true,
+      "is_free": null,
+      "description": "Serviços de transfer terceirizados"
+    },
+    "nearby_attractions": "Paraty centro histórico, praias, alambiques, quilombo",
+    "how_to_get_there": "Aeroporto de Paraty a 8 minutos. Centro histórico de Paraty próximo.",
+    "special_programming": null,
+    "hotel_concierge_services": "Concierge desde o início da reserva. Programação personalizada conforme necessidade do hóspede. Dicas para tornar estadia mais agradável.",
+    "activities_tours": [
+      "Passeios de barco (terceirizados)",
+      "Trilhas (terceirizadas)",
+      "Massagens (terceirizadas)",
+      "Visitas a praias",
+      "Visitas a alambiques",
+      "Visitas a quilombo"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Apenas 9 suítes cuidadosamente decoradas. Atendimento personalizado focado no bem-estar individual. Piscina/jacuzzi aquecida. Café da manhã e chá da tarde inclusos. Localização a 8 minutos do aeroporto de Paraty. Próximo ao centro histórico de Paraty. Elegância e sofisticação.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$$",
+    "guest_faqs": [
+      {
+        "q": "Aceitam crianças?",
+        "a": "Apenas a partir de 12 anos de idade, pois não temos estrutura para atendê-las",
+        "source": "questionnaire"
+      },
+      {
+        "q": "Qual é a dúvida mais frequente?",
+        "a": "Nossos hóspedes são previamente informados sobre o funcionamento do hotel e da cidade, então não costumam ter dúvidas.",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "estacionamento",
+        "objection": "Como faço para estacionar?",
+        "response": "Não temos estacionamento privativo. Sugerimos descarregar bagagens na porta e estacionar na rua (sistema rotativo, R$3/hora, recomendamos app Paraty Rotativo) ou em estacionamento público a 50m.",
+        "source": "questionnaire"
+      },
+      {
+        "category": "crianças",
+        "objection": "Posso trazer crianças?",
+        "response": "Aceitamos apenas a partir de 12 anos de idade, pois não temos estrutura para atendimento de menores.",
+        "source": "questionnaire"
+      }
+    ],
+    "attention_points": [
+      "Sem estacionamento privativo — sistema rotativo na rua (R$3/h)",
+      "Apenas crianças/adolescentes a partir de 12 anos",
+      "Hotel com apenas 9 suítes — capacidade muito limitada",
+      "Pagamento 100% antecipado",
+      "Cancelamento <15 dias: sem reembolso",
+      "Transferir para humano: dúvidas não cobertas ou conforme pedido do hóspede"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Apenas 9 suítes exclusivas. Atendimento personalizado. Piscina/jacuzzi aquecida. Café da manhã + chá da tarde. Sofisticação e elegância. 8 minutos do aeroporto.",
+      "luxo": "Hotel ultra-exclusivo com 9 suítes. Decoração cuidadosa. Amenities premium (Trussard, Avatim Murumuru). Concierge dedicado. Foco no bem-estar individual.",
+      "eventos": "Espaços sociais disponíveis para eventos íntimos, mas não promovem eventos na Casa — ideal para privacidade."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-turquesa-paraty-rj/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-07T03:35:00Z",
+      "last_updated": "2026-04-07T03:35:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "523-662",
+          "fields_extracted": 29
+        },
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/casa-turquesa-paraty-rj/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Paraty, RJ",
+      "payment_policy": "100% antecipado. Amex, Visa, Master. Parcelamento até 3x (Visa/Master apenas).",
+      "quality_score": 0.99,
+      "completeness": 0.95,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "accessibility",
+        "gym"
+      ],
+      "experience": "praia",
+      "destination": "Centro Histórico de Paraty",
+      "has_api": true,
+      "elevare_hotel_id": 2612,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Casa Turquesa",
+    "municipality": "Paraty",
+    "state_code": "RJ",
+    "region": "sudeste"
+  }
+}

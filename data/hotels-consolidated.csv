@@ -1,0 +1,93 @@
+slug,nome,municipio,uf,api_integrada,cupom_bradesco,hotel_id,regiao,experiencia,destino
+atins-charme,Atins Charme,Barreirinhas,MA,SIM,SIM,17874,nordeste,praia,Lençóis Maranhenses
+bahia-bonita-hotel-boutique-quadrado,Bahia Bonita Hotel Boutique Quadrado,Trancoso,BA,SIM,SIM,6588,nordeste,praia,Trancoso
+baia-das-caraubas,Baia das Caraubas,Camocin,CE,NÃO,NÃO,,nordeste,praia,Rota das Emoções
+belmond-copacabana-palace,Belmond Copacabana Palace,Rio de Janeiro,RJ,NÃO,NÃO,,sudeste,praia,Copacabana
+botanique-hotel-experience,Botanique Hotel Experience,Bairro dos Mellos,SP,NÃO,NÃO,,sudeste,serra,Campos do Jordão
+bupitanga-hotel,Bupitanga Hotel,Praia da Pipa,RN,SIM,SIM,8574,nordeste,praia,Pipa
+cabanas-do-vale,Cabanas do Vale,Petrópolis,RJ,NÃO,NÃO,,sudeste,serra,Itaipava
+caiman-pantanal,Caiman Pantanal,Miranda,MS,NÃO,NÃO,,Centro-oeste,campo,Pantanal 
+canto-do-irere-boutique-hotel,Canto do Irere Boutique Hotel,Atibaia,SP,NÃO,NÃO,,sudeste,campo,Interior de São Paulo
+carmel-charme,Carmel Charme,Aquiraz,CE,NÃO,NÃO,,nordeste,praia,Aquiraz
+carmel-taiba-exclusive-resort,Carmel Taiba Exclusive Resort,São Gonçalo do Amarante,CE,NÃO,NÃO,,nordeste,praia,Praia da Taíba
+casa-da-montanha-hotel,Casa da Montanha Hotel,Gramado,RS,NÃO,NÃO,,sul,serra,Gramado
+casa-de-santo-antonio,Casa de Santo Antonio,Parnaiba,PI,NÃO,NÃO,,nordeste,praia,Delta do Parnaíba
+casa-do-arandis,Casa do Arandis,Maraú,BA,NÃO,NÃO,,nordeste,praia,Algodões
+casa-marambaia,Casa Marambaia,Petropolis,RJ,NÃO,NÃO,,sudeste,serra,Correas
+casa-nah-praia,Casa NAH Praia,Passo de Camaragibe,AL,NÃO,NÃO,,nordeste,praia,Praia do Marceneiro
+casa-poema,Casa Poema,Alto Paraiso de Goiás,GO,NÃO,NÃO,,Centro-oeste,campo,Chapada dos Veadeiros
+casa-rosa,Casa Rosa,Petrópolis,RJ,NÃO,NÃO,,sudeste,serra,Serra Fluminense
+casa-turquesa,Casa Turquesa,Paraty,RJ,SIM,NÃO,2612,sudeste,praia,Centro Histórico de Paraty
+clara-arte-resort,Clara Arte Resort,Brumadinho,MG,NÃO,NÃO,,sudeste,campo,Inhotim
+clara-dourado-resort,Clara Dourado Resort,Dourado,SP,SIM,NÃO,13652,sudeste,Campo,Interior de São Paulo
+clara-ibiuna-resort,Clara Ibiúna Resort,Ibiúna,SP,SIM,NÃO,13663,sudeste,Campo,Interior de São Paulo
+faimont-rio-de-janeiro-copacabana,Faimont Rio de Janeiro Copacabana,Rio de Janeiro,RJ,NÃO,NÃO,,sudeste,praia,Copacabana
+fasano-angra-dos-reis,Fasano Angra dos Reis,Angra dos Reis,RJ,NÃO,NÃO,,sudeste,praia,Angra
+fasano-bh,Fasano - BH,Belo Horizonte,MG,NÃO,NÃO,,sudeste,cidade,Lourdes
+fasano-boavista,Fasano - Boavista,Porto Feliz,SP,NÃO,NÃO,,sudeste,campo,Interior de São Paulo
+fasano-rj,Fasano - RJ,Rio de Janeiro,RJ,NÃO,NÃO,,sudeste,praia,Ipanema
+fasano-sp,Fasano - SP,São Paulo,SP,NÃO,NÃO,,sudeste,cidade,Cerqueira César
+fasano-ssa,Fasano - SSA,Salvador,BA,NÃO,NÃO,,nordeste,cidade,Salvador
+fazenda-moreias,Fazenda Moréias,Camocim,CE,NÃO,NÃO,,nordeste,praia,Camocim
+fazenda-sao-luiz-da-boasorte,Fazenda São Luiz da Boasorte,Vassouras,RJ,NÃO,NÃO,,sudeste,serra,serra Fluminense
+grande-hotel-termas-araxa,Grande Hotel Termas Araxa,Araxa,MG,NÃO,NÃO,,sudeste,campo,Araxá
+hcm-hotel-corais-de-manaira,HCM Hotel Corais de Manaíra,João Pessoa,PB,NÃO,NÃO,,nordeste,praia,Manaíra
+hotel-belmond-cataratas,Hotel Belmond Cataratas,Foz do Iguaçu,PR,NÃO,NÃO,,sul,campo,Cataratas do Iguaçu
+hotel-emiliano-rj,Hotel Emiliano - RJ,Rio de Janeiro,RJ,NÃO,NÃO,,sudeste,praia,Copacabana
+hotel-emiliano-sp,Hotel Emiliano - SP,São Paulo,SP,NÃO,NÃO,,sudeste,cidade,Jardim Paulista
+hotel-fazenda-suica-le-canton,Hotel Fazenda Suíça Le Canton,Teresópolis,RJ,SIM,NÃO,5461,sudeste,Serra,Serra Fluminense
+hotel-gran-marquise,Hotel Gran Marquise,Fortaleza,CE,NÃO,NÃO,,nordeste,praia,Mucuripe
+hotel-village-le-canton,Hotel Village Le Canton,Teresópolis,RJ,SIM,NÃO,5462,sudeste,Serra,Serra Fluminense
+ilha-dos-poldros-pousada,Ilha dos Poldros Pousada,Arraioses,MA,NÃO,NÃO,,nordeste,praia,Delta do Parnaíba
+insolito-boutique-hotel,Insólito Boutique Hotel,Armação de Búzios,RJ,SIM,NÃO,6027,sudeste,praia,Búzios
+kenoa,Kenoa,Barra de São Miguel,AL,NÃO,NÃO,,nordeste,praia,Barra de São Miguel 
+kurotel-spa,Kurotel SPA,Gramado,RS,NÃO,NÃO,,sul,serra,Gramado
+le-canton-hotel,Le Canton Hotel,Teresópolis,RJ,SIM,NÃO,8795,sudeste,Serra,Serra Fluminense
+lk-design-hotel,LK Design Hotel,Florianópolis,SC,SIM,NÃO,12469,sul,praia,Florianópolis
+madeiro-beach-hotel,Madeiro Beach Hotel,Tibau do Sul,RN,NÃO,NÃO,,nordeste,praia,Pipa
+manoa-eco-villa,Manoá Eco-Villa,Mucuri,BA,NÃO,NÃO,,nordeste,praia,Costa Dourada
+naatooh-guest-houses,Naatooh Guest Houses,Florianópolis,SC,NÃO,NÃO,,sul,praia,Florianópolis
+nanii,Nanii,São Miguel do Gostoso,RN,SIM,NÃO,19217,nordeste,praia,São Miguel do Gostoso
+nomaa-hotel,Nomaa Hotel,Curitiba,PR,SIM,NÃO,18677,sul,cidade,Curitiba
+nor-hotel-e-spa,NOR Hotel e SPA,São Roque,SP,SIM,SIM,18305,sudeste,Campo,Interior de São Paulo
+parador-cambara-do-sul,Parador Cambará do Sul,Cambará do Sul,RS,NÃO,NÃO,,sul,serra,Cânions Aparados da Serra
+parador-lumiar,Parador Lumiar,Nova Friburgo,RJ,SIM,NÃO,18732,sudeste,Serra,Serra Fluminense
+ponta-de-inhambupe-hotel-boutique-spa,Ponta de Inhambupe Hotel Boutique & SPA,Esplanada,BA,SIM,NÃO,14221,nordeste,praia,Serra Fluminense
+pousada-alma-charme-atins,Pousada Alma Charme Atins,Barreirinhas,MA,SIM,SIM,21992,nordeste,praia,Lençóis Maranhenses
+pousada-cantelli,Pousada Cantelli,Bento Gonçalves,RS,NÃO,SIM,,sul,serra,Caminho das Pedras
+pousada-capim-do-mato,Pousada Capim do Mato,Jaboticatubas,MG,SIM,SIM,6865,sudeste,Serra,Serra do Cipó
+pousada-do-ouro,Pousada do Ouro,Paraty,RJ,NÃO,NÃO,,sudeste,praia,Centro Histórico de Paraty
+pousada-figueira-da-serra,Pousada Figueira da Serra,Campos do Jordão,SP,NÃO,NÃO,,sudeste,serra,Campos do Jordão
+pousada-inacia,Pousada Inácia,Alto Paraiso de Goiás,GO,NÃO,NÃO,,Centro-oeste,campo,Chapada dos Veadeiros
+pousada-mata-n-ativa,Pousada Mata N' Ativa,Trancoso,BA,SIM,NÃO,6208,nordeste,praia,Trancoso
+pousada-outeiro,Pousada Outeiro,Porto Seguro,BA,NÃO,SIM,,nordeste,praia,Caraíva
+pousada-rabo-do-lagarto,Pousada Rabo do Lagarto,São Paulo do Aracê,ES,NÃO,NÃO,,sudeste,serra,Pedra Azul
+pousada-tankamana,Pousada Tankamana,Petrópolis,RJ,NÃO,NÃO,,sudeste,serra,Itaipava
+projeto-ibiti-hospedagem,Projeto Ibiti - Hospedagem,Lima Duarte,MG,NÃO,NÃO,,sudeste,serra,Serra do Ibitipoca
+quebra-noz-hotel-boutique,Quebra Nóz Hotel Boutique,Campos do Jordão,SP,NÃO,SIM,,sudeste,serra,Campos do Jordão
+rancharia-charme-beach,Rancharia Charme Beach,Barreirinhas,MA,SIM,SIM,17873,nordeste,praia,Lençóis Maranhenses
+rancho-do-peixe,Rancho do Peixe,Cruz,CE,SIM,SIM,3088,nordeste,praia,Praia do Preá
+refugio-na-serra,Refugio na Serra,Mucugê,BA,NÃO,NÃO,,nordeste,serra,Chapada Diamantina
+rituaali-spa,Rituaali Spa,Itatiaia,RJ,NÃO,NÃO,,sudeste,serra,Serra Fluminense
+saint-andrews-hotel,Saint Andrews Hotel,Gramado,RS,SIM,NÃO,4372,sul,Serra,Gramado
+santa-teresa-rj-mgallery,Santa Teresa RJ MGallery,Rio de Janeiro,RJ,NÃO,NÃO,,sudeste,cidade,Santa Teresa
+segredo-na-serra,Segredo na Serra,Tiradentes,MG,NÃO,NÃO,,sudeste,serra,Centro Histórico de Tiradentes
+solar-do-imperio,Solar do Império,Petrópolis,RJ,NÃO,NÃO,,sudeste,serra,Serra Fluminense
+tiradentes-boutique,Tiradentes Boutique,Tiradentes,MG,NÃO,NÃO,,sudeste,serra,Centro Histórico de Tiradentes
+tivoli-mofarrej,Tivoli Mofarrej,São Paulo,SP,NÃO,NÃO,,sudeste,cidade,Cerqueira César
+tuju-boutique-hotel,Tuju Boutique Hotel,Passo do Camaragibe,AL,NÃO,NÃO,,nordeste,praia,Praia do Marceneiro
+txai-resort,Txai Resort,Ilheus,BA,NÃO,NÃO,,nordeste,praia,Itacaré
+unique-garden,Unique Garden,Mairiporã,SP,SIM,SIM,6564,sudeste,Campo,Interior de São Paulo
+unique-sp,Unique SP,São Paulo,SP,NÃO,NÃO,,sudeste,cidade,Jardim Paulista
+valle-dincanto-hotel,Valle D'Incanto Hotel,Gramado,RS,SIM,SIM,5718,sul,serra,Gramado
+vila-cerrado,Vila Cerrado,Alto Paraiso de Goiás,GO,SIM,NÃO,18750,centro-oeste,Campo,Chapada dos Veadeiros
+vila-de-alter,Vila de Alter,Santarem,PA,NÃO,NÃO,,norte,praia,Alter do Chão
+vila-entre-chaves,Vila Entre Chaves,Passo do Camaragibe,AL,NÃO,NÃO,,nordeste,praia,Costa dos Corais
+vila-kalango,Vila Kalango,Jericoacoara,CE,SIM,SIM,3089,nordeste,praia,Jericoacoara
+villa-do-valle-boutique-hotel,Villa do Valle Boutique Hotel,Blumenau,SC,SIM,NÃO,8535,sul,Serra,Blumenau
+villa-dos-nativos,Villa dos Nativos,Porto Seguro,BA,SIM,NÃO,12210,nordeste,praia,Trancoso
+villa-dozio,Villa D'Ozio,Itajaí,SC,NÃO,SIM,,sul,praia,Praia Brava
+villa-kandui,Villa Kandui,Maraú,BA,SIM,NÃO,15602,nordeste,praia,Taipu de Fora
+villa-rasa,Villa Rasa,Armação de Búzios,RJ,SIM,SIM,21103,sudeste,praia,Búzios
+wood,Wood,Gramado,RS,SIM,NÃO,7033,sul,Serra,Gramado
+zendaya-resort,Zendaya Resort,Armação de Búzios,RJ,SIM,NÃO,9811,sudeste,praia,Búzios

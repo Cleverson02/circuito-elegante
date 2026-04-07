@@ -1,0 +1,219 @@
+{
+  "hotel_slug": "bahia-bonita-hotel-boutique-quadrado",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:23:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx", "hotel_website", "google_search"],
+  "sources_pending": ["circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.88,
+  "completeness": 0.78,
+  "fields_filled": 45,
+  "fields_total": 58,
+  "fields_null": 13,
+
+  "enrichment": {
+    "website_url": "https://bahiabonita.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/v8bMDPcxJP55oZsbA",
+    "description": "O Hotel Boutique Bahia Bonita, em Trancoso, está a 400 metros da praia e a 100 metros do charmoso Quadrado. Oferece vista para o mar, piscina, jardim e terraço, além de quartos rodeados por natureza, alguns com piscina privativa ou hidromassagem. O café da manhã é servido até às 13h com mais de 100 itens preparados na hora. O hotel conta ainda com lounge bar, massagem, concierge, estacionamento e experiências exclusivas, como passeios de bike, cavalo, quadriciclo e até helicóptero. Para quem busca mais privacidade, há as Bahia Bonita Vilas: casas sofisticadas à beira do Rio Trancoso, que combinam exclusividade e conforto com todos os serviços do hotel.",
+    "lodging_type": "Hotel Boutique",
+
+    "room_types": [
+      {"name": "Bangalô com Piscina Privativa e Jacuzzi", "size_m2": 135, "max_guests": 4, "description": "Bangalô com piscina privativa e jacuzzi"},
+      {"name": "Suíte com Piscina Aquecida Vista Mar", "size_m2": 135, "max_guests": 4, "description": "Suíte com piscina aquecida, borda infinita e vista mar"},
+      {"name": "Duplex com Hidromassagem Vista Mar", "size_m2": 110, "max_guests": 4, "description": "Suíte duplex (2 pisos) com hidromassagem e vista mar"},
+      {"name": "Suíte com Hidromassagem e Vista Mar (Diamante)", "size_m2": 90, "max_guests": 5, "description": "Suíte com hidromassagem e vista mar"},
+      {"name": "Suíte Master com Vista Mar", "size_m2": 68, "max_guests": 4, "description": "Suíte master com ampla varanda e vista mar"},
+      {"name": "Suíte Luxo Térreo com Varanda", "size_m2": 65, "max_guests": 4, "description": "Suíte térrea com varanda e rede"},
+      {"name": "Suíte Luxo Superior com Varanda", "size_m2": 48, "max_guests": 2, "description": "Ideal para casais, com vista jardim e varanda acolhedora"},
+      {"name": "Casa Tupã", "size_m2": 200, "max_guests": 8, "description": "Vila com 4 suítes, piscina e jacuzzi"},
+      {"name": "Casa Yara", "size_m2": 155, "max_guests": 6, "description": "Vila com 3 suítes, piscina e jardim"},
+      {"name": "Casa Mangará", "size_m2": 140, "max_guests": 6, "description": "Vila com 3 suítes e jacuzzi no terraço"},
+      {"name": "Casa Jaci", "size_m2": 100, "max_guests": 4, "description": "Vila com 2 suítes e piscina privativa"},
+      {"name": "Casa Yakã", "size_m2": 140, "max_guests": 4, "description": "Vila com 2 suítes e hidro no terraço"}
+    ],
+    "total_rooms": 12,
+    "room_amenities": "Kit de amenities premium (Shampoo, Condicionador, Hidratante, Sabonete líquido e em barra, kit de maquiagem, toalha demaquilante), enxovais de alta qualidade, TV, Frigobar, Roupão, Ferro de passar, ar-condicionado, cama king. Casas contam com cozinha equipada.",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": 15,
+      "is_free": true
+    },
+    "pool_description": "Piscinas privativas em algumas suítes e bangalô. Piscina de uso comum. Piscina aquecida com borda infinita e vista mar.",
+    "pool_heated": true,
+    "leisure_items": ["praias", "kaique", "passeios personalizados pela região", "bike", "cavalo", "quadriciclo", "helicóptero"],
+    "wellness": "Massagens contratadas à parte. Massagem de boas-vindas para hóspedes.",
+    "event_space": {
+      "has_events": false,
+      "description": "Não possui espaço para eventos"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "400-600 Mbps"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "Café da manhã Bahia Bonita",
+        "cuisine": "Café da manhã a la carte",
+        "meals": "café da manhã (até 13h)",
+        "description": "Mais de 100 opções: tapiocas, omeletes, cuscuz, ovos, frutas, sucos feitos na hora. Servido até às 13h."
+      },
+      {
+        "name": "Lounge Bar / Chá da Tarde",
+        "cuisine": "Petiscos",
+        "meals": "chá da tarde (16h)",
+        "description": "Seleção de chás, café e petiscos saborosos em ambiente encantador e relaxante."
+      }
+    ],
+    "meals_included": "Café da manhã a la carte (até 13h) + Chá da tarde (16h)",
+    "special_dining": "Experiências gastronômicas personalizadas para momentos especiais, sob demanda.",
+    "room_service": true,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sujeito a disponibilidade",
+    "cancellation_policy": "Inferior a 30 dias: sem devolução. Superior a 30 dias: carta de crédito de 50%. Superior a 60 dias: carta de crédito de 70%. Alteração: até 30 dias não é possível; 30-60 dias taxa de 20%; acima de 60 dias sem taxa (1 alteração apenas).",
+    "children_policy": "Crianças até 5 anos: cortesia. Cama extra: custo adicional de 25%.",
+    "pet_policy": {
+      "accepts_pets": true,
+      "details": "Aceita animais (informação do site oficial)"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "80 km do Aeroporto de Porto Seguro",
+    "transfer": {
+      "available": true,
+      "is_free": "parcial",
+      "description": "Transfer gratuito para praias de Trancoso. Transfer para o aeroporto pode ser contratado à parte."
+    },
+    "nearby_attractions": "Quadrado de Trancoso (100m), praia (400m), Rio Trancoso (casas)",
+    "how_to_get_there": "Aeroporto de Porto Seguro (80km), transfer terrestre disponível. Hotel fica a 100m do Quadrado e 400m da praia.",
+
+    "special_programming": null,
+    "hotel_concierge_services": "Concierge desde a chegada. Agendamento de passeios de quadriciclo, helicóptero, táxi, UTV, restaurantes, maquiadores, manicures, cabeleireiras. Massagem de boas-vindas.",
+    "activities_tours": [
+      "Passeio de bike",
+      "Passeio a cavalo",
+      "Passeio de quadriciclo",
+      "Passeio de helicóptero",
+      "Kaique",
+      "Praias de Trancoso (transfer gratuito)"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Atendimento 100% humanizado. Café da manhã a la carte com 100+ opções servido até 13h. Transfer gratuito para praias. Massagem de boas-vindas. Equipe bilíngue. Piscinas aquecidas com vista mar e borda infinita. A 100m do Quadrado de Trancoso. Vilas exclusivas à beira do Rio Trancoso para famílias e grupos.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": 3,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Aceitam crianças?",
+        "a": "Sim! Crianças até 5 anos cortesia. Cama extra com custo adicional de 25%.",
+        "source": "questionnaire"
+      },
+      {
+        "q": "Possuem estacionamento?",
+        "a": "Sim, gratuito para até 15 carros.",
+        "source": "questionnaire"
+      },
+      {
+        "q": "Quais experiências podem ser agendadas?",
+        "a": "Quadriciclo, helicóptero, bike, cavalo, UTV, passeios pela região. Também serviços de beleza: maquiadores, manicures, cabeleireiras.",
+        "source": "questionnaire"
+      },
+      {
+        "q": "Aceitam pets?",
+        "a": "Sim, o hotel aceita animais.",
+        "source": "hotel_website"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "preço",
+        "objection": "O valor é alto",
+        "response": "A diária inclui café da manhã a la carte com 100+ opções até 13h, chá da tarde, transfer gratuito para praias, massagem de boas-vindas e concierge dedicado.",
+        "source": "questionnaire"
+      },
+      {
+        "category": "pagamento",
+        "objection": "Preciso pagar tudo de uma vez?",
+        "response": "Pagamento em até 10x no cartão de crédito (parcelas mínimas de R$1.000). Pagamento deve ser efetuado em até 24h após confirmação.",
+        "source": "questionnaire"
+      }
+    ],
+    "attention_points": [
+      "Pagamento total em cartão de crédito em até 24h após reserva",
+      "Cancelamento com menos de 30 dias: sem devolução",
+      "Cama extra: custo adicional de 25%",
+      "Piscinas das casas NÃO são aquecidas (só suítes + comum)",
+      "Transfer para aeroporto é PAGO (só praias é gratuito)",
+      "Transferir para humano: contratação de transfer, passeios, dúvidas sobre acomodação, reclamações, cancelamentos"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Suítes com hidromassagem e vista mar. Massagem de boas-vindas. Café da manhã até 13h. A 100m do Quadrado de Trancoso.",
+      "familia": "Casas exclusivas (até 8 pessoas) com piscina privativa e cozinha equipada. Crianças até 5 anos grátis. Transfer gratuito praias.",
+      "grupo": "5 vilas à beira do Rio Trancoso (até 14 hóspedes), serviços de hotel boutique inclusos.",
+      "luxo": "Bangalô 135m² com piscina privativa e jacuzzi. Piscina aquecida borda infinita vista mar. Concierge completo incluindo helicóptero."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": [
+      "https://bahiabonita.com.br/wp-content/uploads/2026/02/quartos-bahia-bonita-006-e1761798873363.jpg.webp"
+    ],
+
+    "_meta": {
+      "enriched_at": "2026-04-07T03:23:00Z",
+      "last_updated": "2026-04-07T03:25:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "226-364",
+          "fields_extracted": ["description", "lodging_type", "room_types", "room_amenities", "parking", "pool_heated", "restaurants", "meals_included", "special_dining", "wellness", "event_space", "hotel_concierge_services", "check_in_out", "early_late_checkout", "airport_distance", "transfer", "cancellation_policy", "children_policy", "wifi", "highlights", "guest_faqs", "attention_points", "leisure_items", "activities_tours"]
+        },
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://bahiabonita.com.br",
+          "fields_extracted": ["website_url", "pet_policy", "room_service", "photo_urls"]
+        },
+        "google_search": {
+          "date": "2026-04-07",
+          "fields_extracted": ["google_maps_url", "star_rating"]
+        }
+      },
+      "address": "Rua Bom Jesus, 196 - Centro, Porto Seguro - BA, 45818-000",
+      "phone": "(73) 98801-7764 / (73) 3668-1658",
+      "email": "contato@bahiabonita.com.br",
+      "cnpj": "29.073.818/0001-16",
+      "google_rating": "4.9 (283 avaliações)",
+      "bilingual_staff": true,
+      "payment_policy": "Cartão de crédito total em 24h. Até 10x (parcelas mín R$1.000).",
+      "handoff_rules": "Transferir para humano: contratação de transfer, passeios, dúvidas sobre acomodação não cadastradas, reclamações, cancelamentos ou alterações.",
+      "quality_score": 0.88,
+      "completeness": 0.78,
+      "fields_filled": 45,
+      "fields_null": 13,
+      "null_fields_remaining": [
+        "accessibility", "gym", "dietary_options", "smoking_policy",
+        "min_age_solo", "day_use", "special_packages", "sustainability",
+        "awards_certifications", "special_programming", "ce_page_url"
+      ]
+    }
+  }
+}
