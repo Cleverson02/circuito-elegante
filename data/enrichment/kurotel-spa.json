@@ -1,31 +1,31 @@
 {
   "hotel_slug": "kurotel-spa",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:45:30Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website",
+    "google_search"
   ],
   "sources_pending": [
-    "questionnaire",
-    "hotel_website",
-    "chatbot",
-    "ota"
+    "google_maps",
+    "questionnaire"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.22413793103448276,
+  "completeness": 0.22413793103448276,
+  "fields_filled": 13,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 45,
   "enrichment": {
     "hotel_name": "Kurotel SPA",
     "municipality": "Gramado",
     "state_code": "RS",
     "region": "sul",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:45:30Z",
+      "last_updated": "2026-04-07T18:45:30Z",
       "pipeline_version": "3.0",
       "status": "P1_ONLY",
       "sources": {
@@ -118,6 +118,16 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/kurotel-spa-gramado-rs/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/kurotel-spa-gramado-rs/",
+    "website_url": "https://www.kurotel.com.br",
+    "description": "Kurotel - Melhor spa",
+    "lodging_type": "Spa Resort",
+    "highlights": "Spa m\u00e9dico de luxo 5 estrelas. 6 pr\u00eamios como melhor spa das Am\u00e9ricas. Programas exclusivos de emagrecimento, relaxamento e longevidade.",
+    "price_tier": "$$$$$",
+    "star_rating": 5,
+    "wellness": "Spa de classe mundial",
+    "awards_certifications": [
+      "Melhor Spa - 5 pr\u00eamios"
+    ]
   }
 }

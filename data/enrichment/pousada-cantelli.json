@@ -1,31 +1,31 @@
 {
   "hotel_slug": "pousada-cantelli",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:46:00Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
-    "questionnaire",
-    "hotel_website",
-    "chatbot",
-    "ota"
+    "google_maps",
+    "google_search",
+    "questionnaire"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.27586206896551724,
+  "completeness": 0.27586206896551724,
+  "fields_filled": 16,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 42,
   "enrichment": {
     "hotel_name": "Pousada Cantelli",
-    "municipality": "Bento Gonçalves",
+    "municipality": "Bento Gon\u00e7alves",
     "state_code": "RS",
     "region": "sul",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:46:00Z",
+      "last_updated": "2026-04-07T18:46:00Z",
       "pipeline_version": "3.0",
       "status": "P1_ONLY",
       "sources": {
@@ -55,7 +55,7 @@
       "has_api": false,
       "elevare_hotel_id": null,
       "bradesco_coupon": true,
-      "address": "Bento Gonçalves, RS",
+      "address": "Bento Gon\u00e7alves, RS",
       "quality_score": 0.1,
       "completeness": 0.1,
       "fields_filled": 6,
@@ -121,9 +121,32 @@
       ]
     },
     "ce_page_url": "https://www.circuitoelegante.com.br/hotel/pousada-cantelli-bento-goncalves-rs/",
-    "description": "A Pousada Cantelli, no Caminhos de Pedra na Serra Gaúcha, une história, conforto, bangalôs na natureza e gastronomia italiana no Cantelli Cucina.",
+    "website_url": "https://www.pousadacantelli.com.br",
+    "description": "Pousada Cantelli",
+    "lodging_type": "Pousada",
+    "parking": {
+      "has_parking": true,
+      "is_free": true
+    },
+    "restaurants": [
+      {
+        "name": "Restaurante",
+        "cuisine": "Italiana",
+        "meals": "Caf\u00e9 da manh\u00e3, almo\u00e7o, jantar"
+      }
+    ],
+    "highlights": "Casa hist\u00f3rica de 1878. Bangal\u00f4s contempor\u00e2neos. Localiza\u00e7\u00e3o na Serra Ga\u00facha. Gastronomia local. Caminhos de Pedra.",
+    "price_tier": "$$",
+    "star_rating": 3,
     "photo_urls": [
       "https://www.circuitoelegante.com.br/wp-content/uploads/2023/09/IMG_4071.jpg"
-    ]
+    ],
+    "amenities": [
+      "Restaurante",
+      "Estacionamento"
+    ],
+    "wifi": {
+      "included": true
+    }
   }
 }
