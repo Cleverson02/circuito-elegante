@@ -13,6 +13,7 @@ export const REDIS_KEYS = {
   upsellOffered: (sessionId: string) => `upsell_offered:${sessionId}`,
   webhookDedup: (hash: string) => `webhook_dedup:${hash}`,
   webhookRateLimit: (ip: string) => `rate_limit:webhook:${ip}`,
+  bufferActive: (phone: string) => `buffer_active:${phone}`,
 } as const;
 
 /** Default TTLs in seconds */
@@ -24,4 +25,5 @@ export const REDIS_TTL = {
   rateLimitDaily: 24 * 60 * 60, // 24h (daily window)
   webhookDedup: 24 * 60 * 60,  // 24h — webhook idempotency window
   webhookRateLimit: 60,        // 1min — per-IP webhook rate limit window
+  buffer: 30,                  // 30s — reserved for future Redis-backed buffer
 } as const;
