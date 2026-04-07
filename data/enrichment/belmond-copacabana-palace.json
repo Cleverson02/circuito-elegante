@@ -2,50 +2,72 @@
   "hotel_slug": "belmond-copacabana-palace",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
-    "hotel_website",
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.70,
+  "completeness": 0.70,
+  "fields_filled": 41,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 17,
   "enrichment": {
     "hotel_name": "Belmond Copacabana Palace",
     "municipality": "Rio de Janeiro",
     "state_code": "RJ",
     "region": "sudeste",
+    "website_url": "https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/",
+    "description": "Iconic 1923 Art Deco hotel at Copacabana beach with world-class service, Michelin-starred dining, and luxury accommodations",
+    "lodging_type": "Luxury Hotel",
+    "room_types": [
+      {"name": "Apartamento", "max_guests": 2},
+      {"name": "Suíte", "max_guests": 2}
+    ],
+    "total_rooms": 243,
+    "parking": {"has_parking": true, "is_free": false},
+    "pool_description": "Infinity pool on 6th floor with Copacabana beach views",
+    "pool_heated": true,
+    "leisure_items": ["piscina infinity", "praia Copacabana", "spa", "tênis", "fitness"],
+    "wellness": "World-class spa with pampering services",
+    "restaurants": [
+      {"name": "MEE", "cuisine": "Pan-Asian", "description": "Michelin 1-star"},
+      {"name": "Ristorante Hotel Cipriani", "cuisine": "Italian", "description": "Traditional Italian"},
+      {"name": "Pérgula", "cuisine": "Carioca", "description": "Local cuisine"}
+    ],
+    "meals_included": null,
+    "special_dining": "Sunday brunch by the pool",
+    "wifi": {"included": true, "quality": "High-speed"},
+    "accessibility": true,
+    "gym": true,
+    "event_space": {"has_events": true, "description": "Reopened theater 2022"},
+    "awards_certifications": ["Art Deco historic landmark", "Founded 1923"],
+    "price_tier": "$$$$",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T19:00:00Z",
+      "last_updated": "2026-04-07T19:00:00Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
-          "fields_extracted": [
-            "nome",
-            "municipality",
-            "uf",
-            "region",
-            "experience",
-            "destination"
-          ]
+          "fields_extracted": ["nome", "municipality", "uf", "region", "experience", "destination"]
         },
         "circuito_elegante": {
           "date": "2026-04-07",
           "url": "https://www.circuitoelegante.com.br/hotel/belmond-copacabana-palace-rio-de-janeiro-rj/",
-          "fields_extracted": [
-            "ce_page_url"
-          ]
+          "fields_extracted": ["ce_page_url"]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/",
+          "fields_extracted": ["website_url", "description", "lodging_type", "room_types", "total_rooms", "pool", "restaurants", "spa", "gym", "accessibility", "awards"]
         }
       },
       "experience": "praia",
@@ -54,10 +76,10 @@
       "elevare_hotel_id": null,
       "bradesco_coupon": false,
       "address": "Rio de Janeiro, RJ",
-      "quality_score": 0.1,
-      "completeness": 0.1,
-      "fields_filled": 6,
-      "fields_null": 52,
+      "quality_score": 0.70,
+      "completeness": 0.70,
+      "fields_filled": 41,
+      "fields_null": 17,
       "null_fields_remaining": [
         "contact_phone",
         "contact_email",

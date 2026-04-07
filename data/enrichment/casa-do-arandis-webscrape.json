@@ -1,0 +1,21 @@
+{
+  "website_url": "https://casadosarandis.com/",
+  "fields": {
+    "website_url": "https://casadosarandis.com/",
+    "municipality": "Península de Maraú",
+    "nearby_attractions": "Península de Maraú, Bahia",
+    "leisure_items": [
+      "Beachfront",
+      "Ocean Views",
+      "Volcanic-rock Jacuzzi",
+      "Spa with Sauna",
+      "Yoga and Meditation Pavilion",
+      "Restaurant/Bar",
+      "Wood-fired Pizza",
+      "Regional Cuisine",
+      "Beach Activities"
+    ],
+    "description": "Small exclusive beachfront boutique with 6 bungalows and 1 suite, built sustainably with reclaimed materials, featuring spa, yoga pavilion, and regional cuisine."
+  },
+  "fields_count": 5
+}

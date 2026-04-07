@@ -1,11 +1,12 @@
 {
   "hotel_slug": "casa-da-montanha-hotel",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:15:22.129Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,21 +14,21 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.17,
+  "completeness": 0.17,
+  "fields_filled": 8,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 50,
   "enrichment": {
     "hotel_name": "Casa da Montanha Hotel",
-    "municipality": "Gramado",
+    "municipality": "Avenida Borges de Medeiros",
     "state_code": "RS",
     "region": "sul",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:15:22.129Z",
+      "last_updated": "2026-04-07T18:15:22.129Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
@@ -46,6 +47,11 @@
           "fields_extracted": [
             "ce_page_url"
           ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://www.casadamontanha.com.br/",
+          "fields_extracted": 5
         }
       },
       "experience": "serra",
@@ -118,6 +124,16 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-da-montanha-hotel-gramado-rs/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-da-montanha-hotel-gramado-rs/",
+    "website_url": "https://www.casadamontanha.com.br/",
+    "nearby_attractions": "Avenida Borges de Medeiros, 3166, Gramado, Rio Grande do Sul",
+    "leisure_items": [
+      "Pool",
+      "Spa",
+      "Restaurant with European dishes",
+      "Buffet Breakfast",
+      "Bar"
+    ],
+    "description": "5-star hotel in Serra Gaúcha region, combining tradition and charm with 59 modern rooms, featuring European gastronomy and family-friendly experiences."
   }
 }

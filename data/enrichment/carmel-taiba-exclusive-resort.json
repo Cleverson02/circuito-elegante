@@ -1,11 +1,12 @@
 {
   "hotel_slug": "carmel-taiba-exclusive-resort",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:15:22.128Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,21 +14,21 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.17,
+  "completeness": 0.17,
+  "fields_filled": 8,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 50,
   "enrichment": {
     "hotel_name": "Carmel Taiba Exclusive Resort",
-    "municipality": "São Gonçalo do Amarante",
+    "municipality": "Praia da Taíba",
     "state_code": "CE",
     "region": "nordeste",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:15:22.128Z",
+      "last_updated": "2026-04-07T18:15:22.128Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
@@ -46,6 +47,11 @@
           "fields_extracted": [
             "ce_page_url"
           ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://carmelhoteis.com.br/carmeltaiba/",
+          "fields_extracted": 5
         }
       },
       "experience": "praia",
@@ -118,6 +124,22 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/carmel-taiba-exclusive-resort-sao-goncalo-do-amarante-ce/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/carmel-taiba-exclusive-resort-sao-goncalo-do-amarante-ce/",
+    "website_url": "https://carmelhoteis.com.br/carmeltaiba/",
+    "nearby_attractions": "Praia da Taíba, Taiba, Ceará (75km from Fortaleza)",
+    "leisure_items": [
+      "Infinity Pool",
+      "Water Sports",
+      "Caudalie Spa (French luxury)",
+      "Turkish Steam Room",
+      "Sauna",
+      "Jacuzzi",
+      "À La Carte Restaurant",
+      "Lounge Bar",
+      "Local Ceará Cuisine",
+      "Beach",
+      "Sustainable Practices"
+    ],
+    "description": "5-star exclusive resort with 36 suites across 5 thematic villas, featuring French luxury spa, water sports, and strong sustainability commitment."
   }
 }

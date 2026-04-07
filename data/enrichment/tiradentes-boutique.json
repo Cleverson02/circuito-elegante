@@ -1,0 +1,156 @@
+{
+  "hotel_slug": "tiradentes-boutique-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T15:00:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.85,
+  "completeness": 0.83,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+
+  "enrichment": {
+    "website_url": "https://tiradentesboutiquehotel.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/B325dhbiSSx1LM8q6",
+    "description": "Localizado no centro histórico de Tiradentes-MG. Conceito único e inovador: une encanto histórico cidade com conforto e requinte contemporâneo. Cama super king, TV Smart 65\", banheira imersão com visualização TV, ar-condicionado frio/quente, amenities Bvlgari.",
+    "lodging_type": "Hotel Boutique",
+
+    "room_types": [
+      {"name": "Apartamento padrão", "max_guests": 4}
+    ],
+    "total_rooms": 10,
+    "room_amenities": "Cama super king, TV Smart 65\" com suporte articulado, banheira imersão com vista TV, ar-condicionado frio/quente, secador cabelo, amenities italianos Bvlgari, frigobar retrô, cafeteira, enxoval delicado e aconchegante",
+
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Gratuito para hóspedes com carregador elétrico, espaço para todos veículos"
+    },
+    "pool_description": "Semi-olímpica, 25m comprimento, 1,6m profundidade, aquecida",
+    "pool_heated": true,
+    "leisure_items": ["piscina semi-olímpica aquecida", "sauna", "hidromassagem", "massagens", "banheira imersão quartos"],
+    "wellness": "Banheira imersão todos quartos, massagens agendamento antecipado, sauna, hidromassagem",
+    "event_space": {
+      "has_events": true,
+      "description": "Área 1.200 m² eventos sociais. Cozinha moderna equipada. Amplo salão restaurante com adega climatizada. Eventos exclusivos personalizados."
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Ótima qualidade, ponto em todo hotel"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "Restaurante Tiradentes",
+        "cuisine": "Mineira e contemporânea",
+        "description": "Café da manhã à la carte e personalizado (único incluso). Comida mineira com sofisticação. Pães, bolos, queijos, frutas frescos e selecionados."
+      }
+    ],
+    "meals_included": "Café da manhã (à la carte e personalizado, único incluso na diária)",
+    "special_dining": "Almoço, jantar e piqueniques na cidade. Pacotes eventos. Serviços cardápio personalizado.",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Depende disponibilidade, conversado conforme demanda e necessidade",
+    "cancellation_policy": "Até 30 dias: 100% estorno. Até 15 dias: carta crédito 6 meses. Restando 14 dias: 1 diária multa. Restando 7 dias: sem devolução. Saída antecipada: sem devolução ou crédito. Taxas bancárias debitadas.",
+    "children_policy": "Crianças até 5 anos não pagam. Aceita crianças mas sem estrutura (recreação, brinquedoteca). Cama extra: consultar valores.",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceitam"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Cidade histórica, sem aeroporto próximo. Pista pouso helicóptero a 150m (parceria Santíssimo Resort)",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece. Indicam táxi de confiança."
+    },
+    "nearby_attractions": "Centro histórico Tiradentes, natureza circunvizinha",
+    "how_to_get_there": "Cidade histórica Tiradentes. Helicóptero: pista 150m",
+
+    "special_programming": "Piscina semi-olímpica, sauna, hidromassagem, massagens",
+    "hotel_concierge_services": "Concierge dedicado: (32) 99977-6000. Atendimento 100% personalizado. Espumante boas-vindas, espetinho frutas, mimos quarto, chocolates, cartinhas boa noite. Dúvidas adicionais, reclamações, grupos.",
+    "activities_tours": [
+      "Piscina semi-olímpica aquecida",
+      "Sauna",
+      "Hidromassagem",
+      "Massagens",
+      "Centro histórico exploração"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Centro histórico Tiradentes. TV Smart 65\" suporte articulado. Banheira imersão com vista TV. Amenities Bvlgari. Piscina semi-olímpica aquecida. Sauna, hidromassagem. Café à la carte personalizado. Atendimento ultra-personalizado com espumante e mimos. 10 apartamentos amplos.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Aceitam pet (não), pagamento na hora (não, 100% antecipado), o que está incluso (café manhã + estrutura)",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Não pet friendly",
+      "Pagamento 100% antecipado (não na hora)",
+      "Check-in 15h / Check-out 12h",
+      "Sem transfer (táxi recomendado)",
+      "Cancelamento: até 30 dias 100%, depois progressivo",
+      "Crianças até 5 anos grátis (sem estrutura infantil)",
+      "Saída antecipada: sem reembolso",
+      "Café da manhã à la carte (único incluso)",
+      "Transferir para humano: dúvidas não respondidas, reclamações, grupos"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Centro histórico romantismo. Banheira imersão com vista TV. Amenities Bvlgari. Piscina aquecida. Sauna. Massagens. Café personalizado. Atendimento ultra-dedicado.",
+      "corpo": "TV Smart 65\" articulado. Banheira imersão todo quarto. Piscina semi-olímpica aquecida. Sauna. Hidromassagem. Massagens. Frigobar retrô.",
+      "eventos": "1.200 m² eventos. Cozinha moderna. Salão restaurante adega climatizada. Personalizados. Centro histórico ambiente único."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T15:00:00Z",
+      "last_updated": "2026-04-06T15:00:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "2541-2679",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "Tiradentes, Minas Gerais (Centro Histórico)",
+      "phone": "(32) 99977-6000",
+      "payment_policy": "100% pagamento antecipado. Parcelamento até 3x via link cartão. PIX e transferência bancária aceitos.",
+      "quality_score": 0.85,
+      "completeness": 0.83,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "total_rooms (10 filled)", "room_service", "dietary_options", "smoking_policy",
+        "min_age_solo", "day_use", "special_packages", "star_rating", "gym"
+      ]
+    }
+  }
+}

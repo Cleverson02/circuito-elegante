@@ -1,63 +1,90 @@
 {
   "hotel_slug": "botanique-hotel-experience",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T19:30:00Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
-    "hotel_website",
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.95,
+  "completeness": 0.95,
+  "fields_filled": 55,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 3,
   "enrichment": {
     "hotel_name": "Botanique Hotel Experience",
-    "municipality": "Bairro dos Mellos",
+    "municipality": "Campos do Jordão",
     "state_code": "SP",
     "region": "sudeste",
+    "website_url": "https://www.botanique.com.br/en",
+    "description": "Luxury nature resort in Serra da Mantiqueira with 20 suites/villas, world-class spa (990m²), gourmet dining, and exclusive experiences",
+    "lodging_type": "Luxury Resort Boutique",
+    "room_types": [
+      {"name": "Suite", "max_guests": 2, "size_m2": 60},
+      {"name": "Panorama Suite", "max_guests": 2, "size_m2": 70},
+      {"name": "Villa Standard", "max_guests": 4, "size_m2": 110},
+      {"name": "Villa Deluxe", "max_guests": 4, "size_m2": 110},
+      {"name": "Villa Suite", "max_guests": 4, "size_m2": 130},
+      {"name": "Villa Botanique Keike", "max_guests": 4, "size_m2": 200},
+      {"name": "Villa Botanique Antese", "max_guests": 4, "size_m2": 350}
+    ],
+    "total_rooms": 20,
+    "room_amenities": "Fireplace (some), Jacuzzi outdoor (some), garden views, piano (Keike), private pool (Antese)",
+    "parking": {"has_parking": true, "is_free": true},
+    "pool_description": "Piscina terapêutica 34°C com ozone + chromotherapy, indoor e outdoor aquecidas",
+    "pool_heated": true,
+    "leisure_items": ["piscinas aquecidas", "spa 990m²", "tênis", "beach tênis", "gym", "passeios cavalo", "hiking", "birdwatching", "yoga", "paragliding"],
+    "wellness": "Spa 990m² com 5 salas tratamento (2 casal, 3 individual), sauna, steam room, floatation chamber Epsom salt, beauty salon, sound healing",
+    "event_space": {"has_events": true, "description": "Private events, yoga retreats, wine tastings"},
+    "wifi": {"included": true, "quality": "High-speed"},
+    "accessibility": true,
+    "gym": true,
+    "restaurants": [
+      {"name": "Mina Restaurant", "cuisine": "Brazilian contemporary", "description": "Local ingredients, vegetarian/vegan options"},
+      {"name": "Wine House/Adega", "cuisine": "Wine bar", "description": "Wine selection"},
+      {"name": "Jazz Bar", "cuisine": "Cocktails/Drinks", "description": "Evening entertainment"}
+    ],
+    "meals_included": "Breakfast included",
+    "special_dining": "Wine/cheese harmony, artisanal workshops, tasting menus",
+    "check_in_out": {"check_in": "15:00", "check_out": "12:00"},
+    "early_late_checkout": "Available upon request",
+    "children_policy": "Minimum 15 years old",
+    "pet_policy": {"accepts_pets": true, "details": "Pet-friendly property"},
+    "airport_distance": "~2 hours from São Paulo airports",
+    "transfer": {"available": true, "is_free": false},
+    "nearby_attractions": "Serra da Mantiqueira, hiking trails, birdwatching spots",
+    "activities_tours": ["passeios cavalo", "hiking", "birdwatching (350+ species)", "observação astronômica", "yoga", "sound healing", "artisanal workshops", "paragliding", "wine tastings"],
+    "highlights": "Luxury nature resort, 990m² spa, gourmet dining, 350+ bird species, private villas with heated pools",
+    "awards_certifications": ["Relais & Châteaux member"],
+    "sustainability": "Eco-conscious luxury, nature integration",
+    "price_tier": "$$$$",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T19:30:00Z",
+      "last_updated": "2026-04-07T19:30:00Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
-        "local_xlsx": {
-          "date": "2026-04-07",
-          "fields_extracted": [
-            "nome",
-            "municipality",
-            "uf",
-            "region",
-            "experience",
-            "destination"
-          ]
-        },
-        "circuito_elegante": {
-          "date": "2026-04-07",
-          "url": "https://www.circuitoelegante.com.br/hotel/botanique-hotel-experience-bairro-dos-mellos-sp/",
-          "fields_extracted": [
-            "ce_page_url"
-          ]
-        }
+        "local_xlsx": {"date": "2026-04-07", "fields_extracted": ["nome", "municipality", "uf", "region"]},
+        "circuito_elegante": {"date": "2026-04-07", "url": "https://www.circuitoelegante.com.br/hotel/botanique-hotel-experience-bairro-dos-mellos-sp/"},
+        "hotel_website": {"date": "2026-04-07", "url": "https://www.botanique.com.br/en", "fields_extracted": 40}
       },
       "experience": "serra",
       "destination": "Campos do Jordão",
-      "has_api": false,
+      "has_api": true,
       "elevare_hotel_id": null,
       "bradesco_coupon": false,
-      "address": "Bairro dos Mellos, SP",
-      "quality_score": 0.1,
-      "completeness": 0.1,
-      "fields_filled": 6,
-      "fields_null": 52,
+      "address": "Campos do Jordão, SP",
+      "quality_score": 0.95,
+      "completeness": 0.95,
+      "fields_filled": 55,
+      "fields_null": 3,
       "null_fields_remaining": [
         "contact_phone",
         "contact_email",

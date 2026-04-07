@@ -1,11 +1,12 @@
 {
   "hotel_slug": "casa-rosa",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:15:22.135Z",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,21 +14,21 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.21,
+  "completeness": 0.21,
+  "fields_filled": 10,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 48,
   "enrichment": {
     "hotel_name": "Casa Rosa",
     "municipality": "Petrópolis",
     "state_code": "RJ",
     "region": "sudeste",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:15:22.135Z",
+      "last_updated": "2026-04-07T18:15:22.135Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
@@ -46,6 +47,11 @@
           "fields_extracted": [
             "ce_page_url"
           ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://casa-rosa-boutique.petropolis-hotels.com/en/",
+          "fields_extracted": 7
         }
       },
       "experience": "serra",
@@ -118,6 +124,15 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-rosa-petropolis-rj/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/casa-rosa-petropolis-rj/",
+    "website_url": "https://casa-rosa-boutique.petropolis-hotels.com/en/",
+    "nearby_attractions": "Petrópolis, Rio de Janeiro (1.5 km from Wax Museum, Historic Center)",
+    "lodging_type": "Boutique Hotel",
+    "leisure_items": [
+      "Bar",
+      "Cultural attractions nearby"
+    ],
+    "highlights": "Smoke-free hotel",
+    "description": "Boutique hotel in the historic center of Petrópolis near the Wax Museum, offering comfortable accommodations in the imperial city of Rio de Janeiro state."
   }
 }

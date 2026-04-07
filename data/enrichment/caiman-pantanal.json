@@ -2,32 +2,52 @@
   "hotel_slug": "caiman-pantanal",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
     "questionnaire",
-    "hotel_website",
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.75,
+  "completeness": 0.75,
+  "fields_filled": 44,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 14,
   "enrichment": {
     "hotel_name": "Caiman Pantanal",
     "municipality": "Miranda",
     "state_code": "MS",
     "region": "Centro-oeste",
+    "website_url": "https://www.caiman.com.br/en",
+    "description": "Luxury wildlife lodge in 53.000 hectares Pantanal with conservation projects, safari, canoeing, hiking",
+    "lodging_type": "Luxury Wildlife Lodge",
+    "room_types": [
+      {"name": "Casa Caiman", "max_guests": 2},
+      {"name": "Baiazinha - Private Villa", "max_guests": "8-12"},
+      {"name": "Cordilheira - Private Villa", "max_guests": "8-10"}
+    ],
+    "total_rooms": 29,
+    "meals_included": "Full-board - Brazilian home cuisine, água e sucos com as refeições",
+    "special_dining": "Regional cuisine, local ingredients",
+    "activities_tours": ["safaris", "canoagem", "hiking", "flora/fauna contemplation"],
+    "conservation_programs": ["Onçafari - jaguar photography", "Hyacinth Macaw Institute", "Tamanduá Institute", "Blue Fronted Parrot Project", "Tapirapé Project", "RPPN Dona Aracy (5.600ha)"],
+    "guides": "Bilingual (English/Portuguese), biologists and native guides",
+    "nearby_attractions": "Pantanal wildlife, 53.000 hectares protected area",
+    "how_to_get_there": "Miranda, MS - Pantanal region",
+    "children_policy": "Minimum 8 years old",
+    "highlights": "Pantanal wildlife conservation, 53.000 hectares, safari, canoeing, biologist guides, 6 conservation projects",
+    "sustainability": "Active conservation programs, ecological research, wildlife protection",
+    "price_tier": "$$$$",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T19:30:00Z",
+      "last_updated": "2026-04-07T19:30:00Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P3_WITH_WEBSITE",
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",

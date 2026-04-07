@@ -1,0 +1,22 @@
+{
+  "website_url": "https://carmelhoteis.com.br/carmelcharme/",
+  "fields": {
+    "website_url": "https://carmelhoteis.com.br/carmelcharme/",
+    "municipality": "Barro Preto Beach",
+    "nearby_attractions": "Barro Preto Beach, Aquiraz, Ceará",
+    "leisure_items": [
+      "Panoramic Pool",
+      "Tropical Gardens",
+      "Tennis Court",
+      "Beach Access",
+      "Spa",
+      "Sauna",
+      "Restaurant",
+      "Bar",
+      "Water Sports",
+      "WiFi"
+    ],
+    "description": "Elegant resort combining luxury and privacy on Barro Preto Beach, featuring 35 sea-facing suites with leisure facilities and full-service spa."
+  },
+  "fields_count": 5
+}
