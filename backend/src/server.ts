@@ -12,6 +12,8 @@ import { generateResponse } from './agents/persona-agent.js';
 import { regeneratePaymentLink } from './integrations/elevare/quotations.js';
 import { getElevareConfig } from './integrations/elevare/config.js';
 import { ElevareClient } from './integrations/elevare/client.js';
+import { EvolutionClient, getEvolutionConfig } from './integrations/evolution/index.js';
+import { getSession } from './state/session-manager.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -39,12 +41,32 @@ async function bootstrap(): Promise<void> {
       regeneratePaymentLink: (quotationId: string) =>
         regeneratePaymentLink(elevareClient, redisClient, logger, quotationId),
       deliverMessage: async (sessionId: string, message: string): Promise<void> => {
-        // TODO: integrate with Evolution API / Agent Pipeline when available (Epic 4).
-        // For now, log delivery intent so webhooks process cleanly in dev/staging.
-        logger.info('webhook_follow_up_delivery', {
-          sessionId,
-          messageLength: message.length,
-        });
+        // Story 4.1 — Evolution API integration (Epic 4)
+        try {
+          const evolutionConfig = getEvolutionConfig();
+          const evolutionClient = new EvolutionClient(evolutionConfig, logger);
+          const session = await getSession(sessionId);
+          if (session?.guestPhone) {
+            await evolutionClient.sendText(session.guestPhone, message);
+            logger.info('webhook_follow_up_delivered', {
+              sessionId,
+              phone: session.guestPhone,
+              messageLength: message.length,
+            });
+          } else {
+            logger.warn('webhook_follow_up_no_phone', {
+              sessionId,
+              messageLength: message.length,
+            });
+          }
+        } catch (err) {
+          // Graceful fallback: log but don't crash if Evolution API unavailable
+          logger.warn('webhook_follow_up_delivery_failed', {
+            sessionId,
+            messageLength: message.length,
+            error: err instanceof Error ? err.message : String(err),
+          });
+        }
       },
       logger,
     });

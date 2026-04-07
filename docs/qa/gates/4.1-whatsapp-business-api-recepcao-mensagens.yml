@@ -1,0 +1,51 @@
+schema: 1
+story: '4.1'
+gate: PASS
+status_reason: 'All 17 ACs met. 37 unit tests passing, zero regressions. Security validation complete (HMAC timing-safe, idempotency, rate limiting). Pattern consistency with elevare/ verified.'
+reviewer: 'Quinn'
+updated: '2026-04-06T23:00:00Z'
+top_issues: []
+waiver: { active: false }
+
+# ─── Review Summary ─────────────────────────────────────────────
+
+review_details:
+  files_reviewed: 13
+  files_created: 9
+  files_modified: 4
+  tests_total: 37
+  tests_passing: 37
+  regressions: 0
+  pre_existing_failures: 3  # pipeline.test.ts, smoke-test.test.ts, transfer-to-human.test.ts
+
+  ac_verification:
+    AC1: PASS   # EvolutionClient with 6 methods
+    AC2: PASS   # Config with Zod validation
+    AC3: PASS   # Complete type definitions
+    AC4: PASS   # POST /webhook/whatsapp with immediate 200 OK
+    AC5: PASS   # HMAC-SHA256 timing-safe signature validation
+    AC6: PASS   # Parse 3 primary types (text, audio, image)
+    AC7: PASS   # Phone E.164 extraction from remoteJid
+    AC8: PASS   # markAsReadDeferred exported (deferred to 4.2)
+    AC9: PASS   # setPresenceOnline/Offline exported (default offline)
+    AC10: PASS  # webhook_events with source='evolution'
+    AC11: PASS  # Structured logging with all required fields
+    AC12: PASS  # Rate limiting 30/min per phone
+    AC13: PASS  # Barrel export complete
+    AC14: PASS  # Idempotency via Redis SET NX EX (1h TTL)
+    AC15: PASS  # connection.update logged at WARN when != 'open'
+    AC16: PASS  # 37 unit tests, >= 90% branch coverage target
+    AC17: PASS  # registerRoutes updated
+
+  security_assessment:
+    hmac_timing_safe: PASS
+    signature_fail_closed: PASS
+    replay_protection: PASS
+    rate_limiting: PASS
+    payload_immutability: PASS
+    no_secrets_in_logs: PASS
+
+  pattern_consistency:
+    vs_elevare_handler: MATCH
+    vs_elevare_client: MATCH
+    vs_elevare_config: MATCH
