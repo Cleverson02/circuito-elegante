@@ -215,7 +215,9 @@ async function upsertHotels(
         has_api = EXCLUDED.has_api,
         elevare_hotel_id = EXCLUDED.elevare_hotel_id,
         bradesco_coupon = EXCLUDED.bradesco_coupon,
-        data = EXCLUDED.data,
+        pet_friendly = hotels.pet_friendly OR EXCLUDED.pet_friendly,
+        pool_heated = hotels.pool_heated OR EXCLUDED.pool_heated,
+        data = EXCLUDED.data || hotels.data,
         updated_at = now()
       RETURNING (xmax = 0) AS is_insert
     `;

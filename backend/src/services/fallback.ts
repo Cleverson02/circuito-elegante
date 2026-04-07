@@ -327,12 +327,13 @@ export function triggerSilentHandover(
       : null;
 
   const rawPreferences = ctx['preferences'];
-  const preferences =
+  const preferencesObj =
     rawPreferences !== null &&
     typeof rawPreferences === 'object' &&
     !Array.isArray(rawPreferences)
       ? (rawPreferences as Record<string, unknown>)
       : {};
+  const preferences = JSON.stringify(preferencesObj);
 
   const transferParams: TransferParams = {
     reason: 'api_failure',
