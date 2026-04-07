@@ -1,0 +1,269 @@
+{
+  "hotel_slug": "clara-ibiuna-resort",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:40:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.96,
+  "completeness": 0.95,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+  "enrichment": {
+    "website_url": "https://clararesorts.com.br/clara-ibiuna",
+    "google_maps_url": "https://maps.app.goo.gl/Nx4HhbsAY6BEoJFx8",
+    "description": "Resort com vista para Represa de Itupararanga, a 70km de São Paulo. Combina lazer, conforto e contato com natureza. Estilo rústico e contemporâneo com arquitetura integrada ao ambiente natural. Destaca-se por atividades náuticas, tirolesa russa, boliche, arvorismo, SPA by L'Occitane, pensão completa com cozinha show, cafés Starbucks, e monitoria para todas as idades.",
+    "lodging_type": "Resort",
+    "room_types": [
+      {
+        "name": "Suíte Presidencial 1",
+        "size_m2": 196,
+        "max_guests": 5
+      },
+      {
+        "name": "Suíte Presidencial 2",
+        "size_m2": 196,
+        "max_guests": 5
+      },
+      {
+        "name": "Master Garden",
+        "size_m2": 67,
+        "max_guests": 5
+      },
+      {
+        "name": "Superior Vila da Mata",
+        "size_m2": 54,
+        "max_guests": 5
+      },
+      {
+        "name": "Master Vila da Mata",
+        "size_m2": 77,
+        "max_guests": 5
+      },
+      {
+        "name": "Garden Vila da Mata",
+        "size_m2": 54,
+        "max_guests": 5
+      },
+      {
+        "name": "Apartamento Superior Península",
+        "size_m2": 42,
+        "max_guests": 3
+      },
+      {
+        "name": "Apartamento Superior Represa",
+        "size_m2": 55,
+        "max_guests": 5
+      },
+      {
+        "name": "Suíte Master",
+        "size_m2": 69,
+        "max_guests": 5
+      },
+      {
+        "name": "Suíte da Mata",
+        "size_m2": 33,
+        "max_guests": 3
+      },
+      {
+        "name": "Suíte da Mata Conjugada",
+        "size_m2": 51,
+        "max_guests": 4
+      },
+      {
+        "name": "Suíte Represa",
+        "size_m2": 39,
+        "max_guests": 3
+      },
+      {
+        "name": "Suíte Sede",
+        "size_m2": 25,
+        "max_guests": 3
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities (shampoo, condicionador, hidratante, sabonete), toalhas, ar-condicionado, frigobar, TV, telefone, cafeteira, snacks (cobrado à parte). Alguns quartos com banheira, lareira ou jacuzzi privativo.",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Próximos a todos os quartos, em área aberta e gratuita"
+    },
+    "pool_description": "1 piscina aquecida e coberta, 1 jacuzzi coberta, 2 piscinas climatizadas em área aberta, 1 jacuzzi em área aberta",
+    "pool_heated": true,
+    "leisure_items": [
+      "Atividades náuticas (wakeboard, wakesurf, esqui aquático, caiaque, stand up paddle, lancha)",
+      "Tirolesa russa",
+      "Boliche",
+      "Boião",
+      "Arco e flecha",
+      "Arvorismo",
+      "Parede de escalada",
+      "Trilhas de bike",
+      "Trilhas ecológicas",
+      "Máquina de sorvete"
+    ],
+    "wellness": "SPA by L'Occitane com tratamentos",
+    "event_space": {
+      "has_events": true,
+      "description": "Complexo de eventos para convenções, encontros corporativos, casamentos"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Boa velocidade"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Restaurante Clara Ibiúna",
+        "cuisine": "Comida caseira tipo buffet",
+        "description": "Buffet com cozinha show onde chefs preparam pratos à la carte na hora. Café da manhã com omeletes, tapiocas, pão na chapa feitos sob medida. Starbucks coffee durante refeições."
+      }
+    ],
+    "meals_included": "Pensão completa: café da manhã, almoço, chá da tarde, jantar. Bebidas não alcoólicas incluídas (água, chá gelado, 2 tipos suco natural, refrigerante)",
+    "special_dining": "Cozinha show com 2 opções à la carte no almoço e jantar. Omeletes e tapiocas feitas na hora no café. Piqueniques disponíveis. Máquina de sorvete no almoço e jantar.",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "18:00",
+      "check_out": "15:00"
+    },
+    "early_late_checkout": "Entrada antecipada mediante taxa adicional (consultar). Não garante liberação do quarto antes de 18h, mas hóspede acessa áreas sociais e refeições.",
+    "cancellation_policy": "Tarifa Flexível: cancela grátis até 72h antes = crédito 2 anos. Tarifa Não Reembolsável: <14 dias multa 20% + crédito; <4 dias no-show. Remarcação até 72h antes.",
+    "children_policy": "Até 2 anos free (contam ocupação). 3-11 anos adicional sobre tarifa base. A partir 12 anos = adulto",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Congonhas (85km), Guarulhos (115km), Viracopos (119km)",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece transfer. Recomenda carro próprio."
+    },
+    "nearby_attractions": "Represa de Itupararanga, trilhas ecológicas, praias de água doce",
+    "how_to_get_there": "Carro próprio recomendado. 70km de São Paulo.",
+    "special_programming": "Monitoria de lazer para todas as idades. Programação náutica e atividades variadas. Ver https://clararesorts.com.br/clara-ibiuna/programacao",
+    "hotel_concierge_services": "Agendamento de atividades náuticas (pago), tirolesa, arvorismo, escalada (inclusos). Consultar transferir para humano quando cliente mostrar insatisfação.",
+    "activities_tours": [
+      "Wakeboard",
+      "Wakesurf",
+      "Esqui aquático",
+      "Caiaque",
+      "Stand up paddle",
+      "Passeio de lancha",
+      "Tirolesa russa",
+      "Arvorismo",
+      "Parede de escalada",
+      "Trilhas de bike",
+      "Trilhas ecológicas",
+      "Boliche",
+      "Arco e flecha"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Pensão completa 4 refeições. Represa de Itupararanga. Atividades náuticas includas (wakeboard, wakesurf, etc). 5 piscinas (algumas aquecidas). SPA by L'Occitane. Cozinha show. Starbucks coffee. Monitoria para todas idades. Complexo de eventos. 70km São Paulo.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "O que fazer com crianças?",
+        "a": "Temos programação e monitoria para todas as idades. Ver https://clararesorts.com.br/clara-ibiuna/programacao para todas as atividades disponíveis.",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "acesso",
+        "objection": "Como chego ao resort?",
+        "response": "Recomendamos carro próprio. Aeroportos: Congonhas (85km), Guarulhos (115km), Viracopos (119km). Não oferecemos transfer.",
+        "source": "questionnaire"
+      }
+    ],
+    "attention_points": [
+      "Sem serviço de transfer",
+      "Check-in 18h / Check-out 15h (horários incomuns)",
+      "Crianças <2 anos grátis mas contam ocupação",
+      "Cancelamento flexível: grátis até 72h",
+      "Atividades náuticas (wakeboard, lancha) pagas à parte",
+      "Early check-in com taxa adicional, sem garantia antes de 18h"
+    ],
+    "sales_arguments_by_profile": {
+      "familia": "Monitoria para todas idades. Piscinas (incl infantil). Máquina sorvete. Muitas atividades. Crianças <2 grátis. Boliche, tirolesa.",
+      "casal": "Pensão completa. Atividades náuticas. Cozinha show. Piscinas. Represa. SPA by L'Occitane.",
+      "corporativo": "Complexo de eventos. Atividades para team building (tirolesa, arvorismo, boliche). Represa. 70km SP."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/clara-ibiuna-resort-ibiuna-sp/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-07T03:40:00Z",
+      "last_updated": "2026-04-07T03:40:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "664-837",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/clara-ibiuna-resort-ibiuna-sp/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Ibiúna, SP",
+      "payment_policy": "Cartão de crédito no ato da reserva",
+      "quality_score": 0.96,
+      "completeness": 0.95,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating"
+      ],
+      "experience": "Campo",
+      "destination": "Interior de São Paulo",
+      "has_api": true,
+      "elevare_hotel_id": 13663,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Clara Ibiúna Resort",
+    "municipality": "Ibiúna",
+    "state_code": "SP",
+    "region": "sudeste"
+  }
+}

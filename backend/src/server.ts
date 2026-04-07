@@ -14,6 +14,8 @@ import { getElevareConfig } from './integrations/elevare/config.js';
 import { ElevareClient } from './integrations/elevare/client.js';
 import { EvolutionClient, getEvolutionConfig } from './integrations/evolution/index.js';
 import { getSession } from './state/session-manager.js';
+import { MessageBuffer, createBufferProcessor } from './buffer/index.js';
+import { initTypingQueue, initTypingWorker, closeTypingQueue, closeTypingWorker } from './queue/index.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -77,6 +79,36 @@ async function bootstrap(): Promise<void> {
     });
   }
 
+  // Story 4.2 — Initialize 20s message buffer for WhatsApp (FR12)
+  let messageBuffer: MessageBuffer | undefined;
+  try {
+    const evolutionConfig = getEvolutionConfig();
+    const bufferEvolutionClient = new EvolutionClient(evolutionConfig, logger);
+    const onFlush = createBufferProcessor({
+      evolutionClient: bufferEvolutionClient,
+      logger,
+    });
+    messageBuffer = new MessageBuffer(onFlush, logger);
+    logger.info('Message buffer initialized (20s window)');
+  } catch (err) {
+    logger.warn('Message buffer not initialized — WhatsApp buffer disabled', {
+      error: err instanceof Error ? err.message : String(err),
+    });
+  }
+
+  // Story 4.3 — Initialize typing queue and worker (FR21)
+  try {
+    initTypingQueue();
+    const evolutionConfig = getEvolutionConfig();
+    const typingEvolutionClient = new EvolutionClient(evolutionConfig, logger);
+    initTypingWorker(typingEvolutionClient, logger);
+    logger.info('Typing queue and worker initialized');
+  } catch (err) {
+    logger.warn('Typing queue not initialized — human-typing simulation disabled', {
+      error: err instanceof Error ? err.message : String(err),
+    });
+  }
+
   const app = Fastify({
     logger: false, // Using Winston instead
     genReqId: () => crypto.randomUUID(),
@@ -86,14 +118,22 @@ async function bootstrap(): Promise<void> {
   await registerLogging(app);
   await registerRateLimiting(app);
 
-  // Register routes
-  await registerRoutes(app);
+  // Register routes (pass buffer for WhatsApp webhook — Story 4.2)
+  await registerRoutes(app, { buffer: messageBuffer });
 
   // Graceful shutdown
   const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
   for (const signal of signals) {
     process.on(signal, async () => {
       logger.info(`Received ${signal}, shutting down gracefully`);
+      // AC13: Flush all active buffers before shutdown — no messages lost
+      if (messageBuffer) {
+        logger.info('Flushing message buffers before shutdown...');
+        await messageBuffer.flushAll();
+      }
+      // Story 4.3 — Close typing worker and queue before Redis (AC12)
+      await closeTypingWorker();
+      await closeTypingQueue();
       await disconnectRedis();
       await app.close();
       process.exit(0);

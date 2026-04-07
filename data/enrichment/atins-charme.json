@@ -1,0 +1,267 @@
+{
+  "hotel_slug": "atins-charme",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:20:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "hotel_website",
+    "hotel_website_faq",
+    "hotel_website_experiencias",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 1.03,
+  "completeness": 0.95,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+  "enrichment": {
+    "website_url": "https://charmeatins.com.br/atins-charme-chales/",
+    "google_maps_url": "https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368",
+    "description": "Em Atins, uma das mais belas portas de entrada para os Lençóis Maranhenses, o tempo parece passar em outro ritmo. Um remoto vilarejo entre o rio e o mar, onde as ruas ainda são de areia e o verde está sempre ao alcance dos olhos. Com respeito à comunidade local, a Atins Charme Chalés exalta a brasilidade e a hospitalidade única do povo maranhense. Também conta com uma boutique com marcas nacionais e artesanatos do Nordeste.",
+    "lodging_type": "Pousada de charme (chalés)",
+    "room_types": [
+      {
+        "name": "Chalés para Famílias",
+        "description": "Chalés feitos em madeira com telhado de buriti, ventilação natural, redes na varanda. Materiais naturais e peças de decoração de artesãos locais. Envoltos por ricos e coloridos jardins com paisagismo da equipe.",
+        "max_guests": 4
+      },
+      {
+        "name": "Suítes para Casais",
+        "description": "Chalés feitos em madeira com telhado de buriti, ventilação natural, redes na varanda. Materiais naturais e peças de decoração de artesãos locais. Envoltos por ricos e coloridos jardins.",
+        "max_guests": 2
+      }
+    ],
+    "total_rooms": 20,
+    "room_amenities": "Ventilação natural, redes na varanda, materiais naturais, decoração de artesãos locais, chalés de madeira com telhado de buriti. Amenities: Shampoo, Condicionador, Sabonete em barra, Hidratante e Sabonete líquido — Linha Terra Organics (Realgems).",
+    "parking": {
+      "has_parking": true,
+      "capacity": null,
+      "is_free": true
+    },
+    "pool_description": null,
+    "pool_heated": false,
+    "leisure_items": [
+      "kitesurf",
+      "quadriciclo nas dunas",
+      "passeio de lancha pelo Rio Preguiças",
+      "revoada dos guarás",
+      "pôr do sol nas dunas"
+    ],
+    "wellness": "Spa com massagistas parceiras, academia, espaço de yoga, piscina privativa com hidromassagem.",
+    "event_space": {
+      "has_events": false,
+      "description": "No espaço da pousada não. Eventos na Rancharia (outra unidade do grupo)"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sinal da Vivo, na grande maioria das vezes muito bom"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Mirante Charme Atins",
+        "cuisine": "Maranhense",
+        "description": "Restaurante exclusivo da Atins Charme Chalés. Gastronomia maranhense com sabores únicos — coxinha com massa de macaxeira recheada com camarão. Aberto também a visitantes."
+      }
+    ],
+    "meals_included": "Café da manhã à la carte, servido exclusivamente na varanda do quarto",
+    "special_dining": "Café da manhã nas dunas dos Lençóis Maranhenses. Jantar nas dunas sob as estrelas (menu pelo Mirante).",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, sujeito a disponibilidade. Taxa de meia diária.",
+    "cancellation_policy": "Até 31 dias do check-in: devolução de 100%. De 8 a 30 dias: devolução com multa de 30%. Até 7 dias: sem devolução.",
+    "children_policy": "Uma criança até 10 anos cortesia por acomodação com os pais/adultos. Não trabalham com camas extras. Chalés para famílias disponíveis.",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceitam pets no hotel (política do grupo Charme Atins)"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aeroporto Internacional de São Luís — aproximadamente 3h de transfer terrestre até Barreirinhas + 40 minutos de lancha pelo Rio Preguiças até Atins.",
+    "transfer": {
+      "available": true,
+      "is_free": null,
+      "description": "Transfer disponível para circular dentro do vilarejo. Traslado de lancha de 40 min pelo Rio Preguiças (Barreirinhas → Atins)."
+    },
+    "nearby_attractions": "Parque Nacional dos Lençóis Maranhenses (5-10 minutos de veículo 4x4), mais de 60 mil lagoas cristalinas, Rio Preguiças, manguezais com guarás",
+    "how_to_get_there": "Aeroporto de São Luís → transfer terrestre (~3h) até Barreirinhas → traslado de lancha (40min) pelo Rio Preguiças até Atins. Alternativa: pequeno avião ou helicóptero.",
+    "special_programming": "Café da manhã nas dunas, jantar nas dunas, pôr do sol nas dunas, revoada dos guarás",
+    "hotel_concierge_services": "Boutique com marcas nacionais e artesanatos do Nordeste. Transfer dentro do vilarejo.",
+    "activities_tours": [
+      "Kitesurf (escolas e aluguel de equipamentos no vilarejo)",
+      "Café da manhã nas dunas dos Lençóis Maranhenses",
+      "Jantar nas dunas com menu do Mirante",
+      "Pôr do sol nas dunas",
+      "Passeio de quadriciclo nas dunas",
+      "Revoada dos guarás ao pôr do sol",
+      "Passeio de lancha pelo Rio Preguiças"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Chalés de madeira com telhado de buriti envoltos por jardins coloridos. Conexão autêntica com a natureza e comunidade local. Mirante Charme Atins com gastronomia maranhense exclusiva. Boutique com artesanatos nordestinos. TripAdvisor Travellers Choice 2023.",
+    "awards_certifications": [
+      "TripAdvisor Travellers Choice 2023",
+      "Hotéis de Luxo Brasil",
+      "Selo Circuito Elegante"
+    ],
+    "sustainability": "Respeito à comunidade local, exaltação da brasilidade, materiais naturais da região, decoração de artesãos locais, paisagismo pela equipe. Trabalho com insumos locais.",
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Qual a melhor época para visitar os Lençóis Maranhenses?",
+        "a": "Deslumbrantes em qualquer época. Jun-Set: alta temporada, ventos para kitesurf. Out-Dez: clima seco. Mar-Mai: chuvas, lagoas enchendo.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Posso levar meu pet?",
+        "a": "Não aceitamos pets no hotel.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Como chegar em Atins?",
+        "a": "Aeroporto de São Luís → transfer terrestre 3h até Barreirinhas → lancha 40min pelo Rio Preguiças.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "acesso",
+        "objection": "É muito longe e difícil de chegar",
+        "response": "O acesso faz parte da experiência — 3h de carro + 40min de lancha. O hotel organiza todo o transfer.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "attention_points": [
+      "Não aceita pets",
+      "Acesso apenas por lancha a partir de Barreirinhas",
+      "Reserva via WhatsApp: +55 98 9161-5744"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Suítes para casais com chalés de madeira e redes na varanda. Jantar romântico nas dunas sob as estrelas.",
+      "familia": "Chalés para famílias. Experiências educativas nas dunas e contato com natureza.",
+      "aventureiro": "Kitesurf, quadriciclo, lancha pelo Rio Preguiças. Parque Nacional a 5 min."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/atins-charme-barreirinhas-ma/",
+    "photo_urls": [
+      "http://charmeatins.com.br/wp-content/uploads/2025/09/img-atinscharmechales-3-1.jpg",
+      "http://charmeatins.com.br/wp-content/uploads/2025/09/charme7-819x1024.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme4-819x1024.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme6-819x1024.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme1-819x1024.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme2-819x1024.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme5-819x1024.jpg",
+      "http://charmeatins.com.br/wp-content/uploads/2025/09/charmequarto2.jpg",
+      "http://charmeatins.com.br/wp-content/uploads/2025/09/charmequarto1.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme-acomodacao-2-1024x682.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme-acomodacao-4-1024x682.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2025/09/charme-acomodacao-3-1024x682.jpg"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-07T03:20:00Z",
+      "last_updated": "2026-04-07T03:21:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/atins-charme-chales/",
+          "fields_extracted": [
+            "website_url",
+            "description",
+            "lodging_type",
+            "room_types",
+            "room_amenities",
+            "restaurants",
+            "highlights",
+            "awards_certifications",
+            "sustainability",
+            "photo_urls"
+          ]
+        },
+        "hotel_website_faq": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/faq/",
+          "fields_extracted": [
+            "pet_policy",
+            "airport_distance",
+            "how_to_get_there",
+            "nearby_attractions",
+            "guest_faqs"
+          ]
+        },
+        "hotel_website_experiencias": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/experiencias/",
+          "fields_extracted": [
+            "activities_tours",
+            "special_programming",
+            "leisure_items"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/atins-charme-barreirinhas-ma/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "R. da Alegria, s/n, Atins, Barreirinhas/MA, 65590-000",
+      "phone": "+55 98 9161-5744",
+      "email": "reservascharme@charmeatins.com.br",
+      "instagram": "@atinscharmechales",
+      "quality_score": 1.03,
+      "completeness": 0.95,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "google_maps_url",
+        "pool_description",
+        "accessibility",
+        "gym",
+        "room_service",
+        "dietary_options",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating"
+      ],
+      "experience": "praia",
+      "destination": "Lençóis Maranhenses",
+      "has_api": true,
+      "elevare_hotel_id": 17874,
+      "bradesco_coupon": true
+    },
+    "hotel_name": "Atins Charme",
+    "municipality": "Barreirinhas",
+    "state_code": "MA",
+    "region": "nordeste"
+  }
+}

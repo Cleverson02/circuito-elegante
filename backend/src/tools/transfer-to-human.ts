@@ -17,7 +17,7 @@ export const TransferParams = z.object({
   hotelFocus: z.string().nullable().describe('Hotel the guest was asking about'),
   conversationSummary: z.string().describe('Brief summary of the conversation so far'),
   lastIntent: z.string().nullable().describe('Last classified intent'),
-  preferences: z.record(z.string(), z.unknown()).nullable().describe('Guest preferences collected during conversation'),
+  preferences: z.string().nullable().describe('Guest preferences as JSON string (e.g. {"petFriendly":true,"region":"serra"})'),
 });
 
 export type TransferParams = z.infer<typeof TransferParams>;
@@ -51,7 +51,7 @@ export function buildHandoverSummary(params: TransferParams): HandoverSummary {
     },
     hotelFocus: params.hotelFocus ?? null,
     reason: params.reason,
-    preferences: (params.preferences as Record<string, unknown>) ?? {},
+    preferences: params.preferences ? JSON.parse(params.preferences) as Record<string, unknown> : {},
     handover: true,
     chatwootReady: true,
     timestamp: new Date().toISOString(),

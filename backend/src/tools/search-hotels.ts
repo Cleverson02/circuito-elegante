@@ -1,13 +1,13 @@
 import { z } from 'zod';
 import { tool } from '@openai/agents';
-import { eq, and, type SQL } from 'drizzle-orm';
+import { eq, and, ilike, type SQL } from 'drizzle-orm';
 import { getDatabase } from '../database/client.js';
 import { hotels } from '../database/schema.js';
 
 export const SearchHotelsParams = z.object({
-  experience: z.string().nullable().describe('Hotel experience type (e.g., "Charme", "Resort", "Spa")'),
-  region: z.string().nullable().describe('Geographic region (e.g., "Serra Gaúcha", "Litoral")'),
-  destination: z.string().nullable().describe('Destination name (e.g., "Campos do Jordão")'),
+  experience: z.string().nullable().describe('Hotel experience type. Valid values: "serra", "praia", "campo", "cidade". Map: mountain/serra gaúcha/montanha → "serra", beach/litoral → "praia", countryside/fazenda → "campo", urban → "cidade"'),
+  region: z.string().nullable().describe('Geographic region of Brazil. Valid values: "sul", "sudeste", "nordeste", "centro-oeste", "norte". Map: serra gaúcha/gramado/florianópolis → "sul", campos do jordão/rio/são paulo → "sudeste", bahia/ceará/pernambuco → "nordeste"'),
+  destination: z.string().nullable().describe('Destination name (e.g., "Gramado", "Campos do Jordão", "Búzios", "Jericoacoara"). Use partial match — do not require exact name.'),
   petFriendly: z.boolean().nullable().describe('Whether the hotel accepts pets'),
   poolHeated: z.boolean().nullable().describe('Whether the hotel has a heated pool'),
   bradescoCoupon: z.boolean().nullable().describe('Whether the hotel accepts Bradesco coupons'),
@@ -34,13 +34,13 @@ export async function searchHotels(params: SearchHotelsParams): Promise<HotelRes
   const conditions: SQL[] = [];
 
   if (params.experience) {
-    conditions.push(eq(hotels.experience, params.experience));
+    conditions.push(ilike(hotels.experience, params.experience));
   }
   if (params.region) {
-    conditions.push(eq(hotels.region, params.region));
+    conditions.push(ilike(hotels.region, params.region));
   }
   if (params.destination) {
-    conditions.push(eq(hotels.destination, params.destination));
+    conditions.push(ilike(hotels.destination, `%${params.destination}%`));
   }
   if (params.petFriendly != null) {
     conditions.push(eq(hotels.petFriendly, params.petFriendly));

@@ -24,7 +24,8 @@ import { randomUUID } from 'node:crypto';
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 import type { Logger } from 'winston';
 import type { Redis } from 'ioredis';
-import type { EvolutionWebhookPayload, EvolutionMessageData } from '../integrations/evolution/types.js';
+import type { EvolutionWebhookPayload, EvolutionMessageData, ParsedMessage } from '../integrations/evolution/types.js';
+import type { MessageBuffer } from '../buffer/message-buffer.js';
 import { EVOLUTION_REDIS_KEYS, EVOLUTION_REDIS_TTL } from '../integrations/evolution/types.js';
 import { insertWebhookEvent } from './elevare-repository.js';
 import {
@@ -50,6 +51,7 @@ export interface WhatsAppWebhookDeps {
   redis: Redis;
   logger: Logger;
   webhookSecret: string | undefined;
+  buffer?: MessageBuffer;
 }
 
 // ─── HMAC Signature Validation (AC5) ────────────────────────────
@@ -304,6 +306,11 @@ export async function handleWhatsAppWebhook(
       error: 'Internal Server Error',
       message: 'Failed to persist webhook event',
     });
+  }
+
+  // Story 4.2 (AC6): Feed parsed message into the 20s buffer
+  if (parsed && deps.buffer) {
+    deps.buffer.add(parsed.phone, parsed);
   }
 
   // AC11: Structured log for every received message

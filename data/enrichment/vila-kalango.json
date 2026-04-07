@@ -1,0 +1,220 @@
+{
+  "hotel_slug": "vila-kalango",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T16:15:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 1,
+  "completeness": 0.95,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+  "enrichment": {
+    "website_url": "https://www.vilakalango.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/sNENzd4DtD6TTz8L7",
+    "description": "Refúgio charme e sofisticação em Jericoacoara. Estilo rústico encontra conforto contemporâneo. Localizado entre Praia Jericoacoara e Duna Pôr do Sol. Experiência única integrada harmoniosamente à natureza exuberante região. Cada detalhe cuidadosamente pensado: arquitetura até atendimento personalizado.",
+    "lodging_type": "Hotel Boutique de Luxo",
+    "room_types": [
+      {
+        "name": "Apartamento",
+        "max_guests": 3
+      },
+      {
+        "name": "Bangalô",
+        "max_guests": 3
+      },
+      {
+        "name": "Palafita Baixa",
+        "max_guests": 2
+      },
+      {
+        "name": "Palafita Alta (Duna ou Mar)",
+        "max_guests": 2
+      },
+      {
+        "name": "Palafita Conforto",
+        "max_guests": 4
+      },
+      {
+        "name": "Apartamento Conforto",
+        "max_guests": 4
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Cama king size, enxoval algodão, minibar, cofre, Wi-Fi gratuito, varanda rede, ventilador teto e/ou ar-condicionado, banheiro privativo ducha aquecida energia solar",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Estacionamento privativo gratuito para hóspedes"
+    },
+    "pool_description": "Piscina ao ar livre estilo lagoa, cercada espreguiçadeiras e bar à beira piscina",
+    "pool_heated": false,
+    "leisure_items": [
+      "piscina lagoa",
+      "praia acesso direto",
+      "kitesurf",
+      "windsurf",
+      "stand-up paddle",
+      "surfe",
+      "spa",
+      "massagens"
+    ],
+    "wellness": "SPA com massagens e terapias relaxantes disponíveis agendamento",
+    "event_space": {
+      "has_events": false,
+      "description": "Sem espaço específico eventos, pode acomodar pequenas celebrações solicitação"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Gratuito, qualidade em todas acomodações e áreas comuns"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Restaurante Vila K",
+        "cuisine": "Sabores locais com ingredientes frescos regionais",
+        "description": "Peixes frescos e frutos do mar. Culinária valoriza sabores locais. Toques personalizados chef."
+      }
+    ],
+    "meals_included": "Café da manhã incluso com variedade opções frescas e regionais",
+    "special_dining": "Experiências gastronômicas únicas com pratos refletem tradição culinária Jericoacoara",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Disponível solicitação, sujeito disponibilidade",
+    "cancellation_policy": "Políticas flexíveis conforme período e tarifa escolhida. Detalhes informados reserva.",
+    "children_policy": "Crianças todas idades bem-vindas. Atividades supervisionadas disponíveis solicitação.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Jericoacoara (JJD): ~33 km. Fortaleza (FOR): ~300 km",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Serviços transfer podem ser organizados solicitação, custo adicional"
+    },
+    "nearby_attractions": "Praia Jericoacoara, Duna Pôr do Sol, kitesurf spots",
+    "how_to_get_there": "Jericoacoara. 33 km Jericoacoara airport, 300 km Fortaleza.",
+    "special_programming": "Atividades supervisionadas crianças disponíveis solicitação",
+    "hotel_concierge_services": "Concierge disponível auxiliar informações, reservas, organização atividades locais. Experiências personalizadas, pacotes especiais, reclamações.",
+    "activities_tours": [
+      "Piscina lagoa",
+      "Praia acesso direto",
+      "Escola esportes aquáticos (WSC Brasil)",
+      "Kitesurf",
+      "Windsurf",
+      "Stand-up paddle",
+      "Surfe",
+      "SPA",
+      "Massagens"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Entre Praia Jeri e Duna Pôr do Sol. Palafitas únicas vistas espetaculares. Piscina lagoa bar. Restaurante Vila K gastronomia local. Escola WSC Brasil esportes aquáticos. SPA massagens. Acesso direto praia. Atendimento personalizado.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Palafitas vista mar disponibilidade, política crianças/pets, bem-estar/massagens, acesso praia e serviços praia",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem espaço específico eventos (pequenas celebrações solicitação)",
+      "Check-in 14h / Check-out 12h",
+      "Transfer pago à parte",
+      "Piscina não aquecida",
+      "Cancelamento: políticas variam por tarifa",
+      "Crianças bem-vindas (atividades supervisionadas solicitação)",
+      "Pet friendly: não mencionado (verificar)",
+      "Acesso direto praia (destaque principal)",
+      "Transferir para humano: experiências personalizadas, pacotes especiais, reclamações"
+    ],
+    "sales_arguments_by_profile": {
+      "aventureiro": "Escola WSC Brasil esportes aquáticos. Kitesurf, windsurf, SUP, surfe. Praia acesso direto. Duna Pôr do Sol próxima. Jericoacoara destino premium.",
+      "casal": "Palafitas únicas vista mar/duna. Piscina lagoa bar. Restaurante gastronomia local. SPA massagens. Pôr do sol contemplação. Romantismo sofisticado.",
+      "familia": "Praia acesso direto. Atividades aquáticas diversas. Piscina. Crianças bem-vindas. Atividades supervisionadas. Ambiente tranquilo acolhedor."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/vila-kalango-jericoacoara-ce/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-06T16:15:00Z",
+      "last_updated": "2026-04-06T16:15:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "3187-3288",
+          "fields_extracted": 28
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/vila-kalango-jericoacoara-ce/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Jericoacoara, Ceará",
+      "payment_policy": "Cartões crédito e débito. Reservas parcial antecipado.",
+      "quality_score": 1,
+      "completeness": 0.95,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "gym"
+      ],
+      "experience": "praia",
+      "destination": "Jericoacoara",
+      "has_api": true,
+      "elevare_hotel_id": 3089,
+      "bradesco_coupon": true
+    },
+    "hotel_name": "Vila Kalango",
+    "municipality": "Jericoacoara",
+    "state_code": "CE",
+    "region": "nordeste"
+  }
+}

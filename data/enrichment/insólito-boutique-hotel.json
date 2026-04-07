@@ -1,0 +1,206 @@
+{
+  "hotel_slug": "insólito-boutique-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T12:00:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.9,
+  "completeness": 0.89,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+  "enrichment": {
+    "website_url": "https://insolitohotel.com",
+    "google_maps_url": "https://maps.app.goo.gl/WdPWp318FHTpQ7EV9",
+    "description": "Insólito Boutique Hotel é um refúgio sofisticado à beira da Praia da Ferradura em Armação dos Búzios. Une arte, cultura brasileira e design contemporâneo em um ambiente exclusivo e intimista. Cada suíte é única, decorada com inspiração na música, literatura e arte nacional. Com vista privilegiada, gastronomia autoral e experiências personalizadas, é ideal para quem busca conforto, charme e autenticidade.",
+    "lodging_type": "Hotel Boutique",
+    "room_types": [
+      {
+        "name": "Classic",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior",
+        "max_guests": 3
+      },
+      {
+        "name": "Deluxe",
+        "max_guests": 3
+      },
+      {
+        "name": "Master",
+        "max_guests": 3
+      },
+      {
+        "name": "Insólito",
+        "max_guests": 4
+      },
+      {
+        "name": "Insólito With Pool",
+        "max_guests": 4
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities L'Occitane (shower gel, shampoo, condicionador, loção corporal), sais de banho Granado para quartos com banheira, enxoval premium, máquina de café, TV.",
+    "parking": {
+      "has_parking": true,
+      "capacity": 20,
+      "is_free": true,
+      "description": "Estacionamento gratuito para aproximadamente 20 carros"
+    },
+    "pool_description": "2 piscinas: uma aquecida em frente ao restaurante, outra na ala terra brasil",
+    "pool_heated": true,
+    "leisure_items": [
+      "SPA",
+      "praia",
+      "piscinas"
+    ],
+    "wellness": "Spa com serviços de massagens e bem-estar",
+    "event_space": {
+      "has_events": true,
+      "description": "Disponível para eventos"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Disponível em todo hotel"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Restaurante Insólito",
+        "cuisine": "Brasileira contemporânea com frutos do mar",
+        "description": "Gastronomia autoral com pratos que misturam influências mediterrâneas com ingredientes brasileiros"
+      }
+    ],
+    "meals_included": "Café da manhã incluso",
+    "special_dining": "Jantares românticos, piqueniques",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Mediante disponibilidade. Custos poderão ser aplicados.",
+    "cancellation_policy": "Tarifa Reembolsável: cancelamento até 14 dias antes do check-in com reembolso total. Tarifa Não Reembolsável: após 7 dias corridos da reserva, sem reembolso. Remarcação permitida até 14 dias antes, fora disso apenas por saúde ou força maior.",
+    "children_policy": "Uma criança até 5 anos hospeda-se gratuitamente na cama existente. Caso deseje cama extra, taxa de 30%. Duas crianças menores de 5 anos: 1 grátis, 1 pagante com cama extra. Disponibilizam berços.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aeroporto de Cabo Frio (30km / ~40 min), Rio de Janeiro (170-180km / 2h30-3h), Búzios (6-8km, apenas aviação executiva + heliponto)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Transfer terceirizado e pago"
+    },
+    "nearby_attractions": "Praia da Ferradura, Búzios centro",
+    "how_to_get_there": "Aeroporto de Cabo Frio a 30-40 minutos (melhor opção), Rio de Janeiro 2h30-3h, Búzios 6-8 km",
+    "special_programming": null,
+    "hotel_concierge_services": "Concierge com agendamentos de serviços do hotel e terceirizados. Experiências personalizadas.",
+    "activities_tours": [
+      "SPA",
+      "Praia"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Exclusividade e personalização. Localização privilegiada à beira da Praia da Ferradura. Cultura e arte brasileira integradas. Gastronomia autoral. Bem-estar e sofisticação. Ambiente romântico e acolhedor.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Quais são as dúvidas mais frequentes?",
+        "a": "Horários de check-in e check-out, políticas de crianças, eventos e reservas de grupo",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 15h / Check-out 12h",
+      "Transfer pago (terceirizado)",
+      "Crianças até 5 anos: 1 grátis, 2ª paga 30% de taxa",
+      "Cancelamento flexível (reembolsável): até 14 dias",
+      "Cancelamento não reembolsável: após 7 dias",
+      "Parcelamento cartão até 5x (mín R$500)"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Exclusividade e personalização. Vista deslumbrante da Praia da Ferradura. Gastronomia autoral. Ambiente romântico. Jantares especiais. Piscina aquecida. SPA.",
+      "luxo": "Hotel ultra-exclusivo com suítes únicas decoradas com inspiração em arte, música e literatura. Atendimento personalizado. Amenities premium (L'Occitane, Granado). Experiências customizadas.",
+      "eventos": "Espaço disponível para eventos exclusivos. Localização privilegiada. Concierge dedicado para organizar detalhes."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/insolito-boutique-hotel-armacao-de-buzios-rj/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-06T12:00:00Z",
+      "last_updated": "2026-04-06T12:00:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1079-1221",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/insolito-boutique-hotel-armacao-de-buzios-rj/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Armação dos Búzios, RJ",
+      "payment_policy": "Cartão de crédito, parcelado até 5x sem juros (mín R$500)",
+      "quality_score": 0.9,
+      "completeness": 0.89,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "gym"
+      ],
+      "experience": "praia",
+      "destination": "Búzios",
+      "has_api": true,
+      "elevare_hotel_id": 6027,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Insólito Boutique Hotel",
+    "municipality": "Armação de Búzios",
+    "state_code": "RJ",
+    "region": "sudeste"
+  }
+}

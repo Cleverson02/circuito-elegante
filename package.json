@@ -8,7 +8,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "dev": "tsx watch backend/src/server.ts",
+    "dev": "tsx watch --env-file=.env backend/src/server.ts",
     "start": "node dist/backend/src/server.js",
     "build": "tsc",
     "lint": "eslint backend/src/**/*.ts config/**/*.ts",
@@ -24,13 +24,17 @@
     "db:migrate": "drizzle-kit migrate",
     "db:migrate:raw": "node --env-file=.env --import=tsx data/scripts/run-migrations.ts",
     "db:studio": "drizzle-kit studio",
-    "ingest:faq": "node --env-file=.env --import=tsx data/scripts/ingest-faq.ts"
+    "ingest:faq": "node --env-file=.env --import=tsx data/scripts/ingest-faq.ts",
+    "ingest:hotels": "node --env-file=.env --import=tsx data/scripts/ingest-hotels.ts",
+    "persist:enrichment": "node --env-file=.env --import=tsx data/scripts/persist-enrichment.ts",
+    "data:sync": "node --env-file=.env --import=tsx data/scripts/persist-enrichment.ts && node --env-file=.env --import=tsx data/scripts/ingest-faq.ts"
   },
   "dependencies": {
     "@openai/agents": "^0.8.2",
     "@sentry/node": "^9.0.0",
     "@supabase/supabase-js": "^2.49.0",
     "@t3-oss/env-core": "^0.12.0",
+    "bullmq": "^5.73.0",
     "drizzle-orm": "^0.44.0",
     "fastify": "^5.3.0",
     "gpt-tokenizer": "^3.4.0",
