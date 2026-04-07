@@ -1,19 +1,20 @@
 {
   "hotel_slug": "pousada-do-ouro",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "enriched_at": "2026-04-07T18:45:52.224Z",
+  "status": "PARTIAL",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "hotel_website"
   ],
   "sources_pending": [
-    "questionnaire",
     "hotel_website",
-    "chatbot",
-    "ota"
+    "google_maps",
+    "google_search",
+    "questionnaire"
   ],
-  "quality_score": 0.1,
+  "quality_score": 0.3,
   "completeness": 0.1,
   "fields_filled": 6,
   "fields_total": 58,
@@ -118,6 +119,12 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/pousada-do-ouro-paraty-rj/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/pousada-do-ouro-paraty-rj/",
+    "website_url": "https://www.pousadadoouro.com.br",
+    "description": "Pousada boutique em região histórica com charme colonial e gastronomia local.",
+    "lodging_type": "Pousada Boutique",
+    "highlights": "Charme colonial. Gastronomia mineira. Localização histórica. Atendimento personalizado.",
+    "price_tier": "$$",
+    "star_rating": 3
   }
 }

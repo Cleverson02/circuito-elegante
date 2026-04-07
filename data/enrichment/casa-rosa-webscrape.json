@@ -1,16 +1,4 @@
 {
-  "website_url": "https://casa-rosa-boutique.petropolis-hotels.com/en/",
-  "fields": {
-    "website_url": "https://casa-rosa-boutique.petropolis-hotels.com/en/",
-    "municipality": "Petrópolis",
-    "nearby_attractions": "Petrópolis, Rio de Janeiro (1.5 km from Wax Museum, Historic Center)",
-    "lodging_type": "Boutique Hotel",
-    "leisure_items": [
-      "Bar",
-      "Cultural attractions nearby"
-    ],
-    "highlights": "Smoke-free hotel",
-    "description": "Boutique hotel in the historic center of Petrópolis near the Wax Museum, offering comfortable accommodations in the imperial city of Rio de Janeiro state."
-  },
-  "fields_count": 7
+  "fields": {},
+  "fields_count": 0
 }

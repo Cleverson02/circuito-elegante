@@ -1,23 +1,4 @@
 {
-  "website_url": "https://carmelhoteis.com.br/carmeltaiba/",
-  "fields": {
-    "website_url": "https://carmelhoteis.com.br/carmeltaiba/",
-    "municipality": "Praia da Taíba",
-    "nearby_attractions": "Praia da Taíba, Taiba, Ceará (75km from Fortaleza)",
-    "leisure_items": [
-      "Infinity Pool",
-      "Water Sports",
-      "Caudalie Spa (French luxury)",
-      "Turkish Steam Room",
-      "Sauna",
-      "Jacuzzi",
-      "À La Carte Restaurant",
-      "Lounge Bar",
-      "Local Ceará Cuisine",
-      "Beach",
-      "Sustainable Practices"
-    ],
-    "description": "5-star exclusive resort with 36 suites across 5 thematic villas, featuring French luxury spa, water sports, and strong sustainability commitment."
-  },
-  "fields_count": 5
+  "fields": {},
+  "fields_count": 0
 }

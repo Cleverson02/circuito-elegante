@@ -1,18 +1,4 @@
 {
-  "website_url": "https://casamarambaia.com.br/",
-  "fields": {
-    "website_url": "https://casamarambaia.com.br/",
-    "municipality": "Correias District",
-    "nearby_attractions": "Correias District, Serra Fluminense, Petrópolis, Rio de Janeiro (1.5 hours from Rio de Janeiro, 15 minutes from Itaipava)",
-    "leisure_items": [
-      "Natural Water Swimming Pool",
-      "Ecological Trails",
-      "Bicycles",
-      "Farm Exploration",
-      "Nature Contact",
-      "Forest Immersion"
-    ],
-    "description": "Luxury boutique farm resort with 12 accommodations offering breathtaking nature views, natural pools, ecological trails, and direct contact with the working farm."
-  },
-  "fields_count": 5
+  "fields": {},
+  "fields_count": 0
 }

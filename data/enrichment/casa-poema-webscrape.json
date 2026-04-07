@@ -1,21 +1,4 @@
 {
-  "website_url": "https://www.casapoema.com.br/",
-  "fields": {
-    "website_url": "https://www.casapoema.com.br/",
-    "municipality": "Chapada dos Veadeiros",
-    "nearby_attractions": "Chapada dos Veadeiros, Goiás",
-    "leisure_items": [
-      "Nature Setting",
-      "Hiking Trails",
-      "Natural Attractions",
-      "Yoga",
-      "Meditation",
-      "100% Artisanal Breakfast",
-      "Fresh Seasonal Produce",
-      "Garden-sourced items",
-      "Nature Exploration"
-    ],
-    "description": "Minimalist sanctuary in Chapada dos Veadeiros offering artisanal breakfasts from organic garden, yoga, meditation, and complete nature immersion experiences."
-  },
-  "fields_count": 5
+  "fields": {},
+  "fields_count": 0
 }

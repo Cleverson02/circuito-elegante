@@ -1,7 +1,7 @@
 {
   "hotel_slug": "casa-poema",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:15:22.133Z",
+  "enriched_at": "2026-04-07T18:41:34.632Z",
   "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
@@ -25,8 +25,8 @@
     "state_code": "GO",
     "region": "Centro-oeste",
     "_meta": {
-      "enriched_at": "2026-04-07T18:15:22.133Z",
-      "last_updated": "2026-04-07T18:15:22.133Z",
+      "enriched_at": "2026-04-07T18:41:34.632Z",
+      "last_updated": "2026-04-07T18:41:34.632Z",
       "pipeline_version": "3.0",
       "status": "P3_WITH_WEBSITE",
       "sources": {
@@ -50,8 +50,8 @@
         },
         "hotel_website": {
           "date": "2026-04-07",
-          "url": "https://www.casapoema.com.br/",
-          "fields_extracted": 5
+          "url": null,
+          "fields_extracted": 0
         }
       },
       "experience": "campo",

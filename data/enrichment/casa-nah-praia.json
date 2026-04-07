@@ -1,7 +1,7 @@
 {
   "hotel_slug": "casa-nah-praia",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:15:22.132Z",
+  "enriched_at": "2026-04-07T18:41:34.630Z",
   "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
@@ -25,8 +25,8 @@
     "state_code": "AL",
     "region": "nordeste",
     "_meta": {
-      "enriched_at": "2026-04-07T18:15:22.132Z",
-      "last_updated": "2026-04-07T18:15:22.132Z",
+      "enriched_at": "2026-04-07T18:41:34.630Z",
+      "last_updated": "2026-04-07T18:41:34.630Z",
       "pipeline_version": "3.0",
       "status": "P3_WITH_WEBSITE",
       "sources": {
@@ -50,8 +50,8 @@
         },
         "hotel_website": {
           "date": "2026-04-07",
-          "url": "https://casanapraiajeri.com/",
-          "fields_extracted": 5
+          "url": null,
+          "fields_extracted": 0
         }
       },
       "experience": "praia",

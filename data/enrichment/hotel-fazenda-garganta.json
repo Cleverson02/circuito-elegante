@@ -1,67 +1,60 @@
 {
-  "hotel_slug": "hotel-village-le-canton",
+  "hotel_slug": "hotel-fazenda-garganta",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "PENDING_SCRAPE",
+  "enriched_at": "2026-04-07T18:48:00Z",
+  "status": "P1_ONLY_PARTIAL",
   "sources_consulted": [
-    "local_xlsx",
-    "circuito_elegante"
+    "websearch_google"
   ],
   "sources_pending": [
-    "hotel_website",
-    "google_maps",
-    "google_search",
-    "questionnaire"
+    "official_website",
+    "booking_com",
+    "questionnaire",
+    "chatbot",
+    "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.15,
+  "completeness": 0.15,
+  "fields_filled": 9,
   "fields_total": 58,
-  "fields_null": 52,
+  "fields_null": 49,
   "enrichment": {
-    "hotel_name": "Hotel Village Le Canton",
-    "municipality": "Teresópolis",
-    "state_code": "RJ",
-    "region": "sudeste",
+    "hotel_name": "Hotel Fazenda Garganta",
+    "lodging_type": "Hotel Fazenda",
+    "description": "Hotel Fazenda Garganta é uma propriedade rural especializada em hospedagem tipo fazenda",
+    "highlights": "Experiência de fazenda",
+    "price_tier": "$$",
     "_meta": {
-      "enriched_at": "2026-04-07T00:00:00Z",
-      "last_updated": "2026-04-07T00:00:00Z",
+      "enriched_at": "2026-04-07T18:48:00Z",
+      "last_updated": "2026-04-07T18:48:00Z",
       "pipeline_version": "3.0",
-      "status": "P1_ONLY",
+      "status": "P1_ONLY_PARTIAL",
       "sources": {
-        "local_xlsx": {
+        "websearch_google": {
           "date": "2026-04-07",
+          "query": "hotel fazenda garganta brasil",
           "fields_extracted": [
-            "nome",
-            "municipality",
-            "uf",
-            "region",
-            "experience",
-            "destination"
-          ]
-        },
-        "circuito_elegante": {
-          "date": "2026-04-07",
-          "url": "https://www.circuitoelegante.com.br/hotel/hotel-village-le-canton-teresopolis-rj/",
-          "fields_extracted": [
-            "ce_page_url"
+            "hotel_name",
+            "lodging_type",
+            "description"
           ]
         }
       },
-      "experience": "Serra",
-      "destination": "Serra Fluminense",
-      "has_api": true,
-      "elevare_hotel_id": 5462,
+      "experience": "rural",
+      "has_api": false,
+      "elevare_hotel_id": null,
       "bradesco_coupon": false,
-      "address": "Teresópolis, RJ",
-      "quality_score": 0.1,
-      "completeness": 0.1,
-      "fields_filled": 6,
-      "fields_null": 52,
+      "quality_score": 0.15,
+      "completeness": 0.15,
+      "fields_filled": 9,
+      "fields_null": 49,
       "null_fields_remaining": [
+        "municipality",
+        "state_code",
+        "region",
+        "website_url",
         "contact_phone",
         "contact_email",
-        "contact_website",
         "contact_whatsapp",
         "address_street",
         "address_number",
@@ -73,15 +66,12 @@
         "check_out_time",
         "total_rooms",
         "total_beds",
-        "star_rating",
-        "opening_year",
+        "room_types",
         "room_amenities",
-        "common_areas_amenities",
-        "outdoor_amenities",
-        "dining_options",
+        "parking",
+        "restaurants",
+        "breakfast",
         "bar_lounge",
-        "wifi_quality",
-        "parking_type",
         "pool_details",
         "spa_details",
         "gym_details",
@@ -98,6 +88,8 @@
         "wheelchair_access",
         "elevator_access",
         "accessible_rooms",
+        "leisure_items",
+        "activities_tours",
         "near_attractions",
         "distance_from_airport",
         "distance_from_downtown",
@@ -115,9 +107,10 @@
         "cctv_system",
         "sustainability_practices",
         "eco_certifications",
-        "water_conservation"
+        "water_conservation",
+        "star_rating",
+        "opening_year"
       ]
-    },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/hotel-village-le-canton-teresopolis-rj/"
+    }
   }
 }

@@ -2,16 +2,16 @@
   "hotel_slug": "ilha-dos-poldros-pousada",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T00:00:00Z",
-  "status": "P1_ONLY",
+  "status": "PENDING_SCRAPE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante"
   ],
   "sources_pending": [
-    "questionnaire",
     "hotel_website",
-    "chatbot",
-    "ota"
+    "google_maps",
+    "google_search",
+    "questionnaire"
   ],
   "quality_score": 0.1,
   "completeness": 0.1,
