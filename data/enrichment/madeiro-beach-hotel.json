@@ -1,8 +1,8 @@
 {
   "hotel_slug": "madeiro-beach-hotel",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:45:25Z",
-  "status": "P3_WITH_WEBSITE",
+  "enriched_at": "2026-04-07T16:18:11.578517",
+  "status": "P3_WITH_DEEP_SCRAPE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
@@ -13,11 +13,11 @@
     "google_search",
     "questionnaire"
   ],
-  "quality_score": 0.22413793103448276,
-  "completeness": 0.22413793103448276,
-  "fields_filled": 13,
+  "quality_score": 0.3620689655172414,
+  "completeness": 0.3620689655172414,
+  "fields_filled": 21,
   "fields_total": 58,
-  "fields_null": 45,
+  "fields_null": 37,
   "enrichment": {
     "hotel_name": "Madeiro Beach Hotel",
     "municipality": "Tibau do Sul",
@@ -120,15 +120,44 @@
     },
     "ce_page_url": "https://www.circuitoelegante.com.br/hotel/madeiro-beach-hotel-tibau-do-sul-rn/",
     "website_url": "https://www.madeiroresort.com.br",
-    "description": "Madeiro Beach Hotel - All-Inclusive",
-    "lodging_type": "All-Inclusive Resort",
+    "description": "Luxury eco-friendly beach resort with ocean-view lodges",
+    "lodging_type": "Luxury Beach Resort",
     "highlights": "All-inclusive \u00e0 beira-mar. Piscina, academia, esportes aqu\u00e1ticos, gastronomia diversa.",
-    "price_tier": "$$$",
+    "price_tier": "$$$$",
     "star_rating": 4,
     "leisure_items": [
-      "Piscina",
-      "Esportes aqu\u00e1ticos"
+      "Pool",
+      "Spa",
+      "Yoga",
+      "Beach access"
     ],
-    "meals_included": "All-Inclusive"
+    "meals_included": "Breakfast included",
+    "total_rooms": 16,
+    "restaurants": [
+      {
+        "name": "Main Restaurant",
+        "hours": "14:00-22:00",
+        "cuisine": "International seafood"
+      },
+      {
+        "name": "Beach Bar",
+        "hours": "10:00-17:00"
+      }
+    ],
+    "wellness": "Spa with deep-tissue massages",
+    "activities_tours": [
+      "Yoga classes",
+      "Spa treatments",
+      "Beach activities"
+    ],
+    "parking": {
+      "has_parking": true,
+      "is_free": true
+    },
+    "wifi": {
+      "included": true
+    },
+    "accessibility": true,
+    "sustainability": "Eco-friendly design"
   }
 }

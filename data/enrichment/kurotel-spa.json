@@ -1,8 +1,8 @@
 {
   "hotel_slug": "kurotel-spa",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:45:30Z",
-  "status": "P3_WITH_WEBSITE",
+  "enriched_at": "2026-04-07T16:18:11.576999",
+  "status": "P3_WITH_DEEP_SCRAPE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
@@ -13,11 +13,11 @@
     "google_maps",
     "questionnaire"
   ],
-  "quality_score": 0.22413793103448276,
-  "completeness": 0.22413793103448276,
-  "fields_filled": 13,
+  "quality_score": 0.3793103448275862,
+  "completeness": 0.3793103448275862,
+  "fields_filled": 22,
   "fields_total": 58,
-  "fields_null": 45,
+  "fields_null": 36,
   "enrichment": {
     "hotel_name": "Kurotel SPA",
     "municipality": "Gramado",
@@ -120,14 +120,40 @@
     },
     "ce_page_url": "https://www.circuitoelegante.com.br/hotel/kurotel-spa-gramado-rs/",
     "website_url": "https://www.kurotel.com.br",
-    "description": "Kurotel - Melhor spa",
-    "lodging_type": "Spa Resort",
+    "description": "Medical wellness spa center with longevity programs",
+    "lodging_type": "Spa Resort - Medical Wellness Center",
     "highlights": "Spa m\u00e9dico de luxo 5 estrelas. 6 pr\u00eamios como melhor spa das Am\u00e9ricas. Programas exclusivos de emagrecimento, relaxamento e longevidade.",
-    "price_tier": "$$$$$",
+    "price_tier": "$$$$",
     "star_rating": 5,
-    "wellness": "Spa de classe mundial",
+    "wellness": "Spa, sauna, medical wellness center",
     "awards_certifications": [
       "Melhor Spa - 5 pr\u00eamios"
+    ],
+    "address_street": "R. Nacoes Unidas, 533",
+    "address_neighborhood": "Bavaria",
+    "total_rooms": 20,
+    "meals_included": "Breakfast + 5 meals per day",
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "accessibility": true,
+    "wifi": {
+      "included": true
+    },
+    "leisure_items": [
+      "Pool",
+      "Spa",
+      "Sauna",
+      "Daily activities",
+      "Longevity center"
+    ],
+    "activities_tours": [
+      "Water aerobics",
+      "Dance classes",
+      "Tai chi",
+      "Yoga meditation",
+      "Health programs"
     ]
   }
 }

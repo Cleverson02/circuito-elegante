@@ -1,8 +1,8 @@
 {
   "hotel_slug": "pousada-cantelli",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:46:00Z",
-  "status": "P3_WITH_WEBSITE",
+  "enriched_at": "2026-04-07T16:18:11.580120",
+  "status": "P3_WITH_DEEP_SCRAPE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
@@ -13,14 +13,14 @@
     "google_search",
     "questionnaire"
   ],
-  "quality_score": 0.27586206896551724,
-  "completeness": 0.27586206896551724,
-  "fields_filled": 16,
+  "quality_score": 0.41379310344827586,
+  "completeness": 0.41379310344827586,
+  "fields_filled": 24,
   "fields_total": 58,
-  "fields_null": 42,
+  "fields_null": 34,
   "enrichment": {
     "hotel_name": "Pousada Cantelli",
-    "municipality": "Bento Gon\u00e7alves",
+    "municipality": "Bento Goncalves",
     "state_code": "RS",
     "region": "sul",
     "_meta": {
@@ -122,8 +122,8 @@
     },
     "ce_page_url": "https://www.circuitoelegante.com.br/hotel/pousada-cantelli-bento-goncalves-rs/",
     "website_url": "https://www.pousadacantelli.com.br",
-    "description": "Pousada Cantelli",
-    "lodging_type": "Pousada",
+    "description": "Boutique pousada in historic 1878 house, wine region Serra Gauca",
+    "lodging_type": "Boutique Pousada - Wine Country",
     "parking": {
       "has_parking": true,
       "is_free": true
@@ -136,17 +136,36 @@
       }
     ],
     "highlights": "Casa hist\u00f3rica de 1878. Bangal\u00f4s contempor\u00e2neos. Localiza\u00e7\u00e3o na Serra Ga\u00facha. Gastronomia local. Caminhos de Pedra.",
-    "price_tier": "$$",
-    "star_rating": 3,
+    "price_tier": "$$$",
+    "star_rating": 4,
     "photo_urls": [
       "https://www.circuitoelegante.com.br/wp-content/uploads/2023/09/IMG_4071.jpg"
     ],
-    "amenities": [
-      "Restaurante",
-      "Estacionamento"
-    ],
+    "amenities": "WiFi, minibar, TV, AC, fireplace, hydromassage bath, bicycles",
     "wifi": {
       "included": true
-    }
+    },
+    "total_rooms": 8,
+    "meals_included": "Breakfast (highly praised)",
+    "leisure_items": [
+      "Bicycles",
+      "Garden",
+      "Fireplace",
+      "Wine region access"
+    ],
+    "activities_tours": [
+      "Vineyard tours",
+      "Wine tasting",
+      "Caminhos de Pedra",
+      "Winery visits"
+    ],
+    "pet_policy": {
+      "accepts_pets": true
+    },
+    "accessibility": true,
+    "awards_certifications": [
+      "Top 20 Best Inns in Brazil (TripAdvisor)"
+    ],
+    "nearby_attractions": "Wineries, Aurora Winery, Caminhos de Pedra"
   }
 }
