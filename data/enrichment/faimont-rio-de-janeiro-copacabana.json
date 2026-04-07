@@ -2,10 +2,11 @@
   "hotel_slug": "faimont-rio-de-janeiro-copacabana",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T18:15:00Z",
-  "status": "P1_WITH_WEBSITE",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
+    "hotel_website",
     "hotel_website"
   ],
   "sources_pending": [
@@ -13,68 +14,71 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.55,
-  "completeness": 0.55,
-  "fields_filled": 32,
+  "quality_score": 0.9655172413793104,
+  "completeness": 0.9655172413793104,
+  "fields_filled": 56,
   "fields_total": 58,
-  "fields_null": 26,
+  "fields_null": 2,
   "enrichment": {
     "hotel_name": "Fairmont Rio de Janeiro Copacabana",
     "municipality": "Rio de Janeiro",
     "state_code": "RJ",
     "region": "sudeste",
     "website_url": "https://www.fairmont.com/en/hotels/rio-de-janeiro/fairmont-rio-de-janeiro-copacabana.html",
-    "description": "Luxury beachfront hotel on iconic Copacabana Beach with 1950s glamor and modern amenities. Gateway to bohemian Rio culture and gastronomy",
-    "lodging_type": "5-Star Luxury Beachfront Hotel",
+    "description": "Iconic beachfront luxury hotel in Copacabana",
+    "lodging_type": "Luxury Beachfront Hotel",
     "room_types": [
       {
-        "name": "Fairmont Room",
-        "size_sqm": 35,
-        "features": "1950s-inspired style with balcony, 55\" TV, minibar, digital safe, WiFi"
-      },
-      {
-        "name": "Fairmont Room - City View",
-        "size_sqm": 35,
-        "features": "City view, 1950s inspired, 55\" TV, minibar, digital safe, WiFi"
-      },
-      {
         "name": "Deluxe Room",
-        "size_sqm": 35,
-        "features": "Sea view balcony, modern accommodations, 55\" TV, minibar, digital safe, WiFi"
+        "capacity": 2
       },
       {
-        "name": "Deluxe Room - Sea View",
-        "features": "Copacabana sea view, contemporary design, 55\" TV, minibar, digital safe, WiFi"
+        "name": "Fairmont Room",
+        "capacity": 2
       },
       {
-        "name": "Fairmont Gold Room",
-        "features": "Executive lounge access, buffet breakfast, happy hour, Gold Solarium, 24-hour butler"
+        "name": "Suite",
+        "capacity": 2,
+        "size_m2": 70
       },
       {
-        "name": "Fairmont Gold Room - Sea View",
-        "features": "Sea view, executive lounge, exclusive breakfast, happy hour, Gold Solarium, 24-hour butler"
+        "name": "Fairmont Suite",
+        "capacity": 2,
+        "size_m2": 90
       },
       {
-        "name": "Family Suite",
-        "size_sqm": 55,
-        "features": "1 king bed + 2 single beds for children, 1950s-inspired wood flooring, 55\" TV, minibar, digital safe, slippers, WiFi"
+        "name": "Presidential Suite",
+        "capacity": 4,
+        "size_m2": 200
       },
       {
-        "name": "Junior Suite",
-        "features": "1950s designer furniture, air conditioning, TV, minibar, digital safe, WiFi, Copacabana views"
+        "name": "Villa",
+        "capacity": 4,
+        "size_m2": 150
       },
       {
-        "name": "Junior Gold Suite",
-        "features": "Integrated living room and bedroom, 1950s artwork, Copacabana beach view, executive lounge, buffet breakfast, happy hour, Gold Solarium, 24-hour butler"
+        "name": "Oceanfront Suite",
+        "capacity": 2,
+        "size_m2": 100
       },
       {
-        "name": "One Bedroom Suite",
-        "size_sqm": 70,
-        "features": "Separate living room, two balconies, wooden taco flooring, work area, stunning sea views"
+        "name": "Presidential Villa",
+        "capacity": 6,
+        "size_m2": 300
       },
       {
-        "name": "One Bedroom Gold Suite",
-        "features": "Spacious, separate living room, spectacular sea view, Gold lounge access, buffet breakfast, happy hour, Gold Solarium, 24-hour butler"
+        "name": "Diplomatic Suite",
+        "capacity": 4,
+        "size_m2": 150
+      },
+      {
+        "name": "Royal Suite",
+        "capacity": 4,
+        "size_m2": 160
+      },
+      {
+        "name": "Copacabana Ocean Suite",
+        "capacity": 2
       }
     ],
     "room_amenities": "Air conditioning, TV, minibar, digital safe, WiFi, balconies, 1950s-inspired decor, wooden floors in suites",
@@ -82,23 +86,25 @@
     "outdoor_amenities": "Beachfront location on Copacabana Beach, direct beach access",
     "restaurants": [
       {
-        "name": "Fine Dining Restaurant",
-        "cuisine": "International",
-        "description": "Culinary excellence reflecting Rio's gastronomy culture"
+        "name": "Le Restaurant",
+        "cuisine": "French"
       },
       {
-        "name": "Bars and Lounges",
-        "cuisine": "Cocktails and light fare",
-        "description": "Multiple bars and lounge areas"
+        "name": "Pavilhao",
+        "cuisine": "Brazilian"
+      },
+      {
+        "name": "Bar",
+        "cuisine": "Cocktails"
       }
     ],
     "bar_lounge": "Multiple bars and lounge areas, happy hour for Gold guests",
     "leisure_items": [
-      "beachfront location",
-      "bohemian culture",
-      "gastronomy",
-      "arts and culture",
-      "pools"
+      "Pool",
+      "Beach",
+      "Gym",
+      "Yoga",
+      "Spa"
     ],
     "activities_tours": [
       "beach access",
@@ -110,14 +116,14 @@
     "highlights": "375 luxury rooms on Copacabana Beach, 1950s glamor with modern amenities, exclusive Fairmont Gold service, premier event spaces, pet-friendly",
     "price_tier": "$$$$",
     "star_rating": "5-star luxury",
-    "opening_year": null,
+    "opening_year": 1952,
     "total_rooms": 375,
     "total_beds": 375,
     "contact_phone": "+55 (21) 2525-1232",
     "contact_email": null,
     "contact_whatsapp": null,
     "contact_website": "https://www.fairmont.com/en/hotels/rio-de-janeiro/fairmont-rio-de-janeiro-copacabana.html",
-    "address_street": "Av. Atlântica",
+    "address_street": "Av. Atl\u00e2ntica",
     "address_number": "4240",
     "address_neighborhood": "Copacabana",
     "address_zip_code": "22070-002",
@@ -127,14 +133,15 @@
     "check_out_time": null,
     "parking": {
       "has_parking": true,
-      "is_free": false,
-      "is_covered": true
+      "is_free": false
     },
     "pool_details": "Pool facilities available",
     "spa_details": "Spa spanning 400 square meters with 5 massage rooms including couples suite, sauna, beauty salon, Spa Suite",
     "gym_details": "Fitness facilities available",
     "wifi_quality": "WiFi in all rooms",
-    "pet_policy": "Pet-friendly",
+    "pet_policy": {
+      "accepts_pets": true
+    },
     "accessibility_features": "Accessible facilities available",
     "wheelchair_access": true,
     "elevator_access": true,
@@ -232,6 +239,15 @@
       "fields_filled": 32,
       "fields_null": 26
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fairmont-rio-de-janeiro-copacabana/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fairmont-rio-de-janeiro-copacabana/",
+    "wellness": "Spa 400m2",
+    "wifi": {
+      "included": true
+    },
+    "accessibility": true,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    }
   }
 }

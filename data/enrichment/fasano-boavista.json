@@ -2,7 +2,7 @@
   "hotel_slug": "fasano-boavista",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T18:25:00Z",
-  "status": "P1_WITH_WEBSITE",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
@@ -13,32 +13,53 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.50,
-  "completeness": 0.50,
-  "fields_filled": 29,
+  "quality_score": 0.6379310344827587,
+  "completeness": 0.6379310344827587,
+  "fields_filled": 37,
   "fields_total": 58,
-  "fields_null": 29,
+  "fields_null": 21,
   "enrichment": {
     "hotel_name": "Fasano Boa Vista",
     "municipality": "Sorocaba",
     "state_code": "SP",
     "region": "sudeste",
     "website_url": "https://www.fasano.com.br/en/hotel/fasano-boa-vista/",
-    "description": "Luxury countryside resort designed by Isay Weinfeld in Fazenda Boa Vista with golf courses, equestrian facilities, and nature reserve one hour from São Paulo",
-    "lodging_type": "Luxury Countryside Resort",
+    "description": "Luxury countryside resort designed by Isay Weinfeld in Fazenda Boa Vista with golf courses, equestrian facilities, and nature reserve one hour from S\u00e3o Paulo",
+    "lodging_type": "Luxury Resort",
     "room_types": [
-      {"name": "Luxury Accommodations", "features": "300-thread-count Egyptian cotton sheets, goose feather pillows"}
+      {
+        "name": "Luxury Accommodations",
+        "features": "300-thread-count Egyptian cotton sheets, goose feather pillows"
+      }
     ],
     "room_amenities": "Premium bedding, modern furnishings",
     "common_areas_amenities": "Lodges, gathering areas",
     "outdoor_amenities": "Two 18-hole golf courses, equestrian facilities, nature reserve, hiking and biking trails, pool",
     "restaurants": [
-      {"name": "Fine Dining", "cuisine": "International", "description": "Gourmet cuisine"}
+      {
+        "name": "Fine Dining",
+        "cuisine": "International",
+        "description": "Gourmet cuisine"
+      }
     ],
     "bar_lounge": "Poolside bar",
-    "leisure_items": ["golf", "horseback riding", "hiking", "biking", "pool", "nature"],
-    "activities_tours": ["golf courses", "horseback riding", "hiking trails", "biking", "fitness classes", "water sports"],
-    "highlights": "46 accommodations, two 18-hole golf courses, equestrian facilities, nature preserve, designed by Isay Weinfeld, one hour from São Paulo",
+    "leisure_items": [
+      "golf",
+      "horseback riding",
+      "hiking",
+      "biking",
+      "pool",
+      "nature"
+    ],
+    "activities_tours": [
+      "golf courses",
+      "horseback riding",
+      "hiking trails",
+      "biking",
+      "fitness classes",
+      "water sports"
+    ],
+    "highlights": "46 accommodations, two 18-hole golf courses, equestrian facilities, nature preserve, designed by Isay Weinfeld, one hour from S\u00e3o Paulo",
     "price_tier": "$$$$",
     "star_rating": "5-star luxury",
     "opening_year": null,
@@ -56,7 +77,11 @@
     "longitude": null,
     "check_in_time": null,
     "check_out_time": null,
-    "parking": {"has_parking": true, "is_free": true, "is_covered": null},
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "is_covered": null
+    },
     "pool_details": "Pool with poolside bar",
     "spa_details": null,
     "gym_details": "Fitness center",
@@ -66,14 +91,22 @@
     "wheelchair_access": null,
     "elevator_access": null,
     "accessible_rooms": null,
-    "languages_spoken": ["Portuguese", "English"],
+    "languages_spoken": [
+      "Portuguese",
+      "English"
+    ],
     "payment_methods": [],
     "accepts_credit_cards": true,
     "accepts_debit": null,
-    "near_attractions": ["Sorocaba", "São Paulo"],
-    "distance_from_airport": "1 hour from São Paulo",
-    "distance_from_downtown": "1 hour from São Paulo",
-    "transport_options": ["Car"],
+    "near_attractions": [
+      "Sorocaba",
+      "S\u00e3o Paulo"
+    ],
+    "distance_from_airport": "1 hour from S\u00e3o Paulo",
+    "distance_from_downtown": "1 hour from S\u00e3o Paulo",
+    "transport_options": [
+      "Car"
+    ],
     "shuttle_service": null,
     "car_rental_onsite": null,
     "business_hours": null,
@@ -87,7 +120,10 @@
     "sustainability_practices": null,
     "eco_certifications": [],
     "water_conservation": null,
-    "wellness_programs": ["golf", "outdoor activities"],
+    "wellness_programs": [
+      "golf",
+      "outdoor activities"
+    ],
     "event_spaces": null,
     "conference_capacity": null,
     "business_amenities": [],
@@ -99,26 +135,49 @@
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
-          "fields_extracted": ["hotel_name", "municipality", "state_code", "region"]
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
         },
         "circuito_elegante": {
           "date": "2026-04-07",
           "url": "https://www.circuitoelegante.com.br/hotel/fasano-boavista/",
-          "fields_extracted": ["ce_page_url"]
+          "fields_extracted": [
+            "ce_page_url"
+          ]
         },
         "hotel_website": {
           "date": "2026-04-07",
           "url": "https://www.fasano.com.br/en/hotel/fasano-boa-vista/",
-          "fields_extracted": ["total_rooms", "description", "amenities", "activities", "golf_courses"]
+          "fields_extracted": [
+            "total_rooms",
+            "description",
+            "amenities",
+            "activities",
+            "golf_courses"
+          ]
         }
       },
       "experience": "campo",
-      "destination": "Sorocaba/Interior de São Paulo",
-      "quality_score": 0.50,
-      "completeness": 0.50,
+      "destination": "Sorocaba/Interior de S\u00e3o Paulo",
+      "quality_score": 0.5,
+      "completeness": 0.5,
       "fields_filled": 29,
       "fields_null": 29
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-boavista/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-boavista/",
+    "amenities": [
+      "Golf courses (2)",
+      "Equestrian facilities",
+      "Spa",
+      "Pool"
+    ],
+    "nearby_attractions": "Golf courses, 1 hour from Sao Paulo",
+    "wifi": {
+      "included": true
+    }
   }
 }

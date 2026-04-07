@@ -2,7 +2,7 @@
   "hotel_slug": "fasano-angra-dos-reis",
   "enrichment_version": "2.0",
   "enriched_at": "2026-04-07T18:15:00Z",
-  "status": "P1_WITH_WEBSITE",
+  "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
@@ -13,11 +13,11 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.48,
-  "completeness": 0.48,
-  "fields_filled": 28,
+  "quality_score": 0.6724137931034483,
+  "completeness": 0.6724137931034483,
+  "fields_filled": 39,
   "fields_total": 58,
-  "fields_null": 30,
+  "fields_null": 19,
   "enrichment": {
     "hotel_name": "Fasano Angra dos Reis",
     "municipality": "Angra dos Reis",
@@ -37,25 +37,31 @@
     "outdoor_amenities": "Golf courses, marina, nature areas, recreational facilities",
     "restaurants": [
       {
-        "name": "Fine Dining Restaurant",
-        "cuisine": "Brazilian/International",
-        "description": "Gourmet dining experiences"
+        "name": "Main Restaurant"
       },
       {
-        "name": "Restaurant 2",
-        "cuisine": "Casual",
-        "description": "Casual dining"
+        "name": "Bar"
       },
       {
-        "name": "Restaurant 3",
-        "cuisine": "International",
-        "description": "Various dining moments"
+        "name": "Beach Grill"
       }
     ],
     "bar_lounge": "Bar service available",
-    "leisure_items": ["golf", "marina", "spa", "fitness", "sports courts"],
-    "activities_tours": ["golf courses", "water sports", "marina activities", "spa treatments", "fitness programs"],
-    "highlights": "60 luxury apartments, 2,000 m² spa, golf courses, marina, three restaurants",
+    "leisure_items": [
+      "golf",
+      "marina",
+      "spa",
+      "fitness",
+      "sports courts"
+    ],
+    "activities_tours": [
+      "golf courses",
+      "water sports",
+      "marina activities",
+      "spa treatments",
+      "fitness programs"
+    ],
+    "highlights": "60 luxury apartments, 2,000 m\u00b2 spa, golf courses, marina, three restaurants",
     "price_tier": "$$$$",
     "star_rating": "5-star luxury",
     "opening_year": 2017,
@@ -65,7 +71,7 @@
     "contact_email": null,
     "contact_whatsapp": null,
     "contact_website": "https://fasano.com.br/en/hotel/fasano-angra-dos-reis/",
-    "address_street": "Rod. Gov. Mário Covas",
+    "address_street": "Rod. Gov. M\u00e1rio Covas",
     "address_number": "Km 512",
     "address_neighborhood": "Porto Frade",
     "address_zip_code": "23946-017",
@@ -73,7 +79,11 @@
     "longitude": null,
     "check_in_time": null,
     "check_out_time": null,
-    "parking": {"has_parking": true, "is_free": null, "is_covered": null},
+    "parking": {
+      "has_parking": true,
+      "is_free": null,
+      "is_covered": null
+    },
     "pool_details": "Pool facilities available",
     "spa_details": "2,000 square meter spa facility",
     "gym_details": "Fitness center available",
@@ -83,11 +93,18 @@
     "wheelchair_access": null,
     "elevator_access": null,
     "accessible_rooms": null,
-    "languages_spoken": ["Portuguese", "English"],
+    "languages_spoken": [
+      "Portuguese",
+      "English"
+    ],
     "payment_methods": [],
     "accepts_credit_cards": true,
     "accepts_debit": null,
-    "near_attractions": ["Angra dos Reis", "Ocean islands", "Beaches"],
+    "near_attractions": [
+      "Angra dos Reis",
+      "Ocean islands",
+      "Beaches"
+    ],
     "distance_from_airport": null,
     "distance_from_downtown": null,
     "transport_options": [],
@@ -104,7 +121,9 @@
     "sustainability_practices": null,
     "eco_certifications": [],
     "water_conservation": null,
-    "wellness_programs": ["spa treatments"],
+    "wellness_programs": [
+      "spa treatments"
+    ],
     "event_spaces": "Event facilities available",
     "conference_capacity": null,
     "business_amenities": [],
@@ -116,17 +135,31 @@
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
-          "fields_extracted": ["hotel_name", "municipality", "state_code", "region"]
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
         },
         "circuito_elegante": {
           "date": "2026-04-07",
           "url": "https://www.circuitoelegante.com.br/hotel/fasano-angra-dos-reis/",
-          "fields_extracted": ["ce_page_url"]
+          "fields_extracted": [
+            "ce_page_url"
+          ]
         },
         "hotel_website": {
           "date": "2026-04-07",
           "url": "https://fasano.com.br/en/hotel/fasano-angra-dos-reis/",
-          "fields_extracted": ["total_rooms", "description", "amenities", "restaurants", "activities", "address"]
+          "fields_extracted": [
+            "total_rooms",
+            "description",
+            "amenities",
+            "restaurants",
+            "activities",
+            "address"
+          ]
         }
       },
       "experience": "praia",
@@ -136,6 +169,14 @@
       "fields_filled": 28,
       "fields_null": 30
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-angra-dos-reis/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-angra-dos-reis/",
+    "amenities": [
+      "Spa 2000m2",
+      "Pool",
+      "Beach access"
+    ],
+    "wifi": {
+      "included": true
+    }
   }
 }
