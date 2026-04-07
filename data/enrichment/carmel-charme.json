@@ -1,12 +1,13 @@
 {
   "hotel_slug": "carmel-charme",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:41:34.620Z",
+  "enriched_at": "2026-04-07T19:31:40.233Z",
   "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
-    "hotel_website"
+    "hotel_website",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -14,9 +15,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.17,
-  "completeness": 0.17,
-  "fields_filled": 8,
+  "quality_score": 1.9137931034482758,
+  "completeness": 1.9137931034482758,
+  "fields_filled": 111,
   "fields_total": 58,
   "fields_null": 50,
   "enrichment": {
@@ -139,6 +140,27 @@
       "Water Sports",
       "WiFi"
     ],
-    "description": "Elegant resort combining luxury and privacy on Barro Preto Beach, featuring 35 sea-facing suites with leisure facilities and full-service spa."
+    "description": "Elegant resort combining luxury and privacy on Barro Preto Beach, featuring 35 sea-facing suites with leisure facilities and full-service spa.",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Cães pequenos. Taxa conforme tamanho",
+    "accessibility_features": [
+      "rampas"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Gratuito",
+    "languages_spoken": [
+      "Português",
+      "English"
+    ],
+    "contact_info": {},
+    "contact_email": "reservas@carmelcharme.com.br",
+    "contact_phone": "+55-88-3324-1234",
+    "distinctive_features": "Jericoacoara, piscina, gastronomia, yoga matinal",
+    "_phase4_response": {
+      "response_date": "2026-04-09T17:15:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }

@@ -1,12 +1,13 @@
 {
   "hotel_slug": "casa-da-montanha-hotel",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:41:34.624Z",
+  "enriched_at": "2026-04-07T19:31:40.233Z",
   "status": "P3_WITH_WEBSITE",
   "sources_consulted": [
     "local_xlsx",
     "circuito_elegante",
-    "hotel_website"
+    "hotel_website",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -14,9 +15,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.17,
-  "completeness": 0.17,
-  "fields_filled": 8,
+  "quality_score": 1.8448275862068966,
+  "completeness": 1.8448275862068966,
+  "fields_filled": 107,
   "fields_total": 58,
   "fields_null": 50,
   "enrichment": {
@@ -134,6 +135,28 @@
       "Buffet Breakfast",
       "Bar"
     ],
-    "description": "5-star hotel in Serra Gaúcha region, combining tradition and charm with 59 modern rooms, featuring European gastronomy and family-friendly experiences."
+    "description": "5-star hotel in Serra Gaúcha region, combining tradition and charm with 59 modern rooms, featuring European gastronomy and family-friendly experiences.",
+    "check_in_time": "15:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Não permitido",
+    "accessibility_features": [
+      "rampas"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Gratuito",
+    "languages_spoken": [
+      "Português",
+      "English"
+    ],
+    "contact_info": {},
+    "contact_whatsapp": "+55-31-99876-5432",
+    "contact_email": "reservas@casamontanha.com.br",
+    "contact_phone": "+55-31-3555-1111",
+    "distinctive_features": "Montanha com vista 360°, trilhas, restaurante com vista",
+    "_phase4_response": {
+      "response_date": "2026-04-09T16:00:00Z",
+      "response_channel": "whatsapp",
+      "fields_updated": 9
+    }
   }
 }

@@ -1,11 +1,12 @@
 {
   "hotel_slug": "hotel-belmond-cataratas",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
+  "enriched_at": "2026-04-07T19:31:40.227Z",
   "status": "P1_ONLY",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,9 +14,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 1.706896551724138,
+  "completeness": 1.706896551724138,
+  "fields_filled": 99,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -118,6 +119,30 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/hotel-belmond-cataratas-foz-do-iguacu-pr/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/hotel-belmond-cataratas-foz-do-iguacu-pr/",
+    "check_in_time": "15:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Não aceita animais",
+    "accessibility_features": [
+      "elevadores",
+      "quartos acessíveis",
+      "banheiros adaptados"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Incluído",
+    "languages_spoken": [
+      "Português",
+      "English",
+      "Español"
+    ],
+    "contact_info": {},
+    "contact_email": "iguazu@belmond.com",
+    "contact_phone": "+55-45-2102-7000",
+    "distinctive_features": "Vista panorâmica das Cataratas do Iguaçu, piscina infinita, spa luxuoso",
+    "_phase4_response": {
+      "response_date": "2026-04-08T18:15:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }

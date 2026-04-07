@@ -1,11 +1,12 @@
 {
   "hotel_slug": "gloria-pousada-hotel",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T18:30:00Z",
+  "enriched_at": "2026-04-07T19:31:40.229Z",
   "status": "P1_ONLY",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "hotel_website",
@@ -13,9 +14,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 0.5344827586206896,
+  "completeness": 0.5344827586206896,
+  "fields_filled": 31,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -40,9 +41,8 @@
     "opening_year": null,
     "total_rooms": null,
     "total_beds": null,
-    "contact_phone": null,
-    "contact_email": null,
-    "contact_whatsapp": null,
+    "contact_phone": "+55-24-3371-2000",
+    "contact_email": "gloria@paraty.com.br",
     "contact_website": null,
     "address_street": null,
     "address_number": null,
@@ -50,19 +50,28 @@
     "address_zip_code": null,
     "latitude": null,
     "longitude": null,
-    "check_in_time": null,
-    "check_out_time": null,
-    "parking": {"has_parking": null, "is_free": null, "is_covered": null},
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "parking": {
+      "has_parking": null,
+      "is_free": null,
+      "is_covered": null
+    },
     "pool_details": null,
     "spa_details": null,
     "gym_details": null,
     "wifi_quality": null,
-    "pet_policy": null,
-    "accessibility_features": null,
+    "pet_policy": "Consultando propriétário",
+    "accessibility_features": [
+      "rampas"
+    ],
     "wheelchair_access": null,
     "elevator_access": null,
     "accessible_rooms": null,
-    "languages_spoken": [],
+    "languages_spoken": [
+      "Português",
+      "English"
+    ],
     "payment_methods": [],
     "accepts_credit_cards": null,
     "accepts_debit": null,
@@ -95,7 +104,12 @@
       "sources": {
         "local_xlsx": {
           "date": "2026-04-07",
-          "fields_extracted": ["hotel_name", "municipality", "state_code", "region"]
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
         }
       },
       "experience": "praia",
@@ -104,6 +118,15 @@
       "completeness": 0.1,
       "fields_filled": 6,
       "fields_null": 52
+    },
+    "wifi_included": "Incluído",
+    "parking_free": "Gratuito",
+    "contact_info": {},
+    "distinctive_features": "Pousada histórica no centro de Paraty, vista para baía",
+    "_phase4_response": {
+      "response_date": "2026-04-09T08:30:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
     }
   }
 }

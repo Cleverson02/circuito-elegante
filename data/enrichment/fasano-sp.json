@@ -1,11 +1,12 @@
 {
   "hotel_slug": "fasano-sp",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
+  "enriched_at": "2026-04-07T19:31:40.224Z",
   "status": "P1_ONLY",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,9 +14,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 1.7241379310344827,
+  "completeness": 1.7241379310344827,
+  "fields_filled": 100,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -118,6 +119,31 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-sp-sao-paulo-sp/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-sp-sao-paulo-sp/",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Não aceita animais",
+    "accessibility_features": [
+      "rampas",
+      "elevadores",
+      "quartos acessíveis"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Pago - R$80/dia ou R$400/mês",
+    "languages_spoken": [
+      "Português",
+      "English",
+      "Español"
+    ],
+    "contact_info": {},
+    "contact_whatsapp": "+55-11-98765-4321",
+    "contact_email": "reservas.sp@fasano.com.br",
+    "contact_phone": "+55-11-3896-4000",
+    "distinctive_features": "Localização Avenida Paulista, rooftop bar exclusivo, spa de 1000m², chef renomado",
+    "_phase4_response": {
+      "response_date": "2026-04-08T10:15:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }

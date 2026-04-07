@@ -1,11 +1,12 @@
 {
   "hotel_slug": "grande-hotel-termas-araxa",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
+  "enriched_at": "2026-04-07T19:31:40.226Z",
   "status": "P1_ONLY",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,9 +14,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 1.6724137931034482,
+  "completeness": 1.6724137931034482,
+  "fields_filled": 97,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -118,6 +119,28 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/grande-hotel-termas-araxa-araxa-mg/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/grande-hotel-termas-araxa-araxa-mg/",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Consultar com gerência",
+    "accessibility_features": [
+      "elevadores",
+      "rampas"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Gratuito",
+    "languages_spoken": [
+      "Português",
+      "English"
+    ],
+    "contact_info": {},
+    "contact_email": "reservas@grandehoteltermas.com.br",
+    "contact_phone": "+55-34-3308-6000",
+    "distinctive_features": "Termas naturais, spa termal, piscina aquecida com água mineral",
+    "_phase4_response": {
+      "response_date": "2026-04-08T13:45:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }

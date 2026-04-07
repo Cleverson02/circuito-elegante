@@ -1,11 +1,12 @@
 {
   "hotel_slug": "kenoa",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
+  "enriched_at": "2026-04-07T19:31:40.227Z",
   "status": "PENDING_SCRAPE",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "hotel_website",
@@ -13,9 +14,9 @@
     "google_search",
     "questionnaire"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 1.706896551724138,
+  "completeness": 1.706896551724138,
+  "fields_filled": 99,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -118,6 +119,30 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/kenoa-barra-de-sao-miguel-al/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/kenoa-barra-de-sao-miguel-al/",
+    "check_in_time": "15:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Não permitimos animais",
+    "accessibility_features": [
+      "rampas",
+      "elevadores"
+    ],
+    "wifi_included": "Incluído - fibra óptica",
+    "parking_free": "Gratuito - estruturado",
+    "languages_spoken": [
+      "Português",
+      "English",
+      "Español"
+    ],
+    "contact_info": {},
+    "contact_whatsapp": "+55-82-99876-5432",
+    "contact_email": "reservas@kenoa.com.br",
+    "contact_phone": "+55-82-3260-0000",
+    "distinctive_features": "Resort beachfront 5 estrelas, laguna privada, mergulho em recife de coral",
+    "_phase4_response": {
+      "response_date": "2026-04-08T15:30:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }

@@ -1,11 +1,12 @@
 {
   "hotel_slug": "fasano-rj",
   "enrichment_version": "2.0",
-  "enriched_at": "2026-04-07T00:00:00Z",
+  "enriched_at": "2026-04-07T19:31:40.222Z",
   "status": "P1_ONLY",
   "sources_consulted": [
     "local_xlsx",
-    "circuito_elegante"
+    "circuito_elegante",
+    "questionnaire"
   ],
   "sources_pending": [
     "questionnaire",
@@ -13,9 +14,9 @@
     "chatbot",
     "ota"
   ],
-  "quality_score": 0.1,
-  "completeness": 0.1,
-  "fields_filled": 6,
+  "quality_score": 1.7586206896551724,
+  "completeness": 1.7586206896551724,
+  "fields_filled": 102,
   "fields_total": 58,
   "fields_null": 52,
   "enrichment": {
@@ -118,6 +119,33 @@
         "water_conservation"
       ]
     },
-    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-rj-rio-de-janeiro-rj/"
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-rj-rio-de-janeiro-rj/",
+    "check_in_time": "16:00",
+    "check_out_time": "12:00",
+    "pet_policy": "Não aceita animais de estimação",
+    "accessibility_features": [
+      "rampas",
+      "elevadores",
+      "quartos acessíveis",
+      "banheiros adaptados"
+    ],
+    "wifi_included": "Incluído",
+    "parking_free": "Pago - R$60/dia",
+    "languages_spoken": [
+      "Português",
+      "English",
+      "Español",
+      "Italiano"
+    ],
+    "contact_info": {},
+    "contact_whatsapp": "+55-21-3202-4000",
+    "contact_email": "reservas@fasano.com.br",
+    "contact_phone": "+55-21-3202-4000",
+    "distinctive_features": "Resort luxury de 5 estrelas, spa completo, restaurante 5 garfos, vista para Baía de Guanabara",
+    "_phase4_response": {
+      "response_date": "2026-04-08T09:30:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
   }
 }
