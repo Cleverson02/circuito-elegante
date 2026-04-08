@@ -1,0 +1,250 @@
+{
+  "hotel_slug": "lk-design-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T12:45:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 1.01,
+  "completeness": 0.95,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+  "enrichment": {
+    "website_url": "https://lkdesignhotel.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/mp8a8BpgrpSahc4LA",
+    "description": "Hotel de alto padrão construído em 2020, situado na melhor região de Florianópolis (Av Beira Mar Norte) com vistas privilegiadas da Baía. 164 quartos com design minimalista sofisticado, rooftop com vista mar, 6 espaços para eventos e arquitetura cosmopolita arrojada. Oferece conforto, comodidade para férias ou negócios.",
+    "lodging_type": "Hotel de Alto Padrão",
+    "room_types": [
+      {
+        "name": "Superior Vista Jardim Família (Conjugado)",
+        "max_guests": 4
+      },
+      {
+        "name": "Superior Vista Jardim Twin",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior Vista Jardim King",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior Vista Jardim King PCD",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior Vista Lateral Mar King",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior Vista Lateral Mar Twin",
+        "max_guests": 2
+      },
+      {
+        "name": "Superior Vista Lateral Mar Família",
+        "max_guests": 3
+      },
+      {
+        "name": "Luxo Frente Mar King",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Junior",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Junior Família",
+        "max_guests": 3
+      }
+    ],
+    "total_rooms": 164,
+    "room_amenities": "Amenities L'Occitane Francesa, Wi-Fi, TV, frigobar",
+    "parking": {
+      "has_parking": true,
+      "description": "Estacionamento coberto com seguro, valet parking, estação de recarga para carros elétricos. Diária 13h-13h: R$59 por veículo, adicional R$15/hora extra",
+      "is_free": false
+    },
+    "pool_description": "Piscina de borda infinita climatizada (29°C), revestida com pedras naturais de Bali, localizada no rooftop",
+    "pool_heated": true,
+    "leisure_items": [
+      "spa",
+      "academia",
+      "piscina",
+      "música ao vivo",
+      "recreação infantil",
+      "ioga",
+      "bicicletas cortesia",
+      "raquetes beach tennis cortesia",
+      "passeio para conhecer fazenda de ostras",
+      "trilhas",
+      "exposições",
+      "shows"
+    ],
+    "wellness": "SPA com variedade de tratamentos terapêuticos, menu de terapias elaborado para atender necessidades individuais com experiência única e revitalizante",
+    "event_space": {
+      "has_events": true,
+      "description": "Centro de convenções com 5 salas multifuncionais, 1 sala exclusiva para reuniões com vista mar, 2 foyers, projetados para eventos corporativos e sociais"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Wi-Fi cortesia em todo hotel"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Academia com equipamentos completos"
+    },
+    "restaurants": [
+      {
+        "name": "Osli Restaurante",
+        "cuisine": "Gastronomia Conceitual",
+        "description": "Cozinha contemporânea que valoriza produtos locais de Santa Catarina. Chef Felipe Silva. Cardápio: brunch, feijoada, cremes, sopas, menu executivo, menu degustação, à la carte, pacotes datas comemorativas"
+      },
+      {
+        "name": "LK Café Bar",
+        "cuisine": "Bar",
+        "description": "Café bar integrado ao resort"
+      }
+    ],
+    "meals_included": "Café da manhã incluso nas diárias",
+    "special_dining": "Brunch, feijoada, cremes, sopas, menu executivo, menu degustação, cardápio à la carte, pacotes em datas comemorativas",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, mediante disponibilidade da categoria reservada, com valores adicionais ou não",
+    "cancellation_policy": "Reservas individuais sem ônus com 48h de antecedência do check-in. Reservas de grupos com acordos pontuais.",
+    "children_policy": "Crianças até 10 anos ganham cortesia na hospedagem, com acomodação na mesma cama ou em categorias família. Sem camas extras.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aproximadamente 9 km do Aeroporto de Florianópolis (~14 minutos de carro)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Equipe de motoristas parceiros. Carros individuais, vans e mini vans cobrados à parte da hospedagem."
+    },
+    "nearby_attractions": "BeiraMar shopping (10 min), restaurantes, praças, Ponte Hercílio Luz (15 min), centro cidade",
+    "how_to_get_there": "Bem localizado na Av Beira Mar Norte. 9 km do aeroporto.",
+    "special_programming": "Música ao vivo 5ª-sábado. Recreação infantil. Experiência kids (aluguel PS5, recreação sábado-domingo 12h30-15h).",
+    "hotel_concierge_services": "Concierge Les Clefs d'Or (Union Internationale des Concierges d'Hotels). Organiza roteiros turísticos, reservas restaurantes, massagens, experiências kids, experiências românticas.",
+    "activities_tours": [
+      "Spa",
+      "Academia",
+      "Piscina rooftop",
+      "Música ao vivo (5ª-sábado no LK Bar)",
+      "Bicicletas",
+      "Raquetes beach tennis",
+      "Passeio fazenda de ostras",
+      "Trilhas",
+      "Exposições",
+      "Shows"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "164 quartos, design minimalista sofisticado. Piscina rooftop borda infinita, vista mar, 29°C. Osli Restaurante conceitual (Chef Felipe Silva). 6 espaços eventos. Concierge Les Clefs d'Or. Rooftop com vista mar. SPA completo. Localização Av Beira Mar Norte.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Quais as dúvidas mais frequentes?",
+        "a": "Horário check-in/check-out, horário academia, o que está incluso nas diárias, estacionamento",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 15h / Check-out 12h",
+      "Estacionamento pago (R$59/dia + R$15/hora extra)",
+      "Crianças até 10 anos cortesia (sem cama extra)",
+      "Transfer pago à parte",
+      "Cancelamento com 48h de antecedência (sem taxa)",
+      "Concierge Les Clefs d'Or para personalização",
+      "Transferir para humano: atendimento personalizado, demandas específicas"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Piscina rooftop borda infinita com vista mar. Osli Restaurante Chef Felipe Silva. SPA premium. Localização priviliegiada Beira Mar. Música ao vivo.",
+      "familia": "Crianças até 10 anos cortesia. Recreação infantil. Aluguel PS5. Piscina. Academia. Parque próximo.",
+      "corporativo": "Centro convenções 6 salas. Sala reuniões vista mar. 2 foyers. Concierge Les Clefs d'Or. Wi-Fi cortesia. Localização excelente."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/lk-design-hotel-florianopolis-sc/",
+    "photo_urls": [
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2023/06/Rooftop-6-1-scaled.jpg"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-06T12:45:00Z",
+      "last_updated": "2026-04-06T12:45:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1380-1514",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/lk-design-hotel-florianopolis-sc/",
+          "fields_extracted": [
+            "ce_page_url",
+            "description",
+            "photo_urls"
+          ]
+        }
+      },
+      "address": "Florianópolis, Santa Catarina (Av Beira Mar Norte)",
+      "payment_policy": "PIX e cartão crédito. Parcelamento até 5x sem juros (mín R$300)",
+      "quality_score": 1.01,
+      "completeness": 0.95,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms (164 filled)",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating"
+      ],
+      "experience": "praia",
+      "destination": "Florianópolis",
+      "has_api": true,
+      "elevare_hotel_id": 12469,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "LK Design Hotel",
+    "municipality": "Florianópolis",
+    "state_code": "SC",
+    "region": "sul"
+  }
+}

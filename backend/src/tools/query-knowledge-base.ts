@@ -6,14 +6,20 @@ import { searchSimilar } from '../vectordb/faq-store.js';
 import { getRedisClient } from '../state/redis-client.js';
 import { hashContent } from '../vectordb/chunker.js';
 
+export const EMBEDDING_CATEGORIES = ['faq', 'description', 'experience', 'policy', 'location'] as const;
+export type EmbeddingCategory = (typeof EMBEDDING_CATEGORIES)[number];
+
 export const QueryKBParams = z.object({
   question: z.string().describe('The question to search in the knowledge base'),
   hotelName: z.string().nullable().describe('Hotel name to filter results (supports fuzzy matching)'),
+  categories: z.array(z.enum(EMBEDDING_CATEGORIES)).optional().describe(
+    'Pre-filter by embedding categories: faq, description, experience, policy, location. Reduces search space for better precision.',
+  ),
 });
 
 export type QueryKBParams = z.infer<typeof QueryKBParams>;
 
-const SIMILARITY_THRESHOLD = 0.7;
+const SIMILARITY_THRESHOLD = 0.78;
 const CACHE_TTL = 3600; // 1 hour
 const TOP_K = 3;
 
@@ -87,10 +93,13 @@ export async function queryKnowledgeBase(params: QueryKBParams): Promise<{
     await cacheEmbedding(params.question, embedding);
   }
 
-  // Search pgvector
-  const allResults = await searchSimilar(embedding, TOP_K * 2);
+  // Search pgvector with pre-filtering
+  const allResults = await searchSimilar(embedding, TOP_K * 2, {
+    hotelId: hotelId ?? undefined,
+    categories: params.categories,
+  });
 
-  // Filter by hotel if specified and by threshold
+  // Filter by threshold
   const filtered = allResults
     .filter((r) => r.similarity >= SIMILARITY_THRESHOLD)
     .slice(0, TOP_K);
@@ -104,13 +113,14 @@ export async function queryKnowledgeBase(params: QueryKBParams): Promise<{
       sectionTitle: r.sectionTitle,
       content: r.content,
       similarity: r.similarity,
+      category: r.category,
     })),
   };
 }
 
 export const queryKnowledgeBaseTool = tool({
   name: 'query_knowledge_base',
-  description: 'Search the FAQ knowledge base using semantic search. Optionally filter by hotel name (supports fuzzy matching). Returns top 3 most relevant chunks.',
+  description: 'Search the hotel knowledge base using semantic search. Optionally filter by hotel name and/or categories (faq, description, experience, policy, location) for precise pre-filtering. Returns top 3 most relevant chunks.',
   parameters: QueryKBParams,
   execute: async (params) => {
     const result = await queryKnowledgeBase(params);

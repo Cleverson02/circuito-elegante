@@ -1,0 +1,208 @@
+{
+  "hotel_slug": "rancho-do-peixe",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T14:30:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 1,
+  "completeness": 0.95,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+  "enrichment": {
+    "website_url": "https://ranchodopeixe.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/JVRvGoZzZvMw9T9c9",
+    "description": "Refúgio de paz e bons ventos localizado na tranquila Praia do Preá, 12 km de Jericoacoara. Filosofia eco-consciente com apenas 8% área total (67.000 m²) ocupada. Bangalôs rústicos charmosos em palafitas com palha carnaúba. Ventilação natural sem ar-condicionado. Escola kitesurf renomada.",
+    "lodging_type": "Pousada Boutique de Luxo - Sustentabilidade",
+    "room_types": [
+      {
+        "name": "Bangalô com Vista para o Jardim",
+        "size_m2": 80,
+        "max_guests": 4
+      },
+      {
+        "name": "Bangalô com Vista para o Mar",
+        "size_m2": 80,
+        "max_guests": 4
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Todos 80 m², ventilador teto, frigobar, cofre, Wi-Fi gratuito, varanda com rede, banheiro privativo com chuveiro ar livre. Sem TV (imersão natureza). Arquitetura palafitas, palha carnaúba.",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Estacionamento privativo gratuito para hóspedes"
+    },
+    "pool_description": "Piscina semi-olímpica 25 metros, rodeada por palmeiras e espreguiçadeiras",
+    "pool_heated": false,
+    "leisure_items": [
+      "piscina semi-olímpica",
+      "spa vista mar",
+      "aulas pilates",
+      "lounge TV",
+      "biblioteca",
+      "área jogos (pebolim, sinuca)",
+      "área praia exclusiva",
+      "kitesurf"
+    ],
+    "wellness": "SPA com menu repleto de cuidados, momentos relaxamento com brisa mar",
+    "event_space": {
+      "has_events": false,
+      "description": "Sem informações específicas"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Gratuito"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Restaurante Rancho",
+        "cuisine": "Frutos do mar com temperos locais",
+        "description": "Pratos com frutos do mar e temperos locais, ingredientes frescos e regionais. Bar da praia com pizzas forno a lenha à noite."
+      }
+    ],
+    "meals_included": "Café da manhã incluso (7h30-10h): sucos, frutas, café, leite, iogurte, granola, bolos, pães, omeletes, crepes, panquecas, waffles, tapioca",
+    "special_dining": "Bar da praia com bebidas, petiscos, pizzas forno a lenha à noite. Vista espetacular mar, brisa fresca.",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Disponível mediante solicitação, sujeito à disponibilidade",
+    "cancellation_policy": "Políticas variam conforme tipo acomodação e tarifa. Verificar condições específicas na reserva.",
+    "children_policy": "Crianças todas idades bem-vindas. Crianças 8+ cobradas adultos. Berços grátis 0-3 anos (solicitação, disponibilidade). Sem camas extras.",
+    "pet_policy": {
+      "accepts_pets": true,
+      "details": "Aceita animais estimação mediante solicitação. Pode haver cobrança adicional."
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Jericoacoara: ~20 km. Fortaleza Internacional (FOR): ~285 km",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Serviços transfer podem ser organizados mediante solicitação, custo adicional"
+    },
+    "nearby_attractions": "Praia do Preá, Jericoacoara (12 km), kitesurf spots",
+    "how_to_get_there": "Praia Preá a 12 km de Jericoacoara",
+    "special_programming": "Ranchinho: espaço infantil com brinquedos madeira e corda, brincadeiras seguras",
+    "hotel_concierge_services": "Concierge disponível para informações, reservas, organização atividades locais. Dúvidas transfer, passeios, kitesurf, aulas, pontos turísticos.",
+    "activities_tours": [
+      "Piscina semi-olímpica",
+      "SPA vista mar",
+      "Aulas pilates",
+      "Biblioteca",
+      "Jogos (pebolim, sinuca)",
+      "Área praia exclusiva",
+      "Kitesurf e aulas",
+      "Passeios jericoacoara"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Praia Preá tranquila. Eco-consciente (8% ocupação). Bangalôs palafitas 80 m². Sem TV (imersão). Piscina semi-olímpica. SPA vista mar. Escola kitesurf renomada. Café artesanal. Pizza forno lenha. Sustentabilidade integrada.",
+    "awards_certifications": null,
+    "sustainability": "Filosofia eco-consciente. Apenas 8% área ocupada (67.000 m²). Materiais locais. Práticas ecológicas. Arquitetura sustentável (palafitas, palha carnaúba).",
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Bangalôs vista mar disponibilidade, política pets/crianças, SPA/massagens, kitesurf e aulas, transfer jericoacoara",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem TV nos bangalôs (imersão natureza)",
+      "Check-in 14h / Check-out 12h",
+      "Transfer pago à parte",
+      "Piscina não aquecida",
+      "Sem camas extras",
+      "Berços grátis (0-3 anos, solicitação)",
+      "Crianças 8+ cobradas adultos",
+      "Pet friendly (cobrança adicional possível)",
+      "Cancelamento: condições variam por tarifa",
+      "Transferir para humano: dúvidas transfer, passeios, kitesurf, pontos turísticos, atividades"
+    ],
+    "sales_arguments_by_profile": {
+      "aventureiro": "Escola kitesurf renomada (instrutores multilíngues). Praia Preá tranquila. Piscina semi-olímpica. SPA. Jericoacoara 12 km. Natureza preservada.",
+      "sustentabilidade": "Eco-consciente (8% ocupação). Materiais locais. Palafitas. Sem TV. Práticas ecológicas. Conexão natureza. Responsabilidade ambiental.",
+      "familia": "Ranchinho infantil. Crianças bem-vindas. Berços grátis 0-3 anos. Piscina. Praia. Café artesanal. Ambiente tranquilo. Pet friendly."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/rancho-do-peixe-cruz-ce/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-06T14:30:00Z",
+      "last_updated": "2026-04-06T14:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "2321-2450",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/rancho-do-peixe-cruz-ce/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Praia do Preá, Ceará (12 km Jericoacoara)",
+      "payment_policy": "Cartões crédito/débito (American Express, Visa, Mastercard, Diners, Maestro, Hipercard, Elo), dinheiro",
+      "quality_score": 1,
+      "completeness": 0.95,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "gym"
+      ],
+      "experience": "praia",
+      "destination": "Praia do Preá",
+      "has_api": true,
+      "elevare_hotel_id": 3088,
+      "bradesco_coupon": true
+    },
+    "hotel_name": "Rancho do Peixe",
+    "municipality": "Cruz",
+    "state_code": "CE",
+    "region": "nordeste"
+  }
+}

@@ -15,6 +15,7 @@ import { MODELS, type Language } from './types.js';
 import { personaAgent } from './persona-agent.js';
 import { SearchHotelsParams, searchHotels } from '../tools/search-hotels.js';
 import { QueryKBParams, queryKnowledgeBase } from '../tools/query-knowledge-base.js';
+import { QueryHotelDetailsParams, queryHotelDetails } from '../tools/query-hotel-details.js';
 import { TransferParams, buildHandoverSummary } from '../tools/transfer-to-human.js';
 import { logger } from '../middleware/logging.js';
 
@@ -61,6 +62,21 @@ function logToolCall(
     tool: toolName,
     latencyMs,
     success,
+    source: toolName,
+    ...meta,
+  });
+}
+
+// ─── Source Attribution (Story 1.9 — AC10) ────────────────────
+
+export function logSourceAttribution(
+  toolName: string,
+  found: boolean,
+  meta?: Record<string, unknown>,
+): void {
+  logger.info('source_attribution', {
+    source: toolName,
+    found,
     ...meta,
   });
 }
@@ -97,7 +113,7 @@ const instrumentedSearchHotels = tool({
 const instrumentedQueryKB = tool({
   name: 'query_knowledge_base',
   description:
-    'Search the FAQ knowledge base using semantic search. Optionally filter by hotel name. Returns top relevant chunks.',
+    'Search the hotel knowledge base using semantic search. Optionally filter by hotel name and/or categories (faq, description, experience, policy, location) for precise pre-filtering. Returns top relevant chunks.',
   parameters: QueryKBParams,
   execute: async (params) => {
     const start = Date.now();
@@ -110,7 +126,17 @@ const instrumentedQueryKB = tool({
         count: result.results.length,
         suggestion: result.suggestion,
       });
+      // Story 1.9: Source attribution for each result
+      for (const r of result.results) {
+        logSourceAttribution('query_knowledge_base', true, {
+          sectionTitle: r.sectionTitle,
+          similarity: r.similarity,
+          category: r.category,
+          confidence: r.similarity >= 0.78 ? 'high' : 'low',
+        });
+      }
       if (result.results.length === 0) {
+        logSourceAttribution('query_knowledge_base', false);
         return {
           found: false,
           suggestion: result.suggestion ?? 'transfer_to_human',
@@ -120,6 +146,53 @@ const instrumentedQueryKB = tool({
       return { found: true, results: result.results, count: result.results.length };
     } catch (err) {
       logToolCall('query_knowledge_base', Date.now() - start, false, {
+        error: err instanceof Error ? err.message : String(err),
+      });
+      return {
+        found: false,
+        error: err instanceof Error ? err.message : 'Tool execution failed',
+      };
+    }
+  },
+});
+
+const instrumentedQueryHotelDetails = tool({
+  name: 'query_hotel_details',
+  description:
+    'Get detailed hotel information from enriched structured data (rooms, amenities, policies, restaurants, etc). ' +
+    'Use hotelSlug for exact match or hotel name for fuzzy matching. ' +
+    'Specify a category (identity, accommodations, infrastructure, gastronomy, policies, transport, experiences, reputation, concierge, integration) for detailed data, or omit for summary.',
+  parameters: QueryHotelDetailsParams,
+  execute: async (params) => {
+    const start = Date.now();
+    try {
+      const result = await withTimeout(queryHotelDetails(params), TOOL_TIMEOUT_MS);
+      logToolCall('query_hotel_details', Date.now() - start, true, {
+        found: result.found,
+        category: params.category,
+      });
+      // Story 1.9: Source attribution
+      logSourceAttribution('query_hotel_details', result.found, {
+        hotelSlug: params.hotelSlug,
+        category: params.category ?? 'summary',
+      });
+      if (!result.found) {
+        return {
+          found: false,
+          suggestion: result.suggestion,
+          message: `Hotel "${params.hotelSlug}" não encontrado. Tente query_knowledge_base para busca semântica.`,
+        };
+      }
+      return {
+        found: true,
+        hotelName: result.hotelName,
+        hotelSlug: result.hotelSlug,
+        category: result.category ?? 'summary',
+        details: result.details,
+        schemaFields: result.schemaFields,
+      };
+    } catch (err) {
+      logToolCall('query_hotel_details', Date.now() - start, false, {
         error: err instanceof Error ? err.message : String(err),
       });
       return {
@@ -168,7 +241,7 @@ export const orchestratorAgent = new Agent({
   name: 'StellaOrchestrator',
   model: MODELS.turbo,
   instructions: getPrompt(),
-  tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedTransferToHuman],
+  tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedQueryHotelDetails, instrumentedTransferToHuman],
   handoffs: [personaAgent],
   handoffDescription:
     'Orchestrates hotel search, FAQ lookup, and human transfer. Hands off to the Persona Agent for natural language response generation.',

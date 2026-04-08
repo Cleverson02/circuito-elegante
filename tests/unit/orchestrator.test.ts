@@ -42,9 +42,10 @@ describe('Orchestrator Agent definition — AC1, AC2', () => {
 
     expect(source).toContain('instrumentedSearchHotels');
     expect(source).toContain('instrumentedQueryKB');
+    expect(source).toContain('instrumentedQueryHotelDetails');
     expect(source).toContain('instrumentedTransferToHuman');
     expect(source).toContain(
-      "tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedTransferToHuman]",
+      "tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedQueryHotelDetails, instrumentedTransferToHuman]",
     );
   });
 
@@ -101,13 +102,14 @@ describe('Orchestrator system prompt — AC4', () => {
     expect(promptContent).toMatch(/tool fails|failure/i);
   });
 
-  it('contains all 5 anti-hallucination rules', () => {
-    // 5 numbered CRITICAL rules
+  it('contains all 6 anti-hallucination rules', () => {
+    // 6 numbered CRITICAL rules (Story 1.9: added fallback chain + similarity threshold)
     expect(promptContent).toContain('1.');
     expect(promptContent).toContain('2.');
     expect(promptContent).toContain('3.');
     expect(promptContent).toContain('4.');
     expect(promptContent).toContain('5.');
+    expect(promptContent).toContain('6.');
   });
 });
 
@@ -218,8 +220,8 @@ describe('Orchestrator tool logging — AC7', () => {
     // Each tool has true (success) and false (error) logToolCall invocations
     const successCalls = (source.match(/logToolCall\(.+?,\s*true,/g) ?? []).length;
     const errorCalls = (source.match(/logToolCall\(.+?,\s*false,/g) ?? []).length;
-    expect(successCalls).toBe(3);
-    expect(errorCalls).toBe(3);
+    expect(successCalls).toBe(4);
+    expect(errorCalls).toBe(4);
   });
 
   it('uses logger.warn for error cases (F1 fix)', () => {

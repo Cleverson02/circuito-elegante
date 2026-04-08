@@ -1,0 +1,252 @@
+{
+  "hotel_slug": "pousada-alma-charme-atins",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:15:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx", "circuito_elegante", "hotel_website", "hotel_website_faq", "hotel_website_experiencias"],
+  "sources_pending": ["chatbot", "ota"],
+  "quality_score": 0.90,
+  "completeness": 0.83,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+
+  "enrichment": {
+    "website_url": "https://charmeatins.com.br/atins-charme-premium/",
+    "google_maps_url": "https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368",
+    "description": "A Alma Charme Atins oferece uma experiência única nos Lençóis Maranhenses, unindo conforto, exclusividade e contato com a natureza. Inspirados por este oásis brasileiro, criaram a Alma Charme Atins com conceito exclusivo no vilarejo. Contornada por piscinas comuns e privativas, a pousada dispõe de chalés em estilo rústico-chique construídos artesanalmente com madeira de buriti, proporcionando todo conforto. Com foco na sustentabilidade, promove a integração harmoniosa entre os hóspedes e a paisagem local.",
+    "lodging_type": "Pousada de charme",
+
+    "room_types": [
+      {
+        "name": "Chalé Premium Família",
+        "description": "35m² para até 4 pessoas. 1 cama de casal king, 2 camas de solteiro, ar-condicionado, ventilador, TV com Netflix, máquina de café expresso 3 corações, minibar, adega Grand Cru, secador de cabelos, chuveiro elétrico, varanda, rede e piscina privativa com hidromassagem.",
+        "units": 2,
+        "size_m2": 35,
+        "max_guests": 4
+      },
+      {
+        "name": "Chalé Premium Casal",
+        "description": "35m² para casais. 1 cama de casal, ar-condicionado, ventilador, TV com Netflix, máquina de café expresso 3 corações, minibar, adega Grand Cru, secador de cabelos, chuveiro elétrico, varanda, rede e piscina privativa com hidromassagem.",
+        "units": 6,
+        "size_m2": 35,
+        "max_guests": 2
+      }
+    ],
+    "total_rooms": 8,
+    "room_amenities": "Ar-condicionado, ventilador, TV com Netflix, máquina de café expresso 3 corações, minibar, adega Grand Cru, secador de cabelos, chuveiro elétrico, varanda, rede, piscina privativa com hidromassagem. Amenities: Shampoo, Condicionador, Sabonete em barra, Hidratante e Sabonete líquido — Linha Terra Organics (Realgems).",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": null,
+      "is_free": true
+    },
+    "pool_description": "Piscinas comuns em áreas compartilhadas e piscinas privativas em cada um dos 8 bangalôs. Integradas às acomodações, rodeadas por paisagismo com plantas nativas.",
+    "pool_heated": false,
+    "leisure_items": ["kitesurf", "quadriciclo nas dunas", "passeio de lancha pelo Rio Preguiças", "revoada dos guarás", "pôr do sol nas dunas"],
+    "wellness": "Alma Spa & Gym — sob telhado de palha cercado por buritis. Musculação completa com equipamentos de madeira, massagens terapêuticas, rituais de bem-estar. Exclusivo para hóspedes.",
+    "event_space": {
+      "has_events": false,
+      "description": "No espaço da pousada não. Eventos na Rancharia (outra unidade do grupo)"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sinal da Vivo, na grande maioria das vezes muito bom"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Alma Spa & Gym com musculação completa, equipamentos de madeira que dialogam com a arquitetura"
+    },
+
+    "restaurants": [
+      {
+        "name": "Mirante Charme Atins",
+        "cuisine": "Maranhense contemporânea",
+        "description": "Restaurante principal do grupo, culinária maranhense elaborada pelas melhores cozinheiras de Atins com insumos locais (camarão e peixes de pescadores da região)"
+      },
+      {
+        "name": "Vila Charme",
+        "cuisine": "Regional",
+        "description": "Restaurante do grupo Charme Atins"
+      },
+      {
+        "name": "Sushi Charme Atins",
+        "cuisine": "Japonesa",
+        "description": "Cozinha japonesa mesclada aos sabores únicos de Atins"
+      },
+      {
+        "name": "Atins Charme Beach Bar",
+        "cuisine": "Bar de praia",
+        "description": "Beach bar do grupo Charme Atins"
+      }
+    ],
+    "meals_included": "Café da manhã à la carte, servido exclusivamente na varanda do quarto",
+    "special_dining": "Café da manhã nas dunas dos Lençóis Maranhenses (experiência organizada pela pousada com itens frescos ao nascer do sol). Jantar nas dunas com menu elaborado pelo Mirante sob céu estrelado.",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, sujeito a disponibilidade. Taxa de meia diária. Associados CE possuem early check-in e late check-out.",
+    "cancellation_policy": "Até 31 dias do check-in: devolução de 100%. De 8 a 30 dias: devolução com multa de 30%. Até 7 dias: sem devolução.",
+    "children_policy": "Uma criança até 10 anos cortesia por acomodação com os pais/adultos. Não trabalham com camas extras. Chalé Premium Família acomoda até 4 pessoas.",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceitam pets no hotel"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Aeroporto Internacional de São Luís — aproximadamente 3h de transfer terrestre até Barreirinhas + 40 minutos de lancha pelo Rio Preguiças até Atins. Trajeto também pode ser feito de pequeno avião ou helicóptero.",
+    "transfer": {
+      "available": true,
+      "is_free": null,
+      "description": "Pioneiros em oferecer transfer para circular dentro do vilarejo. Traslado de lancha de 40 min pelo Rio Preguiças (Barreirinhas → Atins)."
+    },
+    "nearby_attractions": "Parque Nacional dos Lençóis Maranhenses (5-10 minutos de veículo 4x4 credenciado), mais de 60 mil lagoas cristalinas, Rio Preguiças (120+ km), manguezais com guarás",
+    "how_to_get_there": "Aeroporto de São Luís → transfer terrestre (~3h) até Barreirinhas → traslado de lancha (40min) pelo Rio Preguiças até Atins. Alternativa: pequeno avião ou helicóptero até Barreirinhas.",
+
+    "special_programming": "Café da manhã nas dunas ao nascer do sol, jantar nas dunas sob as estrelas (menu pelo Mirante), pôr do sol nas dunas, revoada dos guarás ao entardecer",
+    "hotel_concierge_services": "Atendimento personalizado para associados CE. Transfer dentro do vilarejo. Organização de experiências nas dunas.",
+    "activities_tours": [
+      "Kitesurf (escolas e aluguel de equipamentos no vilarejo)",
+      "Café da manhã nas dunas dos Lençóis Maranhenses",
+      "Jantar nas dunas com menu do Mirante",
+      "Pôr do sol nas dunas",
+      "Passeio de quadriciclo nas dunas (155 mil hectares)",
+      "Revoada dos guarás ao pôr do sol no Rio Preguiças",
+      "Passeio de lancha pelo Rio Preguiças",
+      "Massagens terapêuticas no Alma Spa & Gym",
+      "Rituais de bem-estar"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Chalés rústico-chique com madeira de buriti e piscina privativa com hidromassagem. Experiências exclusivas nas dunas (café, jantar, pôr do sol). Alma Spa & Gym. 4 restaurantes do grupo (maranhense, japonesa, mediterrânea). Atendimento caloroso e hospitaleiro elogiado pelos hóspedes. Pioneiros em transfer no vilarejo.",
+    "awards_certifications": ["Selo Circuito Elegante"],
+    "sustainability": "Foco na sustentabilidade, integração harmoniosa entre hóspedes e paisagem local, valorização da natureza. Chalés construídos com madeira de buriti. Paisagismo de plantas nativas. Trabalho com insumos locais e pescadores da região. Equipe formada por moradores de Atins.",
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Qual a melhor época para visitar os Lençóis Maranhenses?",
+        "a": "Deslumbrantes em qualquer época. Jun-Set: alta temporada, poucas chuvas, ventos fortes (kitesurf). Out-Dez: clima seco, menos turistas. Jan-Fev: início das chuvas, clima calmo. Mar-Mai: auge das chuvas, lagoas enchendo, cachoeiras efêmeras.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Qual é a distância entre as pousadas e o Parque Nacional?",
+        "a": "Atins está na porta do Parque. São entre 5 e 10 minutos em veículo 4x4 credenciado.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Como chegar em Atins?",
+        "a": "Aeroporto de São Luís → transfer terrestre 3h até Barreirinhas → lancha 40min pelo Rio Preguiças. Alternativa: avião ou helicóptero.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Posso levar meu pet?",
+        "a": "Não aceitamos pets no hotel.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Como são os restaurantes?",
+        "a": "Culinária maranhense (carro-chefe), japonesa e mediterrânea mescladas aos sabores locais. Insumos de pescadores da região.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "acesso",
+        "objection": "É muito longe e difícil de chegar",
+        "response": "O acesso faz parte da experiência — 3h de carro até Barreirinhas e 40min de lancha pelo Rio Preguiças. O hotel organiza todo o transfer. Alternativa de avião/helicóptero disponível.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "category": "pets",
+        "objection": "Quero levar meu pet",
+        "response": "Infelizmente não aceitamos pets no hotel.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "attention_points": [
+      "Não aceita pets",
+      "Acesso apenas por lancha (40min) a partir de Barreirinhas — não há estrada",
+      "Visita ao Parque Nacional requer veículo 4x4 credenciado",
+      "Early check-in/late check-out sujeito a disponibilidade",
+      "Reserva via WhatsApp: +55 98 99161-5744"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Chalés Premium Casal com piscina privativa e hidromassagem. Jantar romântico nas dunas sob as estrelas. Experiência de pôr do sol inesquecível.",
+      "familia": "Chalés Premium Família para até 4 pessoas. Experiências educativas nas dunas. Contato direto com a natureza.",
+      "aventureiro": "Kitesurf, quadriciclo nas dunas, lancha pelo Rio Preguiças. Parque Nacional a 5 minutos. Mais de 60 mil lagoas cristalinas."
+    },
+
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/alma-charme-atins-lencois-maranhenses-ma/",
+    "photo_urls": [
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A6955-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7513-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7535-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/IMG_3778.png",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7346-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7369-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/BRU07498.png",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/IMG_3104_jpg.png",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A6967-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7082-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7555-scaled.jpg",
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2024/10/10A7038-scaled.jpg"
+    ],
+
+    "_meta": {
+      "enriched_at": "2026-04-07T03:10:00Z",
+      "last_updated": "2026-04-07T03:16:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/alma-charme-atins-lencois-maranhenses-ma/",
+          "fields_extracted": ["description", "lodging_type", "room_types", "total_rooms", "room_amenities", "pool_description", "early_late_checkout", "highlights", "sustainability", "ce_page_url", "photo_urls"]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/atins-charme-premium/",
+          "fields_extracted": ["website_url", "wellness", "gym", "restaurants", "special_dining", "transfer", "hotel_concierge_services"]
+        },
+        "hotel_website_faq": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/faq/",
+          "fields_extracted": ["pet_policy", "airport_distance", "how_to_get_there", "nearby_attractions", "guest_faqs", "common_objections", "attention_points"]
+        },
+        "hotel_website_experiencias": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/experiencias/",
+          "fields_extracted": ["activities_tours", "special_programming", "leisure_items"]
+        }
+      },
+      "address": "R. Principal, s/n, Atins, Barreirinhas/MA, 65590-000",
+      "phone": "+55 98 99161-5744",
+      "email": "reservascharme@charmeatins.com.br",
+      "instagram": "@almacharmeatins",
+      "booking_engine": "https://book.omnibees.com/chain/9546/hotel/17874?lang=pt-BR",
+      "whatsapp_booking": "https://wa.me/98991615744",
+      "google_rating": "5.01",
+      "quality_score": 0.82,
+      "completeness": 0.69,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "google_maps_url", "accessibility", "room_service", "dietary_options",
+        "smoking_policy", "min_age_solo", "day_use", "special_packages", "star_rating"
+      ]
+    }
+  }
+}

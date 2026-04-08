@@ -1,0 +1,173 @@
+{
+  "hotel_slug": "ponta-de-inhambupe-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T12:15:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.88,
+  "completeness": 0.86,
+  "fields_filled": 50,
+  "fields_total": 58,
+  "fields_null": 8,
+
+  "enrichment": {
+    "website_url": "https://www.hotelpontadeinhambupe.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/xpbDV5JZNbogZASJ9",
+    "description": "Hotel boutique à beira-mar no litoral norte da Bahia (Esplanada). Estrutura de lazer completa com spa, piscinas, restaurante, serviço de praia e ambiente que mistura conforto, natureza e exclusividade.",
+    "lodging_type": "Hotel Boutique com SPA integrado (Resort-Boutique)",
+
+    "room_types": [
+      {"name": "Superior vista mar casal", "max_guests": 2},
+      {"name": "Superior vista mar sofá cama", "max_guests": 3},
+      {"name": "Superior vista mar família", "max_guests": 4},
+      {"name": "Luxo premium solteiro PCD", "max_guests": 2},
+      {"name": "Luxo premium vista piscina casal", "max_guests": 2},
+      {"name": "Luxo premium vista piscina família", "max_guests": 4},
+      {"name": "Luxo Twin", "max_guests": 2},
+      {"name": "Luxo premium vista jardim família", "max_guests": 4},
+      {"name": "Casa de luxo privativa", "max_guests": 8}
+    ],
+    "total_rooms": 29,
+    "room_amenities": "Ar-condicionado, secador de cabelo, frigobar, TV smart, Wi-Fi, amenities de banho, enxovais premium, vistas variadas (mar, jardim, piscina)",
+
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Estacionamento privado no local, gratuito para hóspedes"
+    },
+    "pool_description": "Piscina externa com vista para o mar",
+    "pool_heated": false,
+    "leisure_items": ["piscina", "deck frente ao mar", "serviço de praia", "quadras de beach tennis", "jacuzzi", "sauna", "bicicletas gratuitas"],
+    "wellness": "Spa Ponta de Inhambupe by Chandra com massagens e tratamentos, sauna, jacuzzi",
+    "event_space": {
+      "has_events": true,
+      "description": "Casamentos com residências especiais para núpcias, eventos de luxo"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Disponível em todo hotel"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "Cambuí Gastronomia",
+        "cuisine": "Menu contemporâneo com regionalidades",
+        "description": "Restaurante principal com serviço de praia com bangalôs e bar de apoio, petiscos regionais"
+      },
+      {
+        "name": "Coco's Bar",
+        "cuisine": "Drinks e aperitivos",
+        "description": "Bar integrado com drinks selecionados"
+      },
+      {
+        "name": "Bar da Piscina",
+        "cuisine": "Bebidas e petiscos",
+        "description": "Bar localizado junto à piscina"
+      }
+    ],
+    "meals_included": "Café da manhã incluso (buffet ou continental)",
+    "special_dining": "Menu contemporâneo com regionalidades, serviço de praia com bangalôs, petiscos regionais, carta de drinks, pacotes Descansar e Desconectar",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Conforme disponibilidade, deve ser solicitado ao concierge",
+    "cancellation_policy": "Cancelamento permitido até 24h antes do check-in. Após isso haverá cobrança integral dos valores.",
+    "children_policy": "Aceita crianças de qualquer idade. Não tem camas extras. 2 crianças até 12 anos gratuitas em categorias família, 1 criança até 12 anos gratuita em outras categorias.",
+    "pet_policy": "Pet friendly (sob consulta)",
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Cerca de 120 km de Salvador (Aeroporto Internacional de Salvador Luís Eduardo Magalhães)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Serviço de traslado disponível sob demanda, pago à parte, com horários pré-definidos do aeroporto"
+    },
+    "nearby_attractions": "Litoral norte da Bahia, Esplanada",
+    "how_to_get_there": "Loteamento Ponta de Inhambupe, Esplanada/BA, CEP 48370-000",
+
+    "special_programming": "Pacotes Descansar e Desconectar, residências para núpcias, casamentos com residências para noivos",
+    "hotel_concierge_services": "Concierge com serviços de translado, agendamento de experiências, contato local. Para organizar eventos de casamento, pacotes especiais (núpcias), traslados personalizados, experiências locais, menus personalizados, reclamações, cancelamentos e alterações.",
+    "activities_tours": [
+      "SPA",
+      "Serviço de praia",
+      "Trilhas (3 experiências incluídas em Baixio)",
+      "Academia",
+      "Passeios de bicicleta"
+    ],
+    "day_use": null,
+    "special_packages": [
+      "Descansar e Desconectar",
+      "Residências para núpcias",
+      "Casamentos"
+    ],
+
+    "highlights": "Beira-mar litoral Norte Bahia, estrutura boutique com SPA integrado, Restaurante Cambuí com gastronomia contemporânea, serviço de praia com bangalôs, residências para núpcias, ambiente luxo em conexão com natureza, 3 passeios inclusos",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas frequentes?",
+        "a": "Vistas dos quartos, categorias, políticas de pets, serviço de praia, estrutura de lazer, disponibilidade de residências para casamentos",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 14h / Check-out 12h",
+      "Piscina NÃO aquecida (apenas jacuzzi)",
+      "Cancelamento: até 24h antes (sem taxa)",
+      "Crianças: política variável por categoria",
+      "Transfer pago à parte, agendamento necessário",
+      "Transferir para humano: eventos casamento, pacotes especiais (núpcias), traslados personalizados, experiências locais, menus personalizados, reclamações, cancelamentos"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Beira-mar exclusivo, SPA completo, serviço de praia com bangalôs, residências privativas com piscina, ambiente romântico e luxuoso",
+      "casamento": "Residências especiais para núpcias (2 andares, piscina privativa, churrasqueira), eventos de luxo, estrutura de eventos, ambiente paradisíaco",
+      "familia": "3 passeios inclusos, piscina, estrutura completa de lazer, bicicletas gratuitas, sauna, jacuzzi"
+    },
+
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/ponta-de-inhambupe-hotel-boutique-spa-esplanada-ba/",
+    "payment_methods": "Cartões de crédito",
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T12:15:00Z",
+      "last_updated": "2026-04-06T12:15:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1037-1078",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "Esplanada, BA",
+      "payment_policy": "Cartão de crédito",
+      "quality_score": 0.88,
+      "completeness": 0.86,
+      "fields_filled": 50,
+      "fields_null": 8,
+      "null_fields_remaining": [
+        "room_service", "dietary_options",
+        "smoking_policy", "min_age_solo", "day_use", "star_rating", "gym", "accessibility"
+      ]
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "hotel_slug": "saint-andrews-castelo",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T14:45:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.86,
+  "completeness": 0.84,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+
+  "enrichment": {
+    "website_url": "https://saintandrews.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/jBStgW8qfkbR1ZcJ6",
+    "description": "Primeiro hotel Exclusive House Brasil. Castelo inspirado castelos escoceses em Gramado, Serra Gaúcha. Exclusividade, sofisticação e requinte. Arquitetura única, jardins cenográficos, vista Vale Quilombo. Contato natureza vizinha ao centro. Alta gastronomia, adega excepcional. Ambiente acolhedor.",
+    "lodging_type": "Hotel de Luxo - Exclusive House",
+
+    "room_types": [
+      {"name": "Gold Mountain", "size_m2": 28, "max_guests": 2},
+      {"name": "Suíte Pérola", "size_m2": 28, "max_guests": 2},
+      {"name": "Green Mountain", "size_m2": 32, "max_guests": 3},
+      {"name": "Grey Mountain", "size_m2": 32, "max_guests": 3},
+      {"name": "Blue Mountain", "size_m2": 48, "max_guests": 4},
+      {"name": "Suíte Rubi", "size_m2": 44, "max_guests": 4},
+      {"name": "Suíte Topázio", "size_m2": 44, "max_guests": 4},
+      {"name": "Suíte Turquesa", "size_m2": 44, "max_guests": 4},
+      {"name": "White Mountain", "size_m2": 48, "max_guests": 4},
+      {"name": "Suite Jade", "size_m2": 48, "max_guests": 2},
+      {"name": "Suíte Ambar", "size_m2": 56, "max_guests": 4},
+      {"name": "Suíte Cristal", "size_m2": 56, "max_guests": 4},
+      {"name": "Mountain House", "size_m2": 500, "max_guests": 6}
+    ],
+    "total_rooms": null,
+    "room_amenities": "Kit especial amenidades Trousseau, secador cabelo, cofre eletrônico, Smart TV cabo, enxoval premium 650 fios",
+
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Gratuito para hóspedes"
+    },
+    "pool_description": "Piscina coberta e aquecida com vista para Vale Quilombo",
+    "pool_heated": true,
+    "leisure_items": ["piscina coberta aquecida", "academia", "spa", "sauna", "solário", "jacuzzi", "biblioteca", "bicicletas", "gastronomia", "adega excepcional"],
+    "wellness": "SPA com sala massagens, variedade procedimentos terapêuticos (relaxamento, alívio estresse, revitalização). Massagens, sauna, jacuzzi.",
+    "event_space": {
+      "has_events": true,
+      "description": "Cenário perfeito casamentos, celebrações sociais, encontros corporativos. Suítes luxuosas, alta gastronomia, jardins deslumbrantes, serviço personalizado."
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Wi-Fi alta velocidade gratuito"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Academia"
+    },
+
+    "restaurants": [
+      {
+        "name": "Restaurante Primrose",
+        "cuisine": "Franco-italiana adaptada Serra Gaúcha",
+        "description": "Gastronomia inspiração franco-italiana. Atendimento personalizado. Pratos autorais chef. Ambiente lustres cristal tcheco. Wine Spectator Best of Award Excellence 2024 (entre melhores mundo carta vinhos). Almoço, chá tarde, jantar. Visitantes via reserva."
+      }
+    ],
+    "meals_included": "Café da manhã com menu degustação e horário livre",
+    "special_dining": "Experiências enogastronômicas exclusivas ao longo ano. Alta gastronomia + rótulos icônicos. Ambiente sofisticado intimista.",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sob disponibilidade, sujeito a custo adicional",
+    "cancellation_policy": "Políticas variam conforme período e tarifa desejada. Favor contato para informações específicas.",
+    "children_policy": "Crianças até 5 anos: Grátis. Crianças 6-12 anos: 50% cama extra por noite.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "1h 49min (95,1 km) do Aeroporto POA",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Serviço transfer privativo carro blindado. Disponível solicitação, pago à parte."
+    },
+    "nearby_attractions": "Rota Romântica, Novo Hamburgo, Nova Petrópolis, Três Coroas, Igrejinha, centro Gramado",
+    "how_to_get_there": "Gramado/Serra Gaúcha. Via BR-116 + RS-239 + RS-115 (rápida) ou Rota Romântica (bonita). 1h 49min Porto Alegre.",
+
+    "special_programming": "Experiências enogastronômicas exclusivas, atendimento personalizado, concierge 24h",
+    "hotel_concierge_services": "Concierge 24h. Agendamento experiências cidade/hotel, recomendações gastronômicas, culturais, reservas exclusivas. Eventos, experiências personalizadas, restaurante/spa, pacotes especiais, reclamações.",
+    "activities_tours": [
+      "Piscina coberta aquecida",
+      "Academia",
+      "SPA",
+      "Sauna",
+      "Jacuzzi",
+      "Biblioteca",
+      "Bicicletas",
+      "Restaurante Primrose",
+      "Adega",
+      "Experiências enogastronômicas"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Primeiro Exclusive House Brasil. Castelo escocês único. Relais & Châteaux. Piscina coberta aquecida vista Vale. Primrose restaurante (Wine Spectator award). Adega excepcional. 3 tipos acomodação (Castle/Mountain/Mountain House). Mordomos, concierge 24h. Jardins deslumbrantes. Enxoval 650 fios.",
+    "awards_certifications": ["Relais & Châteaux", "Wine Spectator Best of Award of Excellence 2024"],
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Aceitam crianças, o que está incluído diária, distância centro Gramado, serviço transfer",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 14h / Check-out 12h",
+      "Crianças 6-12 anos: 50% cama extra",
+      "Transfer pago à parte (carro blindado)",
+      "Cancelamento: condições variam por tarifa",
+      "Primrose restaurante via reserva (visitantes)",
+      "Concierge 24h para personalização",
+      "Relais & Châteaux membro",
+      "Transferir para humano: eventos, experiências, restaurante/spa, pacotes especiais, reclamações, dúvidas não respondidas"
+    ],
+    "sales_arguments_by_profile": {
+      "luxo": "Único Exclusive House Brasil. Relais & Châteaux. Castelo escocês. Primrose Chef autoral. Wine Spectator award. Mordomos, concierge 24h. Enxoval 650 fios. Mountain House 500m². Atendimento exclusivo.",
+      "casal": "Piscina aquecida vista Vale. Primrose gastronomia. Sauna, jacuzzi, SPA. Experiências enogastronômicas. Adega excepcional. Romantismo sofisticado.",
+      "corporativo": "Relais & Châteaux. Primrose eventos. 13 tipos acomodação. Concierge 24h. Salões, adega. Team building. Localização premium."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T14:45:00Z",
+      "last_updated": "2026-04-06T14:45:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "2452-2540",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "Gramado, Rio Grande do Sul (Serra Gaúcha)",
+      "payment_policy": "Depósito bancário, cartões crédito (até 4x), débito. Sem cheques.",
+      "quality_score": 0.86,
+      "completeness": 0.84,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms", "room_service", "dietary_options", "pet_policy",
+        "smoking_policy", "min_age_solo", "day_use", "special_packages", "star_rating"
+      ]
+    }
+  }
+}

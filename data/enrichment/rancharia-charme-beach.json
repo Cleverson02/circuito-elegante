@@ -1,0 +1,220 @@
+{
+  "hotel_slug": "rancharia-charme-beach",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:18:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx", "hotel_website", "hotel_website_faq", "hotel_website_experiencias"],
+  "sources_pending": ["circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.88,
+  "completeness": 0.83,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+
+  "enrichment": {
+    "website_url": "https://charmeatins.com.br/rancharia-charme-beach/",
+    "google_maps_url": "https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368",
+    "description": "Localização privilegiada à beira-rio com vista mar na praia do vilarejo de Atins. Com charme rústico e cheio de brasilidade, a pousada encanta os hóspedes desde a recepção, decorada com obras de artistas nordestinos. Também conta com uma boutique com marcas nacionais e artesanatos do Nordeste. Perfeita para festas e celebrações especiais. É neste refúgio sereno e confortável que começa a descoberta dos Lençóis Maranhenses.",
+    "lodging_type": "Pousada de charme",
+
+    "room_types": [
+      {
+        "name": "Quartos Duplos",
+        "description": "Suítes integradas à natureza, construídas com materiais nobres da região, decoradas com móveis e obras de artesãos locais.",
+        "max_guests": 2
+      },
+      {
+        "name": "Quartos Triplos",
+        "description": "Suítes integradas à natureza, construídas com materiais nobres da região, decoradas com móveis e obras de artesãos locais.",
+        "max_guests": 3
+      },
+      {
+        "name": "Quartos Quádruplos",
+        "description": "Suítes integradas à natureza, construídas com materiais nobres da região, decoradas com móveis e obras de artesãos locais.",
+        "max_guests": 4
+      }
+    ],
+    "total_rooms": 16,
+    "room_amenities": "Amenities: Shampoo, Condicionador, Sabonete em barra, Hidratante e Sabonete líquido — Linha Terra Organics (Realgems).",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": null,
+      "is_free": true
+    },
+    "pool_description": null,
+    "pool_heated": false,
+    "leisure_items": ["kitesurf (único lugar onde se pode acordar e já sair velejando)", "quadriciclo nas dunas", "passeio de lancha pelo Rio Preguiças", "revoada dos guarás", "pôr do sol nas dunas"],
+    "wellness": "Spa com massagistas parceiras, academia, espaço de yoga, piscina privativa com hidromassagem.",
+    "event_space": {
+      "has_events": true,
+      "description": "Espaço para eventos na Rancharia (entrada de Atins). Perfeita para festas e celebrações especiais."
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sinal da Vivo, na grande maioria das vezes muito bom"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "Sushi Bar Charme Atins",
+        "cuisine": "Japonesa",
+        "description": "Restaurante exclusivo da Rancharia Charme Beach. Gastronomia japonesa com cortes nobres de peixes frescos, na beira do rio com brisa suave do Nordeste. Aberto também a visitantes."
+      }
+    ],
+    "meals_included": "Café da manhã à la carte, servido exclusivamente na varanda do quarto",
+    "special_dining": "Café da manhã nas dunas dos Lençóis Maranhenses. Jantar nas dunas sob as estrelas (experiência do grupo Charme Atins).",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, sujeito a disponibilidade. Taxa de meia diária.",
+    "cancellation_policy": "Até 31 dias do check-in: devolução de 100%. De 8 a 30 dias: devolução com multa de 30%. Até 7 dias: sem devolução.",
+    "children_policy": "Uma criança até 10 anos cortesia por acomodação com os pais/adultos. Não trabalham com camas extras. Quartos quádruplos disponíveis.",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceitam pets no hotel (política do grupo Charme Atins)"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Aeroporto Internacional de São Luís — aproximadamente 3h de transfer terrestre até Barreirinhas + 40 minutos de lancha pelo Rio Preguiças até Atins.",
+    "transfer": {
+      "available": true,
+      "is_free": null,
+      "description": "Transfer disponível para circular dentro do vilarejo (grupo Charme Atins foi pioneiro em oferecer este serviço). Traslado de lancha de 40 min pelo Rio Preguiças (Barreirinhas → Atins)."
+    },
+    "nearby_attractions": "Parque Nacional dos Lençóis Maranhenses (5-10 minutos de veículo 4x4), mais de 60 mil lagoas cristalinas, Rio Preguiças (120+ km), manguezais com guarás. Praia do vilarejo de Atins a poucos passos.",
+    "how_to_get_there": "Aeroporto de São Luís → transfer terrestre (~3h) até Barreirinhas → traslado de lancha (40min) pelo Rio Preguiças até Atins. Alternativa: pequeno avião ou helicóptero até Barreirinhas.",
+
+    "special_programming": "Café da manhã nas dunas, jantar nas dunas, pôr do sol nas dunas, revoada dos guarás (experiências do grupo Charme Atins)",
+    "hotel_concierge_services": "Boutique com marcas nacionais e artesanatos do Nordeste. Transfer dentro do vilarejo.",
+    "activities_tours": [
+      "Kitesurf (único lugar onde se pode acordar e já sair velejando)",
+      "Café da manhã nas dunas dos Lençóis Maranhenses",
+      "Jantar nas dunas com menu do Mirante",
+      "Pôr do sol nas dunas",
+      "Passeio de quadriciclo nas dunas",
+      "Revoada dos guarás ao p��r do sol no Rio Preguiças",
+      "Passeio de lancha pelo Rio Preguiças"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Localização privilegiada beira-rio com vista mar. Único lugar em Atins onde se pode acordar e já sair velejando (kitesurf). Charme rústico com brasilidade. Recepção decorada com obras de artistas nordestinos. Boutique com marcas nacionais. Perfeita para celebrações especiais. Sushi Bar exclusivo. Traveller Review Awards 2024 (Booking.com).",
+    "awards_certifications": ["Traveller Review Awards 2024 - Booking.com (um dos melhores hotéis brasileiros)", "Selo Circuito Elegante"],
+    "sustainability": "Construção com materiais nobres da região, decoração com móveis e obras de artesãos locais, trabalho com insumos locais e pescadores da região (política do grupo Charme Atins).",
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Qual a melhor época para visitar os Lençóis Maranhenses?",
+        "a": "Deslumbrantes em qualquer época. Jun-Set: alta temporada, ventos fortes (kitesurf). Out-Dez: clima seco, menos turistas. Mar-Mai: chuvas, lagoas enchendo.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Qual é a distância entre as pousadas e o Parque Nacional?",
+        "a": "Atins está na porta do Parque. São entre 5 e 10 minutos em veículo 4x4 credenciado.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Posso levar meu pet?",
+        "a": "Não aceitamos pets no hotel.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "q": "Como são os restaurantes?",
+        "a": "Culinária maranhense (carro-chefe), japonesa e mediterrânea mescladas aos sabores locais. A Rancharia tem o Sushi Bar exclusivo.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "acesso",
+        "objection": "É muito longe e difícil de chegar",
+        "response": "O acesso faz parte da experiência — 3h de carro até Barreirinhas e 40min de lancha pelo Rio Preguiças. O hotel organiza todo o transfer.",
+        "source": "hotel_website_faq"
+      },
+      {
+        "category": "pets",
+        "objection": "Quero levar meu pet",
+        "response": "Infelizmente não aceitamos pets no hotel.",
+        "source": "hotel_website_faq"
+      }
+    ],
+    "attention_points": [
+      "Não aceita pets",
+      "Acesso apenas por lancha (40min) a partir de Barreirinhas",
+      "Reserva via WhatsApp: +55 98 9110-3363",
+      "Sushi Bar também aberto a visitantes (não-hóspedes)"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Localização beira-rio com vista mar. Sushi Bar exclusivo com peixes frescos. Charme rústico e brasilidade.",
+      "familia": "Quartos quádruplos para famílias. Experiências nas dunas para todas as idades. Boutique com artesanatos.",
+      "aventureiro": "Único lugar em Atins onde se pode acordar e já sair velejando (kitesurf). Parque Nacional a 5 minutos.",
+      "celebracao": "Perfeita para festas e celebrações especiais. Ambiente decorado com obras de artistas nordestinos."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": [
+      "http://charmeatins.com.br/wp-content/uploads/2024/06/img-rancharia-1.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-rancharia-3.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-rancharia-4.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-rancharia-5.jpg",
+      "http://charmeatins.com.br/wp-content/uploads/2024/09/img-rancharia6.png",
+      "http://charmeatins.com.br/wp-content/uploads/2024/09/img-rancharia7.png",
+      "http://charmeatins.com.br/wp-content/uploads/2024/09/img-rancharia8.png",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-gastronomia-geral-3.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-gastronomia-geral-1.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-gastronomia-geral-2.jpg",
+      "https://charmeatins.com.br/wp-content/uploads/2024/06/img-gastronomia-geral-4.jpg"
+    ],
+
+    "_meta": {
+      "enriched_at": "2026-04-07T03:18:00Z",
+      "last_updated": "2026-04-07T03:19:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/rancharia-charme-beach/",
+          "fields_extracted": ["website_url", "description", "lodging_type", "room_types", "total_rooms", "event_space", "restaurants", "highlights", "awards_certifications", "sustainability", "photo_urls"]
+        },
+        "hotel_website_faq": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/faq/",
+          "fields_extracted": ["pet_policy", "airport_distance", "how_to_get_there", "nearby_attractions", "guest_faqs", "common_objections", "attention_points"]
+        },
+        "hotel_website_experiencias": {
+          "date": "2026-04-07",
+          "url": "https://charmeatins.com.br/experiencias/",
+          "fields_extracted": ["activities_tours", "special_programming", "leisure_items"]
+        }
+      },
+      "address": "R. Principal, s/n, Atins, Barreirinhas/MA, 65590-000",
+      "phone": "+55 98 9110-3363",
+      "email": "reservasrancharia@charmeatins.com.br",
+      "instagram": "@ranchariacharmebeach",
+      "quality_score": 0.78,
+      "completeness": 0.64,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "google_maps_url", "pool_description", "accessibility", "gym",
+        "room_service", "dietary_options", "smoking_policy", "min_age_solo",
+        "day_use", "special_packages", "star_rating", "ce_page_url"
+      ]
+    }
+  }
+}

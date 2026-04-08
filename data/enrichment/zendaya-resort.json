@@ -1,0 +1,229 @@
+{
+  "hotel_slug": "zendaya-resort",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T12:00:00Z",
+  "status": "P0_P1",
+  "sources_consulted": [
+    "local_xlsx",
+    "questionnaire",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.56,
+  "completeness": 0.5,
+  "fields_filled": 29,
+  "fields_total": 58,
+  "fields_null": 29,
+  "enrichment": {
+    "hotel_name": "Zendaya Resort Beach Sport & SPA",
+    "municipality": "Armação de Búzios",
+    "state_code": "RJ",
+    "region": "sudeste",
+    "website_url": "https://zendayaresort.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/W6yMYiq7KA27W4kB6",
+    "description": "Refúgio de luxo em Búzios que une sofisticação à beira-mar, bem-estar, esportes e alta gastronomia, com atendimento impecável e estrutura completa para casais, famílias e experiências exclusivas.",
+    "lodging_type": "Resort",
+    "room_types": [
+      {
+        "name": "Classic",
+        "max_guests": 3
+      },
+      {
+        "name": "Deluxe",
+        "max_guests": 3
+      },
+      {
+        "name": "Deluxe Golf View",
+        "max_guests": 3
+      },
+      {
+        "name": "Deluxe com Banheira",
+        "max_guests": 3
+      },
+      {
+        "name": "Deluxe Golf View com Banheira",
+        "max_guests": 3
+      },
+      {
+        "name": "Golf Villas",
+        "max_guests": 4
+      },
+      {
+        "name": "Unique",
+        "max_guests": 4
+      },
+      {
+        "name": "Master",
+        "max_guests": 4
+      }
+    ],
+    "room_amenities": "Secador de cabelo, roupão, bolsa de praia, pantufas, amenities premium, enxoval confortável",
+    "parking": {
+      "has_parking": true,
+      "description": "Estacionamento gratuito para aproximadamente 20 carros"
+    },
+    "pool_description": "Duas piscinas - uma em frente à recepção (aquecida) e outra ao lado da praia (climatizada), ambas grandes",
+    "pool_heated": true,
+    "leisure_items": [
+      "SPA",
+      "Esportes",
+      "Praia",
+      "Área náutica",
+      "Quadras",
+      "Golfe",
+      "Atividades aquáticas"
+    ],
+    "wellness": "Sim, SPA completo com yoga e bem-estar",
+    "event_space": {
+      "has_events": true,
+      "description": "Sim, espaço para eventos"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sim"
+    },
+    "restaurants": [
+      {
+        "name": "The Jul's",
+        "cuisine": "Diversas",
+        "description": "Culinária diversificada"
+      },
+      {
+        "name": "Sushi 11",
+        "cuisine": "Asiática",
+        "description": "Culinária asiática"
+      }
+    ],
+    "meals_included": "Café da manhã",
+    "special_dining": "Jantares românticos, piqueniques e outras experiências",
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Mediante disponibilidade, custos poderão ser aplicados",
+    "cancellation_policy": "Não reembolsável: após 7 dias não reembolsa. Reembolsável: até 14 dias antes check-in com reembolso total. Remarcação: até 14 dias antes ou em saúde/força maior com comprovante.",
+    "children_policy": "Uma criança até 5 anos hospeda gratuita (cama existente). Com cama extra: 30% do valor. 2 crianças menores 5 anos: 1 pagante com cama extra, outra dorme com pais. Berços disponíveis.",
+    "pet_policy": null,
+    "airport_distance": "Cabo Frio (CFB): 30 km (~40 min). Rio Janeiro (SDU/GIG): 170-180 km (2h30-3h). Búzios (BZC): 6-8 km (aviação executiva)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Shuttle próprio, cobrado à parte"
+    },
+    "how_to_get_there": "Armação de Búzios, Rio de Janeiro, à beira-mar",
+    "special_programming": "Sim, programação especial para adultos e crianças",
+    "hotel_concierge_services": "Sim, com agendamentos de serviços dentro e fora do resort",
+    "activities_tours": [
+      "SPA",
+      "Yoga",
+      "Esportes aquáticos",
+      "Golfe",
+      "Praia",
+      "Atividades náuticas"
+    ],
+    "highlights": "Localização à beira-mar Búzios, pôr do sol incrível, gastronomia sofisticada (The Jul's/Sushi 11), SPA completo com yoga, estrutura esportiva (quadras/golfe/atividades náuticas), atendimento personalizado, experiências sob medida, design elegante, instagramável, ideal casais/famílias/eventos",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas frequentes?",
+        "a": "Crianças aceitas, disponibilidade eventos, distância Rio de Janeiro, check-in/check-out",
+        "source": "questionnaire"
+      }
+    ],
+    "attention_points": [
+      "Check-in 15h / Check-out 12h",
+      "Duas piscinas (uma aquecida, uma climatizada)",
+      "Estacionamento gratuito ~20 carros",
+      "Tarifa não reembolsável: após 7 dias não reembolsa",
+      "Cancelamento reembolsável: até 14 dias antes",
+      "Transfer pago à parte (shuttle próprio)",
+      "Crianças até 5 anos gratuitas (política específica)",
+      "Programação para adultos e crianças",
+      "Transferir para humano: pedidos personalizados, reclamações, dúvidas fora padrão, problemas reservas/pagamentos, grupos, VIP"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Jantares românticos, piqueniques, localização beira-mar, pôr do sol Búzios, SPA, yoga, gastronomia sofisticada, experiências personalizadas",
+      "familia": "Programação crianças, piscinas (aquecida/climatizada), praia, atividades aquáticas/golfe, estrutura completa",
+      "esportivo": "Golfe, quadras, atividades náuticas, esportes aquáticos, yoga, SPA, bem-estar integrado",
+      "evento": "Espaço eventos, estrutura completa, catering, gastronomia diversificada, localização privilegiada"
+    },
+    "payment_methods": "Cartão crédito (até 6x sem juros para reservas >R$ 3.000), depósito bancário, PIX",
+    "_meta": {
+      "enriched_at": "2026-04-07T12:00:00Z",
+      "last_updated": "2026-04-07T12:00:00Z",
+      "pipeline_version": "3.0",
+      "status": "P0_P1",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination"
+          ]
+        },
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "3633-3782",
+          "fields_extracted": 23
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/zendaya-resort-beach-sport-spa-armacao-de-buzios-rj/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "experience": "praia",
+      "destination": "Búzios",
+      "has_api": true,
+      "elevare_hotel_id": 9811,
+      "bradesco_coupon": false,
+      "address": "Armação de Búzios, RJ",
+      "quality_score": 0.56,
+      "completeness": 0.5,
+      "fields_filled": 29,
+      "fields_null": 29,
+      "null_fields_remaining": [
+        "contact_phone",
+        "contact_email",
+        "contact_whatsapp",
+        "address_street",
+        "address_number",
+        "address_neighborhood",
+        "address_zip_code",
+        "latitude",
+        "longitude",
+        "total_rooms",
+        "total_beds",
+        "star_rating",
+        "opening_year",
+        "common_areas_amenities",
+        "outdoor_amenities",
+        "gym_details",
+        "accessibility_features",
+        "languages_spoken",
+        "accepts_credit_cards",
+        "accepts_debit",
+        "wheelchair_access",
+        "elevator_access",
+        "accessible_rooms",
+        "near_attractions",
+        "distance_from_downtown",
+        "transport_options",
+        "business_hours",
+        "reception_24h",
+        "day_use"
+      ]
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/zendaya-resort-beach-sport-spa-armacao-de-buzios-rj/"
+  }
+}

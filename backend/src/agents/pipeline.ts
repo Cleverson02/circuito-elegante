@@ -17,7 +17,7 @@ import { classifyIntent } from './intent-agent.js';
 import { runOrchestrator } from './orchestrator.js';
 import { generateResponse } from './persona-agent.js';
 import { validateResponse, SAFE_FALLBACKS } from './safety-agent.js';
-import type { IntentType, IntentOutput, Language } from './types.js';
+import { INTENT_ALIASES, type IntentType, type IntentOutput, type Language } from './types.js';
 import { logger } from '../middleware/logging.js';
 import {
   getSessionContext,
@@ -242,7 +242,13 @@ export async function processMessage(
   const newPrefs = extractPreferences(input.message);
 
   // Stage 1: Intent Classification
-  const intent = await classifyIntent(input.message);
+  const rawIntent = await classifyIntent(input.message);
+  // Story 1.9: Resolve intent aliases (OPEN_QUESTION→RAG, SEARCH→API_SEARCH, etc.)
+  const intent: IntentOutput = {
+    ...rawIntent,
+    intent: INTENT_ALIASES[rawIntent.intent] ?? rawIntent.intent,
+    subIntents: rawIntent.subIntents.map((si) => INTENT_ALIASES[si] ?? si),
+  };
 
   logger.info('pipeline_intent_classified', {
     sessionId: input.sessionId,

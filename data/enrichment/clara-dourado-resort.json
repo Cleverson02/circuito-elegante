@@ -1,0 +1,308 @@
+{
+  "hotel_slug": "clara-dourado-resort",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:45:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.97,
+  "completeness": 0.95,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+  "enrichment": {
+    "website_url": "https://clararesorts.com.br/clara-dourado",
+    "google_maps_url": "https://maps.app.goo.gl/TSvHXEqrAz6EjHrDA",
+    "description": "Resort em Dourado (SP), entre Ribeirão Preto, São Carlos e Araraquara. Cercado por natureza, ideal para aventura, descanso e momentos em família. Estilo rústico elegante com espaços amplos integrados ao verde. Destaques: atividades de aventura (escalada, arvorismo, tirolesa, caiaque, stand up paddle, rapel, trilhas bike), quadras esportivas, múltiplas piscinas, SPA by L'Occitane, pensão completa com cozinha show, Starbucks, máquina sorvete.",
+    "lodging_type": "Resort",
+    "room_types": [
+      {
+        "name": "Vila do Lago Piscina",
+        "size_m2": 44,
+        "max_guests": 5
+      },
+      {
+        "name": "Vila do Lago",
+        "size_m2": 44,
+        "max_guests": 5
+      },
+      {
+        "name": "Presidencial",
+        "size_m2": 70,
+        "max_guests": 5
+      },
+      {
+        "name": "Master Vila do Lago",
+        "size_m2": 60,
+        "max_guests": 5
+      },
+      {
+        "name": "Suíte Vila do Lago",
+        "size_m2": 42,
+        "max_guests": 5
+      },
+      {
+        "name": "Chalé Master",
+        "max_guests": 4
+      },
+      {
+        "name": "Master Colônia",
+        "size_m2": 35,
+        "max_guests": 3
+      },
+      {
+        "name": "Apartamento Varanda",
+        "size_m2": 38,
+        "max_guests": 4
+      },
+      {
+        "name": "Apartamento Superior Varanda",
+        "size_m2": 38,
+        "max_guests": 4
+      },
+      {
+        "name": "Suíte Santa Clara",
+        "size_m2": 55,
+        "max_guests": 5
+      },
+      {
+        "name": "Luxo Santa Clara",
+        "size_m2": 28,
+        "max_guests": 3
+      },
+      {
+        "name": "Apartamento Master",
+        "size_m2": 40,
+        "max_guests": 4
+      },
+      {
+        "name": "Apartamento Superior",
+        "size_m2": 44,
+        "max_guests": 4
+      },
+      {
+        "name": "Superior Colônia",
+        "size_m2": 38,
+        "max_guests": 4
+      },
+      {
+        "name": "Chalé Luxo Plus",
+        "size_m2": 33,
+        "max_guests": 4
+      },
+      {
+        "name": "Chalé Premium",
+        "size_m2": 27,
+        "max_guests": 4
+      },
+      {
+        "name": "Chalé Premium Plus",
+        "size_m2": 33,
+        "max_guests": 4
+      },
+      {
+        "name": "Premium Colônia",
+        "size_m2": 41,
+        "max_guests": 4
+      },
+      {
+        "name": "Luxo Colônia",
+        "size_m2": 40,
+        "max_guests": 4
+      },
+      {
+        "name": "Conjugado Colônia",
+        "size_m2": 56,
+        "max_guests": 6
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities (shampoo, condicionador, hidratante, sabonete), toalhas, ar-condicionado, frigobar, TV, telefone, cafeteira, snacks (pago à parte). Alguns quartos com banheira, lareira ou piscina privativa.",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Próximos a todos quartos, em área aberta e gratuito"
+    },
+    "pool_description": "Complexo aquático: 3 piscinas climatizadas, 2 piscinas aquecidas, 1 jacuzzi, 1 piscina de água mineral, 2 lagos com atividades aventura. Funcionam 9h-21h diariamente.",
+    "pool_heated": true,
+    "leisure_items": [
+      "Escalada",
+      "Arvorismo",
+      "Tirolesa",
+      "Caiaque",
+      "Stand up paddle",
+      "Rapel",
+      "Trilhas bike",
+      "Trilhas ecológicas",
+      "Quadras (tênis, beach tênis, mini golf, futebol)",
+      "Passeio quadriciclo",
+      "Balão",
+      "Cavalgada",
+      "Passeio pônei",
+      "Escape room",
+      "Máquina sorvete"
+    ],
+    "wellness": "SPA by L'Occitane com tratamentos (pagos à parte)",
+    "event_space": {
+      "has_events": true,
+      "description": "Sala para reuniões, pub, áreas verdes para eventos"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Boa velocidade"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Sala fitness"
+    },
+    "restaurants": [
+      {
+        "name": "Restaurante Clara Dourado",
+        "cuisine": "Comida caseira tipo buffet",
+        "description": "Buffet com cozinha show. Omeletes, tapiocas, pão na chapa feitos na hora no café. Starbucks coffee nas refeições. Máquina sorvete."
+      }
+    ],
+    "meals_included": "Pensão completa: café da manhã, almoço, chá da tarde, jantar. Bebidas não alcoólicas (água, chá gelado, 2 tipos suco, refrigerante)",
+    "special_dining": "Cozinha show com 2 opções à la carte almoço/jantar. Piqueniques disponíveis.",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "18:00",
+      "check_out": "15:00"
+    },
+    "early_late_checkout": "Entrada antecipada com taxa adicional (consultar). Não garante liberação quarto antes 18h mas acesso áreas sociais.",
+    "cancellation_policy": "Tarifa Flexível: cancela grátis até 72h = crédito 2 anos. Tarifa Não Reembolsável: 14-4 dias multa 20% + crédito; <4 dias no-show.",
+    "children_policy": "Até 2 anos free (contam ocupação). 3-11 anos adicional. A partir 12 anos = adulto",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Ribeirão Preto (145km), Viracopos (208km)",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece transfer. Carro próprio recomendado."
+    },
+    "nearby_attractions": "Lagos, cachoeiras, trilhas ecológicas",
+    "how_to_get_there": "Carro próprio. Entre Ribeirão Preto, São Carlos e Araraquara.",
+    "special_programming": "Monitoria com programação lazer e aventura para todas idades. Ver https://clararesorts.com.br/clara-dourado/programacao",
+    "hotel_concierge_services": "Agendamento de atividades: cavalgadas, SPA, quadriciclo, escape room (pagos). Rapel, tirolesa, escalada, arvorismo, arco e flecha, stand up, caiaque (inclusos).",
+    "activities_tours": [
+      "Escalada",
+      "Arvorismo",
+      "Tirolesa mega",
+      "Tirolesa do lago",
+      "Rapel",
+      "Parede escalada",
+      "Caiaque",
+      "Stand up paddle",
+      "Trilhas bike",
+      "Trilhas ecológicas",
+      "Quadras esportivas",
+      "Cavalgada",
+      "Passeio pônei",
+      "Passeio quadriciclo",
+      "Passeio balão",
+      "Escape room",
+      "Arco e flecha"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Complexo aquático com 7 piscinas e lagos. Pensão completa 4 refeições. Atividades aventura includas (escalada, arvorismo, tirolesa). 20 tipos acomodação. SPA by L'Occitane. Cozinha show. Starbucks. Monitoria todas idades. Quadras esportivas. Piscinas 9h-21h.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "O que fazer com crianças?",
+        "a": "Monitoria e programação para todas idades. Ver https://clararesorts.com.br/clara-dourado/programacao",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem transfer — carro próprio recomendado",
+      "Check-in 18h / Check-out 15h",
+      "Crianças <2 grátis mas contam ocupação",
+      "Atividades especiais (SPA, cavalgada, quadriciclo, escape room) pagas à parte",
+      "Early check-in com taxa, sem garantia antes 18h",
+      "Cancelamento flexível: grátis até 72h"
+    ],
+    "sales_arguments_by_profile": {
+      "familia": "Monitoria todas idades. 7 piscinas incl infantil. Máquina sorvete. Arvorismo, tirolesa. Rapel. Cavalgada. Pónei.",
+      "casal": "Pensão completa. Atividades aventura. SPA by L'Occitane. Cozinha show. 7 piscinas.",
+      "corporativo": "Sala reuniões, pub, áreas verdes. Team building (tirolesa, arvorismo, escalada, rapel). Escape room."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/clara-dourado-resort-dourado-sp/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-07T03:45:00Z",
+      "last_updated": "2026-04-07T03:45:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "839-1035",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/clara-dourado-resort-dourado-sp/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Dourado, SP",
+      "payment_policy": "Cartão de crédito no ato da reserva",
+      "quality_score": 0.97,
+      "completeness": 0.95,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating"
+      ],
+      "experience": "Campo",
+      "destination": "Interior de São Paulo",
+      "has_api": true,
+      "elevare_hotel_id": 13652,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Clara Dourado Resort",
+    "municipality": "Dourado",
+    "state_code": "SP",
+    "region": "sudeste"
+  }
+}

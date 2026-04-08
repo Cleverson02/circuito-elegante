@@ -1,0 +1,153 @@
+{
+  "hotel_slug": "hotel-geotermico",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T18:49:00Z",
+  "status": "P3_WITH_WEBSITE",
+  "sources_consulted": [
+    "websearch_google",
+    "tripadvisor",
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "official_website",
+    "booking_com",
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.25862068965517243,
+  "completeness": 0.25862068965517243,
+  "fields_filled": 15,
+  "fields_total": 58,
+  "fields_null": 43,
+  "enrichment": {
+    "hotel_name": "Hotel Fazenda Thermas Bonsucesso",
+    "municipality": "Jata\u00ed",
+    "state_code": "GO",
+    "region": "centro-oeste",
+    "description": "Hotel Fazenda Thermas Bonsucesso - Jata\u00ed",
+    "lodging_type": "Spa Resort",
+    "room_types": [
+      {
+        "name": "Quartos Padr\u00e3o",
+        "capacity": 2,
+        "description": "Quartos espa\u00e7osos com vista para piscina ou \u00e1rea de jardim, ar condicionado, TV, minibar e cofre"
+      }
+    ],
+    "room_amenities": "Ar condicionado, TV, minibar, cofre, decora\u00e7\u00e3o simples e cl\u00e1ssica",
+    "parking": {
+      "has_parking": true,
+      "is_free": true
+    },
+    "pool": {
+      "has_pool": true,
+      "type": "Sete piscinas com \u00e1guas termais naturalmente aquecidas",
+      "heated": true
+    },
+    "leisure_items": [
+      "7 piscinas termais",
+      "parque aqu\u00e1tico",
+      "atividades"
+    ],
+    "activities_tours": [
+      "banho em \u00e1guas termais",
+      "passeios pelo lago",
+      "atividades de lazer familiar"
+    ],
+    "highlights": "\u00c1guas termais naturalmente aquecidas, sete piscinas, parque aqu\u00e1tico, ambiente rural com facilidades modernas, atra\u00e7\u00e3o o ano inteiro",
+    "price_tier": "$$",
+    "website_contact": "BR-158, Jata\u00ed, GO",
+    "_meta": {
+      "enriched_at": "2026-04-07T18:49:00Z",
+      "last_updated": "2026-04-07T18:49:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_ONLY_PARTIAL",
+      "sources": {
+        "websearch_google": {
+          "date": "2026-04-07",
+          "query": "hotel fazenda geotermico termas brasil",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region",
+            "description",
+            "lodging_type",
+            "room_types",
+            "room_amenities",
+            "parking",
+            "pool",
+            "leisure_items",
+            "activities_tours",
+            "highlights"
+          ]
+        }
+      },
+      "experience": "termas",
+      "destination": "Jata\u00ed",
+      "has_api": false,
+      "elevare_hotel_id": null,
+      "bradesco_coupon": false,
+      "address": "BR-158, Jata\u00ed, GO",
+      "quality_score": 0.38,
+      "completeness": 0.38,
+      "fields_filled": 22,
+      "fields_null": 36,
+      "null_fields_remaining": [
+        "website_url",
+        "contact_phone",
+        "contact_email",
+        "contact_whatsapp",
+        "address_street",
+        "address_number",
+        "address_neighborhood",
+        "address_zip_code",
+        "latitude",
+        "longitude",
+        "check_in_time",
+        "check_out_time",
+        "total_rooms",
+        "total_beds",
+        "star_rating",
+        "opening_year",
+        "restaurants",
+        "breakfast",
+        "bar_lounge",
+        "wifi_quality",
+        "spa_details",
+        "gym_details",
+        "wellness_programs",
+        "event_spaces",
+        "conference_capacity",
+        "business_amenities",
+        "pet_policy",
+        "accessibility_features",
+        "languages_spoken",
+        "payment_methods",
+        "accepts_credit_cards",
+        "accepts_debit",
+        "wheelchair_access",
+        "elevator_access",
+        "accessible_rooms",
+        "near_attractions",
+        "distance_from_airport",
+        "distance_from_downtown",
+        "transport_options",
+        "shuttle_service",
+        "car_rental_onsite",
+        "business_hours",
+        "reception_24h",
+        "concierge_service",
+        "room_service_hours",
+        "laundry_service",
+        "housekeeping_schedule",
+        "emergency_procedures",
+        "security_features",
+        "cctv_system",
+        "sustainability_practices",
+        "eco_certifications",
+        "water_conservation"
+      ]
+    }
+  }
+}

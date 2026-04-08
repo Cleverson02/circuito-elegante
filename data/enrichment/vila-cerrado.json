@@ -1,0 +1,219 @@
+{
+  "hotel_slug": "vila-cerrado",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T15:45:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.97,
+  "completeness": 0.95,
+  "fields_filled": 46,
+  "fields_total": 58,
+  "fields_null": 12,
+  "enrichment": {
+    "website_url": "https://vilacerrado.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/4DD36RDy475MD4h88",
+    "description": "Vila charmosa e sustentável imersa inspirada Cerrado brasileiro. Casas conceito com acolhimento intimista oferecendo experiência integrativa única com natureza. Espaços bem-estar. Convite desacelerar e conectar consigo e natureza. Memórias únicas com experiências sensoriais cinco sentidos. Alinhamento corpo e mente.",
+    "lodging_type": "Pousada Boutique / Casa Hotel",
+    "room_types": [
+      {
+        "name": "Casa Buriti",
+        "max_guests": 2
+      },
+      {
+        "name": "Casa Copaíba",
+        "max_guests": 4
+      },
+      {
+        "name": "Casa Jatobá",
+        "max_guests": 4
+      },
+      {
+        "name": "Chalé Baru",
+        "max_guests": 3
+      },
+      {
+        "name": "Chalé Pequi",
+        "max_guests": 3
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities eco-friendly regionais, enxoval exclusivo, cozinha equipada, Wi-Fi 100mb exclusivo por casa",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Gratuito, disponível local"
+    },
+    "pool_description": "Piscina externa ao ar livre",
+    "pool_heated": false,
+    "leisure_items": [
+      "vivências culturais",
+      "experiências sensoriais",
+      "conexão natureza",
+      "espaço contemplação",
+      "templo ser"
+    ],
+    "wellness": "Sálvia Centro Terapias Ancestrais: terapias holísticas e energéticas. Templo Ser - 'Magia 4 Elementos': atividades equilíbrio, bem-estar, vivências, práticas e rituais",
+    "event_space": {
+      "has_events": true,
+      "description": "Vila pode ser exclusiva para eventos e celebrações privadas"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "100mb exclusivo por casa"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Café Sensus",
+        "cuisine": "Regional",
+        "description": "Servido à la carte na acomodação. Degustações regionais."
+      }
+    ],
+    "meals_included": "Café da manhã colonial incluso",
+    "special_dining": "Café Sensus à la carte acomodação, degustações regionais",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sob disponibilidade, política flexível",
+    "cancellation_policy": "Cancelamento Reembolsável até 14 dias antes reserva. Feriados e férias: não reembolsável",
+    "children_policy": "Casas e chalés comportam famílias. Taxa hóspede extra a partir 2 hóspedes.",
+    "pet_policy": {
+      "accepts_pets": true,
+      "details": "Pet friendly com taxa pet cobrada à parte"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aproximadamente 230 km de Brasília (aeroporto mais próximo)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Disponível solicitação, contratação parceiros locais"
+    },
+    "nearby_attractions": "Alto Paraíso, Chapada Veadeiros, Cerrado",
+    "how_to_get_there": "Alto Paraíso de Goiás, Chapada Veadeiros. 230 km Brasília.",
+    "special_programming": "Experiências personalizadas grupos, possibilidade reservar vila inteira celebrações privadas",
+    "hotel_concierge_services": "Concierge virtual para assistência e personalização experiências. Vila exclusiva eventos e celebrações privadas. Templo Ser, café sensorial, traslados personalizados.",
+    "activities_tours": [
+      "Vivências culturais",
+      "Experiências sensoriais",
+      "Conexão natureza",
+      "Contemplação",
+      "Terapias holísticas",
+      "Rituais Templo Ser",
+      "Degustações regionais"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Sustentabilidade integrada. Imersão Cerrado. Casas conceito. Experiências sensoriais e culturais. Opção exclusividade vila. Pet friendly. Terapias ancestrais. Conexão profunda natureza. Ritual bem-estar.",
+    "awards_certifications": null,
+    "sustainability": "Sustentabilidade. Eco-friendly amenities. Cerrado integrado. Práticas sustentáveis.",
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Experiências disponíveis, pet friendly, exclusividade vila, política cancelamento",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem ar-condicionado (ventilação natural design)",
+      "Check-in 15h / Check-out 12h",
+      "Transfer pago à parte",
+      "Piscina não aquecida",
+      "Cancelamento: reembolsável 14 dias, feriados não reembolsável",
+      "Pet friendly (taxa adicional)",
+      "Taxa hóspede extra a partir 2 hóspedes",
+      "Café colonial incluso (Café Sensus à la carte extra)",
+      "Transferir para humano: vila exclusiva, eventos privados, Templo Ser, café sensorial, traslados, vivências especiais, reclamações, alterações, check-in/out fora horário"
+    ],
+    "sales_arguments_by_profile": {
+      "bem_estar": "Sálvia terapias holísticas/energéticas. Templo Ser rituais. Experiências sensoriais. Contemplação natureza. Desaceleração e reconexão.",
+      "sustentabilidade": "Eco-friendly design. Cerrado integrado. Amenities regionais. Práticas sustentáveis. Conexão profunda natureza.",
+      "grupos": "Vila pode ser exclusiva. Experiências personalizadas. Templo Ser para grupos. Celebrações privadas. Retiros espirituais/corporativos."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/vila-cerrado-alto-paraiso-de-goias-go/",
+    "photo_urls": [
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2023/06/templo-ser-areas-comuns-scaled.jpg"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-06T15:45:00Z",
+      "last_updated": "2026-04-06T15:45:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "2977-3038",
+          "fields_extracted": 25
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/vila-cerrado-alto-paraiso-de-goias-go/",
+          "fields_extracted": [
+            "ce_page_url",
+            "description",
+            "photo_urls"
+          ]
+        }
+      },
+      "address": "Alto Paraíso de Goiás (Chapada dos Veadeiros), Goiás",
+      "payment_policy": "Cartões crédito online via site",
+      "quality_score": 0.97,
+      "completeness": 0.95,
+      "fields_filled": 46,
+      "fields_null": 12,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "gym",
+        "accessibility",
+        "pool_heated (false filled)"
+      ],
+      "experience": "Campo",
+      "destination": "Chapada dos Veadeiros",
+      "has_api": true,
+      "elevare_hotel_id": 18750,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Vila Cerrado",
+    "municipality": "Alto Paraiso de Goiás",
+    "state_code": "GO",
+    "region": "centro-oeste"
+  }
+}

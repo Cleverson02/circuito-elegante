@@ -12,6 +12,8 @@ export interface FaqRecord {
   embedding: number[];
   source: string;
   fileName: string | null;
+  category?: string;
+  metadata?: Record<string, unknown>;
 }
 
 export async function upsertFaqEmbeddings(records: FaqRecord[]): Promise<{ inserted: number; updated: number }> {
@@ -38,6 +40,8 @@ export async function upsertFaqEmbeddings(records: FaqRecord[]): Promise<{ inser
           embedding: record.embedding,
           source: record.source,
           fileName: record.fileName,
+          category: record.category ?? 'faq',
+          metadata: record.metadata ?? {},
           lastSyncedAt: new Date(),
           updatedAt: new Date(),
         })
@@ -52,6 +56,8 @@ export async function upsertFaqEmbeddings(records: FaqRecord[]): Promise<{ inser
         embedding: record.embedding,
         source: record.source,
         fileName: record.fileName,
+        category: record.category ?? 'faq',
+        metadata: record.metadata ?? {},
       });
       inserted++;
     }
@@ -69,23 +75,57 @@ export async function getEmbeddingCount(): Promise<number> {
 export async function searchSimilar(
   queryEmbedding: number[],
   limit = 5,
-): Promise<{ id: string; sectionTitle: string; content: string; similarity: number }[]> {
+  filters?: { hotelId?: string; categories?: string[] },
+): Promise<{ id: string; sectionTitle: string; content: string; similarity: number; category: string }[]> {
   const client = getPostgresClient();
   const embeddingStr = `[${queryEmbedding.join(',')}]`;
 
-  const results = await client`
-    SELECT id, section_title, content,
-           1 - (embedding <=> ${embeddingStr}::vector) as similarity
-    FROM faq_embeddings
-    ORDER BY embedding <=> ${embeddingStr}::vector
-    LIMIT ${limit}
-  `;
+  let results;
+
+  if (filters?.hotelId && filters?.categories?.length) {
+    results = await client`
+      SELECT id, section_title, content, category,
+             1 - (embedding <=> ${embeddingStr}::vector) as similarity
+      FROM faq_embeddings
+      WHERE hotel_id = ${filters.hotelId}::uuid
+        AND category = ANY(${filters.categories})
+      ORDER BY embedding <=> ${embeddingStr}::vector
+      LIMIT ${limit}
+    `;
+  } else if (filters?.hotelId) {
+    results = await client`
+      SELECT id, section_title, content, category,
+             1 - (embedding <=> ${embeddingStr}::vector) as similarity
+      FROM faq_embeddings
+      WHERE hotel_id = ${filters.hotelId}::uuid
+      ORDER BY embedding <=> ${embeddingStr}::vector
+      LIMIT ${limit}
+    `;
+  } else if (filters?.categories?.length) {
+    results = await client`
+      SELECT id, section_title, content, category,
+             1 - (embedding <=> ${embeddingStr}::vector) as similarity
+      FROM faq_embeddings
+      WHERE category = ANY(${filters.categories})
+      ORDER BY embedding <=> ${embeddingStr}::vector
+      LIMIT ${limit}
+    `;
+  } else {
+    results = await client`
+      SELECT id, section_title, content, category,
+             1 - (embedding <=> ${embeddingStr}::vector) as similarity
+      FROM faq_embeddings
+      ORDER BY embedding <=> ${embeddingStr}::vector
+      LIMIT ${limit}
+    `;
+  }
 
   return results.map((r) => ({
     id: r['id'] as string,
     sectionTitle: r['section_title'] as string,
     content: r['content'] as string,
     similarity: r['similarity'] as number,
+    category: r['category'] as string,
   }));
 }
 

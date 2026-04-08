@@ -1,0 +1,211 @@
+{
+  "hotel_slug": "valle-dincanto-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T15:30:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.99,
+  "completeness": 0.95,
+  "fields_filled": 47,
+  "fields_total": 58,
+  "fields_null": 11,
+  "enrichment": {
+    "website_url": "https://hotelvalledincanto.com",
+    "google_maps_url": "https://maps.app.goo.gl/bsfUSaTufGww89aK6",
+    "description": "Refúgio charme e sofisticação em Gramado, inspirado Toscana, Itália. Arquitetura elegância europeia. Experiência única integrada harmoniosamente à natureza exuberante Serra Gaúcha. Cada detalhe cuidadosamente pensado: decoração até atendimento personalizado.",
+    "lodging_type": "Hotel Boutique de Luxo",
+    "room_types": [
+      {
+        "name": "Suíte Deluxe",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Romântica",
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Panorâmica",
+        "max_guests": 2
+      },
+      {
+        "name": "Apartamento Super Luxo",
+        "max_guests": 2
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Cama king size, enxoval algodão egípcio, minibar, cofre, Wi-Fi gratuito, ar-condicionado, TV tela plana, lareira, banheira hidromassagem, banheiro privativo ducha aquecida",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Estacionamento privativo gratuito"
+    },
+    "pool_description": "Piscina coberta e aquecida ambiente relaxante exclusivo, ideal todas estações",
+    "pool_heated": true,
+    "leisure_items": [
+      "piscina coberta aquecida",
+      "spa",
+      "massagens",
+      "academia",
+      "sauna",
+      "sala jogos",
+      "bicicletas"
+    ],
+    "wellness": "Massagens e terapias relaxantes disponíveis agendamento",
+    "event_space": {
+      "has_events": true,
+      "description": "Espaço para eventos celebrações íntimas e especiais"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Gratuito"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Osteria di Lucca",
+        "cuisine": "Italiana com sabores regionais",
+        "description": "Culinária valoriza sabores italianos. Pratos ingredientes frescos e regionais. Experiência gastronômica autêntica."
+      }
+    ],
+    "meals_included": "Café da manhã incluso com variedade opções frescas e regionais",
+    "special_dining": "Jantares temáticos, menus degustação ideais ocasiões especiais e celebrações românticas",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Disponível solicitação, sujeito disponibilidade",
+    "cancellation_policy": "Políticas flexíveis conforme período e tarifa escolhida. Detalhes informados reserva.",
+    "children_policy": "Hotel voltado casais e adultos, não recomendado crianças",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceita"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Caxias do Sul (CXJ): ~70 km. Internacional Salgado Filho (POA): ~120 km",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Transfer privativo ou táxi recomendado"
+    },
+    "nearby_attractions": "Gramado, Serra Gaúcha, natureza",
+    "how_to_get_there": "Gramado. Caxias 70 km, Porto Alegre 120 km.",
+    "special_programming": null,
+    "hotel_concierge_services": "Concierge disponível auxiliar informações, reservas, organização atividades locais",
+    "activities_tours": [
+      "Piscina coberta aquecida",
+      "SPA",
+      "Massagens",
+      "Academia",
+      "Sauna",
+      "Sala jogos",
+      "Bicicletas"
+    ],
+    "day_use": null,
+    "special_packages": null,
+    "highlights": "Inspiração Toscana italiana. Piscina coberta aquecida. SPA massagens. Gastronomia italiana. Enxoval algodão egípcio. Banheira hidromassagem. Lareira. Atendimento personalizado exclusivo. Ambiente tranquilo acolhedor.",
+    "awards_certifications": [
+      "Eleito hotel mais romântico do mundo"
+    ],
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$$",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Banheira hidromassagem disponibilidade, política crianças/pets, bem-estar massagens, acesso cidade pontos turísticos",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Não pet friendly",
+      "Hotel focado casais/adultos (não recomendado crianças)",
+      "Check-in 14h / Check-out 12h",
+      "Early/Late checkout: disponibilidade",
+      "Transfer pago à parte",
+      "Cancelamento: políticas variam por tarifa",
+      "Piscina coberta (sempre disponível)"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Inspiração Toscana. Piscina coberta aquecida. Lareira. Banheira hidromassagem. SPA. Massagens. Gastronomia italiana. Eleito hotel mais romântico mundo. Ambiente sofisticado acolhedor.",
+      "luxo": "Toscana design. Enxoval algodão egípcio. Suítes Deluxe/Romântica/Panorâmica/Super Luxo. SPA. Atendimento personalizado. Atmosfera europeia elegante."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/valle-dincanto-hotel-gramado-rs/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-06T15:30:00Z",
+      "last_updated": "2026-04-06T15:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "2879-2975",
+          "fields_extracted": 28
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/valle-dincanto-hotel-gramado-rs/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Gramado, Rio Grande do Sul",
+      "payment_policy": "Cartões crédito/débito. Reservas parcial antecipado ou links pagamento seguro.",
+      "quality_score": 0.99,
+      "completeness": 0.95,
+      "fields_filled": 47,
+      "fields_null": 11,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "special_packages",
+        "star_rating",
+        "gym",
+        "accessibility"
+      ],
+      "experience": "serra",
+      "destination": "Gramado",
+      "has_api": true,
+      "elevare_hotel_id": 5718,
+      "bradesco_coupon": true
+    },
+    "hotel_name": "Valle D'Incanto Hotel",
+    "municipality": "Gramado",
+    "state_code": "RS",
+    "region": "sul"
+  }
+}

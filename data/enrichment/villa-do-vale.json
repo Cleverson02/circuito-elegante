@@ -1,0 +1,166 @@
+{
+  "hotel_slug": "villa-do-vale",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T16:00:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.86,
+  "completeness": 0.84,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+
+  "enrichment": {
+    "website_url": "https://villadovalehotel.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/ujNLtKaHNhzPSSnc7",
+    "description": "Apenas 20 suítes exclusivas, único hotel charme Vale Europeu. Cercado natureza, vistas deslumbrantes. Equilíbrio sofisticação e tranquilidade. Reconhecido Tripadvisor 2º Melhor Hotel Luxo América do Sul (2023). Destino ideal quem busca experiências inesquecíveis.",
+    "lodging_type": "Hotel Boutique",
+
+    "room_types": [
+      {"name": "Suíte Prestige", "size_m2": 32, "max_guests": 3},
+      {"name": "Suíte Prestige com Ofurô", "size_m2": 32, "max_guests": 3},
+      {"name": "Suíte Pool com banheira imersão", "size_m2": 48, "max_guests": 3},
+      {"name": "Suíte Marinho", "size_m2": 43, "max_guests": 4},
+      {"name": "Suíte Safira", "size_m2": 45, "max_guests": 4},
+      {"name": "Suíte Pool", "size_m2": 41, "max_guests": 3},
+      {"name": "Suíte Gran Prestige", "size_m2": 45, "max_guests": 3},
+      {"name": "Suíte Pool Flat", "size_m2": 68, "max_guests": 4},
+      {"name": "Suíte Presidencial", "size_m2": 100, "max_guests": 4}
+    ],
+    "total_rooms": 20,
+    "room_amenities": "Amenities Phytoervas, Wi-Fi",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": 30,
+      "is_free": true,
+      "description": "Estacionamento próprio gratuito para até 30 carros"
+    },
+    "pool_description": "Piscina aquecida",
+    "pool_heated": true,
+    "leisure_items": ["piscina aquecida", "hidromassagem", "sauna", "spa", "academia", "sala jogos", "espaço kids", "restaurante & bar", "lounge", "espaço eventos"],
+    "wellness": "SPA humanizado une corpo e mente. Experiências sensoriais únicas. Ambiente acolhedor sofisticado. Terapias personalizadas, massagens clássicas, menu botânico exclusivo.",
+    "event_space": {
+      "has_events": true,
+      "description": "Salas completas até 50 pessoas ou chalé eventos até 12 pessoas. Reuniões, treinamentos, palestras, confrarias, aniversários, formaturas, casamentos, apresentações personalizadas."
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sim"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Academia"
+    },
+
+    "restaurants": [
+      {
+        "name": "Botic Restaurant & Bar",
+        "cuisine": "Cozinha moderna e alta gastronomia",
+        "description": "Café da manhã Villa clássico, almoço executivo, jantar, almoços temáticos fim de semana, brunch 1º domingo mês"
+      }
+    ],
+    "meals_included": "Café da manhã incluso nas diárias",
+    "special_dining": "Almoços temáticos fim de semana, brunch 1º domingo mês, piqueniques, confrarias, degustações, jantares especiais, fondue inverno chalé. Café da manhã aberto público (reserva).",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sob disponibilidade, sujeito custo adicional",
+    "cancellation_policy": "CDC: cancelamentos 7 dias confirmação, 72h antecedência check-in = reembolso integral, sem multa. Dentro 72h antes = 50% multa. Dia hospedagem = no-show 100%. Até 30 dias = sem multa. 30-15 dias = 50% multa. Depois = 100%. Datas especiais: 45+ dias sem multa, 45-30 dias 50%, depois 100%. Não reembolsável após 7 dias confirmação.",
+    "children_policy": "Cama extra: R$250/dia. 0-5 anos: sem cobrança (mesma cama). 6-11 anos: 50% café manhã (mesma cama). 12-17 anos: cama extra obrigatória R$250/dia. Cabana infantil (até 5 anos): R$180/dia. Berço grátis (reserva prévia).",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Navegantes: 58 km (1h 10min). Florianópolis: 163 km (2h 40min). Joinville: 100 km (2h)",
+    "transfer": {
+      "available": false,
+      "description": "Indicações parceiros, não oferecido hotel"
+    },
+    "nearby_attractions": "Vale Europeu (Blumenau), natureza catarinense",
+    "how_to_get_there": "Blumenau, Vale Europeu. Navegantes 1h 10min.",
+
+    "special_programming": "Contratações à parte: adulto/infantil, cinema, festa aniversário, comemorações românticas, café quarto, decoração romântica banheira",
+    "hotel_concierge_services": "Concierge disponível. Contratações à parte: cinema, aniversário, decorações, café quarto. Eventos personalizados.",
+    "activities_tours": [
+      "Piscina aquecida",
+      "Hidromassagem",
+      "Sauna",
+      "SPA",
+      "Academia",
+      "Jogos",
+      "Eventos personalizados"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "20 suítes exclusivas apenas. Tripadvisor 2º melhor luxo América do Sul 2023. Suíte Presidencial 100 m². Vale Europeu único hotel charme. Piscina aquecida. SPA humanizado. Botic gastronomia. Brunch temático. Acolhimento sofisticado.",
+    "awards_certifications": ["TripAdvisor - 2º Melhor Hotel Luxo América do Sul 2023"],
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Transfer aeroportos (Florianópolis, Navegantes)",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 15h / Check-out 12h",
+      "Sem transfer (indicações parceiros)",
+      "Cancelamento: CDC complexo, variar por data",
+      "Crianças: políticas diferenciadas por idade",
+      "Cama extra R$250/dia ou 50% café (6-11 anos)",
+      "Cabana infantil R$180/dia",
+      "Pagamento: 50% na reserva (PIX/cartão), 48h para comprovante",
+      "Parcelamento até 3x (alimentação não parcelável)",
+      "Transferir para humano: eventos, experiências, reservas restaurante/spa, pacotes especiais, reclamações"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "20 suítes exclusivas. Piscina aquecida. SPA humanizado. Botic gastronomia. Jantares especiais. Menu botânico. Ambiente sofisticado acolhedor.",
+      "familia": "Espaço kids. Cabana infantil. Berço grátis. Contratações infantis (cinema, aniversário). Brunch temático. Contatos à parte.",
+      "corporativo": "Salas até 50 pessoas. Reuniões, treinamentos, palestras. Confrarias. Café da manhã. Ambiente profissional."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T16:00:00Z",
+      "last_updated": "2026-04-06T16:00:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "3039-3186",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "Blumenau, Santa Catarina (Vale Europeu)",
+      "payment_policy": "PIX e cartão crédito. 50% na reserva, 48h comprovante. Parcelamento até 3x sem juros. Sem cheques.",
+      "quality_score": 0.86,
+      "completeness": 0.84,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms (20 filled)", "room_service", "dietary_options", "pet_policy",
+        "smoking_policy", "min_age_solo", "day_use", "special_packages", "star_rating"
+      ]
+    }
+  }
+}

@@ -1,9 +1,13 @@
 import {
   pgTable, uuid, text, boolean, numeric, integer, real,
-  timestamp, jsonb, char, uniqueIndex, index,
+  timestamp, jsonb, char, uniqueIndex, index, customType,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 import { vector } from 'drizzle-orm/pg-core';
+
+const tsvector = customType<{ data: string }>({
+  dataType() { return 'tsvector'; },
+});
 
 // ==================== HOTELS ====================
 export const hotels = pgTable('hotels', {
@@ -21,6 +25,11 @@ export const hotels = pgTable('hotels', {
   petFriendly:    boolean('pet_friendly').notNull().default(false),
   poolHeated:     boolean('pool_heated').notNull().default(false),
   data:           jsonb('data').notNull().default({}),
+  // Generated columns (populated by migration 012)
+  lodgingType:    text('lodging_type'),
+  starRating:     integer('star_rating'),
+  priceRange:     text('price_range'),
+  searchVector:   tsvector('search_vector'),
   createdAt:      timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   updatedAt:      timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 }, (table) => [
@@ -82,12 +91,15 @@ export const faqEmbeddings = pgTable('faq_embeddings', {
   embeddingVersion: text('embedding_version').notNull().default('text-embedding-3-small'),
   source:           text('source').notNull().default('google-drive'),
   fileName:         text('file_name'),
+  category:         text('category').notNull().default('faq'),
+  metadata:         jsonb('metadata').default({}),
   lastSyncedAt:     timestamp('last_synced_at', { withTimezone: true }).notNull().defaultNow(),
   createdAt:        timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   updatedAt:        timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 }, (table) => [
   uniqueIndex('idx_faq_hotel_hash').on(table.hotelId, table.contentHash),
   index('idx_faq_hotel').on(table.hotelId),
+  index('idx_embeddings_hotel_category').on(table.hotelId, table.category),
 ]);
 
 // ==================== DATA DELETION REQUESTS ====================

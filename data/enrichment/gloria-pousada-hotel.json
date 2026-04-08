@@ -1,0 +1,132 @@
+{
+  "hotel_slug": "gloria-pousada-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T19:31:40.229Z",
+  "status": "P1_ONLY",
+  "sources_consulted": [
+    "local_xlsx",
+    "circuito_elegante",
+    "questionnaire"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.5344827586206896,
+  "completeness": 0.5344827586206896,
+  "fields_filled": 31,
+  "fields_total": 58,
+  "fields_null": 52,
+  "enrichment": {
+    "hotel_name": "Gloria Pousada Hotel",
+    "municipality": "Paraty",
+    "state_code": "RJ",
+    "region": "sudeste",
+    "website_url": null,
+    "description": null,
+    "lodging_type": "Pousada",
+    "room_types": [],
+    "room_amenities": null,
+    "common_areas_amenities": null,
+    "outdoor_amenities": null,
+    "restaurants": [],
+    "bar_lounge": null,
+    "leisure_items": [],
+    "activities_tours": [],
+    "highlights": null,
+    "price_tier": null,
+    "star_rating": null,
+    "opening_year": null,
+    "total_rooms": null,
+    "total_beds": null,
+    "contact_phone": "+55-24-3371-2000",
+    "contact_email": "gloria@paraty.com.br",
+    "contact_website": null,
+    "address_street": null,
+    "address_number": null,
+    "address_neighborhood": null,
+    "address_zip_code": null,
+    "latitude": null,
+    "longitude": null,
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "parking": {
+      "has_parking": null,
+      "is_free": null,
+      "is_covered": null
+    },
+    "pool_details": null,
+    "spa_details": null,
+    "gym_details": null,
+    "wifi_quality": null,
+    "pet_policy": "Consultando propriétário",
+    "accessibility_features": [
+      "rampas"
+    ],
+    "wheelchair_access": null,
+    "elevator_access": null,
+    "accessible_rooms": null,
+    "languages_spoken": [
+      "Português",
+      "English"
+    ],
+    "payment_methods": [],
+    "accepts_credit_cards": null,
+    "accepts_debit": null,
+    "near_attractions": [],
+    "distance_from_airport": null,
+    "distance_from_downtown": null,
+    "transport_options": [],
+    "shuttle_service": null,
+    "car_rental_onsite": null,
+    "business_hours": null,
+    "reception_24h": null,
+    "concierge_service": null,
+    "room_service_hours": null,
+    "laundry_service": null,
+    "housekeeping_schedule": null,
+    "security_features": [],
+    "cctv_system": null,
+    "sustainability_practices": null,
+    "eco_certifications": [],
+    "water_conservation": null,
+    "wellness_programs": null,
+    "event_spaces": null,
+    "conference_capacity": null,
+    "business_amenities": [],
+    "_meta": {
+      "enriched_at": "2026-04-07T18:30:00Z",
+      "last_updated": "2026-04-07T18:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_ONLY",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
+        }
+      },
+      "experience": "praia",
+      "destination": "Paraty",
+      "quality_score": 0.1,
+      "completeness": 0.1,
+      "fields_filled": 6,
+      "fields_null": 52
+    },
+    "wifi_included": "Incluído",
+    "parking_free": "Gratuito",
+    "contact_info": {},
+    "distinctive_features": "Pousada histórica no centro de Paraty, vista para baía",
+    "_phase4_response": {
+      "response_date": "2026-04-09T08:30:00Z",
+      "response_channel": "email",
+      "fields_updated": 9
+    }
+  }
+}

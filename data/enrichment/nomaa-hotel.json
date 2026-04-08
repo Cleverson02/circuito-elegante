@@ -1,0 +1,218 @@
+{
+  "hotel_slug": "nomaa-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T13:15:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.99,
+  "completeness": 0.95,
+  "fields_filled": 48,
+  "fields_total": 58,
+  "fields_null": 10,
+  "enrichment": {
+    "website_url": "https://www.nomaa.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/HAzUzmq9S4x4ypMUA",
+    "description": "Hotel boutique 5 estrelas com conceito contemporâneo, sofisticado e cosmopolita. Une design, arte e serviço personalizado em localização privilegiada no bairro Batel (Curitiba). Luxo sem formalidade com forte conexão com a cidade.",
+    "lodging_type": "Hotel Boutique de Luxo",
+    "room_types": [
+      {
+        "name": "Max",
+        "size_m2": 25,
+        "max_guests": 2
+      },
+      {
+        "name": "Vitra",
+        "size_m2": 37,
+        "max_guests": 2
+      },
+      {
+        "name": "Magnum",
+        "size_m2": 37,
+        "max_guests": 2
+      },
+      {
+        "name": "Meet",
+        "size_m2": 62,
+        "max_guests": 2
+      },
+      {
+        "name": "Suíte Ático",
+        "size_m2": 91,
+        "max_guests": 2
+      }
+    ],
+    "total_rooms": null,
+    "room_amenities": "Enxovais de alta qualidade, roupões, chinelos havaianas, amenities de banho premium, secador de cabelo, cofre digital, cafeteira Nespresso, chaleira elétrica, SmartTV, Wi-Fi cortesia",
+    "parking": {
+      "has_parking": true,
+      "description": "Valet parking pago à parte"
+    },
+    "pool_description": null,
+    "pool_heated": false,
+    "leisure_items": [
+      "spa urbano Gaya",
+      "academia 24h",
+      "biblioteca/lounge",
+      "restaurante",
+      "acervo de arte"
+    ],
+    "wellness": "Spa Gaya com massagens, terapias e tratamentos corporais",
+    "event_space": {
+      "has_events": true,
+      "description": "Espaços para eventos sociais e corporativos intimistas"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Incluso e alta velocidade em todo hotel"
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Academia 24 horas"
+    },
+    "restaurants": [
+      {
+        "name": "Nomade",
+        "cuisine": "Culinária contemporânea com influências regionais e internacionais",
+        "description": "Ambiente sofisticado aberto ao público. Café da manhã buffet e à la carte, almoço executivo, jantar e almoço final de semana à la carte, menus sazonais, eventos"
+      }
+    ],
+    "meals_included": "Café da manhã incluso na diária (buffet e à la carte)",
+    "special_dining": "Almoço executivo, jantar à la carte, almoço final de semana à la carte, menus sazonais, eventos gastronômicos",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sob disponibilidade",
+    "cancellation_policy": "Até 24 horas do check-in: isento de cobrança",
+    "children_policy": "Crianças bem-vindas. Camas extras e berços sob solicitação, sujeitos a disponibilidade.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "18 km do Aeroporto Internacional Afonso Pena (~30 minutos de carro)",
+    "transfer": {
+      "available": true,
+      "is_free": false,
+      "description": "Serviço de transfer sob solicitação, pago à parte"
+    },
+    "nearby_attractions": "Bairro Batel, centro Curitiba, arte e cultura",
+    "how_to_get_there": "Batel (Curitiba), 18 km do aeroporto",
+    "special_programming": "Pacotes românticos, aniversário e núpcias",
+    "hotel_concierge_services": "Concierge 24 horas. Agendamento experiências na cidade, recomendações gastronômicas, culturais e reservas exclusivas.",
+    "activities_tours": [
+      "SPA Gaya",
+      "Academia 24h",
+      "Biblioteca/lounge",
+      "Arte (acervo do hotel)",
+      "Experiências na cidade"
+    ],
+    "day_use": null,
+    "special_packages": [
+      "Pacotes românticos",
+      "Pacotes aniversário",
+      "Pacotes núpcias"
+    ],
+    "highlights": "Hotel boutique 5 estrelas. Design premiado. Conceito luxo contemporâneo. Localização Batel. Restaurante Nomade. SPA urbano Gaya. Academia 24h. Acervo de arte. Concierge 24h. Wi-Fi cortesia. Café da manhã incluso.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": 5,
+    "price_tier": "$$$$",
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Disponibilidade estacionamento, horários restaurante, serviços SPA, pacotes românticos",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem piscina no hotel",
+      "Check-in 15h / Check-out 12h",
+      "Estacionamento (valet parking) pago à parte",
+      "Transfer pago à parte",
+      "Cancelamento: até 24h antes (sem taxa)",
+      "Camas extras/berços sob disponibilidade",
+      "Localização Batel (bairro de Curitiba)",
+      "Transferir para humano: eventos, experiências personalizadas, reservas restaurantes/spas, pacotes especiais, reclamações"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Design sofisticado. Pacotes românticos. SPA Gaya. Restaurante Nomade. Concierge 24h. Acervo de arte. Ambiente acolhedor.",
+      "corporativo": "Academia 24h. Espaços eventos intimistas. Concierge. Almoço executivo. Batel localização premium. Wi-Fi cortesia.",
+      "luxo": "5 estrelas. Design premiado. Conceito contemporâneo. Amenities premium (Nespresso, roupões). Suíte Ático 91 m². Arte integrada."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/nomaa-hotel-pr/",
+    "photo_urls": null,
+    "_meta": {
+      "enriched_at": "2026-04-06T13:15:00Z",
+      "last_updated": "2026-04-06T13:15:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1744-1815",
+          "fields_extracted": 29
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/nomaa-hotel-pr/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        }
+      },
+      "address": "Curitiba, Paraná (Batel)",
+      "payment_policy": "Cartão crédito, parcelamento até 3x direto no hotel. PIX, dinheiro, cartão débito. Sem cheques.",
+      "quality_score": 0.99,
+      "completeness": 0.95,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "total_rooms",
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "pool_description",
+        "accessibility"
+      ],
+      "experience": "cidade",
+      "destination": "Curitiba",
+      "has_api": true,
+      "elevare_hotel_id": 18677,
+      "bradesco_coupon": false
+    },
+    "hotel_name": "Nomaa Hotel",
+    "municipality": "Curitiba",
+    "state_code": "PR",
+    "region": "sul"
+  }
+}

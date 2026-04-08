@@ -1,0 +1,159 @@
+{
+  "hotel_slug": "nór-hotel-spa",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T13:30:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.86,
+  "completeness": 0.83,
+  "fields_filled": 50,
+  "fields_total": 58,
+  "fields_null": 8,
+
+  "enrichment": {
+    "website_url": "https://www.nor.tur.br",
+    "google_maps_url": "https://maps.app.goo.gl/ecqArEcoPa9pBK21A",
+    "description": "Situado na região de São Roque em São Paulo, ideal para quem busca respiro a poucos quilômetros da capital. Design moderno com conforto e aconchego. Suítes cercadas por área verde com luxo informal. Lugar para descanso, trabalho remoto, exercício, gastronomia e lazer. Hospitalidade e gastronomia intrinsecamente conectada com natureza.",
+    "lodging_type": "Hotel Boutique & SPA",
+
+    "room_types": [
+      {"name": "Deluxe", "max_guests": 2},
+      {"name": "Duplex", "max_guests": 3}
+    ],
+    "total_rooms": null,
+    "room_amenities": "Shampoo, condicionador, gel de banho e sabonete em barra L'Occitane, cápsulas café Nespresso, Chá Iaman",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": 25,
+      "is_free": true,
+      "description": "Estacionamento cortesia para até 25 carros"
+    },
+    "pool_description": "Piscina aquecida em área aberta chegando a 20 graus",
+    "pool_heated": true,
+    "leisure_items": ["quadra beach tennis", "sauna", "restaurante", "massagens L'Occitane", "adega", "piscina climatizada", "espaço fitness"],
+    "wellness": "Serviço de massagens com produtos L'Occitane. SPA (em breve).",
+    "event_space": {
+      "has_events": true,
+      "description": "Sala de eventos e adega para reuniões"
+    },
+    "wifi": {
+      "included": true,
+      "quality": null
+    },
+    "accessibility": null,
+    "gym": {
+      "has_gym": true,
+      "description": "Espaço fitness"
+    },
+
+    "restaurants": [
+      {
+        "name": "Restaurante NÓR",
+        "cuisine": "Contemporânea",
+        "description": "Gastronomia conectada com natureza"
+      }
+    ],
+    "meals_included": "Café da manhã incluso na diária",
+    "special_dining": "Piquenique, serviço de massagens, degustação vinhos selecionados (máquina Winemotion)",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Early check-in 08:00 e late check-out 18:00 mediante disponibilidade. Valor cobrado: meia diária.",
+    "cancellation_policy": "Cancelamento com devolução até 7 dias úteis. Troca/alteração com 7 dias antecedência. No-show = cobrança integral. Casos médicos/óbito precisam declaração.",
+    "children_policy": "Crianças até 12 anos são cortesia. Acima 12 anos = adulto. Berços sob solicitação prévia.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Aeroporto Congonhas: ~1h 19min (77,1 km) via BR-374. Aeroporto Viracopos: ~1h 18min (98,0 km) via Rod. Santos Dumont.",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece serviço de transfer"
+    },
+    "nearby_attractions": "São Roque, roteiro do vinho",
+    "how_to_get_there": "São Roque, SP (região vinícola)",
+
+    "special_programming": null,
+    "hotel_concierge_services": "Hotel não possui serviço de concierge para atividades na região. Realiza agendamento dos serviços prestados pelo hotel.",
+    "activities_tours": [
+      "Beach tennis",
+      "Sauna",
+      "Massagens L'Occitane",
+      "Degustação de vinhos (Winemotion)",
+      "Piquenique",
+      "Espaço fitness",
+      "Roteiro vinho região"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Localização São Roque, respiro da capital. Design moderno. Suítes com área verde. Piscina aquecida (20°C). Sauna. Massagens L'Occitane. Adega. Espaço fitness. Gastronomia conectada natureza. Ideal casais, trabalho remoto, lazer.",
+    "awards_certifications": null,
+    "sustainability": "Hospitalidade e gastronomia intrinsecamente conectada com natureza",
+    "star_rating": null,
+    "price_tier": "$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Diária pet, piscina aquecida, sauna, massagens sem SPA finalizado, experiências, roteiro do vinho",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 15h / Check-out 12h",
+      "Early check-in 08h / Late check-out 18h (meia diária)",
+      "Sem serviço de transfer",
+      "Infraestrutura voltada para casais (foco relaxamento)",
+      "SPA em breve (atualmente apenas massagens)",
+      "Sem concierge para atividades região",
+      "Piscina 20°C (aquecida mas moderada)",
+      "Transferir para humano: pedidos fora do padrão, experiências personalizadas, reservas específicas"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Infraestrutura voltada casais. Piscina aquecida. Sauna. Massagens L'Occitane. Adega. Gastronomia natureza. Design moderno. Área verde.",
+      "corporativo": "Sala eventos. Adega reuniões. Trabalho remoto. Localização São Roque (respiro capital). Wi-Fi. Café da manhã.",
+      "vinho": "Adega. Degustação vinhos Winemotion. Localização roteiro vinho São Roque. Gastronomia curada."
+    },
+
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/nor-hotel-spa-sao-roque-sp/",
+    "payment_methods": "Cartão crédito (até 3x sem juros) ou PIX",
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T13:30:00Z",
+      "last_updated": "2026-04-06T13:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1816-1897",
+          "fields_extracted": 25
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "São Roque, São Paulo",
+      "payment_policy": null,
+      "quality_score": 0.84,
+      "completeness": 0.82,
+      "fields_filled": 48,
+      "fields_null": 10,
+      "null_fields_remaining": [
+        "total_rooms", "room_service", "dietary_options", "pet_policy",
+        "smoking_policy", "min_age_solo", "day_use", "special_packages", "star_rating"
+      ]
+    }
+  }
+}
