@@ -1,12 +1,29 @@
-import { IntentOutput, IntentType, Language, GuardrailOutput, MODELS } from '../../backend/src/agents/types';
+import { IntentOutput, IntentType, Language, GuardrailOutput, MODELS, INTENT_ALIASES } from '../../backend/src/agents/types';
 
 describe('Intent Agent Types & Schemas', () => {
   describe('IntentType enum', () => {
-    it('should accept all 7 valid intent types', () => {
+    it('should accept all 7 original intent types', () => {
       const validIntents = ['RAG', 'API_SEARCH', 'API_BOOKING', 'CHAT', 'MULTIMODAL', 'HANDOVER', 'STATUS'];
       for (const intent of validIntents) {
         expect(() => IntentType.parse(intent)).not.toThrow();
       }
+    });
+
+    it('should accept Story 1.9 granular intents', () => {
+      expect(() => IntentType.parse('DETAIL_QUERY')).not.toThrow();
+      expect(() => IntentType.parse('COMPARISON')).not.toThrow();
+    });
+
+    it('should accept backwards-compatible aliases', () => {
+      expect(() => IntentType.parse('OPEN_QUESTION')).not.toThrow();
+      expect(() => IntentType.parse('SEARCH')).not.toThrow();
+      expect(() => IntentType.parse('BOOKING')).not.toThrow();
+    });
+
+    it('should map aliases to original intents', () => {
+      expect(INTENT_ALIASES['OPEN_QUESTION']).toBe('RAG');
+      expect(INTENT_ALIASES['SEARCH']).toBe('API_SEARCH');
+      expect(INTENT_ALIASES['BOOKING']).toBe('API_BOOKING');
     });
 
     it('should reject invalid intent types', () => {

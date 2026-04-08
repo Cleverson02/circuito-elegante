@@ -10,8 +10,22 @@ export const IntentType = z.enum([
   'MULTIMODAL',
   'HANDOVER',
   'STATUS',
+  // Story 1.9: Granular intents
+  'DETAIL_QUERY',
+  'COMPARISON',
+  // Backwards-compatible aliases (mapped internally)
+  'OPEN_QUESTION',
+  'SEARCH',
+  'BOOKING',
 ]);
 export type IntentType = z.infer<typeof IntentType>;
+
+/** Map new intent names to legacy ones for backwards compatibility */
+export const INTENT_ALIASES: Record<string, IntentType> = {
+  OPEN_QUESTION: 'RAG',
+  SEARCH: 'API_SEARCH',
+  BOOKING: 'API_BOOKING',
+};
 
 export const Language = z.enum(['pt', 'en', 'es']);
 export type Language = z.infer<typeof Language>;

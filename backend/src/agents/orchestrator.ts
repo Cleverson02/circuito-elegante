@@ -62,6 +62,21 @@ function logToolCall(
     tool: toolName,
     latencyMs,
     success,
+    source: toolName,
+    ...meta,
+  });
+}
+
+// ─── Source Attribution (Story 1.9 — AC10) ────────────────────
+
+export function logSourceAttribution(
+  toolName: string,
+  found: boolean,
+  meta?: Record<string, unknown>,
+): void {
+  logger.info('source_attribution', {
+    source: toolName,
+    found,
     ...meta,
   });
 }
@@ -98,7 +113,7 @@ const instrumentedSearchHotels = tool({
 const instrumentedQueryKB = tool({
   name: 'query_knowledge_base',
   description:
-    'Search the FAQ knowledge base using semantic search. Optionally filter by hotel name. Returns top relevant chunks.',
+    'Search the hotel knowledge base using semantic search. Optionally filter by hotel name and/or categories (faq, description, experience, policy, location) for precise pre-filtering. Returns top relevant chunks.',
   parameters: QueryKBParams,
   execute: async (params) => {
     const start = Date.now();
@@ -111,7 +126,17 @@ const instrumentedQueryKB = tool({
         count: result.results.length,
         suggestion: result.suggestion,
       });
+      // Story 1.9: Source attribution for each result
+      for (const r of result.results) {
+        logSourceAttribution('query_knowledge_base', true, {
+          sectionTitle: r.sectionTitle,
+          similarity: r.similarity,
+          category: r.category,
+          confidence: r.similarity >= 0.78 ? 'high' : 'low',
+        });
+      }
       if (result.results.length === 0) {
+        logSourceAttribution('query_knowledge_base', false);
         return {
           found: false,
           suggestion: result.suggestion ?? 'transfer_to_human',
@@ -145,6 +170,11 @@ const instrumentedQueryHotelDetails = tool({
       logToolCall('query_hotel_details', Date.now() - start, true, {
         found: result.found,
         category: params.category,
+      });
+      // Story 1.9: Source attribution
+      logSourceAttribution('query_hotel_details', result.found, {
+        hotelSlug: params.hotelSlug,
+        category: params.category ?? 'summary',
       });
       if (!result.found) {
         return {

@@ -102,13 +102,14 @@ describe('Orchestrator system prompt — AC4', () => {
     expect(promptContent).toMatch(/tool fails|failure/i);
   });
 
-  it('contains all 5 anti-hallucination rules', () => {
-    // 5 numbered CRITICAL rules
+  it('contains all 6 anti-hallucination rules', () => {
+    // 6 numbered CRITICAL rules (Story 1.9: added fallback chain + similarity threshold)
     expect(promptContent).toContain('1.');
     expect(promptContent).toContain('2.');
     expect(promptContent).toContain('3.');
     expect(promptContent).toContain('4.');
     expect(promptContent).toContain('5.');
+    expect(promptContent).toContain('6.');
   });
 });
 
