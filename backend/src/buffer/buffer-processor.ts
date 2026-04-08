@@ -23,6 +23,7 @@ import { processMessage } from '../agents/pipeline.js';
 import { getSession, setSession, type SessionData } from '../state/session-manager.js';
 import { sanitizeInput } from '../middleware/sanitize.js';
 import { chunkResponse, enqueueResponse, getTypingQueue } from '../queue/index.js';
+import { renderCuratedOptions } from '../services/media-renderer.js';
 
 // ─── Constants ──────────────────────────────────────────────────
 
@@ -104,11 +105,15 @@ export function createBufferProcessor(deps: BufferProcessorDeps): OnFlushCallbac
       });
 
       // Step 6: Deliver response via typing simulation queue (Story 4.3, AC11)
+      // Story 4.4: When curated options are present, render as image+caption chunks.
       // Falls back to direct send if queue is unavailable.
       const queue = getTypingQueue();
       if (queue) {
         try {
-          const chunks = chunkResponse(result.response);
+          // Story 4.4 (AC10): Premium rendering for curated options
+          const chunks = result.curatedOptions && result.curatedOptions.length > 0
+            ? renderCuratedOptions(result.curatedOptions, phone, sessionId, 'whatsapp')
+            : chunkResponse(result.response);
           await enqueueResponse(sessionId, phone, chunks, 'whatsapp');
         } catch (queueErr) {
           logger.warn('typing_queue_enqueue_failed_fallback_direct', {

@@ -26,6 +26,7 @@ import {
   type SessionContext,
 } from '../state/session-manager.js';
 import { saveSessionSnapshot } from '../state/session-snapshot.js';
+import type { CuratedOption } from '../services/curadoria.js';
 
 // ─── Types ────────────────────────────────────────────────────
 
@@ -45,6 +46,8 @@ export interface PipelineResult {
   multiIntent: boolean;
   latencyMs: number;
   hotelFocus?: string | null;
+  /** Story 4.4: Curated options for premium rendering (images + captions). */
+  curatedOptions?: CuratedOption[];
 }
 
 // ─── Hotel Focus Extraction (Story 2.7, AC2) ─────────────────
@@ -79,6 +82,35 @@ export function extractHotelFocus(toolOutputs: Record<string, unknown>): string 
     }
   }
   return null;
+}
+
+// ─── Curated Options Extraction (Story 4.4) ─────────────────
+
+/**
+ * Extract curated options from structured tool outputs for premium rendering.
+ * Looks for arrays containing objects with CuratedOption shape (offerId, photos, displayPrice).
+ */
+export function extractCuratedOptions(toolOutputs: Record<string, unknown>): CuratedOption[] | undefined {
+  for (const value of Object.values(toolOutputs)) {
+    if (value && typeof value === 'object') {
+      const obj = value as Record<string, unknown>;
+      // CuratedResult shape: { options: CuratedOption[] }
+      if (Array.isArray(obj['options']) && obj['options'].length > 0) {
+        const first = obj['options'][0] as Record<string, unknown>;
+        if (first?.['offerId'] && first?.['displayPrice'] !== undefined && Array.isArray(first?.['photos'])) {
+          return obj['options'] as CuratedOption[];
+        }
+      }
+    }
+    // Direct array of CuratedOption
+    if (Array.isArray(value) && value.length > 0) {
+      const first = value[0] as Record<string, unknown>;
+      if (first?.['offerId'] && first?.['displayPrice'] !== undefined && Array.isArray(first?.['photos'])) {
+        return value as CuratedOption[];
+      }
+    }
+  }
+  return undefined;
 }
 
 // ─── Preference Extraction (Story 2.7, AC5) ──────────────────
@@ -359,6 +391,9 @@ export async function processMessage(
     latencyMs: Date.now() - start,
   });
 
+  // Story 4.4: Extract curated options for premium rendering
+  const curatedOptions = extractCuratedOptions(structuredToolOutputs);
+
   return {
     response: safety.response,
     intent,
@@ -366,5 +401,6 @@ export async function processMessage(
     multiIntent: hasMultiIntent,
     latencyMs: Date.now() - start,
     hotelFocus: detectedHotel ?? effectiveContext.hotelFocus ?? null,
+    curatedOptions,
   };
 }
