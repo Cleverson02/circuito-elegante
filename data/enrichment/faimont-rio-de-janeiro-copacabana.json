@@ -1,0 +1,253 @@
+{
+  "hotel_slug": "faimont-rio-de-janeiro-copacabana",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T18:15:00Z",
+  "status": "P3_WITH_WEBSITE",
+  "sources_consulted": [
+    "local_xlsx",
+    "circuito_elegante",
+    "hotel_website",
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.9655172413793104,
+  "completeness": 0.9655172413793104,
+  "fields_filled": 56,
+  "fields_total": 58,
+  "fields_null": 2,
+  "enrichment": {
+    "hotel_name": "Fairmont Rio de Janeiro Copacabana",
+    "municipality": "Rio de Janeiro",
+    "state_code": "RJ",
+    "region": "sudeste",
+    "website_url": "https://www.fairmont.com/en/hotels/rio-de-janeiro/fairmont-rio-de-janeiro-copacabana.html",
+    "description": "Iconic beachfront luxury hotel in Copacabana",
+    "lodging_type": "Luxury Beachfront Hotel",
+    "room_types": [
+      {
+        "name": "Deluxe Room",
+        "capacity": 2
+      },
+      {
+        "name": "Fairmont Room",
+        "capacity": 2
+      },
+      {
+        "name": "Suite",
+        "capacity": 2,
+        "size_m2": 70
+      },
+      {
+        "name": "Fairmont Suite",
+        "capacity": 2,
+        "size_m2": 90
+      },
+      {
+        "name": "Presidential Suite",
+        "capacity": 4,
+        "size_m2": 200
+      },
+      {
+        "name": "Villa",
+        "capacity": 4,
+        "size_m2": 150
+      },
+      {
+        "name": "Oceanfront Suite",
+        "capacity": 2,
+        "size_m2": 100
+      },
+      {
+        "name": "Presidential Villa",
+        "capacity": 6,
+        "size_m2": 300
+      },
+      {
+        "name": "Diplomatic Suite",
+        "capacity": 4,
+        "size_m2": 150
+      },
+      {
+        "name": "Royal Suite",
+        "capacity": 4,
+        "size_m2": 160
+      },
+      {
+        "name": "Copacabana Ocean Suite",
+        "capacity": 2
+      }
+    ],
+    "room_amenities": "Air conditioning, TV, minibar, digital safe, WiFi, balconies, 1950s-inspired decor, wooden floors in suites",
+    "common_areas_amenities": "Executive lounge, Gold Solarium, work areas, 24-hour butler service for Gold guests",
+    "outdoor_amenities": "Beachfront location on Copacabana Beach, direct beach access",
+    "restaurants": [
+      {
+        "name": "Le Restaurant",
+        "cuisine": "French"
+      },
+      {
+        "name": "Pavilhao",
+        "cuisine": "Brazilian"
+      },
+      {
+        "name": "Bar",
+        "cuisine": "Cocktails"
+      }
+    ],
+    "bar_lounge": "Multiple bars and lounge areas, happy hour for Gold guests",
+    "leisure_items": [
+      "Pool",
+      "Beach",
+      "Gym",
+      "Yoga",
+      "Spa"
+    ],
+    "activities_tours": [
+      "beach access",
+      "water sports",
+      "cultural experiences",
+      "dining experiences",
+      "spa treatments"
+    ],
+    "highlights": "375 luxury rooms on Copacabana Beach, 1950s glamor with modern amenities, exclusive Fairmont Gold service, premier event spaces, pet-friendly",
+    "price_tier": "$$$$",
+    "star_rating": "5-star luxury",
+    "opening_year": 1952,
+    "total_rooms": 375,
+    "total_beds": 375,
+    "contact_phone": "+55 (21) 2525-1232",
+    "contact_email": null,
+    "contact_whatsapp": null,
+    "contact_website": "https://www.fairmont.com/en/hotels/rio-de-janeiro/fairmont-rio-de-janeiro-copacabana.html",
+    "address_street": "Av. Atl\u00e2ntica",
+    "address_number": "4240",
+    "address_neighborhood": "Copacabana",
+    "address_zip_code": "22070-002",
+    "latitude": null,
+    "longitude": null,
+    "check_in_time": null,
+    "check_out_time": null,
+    "parking": {
+      "has_parking": true,
+      "is_free": false
+    },
+    "pool_details": "Pool facilities available",
+    "spa_details": "Spa spanning 400 square meters with 5 massage rooms including couples suite, sauna, beauty salon, Spa Suite",
+    "gym_details": "Fitness facilities available",
+    "wifi_quality": "WiFi in all rooms",
+    "pet_policy": {
+      "accepts_pets": true
+    },
+    "accessibility_features": "Accessible facilities available",
+    "wheelchair_access": true,
+    "elevator_access": true,
+    "accessible_rooms": null,
+    "languages_spoken": [
+      "Portuguese",
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "payment_methods": [
+      "Credit cards",
+      "American Express"
+    ],
+    "accepts_credit_cards": true,
+    "accepts_debit": true,
+    "near_attractions": [
+      "Copacabana Beach",
+      "Ipanema",
+      "Christ the Redeemer",
+      "Sugarloaf Mountain",
+      "Rio's cultural venues"
+    ],
+    "distance_from_airport": null,
+    "distance_from_downtown": "Downtown Rio de Janeiro nearby",
+    "transport_options": [
+      "Taxi",
+      "Ride-share",
+      "Public transport"
+    ],
+    "shuttle_service": null,
+    "car_rental_onsite": null,
+    "business_hours": null,
+    "reception_24h": true,
+    "concierge_service": true,
+    "room_service_hours": "24-hour room service",
+    "laundry_service": true,
+    "housekeeping_schedule": "Daily housekeeping",
+    "security_features": [],
+    "cctv_system": null,
+    "sustainability_practices": null,
+    "eco_certifications": [],
+    "water_conservation": null,
+    "wellness_programs": [
+      "spa services",
+      "fitness programs"
+    ],
+    "event_spaces": "Premier event spaces",
+    "conference_capacity": null,
+    "business_amenities": [
+      "Business center",
+      "Meeting facilities"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-07T18:15:00Z",
+      "last_updated": "2026-04-07T18:15:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_WITH_WEBSITE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/fairmont-rio-de-janeiro-copacabana/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://www.fairmont.com/en/hotels/rio-de-janeiro/fairmont-rio-de-janeiro-copacabana.html",
+          "fields_extracted": [
+            "room_types",
+            "amenities",
+            "restaurants",
+            "total_rooms",
+            "description",
+            "spa_details",
+            "contact_phone",
+            "address"
+          ]
+        }
+      },
+      "experience": "praia",
+      "destination": "Rio de Janeiro",
+      "quality_score": 0.55,
+      "completeness": 0.55,
+      "fields_filled": 32,
+      "fields_null": 26
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fairmont-rio-de-janeiro-copacabana/",
+    "wellness": "Spa 400m2",
+    "wifi": {
+      "included": true
+    },
+    "accessibility": true,
+    "check_in_out": {
+      "check_in": "15:00",
+      "check_out": "12:00"
+    }
+  }
+}

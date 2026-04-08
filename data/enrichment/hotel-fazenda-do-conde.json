@@ -1,0 +1,156 @@
+{
+  "hotel_slug": "hotel-fazenda-do-conde",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T18:45:00Z",
+  "status": "P3_WITH_WEBSITE",
+  "sources_consulted": [
+    "websearch_google",
+    "tripadvisor",
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "official_website",
+    "booking_com",
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.27586206896551724,
+  "completeness": 0.27586206896551724,
+  "fields_filled": 16,
+  "fields_total": 58,
+  "fields_null": 42,
+  "enrichment": {
+    "hotel_name": "Hotel Fazenda Para\u00edso do Conde",
+    "municipality": "Conde",
+    "state_code": "PB",
+    "region": "nordeste",
+    "website_url": "https://hotelfazendaparaisodoconde.com.br/",
+    "description": "Hotel Fazenda Para\u00edso do Conde",
+    "lodging_type": "Hotel Fazenda",
+    "room_types": [
+      {
+        "name": "Su\u00edte Master",
+        "capacity": 3,
+        "description": "Su\u00edte master com 3 camas de casal e acesso a lago natural com cascata"
+      },
+      {
+        "name": "Su\u00edtes",
+        "capacity": 2,
+        "description": "Su\u00edtes com ar condicionado"
+      }
+    ],
+    "room_amenities": "Ar condicionado, TV, banheiro completo",
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "type": "Estacionamento na propriedade"
+    },
+    "restaurants": [
+      {
+        "name": "Restaurante Principal",
+        "cuisine": "Brasileira",
+        "description": "Servi\u00e7o de alimenta\u00e7\u00e3o na propriedade com pizza oven e churrasqueira"
+      }
+    ],
+    "leisure_items": [
+      "piscina",
+      "cavalgada",
+      "contato com animais",
+      "lago natural com cascata"
+    ],
+    "activities_tours": [
+      "cavalgada",
+      "contato com animais",
+      "passeios rurais"
+    ],
+    "highlights": "Piscina com cascata em formato de golfinho, lago natural com cascata, experi\u00eancia de fazenda a 30 km de Jo\u00e3o Pessoa",
+    "price_tier": "$$",
+    "distance_from_downtown": "30 km de Jo\u00e3o Pessoa",
+    "_meta": {
+      "enriched_at": "2026-04-07T18:45:00Z",
+      "last_updated": "2026-04-07T18:45:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_ONLY_PARTIAL",
+      "sources": {
+        "websearch_google": {
+          "date": "2026-04-07",
+          "query": "hotel fazenda do conde brasil",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "description",
+            "lodging_type",
+            "room_types",
+            "leisure_items",
+            "highlights"
+          ]
+        }
+      },
+      "experience": "rural",
+      "destination": "Conde",
+      "has_api": false,
+      "elevare_hotel_id": null,
+      "bradesco_coupon": false,
+      "address": "Conde, PB",
+      "quality_score": 0.35,
+      "completeness": 0.35,
+      "fields_filled": 20,
+      "fields_null": 38,
+      "null_fields_remaining": [
+        "contact_phone",
+        "contact_email",
+        "contact_whatsapp",
+        "address_street",
+        "address_number",
+        "address_neighborhood",
+        "address_zip_code",
+        "latitude",
+        "longitude",
+        "check_in_time",
+        "check_out_time",
+        "total_rooms",
+        "total_beds",
+        "star_rating",
+        "opening_year",
+        "common_areas_amenities",
+        "outdoor_amenities",
+        "bar_lounge",
+        "wifi_quality",
+        "pool_details",
+        "spa_details",
+        "gym_details",
+        "wellness_programs",
+        "event_spaces",
+        "conference_capacity",
+        "business_amenities",
+        "pet_policy",
+        "accessibility_features",
+        "languages_spoken",
+        "payment_methods",
+        "accepts_credit_cards",
+        "accepts_debit",
+        "wheelchair_access",
+        "elevator_access",
+        "accessible_rooms",
+        "near_attractions",
+        "transport_options",
+        "shuttle_service",
+        "car_rental_onsite",
+        "business_hours",
+        "reception_24h",
+        "concierge_service",
+        "room_service_hours",
+        "laundry_service",
+        "housekeeping_schedule",
+        "emergency_procedures",
+        "security_features",
+        "cctv_system",
+        "sustainability_practices",
+        "eco_certifications",
+        "water_conservation"
+      ]
+    }
+  }
+}

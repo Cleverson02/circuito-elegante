@@ -1,0 +1,205 @@
+{
+  "hotel_slug": "clara-arte-resort",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T18:15:00Z",
+  "status": "P3_WITH_WEBSITE",
+  "sources_consulted": [
+    "local_xlsx",
+    "circuito_elegante",
+    "hotel_website",
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.7586206896551724,
+  "completeness": 0.7586206896551724,
+  "fields_filled": 44,
+  "fields_total": 58,
+  "fields_null": 14,
+  "enrichment": {
+    "hotel_name": "Clara Arte Resort",
+    "municipality": "Brumadinho",
+    "state_code": "MG",
+    "region": "sudeste",
+    "website_url": "https://clararesorts.com.br/en/our-resorts/clara-arte/",
+    "description": "Luxury art-focused resort",
+    "lodging_type": "Luxury Resort with Art Museum",
+    "room_types": [
+      {
+        "name": "Standard Suite",
+        "capacity": 2
+      },
+      {
+        "name": "Deluxe Suite",
+        "capacity": 2
+      },
+      {
+        "name": "Master Suite",
+        "capacity": 2,
+        "size_m2": 80
+      },
+      {
+        "name": "Art Gallery Suite",
+        "capacity": 2
+      },
+      {
+        "name": "Penthouse",
+        "capacity": 4,
+        "size_m2": 150
+      },
+      {
+        "name": "Villa Suite",
+        "capacity": 4,
+        "size_m2": 120
+      }
+    ],
+    "room_amenities": "Air conditioning, fireplace, balconies, spacious layouts, artwork in rooms",
+    "common_areas_amenities": "Lobby, pool areas, spa facilities, fitness center",
+    "outdoor_amenities": "Multiple pools, gardens, outdoor jacuzzis, terraces",
+    "restaurants": [
+      "Fine Dining Restaurant"
+    ],
+    "bar_lounge": "Bar service included",
+    "leisure_items": [
+      "praia",
+      "art galleries",
+      "botanical gardens",
+      "museums",
+      "workshops",
+      "guided tours",
+      "nature trails"
+    ],
+    "activities_tours": [
+      "exclusive inhotim institute access",
+      "guided gallery tours",
+      "art workshops",
+      "family-friendly visits",
+      "tangar\u00e1 trail",
+      "botanic garden exploration"
+    ],
+    "highlights": "Exclusive access to one of world's largest open-air art museums, 46 luxury apartments, full board included, intimate connection to contemporary art and nature",
+    "price_tier": "$$$$",
+    "star_rating": "5-star luxury",
+    "opening_year": 2024,
+    "total_rooms": 46,
+    "total_beds": 46,
+    "contact_phone": null,
+    "contact_email": null,
+    "contact_whatsapp": null,
+    "contact_website": "https://clararesorts.com.br/en/our-resorts/clara-arte/",
+    "address_street": "Instituto Inhotim",
+    "address_number": null,
+    "address_neighborhood": null,
+    "address_zip_code": null,
+    "latitude": null,
+    "longitude": null,
+    "check_in_time": null,
+    "check_out_time": null,
+    "parking": {
+      "has_parking": true,
+      "is_free": true
+    },
+    "pool_details": "2 pools",
+    "spa_details": "Full spa facilities available",
+    "gym_details": "Fitness center",
+    "wifi_quality": "Available",
+    "pet_policy": null,
+    "accessibility_features": null,
+    "wheelchair_access": null,
+    "elevator_access": null,
+    "accessible_rooms": null,
+    "languages_spoken": [
+      "Portuguese",
+      "English"
+    ],
+    "payment_methods": [],
+    "accepts_credit_cards": true,
+    "accepts_debit": null,
+    "near_attractions": [
+      "Instituto Inhotim",
+      "Atlantic Forest biome",
+      "Cerrado biome"
+    ],
+    "distance_from_airport": "60 km from Belo Horizonte",
+    "distance_from_downtown": "60 km from Belo Horizonte",
+    "transport_options": [],
+    "shuttle_service": null,
+    "car_rental_onsite": null,
+    "business_hours": null,
+    "reception_24h": true,
+    "concierge_service": true,
+    "room_service_hours": "Full board included",
+    "laundry_service": null,
+    "housekeeping_schedule": "Daily",
+    "security_features": [],
+    "cctv_system": null,
+    "sustainability_practices": "Eco-friendly resort design within natural setting",
+    "eco_certifications": [],
+    "water_conservation": null,
+    "wellness_programs": [
+      "spa treatments",
+      "art-based wellness",
+      "nature immersion"
+    ],
+    "event_spaces": "Event spaces available",
+    "conference_capacity": null,
+    "business_amenities": [],
+    "_meta": {
+      "enriched_at": "2026-04-07T18:15:00Z",
+      "last_updated": "2026-04-07T18:15:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_WITH_WEBSITE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/clara-arte-resort-inhotim-brumadinhomg/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://clararesorts.com.br/en/our-resorts/clara-arte/",
+          "fields_extracted": [
+            "room_types",
+            "amenities",
+            "restaurants",
+            "activities",
+            "description",
+            "total_rooms",
+            "highlights"
+          ]
+        }
+      },
+      "experience": "campo",
+      "destination": "Inhotim",
+      "quality_score": 0.52,
+      "completeness": 0.52,
+      "fields_filled": 30,
+      "fields_null": 28
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/clara-arte-resort-inhotim-brumadinhomg/",
+    "amenities": [
+      "Museum access",
+      "Spa",
+      "Pool",
+      "Fitness Center"
+    ],
+    "wifi": {
+      "included": true
+    },
+    "accessibility": true
+  }
+}

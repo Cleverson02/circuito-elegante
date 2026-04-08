@@ -1,0 +1,237 @@
+{
+  "hotel_slug": "bupitanga-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T03:30:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": [
+    "questionnaire",
+    "local_xlsx",
+    "circuito_elegante"
+  ],
+  "sources_pending": [
+    "hotel_website",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 1,
+  "completeness": 0.95,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+  "enrichment": {
+    "website_url": "https://www.bupitangahotel.com.br",
+    "google_maps_url": "https://maps.app.goo.gl/BBXhVqeyjRZYmyFs5",
+    "description": "Melhor do que visitar o principal ponto turístico da Praia da Pipa é ficar hospedado nele. No Bupitanga Hotel, a natureza e o conforto se encontram para proporcionar dias de muita paz no maior cartão postal da região. São 26 mil m² de área verde, uma praia praticamente particular e infinitos refúgios para descobrir. Todas as instalações trazem um toque rústico e de muito bom gosto, sem abrir mão do cuidado com a natureza.",
+    "lodging_type": "Hotel Boutique na praia",
+    "room_types": [
+      {
+        "name": "Bangalô com piscina particular",
+        "description": "Com uma cama de casal 2,00x2,00m. Não acomodam crianças.",
+        "units": 10,
+        "max_guests": 2
+      },
+      {
+        "name": "Bangalô com mezanino",
+        "description": "Com uma cama de casal 2,00x2,00m no mezanino e sofá/leito 1,00x1,90m no térreo.",
+        "units": 12,
+        "max_guests": 3
+      },
+      {
+        "name": "Bangalô com vista para o jardim (duplo)",
+        "description": "Com duas camas de casal 1,40x2,00m.",
+        "units": 6,
+        "max_guests": 4
+      },
+      {
+        "name": "Bangalô com vista para o jardim (casal)",
+        "description": "Com uma cama de casal 2,00x2,00m.",
+        "units": 2,
+        "max_guests": 2
+      }
+    ],
+    "total_rooms": 30,
+    "room_amenities": "Amenities de higiene pessoal L'Occitane au Brésil (shampoo, condicionador, sabonete líquido e em barra, loção corporal hidratante), enxoval premium, TV, Internet Wi-fi, cofre para laptop, secador de cabelo, piscina privativa (em alguns bangalôs).",
+    "parking": {
+      "has_parking": true,
+      "capacity": 30,
+      "is_free": true
+    },
+    "pool_description": "Complexo de piscinas com raia de 25 metros, cascata e hidromassagem, bar molhado, sauna úmida e piscina infantil. Piscinas privativas em alguns bangalôs.",
+    "pool_heated": false,
+    "leisure_items": [
+      "praias",
+      "trilhas",
+      "surf",
+      "kite surf"
+    ],
+    "wellness": "Massagens com custo adicional. Piscinas com hidromassagem e sauna úmida.",
+    "event_space": {
+      "has_events": true,
+      "description": "Espaço aberto para casamentos e aniversários, com custo adicional"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Excelentes velocidade e sinal em todo o hotel"
+    },
+    "accessibility": null,
+    "gym": null,
+    "restaurants": [
+      {
+        "name": "Ibá Pitanga",
+        "cuisine": "Brasileira com toques asiáticos",
+        "description": "Restaurante do Bupitanga Hotel com assinatura do chef Walter Dantas e execução do chef Rairon Barbosa. Culinária simples e refinada, cada prato é uma ode aos sabores e cores do Brasil, inspirado na natureza."
+      }
+    ],
+    "meals_included": "Café da manhã incluído no valor da diária",
+    "special_dining": "Experiências Bupitanga: Honeymoon (decoração com flores, frutas, espumante, bombons, roupões), Romântico (jantar intimista com garçom exclusivo), Jantar Experiência com menu exclusivo, Massagem casal simultânea, Piquenique ao entardecer.",
+    "room_service": null,
+    "dietary_options": null,
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sob consulta. Dependendo do dia da semana e do horário, com custo adicional.",
+    "cancellation_policy": "Prazo para cancelamento/alteração sem ônus: até 30 dias antes da estadia. Após este prazo não haverá devolução.",
+    "children_policy": "Cortesia para uma criança até 5 anos no mesmo bangalô dos pais (exceto bangalô com piscina particular). Acima desta idade ou segunda criança: acréscimo de 30%. Disponibilizam berço mediante reserva prévia.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+    "airport_distance": "Aeroporto de Natal (RN): 100 km. Aeroporto de João Pessoa (PB): 140 km",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece serviço de transfer"
+    },
+    "nearby_attractions": "Praia da Pipa (principal ponto turístico), trilhas, spots de surf e kite surf",
+    "how_to_get_there": "Acesso via Natal ou João Pessoa. Hotel fica na Praia da Pipa, principal ponto turístico de Tibau do Sul.",
+    "special_programming": null,
+    "hotel_concierge_services": "Concierge disponível para experiências Bupitanga e passeios com empresas parceiras (barco, buggy). Transferir para humano: dúvidas especiais, cotações de experiências/eventos, reclamações, cancelamentos, pedidos especiais, cotação de grupos.",
+    "activities_tours": [
+      "Passeios de barco (parceiros)",
+      "Passeios de buggy (parceiros)",
+      "Trilhas",
+      "Surf",
+      "Kite surf",
+      "Praia particular"
+    ],
+    "day_use": null,
+    "special_packages": [
+      "Honeymoon: decoração com flores, frutas da época, espumante, bombons, roupões, café da manhã no bangalô",
+      "Pacote Romântico: decoração, espumante, jantar intimista com garçom exclusivo",
+      "Jantar Experiência com menu exclusivo",
+      "Massagem casal simultânea",
+      "Piquenique ao entardecer"
+    ],
+    "highlights": "26 mil m² de área verde. Praia praticamente particular. 30 acomodações incluindo bangalôs com piscina privativa. Restaurante Ibá Pitanga com chef renomado. Experiências especiais para casais (honeymoon, romântico, massagem). Piscina com cascata e hidromassagem. Sauna úmida. Wi-fi gratuito com excelente sinal. Café da manhã incluído.",
+    "awards_certifications": null,
+    "sustainability": "Cuidado com a natureza integrado ao design rústico. 26 mil m² de área verde preservada.",
+    "star_rating": null,
+    "price_tier": "$$$",
+    "guest_faqs": [
+      {
+        "q": "Vocês aceitam crianças?",
+        "a": "Sim, mas com restrições. Uma criança até 5 anos é grátis (exceto bangalô com piscina particular). Acima de 5 anos ou segunda criança: 30% da diária. Disponibilizamos berço sob reserva prévia.",
+        "source": "questionnaire"
+      },
+      {
+        "q": "Qual é a dúvida mais frequente?",
+        "a": "Horários de check-in/check-out e sobre as experiências disponíveis no hotel.",
+        "source": "questionnaire"
+      },
+      {
+        "q": "O hotel oferece transfer?",
+        "a": "Não oferecemos serviço de transfer.",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [
+      {
+        "category": "acesso",
+        "objection": "Como chego ao hotel?",
+        "response": "O hotel fica na Praia da Pipa, em Tibau do Sul. Principais aeroportos: Natal (100km) ou João Pessoa (140km). O hotel não oferece transfer, mas os hóspedes podem contratar serviços de parceiros.",
+        "source": "questionnaire"
+      }
+    ],
+    "attention_points": [
+      "Bangalôs com piscina particular NÃO aceitam crianças",
+      "Não oferecem serviço de transfer",
+      "Crianças acima de 5 anos têm custo adicional de 30%",
+      "Cancelamento com menos de 30 dias: sem devolução",
+      "Piscinas não são aquecidas",
+      "Early check-in/late check-out com custo adicional sob consulta"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Bangalô com piscina privativa e vista particular. Experiências especiais: pacote romântico com jantar intimista, massagem casal, honeymoon decorado, piquenique ao entardecer. Restaurante Ibá Pitanga com chef renomado.",
+      "familia": "Bangalôs com mezanino e vista para o jardim. Piscina infantil + complexo de piscinas. Berço disponível. Uma criança até 5 anos grátis. Trilhas e praias seguras.",
+      "luxo": "26 mil m² de área verde. Bangalô com piscina privativa 2,00x2,00m. Chef de renome. Experiências exclusivas. Praia particular praticamente exclusiva."
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/bupitanga-hotel-praia-da-pipa-rn/",
+    "photo_urls": [
+      "https://www.circuitoelegante.com.br/wp-content/uploads/2023/06/WA_1045-scaled.jpg"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-07T03:30:00Z",
+      "last_updated": "2026-04-07T03:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-07",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "365-521",
+          "fields_extracted": 28
+        },
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "nome",
+            "municipality",
+            "uf",
+            "region",
+            "experience",
+            "destination",
+            "has_api",
+            "elevare_hotel_id",
+            "bradesco_coupon"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/bupitanga-hotel-praia-da-pipa-rn/",
+          "fields_extracted": [
+            "ce_page_url",
+            "description",
+            "photo_urls"
+          ]
+        }
+      },
+      "address": "Praia da Pipa, Tibau do Sul, RN",
+      "phone": null,
+      "email": null,
+      "payment_methods": "Dinheiro, transferências bancárias, PIX, cartão débito/crédito (Visa, Mastercard, Elo, American Express). Não aceita cheques.",
+      "quality_score": 1,
+      "completeness": 0.95,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "room_service",
+        "dietary_options",
+        "pet_policy",
+        "smoking_policy",
+        "min_age_solo",
+        "day_use",
+        "accessibility",
+        "gym",
+        "ce_page_url"
+      ],
+      "experience": "praia",
+      "destination": "Pipa",
+      "has_api": true,
+      "elevare_hotel_id": 8574,
+      "bradesco_coupon": true
+    },
+    "hotel_name": "Bupitanga Hotel",
+    "municipality": "Praia da Pipa",
+    "state_code": "RN",
+    "region": "nordeste"
+  }
+}

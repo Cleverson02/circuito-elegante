@@ -1,0 +1,162 @@
+{
+  "hotel_slug": "nanii-hotel",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T13:00:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.86,
+  "completeness": 0.84,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+
+  "enrichment": {
+    "website_url": "https://naniihotel.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/boi9gwXL3uqve8Km8",
+    "description": "Refúgio exclusivo à beira-mar em São Miguel do Gostoso, RN. Combina sofisticação, aconchego e atmosfera romântica. Arquitetura minimalista integrada à natureza. Experiência sensorial completa, ideal para casais e viajantes que buscam tranquilidade, conforto e momentos inesquecíveis. Cada detalhe pensado para acolher com charme e privacidade.",
+    "lodging_type": "Hotel Boutique",
+
+    "room_types": [
+      {"name": "Suíte Kai Vista Mar / Kai Vista Jardim", "size_m2": 36, "max_guests": 3},
+      {"name": "Suíte Makani Vista Mar / Makani Vista Jardim", "size_m2": 51, "max_guests": 4},
+      {"name": "Suíte Haku", "size_m2": 70, "max_guests": 3},
+      {"name": "Suíte Nanii by Cris Dios", "size_m2": 70, "max_guests": 3}
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities exclusivos L'Occitane, enxoval premium 400 fios algodão, ar-condicionado split, TV Smart, frigobar, cofre digital, secador de cabelo, kit boas-vindas (snacks, cápsulas Nespresso), banheira privativa ao ar livre (Makani), piscina privativa (Haku)",
+
+    "parking": {
+      "has_parking": true,
+      "capacity": 40,
+      "is_free": true,
+      "description": "Estacionamento privativo gratuito para até 40 veículos"
+    },
+    "pool_description": "Piscina de borda infinita com vista direta para o mar, localizada em frente ao restaurante e lounge, ambiente relaxante para pôr do sol",
+    "pool_heated": true,
+    "leisure_items": ["piscina borda infinita com vista mar", "espaço massagens ao ar livre", "praia acesso direto", "bicicletas passeios", "academia", "SPA", "jantar romântico"],
+    "wellness": "Massagens relaxantes oferecidas mediante agendamento",
+    "event_space": {
+      "has_events": true,
+      "description": "Estrutura para eventos no jardim gramado, área piscina, restaurante ideal para até 120 convidados. Destino procurado para weddings e celebrações intimistas."
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Sim"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "Taboa",
+        "cuisine": "Gastronomia contemporânea com influências regionais",
+        "description": "Cardápio sazonal assinado pela Chef Luíza Hoffimann. Pratos com ingredientes frescos e locais, carta de vinhos selecionada."
+      }
+    ],
+    "meals_included": "Café da manhã completo incluso, servido à la carte com itens artesanais preparados na hora",
+    "special_dining": "Jantares românticos personalizados, piqueniques exclusivos no jardim, menu harmonizado com espumantes e vinhos",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "14:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Sim, mediante disponibilidade. Pode haver cobrança adicional dependendo do horário",
+    "cancellation_policy": "Sem cobrança no-show: até 7 dias antes do check-in. Após: 100% da reserva cobrada. Tarifas não reembolsáveis não podem ser canceladas.",
+    "children_policy": "2 crianças até 5 anos são aceitas como cortesia (acompanhadas). Crianças 6-12 anos: adicional R$150/dia por criança. Crianças 13-17 anos: valor de adulto. Crianças 3-5 anos: adicional R$150/dia.",
+    "pet_policy": {
+      "accepts_pets": false,
+      "details": "Não aceitam pets (hotel não é pet friendly)"
+    },
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Aeroporto Internacional de Natal: aproximadamente 110 km (~1h45 de carro), BR-101 e RN-221, bom estado de conservação",
+    "transfer": {
+      "available": false,
+      "description": "Não oferece serviço de transfer. Recomenda empresas que realizam o serviço."
+    },
+    "nearby_attractions": "São Miguel do Gostoso, praia, pôr do sol",
+    "how_to_get_there": "Aeroporto Natal 110 km / 1h45 via BR-101 e RN-221",
+
+    "special_programming": null,
+    "hotel_concierge_services": "Não possui concierge formal. Atendimento personalizado, reservas WhatsApp +55 84 8150-5459, email contato@naniihotel.com.br",
+    "activities_tours": [
+      "Piscina borda infinita",
+      "Acesso praia",
+      "Bicicletas para passeios",
+      "Academia",
+      "Massagens",
+      "Jantares românticos",
+      "Piqueniques"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "Refúgio exclusivo à beira-mar. Piscina borda infinita com vista mar. Café da manhã à la carte com itens artesanais. Chef Luíza Hoffimann. Amenities L'Occitane. Ambiente romântico. Ideal para weddings. Acesso direto à praia. Experiências personalizadas.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Dúvidas mais frequentes?",
+        "a": "Como chegar, distância da praia, experiências oferecidas, comemorações românticas, política crianças, late check-out, pet friendly (não)",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Sem serviço de transfer (recomenda empresas parceiras)",
+      "Sem concierge formal",
+      "Check-in 14h / Check-out 12h",
+      "Não pet friendly",
+      "Crianças até 5 anos: 2 grátis (cortesia), adicional R$150/dia",
+      "Cancelamento até 7 dias (sem cobrança), depois 100%",
+      "Pagamento: 50% PIX adiantado + 50% check-in (PIX/cartão)",
+      "Transferir para humano: reservas específicas, eventos, experiências personalizadas, dúvidas transfer/check-in, necessidades personalização"
+    ],
+    "sales_arguments_by_profile": {
+      "casal": "Piscina borda infinita com vista mar. Jantares românticos personalizados. Piqueniques exclusivos. Café à la carte artesanal. Massagens. Ambiente intimista sofisticado.",
+      "wedding": "Estrutura para até 120 convidados. Jardim gramado. Área piscina. Restaurante. Destino procurado para weddings. Celebrações intimistas.",
+      "luxo": "Suítes exclusivas (até 70 m²). Piscina privativa (Haku). Banheira ao ar livre (Makani). Amenities L'Occitane. Enxoval 400 fios premium. Cris Dios design."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T13:00:00Z",
+      "last_updated": "2026-04-06T13:00:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1514-1744",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "São Miguel do Gostoso, Rio Grande do Norte",
+      "phone": "+55 84 8150-5459",
+      "email": "contato@naniihotel.com.br",
+      "payment_policy": "50% PIX adiantado + 50% check-in (PIX/cartão parcelado 3x). Cartão crédito como garantia.",
+      "quality_score": 0.86,
+      "completeness": 0.84,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms", "room_service", "dietary_options", "smoking_policy",
+        "min_age_solo", "day_use", "special_packages", "star_rating", "gym"
+      ]
+    }
+  }
+}

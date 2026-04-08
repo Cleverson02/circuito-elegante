@@ -1,0 +1,189 @@
+{
+  "hotel_slug": "le-canton-resort",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-06T12:30:00Z",
+  "status": "COMPLETE",
+  "sources_consulted": ["questionnaire", "local_xlsx"],
+  "sources_pending": ["hotel_website", "circuito_elegante", "chatbot", "ota"],
+  "quality_score": 0.86,
+  "completeness": 0.84,
+  "fields_filled": 49,
+  "fields_total": 58,
+  "fields_null": 9,
+
+  "enrichment": {
+    "website_url": "https://lecanton.com.br/",
+    "google_maps_url": "https://maps.app.goo.gl/4PKdbJsYHe9ajwTe7",
+    "description": "Resort completo na serra com 3 estruturas hoteleiras diferenciadas: Hotel Village Le Canton (inspirado em cantões suíços, castelo medieval), Hotel Magique (vila medieval temática), e Fazenda Suíça (hotel fazenda na natureza). Ambiente integrado com estrutura de lazer, alimentação, arquitetura suíça e integração com natureza.",
+    "lodging_type": "Resort",
+
+    "room_types": [
+      {"name": "Village Standard", "max_guests": 3},
+      {"name": "Village Luxo / Luxo Vista Castelo / Luxo Vista Lateral", "max_guests": 3},
+      {"name": "Village Luxo Superior", "max_guests": 5},
+      {"name": "Village Master", "max_guests": 5},
+      {"name": "Village Super Master", "max_guests": 5},
+      {"name": "Magique Luxo", "max_guests": 3},
+      {"name": "Magique Luxo Superior", "max_guests": 4},
+      {"name": "Fazenda Luxo", "max_guests": 4},
+      {"name": "Fazenda Luxo Superior", "max_guests": 4},
+      {"name": "Fazenda Master", "max_guests": 5}
+    ],
+    "total_rooms": null,
+    "room_amenities": "Amenities L'Occitane, enxoval premium, secador de cabelo, Wi-Fi nos quartos",
+
+    "parking": {
+      "has_parking": true,
+      "is_free": true,
+      "description": "Estacionamento gratuito para hóspedes"
+    },
+    "pool_description": "2 piscinas no Hotel Village (1 com tobogã), 1 piscina terceirizada aquecida no SPA, 1 piscina no Hotel Fazenda Suíça",
+    "pool_heated": true,
+    "leisure_items": ["piscinas", "sinuca", "jogos de mesa", "baby club", "kids park", "quadras de esporte", "pescaria", "minigolfe", "bike park (aluguel de bicicletas)", "fazendinha", "shows musicais", "aulas de circo", "boliche", "arco e flecha", "arvorismo", "trilhas", "tirolesa", "paintball", "boia canadense", "parc magique", "hípica", "SPA"],
+    "wellness": "SPA by L'Occitane com massagens e terapias diversas (pago à parte)",
+    "event_space": {
+      "has_events": true,
+      "description": "Salões para eventos com estrutura completa, Fazenda Suíça disponível para casamentos e demandas especiais"
+    },
+    "wifi": {
+      "included": true,
+      "quality": "Bom sinal e velocidade em todo hotel"
+    },
+    "accessibility": null,
+    "gym": null,
+
+    "restaurants": [
+      {
+        "name": "O Lugano (Village)",
+        "cuisine": "Buffet",
+        "description": "Restaurante onde ocorre a pensão completa"
+      },
+      {
+        "name": "Luzern (Pizzaria)",
+        "cuisine": "Pizzas",
+        "description": "Pizzaria no Village"
+      },
+      {
+        "name": "Cave Du Valais",
+        "cuisine": "Fondues e Raclettes",
+        "description": "Especialidade em fondues e raclettes"
+      },
+      {
+        "name": "Gasthaus Kulm (Fazenda Suíça)",
+        "cuisine": "Buffet",
+        "description": "Equivalente ao Lugano da Fazenda"
+      },
+      {
+        "name": "Queijaria (Fazenda Suíça)",
+        "cuisine": "Tábuas de queijos e petiscos",
+        "description": "Queijaria com tábuas de queijos"
+      }
+    ],
+    "meals_included": "Pensão completa: café da manhã, almoço e jantar. Bebidas e extras cobrados à parte.",
+    "special_dining": "3 restaurantes temáticos, várias opções de bares (hamburgueria, sushi bar, bar da piscina)",
+    "room_service": null,
+    "dietary_options": null,
+
+    "check_in_out": {
+      "check_in": "16:00",
+      "check_out": "12:00"
+    },
+    "early_late_checkout": "Mediante disponibilidade de quartos do dia, cobrança de meia diária balcão",
+    "cancellation_policy": "Trabalha primordialmente com tarifas não reembolsáveis (não podem ser alteradas). Tarifa flexível disponível em algumas datas com possibilidade de remarcação ou cancelamento até 7 dias antes do check-in.",
+    "children_policy": "Até 2 crianças por quarto com até 12 anos têm hospedagem isenta de cobrança. Sem camas extras; cobrança pelo hóspede extra ou upgrade de categoria se necessário.",
+    "pet_policy": null,
+    "smoking_policy": null,
+    "min_age_solo": null,
+
+    "airport_distance": "Rio de Janeiro Galeão - Antonio Carlos Jobim: 109 km. Rio de Janeiro Santos Dumont: 119 km",
+    "transfer": {
+      "available": true,
+      "is_free": true,
+      "description": "Transfer gratuito entre os hotéis do complexo. Transfer externo não oferecido, mas indicam serviço."
+    },
+    "nearby_attractions": "Teresópolis, Castelo Medieval",
+    "how_to_get_there": "BR 116 Rio x Teresópolis",
+
+    "special_programming": "Recreação e programações para todas as idades, variando por data",
+    "hotel_concierge_services": "Concierge para agendamento no SPA. Solicitações para tornar hospedagem mais especial.",
+    "activities_tours": [
+      "Piscinas",
+      "Arvorismo",
+      "Trilhas",
+      "Tirolesa",
+      "Paintball",
+      "Boia canadense",
+      "Parc magique",
+      "Hípica",
+      "SPA",
+      "Boliche",
+      "Arco e flecha",
+      "Bike park",
+      "Pescaria",
+      "Fazendinha"
+    ],
+    "day_use": null,
+    "special_packages": null,
+
+    "highlights": "3 estruturas hoteleiras diferenciadas. Castelo medieval temático. Pensão completa 3 refeições. 2 piscinas (1 com tobogã) + SPA aquecida. Múltiplos restaurantes temáticos. 20+ atividades inclusas e pagas. Programação para todas idades. Estrutura única e completa.",
+    "awards_certifications": null,
+    "sustainability": null,
+    "star_rating": null,
+    "price_tier": "$$$",
+
+    "guest_faqs": [
+      {
+        "q": "Qual a dúvida mais frequente?",
+        "a": "Horários de check-in e check-out, diferença entre os hotéis e o que está incluso ou não",
+        "source": "questionnaire"
+      }
+    ],
+    "common_objections": [],
+    "attention_points": [
+      "Check-in 16h / Check-out 12h",
+      "3 hotéis diferentes com características próprias",
+      "Pensão completa inclusa (bebidas extras cobradas)",
+      "Muitas atividades pagas à parte (SPA, esportes radicais)",
+      "Sem camas extras (upgrade de categoria necessário)",
+      "Tarifas primordialmente não reembolsáveis",
+      "Transferir para humano: solicitações fora do padrão, pedidos grupo, reclamações"
+    ],
+    "sales_arguments_by_profile": {
+      "familia": "Múltiplas estruturas, kids park, recreação todas idades, fazendinha, 2 piscinas com tobogã, bike park, pescaria, almoço/jantar/café. Programação variada.",
+      "casal": "Castelo medieval. Fondues/raclettes. SPA by L'Occitane. Piscinas aquecidas. 3 restaurantes temáticos. Ambiente sofisticado.",
+      "corporativo": "Salões para eventos. Estrutura completa. Pensão. Team building (tirolesa, arvorismo, paintball, hípica, boliche)."
+    },
+
+    "ce_page_url": null,
+    "photo_urls": null,
+
+    "_meta": {
+      "enriched_at": "2026-04-06T12:30:00Z",
+      "last_updated": "2026-04-06T12:30:00Z",
+      "pipeline_version": "3.0",
+      "status": "COMPLETE",
+      "sources": {
+        "questionnaire": {
+          "date": "2026-04-06",
+          "file": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+          "lines": "1222-1379",
+          "fields_extracted": 30
+        },
+        "local_xlsx": {
+          "date": "2026-04-06",
+          "fields_extracted": ["name", "municipality", "uf", "region", "experience", "destination", "has_api", "elevare_hotel_id", "bradesco_coupon"]
+        }
+      },
+      "address": "Teresópolis, RJ (Serra)",
+      "payment_policy": "Cartão de crédito, parcelado 5x sem juros ou 12x com juros",
+      "quality_score": 0.86,
+      "completeness": 0.84,
+      "fields_filled": 49,
+      "fields_null": 9,
+      "null_fields_remaining": [
+        "total_rooms", "room_service", "dietary_options", "pet_policy",
+        "smoking_policy", "min_age_solo", "day_use", "special_packages", "star_rating"
+      ]
+    }
+  }
+}

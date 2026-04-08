@@ -1,0 +1,166 @@
+{
+  "hotel_slug": "fasano-bh",
+  "enrichment_version": "2.0",
+  "enriched_at": "2026-04-07T18:20:00Z",
+  "status": "P3_WITH_WEBSITE",
+  "sources_consulted": [
+    "local_xlsx",
+    "circuito_elegante",
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "questionnaire",
+    "chatbot",
+    "ota"
+  ],
+  "quality_score": 0.5689655172413793,
+  "completeness": 0.5689655172413793,
+  "fields_filled": 33,
+  "fields_total": 58,
+  "fields_null": 25,
+  "enrichment": {
+    "hotel_name": "Fasano Belo Horizonte",
+    "municipality": "Belo Horizonte",
+    "state_code": "MG",
+    "region": "sudeste",
+    "website_url": "https://fasano.com.br/en/hotel/fasano-bh/",
+    "description": "Luxury urban hotel in Belo Horizonte's charming Lourdes area with sophisticated design, fine dining, and premium amenities",
+    "lodging_type": "Luxury Urban Hotel",
+    "room_types": [],
+    "room_amenities": "Modern furnishings, air conditioning, WiFi",
+    "common_areas_amenities": "Business center, lounge areas",
+    "outdoor_amenities": "Pool, terrace areas",
+    "restaurants": [
+      {
+        "name": "Gero BH",
+        "cuisine": "Italian"
+      },
+      {
+        "name": "Baretto",
+        "cuisine": "Fine Dining"
+      }
+    ],
+    "bar_lounge": "Baretto cocktail bar with specialized service",
+    "leisure_items": [
+      "spa",
+      "fitness",
+      "pool"
+    ],
+    "activities_tours": [
+      "spa treatments",
+      "fitness programs",
+      "dining experiences"
+    ],
+    "highlights": "Located in charming Lourdes area, quality cuisine, sophisticated atmosphere",
+    "price_tier": "$$$$",
+    "star_rating": "5-star luxury",
+    "opening_year": null,
+    "total_rooms": null,
+    "total_beds": null,
+    "contact_phone": null,
+    "contact_email": null,
+    "contact_whatsapp": null,
+    "contact_website": "https://fasano.com.br/en/hotel/fasano-bh/",
+    "address_street": null,
+    "address_number": null,
+    "address_neighborhood": "Lourdes",
+    "address_zip_code": null,
+    "latitude": null,
+    "longitude": null,
+    "check_in_time": null,
+    "check_out_time": null,
+    "parking": {
+      "has_parking": null,
+      "is_free": null,
+      "is_covered": null
+    },
+    "pool_details": "Pool available",
+    "spa_details": "Spa facilities available",
+    "gym_details": "Fitness center",
+    "wifi_quality": "Available",
+    "pet_policy": null,
+    "accessibility_features": null,
+    "wheelchair_access": null,
+    "elevator_access": null,
+    "accessible_rooms": null,
+    "languages_spoken": [
+      "Portuguese",
+      "English"
+    ],
+    "payment_methods": [],
+    "accepts_credit_cards": true,
+    "accepts_debit": null,
+    "near_attractions": [
+      "Downtown Belo Horizonte"
+    ],
+    "distance_from_airport": null,
+    "distance_from_downtown": "Downtown area",
+    "transport_options": [],
+    "shuttle_service": null,
+    "car_rental_onsite": null,
+    "business_hours": null,
+    "reception_24h": null,
+    "concierge_service": null,
+    "room_service_hours": null,
+    "laundry_service": null,
+    "housekeeping_schedule": null,
+    "security_features": [],
+    "cctv_system": null,
+    "sustainability_practices": null,
+    "eco_certifications": [],
+    "water_conservation": null,
+    "wellness_programs": [
+      "spa treatments"
+    ],
+    "event_spaces": null,
+    "conference_capacity": null,
+    "business_amenities": [
+      "business center"
+    ],
+    "_meta": {
+      "enriched_at": "2026-04-07T18:20:00Z",
+      "last_updated": "2026-04-07T18:20:00Z",
+      "pipeline_version": "3.0",
+      "status": "P1_WITH_WEBSITE",
+      "sources": {
+        "local_xlsx": {
+          "date": "2026-04-07",
+          "fields_extracted": [
+            "hotel_name",
+            "municipality",
+            "state_code",
+            "region"
+          ]
+        },
+        "circuito_elegante": {
+          "date": "2026-04-07",
+          "url": "https://www.circuitoelegante.com.br/hotel/fasano-bh-belo-horizonte-mg/",
+          "fields_extracted": [
+            "ce_page_url"
+          ]
+        },
+        "hotel_website": {
+          "date": "2026-04-07",
+          "url": "https://fasano.com.br/en/hotel/fasano-bh/",
+          "fields_extracted": [
+            "restaurants",
+            "amenities",
+            "description",
+            "location"
+          ]
+        }
+      },
+      "experience": "cidade",
+      "destination": "Lourdes",
+      "quality_score": 0.45,
+      "completeness": 0.45,
+      "fields_filled": 26,
+      "fields_null": 32
+    },
+    "ce_page_url": "https://www.circuitoelegante.com.br/hotel/fasano-bh-belo-horizonte-mg/",
+    "location": "Belo Horizonte, Lourdes",
+    "wifi": {
+      "included": true
+    }
+  }
+}
