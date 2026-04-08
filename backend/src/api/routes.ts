@@ -4,6 +4,7 @@ import { registerHealthRoutes } from './health.js';
 import { registerChatRoute } from './chat.js';
 import { registerElevareWebhookRoute } from '../webhooks/elevare-handler.js';
 import { registerWhatsAppWebhookRoute } from '../webhooks/whatsapp-handler.js';
+import { registerWebSocketRoute } from '../webhooks/website.js';
 import { getRedisClient } from '../state/redis-client.js';
 import { logger } from '../middleware/logging.js';
 
@@ -23,6 +24,9 @@ export async function registerRoutes(app: FastifyInstance, deps?: RoutesDeps): P
     logger,
     webhookSecret: process.env['ELEVARE_WEBHOOK_SECRET'],
   });
+
+  // Website WebSocket chat — FR12 (Story 4.6)
+  await registerWebSocketRoute(app);
 
   // WhatsApp webhook listener — FR33 (Story 4.1) + Buffer 20s (Story 4.2)
   await registerWhatsAppWebhookRoute(app, {

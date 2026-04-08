@@ -1,4 +1,5 @@
 import Fastify from 'fastify';
+import websocket from '@fastify/websocket';
 import * as Sentry from '@sentry/node';
 import { env } from '../../config/env.js';
 import { logger } from './middleware/logging.js';
@@ -16,6 +17,7 @@ import { EvolutionClient, getEvolutionConfig } from './integrations/evolution/in
 import { getSession } from './state/session-manager.js';
 import { MessageBuffer, createBufferProcessor } from './buffer/index.js';
 import { initTypingQueue, initTypingWorker, closeTypingQueue, closeTypingWorker } from './queue/index.js';
+import { getWebSocketManager } from './websocket/manager.js';
 
 async function bootstrap(): Promise<void> {
   // Initialize Sentry
@@ -114,6 +116,9 @@ async function bootstrap(): Promise<void> {
     genReqId: () => crypto.randomUUID(),
   });
 
+  // Story 4.6 — Register WebSocket plugin (AC1)
+  await app.register(websocket);
+
   // Register middleware
   await registerLogging(app);
   await registerRateLimiting(app);
@@ -131,6 +136,8 @@ async function bootstrap(): Promise<void> {
         logger.info('Flushing message buffers before shutdown...');
         await messageBuffer.flushAll();
       }
+      // Story 4.6 — Close all WebSocket connections (AC13)
+      getWebSocketManager().closeAll();
       // Story 4.3 — Close typing worker and queue before Redis (AC12)
       await closeTypingWorker();
       await closeTypingQueue();

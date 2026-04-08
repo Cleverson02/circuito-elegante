@@ -13,6 +13,7 @@ import type { EvolutionClient } from '../integrations/evolution/client.js';
 import { getRedisClient } from '../state/redis-client.js';
 import { logger as defaultLogger } from '../middleware/logging.js';
 import { updateOfferMapMessageIds } from '../services/coreference.js';
+import { getWebSocketManager } from '../websocket/manager.js';
 
 const QUEUE_NAME = 'typing';
 const WORKER_CONCURRENCY = 10;
@@ -39,8 +40,25 @@ export function initTypingWorker(
     async (job: Job<TypingJobData>) => {
       const { sessionId, phone, text, isMedia, channel, chunkIndex, totalChunks, curatedPosition } = job.data;
 
-      // Website channel: placeholder log (WebSocket in Story 4.6)
+      // Website channel: send via WebSocket (Story 4.6 — AC8)
       if (channel === 'website') {
+        const sent = getWebSocketManager().send(sessionId, {
+          type: 'message',
+          text,
+          chunkIndex,
+          totalChunks,
+        });
+
+        if (!sent) {
+          workerLogger.warn('websocket_send_failed', {
+            event: 'websocket_send_failed',
+            sessionId,
+            chunkIndex,
+            totalChunks,
+            reason: 'connection_not_found',
+          });
+        }
+
         workerLogger.info('typing_chunk_website', {
           event: 'typing_chunk_website',
           sessionId,
@@ -48,6 +66,7 @@ export function initTypingWorker(
           totalChunks,
           textLength: text.length,
           channel,
+          delivered: sent,
         });
         return;
       }

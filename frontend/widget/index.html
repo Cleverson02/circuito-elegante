@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stella — Concierge Digital</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ce-green: #289548;
+      --ce-green-light: #2da854;
+      --bubble-guest: #289548;
+      --bubble-stella: #f0f0f0;
+      --text-light: #fff;
+      --text-dark: #222;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+    /* ── Toggle Button ─────────────────────────────────── */
+
+    #ce-widget-toggle {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--ce-green); border: none; cursor: pointer;
+      box-shadow: var(--shadow); z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s;
+    }
+    #ce-widget-toggle:hover { transform: scale(1.08); }
+    #ce-widget-toggle svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── Chat Panel ────────────────────────────────────── */
+
+    #ce-widget-panel {
+      position: fixed; bottom: 96px; right: 24px;
+      width: 340px; height: 500px;
+      background: #fff; border-radius: var(--radius);
+      box-shadow: var(--shadow); z-index: 9998;
+      display: none; flex-direction: column; overflow: hidden;
+    }
+    #ce-widget-panel.open { display: flex; }
+
+    /* ── Header ────────────────────────────────────────── */
+
+    #ce-widget-header {
+      background: var(--ce-green); color: #fff;
+      padding: 14px 16px; display: flex; align-items: center; gap: 10px;
+    }
+    #ce-widget-header .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--ce-green-light); display: flex; align-items: center;
+      justify-content: center; font-size: 18px;
+    }
+    #ce-widget-header .info { flex: 1; }
+    #ce-widget-header .name { font-weight: 600; font-size: 15px; }
+    #ce-widget-header .status { font-size: 12px; opacity: 0.85; }
+
+    /* ── Messages ──────────────────────────────────────── */
+
+    #ce-widget-messages {
+      flex: 1; overflow-y: auto; padding: 12px 14px;
+      display: flex; flex-direction: column; gap: 8px;
+      background: #fafafa;
+    }
+
+    .msg {
+      max-width: 80%; padding: 10px 14px;
+      border-radius: var(--radius); font-size: 14px;
+      line-height: 1.45; word-wrap: break-word; white-space: pre-wrap;
+    }
+    .msg.stella {
+      align-self: flex-start; background: var(--bubble-stella);
+      color: var(--text-dark); border-bottom-left-radius: 4px;
+    }
+    .msg.guest {
+      align-self: flex-end; background: var(--bubble-guest);
+      color: var(--text-light); border-bottom-right-radius: 4px;
+    }
+
+    /* ── Input ─────────────────────────────────────────── */
+
+    #ce-widget-input-area {
+      display: flex; padding: 10px 12px; border-top: 1px solid #e0e0e0;
+      background: #fff;
+    }
+    #ce-widget-input {
+      flex: 1; border: 1px solid #ddd; border-radius: 20px;
+      padding: 10px 16px; font-size: 14px; outline: none;
+      transition: border-color 0.2s;
+    }
+    #ce-widget-input:focus { border-color: var(--ce-green); }
+    #ce-widget-send {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--ce-green); border: none; cursor: pointer;
+      margin-left: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    #ce-widget-send svg { width: 18px; height: 18px; fill: #fff; }
+
+    /* ── Responsive (mobile) ───────────────────────────── */
+
+    @media (max-width: 768px) {
+      #ce-widget-panel {
+        bottom: 0; right: 0; left: 0;
+        width: 100%; height: 70vh;
+        border-radius: var(--radius) var(--radius) 0 0;
+      }
+      #ce-widget-toggle { bottom: 16px; right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toggle Button -->
+<button id="ce-widget-toggle" aria-label="Abrir chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+
+<!-- Chat Panel -->
+<div id="ce-widget-panel">
+  <div id="ce-widget-header">
+    <div class="avatar">S</div>
+    <div class="info">
+      <div class="name">Stella</div>
+      <div class="status" id="ce-widget-status">Online</div>
+    </div>
+  </div>
+  <div id="ce-widget-messages"></div>
+  <div id="ce-widget-input-area">
+    <input id="ce-widget-input" type="text" placeholder="Digite sua mensagem..." autocomplete="off">
+    <button id="ce-widget-send" aria-label="Enviar">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── Config ──────────────────────────────────────────
+  const WS_URL = `ws://${location.hostname}:${location.port || 3000}/ws/chat`;
+  const RECONNECT_INTERVAL = 3000;
+  const MAX_RECONNECT = 5;
+
+  // ── DOM ─────────────────────────────────────────────
+  const toggle = document.getElementById('ce-widget-toggle');
+  const panel = document.getElementById('ce-widget-panel');
+  const messages = document.getElementById('ce-widget-messages');
+  const input = document.getElementById('ce-widget-input');
+  const sendBtn = document.getElementById('ce-widget-send');
+  const status = document.getElementById('ce-widget-status');
+
+  // ── State ───────────────────────────────────────────
+  let ws = null;
+  let sessionId = null;
+  let reconnectAttempts = 0;
+  let reconnectTimer = null;
+
+  // ── Toggle Panel ────────────────────────────────────
+  toggle.addEventListener('click', () => {
+    panel.classList.toggle('open');
+    if (panel.classList.contains('open') && !ws) {
+      connect();
+    }
+    if (panel.classList.contains('open')) {
+      input.focus();
+    }
+  });
+
+  // ── WebSocket ───────────────────────────────────────
+  function connect() {
+    if (ws && ws.readyState <= 1) return;
+
+    status.textContent = 'Conectando...';
+    ws = new WebSocket(WS_URL);
+
+    ws.onopen = () => {
+      reconnectAttempts = 0;
+      status.textContent = 'Online';
+    };
+
+    ws.onmessage = (event) => {
+      let data;
+      try { data = JSON.parse(event.data); } catch { return; }
+
+      if (data.type === 'welcome') {
+        sessionId = data.sessionId;
+        addMessage(data.message, 'stella');
+      } else if (data.type === 'message') {
+        addMessage(data.text, 'stella');
+      } else if (data.type === 'error') {
+        addMessage(data.message, 'stella');
+      }
+    };
+
+    ws.onclose = () => {
+      ws = null;
+      if (panel.classList.contains('open') && reconnectAttempts < MAX_RECONNECT) {
+        reconnectAttempts++;
+        status.textContent = `Reconectando... (${reconnectAttempts}/${MAX_RECONNECT})`;
+        reconnectTimer = setTimeout(connect, RECONNECT_INTERVAL);
+      } else if (reconnectAttempts >= MAX_RECONNECT) {
+        status.textContent = 'Desconectado';
+      }
+    };
+
+    ws.onerror = () => {
+      // onclose will fire after this
+    };
+  }
+
+  // ── Send Message ────────────────────────────────────
+  function sendMessage() {
+    const text = input.value.trim();
+    if (!text || !ws || ws.readyState !== 1) return;
+
+    ws.send(JSON.stringify({ type: 'message', text }));
+    addMessage(text, 'guest');
+    input.value = '';
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  // ── Add Message Bubble ──────────────────────────────
+  function addMessage(text, sender) {
+    const div = document.createElement('div');
+    div.className = `msg ${sender}`;
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+})();
+</script>
+
+</body>
+</html>

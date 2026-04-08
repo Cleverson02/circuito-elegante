@@ -30,6 +30,7 @@
     "data:sync": "node --env-file=.env --import=tsx data/scripts/persist-enrichment.ts && node --env-file=.env --import=tsx data/scripts/ingest-faq.ts"
   },
   "dependencies": {
+    "@fastify/websocket": "^11.2.0",
     "@openai/agents": "^0.8.2",
     "@sentry/node": "^9.0.0",
     "@supabase/supabase-js": "^2.49.0",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.1",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "drizzle-kit": "^0.31.0",
