@@ -18,6 +18,7 @@ import { chunkResponse, enqueueResponse, getTypingQueue } from '../queue/index.j
 import { renderCuratedOptions } from '../services/media-renderer.js';
 import { sanitizeInput } from '../middleware/sanitize.js';
 import { logger } from '../middleware/logging.js';
+import { isWithinBusinessHours, registerOutOfHoursLead, OUT_OF_HOURS_MESSAGE_WEBSITE } from '../services/business-hours.js';
 
 // ─── Constants ──────────────────────────────────────────────────
 
@@ -78,6 +79,22 @@ export async function registerWebSocketRoute(app: FastifyInstance): Promise<void
       });
 
       try {
+        // Story 4.7 (AC3/AC5): Business hours guard
+        if (!isWithinBusinessHours()) {
+          logger.info('out_of_hours_intercepted', {
+            event: 'out_of_hours_intercepted',
+            phone: sessionId,
+            channel: 'website',
+            sessionId,
+            currentHourBRT: new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false }),
+            message: parsed.text.slice(0, 100),
+          });
+
+          wsManager.send(sessionId, { type: 'message', text: OUT_OF_HOURS_MESSAGE_WEBSITE, chunkIndex: 0, totalChunks: 1 });
+          await registerOutOfHoursLead(sessionId, parsed.text, 'website', sessionId);
+          return;
+        }
+
         // Sanitize input
         const sanitized = sanitizeInput(parsed.text);
 

@@ -25,6 +25,7 @@ import { sanitizeInput } from '../middleware/sanitize.js';
 import { chunkResponse, enqueueResponse, getTypingQueue } from '../queue/index.js';
 import { renderCuratedOptions } from '../services/media-renderer.js';
 import { resolveCoreference } from '../services/coreference.js';
+import { isWithinBusinessHours, registerOutOfHoursLead, OUT_OF_HOURS_MESSAGE_WHATSAPP } from '../services/business-hours.js';
 
 // ─── Constants ──────────────────────────────────────────────────
 
@@ -95,6 +96,26 @@ export function createBufferProcessor(deps: BufferProcessorDeps): OnFlushCallbac
 
       // Step 3: Set presence online — FR35 (AC4)
       await setPresenceOnline(evolutionClient, logger);
+
+      // Story 4.7 (AC3): Business hours guard — intercept before pipeline
+      if (!isWithinBusinessHours()) {
+        const currentHour = new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false });
+        logger.info('out_of_hours_intercepted', {
+          event: 'out_of_hours_intercepted',
+          phone,
+          channel: 'whatsapp',
+          sessionId,
+          currentHourBRT: currentHour,
+          message: consolidated.slice(0, 100),
+        });
+
+        await evolutionClient.sendText(phone, OUT_OF_HOURS_MESSAGE_WHATSAPP);
+        await registerOutOfHoursLead(phone, consolidated, 'whatsapp', sessionId);
+
+        const latencyMs = Date.now() - startTime;
+        logger.info('buffer_pipeline_complete', { sessionId, latencyMs, intent: 'out_of_hours', messageCount: messageIds.length, safetyApproved: true });
+        return;
+      }
 
       // Step 4: Sanitize consolidated text (SF-1 fix — anti-injection)
       const sanitized = sanitizeInput(consolidated);
