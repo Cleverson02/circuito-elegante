@@ -24,6 +24,7 @@ import { getSession, setSession, type SessionData } from '../state/session-manag
 import { sanitizeInput } from '../middleware/sanitize.js';
 import { chunkResponse, enqueueResponse, getTypingQueue } from '../queue/index.js';
 import { renderCuratedOptions } from '../services/media-renderer.js';
+import { resolveCoreference } from '../services/coreference.js';
 
 // ─── Constants ──────────────────────────────────────────────────
 
@@ -65,7 +66,7 @@ function phoneToJid(phone: string): string {
 export function createBufferProcessor(deps: BufferProcessorDeps): OnFlushCallback {
   const { evolutionClient, logger } = deps;
 
-  return async (phone: string, consolidated: string, messageIds: string[]): Promise<void> => {
+  return async (phone: string, consolidated: string, messageIds: string[], quotedMessageId?: string): Promise<void> => {
     const sessionId = phoneToSessionId(phone);
     const remoteJid = phoneToJid(phone);
     const startTime = Date.now();
@@ -97,6 +98,69 @@ export function createBufferProcessor(deps: BufferProcessorDeps): OnFlushCallbac
 
       // Step 4: Sanitize consolidated text (SF-1 fix — anti-injection)
       const sanitized = sanitizeInput(consolidated);
+
+      // Story 4.5 (AC6/AC7/AC8): Resolve coreference via WhatsApp Reply
+      if (quotedMessageId) {
+        const corefResult = await resolveCoreference(sessionId, { whatsappMessageId: quotedMessageId });
+
+        if (corefResult.resolved) {
+          logger.info('coreference_reply_resolved', {
+            event: 'coreference_reply_resolved',
+            sessionId,
+            quotedMessageId,
+            resolvedOfferId: corefResult.option.offerId,
+            curatedPosition: corefResult.option.position,
+          });
+
+          // Enrich pipeline input with resolved offer (AC7)
+          const result = await processMessage({
+            message: sanitized.sanitized,
+            sessionId,
+            resolvedOfferId: corefResult.option.offerId,
+            resolvedOption: corefResult.option,
+            selectionMethod: 'whatsapp_reply',
+          });
+
+          // Deliver response (same logic as normal flow)
+          const queue = getTypingQueue();
+          if (queue) {
+            try {
+              const chunks = result.curatedOptions && result.curatedOptions.length > 0
+                ? renderCuratedOptions(result.curatedOptions, phone, sessionId, 'whatsapp')
+                : chunkResponse(result.response);
+              await enqueueResponse(sessionId, phone, chunks, 'whatsapp');
+            } catch (queueErr) {
+              logger.warn('typing_queue_enqueue_failed_fallback_direct', {
+                sessionId,
+                phone,
+                error: queueErr instanceof Error ? queueErr.message : String(queueErr),
+              });
+              await evolutionClient.sendText(phone, result.response);
+            }
+          } else {
+            await evolutionClient.sendText(phone, result.response);
+          }
+
+          const latencyMs = Date.now() - startTime;
+          logger.info('buffer_pipeline_complete', {
+            sessionId,
+            latencyMs,
+            intent: result.intent?.intent,
+            messageCount: messageIds.length,
+            safetyApproved: result.safetyApproved,
+            selectionMethod: 'whatsapp_reply',
+          });
+          return;
+        }
+
+        // AC8: Fallback — messageId not found, proceed with normal text flow
+        logger.info('coreference_reply_fallback', {
+          event: 'coreference_reply_fallback',
+          sessionId,
+          quotedMessageId,
+          reason: corefResult.mapExpired ? 'map_expired' : 'message_id_not_found',
+        });
+      }
 
       // Step 5: Invoke agent pipeline (AC4)
       const result = await processMessage({

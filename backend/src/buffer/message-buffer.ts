@@ -30,12 +30,15 @@ interface BufferEntry {
   messageIds: string[];
   timer: ReturnType<typeof setTimeout>;
   startedAt: number;
+  /** Story 4.5 (AC5): Most recent quotedMessageId in this buffer window. */
+  quotedMessageId?: string;
 }
 
 export type OnFlushCallback = (
   phone: string,
   consolidated: string,
   messageIds: string[],
+  quotedMessageId?: string,
 ) => Promise<void>;
 
 // ─── Message Content Consolidation (AC7) ────────────────────────
@@ -86,12 +89,17 @@ export class MessageBuffer {
       clearTimeout(existing.timer);
       existing.messages.push(message);
       existing.messageIds.push(message.messageId);
+      // Story 4.5 (AC5): Keep most recent quotedMessageId
+      if (message.quotedMessageId) {
+        existing.quotedMessageId = message.quotedMessageId;
+      }
     } else {
       this.buffers.set(phone, {
         messages: [message],
         messageIds: [message.messageId],
         timer: undefined!,
         startedAt: Date.now(),
+        quotedMessageId: message.quotedMessageId,
       });
     }
 
@@ -159,7 +167,7 @@ export class MessageBuffer {
       bufferDurationMs,
     });
 
-    // Invoke the processor callback
-    await this.onFlush(phone, consolidated, entry.messageIds);
+    // Invoke the processor callback (Story 4.5: pass quotedMessageId)
+    await this.onFlush(phone, consolidated, entry.messageIds, entry.quotedMessageId);
   }
 }

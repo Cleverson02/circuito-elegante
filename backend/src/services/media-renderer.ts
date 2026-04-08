@@ -68,7 +68,8 @@ export function renderCuratedOptions(
 ): TypingChunk[] {
   const chunks: TypingChunk[] = [];
 
-  for (const option of options) {
+  for (let i = 0; i < options.length; i++) {
+    const option = options[i]!;
     const photoUrl = extractPrimaryPhoto(option);
     const caption = formatCaption(option);
 
@@ -83,10 +84,12 @@ export function renderCuratedOptions(
       // WhatsApp channel
       if (photoUrl) {
         // Image chunk: sent instantly by worker (isMedia=true, delay=0)
+        // Story 4.5 (AC2): curatedPosition based on curatedRank (1-indexed)
         chunks.push({
           text: photoUrl,
           delay: 0,
           isMedia: true,
+          curatedPosition: i + 1,
         });
         // Caption chunk: sent with typing simulation
         chunks.push({

@@ -12,6 +12,7 @@ import type { TypingJobData } from './types.js';
 import type { EvolutionClient } from '../integrations/evolution/client.js';
 import { getRedisClient } from '../state/redis-client.js';
 import { logger as defaultLogger } from '../middleware/logging.js';
+import { updateOfferMapMessageIds } from '../services/coreference.js';
 
 const QUEUE_NAME = 'typing';
 const WORKER_CONCURRENCY = 10;
@@ -36,7 +37,7 @@ export function initTypingWorker(
   typingWorker = new Worker<TypingJobData>(
     QUEUE_NAME,
     async (job: Job<TypingJobData>) => {
-      const { sessionId, phone, text, isMedia, channel, chunkIndex, totalChunks } = job.data;
+      const { sessionId, phone, text, isMedia, channel, chunkIndex, totalChunks, curatedPosition } = job.data;
 
       // Website channel: placeholder log (WebSocket in Story 4.6)
       if (channel === 'website') {
@@ -54,7 +55,33 @@ export function initTypingWorker(
       // WhatsApp channel
       if (isMedia) {
         // Media: send instantly without typing event (AC9)
-        await evolutionClient.sendText(phone, text);
+        const response = await evolutionClient.sendText(phone, text);
+
+        // Story 4.5 (AC3/AC4): Capture messageId for WhatsApp Reply coreference
+        if (curatedPosition !== undefined) {
+          if (response?.key?.id) {
+            try {
+              await updateOfferMapMessageIds(sessionId, { [curatedPosition]: response.key.id });
+            } catch (err) {
+              workerLogger.warn('offer_map_update_failed', {
+                event: 'offer_map_update_failed',
+                sessionId,
+                phone,
+                curatedPosition,
+                chunkIndex,
+                error: err instanceof Error ? err.message : String(err),
+              });
+            }
+          } else {
+            workerLogger.warn('media_message_id_capture_failed', {
+              event: 'media_message_id_capture_failed',
+              sessionId,
+              phone,
+              curatedPosition,
+              chunkIndex,
+            });
+          }
+        }
       } else {
         // Text: send composing event first, then text
         await evolutionClient.sendComposingEvent(phone);

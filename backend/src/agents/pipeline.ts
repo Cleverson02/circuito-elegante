@@ -37,6 +37,10 @@ export interface PipelineInput {
     guestName?: string;
     hotelFocus?: string;
   };
+  /** Story 4.5: Pre-resolved offer from WhatsApp Reply coreference. */
+  resolvedOfferId?: string;
+  resolvedOption?: unknown;
+  selectionMethod?: 'whatsapp_reply';
 }
 
 export interface PipelineResult {

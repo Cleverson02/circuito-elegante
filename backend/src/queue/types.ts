@@ -8,6 +8,8 @@ export interface TypingChunk {
   text: string;
   delay: number;
   isMedia: boolean;
+  /** 1-indexed position of the curated option this image represents (Story 4.5). */
+  curatedPosition?: number;
 }
 
 /** Job data enqueued into the BullMQ typing queue. */
@@ -19,4 +21,6 @@ export interface TypingJobData {
   channel: 'whatsapp' | 'website';
   chunkIndex: number;
   totalChunks: number;
+  /** 1-indexed position of the curated option this image represents (Story 4.5). */
+  curatedPosition?: number;
 }

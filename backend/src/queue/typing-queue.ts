@@ -68,6 +68,7 @@ export async function enqueueResponse(
       channel,
       chunkIndex: i,
       totalChunks: chunks.length,
+      ...(chunk.curatedPosition !== undefined && { curatedPosition: chunk.curatedPosition }),
     };
 
     await typingQueue.add('send-chunk', jobData, {

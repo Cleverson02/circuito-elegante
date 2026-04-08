@@ -61,6 +61,7 @@ describe('MessageBuffer', () => {
       msg.phone,
       'Oi',
       [msg.messageId],
+      undefined,
     );
     expect(buffer.getBufferSize()).toBe(0);
   });
@@ -95,6 +96,7 @@ describe('MessageBuffer', () => {
       phone,
       'Oi quero um hotel na serra gaucha',
       ['id-1', 'id-2', 'id-3'],
+      undefined,
     );
   });
 
@@ -128,6 +130,7 @@ describe('MessageBuffer', () => {
       phone,
       'first second',
       ['a', 'b'],
+      undefined,
     );
   });
 
@@ -150,8 +153,8 @@ describe('MessageBuffer', () => {
     await Promise.resolve();
 
     expect(onFlush).toHaveBeenCalledTimes(2);
-    expect(onFlush).toHaveBeenCalledWith(phone1, 'A', ['p1-1']);
-    expect(onFlush).toHaveBeenCalledWith(phone2, 'B', ['p2-1']);
+    expect(onFlush).toHaveBeenCalledWith(phone1, 'A', ['p1-1'], undefined);
+    expect(onFlush).toHaveBeenCalledWith(phone2, 'B', ['p2-1'], undefined);
     expect(buffer.getBufferSize()).toBe(0);
   });
 
@@ -179,6 +182,7 @@ describe('MessageBuffer', () => {
       phone,
       'oi [audio]',
       ['t1', 'a1'],
+      undefined,
     );
   });
 
@@ -205,6 +209,7 @@ describe('MessageBuffer', () => {
       phone,
       '[imagem: olha isso]',
       ['i1'],
+      undefined,
     );
   });
 
@@ -229,6 +234,7 @@ describe('MessageBuffer', () => {
       phone,
       '[imagem]',
       ['i2'],
+      undefined,
     );
   });
 
@@ -267,7 +273,7 @@ describe('MessageBuffer', () => {
     await Promise.resolve();
 
     expect(onFlush).toHaveBeenCalledTimes(1);
-    expect(onFlush).toHaveBeenCalledWith(phone, 'urgent', ['u1']);
+    expect(onFlush).toHaveBeenCalledWith(phone, 'urgent', ['u1'], undefined);
     expect(buffer.getBufferSize()).toBe(0);
   });
 
