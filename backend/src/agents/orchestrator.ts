@@ -15,6 +15,7 @@ import { MODELS, type Language } from './types.js';
 import { personaAgent } from './persona-agent.js';
 import { SearchHotelsParams, searchHotels } from '../tools/search-hotels.js';
 import { QueryKBParams, queryKnowledgeBase } from '../tools/query-knowledge-base.js';
+import { QueryHotelDetailsParams, queryHotelDetails } from '../tools/query-hotel-details.js';
 import { TransferParams, buildHandoverSummary } from '../tools/transfer-to-human.js';
 import { logger } from '../middleware/logging.js';
 
@@ -130,6 +131,48 @@ const instrumentedQueryKB = tool({
   },
 });
 
+const instrumentedQueryHotelDetails = tool({
+  name: 'query_hotel_details',
+  description:
+    'Get detailed hotel information from enriched structured data (rooms, amenities, policies, restaurants, etc). ' +
+    'Use hotelSlug for exact match or hotel name for fuzzy matching. ' +
+    'Specify a category (identity, accommodations, infrastructure, gastronomy, policies, transport, experiences, reputation, concierge, integration) for detailed data, or omit for summary.',
+  parameters: QueryHotelDetailsParams,
+  execute: async (params) => {
+    const start = Date.now();
+    try {
+      const result = await withTimeout(queryHotelDetails(params), TOOL_TIMEOUT_MS);
+      logToolCall('query_hotel_details', Date.now() - start, true, {
+        found: result.found,
+        category: params.category,
+      });
+      if (!result.found) {
+        return {
+          found: false,
+          suggestion: result.suggestion,
+          message: `Hotel "${params.hotelSlug}" não encontrado. Tente query_knowledge_base para busca semântica.`,
+        };
+      }
+      return {
+        found: true,
+        hotelName: result.hotelName,
+        hotelSlug: result.hotelSlug,
+        category: result.category ?? 'summary',
+        details: result.details,
+        schemaFields: result.schemaFields,
+      };
+    } catch (err) {
+      logToolCall('query_hotel_details', Date.now() - start, false, {
+        error: err instanceof Error ? err.message : String(err),
+      });
+      return {
+        found: false,
+        error: err instanceof Error ? err.message : 'Tool execution failed',
+      };
+    }
+  },
+});
+
 const instrumentedTransferToHuman = tool({
   name: 'transfer_to_human',
   description:
@@ -168,7 +211,7 @@ export const orchestratorAgent = new Agent({
   name: 'StellaOrchestrator',
   model: MODELS.turbo,
   instructions: getPrompt(),
-  tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedTransferToHuman],
+  tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedQueryHotelDetails, instrumentedTransferToHuman],
   handoffs: [personaAgent],
   handoffDescription:
     'Orchestrates hotel search, FAQ lookup, and human transfer. Hands off to the Persona Agent for natural language response generation.',

@@ -24,7 +24,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:migrate:raw": "node --env-file=.env --import=tsx data/scripts/run-migrations.ts",
     "db:studio": "drizzle-kit studio",
-    "ingest:faq": "node --env-file=.env --import=tsx data/scripts/ingest-faq.ts"
+    "ingest:faq": "node --env-file=.env --import=tsx data/scripts/ingest-faq.ts",
+    "ingest:enrichment": "node --env-file=.env --import=tsx data/scripts/ingest-enrichment.ts"
   },
   "dependencies": {
     "@openai/agents": "^0.8.2",

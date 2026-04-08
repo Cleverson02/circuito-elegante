@@ -42,9 +42,10 @@ describe('Orchestrator Agent definition — AC1, AC2', () => {
 
     expect(source).toContain('instrumentedSearchHotels');
     expect(source).toContain('instrumentedQueryKB');
+    expect(source).toContain('instrumentedQueryHotelDetails');
     expect(source).toContain('instrumentedTransferToHuman');
     expect(source).toContain(
-      "tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedTransferToHuman]",
+      "tools: [instrumentedSearchHotels, instrumentedQueryKB, instrumentedQueryHotelDetails, instrumentedTransferToHuman]",
     );
   });
 
@@ -218,8 +219,8 @@ describe('Orchestrator tool logging — AC7', () => {
     // Each tool has true (success) and false (error) logToolCall invocations
     const successCalls = (source.match(/logToolCall\(.+?,\s*true,/g) ?? []).length;
     const errorCalls = (source.match(/logToolCall\(.+?,\s*false,/g) ?? []).length;
-    expect(successCalls).toBe(3);
-    expect(errorCalls).toBe(3);
+    expect(successCalls).toBe(4);
+    expect(errorCalls).toBe(4);
   });
 
   it('uses logger.warn for error cases (F1 fix)', () => {

@@ -1,9 +1,13 @@
 import {
   pgTable, uuid, text, boolean, numeric, integer, real,
-  timestamp, jsonb, char, uniqueIndex, index,
+  timestamp, jsonb, char, uniqueIndex, index, customType,
 } from 'drizzle-orm/pg-core';
 import { sql } from 'drizzle-orm';
 import { vector } from 'drizzle-orm/pg-core';
+
+const tsvector = customType<{ data: string }>({
+  dataType() { return 'tsvector'; },
+});
 
 // ==================== HOTELS ====================
 export const hotels = pgTable('hotels', {
@@ -21,6 +25,11 @@ export const hotels = pgTable('hotels', {
   petFriendly:    boolean('pet_friendly').notNull().default(false),
   poolHeated:     boolean('pool_heated').notNull().default(false),
   data:           jsonb('data').notNull().default({}),
+  // Generated columns (populated by migration 012)
+  lodgingType:    text('lodging_type'),
+  starRating:     integer('star_rating'),
+  priceRange:     text('price_range'),
+  searchVector:   tsvector('search_vector'),
   createdAt:      timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   updatedAt:      timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 }, (table) => [
