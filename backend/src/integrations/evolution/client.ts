@@ -96,6 +96,53 @@ export class EvolutionClient {
   }
 
   /**
+   * Send a template message via WhatsApp (FR37 — Story 4.9).
+   * POST /message/sendTemplate/{instance}
+   *
+   * If Evolution API returns error 470 (template not approved by Meta),
+   * returns a skipped response instead of throwing (AC5).
+   */
+  async sendTemplate(
+    phone: string,
+    templateName: string,
+    language: string,
+    parameters: Array<{ type: 'text'; text: string }>,
+  ): Promise<import('./types.js').EvolutionResponse> {
+    const payload = {
+      number: phone,
+      template: {
+        name: templateName,
+        language: { code: language },
+        components: [{
+          type: 'body',
+          parameters,
+        }],
+      },
+    };
+
+    try {
+      return await this.request<import('./types.js').EvolutionResponse>(
+        `/message/sendTemplate/${this.config.instanceName}`,
+        'POST',
+        payload,
+      );
+    } catch (error) {
+      // AC5: Handle template not approved (470) gracefully
+      const errMsg = error instanceof Error ? error.message : String(error);
+      if (errMsg.includes('470') || errMsg.includes('template')) {
+        this.logger.warn('template_not_approved', {
+          event: 'template_not_approved',
+          templateName,
+          phone,
+          error: errMsg,
+        });
+        return { status: 'skipped', message: 'template_not_approved' };
+      }
+      throw error;
+    }
+  }
+
+  /**
    * Send "recording..." event to WhatsApp.
    * PUT /chat/updateStatus/{instance}
    */
