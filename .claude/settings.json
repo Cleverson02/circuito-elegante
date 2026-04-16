@@ -1,4 +1,6 @@
 {
   "language": "portuguese",
-  "enabledMcpjsonServers": ["playwright"]
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
 }
