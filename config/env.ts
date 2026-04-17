@@ -26,10 +26,11 @@ export const env = createEnv({
     EVOLUTION_WEBHOOK_SECRET: z.string().min(1).optional(), // Story 4.1 — webhook HMAC validation
 
     // Elevare API — required from Epic 3+
-    ELEVARE_API_URL: z.string().url().optional(),
-    ELEVARE_API_KEY: z.string().min(1).optional(),
-    ELEVARE_CLIENT_ID: z.string().min(1).optional(),
-    ELEVARE_CLIENT_SECRET: z.string().min(1).optional(),
+    // Auth: x-client-id + x-client-secret (ambos obrigatorios, per Postman)
+    ELEVARE_API_URL: z.string().url(),
+    ELEVARE_CLIENT_ID: z.string().min(1),
+    ELEVARE_CLIENT_SECRET: z.string().min(1),
+    ELEVARE_WEBHOOK_SECRET: z.string().min(1),
     ELEVARE_TIMEOUT_MS: z.coerce.number().int().positive().default(8000),
     ELEVARE_MAX_RETRIES: z.coerce.number().int().min(0).max(10).default(3),
 

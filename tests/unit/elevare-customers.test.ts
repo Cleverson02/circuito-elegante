@@ -1,6 +1,7 @@
 import {
   extractCustomerData,
   registerCustomer,
+  splitName,
   ElevareCustomerValidationError,
   ELEVARE_CUSTOMER_REDIS_KEY,
   type ElevareCustomerPayload,
@@ -13,12 +14,7 @@ jest.mock('../../backend/src/database/client', () => ({
   getDatabase: jest.fn(),
 }));
 
-jest.mock('../../backend/src/state/session-manager', () => ({
-  getSession: jest.fn(),
-}));
-
 const { getDatabase } = jest.requireMock('../../backend/src/database/client');
-const { getSession } = jest.requireMock('../../backend/src/state/session-manager');
 
 // ─── Fixtures ───────────────────────────────────────────────────
 
@@ -29,22 +25,13 @@ const GUEST_ROW = {
   name: 'João Silva',
   email: 'joao@example.com',
   phoneNumber: TEST_PHONE,
-  language: 'pt',
-};
-
-const SESSION = {
-  hotelId: 'hotel-001',
-  guestPhone: TEST_PHONE,
-  language: 'pt',
-  createdAt: '2026-04-05T10:00:00Z',
-  updatedAt: '2026-04-05T10:05:00Z',
 };
 
 const PAYLOAD: ElevareCustomerPayload = {
-  name: 'João Silva',
+  primaryPhone: TEST_PHONE,
+  firstName: 'João',
+  lastName: 'Silva',
   email: 'joao@example.com',
-  phone: TEST_PHONE,
-  language: 'pt',
 };
 
 // ─── Helpers ────────────────────────────────────────────────────
@@ -87,54 +74,65 @@ describe('elevare customers', () => {
     jest.clearAllMocks();
   });
 
+  describe('splitName()', () => {
+    it('splits "João Silva" into firstName/lastName', () => {
+      expect(splitName('João Silva')).toEqual({ firstName: 'João', lastName: 'Silva' });
+    });
+
+    it('treats last token as lastName, rest as firstName', () => {
+      expect(splitName('Maria de Souza Santos')).toEqual({
+        firstName: 'Maria de Souza',
+        lastName: 'Santos',
+      });
+    });
+
+    it('handles single-word names (lastName empty)', () => {
+      expect(splitName('Madonna')).toEqual({ firstName: 'Madonna', lastName: '' });
+    });
+
+    it('handles empty input', () => {
+      expect(splitName('')).toEqual({ firstName: '', lastName: '' });
+    });
+
+    it('normalizes whitespace', () => {
+      expect(splitName('  João   Silva  ')).toEqual({
+        firstName: 'João',
+        lastName: 'Silva',
+      });
+    });
+  });
+
   describe('extractCustomerData()', () => {
-    it('should extract and consolidate guest + session data', async () => {
+    it('extracts and splits name into primaryPhone/firstName/lastName', async () => {
       mockDbSelect([GUEST_ROW]);
-      getSession.mockResolvedValueOnce(SESSION);
 
       const result = await extractCustomerData(TEST_PHONE, TEST_SESSION_ID);
 
       expect(result).toEqual({
-        name: 'João Silva',
+        primaryPhone: TEST_PHONE,
+        firstName: 'João',
+        lastName: 'Silva',
         email: 'joao@example.com',
-        phone: TEST_PHONE,
-        language: 'pt',
       });
     });
 
-    it('should work for guest without email (email is optional)', async () => {
+    it('works for guest without email (email is optional)', async () => {
       mockDbSelect([{ ...GUEST_ROW, email: null }]);
-      getSession.mockResolvedValueOnce(SESSION);
 
       const result = await extractCustomerData(TEST_PHONE, TEST_SESSION_ID);
 
       expect(result.email).toBeUndefined();
-      expect(result.name).toBe('João Silva');
+      expect(result.firstName).toBe('João');
+      expect(result.lastName).toBe('Silva');
     });
 
-    it('should prefer session language over guest profile language', async () => {
-      mockDbSelect([{ ...GUEST_ROW, language: 'pt' }]);
-      getSession.mockResolvedValueOnce({ ...SESSION, language: 'en' });
-
-      const result = await extractCustomerData(TEST_PHONE, TEST_SESSION_ID);
-      expect(result.language).toBe('en');
-    });
-
-    it('should default to pt when neither session nor guest has language', async () => {
-      mockDbSelect([{ ...GUEST_ROW, language: null }]);
-      getSession.mockResolvedValueOnce(null);
-
-      const result = await extractCustomerData(TEST_PHONE, TEST_SESSION_ID);
-      expect(result.language).toBe('pt');
-    });
-
-    it('should throw validation error for invalid E.164 phone', async () => {
+    it('throws validation error for invalid E.164 phone', async () => {
       await expect(
         extractCustomerData('21999998888', TEST_SESSION_ID),
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should throw when guest profile not found', async () => {
+    it('throws when guest profile not found', async () => {
       mockDbSelect([]);
 
       await expect(
@@ -142,18 +140,16 @@ describe('elevare customers', () => {
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should throw when guest has no name', async () => {
+    it('throws when guest has no name', async () => {
       mockDbSelect([{ ...GUEST_ROW, name: null }]);
-      getSession.mockResolvedValueOnce(SESSION);
 
       await expect(
         extractCustomerData(TEST_PHONE, TEST_SESSION_ID),
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should throw when guest has empty name string', async () => {
+    it('throws when guest has whitespace-only name', async () => {
       mockDbSelect([{ ...GUEST_ROW, name: '   ' }]);
-      getSession.mockResolvedValueOnce(SESSION);
 
       await expect(
         extractCustomerData(TEST_PHONE, TEST_SESSION_ID),
@@ -162,7 +158,7 @@ describe('elevare customers', () => {
   });
 
   describe('registerCustomer()', () => {
-    it('should call API and cache customerId (happy path)', async () => {
+    it('calls POST /global-agent/customers with minimalista payload', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
@@ -170,7 +166,11 @@ describe('elevare customers', () => {
       const result = await registerCustomer(client, redis, logger, PAYLOAD);
 
       expect(result.customerId).toBe('CUST-789');
-      expect(client.request).toHaveBeenCalledWith('/customers', 'POST', PAYLOAD);
+      expect(client.request).toHaveBeenCalledWith(
+        '/global-agent/customers',
+        'POST',
+        PAYLOAD,
+      );
       expect(redis.set).toHaveBeenCalledWith(
         ELEVARE_CUSTOMER_REDIS_KEY(TEST_PHONE),
         'CUST-789',
@@ -179,7 +179,7 @@ describe('elevare customers', () => {
       );
     });
 
-    it('should return cached customerId without calling API (cache hit)', async () => {
+    it('returns cached customerId without calling API (cache hit)', async () => {
       const redis = makeRedis('CUST-CACHED');
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-SHOULD-NOT-BE-CALLED' });
@@ -191,38 +191,62 @@ describe('elevare customers', () => {
       expect(redis.set).not.toHaveBeenCalled();
     });
 
-    it('should mask phone in logs', async () => {
+    it('accepts optional cpf and birthDate', async () => {
+      const redis = makeRedis(null);
+      const logger = makeLogger();
+      const client = makeClient({ customerId: 'CUST-789' });
+
+      const extended: ElevareCustomerPayload = {
+        ...PAYLOAD,
+        cpf: '12345678901',
+        birthDate: '1990-05-15',
+      };
+
+      await registerCustomer(client, redis, logger, extended);
+
+      expect(client.request).toHaveBeenCalledWith(
+        '/global-agent/customers',
+        'POST',
+        extended,
+      );
+    });
+
+    it('masks phone in logs', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
 
       await registerCustomer(client, redis, logger, PAYLOAD);
 
-      const infoCall = logger.info.mock.calls.find((c: any) => c[0] === 'elevare_customer_registered');
+      const infoCall = logger.info.mock.calls.find(
+        (c: any) => c[0] === 'elevare_customer_registered',
+      );
       expect(infoCall).toBeDefined();
       const logPayload = JSON.stringify(infoCall[1]);
       expect(logPayload).not.toContain('21999998888');
       expect(logPayload).toContain('***');
     });
 
-    it('should mask email in logs', async () => {
+    it('masks email in logs', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
 
       await registerCustomer(client, redis, logger, PAYLOAD);
 
-      const infoCall = logger.info.mock.calls.find((c: any) => c[0] === 'elevare_customer_registered');
+      const infoCall = logger.info.mock.calls.find(
+        (c: any) => c[0] === 'elevare_customer_registered',
+      );
       const logPayload = JSON.stringify(infoCall[1]);
       expect(logPayload).not.toContain('joao@example.com');
     });
 
-    it('should map 400 API error to ElevareCustomerValidationError', async () => {
+    it('maps 400 API error to ElevareCustomerValidationError', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = {
         request: jest.fn().mockRejectedValue(
-          new ElevareApiError('Bad Request', 400, '/customers', null),
+          new ElevareApiError('Bad Request', 400, '/global-agent/customers', null),
         ),
       };
 
@@ -231,12 +255,12 @@ describe('elevare customers', () => {
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should propagate 500 as ElevareApiError', async () => {
+    it('propagates 500 as ElevareApiError', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = {
         request: jest.fn().mockRejectedValue(
-          new ElevareApiError('Server Error', 500, '/customers', null),
+          new ElevareApiError('Server Error', 500, '/global-agent/customers', null),
         ),
       };
 
@@ -245,28 +269,41 @@ describe('elevare customers', () => {
       ).rejects.toThrow(ElevareApiError);
     });
 
-    it('should reject invalid E.164 phone', async () => {
+    it('rejects invalid E.164 phone', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
 
       await expect(
-        registerCustomer(client, redis, logger, { ...PAYLOAD, phone: '21999998888' }),
+        registerCustomer(client, redis, logger, {
+          ...PAYLOAD,
+          primaryPhone: '21999998888',
+        }),
       ).rejects.toThrow(ElevareCustomerValidationError);
       expect(client.request).not.toHaveBeenCalled();
     });
 
-    it('should reject empty name', async () => {
+    it('rejects empty firstName', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
 
       await expect(
-        registerCustomer(client, redis, logger, { ...PAYLOAD, name: '' }),
+        registerCustomer(client, redis, logger, { ...PAYLOAD, firstName: '' }),
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should reject invalid email format', async () => {
+    it('rejects empty lastName', async () => {
+      const redis = makeRedis(null);
+      const logger = makeLogger();
+      const client = makeClient({ customerId: 'CUST-789' });
+
+      await expect(
+        registerCustomer(client, redis, logger, { ...PAYLOAD, lastName: '' }),
+      ).rejects.toThrow(ElevareCustomerValidationError);
+    });
+
+    it('rejects invalid email format', async () => {
       const redis = makeRedis(null);
       const logger = makeLogger();
       const client = makeClient({ customerId: 'CUST-789' });
@@ -276,7 +313,27 @@ describe('elevare customers', () => {
       ).rejects.toThrow(ElevareCustomerValidationError);
     });
 
-    it('should continue on Redis read failure (graceful degradation)', async () => {
+    it('rejects invalid cpf format', async () => {
+      const redis = makeRedis(null);
+      const logger = makeLogger();
+      const client = makeClient({ customerId: 'CUST-789' });
+
+      await expect(
+        registerCustomer(client, redis, logger, { ...PAYLOAD, cpf: '123.456.789-01' }),
+      ).rejects.toThrow(ElevareCustomerValidationError);
+    });
+
+    it('rejects invalid birthDate format', async () => {
+      const redis = makeRedis(null);
+      const logger = makeLogger();
+      const client = makeClient({ customerId: 'CUST-789' });
+
+      await expect(
+        registerCustomer(client, redis, logger, { ...PAYLOAD, birthDate: '15/05/1990' }),
+      ).rejects.toThrow(ElevareCustomerValidationError);
+    });
+
+    it('continues on Redis read failure (graceful degradation)', async () => {
       const redis = {
         get: jest.fn().mockRejectedValue(new Error('Redis down')),
         set: jest.fn().mockResolvedValue('OK'),
@@ -290,7 +347,7 @@ describe('elevare customers', () => {
       expect(client.request).toHaveBeenCalled();
     });
 
-    it('should log cache hit with warn level', async () => {
+    it('logs cache hit with warn level', async () => {
       const redis = makeRedis('CUST-CACHED');
       const logger = makeLogger();
       const client = makeClient({ customerId: 'NEVER' });
@@ -305,7 +362,7 @@ describe('elevare customers', () => {
   });
 
   describe('ELEVARE_CUSTOMER_REDIS_KEY', () => {
-    it('should build correct key from phone', () => {
+    it('builds correct key from phone', () => {
       expect(ELEVARE_CUSTOMER_REDIS_KEY(TEST_PHONE)).toBe(
         'elevare_customer:+5521999998888',
       );

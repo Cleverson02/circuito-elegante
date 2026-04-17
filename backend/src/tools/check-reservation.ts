@@ -40,33 +40,18 @@ export type CheckReservationResponse =
 // ─── Factory ────────────────────────────────────────────────────
 
 /**
- * Creates the `check_reservation` FunctionTool for the Orchestrator Agent.
- *
- * Factory pattern (same as `createRegisterCustomerTool`): requires the
- * ElevareClient + Logger + Elevare Global Agent credentials to be injected
- * at application startup.
- *
- * The tool returns STRUCTURED DATA ONLY. Prose generation (date formatting,
- * language-specific phrasing, status-aware messaging) is the Persona
- * Agent's responsibility.
- */
-/**
  * Execute logic extracted so tests can invoke it directly without the
- * runtime overhead of the FunctionTool wrapper (which exposes `invoke`
- * with a JSON-string signature, not `execute`).
+ * runtime overhead of the FunctionTool wrapper.
+ *
+ * Auth is handled by the injected ElevareClient (x-client-id +
+ * x-client-secret configured at boot).
  */
 export async function executeCheckReservation(
   client: ElevareClient,
   logger: Logger,
-  credentials: { clientId?: string; clientSecret?: string },
   params: CheckReservationParams,
 ): Promise<CheckReservationResponse> {
-  const result = await getReservations(
-    client,
-    logger,
-    params.identifier,
-    credentials,
-  );
+  const result = await getReservations(client, logger, params.identifier);
 
   if (!result.found) {
     return {
@@ -87,7 +72,6 @@ export async function executeCheckReservation(
 export function createCheckReservationTool(
   client: ElevareClient,
   logger: Logger,
-  credentials: { clientId?: string; clientSecret?: string },
 ): ReturnType<typeof tool> {
   return tool({
     name: 'check_reservation',
@@ -99,6 +83,6 @@ export function createCheckReservationTool(
       'Use when the classified intent is STATUS.',
     parameters: CheckReservationParams,
     execute: async (params): Promise<CheckReservationResponse> =>
-      executeCheckReservation(client, logger, credentials, params),
+      executeCheckReservation(client, logger, params),
   });
 }

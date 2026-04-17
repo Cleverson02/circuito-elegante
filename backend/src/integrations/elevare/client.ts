@@ -26,6 +26,7 @@ const SearchParamsSchema = z.object({
   checkOut: z.string().regex(ISO_DATE_REGEX, 'Must be YYYY-MM-DD'),
   adults: z.number().int().min(1),
   children: z.number().int().min(0),
+  childrenAges: z.array(z.number().int().min(0).max(17)).optional(),
 });
 
 const MultiSearchParamsSchema = z.object({
@@ -35,6 +36,7 @@ const MultiSearchParamsSchema = z.object({
   checkOut: z.string().regex(ISO_DATE_REGEX, 'Must be YYYY-MM-DD'),
   adults: z.number().int().min(1),
   children: z.number().int().min(0),
+  maxResults: z.number().int().positive().optional(),
 }).refine(
   (data) => data.city != null || data.region != null,
   { message: 'Either city or region must be provided' },
@@ -96,14 +98,19 @@ export class ElevareClient {
   async search(params: ElevareSearchParams): Promise<ElevareSearchResponse> {
     this.validateSearchParams(params);
     const queryParams = new URLSearchParams({
-      hotelId: params.hotelId,
-      checkIn: params.checkIn,
-      checkOut: params.checkOut,
-      adults: String(params.adults),
-      children: String(params.children),
+      q: params.hotelId,
+      CheckIn: params.checkIn,
+      CheckOut: params.checkOut,
+      ad: String(params.adults),
     });
+    if (params.children > 0) {
+      queryParams.set('ch', String(params.children));
+    }
+    if (params.childrenAges && params.childrenAges.length > 0) {
+      queryParams.set('ag', params.childrenAges.join(','));
+    }
     return this.fetchWithResilience<ElevareSearchResponse>(
-      `/search?${queryParams.toString()}`,
+      `/global-agent/search?${queryParams.toString()}`,
       'GET',
     );
   }
@@ -119,30 +126,29 @@ export class ElevareClient {
     queryParams.set('checkOut', params.checkOut);
     queryParams.set('adults', String(params.adults));
     queryParams.set('children', String(params.children));
+    if (params.maxResults != null) {
+      queryParams.set('maxResults', String(params.maxResults));
+    }
     return this.fetchWithResilience<ElevareMultiSearchResponse>(
-      `/multi-search?${queryParams.toString()}`,
+      `/global-agent/multi-search?${queryParams.toString()}`,
       'GET',
     );
   }
 
   /**
    * Low-level request method — exposed for domain-specific wrappers
-   * (e.g., customers.ts, quotations.ts). Inherits auth, retry, circuit
-   * breaker, timeout, and logging from the base client.
+   * (customers.ts, quotations.ts, reservations.ts). Inherits auth
+   * (x-client-id + x-client-secret), retry, circuit breaker, timeout,
+   * and logging from the base client.
    *
-   * Options:
-   *   - headers: extra headers merged with default auth (X-Api-Key)
-   *   - overrideAuth: when true, omits X-Api-Key entirely so caller can
-   *     supply its own auth headers (e.g., x-client-id/x-client-secret
-   *     required by /global-agent endpoints).
+   * Callers pass the COMPLETE path (including `/global-agent/` prefix).
    */
   async request<T>(
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
-    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
-    return this.fetchWithResilience<T>(endpoint, method, body, options);
+    return this.fetchWithResilience<T>(endpoint, method, body);
   }
 
   getCircuitBreakerState(): CircuitBreakerState {
@@ -181,7 +187,6 @@ export class ElevareClient {
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
-    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
     this.checkCircuitBreaker();
 
@@ -189,7 +194,7 @@ export class ElevareClient {
 
     for (let attempt = 0; attempt <= this.config.maxRetries; attempt++) {
       try {
-        const result = await this.executeFetch<T>(endpoint, method, body, options);
+        const result = await this.executeFetch<T>(endpoint, method, body);
         this.onSuccess();
         return result;
       } catch (error) {
@@ -226,7 +231,6 @@ export class ElevareClient {
     endpoint: string,
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
     body?: unknown,
-    options?: { headers?: Record<string, string>; overrideAuth?: boolean },
   ): Promise<T> {
     const url = `${this.config.apiUrl}${endpoint}`;
     const controller = new AbortController();
@@ -240,19 +244,17 @@ export class ElevareClient {
     this.logger.info('elevare_request', {
       method,
       endpoint,
-      // API key intentionally REDACTED from all logs
+      // Auth credentials intentionally REDACTED from all logs
     });
 
     const headers: Record<string, string> = {
       'Accept': 'application/json',
+      'x-client-id': this.config.clientId,
+      'x-client-secret': this.config.clientSecret,
     };
-    if (!options?.overrideAuth) {
-      headers['X-Api-Key'] = this.config.apiKey;
-    }
-    if (options?.headers) {
-      for (const [k, v] of Object.entries(options.headers)) {
-        headers[k] = v;
-      }
+
+    if (body !== undefined && method !== 'GET') {
+      headers['Content-Type'] = 'application/json';
     }
 
     const init: RequestInit = {
@@ -262,7 +264,6 @@ export class ElevareClient {
     };
 
     if (body !== undefined && method !== 'GET') {
-      headers['Content-Type'] = 'application/json';
       init.body = JSON.stringify(body);
     }
 
@@ -272,9 +273,9 @@ export class ElevareClient {
       const durationMs = Date.now() - startMs;
 
       if (!response.ok) {
-        let body: unknown = null;
+        let errorBody: unknown = null;
         try {
-          body = await response.json();
+          errorBody = await response.json();
         } catch {
           // response body may not be JSON
         }
@@ -283,14 +284,14 @@ export class ElevareClient {
           endpoint,
           statusCode: response.status,
           durationMs,
-          body,
+          body: errorBody,
         });
 
         throw new ElevareApiError(
           `Elevare API returned ${response.status}`,
           response.status,
           endpoint,
-          body,
+          errorBody,
         );
       }
 

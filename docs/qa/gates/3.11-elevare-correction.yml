@@ -1,0 +1,109 @@
+schema: 1
+story: '3.11'
+title: 'Correcao Critica da Integracao Elevare API (Hotfix)'
+gate: PASS
+status_reason: |
+  10/10 ACs atendidos e verificados via grep + tests. 724/724 tests passando
+  (160 Elevare-specific + 55 webhook sem regressao). Escopo minimalista
+  respeitado. 3 ambiguidades documentadas para Story 3.12. Security OK
+  (credentials redacted, TLS enforced, HMAC webhook preservado).
+reviewer: 'Quinn'
+updated: '2026-04-17T00:00:00Z'
+
+quality_checks:
+  code_review: PASS
+  unit_tests: PASS          # 724/724 verdes
+  acceptance_criteria: PASS # 10/10 met
+  no_regressions: PASS      # webhook 55/55 verde, EPIC-2 intacto
+  performance: PASS         # circuit breaker + retry preservados
+  security: CONCERNS        # credenciais ok, hardening adicional nice-to-have
+  documentation: PASS       # contract doc + followup doc
+
+traceability:
+  AC1: 'config/env.ts:30, .env.example:51 — sem default'
+  AC2: 'client.ts:252-253 + test elevare-client.test.ts "should send x-client-id..."'
+  AC3: 'grep ELEVARE_API_KEY = zero em backend/ config/ .env.example tests/'
+  AC4: 'env.ts:30-33 + config.ts:6-8 (boot-time zod fail)'
+  AC5: '19 ocorrencias /global-agent/ distribuidas corretamente'
+  AC6: 'client.ts:100-112 + test "should build correct URL..."'
+  AC7: 'customers.ts:28-35 + splitName() + tests cpf/birthDate'
+  AC8: '160/160 Elevare tests + 55/55 webhook (no regression)'
+  AC9: 'stella-readiness.ts com /global-agent/hotels healthcheck'
+  AC10: 'docs/stories/3.11-followup-ambiguities.md criado'
+
+top_issues:
+  - severity: medium
+    category: testing
+    description: |
+      Payload customer minimalista nao testado contra API real da Elevare.
+      Se API rejeitar por falta de `address`, abrir Story 3.12 para expandir payload.
+    recommendation: |
+      Executar smoke test pos-merge com ElevareClient.search() + registerCustomer()
+      contra staging/producao. Documentar resultado em 3.11-followup-ambiguities.md.
+
+  - severity: medium
+    category: requirements
+    description: |
+      Webhook inbound (Elevare → Stella) ainda usa schema nao documentado na Postman.
+      Event types `quote_expiring`, `reservation_confirmed`, `payment_failed`,
+      `quote_created` foram inferidos, nao confirmados pela Elevare.
+    recommendation: |
+      Abrir ticket com Elevare solicitando schema oficial do webhook.
+      Story 3.12 realinha handler, processor, repository e tests.
+
+  - severity: low
+    category: code
+    description: |
+      `offerId` declarado como string em types.ts:39 (ElevareOffer), mas quotation
+      body usa number (conforme Postman `"offerId": 0`). Inconsistencia de tipo.
+    recommendation: |
+      Unificar como number em types.ts quando Elevare confirmar o tipo no response.
+      Possivel coercao intermediaria se necessario.
+
+  - severity: low
+    category: tests
+    description: |
+      Zero integration/E2E tests — toda validacao e unitaria com mocks.
+    recommendation: |
+      Adicionar em Story 3.12 apos ambiguidades resolvidas (evita retrabalho).
+
+nfr_validation:
+  security: PASS      # credentials redacted, TLS enforced, HMAC preserved
+  performance: PASS   # no new overhead
+  reliability: PASS   # graceful degradation + zod validation
+  maintainability: PASS # cleaner code sem overrideAuth
+  observability: PASS # structured logs, PII masked
+  testability: PASS   # 160 tests cobrem mudancas
+
+recommendations:
+  post_merge:
+    - priority: P1
+      action: 'Smoke test real contra Elevare staging: ElevareClient.search() + registerCustomer() + createQuotation()'
+      owner: '@dev'
+    - priority: P2
+      action: 'Considerar hardening adicional de logs de erro — garantir que response.body em elevare_response_error nunca ecoa headers'
+      owner: '@dev'
+    - priority: P3
+      action: 'Adicionar entry no CHANGELOG.md documentando breaking change do .env (CLIENT_ID/CLIENT_SECRET/WEBHOOK_SECRET required)'
+      owner: '@devops'
+
+  next_story:
+    - '3.12: Expandir payload customer com address (se Elevare rejeitar em smoke test)'
+    - '3.12: Realinhar webhook handler com schema oficial da Elevare'
+    - '3.12: Unificar tipo de offerId (string vs number)'
+    - '3.12: Adicionar integration tests E2E contra mock server ou staging'
+
+waiver:
+  active: false
+
+tests_metrics:
+  total: 724
+  passed: 724
+  failed: 0
+  elevare_specific: 160
+  webhook_regression: 55
+
+approval:
+  status: approved
+  transition: 'Ready for Review → Approved (ready for push)'
+  next_action: '@devops *push + *create-pr'

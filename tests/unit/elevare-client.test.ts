@@ -25,8 +25,10 @@ const mockLogger = {
 } as any;
 
 const testConfig: ElevareConfig = {
-  apiUrl: 'https://api.elevare.test/v1',
-  apiKey: 'test-api-key-secret-123',
+  apiUrl: 'https://api.elevare.test/api/v1',
+  clientId: 'test-client-id-abc',
+  clientSecret: 'test-client-secret-xyz',
+  webhookSecret: 'test-webhook-secret',
   timeoutMs: 8000,
   maxRetries: 3,
 };
@@ -158,27 +160,52 @@ describe('ElevareClient', () => {
       expect(result.results[0]!.photos[0]!.url).toContain('cdn.elevare.com');
     });
 
-    it('should send X-Api-Key header', async () => {
+    it('should send x-client-id and x-client-secret headers (no X-Api-Key)', async () => {
       mockFetch(200, MOCK_SEARCH_RESPONSE);
       const client = createClient();
       await client.search(SEARCH_PARAMS);
 
       const fetchCall = (globalThis.fetch as jest.Mock).mock.calls[0] as [string, RequestInit];
       const headers = fetchCall[1].headers as Record<string, string>;
-      expect(headers['X-Api-Key']).toBe('test-api-key-secret-123');
+      expect(headers['x-client-id']).toBe('test-client-id-abc');
+      expect(headers['x-client-secret']).toBe('test-client-secret-xyz');
+      expect(headers['X-Api-Key']).toBeUndefined();
     });
 
-    it('should build correct URL with query params', async () => {
+    it('should build correct URL with /global-agent/ prefix and Postman params', async () => {
       mockFetch(200, MOCK_SEARCH_RESPONSE);
       const client = createClient();
       await client.search(SEARCH_PARAMS);
 
       const fetchCall = (globalThis.fetch as jest.Mock).mock.calls[0] as [string, RequestInit];
       const url = fetchCall[0];
-      expect(url).toContain('/search?');
-      expect(url).toContain('hotelId=hotel-001');
-      expect(url).toContain('checkIn=2026-08-10');
-      expect(url).toContain('adults=2');
+      expect(url).toContain('/global-agent/search?');
+      expect(url).toContain('q=hotel-001');
+      expect(url).toContain('CheckIn=2026-08-10');
+      expect(url).toContain('CheckOut=2026-08-15');
+      expect(url).toContain('ad=2');
+    });
+
+    it('should include ch and ag params when children > 0', async () => {
+      mockFetch(200, MOCK_SEARCH_RESPONSE);
+      const client = createClient();
+      await client.search({ ...SEARCH_PARAMS, children: 2, childrenAges: [5, 8] });
+
+      const fetchCall = (globalThis.fetch as jest.Mock).mock.calls[0] as [string, RequestInit];
+      const url = fetchCall[0];
+      expect(url).toContain('ch=2');
+      expect(url).toMatch(/ag=5(%2C|,)8/);
+    });
+
+    it('should omit ch and ag when children is 0', async () => {
+      mockFetch(200, MOCK_SEARCH_RESPONSE);
+      const client = createClient();
+      await client.search(SEARCH_PARAMS);
+
+      const fetchCall = (globalThis.fetch as jest.Mock).mock.calls[0] as [string, RequestInit];
+      const url = fetchCall[0];
+      expect(url).not.toContain('ch=');
+      expect(url).not.toContain('ag=');
     });
 
     it('should pass photos transparently without processing (Golden Discovery #1)', async () => {
@@ -468,7 +495,7 @@ describe('ElevareClient', () => {
 
       expect(mockLogger.info).toHaveBeenCalledWith(
         'elevare_request',
-        expect.objectContaining({ method: 'GET', endpoint: expect.stringContaining('/search') }),
+        expect.objectContaining({ method: 'GET', endpoint: expect.stringContaining('/global-agent/search') }),
       );
     });
 
@@ -487,7 +514,7 @@ describe('ElevareClient', () => {
       );
     });
 
-    it('should NEVER include API key in logs', async () => {
+    it('should NEVER include auth credentials in logs', async () => {
       mockFetch(200, MOCK_SEARCH_RESPONSE);
       const client = createClient();
       await client.search(SEARCH_PARAMS);
@@ -500,7 +527,8 @@ describe('ElevareClient', () => {
 
       for (const call of allLogCalls) {
         const serialized = JSON.stringify(call);
-        expect(serialized).not.toContain('test-api-key-secret-123');
+        expect(serialized).not.toContain('test-client-id-abc');
+        expect(serialized).not.toContain('test-client-secret-xyz');
       }
     });
   });

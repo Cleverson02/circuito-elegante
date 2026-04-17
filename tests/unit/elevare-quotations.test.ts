@@ -90,7 +90,7 @@ describe('elevare quotations', () => {
       expect(result.quotationId).toBe('quot_abc123');
       expect(result.paymentLink).toContain('pay.elevare.com.br');
       expect(client.request).toHaveBeenCalledWith(
-        '/quotations',
+        '/global-agent/quotations',
         'POST',
         expect.objectContaining({
           requestId: 'req_xyz789',
@@ -227,7 +227,7 @@ describe('elevare quotations', () => {
       const redis = makeRedis();
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Bad Request', 400, '/quotations', { code: 'INVALID' }),
+        new ElevareApiError('Bad Request', 400, '/global-agent/quotations', { code: 'INVALID' }),
       );
 
       await expect(
@@ -239,7 +239,7 @@ describe('elevare quotations', () => {
       const redis = makeRedis();
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Server Error', 500, '/quotations'),
+        new ElevareApiError('Server Error', 500, '/global-agent/quotations'),
       );
 
       await expect(
@@ -293,7 +293,7 @@ describe('elevare quotations', () => {
 
       expect(result.paymentLink).toBe('https://pay.elevare.com.br/new');
       expect(client.request).toHaveBeenCalledWith(
-        '/quotations/quot_abc123/payment-link',
+        '/global-agent/quotations/quot_abc123/payment-link',
         'PUT',
         expect.objectContaining({ validityDays: 2, reason: 'Cliente solicitou' }),
       );
@@ -330,7 +330,7 @@ describe('elevare quotations', () => {
       const redis = makeRedis();
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Not Found', 404, '/quotations/missing/payment-link'),
+        new ElevareApiError('Not Found', 404, '/global-agent/quotations/missing/payment-link'),
       );
 
       await expect(
@@ -342,7 +342,7 @@ describe('elevare quotations', () => {
       const redis = makeRedis();
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Server Error', 500, '/quotations/quot/payment-link'),
+        new ElevareApiError('Server Error', 500, '/global-agent/quotations/quot/payment-link'),
       );
 
       await expect(
@@ -358,7 +358,7 @@ describe('elevare quotations', () => {
       await regeneratePaymentLink(client, redis, logger, 'quot with spaces');
 
       expect(client.request).toHaveBeenCalledWith(
-        '/quotations/quot%20with%20spaces/payment-link',
+        '/global-agent/quotations/quot%20with%20spaces/payment-link',
         'PUT',
         expect.any(Object),
       );
@@ -379,7 +379,7 @@ describe('elevare quotations', () => {
 
       expect(result.expiresAt).toBe(EXPIRES_24H);
       expect(client.request).toHaveBeenCalledWith(
-        '/quotations/quot_abc/extend',
+        '/global-agent/quotations/quot_abc/extend',
         'PUT',
         { additionalDays: 1, generateNewPaymentLink: false },
       );
@@ -404,7 +404,7 @@ describe('elevare quotations', () => {
       const redis = makeRedis();
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Not Found', 404, '/quotations/missing/extend'),
+        new ElevareApiError('Not Found', 404, '/global-agent/quotations/missing/extend'),
       );
 
       await expect(
@@ -436,7 +436,7 @@ describe('elevare quotations', () => {
     it('should throw QuotationNotFoundError on 404', async () => {
       const logger = makeLogger();
       const client = makeFailingClient(
-        new ElevareApiError('Not Found', 404, '/quotations/missing'),
+        new ElevareApiError('Not Found', 404, '/global-agent/quotations/missing'),
       );
 
       await expect(getQuotationStatus(client, logger, 'missing')).rejects.toThrow(
