@@ -151,9 +151,10 @@ describe('Pipeline response schema', () => {
 // ═══════════════════════════════════════════════════════════════
 
 describe('Single intent pipeline — AC1, AC6', () => {
-  it('chains Intent → Orchestrator → Safety for single intent', async () => {
+  it('chains Intent → Orchestrator → Persona → Safety for single intent', async () => {
     mockClassify.mockResolvedValue(makeIntent());
     mockOrchestrator.mockResolvedValue(orchResult('Hotel Laje de Pedra aceita pets.'));
+    mockPersona.mockResolvedValue('Hotel Laje de Pedra aceita pets.');
     mockValidate.mockResolvedValue({
       approved: true,
       response: 'Hotel Laje de Pedra aceita pets.',
@@ -182,14 +183,19 @@ describe('Single intent pipeline — AC1, AC6', () => {
     expect(result.multiIntent).toBe(false);
   });
 
-  it('does NOT call generateResponse for single intent (orchestrator handles persona handoff)', async () => {
+  it('delegates final response generation to Persona Agent for single intent', async () => {
     mockClassify.mockResolvedValue(makeIntent());
-    mockOrchestrator.mockResolvedValue(orchResult('Resposta.'));
-    mockValidate.mockResolvedValue({ approved: true, response: 'Resposta.' });
+    mockOrchestrator.mockResolvedValue(orchResult('Raw orchestrator output.'));
+    mockPersona.mockResolvedValue('Polished persona response.');
+    mockValidate.mockResolvedValue({ approved: true, response: 'Polished persona response.' });
 
     await processMessage(DEFAULT_INPUT);
 
-    expect(mockPersona).not.toHaveBeenCalled();
+    expect(mockPersona).toHaveBeenCalledWith({
+      toolResults: { API_SEARCH: 'Raw orchestrator output.' },
+      sessionContext: DEFAULT_INPUT.sessionContext,
+      language: 'pt',
+    });
   });
 
   it('logs intent classification with sessionId', async () => {

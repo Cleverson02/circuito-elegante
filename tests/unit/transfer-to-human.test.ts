@@ -49,10 +49,10 @@ describe('transfer_to_human Tool', () => {
         hotelFocus: 'Le Canton',
         conversationSummary: 'Guest asking about availability',
         lastIntent: 'API_BOOKING',
-        preferences: { region: 'Serra Gaúcha', petFriendly: true },
+        preferences: JSON.stringify({ region: 'Serra Gaúcha', petFriendly: true }),
       });
       expect(parsed.guestName).toBe('João Silva');
-      expect(parsed.preferences).toHaveProperty('region');
+      expect(parsed.preferences).toContain('region');
     });
   });
 
@@ -66,7 +66,7 @@ describe('transfer_to_human Tool', () => {
         hotelFocus: 'Nomaa Hotel',
         conversationSummary: 'Guest wants human help for special request',
         lastIntent: 'HANDOVER',
-        preferences: { language: 'pt' },
+        preferences: JSON.stringify({ language: 'pt' }),
       });
 
       expect(summary.guest.name).toBe('Maria');
