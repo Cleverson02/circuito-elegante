@@ -5,17 +5,32 @@ import { eq } from 'drizzle-orm';
 import type { Logger } from 'winston';
 import { getDatabase } from '../../database/client.js';
 import { guestProfiles } from '../../database/schema.js';
-import { getSession } from '../../state/session-manager.js';
 import type { ElevareClient } from './client.js';
 import { ElevareApiError } from './errors.js';
 
 // ─── Types ──────────────────────────────────────────────────────
 
+/**
+ * Elevare customer payload (minimalista).
+ *
+ * Campos obrigatorios per Postman `/global-agent/customers` POST:
+ *   primaryPhone, firstName, lastName
+ *
+ * Opcionais (recomendados para pre-reserva):
+ *   email, cpf, birthDate
+ *
+ * Campos como `address{}`, `gender`, `rg`, `documentType`, etc ficam fora do
+ * escopo da Story 3.11 — a Elevare provavelmente coleta dados completos de
+ * billing no gateway de pagamento. Se a API rejeitar este payload minimo,
+ * Story 3.12 expande com `address` estruturado.
+ */
 export interface ElevareCustomerPayload {
-  name: string;
+  primaryPhone: string;           // E.164 format (+5521999998888)
+  firstName: string;
+  lastName: string;
   email?: string;
-  phone: string;
-  language: string;
+  cpf?: string;                   // 11 digits, no formatting
+  birthDate?: string;             // ISO YYYY-MM-DD
 }
 
 export interface ElevareCustomerResponse {
@@ -38,32 +53,64 @@ export class ElevareCustomerValidationError extends Error {
 
 const E164_REGEX = /^\+[1-9]\d{1,14}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CPF_DIGITS_REGEX = /^\d{11}$/;
+const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
 function validatePayload(payload: ElevareCustomerPayload): void {
-  if (!payload.name || payload.name.trim().length === 0) {
-    throw new ElevareCustomerValidationError('name', 'must not be empty');
-  }
-  if (!E164_REGEX.test(payload.phone)) {
+  if (!E164_REGEX.test(payload.primaryPhone)) {
     throw new ElevareCustomerValidationError(
-      'phone',
+      'primaryPhone',
       'must be E.164 format (e.g., +5521999998888)',
     );
+  }
+  if (!payload.firstName || payload.firstName.trim().length === 0) {
+    throw new ElevareCustomerValidationError('firstName', 'must not be empty');
+  }
+  if (!payload.lastName || payload.lastName.trim().length === 0) {
+    throw new ElevareCustomerValidationError('lastName', 'must not be empty');
   }
   if (payload.email && !EMAIL_REGEX.test(payload.email)) {
     throw new ElevareCustomerValidationError('email', 'must be a valid email');
   }
+  if (payload.cpf && !CPF_DIGITS_REGEX.test(payload.cpf)) {
+    throw new ElevareCustomerValidationError(
+      'cpf',
+      'must be 11 digits, no formatting',
+    );
+  }
+  if (payload.birthDate && !ISO_DATE_REGEX.test(payload.birthDate)) {
+    throw new ElevareCustomerValidationError(
+      'birthDate',
+      'must be ISO YYYY-MM-DD',
+    );
+  }
+}
+
+// ─── Name Splitting ─────────────────────────────────────────────
+
+/**
+ * Splits a full name into first + last. Last-token wins as lastName; rest
+ * is firstName. Single-name input yields lastName empty — caller layers
+ * (e.g., Stella prompt) should request a full name before reaching this
+ * point, but we degrade gracefully.
+ */
+export function splitName(fullName: string): { firstName: string; lastName: string } {
+  const parts = fullName.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return { firstName: '', lastName: '' };
+  if (parts.length === 1) return { firstName: parts[0]!, lastName: '' };
+  const lastName = parts[parts.length - 1]!;
+  const firstName = parts.slice(0, -1).join(' ');
+  return { firstName, lastName };
 }
 
 // ─── PII Masking ────────────────────────────────────────────────
 
 function maskPhone(phone: string): string {
-  // +5521999998888 → +55***8888
   if (phone.length < 8) return '***';
   return `${phone.slice(0, 3)}***${phone.slice(-4)}`;
 }
 
 function maskEmail(email: string): string {
-  // joao@email.com → j***@email.com
   const [local, domain] = email.split('@');
   if (!local || !domain) return '***';
   return `${local[0]}***@${domain}`;
@@ -79,19 +126,17 @@ export const ELEVARE_CUSTOMER_CACHE_TTL = 24 * 60 * 60; // 24 hours
 // ─── extractCustomerData ────────────────────────────────────────
 
 /**
- * Consolidates guest profile data (from PostgreSQL) + session context (Redis)
- * into the Elevare customer payload format.
- *
- * Throws ElevareCustomerValidationError if required fields are missing
- * or malformed.
+ * Consolidates guest profile data (from PostgreSQL) into the Elevare
+ * customer payload minimalista. Throws ElevareCustomerValidationError
+ * if required fields (phone, name) are missing or malformed.
  */
 export async function extractCustomerData(
   phone: string,
-  sessionId: string,
+  _sessionId: string,
 ): Promise<ElevareCustomerPayload> {
   if (!E164_REGEX.test(phone)) {
     throw new ElevareCustomerValidationError(
-      'phone',
+      'primaryPhone',
       'must be E.164 format (e.g., +5521999998888)',
     );
   }
@@ -102,7 +147,6 @@ export async function extractCustomerData(
       name: guestProfiles.name,
       email: guestProfiles.email,
       phoneNumber: guestProfiles.phoneNumber,
-      language: guestProfiles.language,
     })
     .from(guestProfiles)
     .where(eq(guestProfiles.phoneNumber, phone))
@@ -111,26 +155,24 @@ export async function extractCustomerData(
   const guest = rows[0];
   if (!guest) {
     throw new ElevareCustomerValidationError(
-      'phone',
+      'primaryPhone',
       `guest profile not found for phone ${maskPhone(phone)}`,
     );
   }
 
   if (!guest.name || guest.name.trim().length === 0) {
     throw new ElevareCustomerValidationError(
-      'name',
+      'firstName',
       'guest profile has no name — cannot register with Elevare',
     );
   }
 
-  // Prefer session language if available (more recent), fallback to guest profile
-  const session = await getSession(sessionId);
-  const language = session?.language ?? guest.language ?? 'pt';
+  const { firstName, lastName } = splitName(guest.name);
 
   const payload: ElevareCustomerPayload = {
-    name: guest.name,
-    phone: guest.phoneNumber,
-    language,
+    primaryPhone: guest.phoneNumber,
+    firstName,
+    lastName,
   };
 
   if (guest.email) {
@@ -149,7 +191,7 @@ export async function extractCustomerData(
  * Flow:
  * 1. Check Redis cache for customerId by phone
  * 2. If cached, return immediately (skip API)
- * 3. Otherwise, POST /customers
+ * 3. Otherwise, POST /global-agent/customers
  * 4. Cache the returned customerId (TTL 24h)
  * 5. Return customerId
  */
@@ -161,7 +203,7 @@ export async function registerCustomer(
 ): Promise<ElevareCustomerResponse> {
   validatePayload(payload);
 
-  const cacheKey = ELEVARE_CUSTOMER_REDIS_KEY(payload.phone);
+  const cacheKey = ELEVARE_CUSTOMER_REDIS_KEY(payload.primaryPhone);
 
   // 1. Check cache
   let cached: string | null = null;
@@ -170,14 +212,14 @@ export async function registerCustomer(
   } catch (err) {
     logger.warn('elevare_customer_cache_read_failed', {
       error: err instanceof Error ? err.message : String(err),
-      phoneMasked: maskPhone(payload.phone),
+      phoneMasked: maskPhone(payload.primaryPhone),
     });
   }
 
   if (cached) {
     logger.warn('elevare_customer_cache_hit', {
       customerId: cached,
-      phoneMasked: maskPhone(payload.phone),
+      phoneMasked: maskPhone(payload.primaryPhone),
     });
     return { customerId: cached };
   }
@@ -185,7 +227,7 @@ export async function registerCustomer(
   // 2. Call API
   try {
     const response = await client.request<ElevareCustomerResponse>(
-      '/customers',
+      '/global-agent/customers',
       'POST',
       payload,
     );
@@ -207,14 +249,12 @@ export async function registerCustomer(
 
     logger.info('elevare_customer_registered', {
       customerId: response.customerId,
-      phoneMasked: maskPhone(payload.phone),
+      phoneMasked: maskPhone(payload.primaryPhone),
       emailMasked: payload.email ? maskEmail(payload.email) : null,
-      language: payload.language,
     });
 
     return response;
   } catch (error) {
-    // Map 4xx → validation error, keep 5xx as ElevareApiError
     if (error instanceof ElevareApiError && error.statusCode >= 400 && error.statusCode < 500) {
       throw new ElevareCustomerValidationError(
         'payload',
@@ -229,7 +269,7 @@ export async function registerCustomer(
 
 export const RegisterCustomerParams = z.object({
   phone: z.string().describe('Guest phone number in E.164 format (e.g., +5521999998888)'),
-  sessionId: z.string().describe('Active session ID to extract language and context'),
+  sessionId: z.string().describe('Active session ID (currently unused; kept for future context enrichment)'),
 });
 
 export type RegisterCustomerParams = z.infer<typeof RegisterCustomerParams>;
@@ -247,7 +287,7 @@ export function createRegisterCustomerTool(
     name: 'register_customer',
     description:
       'Registers the guest as a customer in Elevare before generating a quotation. ' +
-      'Extracts guest data from guest_profiles + session, validates, registers via API, ' +
+      'Extracts guest data from guest_profiles, validates, registers via API, ' +
       'caches customerId for 24h. Use during API_BOOKING flow after guest selects an option.',
     parameters: RegisterCustomerParams,
     execute: async (params) => {

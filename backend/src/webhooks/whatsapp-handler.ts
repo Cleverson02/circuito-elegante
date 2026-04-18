@@ -32,7 +32,6 @@ import {
   isConnectionEvent,
   parseEvolutionMessage,
   extractPhoneFromJid,
-  WHATSAPP_EVENT_TYPES,
 } from './whatsapp-types.js';
 
 // ─── Configuration ──────────────────────────────────────────────
@@ -41,8 +40,6 @@ const WEBHOOK_SOURCE = 'evolution';
 const WEBHOOK_ROUTE = '/webhook/whatsapp';
 const SIGNATURE_HEADER = 'x-evolution-signature';
 const RATE_LIMIT_PER_MINUTE = 30;
-const RATE_LIMIT_BURST = 5;      // per 10 seconds
-const BURST_WINDOW_SECONDS = 10;
 
 // ─── Dependencies (injected) ────────────────────────────────────
 

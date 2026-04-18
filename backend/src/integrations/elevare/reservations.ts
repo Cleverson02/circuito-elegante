@@ -218,30 +218,20 @@ const DEFAULT_LIMIT = 10;
  * `{ found: false, error: true }` result so the Persona Agent can emit
  * a graceful fallback message.
  *
- * Auth: uses x-client-id + x-client-secret headers (per the Global Agent
- * Postman collection). Falls back to an error result if credentials are
- * not configured.
+ * Auth: ElevareClient sends x-client-id + x-client-secret automatically
+ * (credentials validated at boot via zod in config.ts).
+ *
+ * Known ambiguity: Postman documents query params email, confirmationNumber,
+ * guestName, checkInFrom, checkInTo, hotelId, limit. `guestPhone` used by
+ * detectIdentifierType is NOT in the Postman — pending Elevare confirmation
+ * (tracked in Story 3.12 followup).
  */
 export async function getReservations(
   client: ElevareClient,
   logger: Logger,
   identifier: string,
-  options?: {
-    clientId?: string;
-    clientSecret?: string;
-  },
 ): Promise<ReservationLookupResult> {
   const info = detectIdentifierType(identifier);
-
-  if (!options?.clientId || !options?.clientSecret) {
-    logger.error('reservation_lookup_failed', {
-      identifierType: info.type,
-      errorType: 'missing_credentials',
-      errorMessage: 'ELEVARE_CLIENT_ID or ELEVARE_CLIENT_SECRET not configured',
-    });
-    return { found: false, error: true, suggestion: 'front_desk' };
-  }
-
   const identifierMasked = maskPII(info.value, info.type);
   const queryParams = new URLSearchParams({
     [info.queryParam]: info.value,
@@ -252,14 +242,6 @@ export async function getReservations(
     const response = await client.request<ElevareReservationsResponse>(
       `${RESERVATIONS_ENDPOINT}?${queryParams.toString()}`,
       'GET',
-      undefined,
-      {
-        overrideAuth: true,
-        headers: {
-          'x-client-id': options.clientId,
-          'x-client-secret': options.clientSecret,
-        },
-      },
     );
 
     const rawReservations = response.reservations ?? response.results ?? [];

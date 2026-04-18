@@ -41,7 +41,7 @@ function makeFailingClient(error: Error): any {
   };
 }
 
-const CREDS = { clientId: 'ci-test', clientSecret: 'cs-test' };
+// CREDS removed — auth now handled by ElevareClient via config (Story 3.11)
 
 const RAW_RESERVATION = {
   id: 'resv-internal-001',
@@ -257,7 +257,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result.found).toBe(true);
       if (result.found) {
@@ -274,19 +274,11 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      await getReservations(client, logger, 'ABC123', CREDS);
+      await getReservations(client, logger, 'ABC123');
 
       expect(client.request).toHaveBeenCalledWith(
         expect.stringContaining('/global-agent/reservations?'),
         'GET',
-        undefined,
-        expect.objectContaining({
-          overrideAuth: true,
-          headers: expect.objectContaining({
-            'x-client-id': 'ci-test',
-            'x-client-secret': 'cs-test',
-          }),
-        }),
       );
       const callArgs = client.request.mock.calls[0];
       expect(callArgs[0]).toContain('confirmationNumber=ABC123');
@@ -308,7 +300,6 @@ describe('check_reservation tool', () => {
         client,
         logger,
         'joao@email.com',
-        CREDS,
       );
 
       expect(result.found).toBe(true);
@@ -328,7 +319,6 @@ describe('check_reservation tool', () => {
         client,
         logger,
         '+5511999887766',
-        CREDS,
       );
 
       expect(result.found).toBe(true);
@@ -341,7 +331,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [] });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ZZZ999', CREDS);
+      const result = await getReservations(client, logger, 'ZZZ999');
 
       expect(result).toEqual({ found: false, suggestion: 'front_desk' });
       expect(logger.warn).toHaveBeenCalledWith(
@@ -354,7 +344,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ results: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
       expect(result.found).toBe(true);
     });
 
@@ -362,7 +352,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({});
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
       expect(result).toEqual({ found: false, suggestion: 'front_desk' });
     });
 
@@ -373,7 +363,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({
         found: false,
@@ -397,7 +387,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({
         found: false,
@@ -413,7 +403,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({
         found: false,
@@ -428,7 +418,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({ found: false, suggestion: 'front_desk' });
     });
@@ -439,7 +429,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({
         found: false,
@@ -448,29 +438,16 @@ describe('check_reservation tool', () => {
       });
     });
 
-    it('should return error when credentials are missing', async () => {
-      const client = makeClient({ reservations: [] });
-      const logger = makeLogger();
-
-      const result = await getReservations(client, logger, 'ABC123', {});
-
-      expect(result).toEqual({
-        found: false,
-        error: true,
-        suggestion: 'front_desk',
-      });
-      expect(client.request).not.toHaveBeenCalled();
-      expect(logger.error).toHaveBeenCalledWith(
-        'reservation_lookup_failed',
-        expect.objectContaining({ errorType: 'missing_credentials' }),
-      );
-    });
+    // NOTE: "should return error when credentials are missing" test removed —
+    // credentials are now validated at boot (zod schema in config.ts). Missing
+    // CLIENT_ID/CLIENT_SECRET crashes the process before any getReservations call
+    // can happen (Story 3.11 AC4).
 
     it('should handle unknown runtime errors gracefully', async () => {
       const client = makeFailingClient(new Error('network blew up'));
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result).toEqual({
         found: false,
@@ -495,7 +472,7 @@ describe('check_reservation tool', () => {
       });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result.found).toBe(true);
       if (result.found) {
@@ -517,7 +494,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result.found).toBe(true);
       if (result.found) {
@@ -536,7 +513,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      const result = await getReservations(client, logger, 'ABC123', CREDS);
+      const result = await getReservations(client, logger, 'ABC123');
 
       expect(result.found).toBe(true);
       if (result.found) {
@@ -567,7 +544,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      await getReservations(client, logger, 'joao@email.com', CREDS);
+      await getReservations(client, logger, 'joao@email.com');
 
       const infoCall = logger.info.mock.calls.find(
         (c: any) => c[0] === 'reservation_lookup',
@@ -584,7 +561,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [] });
       const logger = makeLogger();
 
-      await getReservations(client, logger, '+5511999887766', CREDS);
+      await getReservations(client, logger, '+5511999887766');
 
       const warnCall = logger.warn.mock.calls.find(
         (c: any) => c[0] === 'reservation_not_found',
@@ -601,7 +578,7 @@ describe('check_reservation tool', () => {
       });
       const logger = makeLogger();
 
-      await getReservations(client, logger, 'ABC123', CREDS);
+      await getReservations(client, logger, 'ABC123');
 
       const infoCall = logger.info.mock.calls.find(
         (c: any) => c[0] === 'reservation_lookup',
@@ -613,7 +590,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      await getReservations(client, logger, 'ABC123', CREDS);
+      await getReservations(client, logger, 'ABC123');
 
       const infoCall = logger.info.mock.calls.find(
         (c: any) => c[0] === 'reservation_lookup',
@@ -654,14 +631,14 @@ describe('check_reservation tool', () => {
     it('should expose tool with name "check_reservation"', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
+      const tool = createCheckReservationTool(client, logger) as any;
       expect(tool.name).toBe('check_reservation');
     });
 
     it('should expose a descriptive description for the Orchestrator', () => {
       const client = makeClient({ reservations: [] });
       const logger = makeLogger();
-      const tool = createCheckReservationTool(client, logger, CREDS) as any;
+      const tool = createCheckReservationTool(client, logger) as any;
       expect(tool.description).toBeDefined();
       expect(tool.description.length).toBeGreaterThan(50);
       expect(tool.description.toLowerCase()).toContain('reservation');
@@ -672,7 +649,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      const response = (await executeCheckReservation(client, logger, CREDS, {
+      const response = (await executeCheckReservation(client, logger, {
         identifier: 'ABC123',
       })) as CheckReservationResponse;
 
@@ -689,7 +666,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [] });
       const logger = makeLogger();
 
-      const response = (await executeCheckReservation(client, logger, CREDS, {
+      const response = (await executeCheckReservation(client, logger, {
         identifier: 'NOMATCH',
       })) as CheckReservationResponse;
 
@@ -706,7 +683,7 @@ describe('check_reservation tool', () => {
       );
       const logger = makeLogger();
 
-      const response = (await executeCheckReservation(client, logger, CREDS, {
+      const response = (await executeCheckReservation(client, logger, {
         identifier: 'ABC123',
       })) as CheckReservationResponse;
 
@@ -722,7 +699,7 @@ describe('check_reservation tool', () => {
       const client = makeClient({ reservations: [RAW_RESERVATION] });
       const logger = makeLogger();
 
-      await executeCheckReservation(client, logger, CREDS, { identifier: '  ABC123  ' });
+      await executeCheckReservation(client, logger, { identifier: '  ABC123  ' });
 
       const callArgs = client.request.mock.calls[0];
       expect(callArgs[0]).toContain('confirmationNumber=ABC123');

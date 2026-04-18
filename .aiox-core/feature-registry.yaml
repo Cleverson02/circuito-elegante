@@ -68,9 +68,10 @@ memory:
     description: Proposes CLAUDE.md, rules, and agent config improvements from learned heuristics (MIS-7)
     module: memory
 
-  # pro.memory.synapse — REMOVED (INS-4.11 AC9)
-  # Moved to open-source: .aios-core/core/synapse/memory/synapse-memory-provider.js
-  # SYNAPSE Memory Bridge is now part of the open-source SYNAPSE engine.
+  - id: pro.memory.synapse
+    name: SYNAPSE Memory Bridge
+    description: Feature-gated MIS consumer for SYNAPSE engine bracket-aware memory injection (SYN-10)
+    module: memory
 
   - id: pro.memory.sync
     name: Memory Sync
@@ -218,6 +219,7 @@ patterns:
     pattern:
       - "pro.squads.premium"
       - "pro.memory.extended"
+      - "pro.memory.synapse"
       - "pro.cli.parallel"
     description: Individual tier - essential premium features
     tier: individual

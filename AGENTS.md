@@ -2,6 +2,11 @@
 
 Este arquivo define as instrucoes do projeto e o catalogo completo de agentes e squads.
 
+
+
+
+
+
 <!-- AIOX-MANAGED-START: core -->
 ## Core Rules
 
@@ -26,7 +31,6 @@ Este arquivo define as instrucoes do projeto e o catalogo completo de agentes e 
 - Core framework: `.aiox-core/`
 - CLI entrypoints: `bin/`
 - Shared packages: `packages/`
-- Squads: `squads/`
 - Tests: `tests/`
 - Docs: `docs/`
 <!-- AIOX-MANAGED-END: codebase -->
@@ -43,24 +47,26 @@ Este arquivo define as instrucoes do projeto e o catalogo completo de agentes e 
 <!-- AIOX-MANAGED-END: commands -->
 
 <!-- AIOX-MANAGED-START: shortcuts -->
-## AIOX Core Agents
+## Agent Shortcuts
 
-Agentes do framework AIOX. Ativar via `/AIOX:agents:{id}` ou `@{id}`:
+Preferencia de ativacao no Codex CLI:
+1. Use `/skills` e selecione `aiox-<agent-id>` vindo de `.codex/skills` (ex.: `aiox-architect`)
+2. Se preferir, use os atalhos abaixo (`@architect`, `/architect`, etc.)
 
-| Agent | Persona | Slash Command | Escopo |
-|-------|---------|---------------|--------|
-| `@aiox-master` | Orion | `/AIOX:agents:aiox-master` | Orquestrador master, framework dev |
-| `@dev` | Dex | `/AIOX:agents:dev` | Implementacao de codigo |
-| `@qa` | Quinn | `/AIOX:agents:qa` | Testes e qualidade |
-| `@architect` | Aria | `/AIOX:agents:architect` | Arquitetura e design tecnico |
-| `@pm` | Morgan | `/AIOX:agents:pm` | Product Management |
-| `@po` | Pax | `/AIOX:agents:po` | Product Owner, stories/epics |
-| `@sm` | River | `/AIOX:agents:sm` | Scrum Master |
-| `@analyst` | Alex | `/AIOX:agents:analyst` | Pesquisa e analise |
-| `@data-engineer` | Dara | `/AIOX:agents:data-engineer` | Database design |
-| `@ux-design-expert` | Uma | `/AIOX:agents:ux-design-expert` | UX/UI design |
-| `@devops` | Gage | `/AIOX:agents:devops` | CI/CD, git push (EXCLUSIVO) |
-| `@squad-creator` | — | `/AIOX:agents:squad-creator` | Criacao de squads |
+Interprete os atalhos abaixo carregando o arquivo correspondente em `.aiox-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate `*exit`:
+
+- `@architect`, `/architect`, `/architect.md` -> `.aiox-core/development/agents/architect.md`
+- `@dev`, `/dev`, `/dev.md` -> `.aiox-core/development/agents/dev.md`
+- `@qa`, `/qa`, `/qa.md` -> `.aiox-core/development/agents/qa.md`
+- `@pm`, `/pm`, `/pm.md` -> `.aiox-core/development/agents/pm.md`
+- `@po`, `/po`, `/po.md` -> `.aiox-core/development/agents/po.md`
+- `@sm`, `/sm`, `/sm.md` -> `.aiox-core/development/agents/sm.md`
+- `@analyst`, `/analyst`, `/analyst.md` -> `.aiox-core/development/agents/analyst.md`
+- `@devops`, `/devops`, `/devops.md` -> `.aiox-core/development/agents/devops.md`
+- `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.aiox-core/development/agents/data-engineer.md`
+- `@ux-design-expert`, `/ux-design-expert`, `/ux-design-expert.md` -> `.aiox-core/development/agents/ux-design-expert.md`
+- `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.aiox-core/development/agents/squad-creator.md`
+- `@aiox-master`, `/aiox-master`, `/aiox-master.md` -> `.aiox-core/development/agents/aiox-master.md`
 <!-- AIOX-MANAGED-END: shortcuts -->
 
 <!-- AIOX-MANAGED-START: squads -->

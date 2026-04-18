@@ -220,13 +220,13 @@ export async function createQuotation(
   try {
     response = await client.request<
       { data: CreateQuotationResult } | CreateQuotationResult
-    >('/quotations', 'POST', body);
+    >('/global-agent/quotations', 'POST', body);
   } catch (error) {
     if (error instanceof ElevareApiError) {
       throw new QuotationApiError(
-        `POST /quotations failed: ${error.message}`,
+        `POST /global-agent/quotations failed: ${error.message}`,
         error.statusCode,
-        '/quotations',
+        '/global-agent/quotations',
         error.responseBody,
       );
     }
@@ -301,16 +301,16 @@ export async function regeneratePaymentLink(
   try {
     response = await client.request<
       { data: RegeneratePaymentLinkResult } | RegeneratePaymentLinkResult
-    >(`/quotations/${encodeURIComponent(quotationId)}/payment-link`, 'PUT', body);
+    >(`/global-agent/quotations/${encodeURIComponent(quotationId)}/payment-link`, 'PUT', body);
   } catch (error) {
     if (error instanceof ElevareApiError) {
       if (error.statusCode === 404) {
         throw new QuotationNotFoundError(quotationId);
       }
       throw new QuotationApiError(
-        `PUT /quotations/${quotationId}/payment-link failed: ${error.message}`,
+        `PUT /global-agent/quotations/${quotationId}/payment-link failed: ${error.message}`,
         error.statusCode,
-        `/quotations/${quotationId}/payment-link`,
+        `/global-agent/quotations/${quotationId}/payment-link`,
         error.responseBody,
       );
     }
@@ -364,16 +364,16 @@ export async function extendQuotationValidity(
   try {
     response = await client.request<
       { data: ExtendQuotationResult } | ExtendQuotationResult
-    >(`/quotations/${encodeURIComponent(quotationId)}/extend`, 'PUT', body);
+    >(`/global-agent/quotations/${encodeURIComponent(quotationId)}/extend`, 'PUT', body);
   } catch (error) {
     if (error instanceof ElevareApiError) {
       if (error.statusCode === 404) {
         throw new QuotationNotFoundError(quotationId);
       }
       throw new QuotationApiError(
-        `PUT /quotations/${quotationId}/extend failed: ${error.message}`,
+        `PUT /global-agent/quotations/${quotationId}/extend failed: ${error.message}`,
         error.statusCode,
-        `/quotations/${quotationId}/extend`,
+        `/global-agent/quotations/${quotationId}/extend`,
         error.responseBody,
       );
     }
@@ -431,16 +431,16 @@ export async function getQuotationStatus(
   try {
     response = await client.request<
       { data: GetQuotationStatusResult } | GetQuotationStatusResult
-    >(`/quotations/${encodeURIComponent(quotationId)}`, 'GET');
+    >(`/global-agent/quotations/${encodeURIComponent(quotationId)}`, 'GET');
   } catch (error) {
     if (error instanceof ElevareApiError) {
       if (error.statusCode === 404) {
         throw new QuotationNotFoundError(quotationId);
       }
       throw new QuotationApiError(
-        `GET /quotations/${quotationId} failed: ${error.message}`,
+        `GET /global-agent/quotations/${quotationId} failed: ${error.message}`,
         error.statusCode,
-        `/quotations/${quotationId}`,
+        `/global-agent/quotations/${quotationId}`,
         error.responseBody,
       );
     }

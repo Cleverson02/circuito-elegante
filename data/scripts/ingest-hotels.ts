@@ -1,8 +1,7 @@
 import postgres from 'postgres';
 import * as XLSX from 'xlsx';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-
-const XLSX_PATH = join(__dirname, '..', 'lista-hoteis-circuito-elegante.xlsx');
 
 // --- Types ---
 
@@ -71,7 +70,7 @@ function normalizeExperience(value: string): string {
 // --- Parsing ---
 
 export function parseXlsx(filePath: string): RawRow[] {
-  const workbook = XLSX.readFile(filePath);
+  const workbook = XLSX.read(readFileSync(filePath));
   const sheetName = workbook.SheetNames[0];
   if (!sheetName) throw new Error('XLSX has no sheets');
   const sheet = workbook.Sheets[sheetName]!;
@@ -233,6 +232,11 @@ async function upsertHotels(
 // --- Main ---
 
 async function main(): Promise<void> {
+  // Script e invocado via `npm run ingest:hotels` (cwd = raiz do projeto).
+  // Usar process.cwd() evita import.meta (ESM-only, quebra ts-jest CJS) e
+  // __dirname (CJS-only, ausente em ESM). Funciona em ambos os runtimes.
+  const XLSX_PATH = join(process.cwd(), 'data', 'lista-hoteis-circuito-elegante.xlsx');
+
   console.log('🏨 Ingestão de Hotéis — Circuito Elegante');
   console.log('=========================================\n');
 
@@ -282,7 +286,7 @@ async function main(): Promise<void> {
 }
 
 // Only run when executed directly (not when imported by tests)
-const isDirectExecution = require.main === module || process.argv[1]?.endsWith('ingest-hotels');
+const isDirectExecution = process.argv[1]?.endsWith('ingest-hotels.ts') || process.argv[1]?.endsWith('ingest-hotels');
 if (isDirectExecution) {
   main().catch((err) => {
     console.error('❌ Erro na ingestão:', err);

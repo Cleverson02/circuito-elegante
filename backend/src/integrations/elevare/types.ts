@@ -11,11 +11,12 @@
 // ─── Search Request ─────────────────────────────────────────────
 
 export interface ElevareSearchParams {
-  hotelId: string;
-  checkIn: string;   // ISO 8601 date: YYYY-MM-DD
-  checkOut: string;  // ISO 8601 date: YYYY-MM-DD
-  adults: number;    // >= 1
-  children: number;  // >= 0
+  hotelId: string;                // URL param: q
+  checkIn: string;                // ISO 8601 date YYYY-MM-DD → URL param: CheckIn
+  checkOut: string;               // ISO 8601 date YYYY-MM-DD → URL param: CheckOut
+  adults: number;                 // >= 1 → URL param: ad
+  children: number;               // >= 0 → URL param: ch
+  childrenAges?: number[];        // ages 0-17 → URL param: ag (comma-separated)
 }
 
 export interface ElevareMultiSearchParams {
@@ -25,6 +26,7 @@ export interface ElevareMultiSearchParams {
   checkOut: string;
   adults: number;
   children: number;
+  maxResults?: number;
 }
 
 // ─── Search Response ────────────────────────────────────────────

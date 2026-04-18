@@ -1,7 +1,7 @@
 {
     "version": "1.0",
-    "project": "CE",
-    "workspace": "C:/Dev/Projects/CE",
+    "project": "circuito-elegante",
+    "workspace": "C:/Users/Cleverson/projetos/circuito-elegante",
     "agents": {
         "enabled": true,
         "directory": ".antigravity\\agents",
