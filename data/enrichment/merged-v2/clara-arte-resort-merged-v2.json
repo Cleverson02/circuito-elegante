@@ -1,108 +1,61 @@
 {
   "slug": "clara-arte-resort",
   "name": "Clara Arte Resort",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.6060606060606061,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": true,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.61,
+  "completeness": 0.61,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Clara Arte Resort",
-      "confidence_type": "literal",
+    "1.1": { "value": "Clara Arte Resort", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "1.2": { "value": "Brumadinho", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam; JSON antigo dizia Dourado/MS (incorreto)" },
+    "1.3": { "value": "MG", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Inhotim", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://clararesorts.com.br/clara-arte/", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/", "note": "URL antiga claraarte.com.br tem ERR_TLS_CERT_ALTNAME_INVALID; rede usa clararesorts.com.br" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Portaria Inhotim, Rua B, 1500 — Povoado Inhotim, Brumadinho/MG, CEP 32497-142", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "2.4": { "value": "(16) 2108-0788; (16) 3345-9990", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "3.1": { "value": "Resort sofisticado que combina arte e natureza nos jardins do Instituto Inhotim, com ênfase em imersão cultural e experiências de bem-estar.", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "3.2": { "value": "Luxury Resort", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "4.1": { "value": null },
+    "4.2": {
+      "value": [
+        { "name": "Presidencial 1" },
+        { "name": "Presidencial 2" },
+        { "name": "Bangalô Master Plus" },
+        { "name": "Bangalô Master" },
+        { "name": "Bangalô Luxo" },
+        { "name": "Suíte Luxo" }
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://www.claraarte.com.br/"
+      "source_url": "https://clararesorts.com.br/clara-arte/"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Dourado",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "MS",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.claraarte.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.claraarte.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Chalé"
-        },
-        {
-          "name": "Suite Deluxe"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Trilhas",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 67 3292-5678",
-        "website": "https://www.claraarte.com.br/",
-        "address": "Dourado, MS"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sudeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Inhotim",
-      "source_type": "excel"
-    }
+    "4.3": { "value": null },
+    "5.1": { "value": null },
+    "5.2": { "value": "Piscina coberta aquecida; piscina externa com bar; jacuzzi", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "5.3": { "value": "Sim (piscina coberta é aquecida)", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "6.1": { "value": "Restaurante com opções diversas, incluindo seleção vegetariana", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "6.2": { "value": "Café da manhã, almoço e jantar inclusos na diária", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": "Acesso ao Instituto Inhotim com tours guiados; trilhas; observação de aves; apresentações de circo; programação de entretenimento", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "7.2": { "value": "SPA by L'Occitane (massagens e tratamentos corporais)", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "7.3": { "value": "Visitas guiadas ao museu (segundas/terças); workshops; atividades familiares; entretenimento noturno", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null },
+    "8.4": { "value": "Espaço infantil (playground, mini campo de futebol, brinquedoteca); pets de pequeno porte aceitos em acomodações selecionadas", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Acesso exclusivo ao Inhotim incluso na diária; parceria com Carbono Galeria (arte contemporânea); reconhecimento Condé Nast Johansens; email reservas@clararesorts.com.br", "source_type": "hotel_website", "source_url": "https://clararesorts.com.br/clara-arte/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Clara Arte Resort",
@@ -115,38 +68,25 @@
     "Experiência": "campo",
     "Destino": "Inhotim"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://clararesorts.com.br/clara-arte/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","6.3","6.4","8.1","8.2","8.3","9.1","9.2","9.3","10.2"],
+  "data_quality_warnings": [
+    "URL antiga claraarte.com.br tem cert TLS inválido — corrigida para clararesorts.com.br/clara-arte/",
+    "JSON antigo: Dourado/MS (incorreto) — corrigido para Brumadinho/MG"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T12:45:00Z",
+      "wave": 1,
+      "primary_source": "hotel_website",
+      "fields_added": 14,
+      "coverage_before": 0.18,
+      "coverage_after": 0.61,
+      "notes": "Site da rede Clara Resorts (clararesorts.com.br/clara-arte/). Resort em Inhotim com SPA L'Occitane e acesso ao museu."
+    }
   ]
 }
