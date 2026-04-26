@@ -1,108 +1,64 @@
 {
   "slug": "nomaa-hotel",
   "name": "Nomaa Hotel",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.8787878787878788,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.88,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Nomaa Hotel",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://nomaahotel.com/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Trancoso",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "BA",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://nomaahotel.com/",
-      "confidence_type": "literal",
-      "source_url": "https://nomaahotel.com/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Nomaa Hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q1" },
+    "1.2": { "value": "Curitiba", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q2", "note": "FAQ + Excel confirmam; JSON antigo dizia Trancoso/BA (incorreto)" },
+    "1.3": { "value": "PR", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q3" },
+    "1.4": { "value": "sul", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Curitiba", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.nomaa.com.br", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/HAzUzmq9S4x4ypMUA", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Hotel boutique 5 estrelas, conceito contemporâneo, sofisticado e cosmopolita. Une design, arte e serviço personalizado em localização privilegiada no Batel. Luxo sem formalidade, com forte conexão com a cidade.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q6" },
+    "3.2": { "value": "Hotel Boutique de Luxo (5 estrelas)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q7" },
+    "4.1": { "value": null },
+    "4.2": {
       "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Bungalow Deluxe"
-        }
+        { "name": "Max", "size_m2": 25, "max_guests": 2 },
+        { "name": "Vitra", "size_m2": 37, "bed": "King", "max_guests": 2 },
+        { "name": "Magnum", "size_m2": 37, "feature": "design moderno", "max_guests": 2 },
+        { "name": "Meet", "size_m2": 62, "max_guests": 2 },
+        { "name": "Suíte Ático", "size_m2": 91, "max_guests": 2 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Praia",
-        "Spa",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 73 2668-2000",
-        "website": "https://nomaahotel.com/",
-        "address": "Trancoso, Bahia"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sul",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Curitiba",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Enxovais de alta qualidade, roupões, chinelos havaianas, amenities de banho premium, secador de cabelo, cofre digital, cafeteira Nespresso, chaleira elétrica, SmarTV, Wi-Fi cortesia", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q9" },
+    "5.1": { "value": "Valet parking, pago à parte", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q10" },
+    "5.2": { "value": "Não possui piscina", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q11" },
+    "5.3": { "value": "Não possui piscina", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q12" },
+    "6.1": { "value": [{ "name": "Restaurante Nomade", "cuisine": "contemporânea com influências regionais e internacionais", "feature": "ambiente sofisticado aberto ao público" }], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q13" },
+    "6.2": { "value": "Café da manhã incluso na diária (buffet e à la carte)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q14" },
+    "6.3": { "value": "Café da manhã buffet e à la carte; almoço executivo; jantar e almoço de fim de semana à la carte; menus sazonais; eventos", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Spa urbano Gaya, academia 24h, biblioteca/lounge, restaurante, acervo de arte", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q16" },
+    "7.2": { "value": "Spa Gaya com massagens, terapias e tratamentos corporais", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q17" },
+    "7.3": { "value": "Pacotes românticos, aniversário e núpcias", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q18" },
+    "8.1": { "value": "Check-in 15h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q21" },
+    "8.2": { "value": "Sob disponibilidade", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q22" },
+    "8.3": { "value": "Até 24 horas do check-in: isento de cobrança", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q26" },
+    "8.4": { "value": "Crianças bem-vindas; camas extras e berços sob solicitação, sujeitos a disponibilidade", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q27" },
+    "9.1": { "value": "Concierge 24 horas. Agendamento de experiências na cidade, recomendações gastronômicas/culturais, reservas exclusivas.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q19" },
+    "9.2": { "value": "18 km do Aeroporto Internacional Afonso Pena (~30 min de carro). Transfer sob solicitação, pago à parte.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q23-q24" },
+    "9.3": { "value": "Disponibilidade de estacionamento, horários do restaurante, serviços do spa, pacotes românticos", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q25" },
+    "10.1": { "value": "Acervo de arte; design premiado; conceito de luxo contemporâneo; restaurante Nomade; spa urbano Gaya; localização no Batel; serviços personalizados; Wi-Fi de alta velocidade em todo o hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q29-q30" },
+    "10.2": { "value": "Aceita cartões de crédito (parcelamento até 3x para reservas direto no hotel), Pix, dinheiro, cartão de débito. Não aceita cheques.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#nomaa-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Nomaa Hotel",
@@ -115,38 +71,24 @@
     "Experiência": "cidade",
     "Destino": "Curitiba"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Nomaa Hotel", "lines": "1744-1814" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: Trancoso/BA + DDD 73 (incorreto) — corrigido para Curitiba/PR via FAQ + Excel"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:20:00Z",
+      "wave": 2,
+      "primary_source": "questionnaire",
+      "fields_added": 24,
+      "coverage_before": 0.18,
+      "coverage_after": 0.88,
+      "notes": "GOLD via FAQ. Hotel boutique 5★ no Batel/Curitiba. 5 categorias detalhadas. Restaurante Nomade. Spa urbano Gaya. SEM piscina. Concierge 24h."
+    }
   ]
 }
