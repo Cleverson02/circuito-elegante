@@ -1,108 +1,52 @@
 {
   "slug": "hcm-hotel-corais-de-manaira",
   "name": "HCM Hotel Corais de Manaíra",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.5757575757575758,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": false, "4.3": false,
+    "5.1": true, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": true,
+    "9.1": true, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.58,
+  "completeness": 0.58,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "HCM Hotel Corais de Manaíra",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://hcmhotel.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "João Pessoa",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "PB",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://hcmhotel.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://hcmhotel.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Deluxe"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Spa",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 83 3226-1000",
-        "website": "https://hcmhotel.com.br/",
-        "address": "João Pessoa, Paraíba"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Manaíra",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "HCM Hotel Corais de Manaíra", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "1.2": { "value": "João Pessoa", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.3": { "value": "PB", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Manaíra", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://hcmhotel.com.br/", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Av. João Maurício, 1497 — João Pessoa/PB, CEP 58038-000", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "2.4": { "value": "(83) 2106-0850 (reservas); WhatsApp (83) 9100-0255", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "3.1": { "value": "Hotel boutique beira-mar com serviço personalizado, atenção aos detalhes e equipe treinada para hospitalidade completa no coração vibrante de Manaíra.", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "3.2": { "value": "Hotel Boutique", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "4.1": { "value": null }, "4.2": { "value": null }, "4.3": { "value": null },
+    "5.1": { "value": "Estacionamento coberto com serviço de manobrista (pago)", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "5.2": { "value": "Piscina disponível (rooftop Uçá)", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "5.3": { "value": null },
+    "6.1": { "value": [
+      { "name": "Mero Restaurante", "cuisine": "fusion regional contemporânea" },
+      { "name": "Uçá Rooftop", "type": "listening bar com drinks especiais" }
+    ], "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "6.2": { "value": "Café da manhã, almoço e jantar disponíveis no Mero Restaurante", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": "Tarpon Beach Lounge (serviço de praia); Uçá Rooftop (bar)", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "7.2": { "value": "Physalis Academia (24 horas); SPA disponível", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null },
+    "8.4": { "value": "Pet-friendly; berços disponíveis (sob disponibilidade)", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "9.1": { "value": "Equipe multilíngue; recepção 24 horas", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Tetra Coworking space; Panaque Lounge (amenidade exclusiva 4º andar); localização beachfront", "source_type": "hotel_website", "source_url": "https://hcmhotel.com.br/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "HCM Hotel Corais de Manaíra",
@@ -115,38 +59,22 @@
     "Experiência": "praia",
     "Destino": "Manaíra"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://hcmhotel.com.br/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.2","4.3","5.3","6.3","6.4","7.3","8.1","8.2","8.3","9.2","9.3","10.2"],
+  "data_quality_warnings": [],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T14:05:00Z",
+      "wave": 2,
+      "primary_source": "hotel_website",
+      "fields_added": 13,
+      "coverage_before": 0.18,
+      "coverage_after": 0.58,
+      "notes": "Hotel boutique beira-mar João Pessoa/PB. Mero Restaurante + Uçá Rooftop, Physalis Academia 24h, Tetra Coworking, pet-friendly."
+    }
   ]
 }
