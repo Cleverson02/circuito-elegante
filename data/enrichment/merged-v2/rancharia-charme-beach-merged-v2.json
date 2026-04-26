@@ -1,107 +1,66 @@
 {
   "slug": "rancharia-charme-beach",
-  "name": "Ranchária Charme Beach",
-  "template_coverage": 0.18181818181818182,
+  "name": "Rancharia Charme Beach",
+  "template_coverage": 0.8484848484848485,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.85,
+  "completeness": 0.85,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Ranchária Charme Beach",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://rancharia.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Jericoacoara",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "CE",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://rancharia.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://rancharia.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Rancharia Charme Beach", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q1" },
+    "1.2": { "value": "Barreirinhas", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "FAQ confirma Atins (distrito de Barreirinhas/MA); JSON antigo dizia Jericoacoara/CE (incorreto)" },
+    "1.3": { "value": "MA", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Lençóis Maranhenses", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://charmeatins.com.br", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q4" },
+    "2.2": { "value": "https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Pousada boutique do grupo Charme Atins, no vilarejo de Atins (Lençóis Maranhenses), de frente ao Rio Preguiças com vista para o mar. 16 suítes em local de esplendor — refúgio intimista e sofisticado para quem busca conforto, natureza e privacidade.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q6" },
+    "3.2": { "value": "Pousada Boutique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q7" },
+    "4.1": { "value": 16, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q6" },
+    "4.2": {
       "value": [
-        {
-          "name": "Bungalow"
-        },
-        {
-          "name": "Suite Vista Mar"
-        }
+        { "name": "ST Quadruplo Superior Piscina", "qty": 1 },
+        { "name": "ST Triplo Térrea", "qty": 1 },
+        { "name": "Quadruplo Vista Mar", "qty": 1 },
+        { "name": "ST Casal Lateral", "qty": 5 },
+        { "name": "ST Casal Piscina", "qty": 6 },
+        { "name": "Triplo Superior Piscina", "qty": 1 },
+        { "name": "ST Triplo Superior Parcial Mar", "qty": 1 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 88 3421-8200",
-        "website": "https://rancharia.com.br/",
-        "address": "Jericoacoara, Ceará"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Lençóis Maranhenses",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Shampoo, condicionador, sabonete em barra, hidratante, sabonete líquido — Linha Terra Organics (Realgems)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q9" },
+    "5.1": { "value": "Estacionamento gratuito", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q10" },
+    "5.2": { "value": "Possui piscinas (várias categorias com piscina privativa)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q11" },
+    "5.3": { "value": "Não (clima em Atins é sempre quente)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q12" },
+    "6.1": { "value": "Restaurantes do grupo Charme Atins: Beach Bar (pratos nordestinos, drinks autorais, música ao vivo); Ça-Vá na Vila Charme (mediterrâneo + temperos maranhenses); Sushi Charme Atins (único japonês da região); Mirante Charme Atins (cozinha internacional, intimista)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q13" },
+    "6.2": { "value": "Café da manhã à la carte servido exclusivamente na varanda do quarto", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q14" },
+    "6.3": { "value": "Jantares com música ao vivo e harmonização nos restaurantes próprios (sob demanda); passeios adicionais com gastronomia (jantar nas dunas, nascer/pôr do sol nas dunas) operados por agência parceira", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Passeios via parceiros: dunas, kitesurf, dia de praia, caiaque, trekking, pesca, stand up, quadriciclo, jantar nas dunas, lancha. Atins tem lagoas, rio, mar, dunas.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q16" },
+    "7.2": { "value": "Espaço de spa local com massagistas parceiras, academia, espaço de yoga, piscina privativa com hidromassagem", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q17" },
+    "7.3": { "value": "Sem programação dedicada exclusiva; passeios via agências podem ser privativos ou compartilhados", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q18" },
+    "8.1": { "value": "Check-in 14h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q21" },
+    "8.2": { "value": "Sob disponibilidade, taxa de meia diária", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q22" },
+    "8.3": { "value": "Até 31 dias antes: 100% de devolução. 8-30 dias: devolução com multa de 30%. Até 7 dias: sem devolução.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q26" },
+    "8.4": { "value": "Sem camas extras. 1 criança até 10 anos cortesia (acomodação com pais/adultos). Não aceita pets.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q27-q30" },
+    "9.1": { "value": "Concierge desde a chegada (informa passeios, faz abertura de cama no fim da tarde)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q19" },
+    "9.2": { "value": "Aeroporto Internacional de São Luís + 3h30 de carro até Barreirinhas + 1h de barco pelo Rio Preguiças até Atins. Aeroporto de Barreirinhas (aeronaves particulares). Helicóptero São Luís → Atins (1h voo). Transfer pago, auxiliam contratação.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q23-q24" },
+    "9.3": { "value": "Logística de chegada (4-5h carro+barco), passeios disponíveis, quantos dias ficar (recomendam 5 noites)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q25" },
+    "10.1": { "value": "Espaço para eventos na Rancharia (única unidade do grupo Charme com isso); acomodações bem cuidadas; equipe treinada; transporte exclusivo gratuito dentro de Atins; piscina privativa em várias categorias; Lençóis Maranhenses; arquitetura orgânica integrada à natureza", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q20-q30" },
+    "10.2": { "value": "Pagamento via link de cartão de crédito no ato da reserva. Não aceita pets.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#charme-atins-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Rancharia Charme Beach",
@@ -114,38 +73,25 @@
     "Experiência": "praia",
     "Destino": "Lençóis Maranhenses"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Alma Charme/Atins Charme/Rancharia (compartilhado)", "lines": "5-223" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: Jericoacoara/CE + DDD 88 — corrigido para Atins/Barreirinhas/MA (Lençóis Maranhenses)",
+    "FAQ compartilhado entre Alma Charme + Atins Charme + Rancharia (linha 5)"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:40:00Z",
+      "wave": 3,
+      "primary_source": "questionnaire",
+      "fields_added": 23,
+      "coverage_before": 0.18,
+      "coverage_after": 0.85,
+      "notes": "GOLD via FAQ compartilhado Charme Atins. Pousada boutique Atins/Lençóis MA, 16 suítes de frente ao Rio Preguiças, várias categorias com piscina privativa. Único do grupo com espaço para eventos."
+    }
   ]
 }
