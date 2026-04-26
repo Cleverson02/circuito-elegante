@@ -1,107 +1,67 @@
 {
   "slug": "hotel-fazenda-suica-le-canton",
   "name": "Hotel Fazenda Suíça Le Canton",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.8787878787878788,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.88,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Hotel Fazenda Suíça Le Canton",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://hotelsuicalecanyon.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "São Lourenço",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "MG",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://hotelsuicalecanyon.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://hotelsuicalecanyon.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Hotel Fazenda Suíça Le Canton", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q1", "note": "Parte do complexo Le Canton (3 hotéis: Village, Magique, Fazenda Suíça)" },
+    "1.2": { "value": "Teresópolis", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q2", "note": "FAQ + Excel confirmam; JSON antigo dizia São Lourenço/MG (incorreto)" },
+    "1.3": { "value": "RJ", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q3" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Serra Fluminense", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://lecanton.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/4PKdbJsYHe9ajwTe7", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Hotel Fazenda do complexo Le Canton em Teresópolis. Total imersão na natureza com estrutura de alimentação, lazer e Fazendinha. Inspirado nas famosas fazendas suíças, aconchegante e tranquilo.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q6" },
+    "3.2": { "value": "Resort (parte de complexo de 3 hotéis)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q7" },
+    "4.1": { "value": null, "note": "FAQ lista categorias mas não totaliza" },
+    "4.2": {
       "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Chalé"
-        }
+        { "name": "Luxo (Fazenda)", "max_guests": 4 },
+        { "name": "Luxo Superior (Fazenda)", "max_guests": 4 },
+        { "name": "Master (Fazenda)", "max_guests": 5 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q8",
+      "note": "Categorias do Hotel Fazenda Suíça (complexo também tem Village e Magique com mais categorias)"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Trilhas",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 35 3332-1000",
-        "website": "https://hotelsuicalecanyon.com.br/",
-        "address": "São Lourenço, MG"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sudeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Serra Fluminense",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Amenities L'Occitane, enxoval premium, secador de cabelo, Wi-Fi nos quartos", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q9" },
+    "5.1": { "value": "Estacionamento gratuito para hóspedes", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q10" },
+    "5.2": { "value": "1 piscina no Hotel Fazenda Suíça (complexo total: 2 no Village com tobogã + 1 piscina aquecida no SPA terceirizado + 1 na Fazenda Suíça)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q11" },
+    "5.3": { "value": "Climatizadas nos hotéis; piscina aquecida no SPA terceirizado (paga à parte)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q12" },
+    "6.1": { "value": [
+      { "name": "Gasthaus Kulm", "feature": "restaurante principal da Fazenda Suíça (equivalente ao Lugano do Village)" },
+      { "name": "Queijaria", "feature": "tábuas de queijos e petiscos" },
+      { "name": "Bar da piscina", "feature": "petiscos e bebidas" }
+    ], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q13" },
+    "6.2": { "value": "Pensão completa: café, almoço e jantar inclusos. Bebidas e extras à parte.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q14" },
+    "6.3": { "value": null, "note": "FAQ deixou em branco (q15)" },
+    "6.4": { "value": null },
+    "7.1": { "value": "INCLUSO: piscinas, sinuca, jogos de mesa/salão, baby club, kids park, quadras de esporte, pescaria, minigolfe, bike park (aluguel de bikes), fazendinha, entretenimento noturno (shows musicais, aulas de circo, som e luzes). À PARTE: boliche, arco e flecha, arvorismo, trilhas, tirolesa, paintball, boia canadense, parc magique, hípica, SPA.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q16" },
+    "7.2": { "value": "SPA by L'Occitane com diversas opções de massagens e terapias (à parte)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q17" },
+    "7.3": { "value": "Recreação e programações para todas as idades, variando conforme a data", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q18" },
+    "8.1": { "value": "Check-in 16h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q21" },
+    "8.2": { "value": "Sim, mediante disponibilidade de quartos do dia, com cobrança de meia diária balcão", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q22" },
+    "8.3": { "value": "Primordialmente tarifas não reembolsáveis (não alteráveis); tarifa flexível em algumas datas com remarcação/cancelamento até 7 dias antes do check-in.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q26" },
+    "8.4": { "value": "Até 2 crianças por quarto isentas (até 12 anos). Sem camas extras; cobrança por hóspede extra ou upgrade de categoria.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q27" },
+    "9.1": { "value": "Sim, agendamento de SPA e outras solicitações para tornar a hospedagem mais especial", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q19" },
+    "9.2": { "value": "Aeroporto Galeão (Antonio Carlos Jobim) 109km; Santos Dumont 119km. Recomendado: Rio×Teresópolis BR-116. Transfer interno entre hotéis do complexo gratuito; transfer externo só por indicação de serviço.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q23-q24" },
+    "9.3": { "value": "Horários check-in/out, diferença entre os 3 hotéis do complexo, o que está incluso ou não", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q25" },
+    "10.1": { "value": "Estrutura completa do complexo (3 hotéis), opções de lazer, gastronomia, pensão completa inclusa, opções de parcelamento, programação variada", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q30" },
+    "10.2": { "value": "Cartão de crédito parcelado em 5x sem juros ou 12x com juros; extras podem ser pagos em dinheiro na recepção", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#le-canton-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Hotel Fazenda Suíça Le Canton",
@@ -114,38 +74,26 @@
     "Experiência": "Serra",
     "Destino": "Serra Fluminense"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Le Canton", "lines": "1222-1378" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.3","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: São Lourenço/MG + DDD 35 (incorreto) — corrigido para Teresópolis/RJ via FAQ + Excel",
+    "URL antiga 'hotelsuicalecanyon.com.br' substituída por lecanton.com.br conforme FAQ",
+    "Hotel é parte do complexo Le Canton (3 hotéis): Village, Magique, Fazenda Suíça"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T14:35:00Z",
+      "wave": 2,
+      "primary_source": "questionnaire",
+      "fields_added": 23,
+      "coverage_before": 0.18,
+      "coverage_after": 0.88,
+      "notes": "GOLD via FAQ Le Canton. Resort em Teresópolis/RJ. Pensão completa, SPA L'Occitane, complexo de 3 hotéis com transfer interno gratuito."
+    }
   ]
 }
