@@ -1,108 +1,53 @@
 {
   "slug": "santa-teresa-rj-mgallery",
-  "name": "Santa Teresa Rio - MGallery",
-  "template_coverage": 0.18181818181818182,
+  "name": "Santa Teresa Hotel RJ - MGallery",
+  "template_coverage": 0.6060606060606061,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.61,
+  "completeness": 0.61,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Santa Teresa Rio - MGallery",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.mgallery.com/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Rio de Janeiro",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "RJ",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "RJ",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.mgallery.com/",
-      "confidence_type": "literal",
-      "source_url": "https://www.mgallery.com/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Standard"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Restaurante",
-        "Bar",
-        "Spa"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 21 2131-1414",
-        "website": "https://www.mgallery.com/",
-        "address": "Rua Santa Teresa, 154 - Santa Teresa, Rio de Janeiro, RJ"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Santa Teresa",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "Santa Teresa Hotel RJ - MGallery", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "1.2": { "value": "Rio de Janeiro", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.3": { "value": "RJ", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Santa Teresa", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.santateresahotelrio.com/", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Rua Almirante Alexandrino, 660 — Santa Teresa, Rio de Janeiro/RJ, CEP 20241-260", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "2.4": { "value": "+55 21 3380-0200; WhatsApp +55 21 3380-0200", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "3.1": { "value": "Refúgio urbano boutique em fazenda histórica de café de 1850, com decoração e arquitetura inspiradas na era de ouro do café e do cacau, mesclando design brasileiro contemporâneo.", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "3.2": { "value": "Hotel boutique MGallery (Accor collection)", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "4.1": { "value": null },
+    "4.2": { "value": [
+      { "name": "Superior Room" }, { "name": "Deluxe Serenity" }, { "name": "Deluxe Serenity with balcony" },
+      { "name": "Junior Suite" }, { "name": "Design Loft Suites" }, { "name": "Royal Suite" }
+    ], "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "4.3": { "value": null },
+    "5.1": { "value": null },
+    "5.2": { "value": "Piscina ao ar livre com vista para a Baía de Guanabara", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "5.3": { "value": null },
+    "6.1": { "value": [{ "name": "Térèze", "cuisine": "contemporânea com toque latino-americano" }], "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "6.2": { "value": "Café da manhã e serviços de jantar disponíveis", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "6.3": { "value": "Bar dos Descasados (galeria de arte com exposições); Pool Lounge", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Piscina ao ar livre vista Baía Guanabara; jardins com plantas e árvores frutíferas; tour virtual", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "7.2": { "value": "Le Spa (parceria L'Occitane)", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "7.3": { "value": "Hospedagem para casamentos e eventos", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Práticas de sustentabilidade; envolvimento comunitário; mobília de design brasileiro; proximidade às principais atrações do Rio (Cristo Redentor, Pão de Açúcar, Copacabana); fazenda histórica de café desde 1850", "source_type": "hotel_website", "source_url": "https://www.santateresahotelrio.com/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Santa Teresa RJ MGallery",
@@ -115,38 +60,22 @@
     "Experiência": "cidade",
     "Destino": "Santa Teresa"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.santateresahotelrio.com/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","5.3","6.4","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
+  "data_quality_warnings": [],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T16:00:00Z",
+      "wave": 3,
+      "primary_source": "hotel_website",
+      "fields_added": 14,
+      "coverage_before": 0.18,
+      "coverage_after": 0.61,
+      "notes": "Hotel boutique MGallery em fazenda histórica de café (1850), Santa Teresa/RJ. Restaurante Térèze. Le Spa L'Occitane. Vista Baía de Guanabara."
+    }
   ]
 }
