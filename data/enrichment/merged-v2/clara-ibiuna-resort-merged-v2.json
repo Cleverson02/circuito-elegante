@@ -1,107 +1,73 @@
 {
   "slug": "clara-ibiuna-resort",
   "name": "Clara Ibiúna Resort",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.8787878787878788,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.88,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Clara Ibiúna Resort",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.claraibiuna.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Ibiúna",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "SP",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.claraibiuna.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.claraibiuna.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Clara Ibiúna Resort", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q1" },
+    "1.2": { "value": "Ibiúna", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q2" },
+    "1.3": { "value": "SP", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q3" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Interior de São Paulo", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://clararesorts.com.br/clara-ibiuna", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/Nx4HhbsAY6BEoJFx8", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q5" },
+    "2.3": { "value": null },
+    "2.4": { "value": null },
+    "3.1": { "value": "Resort em Ibiúna/SP com vista para a Represa de Itupararanga, a 70km da capital paulista. Combina lazer, conforto e contato com a natureza, com estilo rústico e contemporâneo integrado ao ambiente natural. Destaques: atividades náuticas (wakeboard, wakesurf, esqui aquático, caiaque, SUP, lancha), tirolesa russa, boliche, boião, arco e flecha, arvorismo. Pensão completa com cozinha show, cafés Starbucks, SPA L'Occitane, monitoria para todas as idades, complexo de eventos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q6" },
+    "3.2": { "value": "Resort", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q7" },
+    "4.1": { "value": null, "note": "FAQ lista 13 categorias mas não totaliza" },
+    "4.2": {
       "value": [
-        {
-          "name": "Chalé"
-        },
-        {
-          "name": "Bungalow"
-        }
+        { "name": "Suíte Presidencial 1", "size_m2": "165-226", "max_guests": 5 },
+        { "name": "Suíte Presidencial 2", "size_m2": "165-226", "max_guests": 5 },
+        { "name": "Master Garden", "size_m2": 67, "max_guests": 5 },
+        { "name": "Superior Vila da Mata", "size_m2": 54, "max_guests": 5 },
+        { "name": "Master Vila da Mata", "size_m2": 77, "max_guests": 5 },
+        { "name": "Garden Vila da Mata", "size_m2": 54, "max_guests": 5 },
+        { "name": "Apartamento Superior Península", "size_m2": 42, "max_guests": 3 },
+        { "name": "Apartamento Superior Represa", "size_m2": 55, "max_guests": 5 },
+        { "name": "Suíte Master", "size_m2": 69, "max_guests": 5 },
+        { "name": "Suíte da Mata", "size_m2": "30-35", "max_guests": 3 },
+        { "name": "Suíte da Mata Conjugada", "size_m2": 51, "max_guests": 4 },
+        { "name": "Suíte Represa", "size_m2": 39, "max_guests": 3 },
+        { "name": "Suíte Sede", "size_m2": "24-26", "max_guests": 3 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Trilhas",
-        "Natureza"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 11 4700-1000",
-        "website": "https://www.claraibiuna.com.br/",
-        "address": "SP-255, km 60 - Ibiúna, SP"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sudeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Interior de São Paulo",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Padrão: amenities banheiro, toalhas/touca, ar-condicionado, frigobar, TV, telefone, cafeteira, snacks (cobrados à parte). Categorias superiores: banheira, lareira ou jacuzzi privativo.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q9" },
+    "5.1": { "value": "Estacionamento próximo a todos os quartos, área aberta, gratuito", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q10" },
+    "5.2": { "value": "1 piscina aquecida coberta + 1 jacuzzi coberta; 2 piscinas climatizadas externas + 1 jacuzzi externa", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q11" },
+    "5.3": { "value": "Sim", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q12" },
+    "6.1": { "value": "Restaurante tipo buffet, comida caseira, com cozinha show preparando pratos à la carte", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q13" },
+    "6.2": { "value": "Pensão completa (4 refeições/dia: café, almoço, chá, jantar); bebidas não alcoólicas inclusas; cozinha show com 2 opções no almoço/jantar; omeletes/tapiocas/pão na chapa no café; We Proudly Serve Starbucks; máquina de sorvete no almoço/jantar.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q14" },
+    "6.3": { "value": "Pratos especiais na cozinha show; opções de piquenique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Trilhas de bike, trilhas ecológicas, SPA, Represa Itupararanga; atividades náuticas (wakeboard, wakesurf, esqui aquático, caiaque, SUP, lancha); tirolesa russa, boliche, boião, arco e flecha, arvorismo, parede de escalada", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q16" },
+    "7.2": { "value": "SPA by L'Occitane", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q17" },
+    "7.3": { "value": "Programação náutica e de lazer para todas as idades", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q18" },
+    "8.1": { "value": "Check-in 18h; Check-out 15h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q21" },
+    "8.2": { "value": "Early check-in mediante taxa adicional (uso da infra/refeições); quarto só após 18h. Consultar taxas.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q22" },
+    "8.3": { "value": "TARIFA FLEXÍVEL: cancelamento grátis até 72h antes; após = crédito 2 anos; remarcação até 72h. TARIFA NÃO REEMBOLSÁVEL: 14-4 dias antes = multa 20% + crédito; <4 dias = no-show.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q26" },
+    "8.4": { "value": "Crianças até 2 anos free (contam ocupação); 3-11 anos adicional; 12+ adultos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q27" },
+    "9.1": { "value": "Atividades náuticas (wakeboard, wakesurf, esqui, caiaque, SUP, lancha) — pagas à parte, com agendamento; boliche pago à parte; tirolesa russa, arco e flecha, arvorismo, parede escalada — inclusos com agendamento.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q19" },
+    "9.2": { "value": "Acesso recomendado: carro próprio. Aeroportos: Congonhas (85km), Guarulhos (115km), Viracopos (119km). NÃO oferece transfer.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q23-q24" },
+    "9.3": { "value": "Hóspedes questionam sobre monitoria e atividades para crianças (link: clararesorts.com.br/clara-ibiuna/programacao)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q25" },
+    "10.1": { "value": "Infraestrutura completa, gastronomia de primeira (cozinha show, Starbucks, sorvete), atividades de aventura e náuticas, monitoria de lazer, complexo de eventos; Wi-Fi incluso boa velocidade", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q29-q30" },
+    "10.2": { "value": "Pagamento via cartão de crédito, sempre no ato da reserva", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#clara-ibiuna-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Clara Ibiúna Resort",
@@ -114,38 +80,24 @@
     "Experiência": "Campo",
     "Destino": "Interior de São Paulo"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Clara Ibiúna Resort", "lines": "664-837" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.4"],
+  "data_quality_warnings": [
+    "URL antiga (claraibiuna.com.br) substituída pela URL canônica da rede (clararesorts.com.br/clara-ibiuna) conforme FAQ"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T12:55:00Z",
+      "wave": 1,
+      "primary_source": "questionnaire",
+      "fields_added": 23,
+      "coverage_before": 0.18,
+      "coverage_after": 0.88,
+      "notes": "GOLD via FAQ. Resort em Ibiúna/SP com vista da Represa de Itupararanga, 13 categorias detalhadas, atividades náuticas, SPA L'Occitane, pensão completa Starbucks."
+    }
   ]
 }
