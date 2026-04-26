@@ -1,68 +1,43 @@
 {
   "slug": "hotel-belmond-cataratas",
-  "name": "Belmond Hotel das Cataratas",
-  "template_coverage": 0.15151515151515152,
+  "name": "Hotel das Cataratas, A Belmond Hotel",
+  "template_coverage": 0.45454545454545453,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": false,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": false, "4.3": false,
+    "5.1": false, "5.2": false, "5.3": false,
+    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.12539184952978058,
-  "completeness": 0.08620689655172414,
+  "quality_score": 0.45,
+  "completeness": 0.45,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Belmond Hotel das Cataratas",
-      "confidence_type": "literal"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Foz do Iguaçu",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "PR",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sul",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Cataratas do Iguaçu",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "Hotel das Cataratas, A Belmond Hotel", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "1.2": { "value": "Foz do Iguaçu", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.3": { "value": "PR", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sul", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Cataratas do Iguaçu", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Rodovia BR-469, Km 32 — Parque Nacional do Iguaçu, Foz do Iguaçu/PR, CEP 85855-750", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "2.4": { "value": "+55 21 2545-8878 (reservas); +55 45 2102-7000 (geral)", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "3.1": { "value": "Hotel de luxo localizado dentro do Parque Nacional do Iguaçu, ao lado das Cataratas, parte da coleção Belmond.", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "3.2": { "value": "Luxury Resort Hotel", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "4.1": { "value": null }, "4.2": { "value": null }, "4.3": { "value": null },
+    "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
+    "6.1": { "value": null }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": "'Jungle Magic' river activities; experiências de jantar em jardim", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "7.2": { "value": "Spa disponível", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "7.3": { "value": "Pacotes Full Moon Retreat e Suite Life", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Localização única dentro do Parque Nacional do Iguaçu; beleza lunar 'otherworldly' nos períodos de lua cheia; coleção Belmond", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    "10.2": { "value": "Fotografia comercial do parque e instalações requer aprovação prévia", "source_type": "hotel_website", "source_url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Hotel Belmond Cataratas",
@@ -75,39 +50,24 @@
     "Experiência": "campo",
     "Destino": "Cataratas do Iguaçu"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.belmond.com/hotels/south-america/brazil/iguassu-falls/belmond-hotel-das-cataratas/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.1",
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.2","4.3","5.1","5.2","5.3","6.1","6.2","6.3","6.4","8.1","8.2","8.3","8.4","9.1","9.2","9.3"],
+  "data_quality_warnings": [
+    "Site Belmond institucional minimalista; categorias de quartos e detalhes operacionais ausentes na página principal"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T14:10:00Z",
+      "wave": 2,
+      "primary_source": "hotel_website",
+      "fields_added": 11,
+      "coverage_before": 0.15,
+      "coverage_after": 0.45,
+      "notes": "Hotel único dentro do Parque Nacional do Iguaçu (Belmond)."
+    }
   ]
 }
