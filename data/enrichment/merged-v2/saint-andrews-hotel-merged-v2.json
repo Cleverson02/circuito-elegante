@@ -1,108 +1,72 @@
 {
   "slug": "saint-andrews-hotel",
-  "name": "Saint Andrews Hotel",
-  "template_coverage": 0.18181818181818182,
+  "name": "Castelo Saint Andrews",
+  "template_coverage": 0.8787878787878788,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.88,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Saint Andrews Hotel",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.saint-andrews.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Gramado",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "RS",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "RS",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.saint-andrews.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.saint-andrews.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Castelo Saint Andrews", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q1" },
+    "1.2": { "value": "Gramado", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q2" },
+    "1.3": { "value": "RS", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q3" },
+    "1.4": { "value": "sul", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Gramado", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://saintandrews.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/jBStgW8qfkbR1ZcJ6", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Primeiro hotel criado com o conceito Exclusive House do Brasil. Em condomínio de alto padrão em Gramado, Serra Gaúcha. Arquitetura inspirada em castelos escoceses, exclusividade, sofisticação e requinte. Cercado por jardins cenográficos com vista do Vale do Quilombo. Alta gastronomia e adega excepcional.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q6" },
+    "3.2": { "value": "Hotel de Luxo (Exclusive House)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q7" },
+    "4.1": { "value": null, "note": "FAQ q30 menciona '11 Castle + 8 Mountain + Mountain House' = 20 acomodações; q8 lista 13 categorias" },
+    "4.2": {
       "value": [
-        {
-          "name": "Standard"
-        },
-        {
-          "name": "Suite"
-        }
+        { "name": "Gold Mountain", "size_m2": 28, "max_guests": 2 },
+        { "name": "Suíte Pérola", "size_m2": 28, "max_guests": 2 },
+        { "name": "Green Mountain", "size_m2": 32, "max_guests": 3 },
+        { "name": "Grey Mountain", "size_m2": 32, "max_guests": 3 },
+        { "name": "Blue Mountain", "size_m2": 48, "max_guests": 4 },
+        { "name": "Suíte Rubi", "size_m2": 44, "max_guests": 4 },
+        { "name": "Suíte Topázio", "size_m2": 44, "max_guests": 4 },
+        { "name": "Suíte Turquesa", "size_m2": 44, "max_guests": 4 },
+        { "name": "White Mountain", "size_m2": 48, "max_guests": 4 },
+        { "name": "Suite Jade", "size_m2": 48, "max_guests": 2 },
+        { "name": "Suíte Ambar", "size_m2": 56, "max_guests": 4 },
+        { "name": "Suíte Cristal", "size_m2": 56, "max_guests": 4 },
+        { "name": "Mountain House", "size_m2": 500, "max_guests": 6 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Spa",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 54 3286-1800",
-        "website": "https://www.saint-andrews.com.br/",
-        "address": "Rua Cobertura, 250 - Gramado, RS"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Gramado",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Kit especial Trousseau, secador, cofre eletrônico, Smart TV a cabo, enxoval premium 650 fios", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q9" },
+    "5.1": { "value": "Estacionamento gratuito para hóspedes", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q10" },
+    "5.2": { "value": "Piscina coberta e aquecida com vista para o Vale do Quilombo", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q11" },
+    "5.3": { "value": "Sim", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q12" },
+    "6.1": { "value": [{ "name": "Restaurante Primrose", "cuisine": "franco-italiana adaptada ao terroir Serra Gaúcha", "distinction": "Wine Spectator Best of Award of Excellence 2024" }], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q13" },
+    "6.2": { "value": "Café da manhã com menu degustação e horário livre", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q14" },
+    "6.3": { "value": "Experiências enogastronômicas exclusivas (alta gastronomia + rótulos icônicos) ao longo do ano", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Piscina coberta e aquecida (vista Vale do Quilombo); academia; spa; sauna; solário; jacuzzi; biblioteca; bicicletas", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q16" },
+    "7.2": { "value": "Spa com sala de massagens e procedimentos terapêuticos (relaxamento, alívio do estresse, revitalização) — sob reserva antecipada", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q17" },
+    "7.3": { "value": "Programação variável conforme período", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q18" },
+    "8.1": { "value": "Check-in 14h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q21" },
+    "8.2": { "value": "Sob disponibilidade, custo adicional", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q22" },
+    "8.3": { "value": "Variam por período e tarifa — contato com o time para detalhes", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q26" },
+    "8.4": { "value": "Crianças até 5 anos: grátis. 6-12 anos: 50% da cama extra/noite", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q27" },
+    "9.1": { "value": "Concierge 24h. Agendamento de experiências (cidade e hotel), recomendações gastronômicas/culturais, reservas exclusivas. Mordomos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q19-q30" },
+    "9.2": { "value": "1h49 (95,1 km) do aeroporto POA. Rotas: Rota Romântica (BR-116 + BR-235, mais bonita) ou rápida (BR-116 + RS-239 + RS-115). Transfer privativo em carro blindado, mediante solicitação, pago.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q23-q24" },
+    "9.3": { "value": "Aceitação de crianças, o que está incluso, distância do centro de Gramado, transfer", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q25" },
+    "10.1": { "value": "Único hotel de montanha do Brasil membro Relais & Châteaux; 11 suítes Castle + 8 Mountain + Mountain House (até 7 pessoas); Exclusive House (atendimento personalizado, mordomos, concierge 24h); lustres de cristal tcheco; fragrância exclusiva; Wine Spectator Best of Award of Excellence 2024 (Restaurante Primrose); Wi-Fi alta velocidade gratuito", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q29-q30" },
+    "10.2": { "value": "Depósito bancário (confirmação imediata), cartões de crédito (até 4x) e débito. NÃO aceita cheques.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#saint-andrews-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Saint Andrews Hotel",
@@ -115,38 +79,22 @@
     "Experiência": "Serra",
     "Destino": "Gramado"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Saint Andrews", "lines": "2452-2539" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.4"],
+  "data_quality_warnings": [],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:55:00Z",
+      "wave": 3,
+      "primary_source": "questionnaire",
+      "fields_added": 24,
+      "coverage_before": 0.18,
+      "coverage_after": 0.88,
+      "notes": "GOLD via FAQ. Castelo Saint Andrews em Gramado. Arquitetura escocesa. Único hotel de montanha brasileiro em Relais & Châteaux. 13 categorias detalhadas. Restaurante Primrose (Wine Spectator)."
+    }
   ]
 }
