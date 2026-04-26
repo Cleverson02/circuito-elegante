@@ -1,7 +1,7 @@
 {
   "slug": "atins-charme",
-  "name": "Atins Charme",
-  "template_coverage": 0.18181818181818182,
+  "name": "Atins Charme Chalés",
+  "template_coverage": 0.9375,
   "template_fields": {
     "1.1": true,
     "1.2": true,
@@ -9,98 +9,394 @@
     "1.4": true,
     "1.5": true,
     "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
+    "2.2": true,
+    "2.3": true,
+    "2.4": true,
+    "3.1": true,
+    "3.2": true,
+    "4.1": true,
+    "4.2": true,
+    "4.3": true,
+    "5.1": true,
+    "5.2": true,
+    "5.3": true,
+    "6.1": true,
+    "6.2": true,
+    "6.3": true,
     "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "7.1": true,
+    "7.2": true,
+    "7.3": true,
+    "8.1": true,
+    "8.2": true,
+    "8.3": true,
+    "8.4": true,
+    "9.1": true,
+    "9.2": true,
+    "9.3": true,
+    "10.1": true,
+    "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.92,
+  "completeness": 0.9375,
   "fields": {
     "1.1": {
       "name": "name",
-      "value": "Atins Charme",
+      "value": "Atins Charme Chalés",
       "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://atinscharme.com.br/"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q1"
     },
     "1.2": {
       "name": "municipality",
-      "value": "Atins",
-      "confidence_type": "literal"
+      "value": "Barreirinhas",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q2"
     },
     "1.3": {
       "name": "uf",
       "value": "MA",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://atinscharme.com.br/",
       "confidence_type": "literal",
-      "source_url": "https://atinscharme.com.br/"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q3"
+    },
+    "1.4": {
+      "name": "region_stella",
+      "value": "nordeste",
+      "confidence_type": "literal",
+      "source_type": "excel",
+      "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx"
+    },
+    "1.5": {
+      "name": "destination_stella",
+      "value": "Lençóis Maranhenses",
+      "confidence_type": "literal",
+      "source_type": "excel",
+      "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx"
     },
     "2.1": {
+      "name": "website_url",
+      "value": "https://charmeatins.com.br",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q4"
+    },
+    "2.2": {
+      "name": "google_maps_url",
+      "value": "https://www.google.com/maps/place/Atins+Charme+Chal%C3%A9s/@-2.5726559,-42.7474368,79m/data=!3m1!1e3!4m9!3m8!1s0x7f1ef26e17f414d:0xc2950f74689b6e14",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q5"
+    },
+    "2.3": {
+      "name": "address",
+      "value": "Vilarejo de Atins, Barreirinhas, MA",
+      "confidence_type": "inferred_from_geo",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q5",
+      "note": "Endereço inferido de coordenadas Google Maps; FAQ não tem endereço numerado"
+    },
+    "2.4": {
+      "name": "phone",
+      "value": "+55 98 3242-1000",
+      "confidence_type": "literal",
+      "source_type": "pre_existing_unverified",
+      "source_url": null,
+      "note": "Valor pre-existente do merge anterior; FAQ não fornece telefone explícito"
+    },
+    "3.1": {
+      "name": "description",
+      "value": "A Atins Charme Chalés é uma pousada boutique localizada no vilarejo de Atins, nos Lençóis Maranhenses. Com conceito exclusivo e estilo rústico-chique, oferece 9 chalés e 11 suítes, cercados por paisagismo nativo. Um refúgio intimista e sofisticado, ideal para quem busca conforto, natureza e privacidade em um dos cenários mais incríveis do Brasil.",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q6"
+    },
+    "3.2": {
+      "name": "hotel_type",
+      "value": "Pousada Boutique",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q7"
+    },
+    "4.1": {
+      "name": "total_rooms",
+      "value": 20,
+      "confidence_type": "calculated",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q8",
+      "note": "9 Chalés Deluxe + 11 Suítes Classic"
+    },
+    "4.2": {
       "name": "room_types",
       "value": [
         {
-          "name": "Chalé"
+          "name": "Chalé Deluxe",
+          "quantity": 9,
+          "beds": "1 cama de casal queen + 2 camas de solteiro",
+          "capacity": 4
         },
         {
-          "name": "Suite"
+          "name": "Suíte Classic",
+          "quantity": 11,
+          "beds": "1 cama de casal queen",
+          "capacity": 2
         }
       ],
-      "confidence_type": "literal"
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q8"
     },
-    "3.4": {
+    "4.3": {
+      "name": "room_amenities",
+      "value": {
+        "toiletries": ["Shampoo", "Condicionador", "Sabonete em barra", "Hidratante", "Sabonete líquido"],
+        "toiletries_brand": "Linha Terra Organics – Realgems",
+        "wifi": true,
+        "private_pool": false,
+        "private_pool_note": "Piscinas privativas só na unidade Alma Charme; em Atins Charme as piscinas são comuns"
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q9"
+    },
+    "5.1": {
+      "name": "parking",
+      "value": {
+        "has": true,
+        "paid": false,
+        "type": "Privado"
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q10"
+    },
+    "5.2": {
+      "name": "pools",
+      "value": "Piscinas comuns em áreas compartilhadas, rodeadas por paisagismo com plantas nativas",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q11",
+      "note": "FAQ descreve piscinas privativas apenas para Alma Charme (8 bangalôs); para Atins Charme o FAQ menciona piscina hidromassagem em q17"
+    },
+    "5.3": {
+      "name": "pool_heated",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q12",
+      "note": "Não, o clima em Atins é sempre quente"
+    },
+    "6.1": {
+      "name": "restaurants",
+      "value": [
+        {
+          "name": "Beach Bar",
+          "cuisine": "Nordestina",
+          "features": "Drinks autorais, música ao vivo"
+        },
+        {
+          "name": "Ça-Vá",
+          "cuisine": "Mediterrânea com temperos maranhenses",
+          "location": "Vila Charme"
+        },
+        {
+          "name": "Sushi Charme Atins",
+          "cuisine": "Japonesa",
+          "features": "Único japonês da região, peixes frescos, toque nordestino"
+        },
+        {
+          "name": "Mirante Charme Atins",
+          "cuisine": "Internacional",
+          "location": "Dentro da pousada",
+          "features": "Ideal para momentos intimistas ou em família"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q13",
+      "note": "Restaurantes do grupo Charme Atins, acessíveis a hóspedes de todas as 3 unidades"
+    },
+    "6.2": {
+      "name": "meals_included",
+      "value": "Café da manhã à la carte, servido exclusivamente na varanda do quarto",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q14"
+    },
+    "6.3": {
+      "name": "gastronomic_experiences",
+      "value": [
+        "Jantares com música ao vivo e harmonização (sob demanda/calendário de eventos)",
+        "Jantar nas dunas (operado por agência parceira)",
+        "Nascer do sol nas dunas com gastronomia",
+        "Pôr do sol nas dunas com gastronomia"
+      ],
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q15"
+    },
+    "6.4": {
+      "name": "room_service",
+      "value": null,
+      "confidence_type": null,
+      "source_type": null,
+      "note": "Não encontrado no FAQ; requer scraping do site oficial"
+    },
+    "7.1": {
       "name": "leisure_items",
       "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante"
+        "Passeio nas dunas",
+        "Kitesurf",
+        "Dia de praia",
+        "Caiaque",
+        "Trekking",
+        "Pesca",
+        "Stand up paddle",
+        "Passeio de quadriciclo",
+        "Jantar nas dunas",
+        "Passeio de lancha"
       ],
-      "confidence_type": "literal"
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q16",
+      "note": "Atividades intermediadas por agências parceiras"
     },
-    "10.0": {
-      "name": "contact",
+    "7.2": {
+      "name": "wellness_services",
+      "value": "Espaço de spa no local com massagistas parceiras, academia, espaço de yoga, piscina com hidromassagem",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q17"
+    },
+    "7.3": {
+      "name": "special_programming",
+      "value": "Não há programação dedicada exclusivamente para adultos ou crianças; passeios via agências parceiras podem ser privativos ou compartilhados",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q18"
+    },
+    "8.1": {
+      "name": "check_in_out",
       "value": {
-        "phone": "+55 98 3242-1000",
-        "website": "https://atinscharme.com.br/",
-        "address": "Atins, Maranhão"
+        "check_in": "14:00",
+        "check_out": "12:00"
       },
-      "confidence_type": "literal"
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q21"
     },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
+    "8.2": {
+      "name": "early_late_checkin",
+      "value": {
+        "available": true,
+        "depends_on": "disponibilidade",
+        "cost": "meia diária"
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q22"
     },
-    "1.5": {
-      "value": "Lençóis Maranhenses",
-      "source_type": "excel"
+    "8.3": {
+      "name": "cancellation_policy",
+      "value": {
+        "more_than_31_days": "100% de devolução",
+        "8_to_30_days": "Devolução com multa de 30%",
+        "less_than_7_days": "Sem devolução"
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q26"
+    },
+    "8.4": {
+      "name": "children_pets_policy",
+      "value": {
+        "children_under_10_courtesy": true,
+        "children_courtesy_note": "Cortesia por acomodação com pais/adultos",
+        "extra_beds": false,
+        "extra_beds_note": "Não trabalham com camas extras",
+        "pets_allowed": false,
+        "pets_note": "Não aceitam pets"
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q27,q30"
+    },
+    "9.1": {
+      "name": "concierge",
+      "value": "Sim, oferecido desde o momento da chegada. A equipe informa sobre todos os passeios contratáveis e faz a abertura das camas no fim da tarde",
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q19"
+    },
+    "9.2": {
+      "name": "transfers",
+      "value": {
+        "available": true,
+        "paid": true,
+        "auxilio_contratacao": true,
+        "options": [
+          "Aeroporto Internacional de São Luís - Marechal Cunha Machado (carro 3h30 até Barreirinhas + barco 1h pelo Rio Preguiças)",
+          "Aeroporto de Barreirinhas (aeronaves particulares ou contratadas)",
+          "Helicóptero São Luís → Atins (1h voo direto)"
+        ]
+      },
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q23,q24"
+    },
+    "9.3": {
+      "name": "frequent_faqs",
+      "value": [
+        {
+          "q": "Como chegar até Atins?",
+          "a": "Logística de 4 a 5 horas, entre carro e barco. Aeroporto de São Luís + 3h30 carro até Barreirinhas + 1h barco pelo Rio Preguiças. Auxiliamos na contratação de transfers."
+        },
+        {
+          "q": "Quais passeios estão disponíveis?",
+          "a": "Passeios oferecidos por agências parceiras: dunas, kitesurf, caiaque, trekking, pesca, stand up, quadriciclo, lancha, jantares nas dunas."
+        },
+        {
+          "q": "Quantos dias recomendam ficar em Atins?",
+          "a": "Recomendamos 5 noites para aproveitar a região."
+        },
+        {
+          "q": "Há WiFi e sinal de celular?",
+          "a": "Sim, temos WiFi no hotel. No povoado tem sinal da Vivo, na grande maioria das vezes muito bom."
+        },
+        {
+          "q": "O hotel aceita pets?",
+          "a": "Não aceitamos pets."
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q25,q29,q30"
+    },
+    "10.1": {
+      "name": "differentials",
+      "value": [
+        "Acomodações bem equipadas e bem cuidadas",
+        "Equipe treinada para acolhimento, cuidado e atenção aos detalhes",
+        "Atendimento que valoriza o bem-estar do hóspede, com simpatia e agilidade",
+        "Transporte exclusivo e gratuito para locomoção dos hóspedes dentro de Atins",
+        "Piscina privativa e serviços exclusivos",
+        "Localização nos Lençóis Maranhenses, um dos lugares mais deslumbrantes do Brasil",
+        "Arquitetura orgânica integrada à natureza, com conforto sofisticado e toques rústico-elegantes"
+      ],
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q30"
+    },
+    "10.2": {
+      "name": "restrictions",
+      "value": [
+        "Não aceitam pets",
+        "Sem camas extras"
+      ],
+      "confidence_type": "literal",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#atins-charme-chales-q27,q30"
     }
   },
   "excel_data": {
@@ -114,38 +410,36 @@
     "Experiência": "praia",
     "Destino": "Lençóis Maranhenses"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    {
+      "type": "questionnaire",
+      "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md",
+      "section": "Alma Charme, Atins Atins Charme e Rancharia",
+      "lines": "5-225",
+      "shared_with": ["alma-charme-atins", "rancharia-charme-atins"]
+    },
+    {
+      "type": "excel",
+      "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx",
+      "row": "Atins Charme"
+    }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "enrich"],
+  "gap_fields": ["6.4"],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T00:00:00Z",
+      "wave": 1,
+      "primary_source": "questionnaire",
+      "fields_added": [
+        "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3",
+        "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "7.1", "7.2", "7.3",
+        "8.1", "8.2", "8.3", "8.4", "9.1", "9.2", "9.3", "10.1", "10.2"
+      ],
+      "schema_migration_notes": "Migrados códigos não-template do schema antigo (1.7→2.1, antigo 2.1 room_types→4.2, antigo 3.4 leisure→7.1, antigo 10.0 contact→2.2/2.3/2.4)",
+      "coverage_before": 0.18,
+      "coverage_after": 0.94,
+      "remaining_gaps": ["6.4 (room_service, requer scraping)"]
+    }
   ]
 }
