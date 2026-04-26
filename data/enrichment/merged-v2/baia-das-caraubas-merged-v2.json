@@ -1,151 +1,100 @@
 {
   "slug": "baia-das-caraubas",
-  "name": "Baía das Caraubas",
-  "template_coverage": 0.18181818181818182,
+  "name": "Baía das Carúbas Glamping",
+  "template_coverage": 0.34375,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": false, "2.4": true,
+    "3.1": false, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": false, "5.3": false,
+    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": false, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": false, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.34,
+  "completeness": 0.34375,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Baía das Caraubas",
-      "confidence_type": "literal",
+    "1.1": {"value": "Baía das Carúbas Glamping", "source_type": "hotel_website", "source_url": "https://baiadascaraubas.com.br/"},
+    "1.2": {"value": "Camocim", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "JSON anterior dizia 'Jericoacoara'; Excel é fonte autoritativa"},
+    "1.3": {"value": "CE", "source_type": "excel"},
+    "1.4": {"value": "nordeste", "source_type": "excel"},
+    "1.5": {"value": "Rota das Emoções", "source_type": "excel"},
+    "2.1": {"value": "https://baiadascaraubas.com.br/", "source_type": "hotel_website"},
+    "2.2": {"value": null, "note": "Google Maps não localizado em busca rápida"},
+    "2.3": {"value": null, "note": "Endereço completo não no site oficial"},
+    "2.4": {"value": ["+55 88 3621-1056", "+55 88 99919-8045 (WhatsApp)"], "source_type": "hotel_website", "source_url": "https://baiadascaraubas.com.br/"},
+    "3.1": {"value": null, "note": "Descrição completa não extraída do site oficial em busca rápida; site enfatiza conceito glamping com 6 bungalows nomeados"},
+    "3.2": {"value": "Glamping", "source_type": "hotel_website", "source_url": "https://baiadascaraubas.com.br/"},
+    "4.1": {"value": 6, "source_type": "hotel_website", "note": "Inferido: site lista 6 bungalows nomeados (Kayke, Kanda, Wapi, Tadan, Dakotah, Yahto, Rudá — embora 7 nomes apareçam na fonte, requer verificação)"},
+    "4.2": {
+      "value": [
+        {"name": "Bungalow Kayke", "type": "Bungalow"},
+        {"name": "Bungalow Kanda", "type": "Bungalow"},
+        {"name": "Bungalow Wapi", "type": "Bungalow"},
+        {"name": "Bungalow Tadan", "type": "Bungalow"},
+        {"name": "Bungalow Dakotah", "type": "Bungalow"},
+        {"name": "Bungalow Yahto", "type": "Bungalow"},
+        {"name": "Bungalow Rudá", "type": "Bungalow"}
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://baiadascaraubas.com.br/"
+      "source_url": "https://baiadascaraubas.com.br/",
+      "note": "Nomes extraídos do site; m², capacidade e camas não disponíveis na home page"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Jericoacoara",
-      "confidence_type": "literal"
+    "4.3": {"value": null, "note": "Amenidades de quarto não no site oficial"},
+    "5.1": {"value": null, "note": "Estacionamento não mencionado no site"},
+    "5.2": {"value": null, "note": "Piscina não mencionada explicitamente no site"},
+    "5.3": {"value": null},
+    "6.1": {"value": null, "note": "Restaurante não nomeado no site"},
+    "6.2": {"value": null, "note": "Refeições inclusas não especificadas no site"},
+    "6.3": {"value": null},
+    "6.4": {"value": null},
+    "7.1": {
+      "value": ["Wind Sports", "Trilhas (trail adventures)", "Programas românticos", "Passeios (tours/excursões)"],
+      "source_type": "hotel_website",
+      "source_url": "https://baiadascaraubas.com.br/",
+      "note": "Atividades genéricas mencionadas no site; sem detalhamento específico"
     },
-    "1.3": {
-      "name": "uf",
-      "value": "CE",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://baiadascaraubas.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://baiadascaraubas.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Bungalow"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 88 3421-5500",
-        "website": "https://baiadascaraubas.com.br/",
-        "address": "Jericoacoara, Ceará"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Rota das Emoções",
-      "source_type": "excel"
-    }
+    "7.2": {"value": null, "note": "Serviços bem-estar não mencionados no site"},
+    "7.3": {"value": null},
+    "8.1": {"value": null, "note": "Check-in/out não no site"},
+    "8.2": {"value": null},
+    "8.3": {"value": null, "note": "Política de cancelamento não no site"},
+    "8.4": {"value": null},
+    "9.1": {"value": null, "note": "Concierge não mencionado"},
+    "9.2": {"value": null, "note": "Transfer não mencionado no site"},
+    "9.3": {"value": null, "note": "FAQs não estruturadas no site"},
+    "10.1": {"value": null, "note": "Diferenciais não destacados na home page"},
+    "10.2": {"value": null, "note": "Restrições não mencionadas"}
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Baia das Caraubas",
-    "MUNICÍPIO": "Camocin",
+    "MUNICÍPIO": "Camocim",
     "UF": "CE",
     "Tem Reserva integrada por API?": "NÃO",
     "Cupom BRADESCO": "NÃO",
-    "hotel_ID": "SIM",
     "Região": "nordeste",
     "Experiência": "praia",
     "Destino": "Rota das Emoções"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    {"type": "hotel_website", "url": "https://baiadascaraubas.com.br/", "fetched_at": "2026-04-26T00:00:00Z"},
+    {"type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx"}
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "hotel_website", "excel"],
+  "gap_fields": ["2.2", "2.3", "3.1", "4.3", "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "6.4", "7.2", "7.3", "8.1", "8.2", "8.3", "8.4", "9.1", "9.2", "9.3", "10.1", "10.2"],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T00:00:00Z",
+      "wave": 1,
+      "primary_source": "hotel_website",
+      "fields_added": ["2.4", "3.2", "4.1", "4.2", "7.1"],
+      "coverage_before": 0.18,
+      "coverage_after": 0.34,
+      "remaining_gaps_count": 22,
+      "note": "Sem FAQ disponível; site oficial é minimalista (glamping). Requer scraping de subpáginas (sobre, quartos, contato) ou contato direto para preencher políticas, gastronomia e infraestrutura"
+    }
   ]
 }
