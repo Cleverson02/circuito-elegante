@@ -1,112 +1,54 @@
 {
   "slug": "unique-sp",
-  "name": "Unique Hotel São Paulo",
-  "template_coverage": 0.18181818181818182,
+  "name": "Hotel Unique São Paulo",
+  "template_coverage": 0.5454545454545454,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": false, "6.4": true,
+    "7.1": true, "7.2": true, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": true,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.55,
+  "completeness": 0.55,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Unique Hotel São Paulo",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.hotelunique.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "São Paulo",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "SP",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "SP",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.hotelunique.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.hotelunique.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Deluxe"
-        },
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Presidential Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina Rooftop",
-        "Spa",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 11 3055-4700",
-        "website": "https://www.hotelunique.com.br/",
-        "address": "Av. Brigadeiro Luís Antônio, 4700 - Jardins, São Paulo, SP"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Jardim Paulista",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "Hotel Unique São Paulo", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "1.2": { "value": "São Paulo", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.3": { "value": "SP", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Jardim Paulista", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://hotelunique.com/", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Av. Brigadeiro Luís Antônio, 4700 — Jardins, São Paulo/SP", "source_type": "legacy_scrape", "note": "Endereço público preservado do JSON anterior; site oficial hotelunique.com não retornou endereço completo" },
+    "2.4": { "value": "+55 (11) 3055-4700", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "3.1": { "value": "Hotel arrojado e sofisticado onde arquitetura, arte, moda, música, gastronomia e alta hospitalidade se encontram. Marco arquitetônico projetado por Ruy Ohtake.", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "3.2": { "value": "Hotel de Luxo", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "4.1": { "value": null },
+    "4.2": { "value": [{ "feature": "Suítes com janelas arredondadas distintivas (assinatura arquitetônica)" }], "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "4.3": { "value": null },
+    "5.1": { "value": null },
+    "5.2": { "value": "Duas piscinas (vermelha e amarela)", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "5.3": { "value": null },
+    "6.1": { "value": [
+      { "name": "Skye Restaurante & Bar", "type": "rooftop" },
+      { "name": "Café", "service": "café da manhã" }
+    ], "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "6.2": { "value": "Café da manhã incluso; ofertas diversas (brasileira, francesa, japonesa, italiana); opções vegetarianas e veganas", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "6.3": { "value": null },
+    "6.4": { "value": "Room service disponível", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "7.1": { "value": "Piscinas vermelha e amarela; fitness center; serviços de massagem; tour virtual 360°", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "7.2": { "value": "Sala de massagem; Gift Vouchers disponíveis", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null },
+    "8.4": { "value": "Pet-friendly (cardápio exclusivo + kit de amenities pet)", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Marco arquitetônico de Ruy Ohtake; instalações de arte; certificações de sustentabilidade (Green Key, IREC); eventos e casamentos", "source_type": "hotel_website", "source_url": "https://hotelunique.com/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Unique SP",
@@ -119,38 +61,16 @@
     "Experiência": "cidade",
     "Destino": "Jardim Paulista"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://hotelunique.com/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","5.3","6.3","7.3","8.1","8.2","8.3","9.1","9.2","9.3","10.2"],
+  "data_quality_warnings": [
+    "URL antiga hotelunique.com.br offline; URL canônica é hotelunique.com"
+  ],
+  "enrichment_history": [
+    { "timestamp": "2026-04-26T16:30:00Z", "wave": 3, "primary_source": "hotel_website", "fields_added": 13, "coverage_before": 0.18, "coverage_after": 0.55, "notes": "Hotel arquitetônico Ruy Ohtake nos Jardins. Skye rooftop, 2 piscinas (vermelha/amarela), pet-friendly." }
   ]
 }
