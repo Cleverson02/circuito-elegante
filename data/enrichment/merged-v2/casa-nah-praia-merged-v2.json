@@ -1,107 +1,59 @@
 {
   "slug": "casa-nah-praia",
-  "name": "Casa Nah Praia",
-  "template_coverage": 0.18181818181818182,
+  "name": "Casa Näh Praia",
+  "template_coverage": 0.5454545454545454,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": false, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": false, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": true, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.55,
+  "completeness": 0.55,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Casa Nah Praia",
-      "confidence_type": "literal",
+    "1.1": { "value": "Casa Näh Praia", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "1.2": { "value": "Passo de Camaragibe", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam; JSON antigo dizia Alcobaça/BA (incorreto)" },
+    "1.3": { "value": "AL", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Praia do Marceneiro", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://casanahpraia.com.br/", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/", "note": "URL correta (JSON antigo casanah.com.br = ECONNREFUSED)" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Beira-mar, s/n — Praia do Marceneiro, Passo de Camaragibe/AL, CEP 57.930-000", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "2.4": { "value": "+55 (82) 9118-4176", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "3.1": { "value": "Santuário beachfront exclusivo de 510m² na Praia do Marceneiro, parte da Rota dos Milagres, com proposta de conforto, privacidade, exclusividade, relaxamento, excelência e bossa, dentro da APA Costa dos Corais.", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "3.2": { "value": "Luxury boutique beachfront residence", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "4.1": { "value": "6 suítes", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "4.2": {
+      "value": [
+        { "name": "Suíte vista mar", "qty": 3 },
+        { "name": "Suíte vista coqueiral", "qty": 3, "note": "1 adaptada para acessibilidade" }
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://casanah.com.br/"
+      "source_url": "https://casanahpraia.com.br/"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Alcobaça",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "BA",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://casanah.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://casanah.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Bungalow"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 73 3292-1000",
-        "website": "https://casanah.com.br/",
-        "address": "Alcobaça, Bahia"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Praia do Marceneiro",
-      "source_type": "excel"
-    }
+    "4.3": { "value": null },
+    "5.1": { "value": null },
+    "5.2": { "value": "Piscina privativa com vista oceano", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "5.3": { "value": null },
+    "6.1": { "value": null, "note": "Sem restaurante nomeado; refeições preparadas por chef residente" },
+    "6.2": { "value": "Cardápios customizados preparados pelo chef residente Walgra Mello", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "6.3": { "value": "Experiências curadas pelo chef; menus regionais + contemporâneos", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Jangada, caminhadas, bike, buggy, beach tennis, gazebo na praia, Capela dos Milagres, Santuário do Peixe-boi, Vilinha Marceneiro, Casa de Farinha", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "7.2": { "value": null },
+    "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": "Chef-anfitriã gerencia planejamento de refeições e provisões", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "9.2": { "value": null },
+    "9.3": { "value": null },
+    "10.1": { "value": "Chef Walgra Mello (Institut Paul Bocuse); roupa de cama 100% algodão; design minimalista; localização APA Costa dos Corais", "source_type": "hotel_website", "source_url": "https://casanahpraia.com.br/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Casa NAH Praia",
@@ -114,38 +66,25 @@
     "Experiência": "praia",
     "Destino": "Praia do Marceneiro"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://casanahpraia.com.br/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.3","5.1","5.3","6.1","6.4","7.2","7.3","8.1","8.2","8.3","8.4","9.2","9.3","10.2"],
+  "data_quality_warnings": [
+    "JSON antigo: Alcobaça/BA (incorreto) — corrigido para Passo de Camaragibe/AL",
+    "URL canônica corrigida de casanah.com.br para casanahpraia.com.br"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T12:25:00Z",
+      "wave": 1,
+      "primary_source": "hotel_website",
+      "fields_added": 12,
+      "coverage_before": 0.18,
+      "coverage_after": 0.55,
+      "notes": "Hotel boutique 6 suítes em Praia do Marceneiro, AL. Chef Walgra Mello. APA Costa dos Corais."
+    }
   ]
 }
