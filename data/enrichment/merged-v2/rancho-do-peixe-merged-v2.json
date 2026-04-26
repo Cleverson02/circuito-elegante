@@ -1,108 +1,61 @@
 {
   "slug": "rancho-do-peixe",
   "name": "Rancho do Peixe",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.8787878787878788,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.88,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Rancho do Peixe",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://ranchopeixe.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Jericoacoara",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "CE",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://ranchopeixe.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://ranchopeixe.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Rancho do Peixe", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q1" },
+    "1.2": { "value": "Cruz", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "FAQ diz 'Preá' (distrito); Excel correto é Cruz/CE (município de Preá). JSON antigo dizia Jericoacoara/CE (incorreto)" },
+    "1.3": { "value": "CE", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Praia do Preá", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://ranchodopeixe.com.br", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/JVRvGoZzZvMw9T9c9", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Refúgio de paz e bons ventos na tranquila Praia do Preá, a 12km de Jericoacoara. Filosofia eco consciente: ocupa apenas 8% da área total de 67.000m², preservando a natureza ao redor. Bangalôs rústicos charmosos com materiais locais, projetados para circulação natural do vento (sem ar-condicionado).", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q6" },
+    "3.2": { "value": "Pousada Boutique de Luxo (sustentabilidade + integração natureza)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q7" },
+    "4.1": { "value": null },
+    "4.2": {
       "value": [
-        {
-          "name": "Chalé"
-        },
-        {
-          "name": "Bungalow"
-        }
+        { "name": "Bangalô com Vista para o Jardim", "size_m2": 80, "max_guests": 4 },
+        { "name": "Bangalô com Vista para o Mar", "size_m2": 80, "max_guests": 4 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q8-q9"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 88 3421-9000",
-        "website": "https://ranchopeixe.com.br/",
-        "address": "Jericoacoara, Ceará"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Praia do Preá",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "80m², ventilador de teto, frigobar, cofre, Wi-Fi gratuito, varanda com rede, banheiro privativo com chuveiro ao ar livre. SEM televisão (imersão na natureza).", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q9" },
+    "5.1": { "value": "Estacionamento privativo gratuito", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q10" },
+    "5.2": { "value": "Piscina semi-olímpica de 25 metros, rodeada por palmeiras e espreguiçadeiras", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q11" },
+    "5.3": { "value": "Não, ao ar livre não aquecida", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q12" },
+    "6.1": { "value": "Restaurante (frutos do mar e temperos locais); bar da praia (pizzas em forno a lenha à noite)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q13" },
+    "6.2": { "value": "Café da manhã incluso (7h30-10h): sucos, frutas, café, leite, iogurte, granola, bolos, pães, omeletes, crepes, panquecas, waffles, tapioca", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q14" },
+    "6.3": { "value": "Bar da praia com vista do mar, brisa fresca, bebidas e petiscos", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Piscina, spa com vista mar, aulas de pilates, lounge com TV, biblioteca, área de jogos (pebolim, sinuca), área exclusiva na praia com espreguiçadeiras e bar", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q16" },
+    "7.2": { "value": "Spa com menu de cuidados, brisa do mar", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q17" },
+    "7.3": { "value": "Ranchinho — espaço para crianças com brinquedos de madeira e corda", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q18" },
+    "8.1": { "value": "Check-in 14h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q21" },
+    "8.2": { "value": "Disponível mediante solicitação, sujeito à disponibilidade", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q22" },
+    "8.3": { "value": "Variam por tipo de acomodação e tarifa selecionada — verificar no momento da reserva", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q26" },
+    "8.4": { "value": "Crianças bem-vindas; 8+ anos cobradas como adultos. Berços gratuitos para 0-3 anos (sob solicitação). Sem camas extras. Pets aceitos sob solicitação (pode haver cobrança adicional).", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q27-q28" },
+    "9.1": { "value": "Concierge para informações, reservas e organização de atividades locais", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q19" },
+    "9.2": { "value": "Aeroporto Jericoacoara (JJD) ~20km; Fortaleza (FOR) ~285km. Acesso recomendado: transfer privativo ou táxi. Transfer organizado mediante solicitação e custo adicional.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q23-q24" },
+    "9.3": { "value": "Bangalôs vista mar, política crianças/pets, bem-estar/massagens, acesso à cidade e pontos turísticos, kitesurf, transfer para Jericoacoara", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q25" },
+    "10.1": { "value": "Arquitetura sustentável (palafitas, palha de carnaúba); localização Praia do Preá; escola de kitesurf renomada com instrutores multilíngues; compromisso ambiental; ambiente tranquilo perfeito para conexão com natureza", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q30" },
+    "10.2": { "value": "Cartões aceitos: Amex, Visa, Mastercard, Diners Club, Maestro, Hipercard, Elo; pagamentos em dinheiro", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#rancho-peixe-q29" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Rancho do Peixe",
@@ -115,38 +68,24 @@
     "Experiência": "praia",
     "Destino": "Praia do Preá"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Rancho do Peixe", "lines": "2321-2450" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: Jericoacoara/CE específico (na verdade Praia do Preá, distrito de Cruz/CE) — mantido CE mas município corrigido"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:45:00Z",
+      "wave": 3,
+      "primary_source": "questionnaire",
+      "fields_added": 24,
+      "coverage_before": 0.18,
+      "coverage_after": 0.88,
+      "notes": "GOLD via FAQ. Pousada eco-sustentável Praia do Preá/CE (12km Jericoacoara). 2 categorias bangalôs 80m². Piscina 25m. Escola kitesurf renomada. Sem AC nem TV (imersão natureza)."
+    }
   ]
 }
