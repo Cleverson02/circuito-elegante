@@ -1,112 +1,55 @@
 {
   "slug": "kenoa",
-  "name": "Kenoa Exclusive Beach Resort",
-  "template_coverage": 0.18181818181818182,
+  "name": "Kenoa Exclusive Beach Spa & Resort",
+  "template_coverage": 0.5757575757575758,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": false, "5.3": false,
+    "6.1": true, "6.2": false, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.58,
+  "completeness": 0.58,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Kenoa Exclusive Beach Resort",
-      "confidence_type": "literal",
+    "1.1": { "value": "Kenoa Exclusive Beach Spa & Resort", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "1.2": { "value": "Barra de São Miguel", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam Barra de São Miguel/AL; JSON antigo dizia Jericoacoara/CE (incorreto)" },
+    "1.3": { "value": "AL", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Barra de São Miguel", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.kenoaresort.com/", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/", "note": "URL antiga kenoabrazil.com = ECONNREFUSED; correta é kenoaresort.com" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Rua Escritor Jorge de Lima, 58 — Barra Mar, Barra de São Miguel/AL, CEP 57180-000", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "2.4": { "value": "+55 82 3272-1285; +55 82 98812-1000", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "3.1": { "value": "Resort eco-chic design oferecendo experiências autênticas e serviço dedicado, com foco em hospitalidade íntima e relaxamento na natureza.", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "3.2": { "value": "Luxury Beach Spa Resort", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "4.1": { "value": null },
+    "4.2": {
+      "value": [
+        { "name": "Apoena Suite" }, { "name": "Araxá Suite" },
+        { "name": "Marajó Villa" }, { "name": "Jaobi Villa" }, { "name": "Kenoa Villa" }
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://www.kenoabrazil.com/"
+      "source_url": "https://www.kenoaresort.com/"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Jericoacoara",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "CE",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "CE",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.kenoabrazil.com/",
-      "confidence_type": "literal",
-      "source_url": "https://www.kenoabrazil.com/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Bungalow Standard"
-        },
-        {
-          "name": "Bungalow Deluxe"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Praia",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 88 3421-8000",
-        "website": "https://www.kenoabrazil.com/",
-        "address": "Jericoacoara, Ceará, Brasil"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Barra de São Miguel ",
-      "source_type": "excel"
-    }
+    "4.3": { "value": null },
+    "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
+    "6.1": { "value": [{ "name": "Kaamo", "chef": "César Santos" }], "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "6.2": { "value": null },
+    "6.3": { "value": "Oyster experience; boat experience", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Experiências na praia, ostra experience, passeio de barco, exploração praia deserta, snorkeling em águas turquesa", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "7.2": { "value": "Spa exclusivo com terapias, rituais, massagens, aromaterapia (foco nos cinco sentidos)", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Pioneiro do conceito eco-chic design; opção de villas residenciais beach; listado Michelin; membro Virtuoso; afiliação SLH (Small Luxury Hotels)", "source_type": "hotel_website", "source_url": "https://www.kenoaresort.com/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Kenoa",
@@ -119,38 +62,25 @@
     "Experiência": "praia",
     "Destino": "Barra de São Miguel "
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.kenoaresort.com/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","5.2","5.3","6.2","6.4","7.3","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
+  "data_quality_warnings": [
+    "JSON antigo: Jericoacoara/CE + DDD 88 — corrigido para Barra de São Miguel/AL",
+    "URL antiga kenoabrazil.com offline; correta é kenoaresort.com"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:05:00Z",
+      "wave": 2,
+      "primary_source": "hotel_website",
+      "fields_added": 13,
+      "coverage_before": 0.18,
+      "coverage_after": 0.58,
+      "notes": "Resort eco-chic em Barra de São Miguel/AL. Restaurante Kaamo (Chef César Santos), spa, Michelin-listed, SLH."
+    }
   ]
 }
