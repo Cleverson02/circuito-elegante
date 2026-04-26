@@ -1,108 +1,58 @@
 {
   "slug": "fasano-bh",
   "name": "Hotel Fasano Belo Horizonte",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.6666666666666666,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": false, "8.2": true, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": true, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.67,
+  "completeness": 0.67,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Hotel Fasano Belo Horizonte",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.fasano.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Belo Horizonte",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "MG",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "MG",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.fasano.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.fasano.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Deluxe"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Spa",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 31 3259-7000",
-        "website": "https://www.fasano.com.br/",
-        "address": "Av. Getúlio Vargas, 1640 - Savassi, Belo Horizonte, MG"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Lourdes",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "Hotel Fasano Belo Horizonte", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "1.2": { "value": "Belo Horizonte", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.3": { "value": "MG", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Lourdes", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.fasano.com.br/hotel/fasano-bh/", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Rua São Paulo, 2.320 — Lourdes, Belo Horizonte/MG", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "2.4": { "value": "+55 31 3500-8900; Events +55 31 3500-8931; WhatsApp +55 31 98411-8893", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "3.1": { "value": "Hotel de luxo do Grupo Fasano no bairro Lourdes em BH, com restaurantes, espaços para eventos e spa.", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "3.2": { "value": "Luxury Boutique Hotel", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "4.1": { "value": 77, "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/", "note": "77 suítes em 10 categorias" },
+    "4.2": { "value": [{ "categories_count": 10, "size_range_m2": "27-110", "note": "Quartos sem vista panorâmica têm varandas privativas com jardins" }], "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "4.3": { "value": null },
+    "5.1": { "value": null },
+    "5.2": { "value": "Wellness pool no rooftop com sauna", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "5.3": { "value": null },
+    "6.1": { "value": [
+      { "name": "Baretto Belo Horizonte", "type": "bar", "feature": "cocktails, comidinhas, jazz/MPB ao vivo" },
+      { "name": "Gero Belo Horizonte", "cuisine": "italiana clássica" },
+      { "name": "Bar do Lobby", "feature": "aperitivos, sanduíches, cocktails clássicos" }
+    ], "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "6.2": { "value": "Café da manhã incluso na maioria dos pacotes; à la carte disponível", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "6.3": { "value": "Eventos para datas comemorativas (Dia dos Namorados, Dia das Mães); feijoada mensal; menus temáticos", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Experiências em parceria com Instituto Inhotim", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "7.2": { "value": "Spa Fasano com tratamentos corporais e faciais", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "7.3": { "value": "Eventos sazonais; feijoada; menus temáticos", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "8.1": { "value": null },
+    "8.2": { "value": "Late checkout disponível (sujeito à disponibilidade)", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": null },
+    "9.2": { "value": "Transfer privado disponível (experiência Inhotim)", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "9.3": { "value": null },
+    "10.1": { "value": "Espaço Fasano + Business Center para até 120 pessoas; fitness center; 4 pacotes especiais (Sabores, Inhotim, Wellness, One More Night)", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Fasano - BH",
@@ -115,38 +65,22 @@
     "Experiência": "cidade",
     "Destino": "Lourdes"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.fasano.com.br/hotel/fasano-bh/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.3","5.1","5.3","6.4","8.1","8.3","8.4","9.1","9.3","10.2"],
+  "data_quality_warnings": [],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T13:10:00Z",
+      "wave": 1,
+      "primary_source": "hotel_website",
+      "fields_added": 16,
+      "coverage_before": 0.18,
+      "coverage_after": 0.67,
+      "notes": "URL canônica /hotel/fasano-bh/ encontrada via fasano.com.br homepage. 77 suítes em Lourdes/BH. Restaurantes Baretto + Gero + Bar do Lobby."
+    }
   ]
 }
