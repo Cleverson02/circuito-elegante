@@ -1,108 +1,64 @@
 {
   "slug": "vila-cerrado",
   "name": "Vila Cerrado",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.8181818181818182,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": false,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.82,
+  "completeness": 0.82,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Vila Cerrado",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://vilacerrado.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Pirenópolis",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "GO",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://vilacerrado.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://vilacerrado.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Vila Cerrado", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q1" },
+    "1.2": { "value": "Alto Paraíso de Goiás", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q2", "note": "FAQ + Excel confirmam; JSON antigo dizia Pirenópolis (incorreto)" },
+    "1.3": { "value": "GO", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q3" },
+    "1.4": { "value": "centro-oeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Chapada dos Veadeiros", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://vilacerrado.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/4DD36RDy475MD4h88", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Vila charmosa e sustentável imersa e inspirada no Cerrado brasileiro. Casas-conceito com acolhimento intimista e experiência integrativa única com a natureza. Convite para desacelerar e se conectar; experiências sensoriais que afloram os cinco sentidos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q6" },
+    "3.2": { "value": "Pousada Boutique / Casa Hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q7" },
+    "4.1": { "value": null },
+    "4.2": {
       "value": [
-        {
-          "name": "Chalé"
-        },
-        {
-          "name": "Suite"
-        }
+        { "name": "Casa Buriti", "max_guests": 2 },
+        { "name": "Casa Copaíba", "max_guests": 4 },
+        { "name": "Casa Jatobá", "max_guests": 4 },
+        { "name": "Chalé Baru", "max_guests": 3 },
+        { "name": "Chalé Pequi", "max_guests": 3 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Trilhas",
-        "Natureza",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 61 3331-1000",
-        "website": "https://vilacerrado.com.br/",
-        "address": "Pirenópolis, GO"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "centro-oeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Chapada dos Veadeiros",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Amenities eco-friendly regionais, enxoval exclusivo, cozinha equipada, Wi-Fi 100Mb exclusivo por casa", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q9" },
+    "5.1": { "value": "Estacionamento gratuito no local", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q10" },
+    "5.2": { "value": "Piscina externa ao ar livre; suítes com banheira/jacuzzi", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q11" },
+    "5.3": { "value": "Não tem piscina aquecida (mas há banheira/jacuzzi nas suítes)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q12" },
+    "6.1": { "value": "Não possui restaurante", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q13" },
+    "6.2": { "value": "Café da manhã colonial incluso", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q14" },
+    "6.3": { "value": "Café Sensus servido à la carte na acomodação; degustações regionais", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Vivências culturais; experiências sensoriais; conexão com a natureza; espaço de contemplação", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q16" },
+    "7.2": { "value": "Sálvia Centro de Terapias Ancestrais (terapias holísticas e energéticas); Templo Ser — 'A magia dos 4 elementos' (atividades de equilíbrio, vivências, práticas e rituais)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q17" },
+    "7.3": { "value": "Experiências personalizadas para grupos; possibilidade de reservar a vila inteira para celebrações privadas", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q18" },
+    "8.1": { "value": "Check-in 15h-20h; Check-out até 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q21" },
+    "8.2": { "value": "Sob disponibilidade, política flexível", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q22" },
+    "8.3": { "value": "Reembolsável até 14 dias antes da reserva (definida no ato). Feriados e meses de férias: não reembolsável.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q25" },
+    "8.4": { "value": "Casas e chalés comportam famílias; taxa de hóspede extra a partir de 2 hóspedes. Pet friendly com taxa pet à parte.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q26" },
+    "9.1": { "value": "Concierge virtual para assistência e personalização de experiências", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q19" },
+    "9.2": { "value": "Aproximadamente 230km de Brasília (aeroporto mais próximo). Traslado disponível sob solicitação via parceiros locais.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q23-q24" },
+    "9.3": { "value": null },
+    "10.1": { "value": "Sustentabilidade; imersão no Cerrado; conceito casa-hotel; experiências sensoriais e culturais; opção de exclusividade da vila para eventos privados; pet friendly; Wi-Fi 100Mb por casa", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q29" },
+    "10.2": { "value": "Reservas confirmadas online via site, aceita cartões de crédito", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#vila-cerrado-q27" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Vila Cerrado",
@@ -115,38 +71,16 @@
     "Experiência": "Campo",
     "Destino": "Chapada dos Veadeiros"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Vila Cerrado", "lines": "2977-3037" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","4.1","6.4","9.3"],
+  "data_quality_warnings": [
+    "JSON antigo: Pirenópolis (incorreto, mesmo padrão dos bugs antigos) — corrigido para Alto Paraíso de Goiás via FAQ + Excel"
+  ],
+  "enrichment_history": [
+    { "timestamp": "2026-04-26T16:40:00Z", "wave": 3, "primary_source": "questionnaire", "fields_added": 23, "coverage_before": 0.18, "coverage_after": 0.82, "notes": "GOLD via FAQ. Vila sustentável Cerrado (5 casas-conceito) em Alto Paraíso/Chapada dos Veadeiros. Sem restaurante. Pet friendly. Templo Ser + Sálvia spa." }
   ]
 }
