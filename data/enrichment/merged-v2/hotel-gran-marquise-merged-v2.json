@@ -1,111 +1,61 @@
 {
   "slug": "hotel-gran-marquise",
-  "name": "Hotel Gran Marquise",
-  "template_coverage": 0.18181818181818182,
+  "name": "Hotel Gran Marquise Fortaleza",
+  "template_coverage": 0.696969696969697,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": false, "8.2": true, "8.3": false, "8.4": true,
+    "9.1": true, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.7,
+  "completeness": 0.7,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Hotel Gran Marquise",
-      "confidence_type": "literal",
+    "1.1": { "value": "Hotel Gran Marquise Fortaleza", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "1.2": { "value": "Fortaleza", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam Fortaleza/CE; JSON antigo dizia Rio de Janeiro/RJ + Av. Atlântica 500 (incorreto)" },
+    "1.3": { "value": "CE", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Mucuripe", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.granmarquise.com.br/", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Avenida Beira Mar, 3980 — Praia do Mucuripe, Fortaleza/CE, CEP 60.165-121", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "2.4": { "value": "+55 (85) 4006-5000; 4042-5656; WhatsApp +55 (85) 4006-5000", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "3.1": { "value": "Hotel 5 estrelas de luxo na Av. Beira Mar de Fortaleza, próximo à icônica Praia do Mucuripe.", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "3.2": { "value": "Hotel de Luxo 5 estrelas", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "4.1": { "value": null },
+    "4.2": {
+      "value": [
+        { "name": "Gran Class", "feature": "categoria premium com express check-in, welcome drink, lençóis algodão egípcio, pillow menu, acesso ao spa" }
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://www.granmarquise.com.br/"
+      "source_url": "https://www.granmarquise.com.br/",
+      "note": "Demais categorias não detalhadas no resumo"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Rio de Janeiro",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "RJ",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "RJ",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.granmarquise.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.granmarquise.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Standard"
-        },
-        {
-          "name": "Superior"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 21 2545-6060",
-        "website": "https://www.granmarquise.com.br/",
-        "address": "Av. Atlântica, 500 - Leme, Rio de Janeiro, RJ"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Mucuripe",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Gran Class: lençóis algodão egípcio, pillow menu, acesso a jacuzzi/sauna exclusivos, 10% desconto em tratamentos do spa", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "5.1": { "value": null },
+    "5.2": { "value": "Rooftop infinity pool com vista do mar", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "5.3": { "value": null },
+    "6.1": { "value": [{ "count": 4, "named": ["Mucuripe"], "cuisine": "do refinamento internacional à autenticidade regional" }], "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "6.2": { "value": "Café da manhã buffet, feijoada buffet, chá da tarde, happy hour com drinks/aperitivos", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "6.3": { "value": "Eventos culinários exclusivos", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Caminhadas, corrida, ciclismo, canoagem, beach tennis", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "7.2": { "value": "Spa by L'Occitane com tratamentos tradicionais e terapias", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "7.3": { "value": "Yoga nas Alturas (yoga mensal no helipad rooftop)", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "8.1": { "value": null },
+    "8.2": { "value": "Gran Class: early check-in e late check-out cortesia", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "8.3": { "value": null },
+    "8.4": { "value": "Pet Friendly (exceto categoria Gran Class); regulamentações disponíveis", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "9.1": { "value": "Concierge full service com experiências locais curadas e itinerários", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Painel escultural Burle Marx (1992 — último projeto em Fortaleza); 20 variações de salas para eventos sociais e corporativos; opção Day Use (8h-20h com café e áreas comuns); promoção Birthday Month (café/feijoada cortesia com 2 acompanhantes pagantes); Gran Class jacuzzi/sauna exclusivos", "source_type": "hotel_website", "source_url": "https://www.granmarquise.com.br/" },
+    "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Hotel Gran Marquise",
@@ -118,38 +68,24 @@
     "Experiência": "praia",
     "Destino": "Mucuripe"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.granmarquise.com.br/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.1","5.1","5.3","6.4","8.1","8.3","9.2","9.3","10.2"],
+  "data_quality_warnings": [
+    "JSON antigo: cidade Rio de Janeiro/RJ + endereço Av. Atlântica 500 — corrigido para Fortaleza/CE conforme Excel + site oficial"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T14:55:00Z",
+      "wave": 2,
+      "primary_source": "hotel_website",
+      "fields_added": 17,
+      "coverage_before": 0.18,
+      "coverage_after": 0.7,
+      "notes": "Hotel 5 estrelas na Av. Beira Mar de Fortaleza. 4 restaurantes (Mucuripe nomeado), Spa L'Occitane, painel Burle Marx, 20 salas de eventos."
+    }
   ]
 }
