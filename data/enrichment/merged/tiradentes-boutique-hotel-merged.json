@@ -1,0 +1,70 @@
+{
+  "slug": "tiradentes-boutique-hotel",
+  "name": "Tiradentes Boutique Hotel",
+  "source_priority": [
+    "enriched"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Tiradentes Boutique Hotel",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://tiradenteshotel.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Tiradentes",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "MG",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://tiradenteshotel.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://tiradenteshotel.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 32 3355-1000",
+        "website": "https://tiradenteshotel.com.br/",
+        "address": "Tiradentes, MG"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {},
+  "sources": [
+    "hotel_website"
+  ]
+}

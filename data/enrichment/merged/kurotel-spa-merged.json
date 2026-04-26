@@ -1,0 +1,24 @@
+{
+  "slug": "kurotel-spa",
+  "name": "Kurotel SPA",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "kurotel-spa",
+    "ESTABELECIMENTOS": "Kurotel SPA",
+    "MUNICÍPIO": "Gramado",
+    "UF": "RS",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "serra",
+    "Destino": "Gramado"
+  },
+  "sources": []
+}

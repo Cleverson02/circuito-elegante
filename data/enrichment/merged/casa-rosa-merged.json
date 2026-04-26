@@ -1,0 +1,82 @@
+{
+  "slug": "casa-rosa",
+  "name": "Casa Rosa",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Casa Rosa",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://casarosapirenopolis.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Pirenópolis",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "GO",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://casarosapirenopolis.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://casarosapirenopolis.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Trilhas",
+        "Natureza"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 61 3331-7000",
+        "website": "https://casarosapirenopolis.com.br/",
+        "address": "Pirenópolis, GO"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "casa-rosa",
+    "ESTABELECIMENTOS": "Casa Rosa",
+    "MUNICÍPIO": "Petrópolis",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "Serra Fluminense"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

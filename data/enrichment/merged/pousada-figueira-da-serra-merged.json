@@ -1,0 +1,24 @@
+{
+  "slug": "pousada-figueira-da-serra",
+  "name": "Pousada Figueira da Serra",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "pousada-figueira-da-serra",
+    "ESTABELECIMENTOS": "Pousada Figueira da Serra",
+    "MUNICÍPIO": "Campos do Jordão",
+    "UF": "SP",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "Campos do Jordão"
+  },
+  "sources": []
+}

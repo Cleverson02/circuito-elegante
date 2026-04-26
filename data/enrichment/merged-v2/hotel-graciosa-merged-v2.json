@@ -1,0 +1,135 @@
+{
+  "slug": "hotel-graciosa",
+  "name": "Hotel Graciosa",
+  "template_coverage": 0.12121212121212122,
+  "template_fields": {
+    "1.1": true,
+    "1.2": true,
+    "1.3": true,
+    "1.4": false,
+    "1.5": false,
+    "2.1": true,
+    "2.2": false,
+    "2.3": false,
+    "2.4": false,
+    "3.1": false,
+    "3.2": false,
+    "4.1": false,
+    "4.2": false,
+    "4.3": false,
+    "5.1": false,
+    "5.2": false,
+    "5.3": false,
+    "6.1": false,
+    "6.2": false,
+    "6.3": false,
+    "6.4": false,
+    "7.1": false,
+    "7.2": false,
+    "7.3": false,
+    "8.1": false,
+    "8.2": false,
+    "8.3": false,
+    "8.4": false,
+    "9.1": false,
+    "9.2": false,
+    "9.3": false,
+    "10.1": false,
+    "10.2": false
+  },
+  "quality_score": 0.12100313479623825,
+  "completeness": 0.1206896551724138,
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Graciosa",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://hotelgraciosa.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Curitiba",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PR",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://hotelgraciosa.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://hotelgraciosa.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 41 3222-1000",
+        "website": "https://hotelgraciosa.com.br/",
+        "address": "Curitiba, PR"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {},
+  "sources": [],
+  "source_priority": [
+    "enrich"
+  ],
+  "gap_fields": [
+    "1.4",
+    "1.5",
+    "2.2",
+    "2.3",
+    "2.4",
+    "3.1",
+    "3.2",
+    "4.1",
+    "4.2",
+    "4.3",
+    "5.1",
+    "5.2",
+    "5.3",
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "7.1",
+    "7.2",
+    "7.3",
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "9.1",
+    "9.2",
+    "9.3",
+    "10.1",
+    "10.2"
+  ]
+}

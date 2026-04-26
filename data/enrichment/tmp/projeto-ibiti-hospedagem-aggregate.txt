@@ -1,0 +1,101 @@
+# PROJETO IBITI — Aggregate scrape notes (Phase 1)
+# Collected 2026-04-22
+
+## Stub (git 34cc2e5)
+- hotel_slug: projeto-ibiti-hospedagem
+- hotel_name: "Projeto Ibiti - Hospedagem"
+- municipality: Lima Duarte
+- state_code: MG
+- region: sudeste
+- experience: serra
+- destination: Serra do Ibitipoca
+- ce_page_url (stub): https://www.circuitoelegante.com.br/hotel/projeto-ibiti-hospedagem-lima-duarte-mg/ (404)
+
+## Local questionnaire
+- Grep "Ibiti" em `data/faqs/Questionário...md` → NO MATCHES (no questionnaire entry)
+
+## CE page
+- 404 confirmed (stub URL and alt URL redirect)
+
+## Official site (ibiti.com) — HOME
+- Title: "IBITI. Um novo mundo nas montanhas de Minas."
+- Tagline: "Conecte-se com a natureza e redescubra sua essência"
+- Headline: "Somos um projeto socioambiental experimental focado nos seres vivos e sua casa, o planeta."
+- 3 accommodation concepts: Ibiti Village, Engenho Lodge, Remote
+- Location: "Lima Duarte, em Minas Gerais, e margeia o Parque Estadual do Ibitipoca"
+- Airport: "Aeroporto da Zona da Mata... a 2h30 de carro do Ibiti Projeto"
+- Distances (from home page):
+  * Rio de Janeiro — 258 km
+  * São Paulo — 432 km
+  * Belo Horizonte — 312 km
+  * Inhotim — 315 km
+  * Tiradentes — 201 km
+- Google Maps link: https://goo.gl/maps/CmctakVPJPpUHMcFA
+- Languages (nav): PT-BR
+
+## Nossa história (about)
+- Opening year: 1982 (farm purchase by Renato Machado); tourism since 2008
+- Address: "Vila Mogol S/N – Lima Duarte, MG 36.140, Caixa Postal 02"
+- Phone: +55 32 9 9806-3963
+- Email: reservas@ibiti.com
+- Reservation hours: Mon-Fri, 9am-6pm
+- Property size: 6,000 hectares (98% preserved/regenerated)
+- Sustainability: B-Corp (Sistema B Brasil), Johansens, Seloxis, Ibiti Regenera
+- Languages: Portuguese and English
+- Access: 900m airstrip, car transfers, helipads
+
+## Ibiti Engenho
+- Address: "Vila Mogol S/N – Lima Duarte, MG 36.140, Brasil"
+- WhatsApp Engenho: +55 32 9 9984-7626
+- Email: reservas@ibiti.com
+- Accommodations (9 units): Suites 1-7 (40m², até 3 adultos cada), Suite 8 (60m²), Casa Carlinhos (300m², 6 pessoas, 3 suítes)
+- Wellness: Raízes Spa, sauna, jacuzzi (per viajarverde — external source about Engenho)
+- Restaurant: "Restaurante do Engenho" — traditional Minas cuisine, wood-fired; chefs Claude Troisgros and Pablo Oazen
+- Meals: breakfast, lunch (self-service), dinner (à la carte) included in daily rates
+- Sourcing: "Priorizamos produtos de origem local, provenientes de parcerias com produtores da região"
+- Gaia Produtos Ecológicos on-site organic farm
+
+## Ibiti Village (hospedagem)
+- 13 accommodations: Casa Guimarães Rosa (170m², 5 ad, 2 qtos), Casa Thomas Sowell (120m², 5 ad, 2 suítes), Humboldt Loft (60m²), Casa Freud (50m²), Suíte Da Vinci (65m²), Casa Anna Primavesi (100m², 5 ad, 2 suítes), Loft Confúcio (50m²), Suíte Ayn Rand (47m²), Suíte Epiteto (34m², 4 ad), Suíte Wangari (32m², 3 ad), Suíte Marco Aurélio (34m², 4 ad), Loft Douglas Tompkins (50m²), Casa Einstein Glass House (170m²)
+
+## Ibiti Remote
+- WhatsApp Remote: +55 32 98449-2200
+- Description: "localizados em áreas remotas, esses espaços são ideais para casais e famílias que buscam tranquilidade e conexão direta com a paisagem exuberante ao redor"
+
+## TripAdvisor — Ibiti Village (g2333153-d28115440)
+- Address: "Vila Mogol S/n, Lima Duarte, Minas Gerais 36140-000 Brasil"
+- Amenities: "Estacionamento gratuito", "Internet sem fio gratuita e de alta velocidade (Wi-Fi)", Fitness center, Free breakfast, Bike rentals, Family activities, Pet-friendly accommodations
+- Room features: Robes, desk, housekeeping, balcony/terrace, room service, minibar, cable/satellite TV, accessible shower
+- Languages: "Inglês, Português"
+- Price range: R$ 3,997 - R$ 4,211 (standard room)
+- Rooms total (Village only): 11
+- Nearby: Zona da Mata airport 73.9 km; Tancredo Neves 246.6 km
+- Room types: Mountain view, non-smoking, suites, family, smoking rooms
+
+## Booking.com (from Google snippet)
+- Offers "breakfast, Wi-Fi and free parking"
+- "indoor pool, a snack bar/delicatessen and a garden" — NOTE: this appears to describe general luxury features; could not independently verify indoor pool
+
+## Viajar Verde (external article)
+- "6 mil hectares de Mata Atlântica regenerada" (98% forested)
+- Founder: Renato Machado; private reserve >40 years ago; tourism since 2008
+- Engenho: "um casarão colonial com apenas oito suítes" + Casa Carlinhos
+- Raízes Spa + sauna + jacuzzi at Engenho
+- "No heated pool mentioned"
+- Restaurant: "Yucca" with vegetarian cuisine by chef Mateus Abdo (NOTE: conflicts with ibiti.com which cites Restaurante do Engenho; Yucca may be separate outlet at another concept)
+- Activities: "300km de trilhas exclusivas" by foot/bike/horse; waterfalls, caves, canyons
+- 40 minutes from Juiz de Fora
+- Adjacent to Parque Estadual do Ibitipoca
+
+## Experiences (Vivências)
+- Trails and outdoor: "caminhos... com cachoeiras, piscinas naturais e paisagens deslumbrantes"
+- Environmental education for children/youth
+- Gastronomic: "jantares em grutas, piqueniques ao pôr do sol e almoços à beira de cachoeiras"
+- Wellness: "spas, com tratamentos holísticos e aulas de yoga"
+
+## Events
+- Weddings in nature, corporate events, group celebrations
+- No capacity numbers published
+
+## Chatbot
+- Not detected on ibiti.com visited pages (only "Reservas" popup / WhatsApp phone links)

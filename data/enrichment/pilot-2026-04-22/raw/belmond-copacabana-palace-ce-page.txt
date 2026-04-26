@@ -1,0 +1,26 @@
+SOURCE: https://www.circuitoelegante.com.br/hotel/belmond-copacabana-palace-rio-de-janeiro-rj/
+FETCHED: 2026-04-19
+STATUS: 404 Not Found
+
+The CE site does not currently have a page for Belmond Copacabana Palace.
+
+SOURCE: data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md
+RESULT: No matches for "Belmond" or "Copacabana Palace" — hotel has not responded to the questionnaire.
+
+SOURCE: git show 34cc2e5:data/enrichment/belmond-copacabana-palace.json
+RESULT: Existing P1_ONLY stub (6 fields filled, 52 null). Confirms:
+- Hotel name: Belmond Copacabana Palace
+- Municipality: Rio de Janeiro
+- State: RJ
+- Region: sudeste
+- Destination: Copacabana
+- Experience: praia
+- has_api: false
+- elevare_hotel_id: null
+- bradesco_coupon: false
+
+SOURCE: Booking.com
+STATUS: OTA_BLOCKED — two different URL forms returned empty content (likely bot detection/captcha)
+
+SOURCE: Chatbot detection
+STATUS: Not detected on official site during scraping (WebFetch doesn't render widgets)

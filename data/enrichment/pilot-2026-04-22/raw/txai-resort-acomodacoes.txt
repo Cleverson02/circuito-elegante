@@ -1,0 +1,220 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "TXAI" [ref=e8] [cursor=pointer]:
+          - /url: https://www.txairesorts.com/
+          - img "TXAI" [ref=e9]
+        - link "Relais & Chateaux" [ref=e10] [cursor=pointer]:
+          - /url: https://www.relaischateaux.com/
+          - img "Relais & Chateaux" [ref=e11]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - link "PT" [ref=e14] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php
+          - link "EN" [ref=e15] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php?lang=en
+          - link "ES" [ref=e16] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php?lang=es
+        - link "Reservas" [ref=e18] [cursor=pointer]:
+          - /url: "https://be.synxis.com/?Hotel=62559&Chain=8565&config=TXAIconfig&theme=TXAItheme&locale=pt-PT&adult=2&child=0 "
+        - button [ref=e19] [cursor=pointer]
+  - generic [ref=e28]:
+    - generic [ref=e29]: Acomodações
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - link [ref=e32] [cursor=pointer]:
+          - /url: javascript:;
+        - link [ref=e33] [cursor=pointer]:
+          - /url: javascript:;
+        - link [ref=e34] [cursor=pointer]:
+          - /url: javascript:;
+      - link "Conheça Mais " [ref=e37] [cursor=pointer]:
+        - /url: "#section-1"
+        - text: Conheça Mais
+        - generic [ref=e38]: 
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - textbox "CHECK-IN " [ref=e43] [cursor=pointer]
+      - textbox "CHECK-OUT " [ref=e44] [cursor=pointer]
+    - button " CHECAR DISPONIBILIDADE" [ref=e46] [cursor=pointer]:
+      - generic [ref=e47]: 
+      - text: CHECAR DISPONIBILIDADE
+  - generic [ref=e56]:
+    - heading "Construções leves, que utilizam matéria-prima nativa, como a piaçava e a tala de dendê, compõem a arquitetura das 38 acomodações." [level=2] [ref=e57]
+    - link "Descubra Mais" [ref=e58] [cursor=pointer]:
+      - /url: "#section-11"
+  - generic [ref=e62]:
+    - heading "MAIS ACOMODAÇÕES" [level=3] [ref=e63]
+    - generic [ref=e64]:
+      - tablist [ref=e65]:
+        - tab "Bangalôs" [selected] [ref=e66] [cursor=pointer]
+        - tab "Apartamentos" [ref=e67] [cursor=pointer]
+      - generic [ref=e68]:
+        - tabpanel "Bangalôs" [ref=e69]:
+          - generic [ref=e70]:
+            - button [ref=e71] [cursor=pointer]:
+              - img [ref=e72]
+            - generic [ref=e74]:
+              - link [ref=e75] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-luxo
+                - generic [ref=e77]:
+                  - text: Luxo
+                  - generic [ref=e78]: 
+                - img [ref=e79]
+              - link [ref=e80] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-morro
+                - generic [ref=e82]:
+                  - text: Morro
+                  - generic [ref=e83]: 
+                - img [ref=e84]
+              - link [ref=e85] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-praia
+                - generic [ref=e87]:
+                  - text: Praia
+                  - generic [ref=e88]: 
+                - img [ref=e89]
+              - link "Premium  Premium" [ref=e90] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-premium
+                - generic [ref=e92]:
+                  - text: Premium
+                  - generic [ref=e93]: 
+                - img "Premium" [ref=e94]
+              - link "Luxo  Luxo" [ref=e95] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-luxo
+                - generic [ref=e97]:
+                  - text: Luxo
+                  - generic [ref=e98]: 
+                - img "Luxo" [ref=e99]
+              - link "Morro  Morro" [ref=e100] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-morro
+                - generic [ref=e102]:
+                  - text: Morro
+                  - generic [ref=e103]: 
+                - img "Morro" [ref=e104]
+              - link [ref=e105] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-praia
+                - generic [ref=e107]:
+                  - text: Praia
+                  - generic [ref=e108]: 
+                - img [ref=e109]
+              - link [ref=e110] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-premium
+                - generic [ref=e112]:
+                  - text: Premium
+                  - generic [ref=e113]: 
+                - img [ref=e114]
+              - link [ref=e115] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-luxo
+                - generic [ref=e117]:
+                  - text: Luxo
+                  - generic [ref=e118]: 
+                - img [ref=e119]
+              - link [ref=e120] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-morro
+                - generic [ref=e122]:
+                  - text: Morro
+                  - generic [ref=e123]: 
+                - img [ref=e124]
+              - link [ref=e125] [cursor=pointer]:
+                - /url: https://www.txairesorts.com/acomodacao/bangalo-praia
+                - generic [ref=e127]:
+                  - text: Praia
+                  - generic [ref=e128]: 
+                - img [ref=e129]
+            - button [ref=e130] [cursor=pointer]:
+              - img [ref=e131]
+        - text:   
+  - contentinfo [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - paragraph [ref=e140]:
+          - text: Rodovia Ilhéus-Itacaré
+          - text: BA-001, KM 48
+          - text: Fazenda Boa Sorte
+          - text: Praia de Itacarezinho, Bahia - 45530-000
+          - text: +55 73 2101 5000
+        - list [ref=e142]:
+          - listitem [ref=e143]:
+            - link "O Txai" [ref=e145] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/txai
+            - link "Política de Qualidade" [ref=e147] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/quality/Política-da-Qualidade.pdf
+          - listitem [ref=e148]:
+            - generic [ref=e149]: Para descobrir
+            - link "Spa Shamash" [ref=e151] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/spa-shamash
+            - link "Trilhas e Passeios" [ref=e153] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/trilhas-e-passeios
+            - link "Gastronomia" [ref=e155] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-saborear
+          - listitem [ref=e156]:
+            - generic [ref=e157]: Para se hospedar
+            - link "Bangalôs" [ref=e159] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/acomodacoes/bangalo#section-11
+            - link "Apartamentos" [ref=e161] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/acomodacoes/apartamento#section-11
+            - link "Vilas do Sul" [ref=e163] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-vilas-do-sul#section-11
+            - link "Residences" [ref=e165] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-residences#section-11
+            - link "Vilas do Norte" [ref=e167] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-vilas-do-norte#section-11
+          - listitem [ref=e168]:
+            - generic [ref=e169]: Para preservar
+            - link "Desenvolvimento comunitário" [ref=e171] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/desenvolvimento-comunitario#section-5
+            - link "TxaiTaruga" [ref=e173] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/txaitaruga#section-5
+            - link "Txai Consciente" [ref=e175] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/educacao-ambiental#section-5
+            - link "Nosso futuro" [ref=e177] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/comunidade#section-5
+        - list [ref=e180]:
+          - listitem [ref=e181]:
+            - generic [ref=e182]: Fale Conosco
+            - generic [ref=e183]:
+              - text: "Central de Reservas:"
+              - text: +55 11 3040 5010
+              - text: central.reservas@txairesorts.com
+            - generic [ref=e184]:
+              - link "Carreiras" [ref=e186] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/txai-resorts-brasil
+              - text: "Assessoria de imprensa:"
+              - link "txai@taopr.com.br" [ref=e187] [cursor=pointer]:
+                - /url: mailto:txai@taopr.com.br
+            - generic [ref=e188]:
+              - text: Acompanhe
+              - text: nossas redes
+              - text: "sociais:"
+              - generic [ref=e189]:
+                - link "Instagram" [ref=e190] [cursor=pointer]:
+                  - /url: https://www.instagram.com/txairesorts
+                  - img "Instagram" [ref=e191]
+                - link "Facebook" [ref=e192] [cursor=pointer]:
+                  - /url: https://www.facebook.com/txairesorts
+                  - img "Facebook" [ref=e193]
+                - link "Youtube" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/Txairesorts
+                  - img "Youtube" [ref=e195]
+                - link "LinkedIn" [ref=e196] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/txai-resorts-brasil
+                  - img "LinkedIn" [ref=e197]
+      - generic [ref=e198]: Todos os direitos reservados a Txai Resorts
+  - img [ref=e200] [cursor=pointer]
+  - dialog "Controle sua privacidade" [ref=e205]:
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - heading "Controle sua privacidade" [level=3] [ref=e209]
+          - link "AdOpt" [ref=e211] [cursor=pointer]:
+            - /url: https://goadopt.io/porque-aviso/?utm_content=main&utm_medium=cookie_banner_web&utm_source=cookie_banner_41528133-4862-450b-b81e-8304e9fa7bc4
+        - generic [ref=e212]:
+          - generic [ref=e213]: Nosso site usa cookies para melhorar a navegação.
+          - generic [ref=e214]: Usamos cookies para compartilhar dados de análise, publicidade, dados de usuários e personalização de anúncios com o Google.
+          - link "Política de Privacidade" [ref=e216] [cursor=pointer]:
+            - /url: https://adoptprodstorage.blob.core.windows.net/adopt-prod/organization/5405eac1-9bfd-4f22-a2d4-8525381935e1/disclaimer/014f7087-2fce-4e84-9979-ca75e83ae49b/policy/01GPEGAT7NRCEXYC424SQXSR37.pdf
+      - generic [ref=e217]:
+        - button "Minhas opções" [ref=e218] [cursor=pointer]
+        - button "Rejeitar" [ref=e219] [cursor=pointer]
+        - button "Aceitar" [ref=e220] [cursor=pointer]

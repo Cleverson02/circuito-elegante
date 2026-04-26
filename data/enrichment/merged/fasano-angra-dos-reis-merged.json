@@ -1,0 +1,85 @@
+{
+  "slug": "fasano-angra-dos-reis",
+  "name": "Hotel Fasano Angra dos Reis",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5120689655172413,
+  "completeness": 0.5172413793103449,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Fasano Angra dos Reis",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.fasano.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Angra dos Reis",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.fasano.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://www.fasano.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite Deluxe"
+        },
+        {
+          "name": "Suite Vista Mar"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar",
+        "Praia privativa"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 24 3369-2000",
+        "website": "https://www.fasano.com.br/",
+        "address": "Praia do Bonito - Angra dos Reis, RJ"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "fasano-angra-dos-reis",
+    "ESTABELECIMENTOS": "Fasano Angra dos Reis",
+    "MUNICÍPIO": "Angra dos Reis",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "praia",
+    "Destino": "Angra"
+  },
+  "sources": [
+    "hotel_website",
+    "booking"
+  ]
+}

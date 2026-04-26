@@ -1,0 +1,24 @@
+{
+  "slug": "pousada-capim-do-mato",
+  "name": "Pousada Capim do Mato",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "pousada-capim-do-mato",
+    "ESTABELECIMENTOS": "Pousada Capim do Mato",
+    "MUNICÍPIO": "Jaboticatubas",
+    "UF": "MG",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": 6865,
+    "Região": "sudeste",
+    "Experiência": "Serra",
+    "Destino": "Serra do Cipó"
+  },
+  "sources": []
+}

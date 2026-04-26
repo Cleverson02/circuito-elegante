@@ -1,0 +1,24 @@
+{
+  "slug": "pousada-outeiro",
+  "name": "Pousada Outeiro",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "pousada-outeiro",
+    "ESTABELECIMENTOS": "Pousada Outeiro",
+    "MUNICÍPIO": "Porto Seguro",
+    "UF": "BA",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Caraíva"
+  },
+  "sources": []
+}

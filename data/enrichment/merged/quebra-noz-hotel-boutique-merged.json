@@ -1,0 +1,83 @@
+{
+  "slug": "quebra-noz-hotel-boutique",
+  "name": "Quebra Noz Hotel Boutique",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Quebra Noz Hotel Boutique",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://quebranoz.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Florianópolis",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "SC",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://quebranoz.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://quebranoz.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 48 3025-1200",
+        "website": "https://quebranoz.com.br/",
+        "address": "Florianópolis, SC"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "quebra-noz-hotel-boutique",
+    "ESTABELECIMENTOS": "Quebra Nóz Hotel Boutique",
+    "MUNICÍPIO": "Campos do Jordão",
+    "UF": "SP",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "Campos do Jordão"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

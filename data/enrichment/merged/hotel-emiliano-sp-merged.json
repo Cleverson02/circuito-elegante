@@ -1,0 +1,129 @@
+{
+  "slug": "hotel-emiliano-sp",
+  "name": "Hotel Emiliano São Paulo",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.8745689655172414,
+  "completeness": 0.7068965517241379,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Emiliano São Paulo",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.emiliano.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "São Paulo",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "SP",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=SP → região (mapeamento IBGE)"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Hotel boutique de luxo no coração do bairro Jardins. Suite Cubo com vista 180° da cidade.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite Cubo",
+          "size": 135,
+          "description": "Suite cobertura em formato cubo, vista 180° cidade"
+        },
+        {
+          "name": "Suite Executiva",
+          "size": 55,
+          "description": "Suite executiva"
+        },
+        {
+          "name": "Suite Emiliano",
+          "size": 65,
+          "description": "Suite Emiliano"
+        },
+        {
+          "name": "Deluxe King",
+          "size": 45,
+          "description": "Deluxe King"
+        },
+        {
+          "name": "Deluxe Twin",
+          "size": 40,
+          "description": "Deluxe Twin"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Spa Santapele",
+        "Restaurante Emiliano",
+        "Bar",
+        "Piscina",
+        "Fitness"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "15:00",
+        "check_out": "12:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "6.4": {
+      "name": "address",
+      "value": "Rua Oscar Freire, 384 - Jardim Paulista, São Paulo, SP 01426-000",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 11 3728-2000",
+        "website": "https://www.emiliano.com.br/"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    }
+  },
+  "excel_data": {
+    "slug": "hotel-emiliano-sp",
+    "ESTABELECIMENTOS": "Hotel Emiliano - SP",
+    "MUNICÍPIO": "São Paulo",
+    "UF": "SP",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "cidade",
+    "Destino": "Jardim Paulista"
+  },
+  "sources": [
+    "hotel_website",
+    "local_xlsx"
+  ]
+}

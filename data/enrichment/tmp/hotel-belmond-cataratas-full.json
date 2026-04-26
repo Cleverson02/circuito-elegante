@@ -1,0 +1,35 @@
+{
+  "hotel_slug": "hotel-belmond-cataratas",
+  "extracted_at": "2026-04-24T03:17:15.542Z",
+  "enrichment_version": "3.0",
+  "verdict": "PASS",
+  "quality_score": 0.5571341318514111,
+  "quality_breakdown": {
+    "completeness": 0.4071341318514111,
+    "accuracy": 0.85,
+    "consistency": 0.8,
+    "currency": 0.9
+  },
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Belmond Hotel das Cataratas",
+      "confidence_type": "literal"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Foz do Iguaçu",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PR",
+      "confidence_type": "literal"
+    }
+  },
+  "_meta": {
+    "fields_total": 58,
+    "fields_filled": 32,
+    "completeness": 0.5571341318514111
+  }
+}

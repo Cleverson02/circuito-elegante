@@ -1,0 +1,668 @@
+{
+  "slug": "fasano-rj-full",
+  "name": "Hotel Fasano Rio de Janeiro",
+  "source_priority": [
+    "form"
+  ],
+  "quality_score": 0.934,
+  "completeness": 0.845,
+  "data_from": {
+    "1.1": "form",
+    "1.2": "form",
+    "1.3": "form",
+    "1.4": "form",
+    "1.5": "form",
+    "1.6": "form",
+    "1.7": "form",
+    "1.8": "form",
+    "1.9": "form",
+    "1.10": "form",
+    "2.1": "form",
+    "2.2": "form",
+    "2.3": "form",
+    "2.4": "form",
+    "3.1": "form",
+    "3.2": "form",
+    "3.3": "form",
+    "3.4": "form",
+    "3.5": "form",
+    "3.6": "form",
+    "3.7": "form",
+    "3.8": "form",
+    "3.9": "form",
+    "4.1": "form",
+    "4.2": "form",
+    "4.3": "form",
+    "4.4": "form",
+    "4.5": "form",
+    "5.1": "form",
+    "5.2": "form",
+    "5.3": "form",
+    "5.4": "form",
+    "5.5": "form",
+    "5.6": "form",
+    "5.7": "form",
+    "6.1": "form",
+    "6.2": "form",
+    "6.3": "form",
+    "6.4": "form",
+    "7.1": "form",
+    "7.2": "form",
+    "7.3": "form",
+    "7.4": "form",
+    "7.5": "form",
+    "8.1": "form",
+    "8.2": "form",
+    "8.3": "form",
+    "8.4": "form",
+    "8.5": "form",
+    "9.1": "form",
+    "9.2": "form",
+    "9.3": "form",
+    "9.4": "form",
+    "10.1": "form",
+    "10.2": "form",
+    "10.3": "form",
+    "10.4": "form",
+    "10.5": "form"
+  },
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Fasano Rio de Janeiro",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.fasano.com.br/hotel/fasano-rio-de-janeiro/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Rio de Janeiro",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=RJ → região sudeste (mapeamento IBGE)"
+    },
+    "1.5": {
+      "name": "destination",
+      "value": "Ipanema",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.6": {
+      "name": "experience",
+      "value": "praia",
+      "confidence_type": "inferred",
+      "inference_logic": "Ipanema beira-mar, Booking 'Beira-mar', Ipanema Beach 50m"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.fasano.com.br/hotel/fasano-rio-de-janeiro/",
+      "confidence_type": "literal"
+    },
+    "1.8": {
+      "name": "google_maps_url",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "O primeiro projeto de Philippe Starck no Brasil faz do Hotel Fasano Rio de Janeiro o endereço mais fascinante da orla de Ipanema. Entre os atrativos está a piscina de borda infinita que se debruça sobre a praia, tendo como cenário o Arpoador, o Morro Dois Irmãos e o Corcovado. O projeto reverencia o espírito da arquitetura e do design brasileiro dos anos 1950 e 1960 e homenageia a gloriosa época da Bossa Nova.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.10": {
+      "name": "lodging_type",
+      "value": "Hotel 5 estrelas / luxury boutique",
+      "confidence_type": "inferred",
+      "inference_logic": "Booking '5 estrelas' + Signature Fasano + Philippe Starck design"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suíte Deluxe Vista Mar",
+          "size_m2": 130,
+          "description": "Ampla varanda vista mar, workstation, sala de estar, bar privativo, closet, camas king, lençóis algodão egípcio 300 fios, duvet pluma ganso"
+        },
+        {
+          "name": "Suíte Vista Mar",
+          "size_m2": 70,
+          "description": "Varanda vista mar, workstation, sala de estar, bar privativo"
+        },
+        {
+          "name": "Deluxe Vista Mar",
+          "size_m2": 40,
+          "description": "Varanda vista mar, workstation, king-size ou 2 solteiros"
+        },
+        {
+          "name": "Superior Vista Parcial Mar 1º Andar",
+          "size_m2": 40,
+          "description": "Varanda vista mar, opção adaptada para PCD"
+        },
+        {
+          "name": "Superior Vista Interna",
+          "size_m2": 35,
+          "description": "Camas king, lençóis 500 fios"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "2.2": {
+      "name": "max_capacity_per_type",
+      "value": {
+        "Suíte Vista Mar": "4+",
+        "Suíte Deluxe Vista Mar": "4+",
+        "Deluxe/Superior": 2
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "2.3": {
+      "name": "room_amenities",
+      "value": [
+        "Varanda com vista mar (categorias vista mar)",
+        "Workstation",
+        "Bar privativo (suítes)",
+        "Closet (Deluxe Vista Mar)",
+        "Camas king-size",
+        "Lençóis algodão egípcio 300-500 fios",
+        "Duvet pluma de ganso",
+        "Banheiros de mármore com iluminação natural",
+        "Banheira + chuveiro de alta pressão",
+        "Penteadeira, lavabo",
+        "Sandálias Ipanema",
+        "Ar-condicionado",
+        "TV satélite",
+        "Frigobar",
+        "Secador de cabelo",
+        "Móveis Sérgio Rodrigues, espelhos Philippe Starck"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_booking"
+    },
+    "2.4": {
+      "name": "total_rooms",
+      "value": 89,
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.1": {
+      "name": "parking",
+      "value": {
+        "has_parking": true,
+        "type": "Estacionamento privativo + BMW i Wallbox"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking+hotel_website"
+    },
+    "3.2": {
+      "name": "pool_description",
+      "value": "Piscina de borda infinita no 8º andar (rooftop), vista Ipanema/Arpoador/Morro Dois Irmãos/Corcovado. Espelhos Philippe Starck. Bar da Piscina exclusivo hóspedes.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.3": {
+      "name": "pool_heated",
+      "value": null,
+      "null_reason": "not_found_in_sources",
+      "note": "Nenhuma fonte menciona aquecida/heated"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "Piscina borda infinita rooftop",
+        "Bar da Piscina",
+        "Spa",
+        "Fitness Center",
+        "6 pranchas surfe cortesia",
+        "BMW i Wallbox",
+        "Rooftop vista panorâmica",
+        "Acesso Praia Ipanema"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.5": {
+      "name": "wellness",
+      "value": "Spa Fasano 1º andar aberto ao público. Cardápio corpo+face. Dom-Dom 10h-20h. Massagem crânio-sacral pedras aquecidas. Booking confirma sauna+massagens. Contato +55 21 3202 4044 / sparj@fasano.com.br",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_booking"
+    },
+    "3.6": {
+      "name": "event_space",
+      "value": {
+        "has_events": true,
+        "description": "Casamentos, aniversários, batizados, sociais, corporativos até 100 convidados. Espaços: Rooftop, Gero, Fasano Caffè (165m² / 90 pessoas), Baretto-Londra, Sala Fasano (reuniões executivas). Ramal 4249."
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.7": {
+      "name": "wifi",
+      "value": {
+        "included": true,
+        "quality": null,
+        "booking_score": 8.5
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "3.8": {
+      "name": "accessibility",
+      "value": {
+        "has_accessibility": true,
+        "description": "Categoria Superior Vista Parcial Mar 1º Andar tem opção adaptada PCD"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.9": {
+      "name": "gym",
+      "value": {
+        "has_gym": true,
+        "description": "Fitness Center térreo, equipamentos modernos musculação + funcional, personal trainer contratação extra"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.1": {
+      "name": "restaurants",
+      "value": [
+        {
+          "name": "Gero Rio",
+          "cuisine": "Italiana contemporânea",
+          "chef": "Luigi Moressa",
+          "location": "Térreo com varanda",
+          "phone": "+55 21 3202 4030",
+          "email": "gerorio@fasano.com.br",
+          "hours": "Seg-Qua 12-15h + 19-23h | Qui 12-15h + 19-00h | Sex-Sáb 12-16h + 19-01h | Dom 12-22h"
+        },
+        {
+          "name": "Bar da Piscina",
+          "cuisine": "Refeições leves, sucos, coquetéis",
+          "location": "Rooftop 8º andar, exclusivo hóspedes",
+          "hours": "Todo dia 9h-20h"
+        },
+        {
+          "name": "Fasano Caffè",
+          "cuisine": "Café da manhã buffet+à la carte chef Luigi Moressa; eventos privativos",
+          "location": "165m² salão+externa, 90 pessoas",
+          "phone": "+55 21 3202 4030",
+          "email": "fasanocaffe.rio@fasano.com.br"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.2": {
+      "name": "meals_included",
+      "value": "Café da manhã buffet no Fasano Caffè",
+      "confidence_type": "inferred",
+      "inference_logic": "Booking 'Café da manhã fabuloso Buffet'; site oficial menu buffet+à la carte"
+    },
+    "4.3": {
+      "name": "special_dining",
+      "value": [
+        "Jantar no Rooftop menu Luigi Moressa",
+        "Delivery Gero Rio estendido",
+        "Room service",
+        "Eventos privativos Fasano Caffè"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.4": {
+      "name": "room_service",
+      "value": {
+        "available": true,
+        "hours": null
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.5": {
+      "name": "dietary_options",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "15:00",
+        "check_out": "12:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "5.2": {
+      "name": "early_late_checkout",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.3": {
+      "name": "cancellation_policy",
+      "value": "Políticas variam por tipo de acomodação e tarifa. Legislação BR: cancelamento gratuito até 7 dias após reserva; depois aplica política da tarifa.",
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "5.4": {
+      "name": "children_policy",
+      "value": "Crianças qualquer idade bem-vindas. 13+ cobradas como adultos. Berço grátis 0-2 anos mediante pedido. Sem camas extras. Sem idade mínima check-in.",
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "5.5": {
+      "name": "pet_policy",
+      "value": {
+        "accepts_pets": true,
+        "fee": "Custos adicionais (valor não publicado)",
+        "additional_rules": "Apenas 1 animal por unidade, mediante pedido"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "5.6": {
+      "name": "smoking_policy",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.7": {
+      "name": "min_age_solo",
+      "value": "Sem exigência de idade para check-in",
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "6.1": {
+      "name": "airport_distance",
+      "value": "Santos Dumont 11km; Galeão 21-27.8km; Jacarepaguá 23km",
+      "confidence_type": "literal",
+      "source_type": "ota_booking",
+      "conflict_note": "Booking cita 21km e 27.8km para Galeão"
+    },
+    "6.2": {
+      "name": "transfer",
+      "value": {
+        "available": true,
+        "description": "Serviço de transfer listado; detalhes não informados"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "6.3": {
+      "name": "nearby_attractions",
+      "value": [
+        {
+          "name": "Ipanema Beach",
+          "distance": "50m"
+        },
+        {
+          "name": "Arpoador",
+          "distance": "200m"
+        },
+        {
+          "name": "Metrô Ipanema/General Osório",
+          "distance": "550m"
+        },
+        {
+          "name": "Praia do Diabo",
+          "distance": "650m"
+        },
+        {
+          "name": "Copacabana",
+          "distance": "950m"
+        },
+        {
+          "name": "Forte Copacabana",
+          "distance": "1.1km"
+        },
+        {
+          "name": "Leblon",
+          "distance": "2.1km"
+        },
+        {
+          "name": "Lagoa Rodrigo de Freitas",
+          "distance": "3.2km"
+        },
+        {
+          "name": "Jardim Botânico",
+          "distance": "5km"
+        },
+        {
+          "name": "Parque Lage",
+          "distance": "5km"
+        },
+        {
+          "name": "Cristo/Corcovado",
+          "distance": "10km"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "6.4": {
+      "name": "how_to_get_there",
+      "value": "Metrô Ipanema/General Osório 550m. Santos Dumont 11km, Galeão 21-27.8km. Av. Vieira Souto 80 Ipanema.",
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "7.1": {
+      "name": "special_programming",
+      "value": "Menu 'Rio 40 Graus' (surfe, yoga, SUP, beach tennis, canoa havaiana, bike, iate Ilhas Cagarras). Yoga amanhecer rooftop. Tour Bossa Nova, Santa Teresa, Maracanã, Jantar Rooftop, helicóptero 'Nas Alturas'. Programas: Bem-Estar (3 diárias + massagem) e One More Night 4x3.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.2": {
+      "name": "hotel_concierge_services",
+      "value": "Concierge: locação bikes, 6 pranchas cortesia Rico de Souza (long/fun/pranchinha + rash guard, leash, parafina), aulas surfe particulares, vôlei praia, personal trainer, frescobol cortesia, atividades esportivas praia",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.3": {
+      "name": "activities_tours",
+      "value": [
+        "Nas Alturas (helicóptero)",
+        "Aula de Surfe no Arpoador",
+        "Pranchas surfe cortesia Rico de Souza",
+        "Jantar no Rooftop",
+        "Canoa Havaiana",
+        "Pedale na Orla",
+        "Rio a Bordo (iate Ilhas Cagarras)",
+        "Tour Bossa Nova (10 pontos)",
+        "Frescobol Ipanema",
+        "Vivencie o Maracanã",
+        "Stand Up Paddle",
+        "Beach Tennis",
+        "Yoga amanhecer rooftop",
+        "Descubra Santa Teresa"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.4": {
+      "name": "day_use",
+      "value": {
+        "available": true,
+        "conditions": "Spa aberto ao público 10h-20h; Gero Rio aberto público; Fasano Caffè aberto público; Bar da Piscina exclusivo hóspedes. Diária diurna sem pernoite não mencionada."
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Site diz 'Spa aberto ao público'; day use completo não mencionado"
+    },
+    "7.5": {
+      "name": "special_packages",
+      "value": [
+        {
+          "name": "Bem-Estar",
+          "description": "3 diárias p/ 2 pessoas + café da manhã + 1 massagem relaxante 50min Spa Fasano"
+        },
+        {
+          "name": "One More Night 4x3",
+          "description": "Estadas 4 diárias, última cortesia"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "8.1": {
+      "name": "highlights",
+      "value": "1º projeto Philippe Starck no Brasil; piscina borda infinita rooftop 8º andar vista Ipanema/Arpoador/Dois Irmãos/Corcovado; único luxury na orla Ipanema (Av. Vieira Souto 80); design homenageia Bossa Nova 1950-60 com Sérgio Rodrigues + espelhos Starck; Gero Rio premiado; Spa público; pranchas surfe Rico de Souza; BMW i Wallbox EV; Booking 8.9 Fabuloso, localização 9.7/10",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_booking"
+    },
+    "8.2": {
+      "name": "awards_certifications",
+      "value": [
+        "Booking Travel Proud (LGBTQ+ friendly)",
+        "Gero Rio premiado por publicações",
+        "Booking 8.9 Fabuloso 513 avaliações"
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_booking+hotel_website"
+    },
+    "8.3": {
+      "name": "sustainability",
+      "value": "Estação recarga BMW i Wallbox veículos elétricos/híbridos. Grupo Fasano tem página institucional Sustentabilidade (não detalhada na página RJ).",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "8.4": {
+      "name": "star_rating",
+      "value": 5,
+      "confidence_type": "literal",
+      "source_type": "ota_booking"
+    },
+    "8.5": {
+      "name": "price_tier",
+      "value": "$$$$",
+      "confidence_type": "inferred",
+      "inference_logic": "5* + Signature Fasano + Av. Vieira Souto + suíte 130m² → luxury tier $$$$"
+    },
+    "9.1": {
+      "name": "guest_faqs",
+      "value": [
+        {
+          "q": "Quais horários de check-in/check-out?",
+          "a": "Entrada 15:00, saída 12:00.",
+          "source": "Booking"
+        },
+        {
+          "q": "Serve café da manhã?",
+          "a": "Sim, buffet no Fasano Caffè + à la carte chef Luigi Moressa.",
+          "source": "Booking+site"
+        },
+        {
+          "q": "Tem restaurante?",
+          "a": "Gero Rio (italiana), Bar da Piscina (exclusivo hóspedes rooftop), Fasano Caffè.",
+          "source": "Booking+site"
+        },
+        {
+          "q": "A piscina está aberta?",
+          "a": "Sim, borda infinita rooftop 8º andar vista Ipanema/Arpoador/Dois Irmãos/Corcovado.",
+          "source": "Booking+site"
+        },
+        {
+          "q": "Aceita pets?",
+          "a": "Sim, mediante pedido (1 por unidade, custos adicionais).",
+          "source": "Booking"
+        },
+        {
+          "q": "Tem estacionamento?",
+          "a": "Sim, privativo + BMW i Wallbox para elétricos/híbridos.",
+          "source": "Booking+site"
+        },
+        {
+          "q": "Spa está aberto?",
+          "a": "Sim, 1º andar aberto ao público, dom-dom 10h-20h.",
+          "source": "site"
+        },
+        {
+          "q": "Distância da praia?",
+          "a": "De frente para Ipanema (50m).",
+          "source": "Booking"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_booking+hotel_website"
+    },
+    "9.2": {
+      "name": "common_objections",
+      "value": [
+        {
+          "category": "PREÇO",
+          "objection": "Custo-benefício é a menor categoria Booking (7.6 vs 9.0+ das outras)",
+          "response": null,
+          "source": "Booking categorias"
+        }
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Única categoria Booking <9.0 é Custo-benefício 7.6 → percepção preço alto"
+    },
+    "9.3": {
+      "name": "attention_points",
+      "value": [
+        "Não prometer piscina aquecida — nenhuma fonte confirma",
+        "Bar da Piscina rooftop é EXCLUSIVO hóspedes",
+        "Não há camas extras — grupos >2 adultos precisam suítes 4+ ou conectantes",
+        "Taxa pet não publicada — confirmar antes",
+        "Horários Gero Rio variam por dia",
+        "Sem idade mínima check-in, mas 13+ cobrada como adulto"
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Gaps/restrições explícitas nas fontes"
+    },
+    "9.4": {
+      "name": "sales_arguments_by_profile",
+      "value": {
+        "casal": "Booking 9.8 casais. Suíte Vista Mar varanda king-size frente Ipanema, jantar rooftop estrelas, programa Bem-Estar massagem Spa",
+        "familia": "Suítes 4+ vista mar, quartos família, conectantes Deluxe/Superior, berço grátis 0-2 anos, crianças qualquer idade",
+        "corporativo": "Sala Fasano equipamentos última geração, workstation todas suítes, Fasano Caffè 90 pessoas, Santos Dumont 11km"
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Fatos literais agrupados por perfil"
+    },
+    "10.1": {
+      "name": "has_api",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "10.2": {
+      "name": "elevare_hotel_id",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "10.3": {
+      "name": "bradesco_coupon",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "10.4": {
+      "name": "ce_page_url",
+      "value": null,
+      "null_reason": "ce_page_returns_404"
+    },
+    "10.5": {
+      "name": "photo_urls",
+      "value": null,
+      "null_reason": "not_found_in_sources",
+      "note": "Booking cita 49 fotos; URLs não extraídas pelo scraper (só texto)"
+    }
+  },
+  "excel_data": {},
+  "sources": [
+    "hotel_website",
+    "ota_booking",
+    "local_xlsx"
+  ]
+}

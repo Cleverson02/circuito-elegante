@@ -1,0 +1,24 @@
+{
+  "slug": "fazenda-moreias",
+  "name": "Fazenda Moréias",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "fazenda-moreias",
+    "ESTABELECIMENTOS": "Fazenda Moréias",
+    "MUNICÍPIO": "Camocim",
+    "UF": "CE",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Camocim"
+  },
+  "sources": []
+}

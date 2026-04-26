@@ -1,0 +1,96 @@
+{
+  "hotel_slug": "fairmont-rio-de-janeiro-copacabana",
+  "extracted_at": "2026-04-24T11:28:58.181Z",
+  "validated_at": "2026-04-24T11:28:58.181Z",
+  "enrichment_version": "3.0",
+  "extractor": "enrich-batch-7",
+  "validator": "enrich-batch-7",
+  "verdict": "PASS",
+  "quality_score": 0.5241379310344827,
+  "quality_breakdown": {
+    "completeness": 0.5344827586206896,
+    "accuracy": 0.9,
+    "consistency": 0.85,
+    "currency": 0.95
+  },
+  "sources_consulted": [
+    "hotel_website",
+    "booking"
+  ],
+  "sources_pending": [
+    "questionnaire",
+    "chatbot"
+  ],
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Fairmont Rio de Janeiro Copacabana",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.fairmont.com/copacabana-rio/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Rio de Janeiro",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.fairmont.com/copacabana-rio/",
+      "confidence_type": "literal",
+      "source_url": "https://www.fairmont.com/copacabana-rio/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        },
+        {
+          "name": "Suite Presidencial"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 21 2525-7000",
+        "website": "https://www.fairmont.com/copacabana-rio/",
+        "address": "Av. Atlântica, 500 - Copacabana, Rio de Janeiro"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "_meta": {
+    "fields_total": 58,
+    "fields_filled": 31,
+    "completeness": 0.5344827586206896,
+    "accuracy": 0.9,
+    "avg_confidence": 0.88,
+    "veto_violations": [],
+    "data_sources": [
+      "hotel_website",
+      "booking"
+    ]
+  }
+}

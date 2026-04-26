@@ -1,0 +1,605 @@
+{
+  "slug": "canto-do-irere-boutique-hotel-full",
+  "name": "Canto do Irerê Boutique Hotel",
+  "source_priority": [
+    "form"
+  ],
+  "quality_score": 0.86,
+  "completeness": 0.81,
+  "data_from": {
+    "1.1": "form",
+    "1.2": "form",
+    "1.3": "form",
+    "1.4": "form",
+    "1.5": "form",
+    "1.6": "form",
+    "1.7": "form",
+    "1.8": "form",
+    "1.9": "form",
+    "1.10": "form",
+    "2.1": "form",
+    "2.2": "form",
+    "2.3": "form",
+    "2.4": "form",
+    "3.1": "form",
+    "3.2": "form",
+    "3.3": "form",
+    "3.4": "form",
+    "3.5": "form",
+    "3.6": "form",
+    "3.7": "form",
+    "3.8": "form",
+    "3.9": "form",
+    "4.1": "form",
+    "4.2": "form",
+    "4.3": "form",
+    "4.4": "form",
+    "4.5": "form",
+    "5.1": "form",
+    "5.2": "form",
+    "5.3": "form",
+    "5.4": "form",
+    "5.5": "form",
+    "5.6": "form",
+    "5.7": "form",
+    "6.1": "form",
+    "6.2": "form",
+    "6.3": "form",
+    "6.4": "form",
+    "7.1": "form",
+    "7.2": "form",
+    "7.3": "form",
+    "7.4": "form",
+    "7.5": "form",
+    "8.1": "form",
+    "8.2": "form",
+    "8.3": "form",
+    "8.4": "form",
+    "8.5": "form",
+    "9.1": "form",
+    "9.2": "form",
+    "9.3": "form",
+    "9.4": "form",
+    "10.1": "form",
+    "10.2": "form",
+    "10.3": "form",
+    "10.4": "form",
+    "10.5": "form"
+  },
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Canto do Irerê Boutique Hotel",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br",
+      "source_text": "Canto Do Irerê • Boutique Hotel Em Atibaia São Paulo"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Atibaia",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/localizacao"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "SP",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=SP → região sudeste (IBGE)",
+      "sources": [
+        "local_xlsx"
+      ]
+    },
+    "1.5": {
+      "name": "destination",
+      "value": "Interior de São Paulo",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.6": {
+      "name": "experience",
+      "value": "campo",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://cantodoirere.com.br",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.8": {
+      "name": "google_maps_url",
+      "value": "https://www.google.com/maps/search/?api=1&query=-23.220251,-46.5568161",
+      "confidence_type": "inferred",
+      "inference_logic": "Coordenadas -23.220251,-46.5568161 publicadas em /localizacao → Google Maps URL construída",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Refúgio exclusivo para adultos em Atibaia, interior de São Paulo. Boutique hotel de luxo cercado por Mata Atlântica em área de 70.000 m² de proteção ambiental adjacente ao Parque Estadual do Itapetinga. Arquitetura rústica-chique em pedra, madeira e mobiliário vintage dos anos 50-60. 8 chalés de 80 a 110 m² com lareira, hidromassagem e varanda voltada para a mata. Restaurante de alta gastronomia, piscina climatizada, adega com mais de 50 rótulos e serviço personalizado para casais em busca de bem-estar.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br"
+    },
+    "1.10": {
+      "name": "lodging_type",
+      "value": "Boutique Hotel (luxo, adults-only 18+)",
+      "confidence_type": "inferred",
+      "inference_logic": "Site oficial 'Boutique Hotel', TripAdvisor Travelers' Choice, política adults-only 18+",
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor"
+      ]
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Canto da Água",
+          "size_m2": 85,
+          "description": "King, sofá-cama, antecâmara, banheira hidromassagem, varanda, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto da Brisa",
+          "size_m2": 107,
+          "description": "King, sofá-cama, antecâmara, 2 banheiros com hidromassagem, 2 varandas, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto da Clareira",
+          "size_m2": 80,
+          "description": "King, sofá-cama, antecâmara, banheira hidromassagem vista Pau Brasil, varanda, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto do Dia",
+          "size_m2": 98,
+          "description": "King, sofá-cama, antecâmara, lareira dupla face, hidromassagem com janelões, varanda, smart TV, minibar"
+        },
+        {
+          "name": "Canto da Lua",
+          "size_m2": 84,
+          "description": "King, sofá-cama, antecâmara, deck amplo, banheira hidromassagem integrada, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto da Mata",
+          "size_m2": 84,
+          "description": "King, sofá-cama, antecâmara, varanda vista mata, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto da Noite",
+          "size_m2": 84,
+          "description": "King, sofá-cama, antecâmara, varanda ampla, hidromassagem vista mata, smart TV, lareira ecológica, minibar"
+        },
+        {
+          "name": "Canto do Orvalho",
+          "size_m2": 88,
+          "description": "Dois pavimentos. King, sofá-cama, antecâmara, varanda, smart TV, lareira ecológica, minibar"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/acomodacoes"
+    },
+    "2.2": {
+      "name": "max_capacity_per_type",
+      "value": {
+        "default": "2 adultos (sofá-cama pode comportar terceiro em eventos)"
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Cama king + sofá-cama mencionados em todos os chalés; política adults-only 18+ (crianças só em eventos exclusivos)",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "2.3": {
+      "name": "room_amenities",
+      "value": [
+        "Cama king-size",
+        "Sofá-cama",
+        "Banheira de hidromassagem",
+        "Lareira ecológica (álcool)",
+        "Varanda",
+        "Smart TV",
+        "Cofre",
+        "Minibar",
+        "Nespresso",
+        "Ar-condicionado",
+        "Wi-Fi",
+        "Amenities Algotherm (França)",
+        "Lençóis premium",
+        "Poltronas"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/acomodacoes"
+    },
+    "2.4": {
+      "name": "total_rooms",
+      "value": 8,
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/acomodacoes"
+    },
+    "3.1": {
+      "name": "parking",
+      "value": "Estacionamento no local (implícito pela localização rural com acesso por estrada própria de 6 km)",
+      "confidence_type": "inferred",
+      "inference_logic": "Hotel rural com chalés em 70.000 m² acessível por estrada privada; TripAdvisor lista como property amenity típica — não detalhado oficialmente",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "3.2": {
+      "name": "pool_description",
+      "value": "Piscina climatizada ampla com deck",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/hotel"
+    },
+    "3.3": {
+      "name": "pool_heated",
+      "value": true,
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "ampla piscina climatizada",
+      "source_url": "https://cantodoirere.com.br/hotel"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "Piscina climatizada",
+        "Trilha interna ecológica com lago",
+        "Caminho das Sensações",
+        "Trilhas guiadas",
+        "Day Use",
+        "Irerê Experience (contato com natureza)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.5": {
+      "name": "wellness",
+      "value": {
+        "spa": true,
+        "services": [
+          "Massagens",
+          "Acupuntura",
+          "Reiki",
+          "Shiatsu",
+          "Reflexologia",
+          "Drenagem linfática"
+        ],
+        "packages": [
+          "Irerê Wellness",
+          "Irerê Fitness",
+          "Irerê Romance"
+        ]
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/irere-wellness/"
+    },
+    "3.6": {
+      "name": "event_space",
+      "value": "Salão amplo para eventos corporativos e celebrações (único espaço — crianças aceitas apenas nesses eventos exclusivos)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.7": {
+      "name": "wifi",
+      "value": "Internet alta velocidade (Wi-Fi em todos os chalés e áreas comuns)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.8": {
+      "name": "accessibility",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "3.9": {
+      "name": "gym",
+      "value": "Academia/sala fitness no local",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.1": {
+      "name": "restaurants",
+      "value": [
+        {
+          "name": "Restaurante Canto do Irerê",
+          "cuisine": "Alta gastronomia internacional com toques regionais",
+          "meals": [
+            "café da manhã",
+            "almoço",
+            "jantar",
+            "snacks"
+          ],
+          "notes": "À vontade a partir das 7h; saladas, massas, carnes, risotos, vegetarianos; produtos da horta orgânica"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/gastronomia"
+    },
+    "4.2": {
+      "name": "meals_included",
+      "value": "Café da manhã, almoço, jantar e lanches à vontade (diária all-inclusive de refeições)",
+      "confidence_type": "literal",
+      "source_type": "circuito_elegante",
+      "source_url": "https://www.circuitoelegante.com.br/hotel/canto-do-irere-boutique-hotel-atibaiasp/"
+    },
+    "4.3": {
+      "name": "special_dining",
+      "value": "Adega by Zahil com mais de 50 rótulos do velho e novo mundo; harmonizações de vinho; jantares românticos; horta orgânica própria",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.4": {
+      "name": "room_service",
+      "value": "Café da manhã pode ser servido no chalé (in-room breakfast)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "4.5": {
+      "name": "dietary_options",
+      "value": "Opções vegetarianas; produtos orgânicos da horta própria",
+      "confidence_type": "literal",
+      "source_type": "press_hoteliernews"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "19:00",
+        "check_out": "17:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/contato"
+    },
+    "5.2": {
+      "name": "early_late_checkout",
+      "value": "Early check-in e late check-out disponíveis para associados Circuito Elegante sujeito a disponibilidade",
+      "confidence_type": "literal",
+      "source_type": "circuito_elegante"
+    },
+    "5.3": {
+      "name": "cancellation_policy",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.4": {
+      "name": "children_policy",
+      "value": "Hotel adults-only (18+). Crianças aceitas apenas em eventos exclusivos.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "5.5": {
+      "name": "pet_policy",
+      "value": "Não aceita animais (not pet-friendly)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "5.6": {
+      "name": "smoking_policy",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.7": {
+      "name": "min_age_solo",
+      "value": 18,
+      "confidence_type": "inferred",
+      "inference_logic": "Hotel adults-only 18+ implica idade mínima 18 para hóspedes",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "6.1": {
+      "name": "airport_distance",
+      "value": {
+        "Guarulhos_GRU": "~25 km (15.6 mi)",
+        "Congonhas_CGH": "~46 km (28.8 mi)"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "6.2": {
+      "name": "transfer",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "6.3": {
+      "name": "nearby_attractions",
+      "value": [
+        "Pedra da Laje (na base do hotel)",
+        "Pedra Grande / Monumento Natural Estadual (~6 km)",
+        "Parque Estadual do Itapetinga (adjacente)",
+        "Outlet Fernão Dias (~6 km)",
+        "Trilha Minha Deusa (~8 km)",
+        "Circuito Entre Serras e Águas (rios, lagos, cachoeiras)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "6.4": {
+      "name": "how_to_get_there",
+      "value": "KM 50 da Rodovia Fernão Dias, saída Bairro do Portão. Seguir pela estrada do clube da montanha por ~6 km (pavimentada). ~50 min de São Paulo capital.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cantodoirere.com.br/localizacao"
+    },
+    "7.1": {
+      "name": "special_programming",
+      "value": [
+        "Irerê Experience (imersão natureza)",
+        "Irerê Wellness",
+        "Irerê Fitness",
+        "Irerê Romance",
+        "Day Use"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.2": {
+      "name": "hotel_concierge_services",
+      "value": "Serviço personalizado para casais; reservas via WhatsApp e booking engine hbook.hsystem.com.br",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.3": {
+      "name": "activities_tours",
+      "value": [
+        "Trilhas guiadas",
+        "Caminho das Sensações",
+        "Massagens e terapias",
+        "Experiências com horta orgânica"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.4": {
+      "name": "day_use",
+      "value": "Disponível (modalidade Day Use oferecida explicitamente)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.5": {
+      "name": "special_packages",
+      "value": [
+        "Irerê Romance",
+        "Irerê Wellness",
+        "Irerê Fitness",
+        "Irerê Experience"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "8.1": {
+      "name": "highlights",
+      "value": [
+        "Adults-only boutique em 70.000 m² de proteção ambiental",
+        "8 chalés exclusivos 80-110 m² com hidromassagem e lareira",
+        "Piscina climatizada e trilhas ecológicas",
+        "Alta gastronomia com horta orgânica e adega Zahil (50+ rótulos)",
+        "Projeto arquitetônico de Lucianne Herman Korn",
+        "Travelers' Choice TripAdvisor (#1 de 16 hotéis em Atibaia)"
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Síntese de diferenciadores mencionados em site oficial + TripAdvisor + Circuito Elegante",
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor",
+        "circuito_elegante"
+      ]
+    },
+    "8.2": {
+      "name": "awards_certifications",
+      "value": [
+        "TripAdvisor Travelers' Choice (2022 badge, top 10%)",
+        "Circuito Elegante (hotel afiliado)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "8.3": {
+      "name": "sustainability",
+      "value": "Área de proteção ambiental (70.000 m²) com árvores nativas da Mata Atlântica; arquitetura rústica-chique integrada à paisagem; horta orgânica própria; lareiras ecológicas a álcool",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "8.4": {
+      "name": "star_rating",
+      "value": null,
+      "null_reason": "not_classified_officially"
+    },
+    "8.5": {
+      "name": "price_tier",
+      "value": "Luxo (USD 270-447/noite conforme TripAdvisor)",
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "9.1": {
+      "name": "guest_faqs",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "9.2": {
+      "name": "common_objections",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "9.3": {
+      "name": "attention_points",
+      "value": [
+        "Adults-only: crianças NÃO são aceitas (exceto eventos exclusivos)",
+        "Não aceita pets",
+        "Check-in apenas a partir das 19h / check-out até 17h (padrão atípico)",
+        "Acesso por 6 km de estrada após saída KM 50 Fernão Dias"
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Pontos de restrição explícitos no site oficial que podem surpreender hóspedes",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "9.4": {
+      "name": "sales_arguments_by_profile",
+      "value": {
+        "casais_romance": "Refúgio exclusivo adults-only, chalés privativos com hidromassagem e lareira, pacote Irerê Romance",
+        "casais_bem_estar": "Spa completo, piscina climatizada, trilhas, Caminho das Sensações, pacote Irerê Wellness",
+        "gourmands": "Alta gastronomia com horta orgânica, adega Zahil 50+ rótulos, refeições à vontade",
+        "natureza": "70.000 m² de Mata Atlântica preservada, Pedra Grande ao lado, Parque Estadual do Itapetinga adjacente"
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Perfis mapeados a partir dos pacotes nomeados e diferenciadores oficiais do hotel",
+      "sources": [
+        "hotel_website"
+      ]
+    },
+    "10.1": {
+      "name": "has_api",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "10.2": {
+      "name": "elevare_hotel_id",
+      "value": null,
+      "null_reason": "not_elevare_integrated"
+    },
+    "10.3": {
+      "name": "bradesco_coupon",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "10.4": {
+      "name": "ce_page_url",
+      "value": "https://www.circuitoelegante.com.br/hotel/canto-do-irere-boutique-hotel-atibaiasp/",
+      "confidence_type": "literal",
+      "source_type": "circuito_elegante",
+      "source_text": "Canonical slug: atibaiasp sem hífen entre atibaia e sp"
+    },
+    "10.5": {
+      "name": "photo_urls",
+      "value": null,
+      "null_reason": "not_systematically_captured"
+    }
+  },
+  "excel_data": {},
+  "sources": [
+    "hotel_website",
+    "circuito_elegante",
+    "ota_tripadvisor",
+    "press_hoteliernews",
+    "local_xlsx"
+  ]
+}

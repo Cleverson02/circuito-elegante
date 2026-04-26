@@ -1,0 +1,24 @@
+{
+  "slug": "pousada-cantelli",
+  "name": "Pousada Cantelli",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "pousada-cantelli",
+    "ESTABELECIMENTOS": "Pousada Cantelli",
+    "MUNICÍPIO": "Bento Gonçalves",
+    "UF": "RS",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "serra",
+    "Destino": "Caminho das Pedras"
+  },
+  "sources": []
+}

@@ -1,0 +1,287 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: https://ibiti.com
+      - navigation "Menu" [ref=e11]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - generic [ref=e14]: Quem somos
+          - listitem [ref=e15]:
+            - generic [ref=e16]: Hospedagens
+          - listitem [ref=e17]:
+            - link "Vivências" [ref=e18] [cursor=pointer]:
+              - /url: https://ibiti.com/tipo-de-vivencias/
+          - listitem [ref=e19]:
+            - link "Projetos socioambientais" [ref=e20] [cursor=pointer]:
+              - /url: https://ibiti.com/projetos-socioambientais/
+          - listitem [ref=e21]:
+            - link "Celebrações e eventos" [ref=e22] [cursor=pointer]:
+              - /url: https://ibiti.com/celebracoes-e-eventos/
+      - navigation "Menu" [ref=e25]:
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - link "PT-BR" [ref=e28] [cursor=pointer]:
+              - /url: https://ibiti.com/
+              - generic "PT-BR" [ref=e29]
+      - link "Reservas" [ref=e33] [cursor=pointer]:
+        - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6Ijg0NjMiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
+        - generic [ref=e34]: Reservas
+      - link [ref=e38] [cursor=pointer]:
+        - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE3NDgiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
+        - img [ref=e39]
+    - generic [ref=e42]:
+      - link [ref=e45] [cursor=pointer]:
+        - /url: https://ibiti.com
+      - navigation "Menu" [ref=e48]:
+        - list [ref=e49]:
+          - listitem [ref=e50]:
+            - generic [ref=e51]: Quem somos
+          - listitem [ref=e52]:
+            - generic [ref=e53]: Hospedagens
+          - listitem [ref=e54]:
+            - link "Vivências" [ref=e55] [cursor=pointer]:
+              - /url: https://ibiti.com/tipo-de-vivencias/
+          - listitem [ref=e56]:
+            - link "Projetos socioambientais" [ref=e57] [cursor=pointer]:
+              - /url: https://ibiti.com/projetos-socioambientais/
+          - listitem [ref=e58]:
+            - link "Celebrações e eventos" [ref=e59] [cursor=pointer]:
+              - /url: https://ibiti.com/celebracoes-e-eventos/
+      - navigation "Menu" [ref=e62]:
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "PT-BR" [ref=e65] [cursor=pointer]:
+              - /url: https://ibiti.com/
+              - generic "PT-BR" [ref=e66]
+      - link "Reservas" [ref=e70] [cursor=pointer]:
+        - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6Ijg0NjMiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
+        - generic [ref=e71]: Reservas
+      - link [ref=e75] [cursor=pointer]:
+        - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE3NDgiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
+        - img [ref=e76]
+  - main [ref=e78]:
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - heading "Conecte-se com a natureza e redescubra sua essência" [level=1] [ref=e84]
+        - paragraph [ref=e87]: Onde o respeito ao planeta cria experiências transformadoras
+        - link [ref=e91] [cursor=pointer]:
+          - /url: "#nossa-historia"
+          - img [ref=e92]
+      - generic [ref=e95]:
+        - generic [ref=e97]: Nossa história
+        - heading "Somos um projeto socioambiental experimental focado nos seres vivos e sua casa, o planeta." [level=2] [ref=e100]
+        - link "Saiba mais sobre nós" [ref=e104] [cursor=pointer]:
+          - /url: https://ibiti.com/nossa-historia/
+          - generic [ref=e105]:
+            - img [ref=e107]
+            - text: Saiba mais sobre nós
+      - generic [ref=e110]:
+        - generic [ref=e112]: Hospedagens
+        - heading "Hospedagens que encantam e inspiram" [level=2] [ref=e115]
+        - paragraph [ref=e118]: Conheça nossas acomodações, que combinam conforto e conexão com a natureza.
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - heading "Ibiti Village" [level=3] [ref=e125]
+            - paragraph [ref=e128]: Para experienciar a vida em uma comunidade do interior.
+            - link "Ver hospedagem" [ref=e132] [cursor=pointer]:
+              - /url: https://ibiti.com/ibiti-village/
+              - generic [ref=e133]:
+                - img [ref=e135]
+                - text: Ver hospedagem
+          - generic [ref=e137]:
+            - heading "Engenho Lodge" [level=3] [ref=e142]
+            - paragraph [ref=e145]: A experiência em uma casa de fazenda mineira com exclusividade e sofisticação.
+            - link "Ver hospedagem" [ref=e149] [cursor=pointer]:
+              - /url: https://ibiti.com/ibiti-engenho/
+              - generic [ref=e150]:
+                - img [ref=e152]
+                - text: Ver hospedagem
+          - generic [ref=e154]:
+            - heading "Remote" [level=3] [ref=e159]
+            - paragraph [ref=e162]: Para quem busca privacidade e imersão total nos cenários naturais.
+            - link "Ver hospedagem" [ref=e166] [cursor=pointer]:
+              - /url: https://ibiti.com/remote/
+              - generic [ref=e167]:
+                - img [ref=e169]
+                - text: Ver hospedagem
+      - generic [ref=e173]:
+        - generic [ref=e177]: Vivências
+        - heading "Conecte-se com a natureza" [level=2] [ref=e180]:
+          - text: Conecte-se
+          - text: com a natureza
+        - paragraph [ref=e183]: Explore trilhas que levam a cachoeiras secretas ou relaxe no nosso spa. Cada momento foi criado para você aproveitar o melhor da nossa região.
+        - link "Ver as vivências" [ref=e187] [cursor=pointer]:
+          - /url: https://ibiti.com/tipo-de-vivencias/
+          - generic [ref=e188]:
+            - img [ref=e190]
+            - text: Ver as vivências
+      - generic [ref=e193]:
+        - generic [ref=e195]: Projetos Socioambientais
+        - heading "Inovação que transforma" [level=2] [ref=e198]
+        - paragraph [ref=e201]: Estamos sempre inovando e expandindo nossos projetos, da produção orgânica à reintrodução de animais. Buscamos criar modelos que possam inspirar e ser replicados no Brasil e no mundo.
+        - link "Ver projetos socioambientais" [ref=e205] [cursor=pointer]:
+          - /url: https://ibiti.com/projetos-socioambientais/
+          - generic [ref=e206]:
+            - img [ref=e208]
+            - text: Ver projetos socioambientais
+      - generic [ref=e211]:
+        - link "Celebrações e eventos Programação especial Ibiti Veja nosso calendário de eventos e atividades únicas em meio à natureza" [ref=e212] [cursor=pointer]:
+          - /url: https://ibiti.com/celebracoes-e-eventos/programacao-especial-ibiti/
+          - generic [ref=e216]: Celebrações e eventos
+          - heading "Programação especial Ibiti" [level=3] [ref=e219]
+          - paragraph [ref=e222]: Veja nosso calendário de eventos e atividades únicas em meio à natureza
+        - link "Celebrações e eventos Comemorações em grupo Uma viagem em grupo para celebrar a vida, um charmoso casamento na natureza, conte com a nossa equipe e cenários especiais para encantar todos os convidados!" [ref=e223] [cursor=pointer]:
+          - /url: https://ibiti.com/celebracoes-e-eventos/comemoracoes-em-grupo/
+          - generic [ref=e227]: Celebrações e eventos
+          - heading "Comemorações em grupo" [level=3] [ref=e230]
+          - paragraph [ref=e233]: Uma viagem em grupo para celebrar a vida, um charmoso casamento na natureza, conte com a nossa equipe e cenários especiais para encantar todos os convidados!
+        - link "Celebrações e eventos Eventos corporativos Em um ambiente inspirador, espaços inusitados para trazer o melhor de cada encontro!" [ref=e234] [cursor=pointer]:
+          - /url: https://ibiti.com/celebracoes-e-eventos/eventos-corporativos/
+          - generic [ref=e238]: Celebrações e eventos
+          - heading "Eventos corporativos" [level=3] [ref=e241]
+          - paragraph [ref=e244]: Em um ambiente inspirador, espaços inusitados para trazer o melhor de cada encontro!
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - generic [ref=e249]: Onde estamos
+          - heading "Como chegar ao Ibiti Projeto" [level=2] [ref=e252]
+          - generic [ref=e254]:
+            - paragraph [ref=e255]: O Ibiti Projeto está localizado próximo à cidade de Lima Duarte, em Minas Gerais, e margeia o Parque Estadual do Ibitipoca, um dos ecossistemas mais relevantes do Brasil.
+            - paragraph [ref=e256]: O Aeroporto de chegada é o da Zona da Mata, localizado entre os municípios de Rio Novo e Goianá, próximo a Juiz de Fora, MG, a 2h30 de carro do Ibiti Projeto.
+          - list [ref=e259]:
+            - listitem [ref=e260]:
+              - img [ref=e262]
+              - generic [ref=e264]: Rio de Janeiro - 258 km
+            - listitem [ref=e265]:
+              - img [ref=e267]
+              - generic [ref=e269]: São Paulo - 432 km
+            - listitem [ref=e270]:
+              - img [ref=e272]
+              - generic [ref=e274]: Belo Horizonte - 312 km
+            - listitem [ref=e275]:
+              - img [ref=e277]
+              - generic [ref=e279]: Inhotim - 315 km
+            - listitem [ref=e280]:
+              - img [ref=e282]
+              - generic [ref=e284]: Tiradentes - 201 km
+          - list [ref=e287]:
+            - listitem [ref=e288]:
+              - link "Ver localização no Google Maps" [ref=e289] [cursor=pointer]:
+                - /url: https://goo.gl/maps/CmctakVPJPpUHMcFA
+                - img [ref=e291]
+                - generic [ref=e293]: Ver localização no Google Maps
+          - link "Saiba mais como chegar" [ref=e297] [cursor=pointer]:
+            - /url: https://ibiti.com/nossa-historia/#onde-estamos
+            - generic [ref=e298]:
+              - img [ref=e300]
+              - text: Saiba mais como chegar
+        - link [ref=e305] [cursor=pointer]:
+          - /url: https://ibiti.com/wp-content/uploads/2024/11/mapa-do-ibiti.jpg
+  - contentinfo [ref=e306]:
+    - generic [ref=e308]:
+      - link [ref=e312] [cursor=pointer]:
+        - /url: https://ibiti.com
+      - generic [ref=e313]:
+        - navigation "Menu" [ref=e316]:
+          - list [ref=e317]:
+            - listitem [ref=e318]:
+              - link "Vivências" [ref=e319] [cursor=pointer]:
+                - /url: https://ibiti.com/tipo-de-vivencias/
+            - listitem [ref=e320]:
+              - link "Projetos socioambientais" [ref=e321] [cursor=pointer]:
+                - /url: https://ibiti.com/projetos-socioambientais/
+            - listitem [ref=e322]:
+              - link "Celebrações e eventos" [ref=e323] [cursor=pointer]:
+                - /url: https://ibiti.com/celebracoes-e-eventos/
+            - listitem [ref=e324]:
+              - link "Ibiti News" [ref=e325] [cursor=pointer]:
+                - /url: https://ibiti.com/ibiti-news/
+        - navigation "Menu" [ref=e328]:
+          - list [ref=e329]:
+            - listitem [ref=e330]:
+              - link "Nossa história" [ref=e331] [cursor=pointer]:
+                - /url: https://ibiti.com/nossa-historia/
+            - listitem [ref=e332]:
+              - link "Ibiti Village" [ref=e333] [cursor=pointer]:
+                - /url: https://ibiti.com/ibiti-village/
+            - listitem [ref=e334]:
+              - link "Ibiti Engenho" [ref=e335] [cursor=pointer]:
+                - /url: https://ibiti.com/ibiti-engenho/
+            - listitem [ref=e336]:
+              - link "Remote" [ref=e337] [cursor=pointer]:
+                - /url: https://ibiti.com/remote/
+      - generic [ref=e338]:
+        - heading "Sua experiência começa aqui" [level=2] [ref=e341]
+        - 'heading "Acompanhe o que acontece em nosso território: experiências, histórias e convites reservados para você!" [level=2] [ref=e344]'
+        - form "New Form" [ref=e347]:
+          - generic [ref=e348]:
+            - textbox "Nome" [ref=e350]
+            - textbox "Segundo Nome" [ref=e352]
+            - textbox "Email" [ref=e354]
+            - generic [ref=e356]:
+              - generic:
+                - img
+              - combobox [ref=e357]:
+                - option "Português" [selected]
+                - option "Inglês"
+            - generic [ref=e360]:
+              - checkbox "Estou ciente do envio dos dados" [ref=e361]
+              - generic [ref=e362]: Estou ciente do envio dos dados
+            - button "Enviar" [ref=e364] [cursor=pointer]:
+              - generic [ref=e365]: Enviar
+      - generic [ref=e366]:
+        - heading "Central de Reservas" [level=2] [ref=e369]
+        - list [ref=e372]:
+          - listitem [ref=e373]:
+            - 'link "Ibiti Village: +55 32 98449-2200" [ref=e374] [cursor=pointer]':
+              - /url: https://wa.me/+5532984492200%20
+              - generic [ref=e375]: "Ibiti Village: +55 32 98449-2200"
+          - listitem [ref=e376]:
+            - 'link "Ibiti Engenho: +55 32 9 9984-7626" [ref=e377] [cursor=pointer]':
+              - /url: https://wa.me/+5532999847626
+              - generic [ref=e378]: "Ibiti Engenho: +55 32 9 9984-7626"
+          - listitem [ref=e379]:
+            - link "reservas@ibiti.com" [ref=e380] [cursor=pointer]:
+              - /url: "mailto:reservas@ibiti.com "
+              - generic [ref=e381]: reservas@ibiti.com
+          - listitem [ref=e382]:
+            - generic [ref=e383]: 2ª a 6ª, das 9h às 18h
+        - heading "Fale com o Ibiti" [level=2] [ref=e386]
+        - list [ref=e389]:
+          - listitem [ref=e390]:
+            - generic [ref=e391]: +55 32 9 9806-3963
+        - generic [ref=e392]:
+          - link [ref=e395] [cursor=pointer]:
+            - /url: https://sistemabbrasil.org/seja-empresa-b/
+          - link [ref=e398] [cursor=pointer]:
+            - /url: https://www.johansens.com/
+          - link "seloxis" [ref=e401] [cursor=pointer]:
+            - /url: https://www.seloxis.org.br/
+            - img "seloxis" [ref=e402]
+          - link [ref=e405] [cursor=pointer]:
+            - /url: https://ibiti.com/ibiti-regenera/
+    - generic [ref=e407]:
+      - list [ref=e410]:
+        - listitem [ref=e411]:
+          - link [ref=e412] [cursor=pointer]:
+            - /url: https://www.facebook.com/ibitiprojeto
+            - img [ref=e414]
+        - listitem [ref=e416]:
+          - link [ref=e417] [cursor=pointer]:
+            - /url: https://www.instagram.com/ibitiprojeto/
+            - img [ref=e419]
+        - listitem [ref=e421]:
+          - link [ref=e422] [cursor=pointer]:
+            - /url: https://www.tripadvisor.com.br/Hotel_Review-g2572506-d3170733-Reviews-Comuna_do_Ibitipoca-Conceicao_da_Ibitipoca_Lima_Duarte_State_of_Minas_Gerais.html?m=19905
+            - img [ref=e424]
+        - listitem [ref=e426]:
+          - link [ref=e427] [cursor=pointer]:
+            - /url: https://youtube.com/@ibitiprojeto?si=Jqidrv6UWEnjaXEN
+            - img [ref=e429]
+        - listitem [ref=e431]:
+          - link [ref=e432] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/comuna-do-ibitipoca/
+            - img [ref=e434]
+      - paragraph [ref=e438]: Vila Mogol S/N – Lima Duarte | MG – 36.140 | Caixa Postal 02 | Brasil | © 2024 Ibiti Projeto. Todos os direitos reservados.

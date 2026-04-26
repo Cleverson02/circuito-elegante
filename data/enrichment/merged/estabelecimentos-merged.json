@@ -1,0 +1,24 @@
+{
+  "slug": "estabelecimentos",
+  "name": "ESTABELECIMENTOS",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "estabelecimentos",
+    "ESTABELECIMENTOS": "ESTABELECIMENTOS",
+    "MUNICÍPIO": "MUNICÍPIO",
+    "UF": "UF",
+    "Tem Reserva integrada por API?": "Tem reserva integrada API?",
+    "Cupom BRADESCO": "cupom BRADESCO",
+    "hotel_ID": "ENVIAR PARA CONCIERGE",
+    "Região": "Região",
+    "Experiência": "Experiência",
+    "Destino": "Destino"
+  },
+  "sources": []
+}

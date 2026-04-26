@@ -1,0 +1,24 @@
+{
+  "slug": "naatooh-guest-houses",
+  "name": "Naatooh Guest Houses",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "naatooh-guest-houses",
+    "ESTABELECIMENTOS": "Naatooh Guest Houses",
+    "MUNICÍPIO": "Florianópolis",
+    "UF": "SC",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "praia",
+    "Destino": "Florianópolis"
+  },
+  "sources": []
+}

@@ -1,0 +1,27 @@
+SOURCES:
+- https://www.booking.com/hotel/br/villa-d-39-ozio-e-cucina.html (search snippet only - Booking blocked direct fetch)
+- https://www.guestreservations.com/villa-dozio-hotel-e-cucina/booking
+- Web search results
+
+EXTRACTED: 2026-04-19
+
+Booking Review Score: 9.3 (recent guests)
+Address: 982 Avenida José Medeiros Viêira, Itajai, 88306-800, Brazil
+
+Amenities from Booking snippet:
+- 24-hour front desk
+- Airport transportation
+- Shared lounge
+- Free WiFi throughout property
+
+Check-in: 4:00 PM (16:00)
+Check-out: 4:00 PM - NOTE: this seems to be a mistake in the snippet; more likely check-out is 12:00 or 11:00 (industry norm). Unable to confirm exact time from public data. Will mark check_out as inferred/uncertain.
+Early check-in / late check-out: May be available at additional cost.
+
+Airport Navegantes (NVT) Distance: 12-23 km (varies by route); ~20-21 min drive via BR-101. Taxi R$ ~120 / 21 min.
+
+Nearby: ~10-min drive to Navegantes Beach Central; ~15-min drive to Praia do Buraco.
+
+Guest Reservations page (limited): Phone 0800 762 0110. Page claimed "no pool, no restaurant" but this conflicts with ALL other sources (official site confirms pool + Cucina restaurant). IGNORING this guestreservations error.
+
+Marina Itajaí Boat Show: Villa d'Ozio is official boutique hotel partner with 15% off for attendees.

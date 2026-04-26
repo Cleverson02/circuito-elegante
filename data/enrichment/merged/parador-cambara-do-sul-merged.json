@@ -1,0 +1,24 @@
+{
+  "slug": "parador-cambara-do-sul",
+  "name": "Parador Cambará do Sul",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "parador-cambara-do-sul",
+    "ESTABELECIMENTOS": "Parador Cambará do Sul",
+    "MUNICÍPIO": "Cambará do Sul",
+    "UF": "RS",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "serra",
+    "Destino": "Cânions Aparados da Serra"
+  },
+  "sources": []
+}

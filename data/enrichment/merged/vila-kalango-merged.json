@@ -1,0 +1,82 @@
+{
+  "slug": "vila-kalango",
+  "name": "Vila Kalango",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Vila Kalango",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://vilakalango.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Fernando de Noronha",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PE",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://vilakalango.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://vilakalango.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Bungalow"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 81 3619-1234",
+        "website": "https://vilakalango.com.br/",
+        "address": "Fernando de Noronha, PE"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "vila-kalango",
+    "ESTABELECIMENTOS": "Vila Kalango",
+    "MUNICÍPIO": "Jericoacoara",
+    "UF": "CE",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": 3089,
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Jericoacoara"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

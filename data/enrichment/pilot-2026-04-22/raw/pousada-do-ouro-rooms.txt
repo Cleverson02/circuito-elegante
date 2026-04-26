@@ -1,0 +1,20 @@
+SOURCE: https://pousadadoouro.com.br/content.php?p=rooms
+FETCHED: 2026-04-19
+
+4 room categories identified:
+
+1) Standard — "charmosa Vila da Pousada do Ouro, construída baseada nas ruas de Paraty" with colonial décor combining "simplicidade da roupa de cama delicada e branca com os móveis rústicos"
+   Amenities: A/C, minibar, telephone, Wi-Fi, safe, 32" LCD TV, pressurized shower, hairdryer, Peek & Hansen beauty products.
+   Ground-level accommodations in village-style property.
+
+2) Superior — "Colonial & Simples elegância" located on upper floors of 18th-century building (where merchants historically lived). Views of tropical garden or historic Paraty streets.
+   Amenities: A/C, minibar, telephone, Wi-Fi, safe, 32" LCD TV, pressurized shower, Trussardi robes, hairdryer, Peek & Hansen beauty products.
+   Wooden floors, traditional colonial styling.
+
+3) Suite Especial — "Privativa & Romântica" with unique refinement, spacious rooms displaying artwork by Rugendas and Debret evoking "motivos históricos".
+   Amenities: A/C, minibar, telephone, Wi-Fi, safe, 32" LCD TV, pressurized shower, Trussardi robes, hairdryer, Peek & Hansen beauty products.
+
+4) Suite Ouro — most exclusive, top floor of 18th-century building — "Um pequeno mundo particular" with views of typical rooftops extending to tropical mountains and emerald sea. Notable guest noted: Mick Jagger.
+   Amenities: A/C, minibar, telephone, Wi-Fi, safe, 42" LCD TV, pressurized shower, Trussardi robes, hairdryer, Peek & Hansen beauty products.
+
+NOT FOUND: explicit room counts per category, size in m².

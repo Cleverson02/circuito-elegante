@@ -1,0 +1,83 @@
+{
+  "slug": "casa-poema",
+  "name": "Casa Poema",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Casa Poema",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://casapoema.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Trancoso",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "BA",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://casapoema.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://casapoema.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Bungalow"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Spa",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 73 2668-4000",
+        "website": "https://casapoema.com.br/",
+        "address": "Trancoso, Bahia"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "casa-poema",
+    "ESTABELECIMENTOS": "Casa Poema",
+    "MUNICÍPIO": "Alto Paraiso de Goiás",
+    "UF": "GO",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "Centro-oeste",
+    "Experiência": "campo",
+    "Destino": "Chapada dos Veadeiros"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

@@ -1,0 +1,766 @@
+{
+  "slug": "projeto-ibiti-hospedagem",
+  "name": "Ibiti Projeto",
+  "template_coverage": 0.8181818181818182,
+  "template_fields": {
+    "1.1": true,
+    "1.2": true,
+    "1.3": true,
+    "1.4": true,
+    "1.5": true,
+    "2.1": true,
+    "2.2": true,
+    "2.3": true,
+    "2.4": true,
+    "3.1": true,
+    "3.2": true,
+    "4.1": true,
+    "4.2": true,
+    "4.3": true,
+    "5.1": false,
+    "5.2": false,
+    "5.3": false,
+    "6.1": true,
+    "6.2": true,
+    "6.3": true,
+    "6.4": true,
+    "7.1": true,
+    "7.2": true,
+    "7.3": true,
+    "8.1": true,
+    "8.2": true,
+    "8.3": true,
+    "8.4": false,
+    "9.1": true,
+    "9.2": true,
+    "9.3": true,
+    "10.1": false,
+    "10.2": false
+  },
+  "quality_score": 0.8909090909090909,
+  "completeness": 1,
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Ibiti Projeto",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://ibiti.com/",
+      "source_text": "IBITI. Um novo mundo nas montanhas de Minas."
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Lima Duarte",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "O Ibiti Projeto está localizado próximo à cidade de Lima Duarte, em Minas Gerais"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "MG",
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor",
+      "source_text": "Vila Mogol S/n, Lima Duarte, Minas Gerais 36140-000 Brasil"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=MG → região sudeste (mapeamento IBGE)",
+      "sources": [
+        "local_xlsx"
+      ]
+    },
+    "1.5": {
+      "name": "destination",
+      "value": "Serra do Ibitipoca",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx",
+      "source_text": "destination: Serra do Ibitipoca (stub)"
+    },
+    "1.6": {
+      "name": "experience",
+      "value": "serra",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx",
+      "source_text": "experience: serra (stub local_xlsx)"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://ibiti.com/",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.8": {
+      "name": "google_maps_url",
+      "value": "https://goo.gl/maps/CmctakVPJPpUHMcFA",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "Ver localização no Google Maps link na homepage"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Somos um projeto socioambiental experimental focado nos seres vivos e sua casa, o planeta. Localizado próximo a Lima Duarte (MG) margeando o Parque Estadual do Ibitipoca, com 6 mil hectares de Mata Atlântica regenerada (98% preservada). Três conceitos de hospedagem: Ibiti Village (vila mineira), Engenho Lodge (casarão colonial) e Remote (áreas remotas para imersão total).",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "Somos um projeto socioambiental experimental focado nos seres vivos e sua casa, o planeta."
+    },
+    "1.10": {
+      "name": "lodging_type",
+      "value": "Resort eco/wellness luxury — 3 conceitos (Village, Engenho Lodge, Remote)",
+      "confidence_type": "inferred",
+      "inference_logic": "Site cita 3 conceitos; Engenho descrito como 'casarão colonial' com suítes, Raízes Spa, Johansens/B-Corp certifications → luxo eco-wellness",
+      "sources": [
+        "hotel_website",
+        "external_viajarverde"
+      ]
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "concept": "Engenho Lodge",
+          "units": [
+            {
+              "name": "Suítes 1-7",
+              "size_m2": 40,
+              "capacity": "Até 3 adultos",
+              "description": "1 suíte cada, sofisticação em ambientes rústicos"
+            },
+            {
+              "name": "Suíte 8",
+              "size_m2": 60,
+              "capacity": "Até 3 adultos",
+              "description": "1 suíte maior"
+            },
+            {
+              "name": "Casa Carlinhos",
+              "size_m2": 300,
+              "capacity": "Até 6 pessoas",
+              "description": "Típica sede de fazenda, 3 suítes, decorada com artesanato e estilo mineiro, varanda e vista para o lago"
+            }
+          ]
+        },
+        {
+          "concept": "Ibiti Village",
+          "units": [
+            {
+              "name": "Casa Guimarães Rosa",
+              "size_m2": 170,
+              "capacity": "5 adultos",
+              "rooms": 2,
+              "description": "Casa espaçosa com varandas e vista para o vale"
+            },
+            {
+              "name": "Casa Thomas Sowell",
+              "size_m2": 120,
+              "capacity": "5 adultos",
+              "suites": 2,
+              "description": "Casa restaurada com decoração rústica"
+            },
+            {
+              "name": "Humboldt Loft",
+              "size_m2": 60,
+              "capacity": "2 adultos",
+              "description": "Aconchegante casa de pau-a-pique"
+            },
+            {
+              "name": "Casa Freud",
+              "size_m2": 50,
+              "capacity": "2 adultos",
+              "description": "Decoração inspirada em Freud, banheira embutida"
+            },
+            {
+              "name": "Suíte Da Vinci",
+              "size_m2": 65,
+              "capacity": "2 adultos",
+              "description": "Confortável com lareira"
+            },
+            {
+              "name": "Casa Anna Primavesi",
+              "size_m2": 100,
+              "capacity": "5 adultos",
+              "suites": 2
+            },
+            {
+              "name": "Loft Confúcio",
+              "size_m2": 50,
+              "capacity": "2 adultos",
+              "description": "Loft de madeira com varanda"
+            },
+            {
+              "name": "Suíte Ayn Rand",
+              "size_m2": 47,
+              "capacity": "2 adultos",
+              "description": "Ampla com varanda, lareira e vista"
+            },
+            {
+              "name": "Suíte Epiteto",
+              "size_m2": 34,
+              "capacity": "4 adultos"
+            },
+            {
+              "name": "Suíte Wangari",
+              "size_m2": 32,
+              "capacity": "3 adultos"
+            },
+            {
+              "name": "Suíte Marco Aurélio",
+              "size_m2": 34,
+              "capacity": "4 adultos"
+            },
+            {
+              "name": "Loft Douglas Tompkins",
+              "size_m2": 50,
+              "capacity": "2 adultos"
+            },
+            {
+              "name": "Casa Einstein (Glass House)",
+              "size_m2": 170,
+              "capacity": "2 adultos",
+              "description": "Moderna e integrada à natureza"
+            }
+          ]
+        },
+        {
+          "concept": "Remote",
+          "units": [
+            {
+              "name": "Areião",
+              "description": "Área remota"
+            },
+            {
+              "name": "Isgoné",
+              "description": "Área remota"
+            }
+          ]
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "Village 13 acomodações + Engenho 9 unidades + Remote (áreas remotas) — ibiti.com/ibiti-village/, ibiti.com/ibiti-engenho/hospedagem/"
+    },
+    "2.2": {
+      "name": "max_capacity_per_type",
+      "value": {
+        "Casa Carlinhos": 6,
+        "Casa Guimarães Rosa/Casa Einstein": 5,
+        "Anna Primavesi/Thomas Sowell": 5,
+        "Epiteto/Marco Aurélio": 4,
+        "Wangari": 3,
+        "Engenho Suites 1-8": 3,
+        "Demais lofts/suítes": 2
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "2.3": {
+      "name": "room_amenities",
+      "value": [
+        "Roupões (robes)",
+        "Escrivaninha",
+        "Arrumação diária (housekeeping)",
+        "Varanda/terraço (várias unidades)",
+        "Room service",
+        "Frigobar",
+        "TV a cabo/satélite",
+        "Chuveiro acessível (alguns quartos)",
+        "Lareira (Suíte Da Vinci, Ayn Rand, Casa Freud)",
+        "Banheira embutida (Casa Freud)",
+        "Vista para vale/lago (várias unidades)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor+hotel_website",
+      "source_text": "TripAdvisor Ibiti Village: Robes, desk, housekeeping, balcony/terrace, room service, minibar, cable/satellite TV, accessible shower"
+    },
+    "2.4": {
+      "name": "total_rooms",
+      "value": "24 unidades (Engenho 9 + Village 13 + Remote 2 identificadas — total confirmado pelo TripAdvisor Village = 11 quartos)",
+      "confidence_type": "inferred",
+      "inference_logic": "Soma das unidades listadas nos 3 conceitos em ibiti.com. TripAdvisor cita 11 quartos para Village isolado (divergente com 13 unidades listadas no site — possível agrupamento).",
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor"
+      ],
+      "conflict_note": "TripAdvisor=11 vs site=13 unidades Village"
+    },
+    "3.1": {
+      "name": "parking",
+      "value": {
+        "has_parking": true,
+        "type": "Estacionamento gratuito"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor",
+      "source_text": "Estacionamento gratuito"
+    },
+    "3.2": {
+      "name": "pool_description",
+      "value": "Piscinas naturais em cachoeiras da propriedade (não explicitamente piscinas construídas aquecidas). Viajar Verde cita jacuzzi no Engenho.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde",
+      "source_text": "cachoeiras, piscinas naturais e paisagens deslumbrantes / jacuzzi disponível no Engenho"
+    },
+    "3.3": {
+      "name": "pool_heated",
+      "value": null,
+      "null_reason": "not_found_in_sources",
+      "note": "Viajar Verde: 'No heated pool mentioned'. Booking snippet menciona 'indoor pool' de forma genérica mas sem confirmação literal."
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "Trilhas (300 km de trilhas exclusivas)",
+        "Cachoeiras e piscinas naturais",
+        "Cavalgadas",
+        "Bike rentals (TripAdvisor)",
+        "Raízes Spa (Engenho)",
+        "Sauna (Engenho)",
+        "Jacuzzi (Engenho)",
+        "Fitness center (TripAdvisor)",
+        "Yoga",
+        "Jantares em grutas / piqueniques ao pôr do sol",
+        "Educação ambiental para crianças e jovens"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor+external_viajarverde"
+    },
+    "3.5": {
+      "name": "wellness",
+      "value": "Raízes Spa no Engenho Lodge com sauna e jacuzzi. Tratamentos holísticos e aulas de yoga citados nas vivências wellness: 'Relaxe e revitalize-se em nossos spas, com tratamentos holísticos e aulas de yoga em um ambiente tranquilo.'",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "3.6": {
+      "name": "event_space",
+      "value": {
+        "has_events": true,
+        "description": "Três categorias: Programação especial Ibiti (calendário), Comemorações em grupo (casamentos na natureza), Eventos corporativos ('ambiente inspirador, espaços inusitados'). Capacidades não publicadas."
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.7": {
+      "name": "wifi",
+      "value": {
+        "included": true,
+        "quality": "alta velocidade (TripAdvisor)",
+        "booking_score": null
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor",
+      "source_text": "Internet sem fio gratuita e de alta velocidade (Wi-Fi)"
+    },
+    "3.8": {
+      "name": "accessibility",
+      "value": {
+        "has_accessibility": true,
+        "description": "Chuveiro acessível citado pelo TripAdvisor (accessible shower)"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "3.9": {
+      "name": "gym",
+      "value": {
+        "has_gym": true,
+        "description": "Fitness center listado pelo TripAdvisor"
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "4.1": {
+      "name": "restaurants",
+      "value": [
+        {
+          "name": "Restaurante do Engenho",
+          "cuisine": "Tradicional mineira, fogão a lenha",
+          "chefs": "Convidados Claude Troisgros e Pablo Oazen (jantares especiais)",
+          "location": "Engenho Lodge",
+          "hours": "Café, almoço self-service, jantar à la carte",
+          "sourcing": "Produtos locais; Gaia Produtos Ecológicos (horta orgânica on-site)"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "Restaurante do Engenho - culinária tradicional mineira prepared in wood-fired stove; chefs Claude Troisgros e Pablo Oazen"
+    },
+    "4.2": {
+      "name": "meals_included",
+      "value": "Café da manhã, almoço (self-service) e jantar (à la carte) inclusos nas diárias do Engenho Lodge. TripAdvisor confirma 'Free breakfast' no Village.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor"
+    },
+    "4.3": {
+      "name": "special_dining",
+      "value": [
+        "Jantares em grutas (cave dinners)",
+        "Piqueniques ao pôr do sol",
+        "Almoços à beira de cachoeiras",
+        "Glamping à beira do lago com jantar à luz de velas"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "4.4": {
+      "name": "room_service",
+      "value": {
+        "available": true,
+        "hours": null
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor"
+    },
+    "4.5": {
+      "name": "dietary_options",
+      "value": "Opções vegetarianas e culinária contemporânea citadas em outras fontes (Yucca por Mateus Abdo segundo Viajar Verde; sourcing orgânico de Gaia Produtos Ecológicos)",
+      "confidence_type": "literal",
+      "source_type": "external_viajarverde+hotel_website",
+      "conflict_note": "Viajar Verde cita 'Yucca' como restaurante vegetariano; ibiti.com cita 'Restaurante do Engenho' tradicional mineira — podem ser outlets diferentes"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.2": {
+      "name": "early_late_checkout",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.3": {
+      "name": "cancellation_policy",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.4": {
+      "name": "children_policy",
+      "value": "Família-friendly conforme TripAdvisor (family activities/recreation). Educação ambiental específica para crianças/jovens.",
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor+hotel_website"
+    },
+    "5.5": {
+      "name": "pet_policy",
+      "value": {
+        "accepts_pets": true,
+        "fee": null,
+        "additional_rules": null
+      },
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor",
+      "source_text": "Pet-friendly accommodations"
+    },
+    "5.6": {
+      "name": "smoking_policy",
+      "value": "Quartos fumantes e não-fumantes disponíveis (TripAdvisor)",
+      "confidence_type": "literal",
+      "source_type": "ota_tripadvisor",
+      "source_text": "non-smoking rooms, smoking rooms"
+    },
+    "5.7": {
+      "name": "min_age_solo",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "6.1": {
+      "name": "airport_distance",
+      "value": "Zona da Mata Regional Airport: 73.9 km (ou 2h30 de carro conforme ibiti.com); Tancredo Neves Internacional: 246.6 km (TripAdvisor)",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor",
+      "conflict_note": "ibiti.com cita '2h30 de carro' sem km específico"
+    },
+    "6.2": {
+      "name": "transfer",
+      "value": {
+        "available": true,
+        "description": "Transfer rodoviário do Aeroporto Zona da Mata; 900m airstrip para aviões monomotores; helipontos"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "6.3": {
+      "name": "nearby_attractions",
+      "value": [
+        {
+          "name": "Parque Estadual do Ibitipoca",
+          "distance": "Margeia a propriedade"
+        },
+        {
+          "name": "Juiz de Fora",
+          "distance": "40 min"
+        },
+        {
+          "name": "Rio de Janeiro",
+          "distance": "258 km"
+        },
+        {
+          "name": "São Paulo",
+          "distance": "432 km"
+        },
+        {
+          "name": "Belo Horizonte",
+          "distance": "312 km"
+        },
+        {
+          "name": "Inhotim",
+          "distance": "315 km"
+        },
+        {
+          "name": "Tiradentes",
+          "distance": "201 km"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "6.4": {
+      "name": "how_to_get_there",
+      "value": "Aeroporto Zona da Mata (IZA) a 2h30 de carro; transfer privativo disponível. Helipontos em pontos diversos. Pista de pouso de 900m para monomotores. Endereço: Vila Mogol S/N, Lima Duarte-MG, CEP 36140-000.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor"
+    },
+    "7.1": {
+      "name": "special_programming",
+      "value": "Programação especial Ibiti: calendário de eventos e atividades únicas em meio à natureza. Comemorações em grupo (casamentos), eventos corporativos.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.2": {
+      "name": "hotel_concierge_services",
+      "value": "Reservas Mon-Fri 9h-18h. Bike rentals. Equipe para organizar vivências, eventos e comemorações.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor"
+    },
+    "7.3": {
+      "name": "activities_tours",
+      "value": [
+        "Trilhas (300 km exclusivas) - caminhada, bicicleta ou cavalo",
+        "Cachoeiras e piscinas naturais",
+        "Cavernas e mirantes",
+        "Canyons",
+        "Yoga",
+        "Tratamentos holísticos no Raízes Spa",
+        "Educação ambiental para crianças/jovens",
+        "Jantares em grutas",
+        "Piqueniques ao pôr do sol",
+        "Almoços à beira de cachoeiras",
+        "Glamping à beira do lago"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "7.4": {
+      "name": "day_use",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "7.5": {
+      "name": "special_packages",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "8.1": {
+      "name": "highlights",
+      "value": "6.000 hectares de Mata Atlântica regenerada (98% preservada); Projeto socioambiental experimental >40 anos fundado por Renato Machado; Adjacente ao Parque Estadual do Ibitipoca; 300 km de trilhas exclusivas; 3 conceitos de hospedagem (Village, Engenho Lodge, Remote); Certificações B-Corp (Sistema B Brasil), Johansens, Seloxis, Ibiti Regenera; Rewilding e reintrodução de muriquis; Horta orgânica Gaia Produtos Ecológicos; Gastronomia por chefs Claude Troisgros e Pablo Oazen; Raízes Spa.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "8.2": {
+      "name": "awards_certifications",
+      "value": [
+        "B-Corp (Sistema B Brasil)",
+        "Johansens membership",
+        "Seloxis",
+        "Ibiti Regenera (iniciativa socioambiental)",
+        "BLTA - Brazilian Luxury Travel Association"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "8.3": {
+      "name": "sustainability",
+      "value": "Modelo de turismo regenerativo; abordagem 'nearly zero waste'; produção orgânica (Gaia Produtos Ecológicos); restauração de ecossistemas nativos; reintrodução de fauna (muriquis); 98% dos 6.000 hectares preservados/em regeneração; energia/infraestrutura com foco sustentável.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+external_viajarverde"
+    },
+    "8.4": {
+      "name": "star_rating",
+      "value": null,
+      "null_reason": "not_found_in_sources",
+      "note": "TripAdvisor não exibe classificação por estrelas para esta propriedade"
+    },
+    "8.5": {
+      "name": "price_tier",
+      "value": "$$$$",
+      "confidence_type": "inferred",
+      "inference_logic": "TripAdvisor faixa R$ 3.997-4.211 standard + certificação BLTA (Luxury) + Johansens + Engenho descrito como 'casarão colonial exclusivo' → luxury tier",
+      "sources": [
+        "ota_tripadvisor",
+        "hotel_website"
+      ]
+    },
+    "9.1": {
+      "name": "guest_faqs",
+      "value": [
+        {
+          "q": "Qual o contato para reservas?",
+          "a": "Phone +55 32 9 9806-3963, email reservas@ibiti.com, Seg-Sex 9h-18h. WhatsApp Engenho +55 32 99984-7626, WhatsApp Remote +55 32 98449-2200.",
+          "source": "ibiti.com"
+        },
+        {
+          "q": "Onde fica?",
+          "a": "Vila Mogol S/N, Lima Duarte-MG, CEP 36140-000. Margeando o Parque Estadual do Ibitipoca.",
+          "source": "TripAdvisor+site"
+        },
+        {
+          "q": "Aceita pets?",
+          "a": "Sim, pet-friendly accommodations conforme TripAdvisor.",
+          "source": "TripAdvisor"
+        },
+        {
+          "q": "Tem Wi-Fi?",
+          "a": "Sim, internet sem fio gratuita e de alta velocidade.",
+          "source": "TripAdvisor"
+        },
+        {
+          "q": "Tem estacionamento?",
+          "a": "Sim, estacionamento gratuito.",
+          "source": "TripAdvisor"
+        },
+        {
+          "q": "Qual a distância do aeroporto?",
+          "a": "Aeroporto Zona da Mata (IZA) 73.9 km / 2h30 de carro; Tancredo Neves 246.6 km.",
+          "source": "ibiti.com+TripAdvisor"
+        },
+        {
+          "q": "Que línguas são faladas?",
+          "a": "Português e inglês.",
+          "source": "ibiti.com+TripAdvisor"
+        },
+        {
+          "q": "Quais acomodações existem?",
+          "a": "3 conceitos: Ibiti Village (13 unidades - casas e suítes temáticas), Engenho Lodge (9 suítes + Casa Carlinhos), Remote (acomodações em áreas remotas).",
+          "source": "ibiti.com"
+        },
+        {
+          "q": "Que atividades oferece?",
+          "a": "300 km de trilhas (pé/bike/cavalo), cachoeiras, piscinas naturais, Raízes Spa, yoga, jantares em grutas, piqueniques.",
+          "source": "ibiti.com+Viajar Verde"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_tripadvisor"
+    },
+    "9.2": {
+      "name": "common_objections",
+      "value": [
+        {
+          "category": "PREÇO",
+          "objection": "Faixa R$ 3.997-4.211 standard (TripAdvisor) — tier luxury",
+          "response": null,
+          "source": "TripAdvisor"
+        },
+        {
+          "category": "ACESSO",
+          "objection": "2h30 de carro do aeroporto mais próximo — remoto",
+          "response": "Transfer privativo disponível; 900m airstrip para monomotores; helipontos",
+          "source": "ibiti.com"
+        }
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Tier de preço + remoteness são fatores relevantes identificados nas fontes",
+      "sources": [
+        "ota_tripadvisor",
+        "hotel_website"
+      ]
+    },
+    "9.3": {
+      "name": "attention_points",
+      "value": [
+        "Não confirmar piscina aquecida — Viajar Verde explicita 'no heated pool mentioned'",
+        "Horários check-in/out não publicados no site — confirmar via reservas",
+        "Capacidade de eventos não publicada — solicitar cotação",
+        "Conflito restaurantes: Viajar Verde cita 'Yucca' (vegetariano), site oficial cita 'Restaurante do Engenho' (tradicional mineira) — podem ser outlets distintos",
+        "Conflito total de quartos: TripAdvisor=11 Village vs site lista 13 unidades Village"
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Gaps e conflitos identificados entre fontes",
+      "sources": [
+        "hotel_website",
+        "external_viajarverde",
+        "ota_tripadvisor"
+      ]
+    },
+    "9.4": {
+      "name": "sales_arguments_by_profile",
+      "value": {
+        "casal": "Suíte Da Vinci ou Ayn Rand com lareira e vista; Casa Einstein Glass House integrada à natureza; jantares em grutas e piqueniques ao pôr do sol; Raízes Spa",
+        "familia": "Casa Guimarães Rosa (5 adultos, 2 qtos) ou Casa Carlinhos (6 pessoas, 3 suítes); educação ambiental para crianças; family-friendly TripAdvisor",
+        "corporativo": "Eventos corporativos em 'ambientes inspiradores, espaços inusitados'; comemorações em grupo; weddings na natureza",
+        "eco_consciente": "B-Corp + Johansens + Ibiti Regenera; 98% dos 6.000 ha preservados; turismo regenerativo; reintrodução de muriquis; Gaia Produtos Ecológicos orgânica"
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Agrupamento de fatos literais por perfil de hóspede",
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor",
+        "external_viajarverde"
+      ]
+    },
+    "10.1": {
+      "name": "has_api",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx",
+      "source_text": "has_api: false (stub)"
+    },
+    "10.2": {
+      "name": "elevare_hotel_id",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "10.3": {
+      "name": "bradesco_coupon",
+      "value": false,
+      "confidence_type": "literal",
+      "source_type": "local_xlsx",
+      "source_text": "bradesco_coupon: false (stub)"
+    },
+    "10.4": {
+      "name": "ce_page_url",
+      "value": null,
+      "null_reason": "ce_page_returns_404",
+      "note": "URL do stub https://www.circuitoelegante.com.br/hotel/projeto-ibiti-hospedagem-lima-duarte-mg/ retorna 404"
+    },
+    "10.5": {
+      "name": "photo_urls",
+      "value": null,
+      "null_reason": "not_extracted"
+    }
+  },
+  "excel_data": {
+    "ESTABELECIMENTOS": "Projeto Ibiti - Hospedagem",
+    "MUNICÍPIO": "Lima Duarte",
+    "UF": "MG",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "Serra do Ibitipoca"
+  },
+  "sources": [],
+  "source_priority": [
+    "pilot",
+    "enrich",
+    "excel"
+  ],
+  "gap_fields": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "8.4",
+    "10.1",
+    "10.2"
+  ]
+}

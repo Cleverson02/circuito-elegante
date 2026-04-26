@@ -1,0 +1,26 @@
+SOURCE: https://www.circuitoelegante.com.br/hotel/villa-dozio-praia-brava-sc/
+EXTRACTED: 2026-04-19
+NOTE: Old URL villa-dozio-itajai-sc returned 404. Current URL is villa-dozio-praia-brava-sc.
+
+Name: Villa D'Ozio Hotel
+Location: Av. José Medeiros Vieira, 982 - Praia Brava, Itajaí/SC
+
+Description: "the essence of il dolce far niente" - "the only high-standard beachfront hotel at Praia Brava." Draws inspiration from southern Italian villas with open spaces, internal patios, and flourished gardens.
+
+Rooms (25 total):
+- Suíte Superior (24m²) - Queen bed, private balcony
+- Suíte Mar (25m²) - Queen/King bed, ocean-view balcony
+- Suíte Pool (37m²) - King bed, deck for relaxation
+- Suíte Pool com Hidromassagem (37m²) - King bed, private balcony with whirlpool tub
+
+Restaurant: Cucina - Mediterranean Italian cuisine; fresh local ingredients; Spritz Bar; Pool Bar
+
+Spa: Yes (scheduled appointments)
+Pool: Yes (implied via room names)
+
+CE Membership Benefits:
+- Early check-in and late check-out (subject to availability)
+- Welcome amenity
+- Bradesco cashback partnership (referenced)
+
+Activities: Spa treatments, beach access, personalized service

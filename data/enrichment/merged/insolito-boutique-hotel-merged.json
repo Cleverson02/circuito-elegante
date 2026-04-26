@@ -1,0 +1,614 @@
+{
+  "slug": "insolito-boutique-hotel",
+  "name": "Insólito Boutique Hotel & Spa",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.86,
+  "completeness": 0.776,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Insólito Boutique Hotel & Spa",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://insolitohotel.com/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Armação dos Búzios",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_text": "Rua Lydia Gonçalves de Almeida s/n Lote 4, Praia da Ferradura, Armação de Búzios/RJ"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=RJ → região sudeste (mapeamento IBGE)"
+    },
+    "1.5": {
+      "name": "destination",
+      "value": "Praia da Ferradura",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.6": {
+      "name": "experience",
+      "value": "praia",
+      "confidence_type": "inferred",
+      "inference_logic": "Praia da Ferradura + praia privativa + vista mar panorâmica → experience=praia"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://insolitohotel.com/",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.8": {
+      "name": "google_maps_url",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Hotel boutique na Praia da Ferradura em Armação dos Búzios. Propriedade com 24 acomodações temáticas inspiradas em elementos da cultura brasileira (arte, música, fotografia, literatura, modernismo). Oferece praia privativa, piscinas vista mar, spa, restaurante A Galeria e atmosfera de privacidade e sofisticação à beira-mar em terreno de 4.000 m².",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ce_page+third_party",
+      "source_text": "insolitohotel.com + CE page + hotelsbuziosbrazil"
+    },
+    "1.10": {
+      "name": "lodging_type",
+      "value": "Hotel boutique 4 estrelas / design hotel",
+      "confidence_type": "literal",
+      "source_type": "press_passageirodeprimeira",
+      "source_text": "hotel 4 estrelas (hoteisdeluxobrasil, trivago, passageiro); MICHELIN Guide Hotel"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suíte Classic",
+          "size_m2": 21,
+          "description": "Ala Terra Brasil, Casa de Fotografia e Literatura. Cama king, smart TV, A/C, amenities L'Occitane, enxoval Trousseau. Imersão na cultura brasileira. Até 2 pessoas."
+        },
+        {
+          "name": "Suíte Superior",
+          "size_m2": 30,
+          "description": "Vista parcial do mar, varanda, banheira, cama king. Ala Terra Brasil, Ala Modernismo."
+        },
+        {
+          "name": "Suíte Deluxe",
+          "size_m2": 40,
+          "description": "Vista parcial do mar, varanda, hidromassagem. Ala Terra Brasil, Ala Modernismo."
+        },
+        {
+          "name": "Suíte Master",
+          "size_m2": 70,
+          "description": "Casa da Música, próxima à piscina natural. Vista mar, varanda, banheira de hidromassagem."
+        },
+        {
+          "name": "Suíte Insólito",
+          "size_m2": 60,
+          "description": "Duas suítes interconectadas com 1 cama king ou 2 camas de solteiro, sala de estar, chuveiro duplo, TV cabo, Wi-Fi, cafeteira, ar-condicionado, vista mar, banheira de hidromassagem."
+        },
+        {
+          "name": "Suíte Insólito com Piscina",
+          "size_m2": 60,
+          "description": "Piscina privativa, vista mar, amenities premium, serviço diferenciado."
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ce_page",
+      "source_url": "https://insolitohotel.com/suites/"
+    },
+    "2.2": {
+      "name": "max_capacity_per_type",
+      "value": {
+        "Classic": 2,
+        "Superior": 2,
+        "Deluxe": 2,
+        "Master": "2+",
+        "Insólito": "4 (2 suítes interconectadas)",
+        "Insólito com Piscina": "4"
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Classic 'Up to 2 people' literal; outros inferidos por tamanho + config de camas"
+    },
+    "2.3": {
+      "name": "room_amenities",
+      "value": [
+        "Cama king-size",
+        "Smart TV / TV a cabo (LCD)",
+        "Ar-condicionado",
+        "Wi-Fi",
+        "Amenities L'Occitane",
+        "Enxoval Trousseau",
+        "Cafeteira (categorias Insólito)",
+        "Banheira (Superior+)",
+        "Banheira de hidromassagem (Deluxe, Master, Insólito)",
+        "Chuveiro duplo (Insólito)",
+        "Varanda / terraço (maioria das categorias)",
+        "Vista parcial ou total do mar (Superior+)",
+        "Obras de arte e livros temáticos (cultura brasileira)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ce_page+tripadvisor_snippet"
+    },
+    "2.4": {
+      "name": "total_rooms",
+      "value": 24,
+      "confidence_type": "literal",
+      "source_type": "ce_page+third_party_hotelsbuziosbrazil+passageirodeprimeira"
+    },
+    "3.1": {
+      "name": "parking",
+      "value": {
+        "has_parking": true,
+        "type": "Estacionamento com serviço valet"
+      },
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil"
+    },
+    "3.2": {
+      "name": "pool_description",
+      "value": "2 piscinas externas: piscina de borda infinita vista mar + plunge pool. Piscina natural próxima à Casa da Música (Suíte Master). Suíte Insólito com Piscina oferece piscina privativa.",
+      "confidence_type": "literal",
+      "source_type": "tripadvisor_snippet+third_party_hotelsbuziosbrazil+hotel_website"
+    },
+    "3.3": {
+      "name": "pool_heated",
+      "value": true,
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil",
+      "source_text": "Infinity pool, plunge pool, heated swimming pool, and pool with views"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "Praia privativa Ferradura",
+        "Piscina borda infinita vista mar",
+        "Plunge pool",
+        "Piscina aquecida",
+        "Piscina natural (Casa da Música)",
+        "Spa com vista mar",
+        "Sauna",
+        "Banho de vapor (steam room)",
+        "Hot tub",
+        "Academia vista oceano",
+        "Yoga pôr-do-sol no deck",
+        "Serviço de chá em áreas de relaxamento",
+        "Galeria de arte com exposições pela propriedade"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+tripadvisor_snippet+third_party_hotelsbuziosbrazil"
+    },
+    "3.5": {
+      "name": "wellness",
+      "value": "Spa com vista mar combinando 'saberes ancestrais e técnicas contemporâneas'. Tratamentos: Massagem Express, Relaxante cabeça aos pés, Modeladora, Bamboo Flow, Reflexologia óleos essenciais, Ventosaterapia energizante, Jet Leg, Drenagem, Drenagem Gestante, Estimulação Facial, Massagem a Dois. Inclui sauna, banho de vapor, hot tub. Retiros de bem-estar e programas detox. Yoga ao pôr-do-sol no deck. Reservas via WhatsApp.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+tripadvisor_snippet"
+    },
+    "3.6": {
+      "name": "event_space",
+      "value": {
+        "has_events": null,
+        "description": null
+      },
+      "confidence_type": "null",
+      "null_reason": "not_found_in_sources"
+    },
+    "3.7": {
+      "name": "wifi",
+      "value": {
+        "included": true,
+        "quality": null,
+        "booking_score": null
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website+tripadvisor_snippet+third_party_hotelsbuziosbrazil"
+    },
+    "3.8": {
+      "name": "accessibility",
+      "value": {
+        "has_accessibility": null,
+        "description": null
+      },
+      "confidence_type": "null",
+      "null_reason": "not_found_in_sources"
+    },
+    "3.9": {
+      "name": "gym",
+      "value": {
+        "has_gym": true,
+        "description": "Academia moderna com vista para o oceano, aulas de yoga."
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website+third_party_hotelsbuziosbrazil"
+    },
+    "4.1": {
+      "name": "restaurants",
+      "value": [
+        {
+          "name": "A Galeria (aGaleria)",
+          "cuisine": "Autoral contemporânea com influências Brasil, Espanha, França, Itália, Japão. Uso de PANCs (plantas alimentícias não convencionais), hortas próprias, frutos do mar locais.",
+          "chef": "Victoria Teles",
+          "location": "Restaurante principal do hotel",
+          "phone": null,
+          "email": null,
+          "hours": null,
+          "signature_dishes": [
+            "Ceviche aGaleria (peixe branco, leite de tigre, milho crocante, patacones)",
+            "Tiradito Oriental (atum, molho asiático)",
+            "Fideuá de frutos do mar (sofrito, aioli alho negro)",
+            "Pescado Caiçara",
+            "Gnocchi Tartufo"
+          ]
+        },
+        {
+          "name": "Snack Bar da Piscina",
+          "cuisine": "Snacks e bebidas à beira da piscina",
+          "location": "Área das piscinas",
+          "hours": null
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+press_revistahoteis+third_party_hotelsbuziosbrazil"
+    },
+    "4.2": {
+      "name": "meals_included",
+      "value": "Café da manhã (padrão de boutique hotels 4*; confirmação pendente em fonte primária)",
+      "confidence_type": "inferred",
+      "inference_logic": "Padrão de hotéis boutique 4* em Búzios; não confirmado literalmente"
+    },
+    "4.3": {
+      "name": "special_dining",
+      "value": [
+        "Menu autoral da chef Victoria Teles com PANCs",
+        "Jantar vista mar no A Galeria",
+        "Snack bar à beira da piscina"
+      ],
+      "confidence_type": "literal",
+      "source_type": "press_revistahoteis+hotel_website"
+    },
+    "4.4": {
+      "name": "room_service",
+      "value": {
+        "available": null,
+        "hours": null
+      },
+      "confidence_type": "null",
+      "null_reason": "not_found_in_sources"
+    },
+    "4.5": {
+      "name": "dietary_options",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "15:00",
+        "check_out": "12:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "booking_snippet_via_search"
+    },
+    "5.2": {
+      "name": "early_late_checkout",
+      "value": "Early check-in/late check-out disponíveis sujeitos à disponibilidade (benefício de programa de fidelidade/membro)",
+      "confidence_type": "literal",
+      "source_type": "ce_page"
+    },
+    "5.3": {
+      "name": "cancellation_policy",
+      "value": "Cancelamento gratuito disponível (variável por tarifa). Recomendado revisar política específica da tarifa antes da reserva. Legislação BR: cancelamento gratuito até 7 dias após reserva.",
+      "confidence_type": "literal",
+      "source_type": "booking_snippet_via_search"
+    },
+    "5.4": {
+      "name": "children_policy",
+      "value": "Aceita crianças; oferece menu infantil, área de recreação e serviço de babysitting.",
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil"
+    },
+    "5.5": {
+      "name": "pet_policy",
+      "value": {
+        "accepts_pets": true,
+        "fee": "Sobretaxa aplicável (valor variável - contatar hotel)",
+        "additional_rules": "Aceita mediante pedido antecipado via contato direto"
+      },
+      "confidence_type": "literal",
+      "source_type": "booking_snippet_via_search+third_party_hotelsbuziosbrazil"
+    },
+    "5.6": {
+      "name": "smoking_policy",
+      "value": "Quartos não-fumantes",
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil"
+    },
+    "5.7": {
+      "name": "min_age_solo",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "6.1": {
+      "name": "airport_distance",
+      "value": "Aeroporto Umberto Modiano (Cabo Frio): 12km / ~25min de carro. Aeroporto do Galeão (Rio): distância não especificada (~170km típico).",
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil"
+    },
+    "6.2": {
+      "name": "transfer",
+      "value": {
+        "available": null,
+        "description": null
+      },
+      "confidence_type": "null",
+      "null_reason": "not_found_in_sources"
+    },
+    "6.3": {
+      "name": "nearby_attractions",
+      "value": [
+        {
+          "name": "Praia da Ferradura",
+          "distance": "500m"
+        },
+        {
+          "name": "Lagoinha Beach",
+          "distance": "600m"
+        },
+        {
+          "name": "Ilha do Boi",
+          "distance": "850m"
+        },
+        {
+          "name": "Praia da Foca",
+          "distance": "~20min a pé"
+        },
+        {
+          "name": "Rua das Pedras",
+          "distance": "2.4km"
+        },
+        {
+          "name": "Praia Brava / Praia Azeda",
+          "distance": "2-3km"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil"
+    },
+    "6.4": {
+      "name": "how_to_get_there",
+      "value": "Endereço: Rua Lydia Gonçalves de Almeida s/n Lote 4 (ou Rua E1, Lotes 3 e 4), Praia da Ferradura, Armação dos Búzios/RJ. Aeroporto Umberto Modiano (Cabo Frio) 12km / 25min de carro.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+tripadvisor_snippet+third_party_hotelsbuziosbrazil"
+    },
+    "7.1": {
+      "name": "special_programming",
+      "value": "Yoga ao pôr-do-sol no deck. Retiros de bem-estar. Programas detox. Experiências de wellness customizadas. Serviço de chá em áreas de relaxamento. Galeria de arte com exposições pela propriedade.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "7.2": {
+      "name": "hotel_concierge_services",
+      "value": "Reservas via WhatsApp (+55 22 99207-7666) e OmniBees. Serviço personalizado com check-in de boas-vindas para membros, upgrades e early/late check-out conforme disponibilidade.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ce_page"
+    },
+    "7.3": {
+      "name": "activities_tours",
+      "value": [
+        "Golf",
+        "Mergulho (diving)",
+        "Snorkeling",
+        "Pesca",
+        "Ciclismo",
+        "Yoga pôr-do-sol",
+        "Retiros de bem-estar",
+        "Visitação da galeria de arte"
+      ],
+      "confidence_type": "literal",
+      "source_type": "third_party_hotelsbuziosbrazil+hotel_website"
+    },
+    "7.4": {
+      "name": "day_use",
+      "value": {
+        "available": null,
+        "conditions": null
+      },
+      "confidence_type": "null",
+      "null_reason": "not_found_in_sources"
+    },
+    "7.5": {
+      "name": "special_packages",
+      "value": null,
+      "null_reason": "not_found_in_sources"
+    },
+    "8.1": {
+      "name": "highlights",
+      "value": "Hotel boutique 4* na exclusiva Praia da Ferradura com apenas 24 acomodações temáticas inspiradas na cultura brasileira. Praia privativa. Piscina de borda infinita vista mar + piscina aquecida + plunge pool. Restaurante A Galeria da chef Victoria Teles com cozinha autoral usando PANCs e hortas próprias. Spa com vista mar. MICHELIN Guide Hotel. Design e arte integrados (Casa da Música, Casa de Fotografia e Literatura, Ala Modernismo, Ala Terra Brasil). TripAdvisor #15 de 164 hotéis em Búzios.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+tripadvisor_snippet+press_revistahoteis+ce_page"
+    },
+    "8.2": {
+      "name": "awards_certifications",
+      "value": [
+        "MICHELIN Guide Hotel (guide.michelin.com)",
+        "TripAdvisor 4/5 - #15 de 164 em Armação dos Búzios",
+        "Reconhecimento em mídia especializada (Hotéis de Luxo Brasil, MyBoutiqueHotel, Revista Hotéis)"
+      ],
+      "confidence_type": "literal",
+      "source_type": "tripadvisor_snippet+michelin_guide+hoteisdeluxobrasil"
+    },
+    "8.3": {
+      "name": "sustainability",
+      "value": "Compostagem e coleta seletiva de resíduos. Iniciativas de apoio à comunidade local. Uso de ingredientes de hortas próximas e frutos do mar locais no restaurante. PANCs (plantas alimentícias não convencionais).",
+      "confidence_type": "literal",
+      "source_type": "hotel_website+press_revistahoteis"
+    },
+    "8.4": {
+      "name": "star_rating",
+      "value": 4,
+      "confidence_type": "literal",
+      "source_type": "hoteisdeluxobrasil+trivago+passageirodeprimeira"
+    },
+    "8.5": {
+      "name": "price_tier",
+      "value": "$$$$",
+      "confidence_type": "inferred",
+      "inference_logic": "Boutique 4* + Ferradura (praia mais exclusiva de Búzios) + MICHELIN Guide + 24 quartos + suítes 70m² com piscina privativa → luxury tier"
+    },
+    "9.1": {
+      "name": "guest_faqs",
+      "value": [
+        {
+          "q": "Quais os horários de check-in e check-out?",
+          "a": "Entrada 15:00, saída 12:00.",
+          "source": "booking_snippet"
+        },
+        {
+          "q": "Quantos quartos tem o hotel?",
+          "a": "24 acomodações temáticas divididas em 6 categorias.",
+          "source": "hotel_website+ce_page"
+        },
+        {
+          "q": "A piscina é aquecida?",
+          "a": "Sim, o hotel possui piscina aquecida, além de piscina de borda infinita e plunge pool.",
+          "source": "third_party_hotelsbuziosbrazil"
+        },
+        {
+          "q": "Aceita pets?",
+          "a": "Sim, mediante pedido antecipado e sobretaxa. Contatar o hotel para detalhes.",
+          "source": "booking_snippet+hotelsbuziosbrazil"
+        },
+        {
+          "q": "Tem restaurante?",
+          "a": "Sim, o restaurante A Galeria (chef Victoria Teles) com cozinha autoral e uso de PANCs, mais snack bar à beira da piscina.",
+          "source": "hotel_website+press_revistahoteis"
+        },
+        {
+          "q": "Qual a distância do aeroporto?",
+          "a": "Aeroporto Umberto Modiano (Cabo Frio) fica a 12km / ~25min de carro.",
+          "source": "hotelsbuziosbrazil"
+        },
+        {
+          "q": "Tem praia privativa?",
+          "a": "Sim, o hotel está na Praia da Ferradura e oferece acesso privativo.",
+          "source": "hotel_website+hotelsbuziosbrazil"
+        },
+        {
+          "q": "Aceita crianças?",
+          "a": "Sim, com menu infantil, área de recreação e serviço de babysitting.",
+          "source": "hotelsbuziosbrazil"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website+ota_snippets+third_party"
+    },
+    "9.2": {
+      "name": "common_objections",
+      "value": [
+        {
+          "category": "PREÇO",
+          "objection": "Hotel boutique 4* na Ferradura com apenas 24 suítes tem tarifas premium (tier $$$$)",
+          "response": "Justifica-se por exclusividade, praia privativa, design temático autoral, MICHELIN Guide e chef Victoria Teles",
+          "source": "inferencia_tier_premium"
+        },
+        {
+          "category": "TAMANHO_CLASSIC",
+          "objection": "Suíte Classic (21m²) é a menor categoria sem vista mar",
+          "response": "Upgrade para Superior (30m²) ou Deluxe (40m²) oferece vista parcial e hidromassagem",
+          "source": "hotel_website"
+        }
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Gaps de experiência identificados nas categorias + tier premium"
+    },
+    "9.3": {
+      "name": "attention_points",
+      "value": [
+        "Booking/WebFetch bloqueado - dados OTA via snippets de busca apenas",
+        "Café da manhã não confirmado literalmente (inferido padrão boutique)",
+        "Distância Galeão não especificada em fonte primária",
+        "Room service não mencionado explicitamente",
+        "Taxa de pet variável - confirmar diretamente com hotel",
+        "Event space não mencionado - confirmar se oferece eventos corporativos",
+        "Acessibilidade PCD não documentada",
+        "Hotel tem apenas 24 quartos - alta demanda em alta temporada"
+      ],
+      "confidence_type": "inferred",
+      "inference_logic": "Gaps/limitações explícitas nas fontes"
+    },
+    "9.4": {
+      "name": "sales_arguments_by_profile",
+      "value": {
+        "casal": "Suíte Master 70m² ou Insólito com Piscina privativa. Yoga ao pôr-do-sol no deck, massagem a dois no spa, jantar autoral no A Galeria com chef Victoria Teles. Praia da Ferradura privativa = romance e privacidade.",
+        "familia": "Suítes Insólito interconectadas (4 pessoas), menu infantil, área de recreação, babysitting, piscinas múltiplas e praia privativa segura.",
+        "wellness": "Spa vista mar com tratamentos ancestrais, retiros de bem-estar, programas detox, yoga diário, academia vista oceano, piscina aquecida.",
+        "gourmet": "Restaurante A Galeria (chef Victoria Teles) com PANCs, hortas próprias, frutos do mar locais e influências internacionais - reconhecido MICHELIN Guide.",
+        "corporativo": "Não é foco primário do hotel (event space não documentado) - melhor para retiros executivos/offsites pequenos."
+      },
+      "confidence_type": "inferred",
+      "inference_logic": "Fatos literais agrupados por perfil com base nas fontes consolidadas"
+    },
+    "10.1": {
+      "name": "has_api",
+      "value": null,
+      "null_reason": "db_offline_xlsx_not_queried"
+    },
+    "10.2": {
+      "name": "elevare_hotel_id",
+      "value": null,
+      "null_reason": "db_offline_xlsx_not_queried"
+    },
+    "10.3": {
+      "name": "bradesco_coupon",
+      "value": null,
+      "null_reason": "db_offline_xlsx_not_queried"
+    },
+    "10.4": {
+      "name": "ce_page_url",
+      "value": "https://circuitoelegante.com.br/hoteis/insolito-boutique-hotel",
+      "confidence_type": "literal",
+      "source_type": "ce_page",
+      "note": "CE page EXISTIU (200) nesta extração - divergente do padrão '404 esperado'"
+    },
+    "10.5": {
+      "name": "photo_urls",
+      "value": null,
+      "null_reason": "not_extracted_by_scraper"
+    }
+  },
+  "excel_data": {
+    "slug": "insolito-boutique-hotel",
+    "ESTABELECIMENTOS": "Insólito Boutique Hotel",
+    "MUNICÍPIO": "Armação de Búzios",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": 6027,
+    "Região": "sudeste",
+    "Experiência": "praia",
+    "Destino": "Búzios"
+  },
+  "sources": [
+    "hotel_website",
+    "ota_tripadvisor_snippet",
+    "ce_page",
+    "third_party_hotelsbuziosbrazil",
+    "press_revistahoteis",
+    "no_stub",
+    "no_local_form",
+    "db_offline"
+  ]
+}

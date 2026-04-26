@@ -1,0 +1,24 @@
+{
+  "slug": "nanii",
+  "name": "Nanii",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "nanii",
+    "ESTABELECIMENTOS": "Nanii",
+    "MUNICÍPIO": "São Miguel do Gostoso",
+    "UF": "RN",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": 19217,
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "São Miguel do Gostoso"
+  },
+  "sources": []
+}

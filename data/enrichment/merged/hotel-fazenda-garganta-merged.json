@@ -1,0 +1,70 @@
+{
+  "slug": "hotel-fazenda-garganta",
+  "name": "Hotel Fazenda Garganta",
+  "source_priority": [
+    "enriched"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Fazenda Garganta",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://hotelfarrendagarganta.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Nova Lima",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "MG",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://hotelfarrendagarganta.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://hotelfarrendagarganta.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Chalé"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Trilhas",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 31 3626-1000",
+        "website": "https://hotelfarrendagarganta.com.br/",
+        "address": "Nova Lima, Minas Gerais"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {},
+  "sources": [
+    "hotel_website"
+  ]
+}

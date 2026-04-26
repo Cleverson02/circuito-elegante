@@ -1,0 +1,24 @@
+{
+  "slug": "pousada-alma-charme-atins",
+  "name": "Pousada Alma Charme Atins",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "pousada-alma-charme-atins",
+    "ESTABELECIMENTOS": "Pousada Alma Charme Atins",
+    "MUNICÍPIO": "Barreirinhas",
+    "UF": "MA",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": 21992,
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Lençóis Maranhenses"
+  },
+  "sources": []
+}

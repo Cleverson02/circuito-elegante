@@ -1,0 +1,182 @@
+{
+  "slug": "tivoli-mofarrej",
+  "name": "Tivoli Mofarrej São Paulo",
+  "template_coverage": 0.24242424242424243,
+  "template_fields": {
+    "1.1": true,
+    "1.2": true,
+    "1.3": true,
+    "1.4": true,
+    "1.5": true,
+    "2.1": true,
+    "2.2": false,
+    "2.3": false,
+    "2.4": false,
+    "3.1": false,
+    "3.2": false,
+    "4.1": false,
+    "4.2": false,
+    "4.3": false,
+    "5.1": true,
+    "5.2": false,
+    "5.3": false,
+    "6.1": false,
+    "6.2": false,
+    "6.3": false,
+    "6.4": true,
+    "7.1": false,
+    "7.2": false,
+    "7.3": false,
+    "8.1": false,
+    "8.2": false,
+    "8.3": false,
+    "8.4": false,
+    "9.1": false,
+    "9.2": false,
+    "9.3": false,
+    "10.1": false,
+    "10.2": false
+  },
+  "quality_score": 0.22131661442006267,
+  "completeness": 0.1896551724137931,
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Tivoli Mofarrej São Paulo",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.tivolihotels.com/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "São Paulo",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "SP",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=SP → região (mapeamento IBGE)"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Hotel Tivoli de luxo na Alameda Santos, referência em hotelaria de 5 estrelas.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Standard",
+          "size": 35,
+          "description": "Quarto standard"
+        },
+        {
+          "name": "Deluxe",
+          "size": 45,
+          "description": "Quarto deluxe"
+        },
+        {
+          "name": "Suite",
+          "size": 60,
+          "description": "Suite"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar",
+        "Fitness",
+        "Concierge"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "14:00",
+        "check_out": "12:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "6.4": {
+      "name": "address",
+      "value": "Alameda Santos, 2437 - Cerqueira César, São Paulo, SP",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 11 3146-5000",
+        "website": "https://www.tivolihotels.com/"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.5": {
+      "value": "Cerqueira César",
+      "source_type": "excel"
+    }
+  },
+  "excel_data": {
+    "ESTABELECIMENTOS": "Tivoli Mofarrej",
+    "MUNICÍPIO": "São Paulo",
+    "UF": "SP",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "cidade",
+    "Destino": "Cerqueira César"
+  },
+  "sources": [],
+  "source_priority": [
+    "enrich",
+    "excel"
+  ],
+  "gap_fields": [
+    "2.2",
+    "2.3",
+    "2.4",
+    "3.1",
+    "3.2",
+    "4.1",
+    "4.2",
+    "4.3",
+    "5.2",
+    "5.3",
+    "6.1",
+    "6.2",
+    "6.3",
+    "7.1",
+    "7.2",
+    "7.3",
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "9.1",
+    "9.2",
+    "9.3",
+    "10.1",
+    "10.2"
+  ]
+}

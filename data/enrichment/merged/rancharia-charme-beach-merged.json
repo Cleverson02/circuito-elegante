@@ -1,0 +1,82 @@
+{
+  "slug": "rancharia-charme-beach",
+  "name": "Ranchária Charme Beach",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Ranchária Charme Beach",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://rancharia.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Jericoacoara",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "CE",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://rancharia.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://rancharia.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Bungalow"
+        },
+        {
+          "name": "Suite Vista Mar"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 88 3421-8200",
+        "website": "https://rancharia.com.br/",
+        "address": "Jericoacoara, Ceará"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "rancharia-charme-beach",
+    "ESTABELECIMENTOS": "Rancharia Charme Beach",
+    "MUNICÍPIO": "Barreirinhas",
+    "UF": "MA",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": 17873,
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Lençóis Maranhenses"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

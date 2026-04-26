@@ -1,0 +1,83 @@
+{
+  "slug": "carmel-taiba-exclusive-resort",
+  "name": "Carmel Taiba Exclusive Resort",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Carmel Taiba Exclusive Resort",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://carmeltaiba.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Caucaia",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "CE",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://carmeltaiba.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://carmeltaiba.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Bungalow"
+        },
+        {
+          "name": "Suite Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Spa",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 85 3106-1000",
+        "website": "https://carmeltaiba.com.br/",
+        "address": "Caucaia, Ceará"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "carmel-taiba-exclusive-resort",
+    "ESTABELECIMENTOS": "Carmel Taiba Exclusive Resort",
+    "MUNICÍPIO": "São Gonçalo do Amarante",
+    "UF": "CE",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Praia da Taíba"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

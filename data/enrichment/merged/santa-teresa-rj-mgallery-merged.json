@@ -1,0 +1,88 @@
+{
+  "slug": "santa-teresa-rj-mgallery",
+  "name": "Santa Teresa Rio - MGallery",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Santa Teresa Rio - MGallery",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.mgallery.com/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Rio de Janeiro",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "RJ",
+      "confidence_type": "inferred"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.mgallery.com/",
+      "confidence_type": "literal",
+      "source_url": "https://www.mgallery.com/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Standard"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Restaurante",
+        "Bar",
+        "Spa"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 21 2131-1414",
+        "website": "https://www.mgallery.com/",
+        "address": "Rua Santa Teresa, 154 - Santa Teresa, Rio de Janeiro, RJ"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "santa-teresa-rj-mgallery",
+    "ESTABELECIMENTOS": "Santa Teresa RJ MGallery",
+    "MUNICÍPIO": "Rio de Janeiro",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "cidade",
+    "Destino": "Santa Teresa"
+  },
+  "sources": [
+    "hotel_website",
+    "accorhotels"
+  ]
+}

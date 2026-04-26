@@ -1,0 +1,83 @@
+{
+  "slug": "hcm-hotel-corais-de-manaira",
+  "name": "HCM Hotel Corais de Manaíra",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "HCM Hotel Corais de Manaíra",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://hcmhotel.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "João Pessoa",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PB",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://hcmhotel.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://hcmhotel.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Spa",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 83 3226-1000",
+        "website": "https://hcmhotel.com.br/",
+        "address": "João Pessoa, Paraíba"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "hcm-hotel-corais-de-manaira",
+    "ESTABELECIMENTOS": "HCM Hotel Corais de Manaíra",
+    "MUNICÍPIO": "João Pessoa",
+    "UF": "PB",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Manaíra"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

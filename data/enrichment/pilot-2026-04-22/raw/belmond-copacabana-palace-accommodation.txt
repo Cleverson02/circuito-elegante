@@ -1,0 +1,26 @@
+SOURCE: https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/accommodation
+FETCHED: 2026-04-19
+
+ROOM CATEGORIES:
+
+Rooms:
+- Bed options: King-sized or twin beds
+- Bathroom: Spacious
+- Size: From 26m² (280 sq ft)
+
+Suites:
+- Bed options: King-sized or twin beds
+- Features: Spacious sitting room
+- Size: From 45m² (484 sq ft)
+
+Penthouse Suites:
+- Bed type: King-sized bed
+- Special service: Butler service included
+- Size: From 105m² (1,130 sq ft)
+- Décor: "Sanctuaries of oriental carpets, delicate French fabrics and hand-picked antiques"
+
+DESIGN DETAILS:
+- "pink and white Brazilian marble" bathrooms
+- Furniture crafted from Brazilian freijo or mahogany wood
+
+HISTORY NOTE: Rooms occupied by notable guests including Marlene Dietrich and Orson Welles.

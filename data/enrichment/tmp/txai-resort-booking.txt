@@ -1,0 +1,1542 @@
+- generic [active] [ref=e1]:
+  - link "Pular para o conteúdo principal" [ref=e3] [cursor=pointer]:
+    - /url: "#basiclayout"
+    - generic [ref=e5]: Pular para o conteúdo principal
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - navigation [ref=e11]:
+        - link "Booking.com" [ref=e15] [cursor=pointer]:
+          - /url: https://www.booking.com/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+          - img [ref=e16]
+        - generic [ref=e18]:
+          - button "Preços em Real" [ref=e20] [cursor=pointer]:
+            - generic [ref=e21]: BRL
+          - 'button "Idioma: Português (BR)" [ref=e23] [cursor=pointer]'
+          - link "Apoio ao cliente" [ref=e28] [cursor=pointer]:
+            - /url: https://secure.booking.com/help.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17&source=header&src=profile_contact_cs
+            - img [ref=e31]
+          - link "Anuncie sua propriedade" [ref=e33] [cursor=pointer]:
+            - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&lang=pt-br&sid=fbcc71208ab34a645a56401717701e17&utm_medium=frontend&utm_source=topbar
+            - generic [ref=e34]: Anuncie sua propriedade
+          - link "Cadastrar uma conta" [ref=e35] [cursor=pointer]:
+            - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=pt-br&aid=304142&bkng_action=hotel&prompt=signin&state=UtIBbkCCoezl9Y-Val9Twzwwk14RPdvb1QEJxuHy1dNKqFnNn0CjBdGlcT-ZaXeevyTeHmClOn1NJShQG53_lVnpsGTwXIjk6t5bvVUfBs_dSKjAfrYrEIUHgs2yNREJM3RUgu5GEJbyAhoIY_vazCg6fTnRdgLMxpepV220hPoQ57E1p1LhrJPxYIRvk-me0UpEMQABsM1mrlWlm63deBFyIcticrSzi2sOP2Dd7wRnfuskze-eGrIiTkOs5suDI2Yg2V6qkKxuMb2Ax0WjawgsOfPX*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+            - generic [ref=e36]: Cadastre-se
+          - link "Login" [ref=e38] [cursor=pointer]:
+            - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=pt-br&aid=304142&bkng_action=hotel&prompt=signin&state=UtIBbkCCoezl9Y-Val9Twzwwk14RPdvb1QEJxuHy1dNKqFnNn0CjBdGlcT-ZaXeevyTeHmClOn1NJShQG53_lVnpsGTwXIjk6t5bvVUfBs_dSKjAfrYrEIUHgs2yNREJM3RUgu5GEJbyAhoIY_vazCg6fTnRdgLMxpepV220hPoQ57E1p1LhrJPxYIRvk-me0UpEMQABsM1mrlWlm63deBFyIcticrSzi2sOP2Dd7wRnfuskze-eGrIiTkOs5suDI2Yg2V6qkKxuMb2Ax0WjawgsOfPX*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+            - generic [ref=e39]: Login
+      - navigation "O que você está procurando?" [ref=e40]:
+        - menubar [ref=e42]:
+          - menuitem "Hospedagens" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]:
+              - img [ref=e46]
+              - generic [ref=e48]: Hospedagens
+          - menuitem "Voos" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - img [ref=e52]
+              - generic [ref=e54]: Voos
+          - menuitem "Aluguel de carros" [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]:
+              - img [ref=e58]
+              - generic [ref=e60]: Aluguel de carros
+          - menuitem "Atrações" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]:
+              - img [ref=e64]
+              - generic [ref=e66]: Atrações
+          - menuitem "Táxis (aeroporto)" [ref=e67] [cursor=pointer]:
+            - generic [ref=e68]:
+              - img [ref=e70]
+              - generic [ref=e72]: Táxis (aeroporto)
+  - region "Buscar propriedades" [ref=e78]:
+    - generic [ref=e79]:
+      - generic [ref=e85]:
+        - img [ref=e88]
+        - combobox "Para onde você vai?" [ref=e90]: Itacaré
+        - button "Limpar" [ref=e93] [cursor=pointer]:
+          - img "Limpar" [ref=e94]:
+            - img [ref=e95]
+      - button "Data de check-in — Data de check-out" [ref=e99] [cursor=pointer]:
+        - generic [ref=e100]:
+          - img [ref=e102]
+          - generic [ref=e104]: Data de check-in
+          - generic [ref=e105]: —
+          - generic [ref=e106]: Data de check-out
+      - 'button "Número de viajantes e quartos. Atualmente selecionado: 2 adultos · 0 criança · 1 cômodo" [ref=e109] [cursor=pointer]':
+        - generic [ref=e110]:
+          - img [ref=e112]
+          - text: 2 adultos · 0 criança · 1 cômodo
+        - img [ref=e115]
+      - button "Pesquisar" [ref=e118] [cursor=pointer]:
+        - generic [ref=e119]: Pesquisar
+  - generic [ref=e121]:
+    - navigation "Breadcrumbs" [ref=e125]:
+      - list [ref=e126]:
+        - listitem [ref=e127]:
+          - link "Página Inicial" [ref=e128] [cursor=pointer]:
+            - /url: https://www.booking.com/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e129]: Página Inicial
+          - img [ref=e131]
+        - listitem [ref=e133]:
+          - link "Hotéis" [ref=e134] [cursor=pointer]:
+            - /url: https://www.booking.com/hotel/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e135]: Hotéis
+          - img [ref=e137]
+        - listitem [ref=e139]:
+          - link "Todos os resorts" [ref=e140] [cursor=pointer]:
+            - /url: https://www.booking.com/resorts/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e141]: Todos os resorts
+          - img [ref=e143]
+        - listitem [ref=e145]:
+          - link "Brasil" [ref=e146] [cursor=pointer]:
+            - /url: https://www.booking.com/country/br.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e147]: Brasil
+          - img [ref=e149]
+        - listitem [ref=e151]:
+          - link "Bahia" [ref=e152] [cursor=pointer]:
+            - /url: https://www.booking.com/region/br/bahia.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e153]: Bahia
+          - img [ref=e155]
+        - listitem [ref=e157]:
+          - link "Itacaré" [ref=e158] [cursor=pointer]:
+            - /url: https://www.booking.com/city/br/itacare.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+            - generic [ref=e159]: Itacaré
+          - img [ref=e161]
+        - listitem [ref=e163]:
+          - heading "Ofertas de Txai Resort (Resort) (Brasil)" [level=1] [ref=e165]:
+            - generic [ref=e166]: Ofertas de Txai Resort (Resort) (Brasil)
+    - generic [ref=e167]:
+      - main [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e171]:
+            - navigation "Link para página interna" [ref=e175]:
+              - list [ref=e177]:
+                - listitem [ref=e178]:
+                  - link "Visão geral" [ref=e179] [cursor=pointer]:
+                    - /url: "#hotelTmpl"
+                    - generic [ref=e181]: Visão geral
+                - listitem [ref=e182]:
+                  - link "Informações e preços" [ref=e183] [cursor=pointer]:
+                    - /url: "#availability"
+                    - generic [ref=e185]: Informações e preços
+                - listitem [ref=e186]:
+                  - link "Comodidades" [ref=e187] [cursor=pointer]:
+                    - /url: "#hp_facilities_box"
+                    - generic [ref=e189]: Comodidades
+                - listitem [ref=e190]:
+                  - link "Regras da casa" [ref=e191] [cursor=pointer]:
+                    - /url: "#policies"
+                    - generic [ref=e193]: Regras da casa
+                - listitem [ref=e194]:
+                  - link "Informações importantes e jurídicas" [ref=e195] [cursor=pointer]:
+                    - /url: "#important_info"
+                    - generic [ref=e197]: Informações importantes e jurídicas
+                - listitem [ref=e198]:
+                  - link "Avaliações de hóspedes (168)" [ref=e199] [cursor=pointer]:
+                    - /url: "#blockdisplay4"
+                    - generic [ref=e201]: Avaliações de hóspedes (168)
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - button "Salvar este item em uma lista de viagens" [ref=e212] [cursor=pointer]:
+                  - img [ref=e215]
+                - button "Compartilhar esta acomodação" [ref=e223] [cursor=pointer]:
+                  - img [ref=e226]
+                - button "Reservar agora" [ref=e228] [cursor=pointer]:
+                  - generic [ref=e229]: Reservar agora
+                - button "Cobrimos o menor preço!" [ref=e233] [cursor=pointer]:
+                  - img [ref=e236]
+                  - generic [ref=e238]: Cobrimos o menor preço!
+              - generic [ref=e240]:
+                - generic [ref=e243]:
+                  - button "5 de 5 estrelas" [ref=e245] [cursor=pointer]:
+                    - img "5 de 5 estrelas" [ref=e246]:
+                      - generic [ref=e247]:
+                        - img [ref=e249]
+                        - img [ref=e252]
+                      - generic [ref=e254]:
+                        - img [ref=e256]
+                        - img [ref=e259]
+                      - generic [ref=e261]:
+                        - img [ref=e263]
+                        - img [ref=e266]
+                      - generic [ref=e268]:
+                        - img [ref=e270]
+                        - img [ref=e273]
+                      - generic [ref=e275]:
+                        - img [ref=e277]
+                        - img [ref=e280]
+                  - button [ref=e283] [cursor=pointer]:
+                    - img [ref=e285]
+                  - button "Beira-mar" [ref=e288] [cursor=pointer]:
+                    - generic [ref=e291]:
+                      - img [ref=e293]
+                      - generic [ref=e295]: Beira-mar
+                - heading "Txai Resort" [level=2] [ref=e297]
+              - generic [ref=e302]:
+                - link "Txai Resort, Itacaré - Verifique a localização" [ref=e303] [cursor=pointer]:
+                  - /url: "#map_opened-map_trigger_header_pin"
+                  - img [ref=e306]
+                - generic [ref=e308]:
+                  - button "Rod Ilheus-Itacare (BA001) Km 48, Itacaré, CEP 45530-000, Brasil" [ref=e310] [cursor=pointer]:
+                    - generic [ref=e311]:
+                      - text: Rod Ilheus-Itacare (BA001) Km 48, Itacaré, CEP 45530-000, Brasil
+                      - generic [ref=e312]:
+                        - generic [ref=e313]:
+                          - text: Localização excelente — nota 9.3/10!
+                          - generic [ref=e314]: (nota de 167 avaliações)
+                        - generic [ref=e315]: "Notas dadas pelos hóspedes depois de sua estadia em: Txai Resort."
+                  - text: –
+                  - link "Localização excelente - mostrar o mapa" [ref=e316] [cursor=pointer]:
+                    - /url: "#map_opened-map_trigger_header"
+            - generic "Galeria de fotos de Txai Resort" [ref=e320]:
+              - region "Galeria de fotos de Txai Resort" [ref=e322]:
+                - generic [ref=e325]:
+                  - generic [ref=e326]:
+                    - button "A piscina localizada em Txai Resort ou nos arredores" [ref=e328] [cursor=pointer]:
+                      - img "A piscina localizada em Txai Resort ou nos arredores" [ref=e330]
+                    - generic [ref=e331]:
+                      - button "Cama ou camas em um quarto em Txai Resort" [ref=e333] [cursor=pointer]:
+                        - img "Cama ou camas em um quarto em Txai Resort" [ref=e335]
+                      - button "A piscina localizada em Txai Resort ou nos arredores" [ref=e337] [cursor=pointer]:
+                        - img "A piscina localizada em Txai Resort ou nos arredores" [ref=e339]
+                  - generic [ref=e340]:
+                    - button "Comida no resort ou em algum lugar perto" [ref=e342] [cursor=pointer]:
+                      - img "Comida no resort ou em algum lugar perto" [ref=e344]
+                    - button "Um jardim em Txai Resort" [ref=e346] [cursor=pointer]:
+                      - img "Um jardim em Txai Resort" [ref=e348]
+                    - button "A piscina localizada em Txai Resort ou nos arredores" [ref=e350] [cursor=pointer]:
+                      - img "A piscina localizada em Txai Resort ou nos arredores" [ref=e352]
+                    - button "A piscina localizada em Txai Resort ou nos arredores" [ref=e354] [cursor=pointer]:
+                      - img "A piscina localizada em Txai Resort ou nos arredores" [ref=e356]
+                    - generic [ref=e357]:
+                      - button "Paisagem natural perto do resort mais 10 fotos" [ref=e358] [cursor=pointer]:
+                        - img "Paisagem natural perto do resort mais 10 fotos" [ref=e360]
+                      - generic: mais 10 fotos
+            - generic [ref=e362]:
+              - generic [ref=e365]:
+                - link "Com nota 9.2 Avaliação fantástico" [ref=e367] [cursor=pointer]:
+                  - /url: "#blockdisplay4"
+                  - generic [ref=e370]:
+                    - generic [ref=e371]: Com nota 9.2
+                    - generic [ref=e372]: 9,2
+                    - generic [ref=e373]: Avaliação fantástico
+                    - generic [ref=e374]:
+                      - generic [ref=e375]: Fantástico
+                      - generic [ref=e376]: 168 avaliações
+                - separator [ref=e377]
+                - generic [ref=e379]:
+                  - heading "Experiências de hóspedes com as melhores avaliações" [level=3] [ref=e380]
+                  - generic [ref=e381]:
+                    - region "Experiências de hóspedes com as melhores avaliações" [ref=e382]:
+                      - group [ref=e383]:
+                        - generic [ref=e385]:
+                          - generic [ref=e388]: “Tudo impecável. Hotel perfeito em todos os detalhes e quesitos. Comida excelente! Funcionários ótimos, muito bem treinados, gentis, tranquilos e...”
+                          - generic [ref=e394]:
+                            - text: Cristina
+                            - img "Brasil" [ref=e395]
+                            - generic [ref=e396]: Brasil
+                      - group [ref=e397]:
+                        - generic [ref=e399]:
+                          - generic [ref=e402]: “Eu gostei muito do serviço e simpatia do pessoal. Achei o lugar lindo e o chalé muito bacana.”
+                          - generic [ref=e408]:
+                            - text: Gabriela
+                            - img "Brasil" [ref=e409]
+                            - generic [ref=e410]: Brasil
+                      - group [ref=e411]:
+                        - generic [ref=e413]:
+                          - generic [ref=e416]: “Hotel maravilhoso, praia paradisíaca, piscinas incríveis, serviço excepcional, arborismo tudo incrível! Vale muito conhecer. Funcionarios...”
+                          - generic [ref=e422]:
+                            - text: Livia
+                            - img "Brasil" [ref=e423]
+                            - generic [ref=e424]: Brasil
+                      - group [ref=e425]:
+                        - generic [ref=e427]:
+                          - generic [ref=e430]: “Ambiente lindo, mágico Ficamos no bangalô 39 Foi incrível”
+                          - generic [ref=e436]:
+                            - text: Ana
+                            - img "Brasil" [ref=e437]
+                            - generic [ref=e438]: Brasil
+                      - group [ref=e439]:
+                        - generic [ref=e441]:
+                          - generic [ref=e444]: “O hotel é maravilhoso! Praia linda, deserta com uma excelente estrutura para sol, mar e piscina. Além disso, tem muita atividade para se fazer lá...”
+                          - generic [ref=e450]:
+                            - text: Rebecca
+                            - img "Brasil" [ref=e451]
+                            - generic [ref=e452]: Brasil
+                      - group [ref=e453]:
+                        - generic [ref=e455]:
+                          - generic [ref=e458]: “Lugar maravilhoso, com vistas lindas, praia exclusiva.”
+                          - generic [ref=e460]:
+                            - generic [ref=e462]: J
+                            - generic [ref=e464]:
+                              - text: Juliana
+                              - img "Brasil" [ref=e465]
+                              - generic [ref=e466]: Brasil
+                      - group [ref=e467]:
+                        - generic [ref=e469]:
+                          - generic [ref=e472]: “Café da manhã perfeito, atendimento impecável, local aconchegante, rústico e elegante ao mesmo tempo. A praia maravilhosa..”
+                          - generic [ref=e478]:
+                            - text: Miruche
+                            - img "Brasil" [ref=e479]
+                            - generic [ref=e480]: Brasil
+                      - group [ref=e481]:
+                        - generic [ref=e483]:
+                          - generic [ref=e486]: “PERFEITO!!! Quero voltar sempre! Um paraíso abençoado por Deus, roadeado de uma mata preservada lindíssima! Amamos as instalações do hotel, o...”
+                          - generic [ref=e488]:
+                            - generic [ref=e490]: L
+                            - generic [ref=e492]:
+                              - text: Luiza
+                              - img "Brasil" [ref=e493]
+                              - generic [ref=e494]: Brasil
+                      - group [ref=e495]:
+                        - generic [ref=e497]:
+                          - generic [ref=e500]: “SENSACIONAL!!!! Melhor experiência de resort beira-mar!”
+                          - generic [ref=e502]:
+                            - generic [ref=e504]: L
+                            - generic [ref=e506]:
+                              - text: Luiza
+                              - img "Brasil" [ref=e507]
+                              - generic [ref=e508]: Brasil
+                      - group [ref=e509]:
+                        - generic [ref=e511]:
+                          - generic [ref=e514]: “Excelente acomodação, quartos espaçosos e maravilhosos.”
+                          - generic [ref=e520]:
+                            - text: Ana
+                            - img "Brasil" [ref=e521]
+                            - generic [ref=e522]: Brasil
+                    - button "Próximo" [ref=e523] [cursor=pointer]:
+                      - img [ref=e526]
+                - separator [ref=e528]
+                - generic [ref=e531]:
+                  - generic [ref=e532]: 9,5
+                  - generic [ref=e533]: 9,5
+                  - generic [ref=e534]: Praia muito bem avaliada na região
+                  - generic [ref=e536]: Praia muito bem avaliada na região
+              - button "Mostrar no mapa" [ref=e540] [cursor=pointer]:
+                - generic [ref=e542]:
+                  - generic [ref=e543]:
+                    - generic:
+                      - generic:
+                        - img
+                      - img [ref=e544]
+                  - button "Mostrar no mapa" [ref=e546]:
+                    - generic [ref=e547]: Mostrar no mapa
+          - generic [ref=e549]:
+            - generic [ref=e550]:
+              - generic [ref=e554]:
+                - heading "Experimente o serviço de primeira classe de Txai Resort" [level=3] [ref=e555]
+                - paragraph [ref=e556]: O Txai é um resort 5 estrelas situado em meio à Mata Atlântica, uma área de proteção ambiental, a 15 km de Itacaré. A propriedade oferece spa, o espaço de cura Shamash, com vista panorâmica do mar, 5 piscinas cercadas por coqueiros e quadra de tênis. Para sua comodidade, o WiFi gratuito está disponível neste resort ecologicamente correto. Esta propriedade faz parte do grupo Relais&Chateaux. As suítes e bangalôs do Txai são espaçosos, foram construídos sobre decks suspensos de madeira e incluem camas king-size com dossel. Todas as acomodações são decoradas com bom gosto e dispõem de ar-condicionado, enquanto algumas possuem varandas privativas com vista panorâmica do mar ou da Mata Atlântica. O Txai está situado em um coqueiral e oferece uma experiência única de visitar a praia durante a época de desova das tartarugas.No Txai Resort, você também pode dar um passeio pela Praia de Itacarezinho, caminhar até a colina, passar pela Praia de Havaizinho e chegar à Praia da Engenhoca. Este resort inclui 3 opções gastronômicas. Um restaurante serve uma combinação de especialidades baianas orgânicas e cozinha contemporânea, enquanto o bar da piscina oferece coquetéis exóticos e vinhos finos da adega da propriedade. Um heliporto está disponível, e o estacionamento é gratuito no Txai Resort. A Praia da Costa e a Praia da Tiririca estão a 11 km do Txai Resort. O aeroporto mais próximo é o Aeroporto de Ilhéus/Bahia - Jorge Amado, a 49 km do Txai Resort.
+                - paragraph [ref=e557]: Casais particularmente gostam da localização — eles deram nota 9,5 para viagem a dois.
+                - paragraph [ref=e558]: A distância na descrição da acomodação é calculada pelo © OpenStreetMap
+              - generic [ref=e562]:
+                - heading "Principais comodidades" [level=3] [ref=e563]:
+                  - generic [ref=e564]: Principais comodidades
+                - list [ref=e565]:
+                  - listitem [ref=e566]:
+                    - generic [ref=e567]:
+                      - img [ref=e569]
+                      - generic [ref=e574]: 5 piscinas
+                  - listitem [ref=e575]:
+                    - generic [ref=e576]:
+                      - img [ref=e578]
+                      - generic [ref=e583]: Estacionamento gratuito
+                  - listitem [ref=e584]:
+                    - generic [ref=e585]:
+                      - img [ref=e587]
+                      - generic [ref=e592]: Wi-Fi gratuito
+                  - listitem [ref=e593]:
+                    - generic [ref=e594]:
+                      - img [ref=e596]
+                      - generic [ref=e601]: Beira-mar
+                  - listitem [ref=e602]:
+                    - generic [ref=e603]:
+                      - img [ref=e605]
+                      - generic [ref=e610]: Quartos para famílias
+                  - listitem [ref=e611]:
+                    - generic [ref=e612]:
+                      - img [ref=e614]
+                      - generic [ref=e619]: Transfer (aeroporto)
+                  - listitem [ref=e620]:
+                    - generic [ref=e621]:
+                      - img [ref=e623]
+                      - generic [ref=e628]: Spa / Centro de bem-estar
+                  - listitem [ref=e629]:
+                    - generic [ref=e630]:
+                      - img [ref=e632]
+                      - generic [ref=e637]: 2 restaurantes
+                  - listitem [ref=e638]:
+                    - generic [ref=e639]:
+                      - img [ref=e641]
+                      - generic [ref=e646]: Bar
+                  - listitem [ref=e647]:
+                    - generic [ref=e648]:
+                      - img [ref=e650]
+                      - generic [ref=e655]: Café da manhã
+            - generic [ref=e659]:
+              - heading "Destaques da acomodação" [level=3] [ref=e660]
+              - generic [ref=e661]:
+                - list [ref=e663]:
+                  - listitem [ref=e664]:
+                    - paragraph [ref=e665]:
+                      - img [ref=e667]
+                      - generic [ref=e669]: "Melhor localização: muito recomendada por hóspedes recentes (9,4)"
+                  - listitem [ref=e670]:
+                    - paragraph [ref=e671]:
+                      - img [ref=e673]
+                      - generic [ref=e675]: Quer uma ótima noite de sono? Esta acomodação é muito bem-avaliada por suas camas confortáveis.
+                - generic [ref=e676]:
+                  - heading "Informações sobre café da manhã" [level=4] [ref=e677]
+                  - paragraph [ref=e678]:
+                    - generic [ref=e679]: Buffet
+                - paragraph [ref=e681]:
+                  - img [ref=e683]
+                  - generic [ref=e685]: Estacionamento privativo grátis disponível no local
+                - generic [ref=e686]:
+                  - heading "Atividades:" [level=4] [ref=e687]
+                  - list [ref=e688]:
+                    - listitem [ref=e689]:
+                      - paragraph [ref=e690]:
+                        - generic [ref=e691]: Quadra de tênis
+                    - listitem [ref=e692]:
+                      - paragraph [ref=e693]:
+                        - generic [ref=e694]: Academia
+                    - listitem [ref=e695]:
+                      - paragraph [ref=e696]:
+                        - generic [ref=e697]: Solário
+              - button "Reservar agora" [ref=e699] [cursor=pointer]:
+                - generic [ref=e700]: Reservar agora
+          - separator [ref=e701]
+          - generic [ref=e711]:
+            - generic [ref=e713]:
+              - heading "Faça o login e economize" [level=3] [ref=e714]
+              - generic [ref=e715]: Para conferir se você pode economizar 10% ou mais nesta propriedade, faça o login
+              - generic [ref=e717]:
+                - link "Faça seu login na Booking.com." [ref=e718] [cursor=pointer]:
+                  - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=pt-br&aid=304142&bkng_action=hotel&prompt=signin&state=UtIBbkCCoezl9Y-Val9Twzwwk14RPdvb1QEJxuHy1dNKqFnNn0CjBdGlcT-ZaXeevyTeHmClOn1NJShQG53_lVnpsGTwXIjk6t5bvVUfBs_dSKjAfrYrEIUHgs2yNREJM3RUgu5GEJbyAhoIY_vazCg6fTnRdgLMxpepV220hPoQ57E1p1LhrJPxYIRvk-me0UpEMQABsM1mrlWlm63deBFyIcticrSzi2sOP2Dd7wRnfuskze-eGrIiTkOs5suDI2Yg2V6qkKxuMb2Ax0WjawgsOfPX*eyJpZCI6Im1lcmNoX3BsYXRmb3JtX3Byb3BlcnR5X3BhZ2VfY3RhIn0%3D
+                  - generic [ref=e719]: Login
+                - link "Crie uma conta na Booking.com." [ref=e720] [cursor=pointer]:
+                  - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=pt-br&aid=304142&bkng_action=hotel&prompt=signin&state=UtIBbkCCoezl9Y-Val9Twzwwk14RPdvb1QEJxuHy1dNKqFnNn0CjBdGlcT-ZaXeevyTeHmClOn1NJShQG53_lVnpsGTwXIjk6t5bvVUfBs_dSKjAfrYrEIUHgs2yNREJM3RUgu5GEJbyAhoIY_vazCg6fTnRdgLMxpepV220hPoQ57E1p1LhrJPxYIRvk-me0UpEMQABsM1mrlWlm63deBFyIcticrSzi2sOP2Dd7wRnfuskze-eGrIiTkOs5suDI2Yg2V6qkKxuMb2Ax0WjawgsOfPX*eyJpZCI6Im1lcmNoX3BsYXRmb3JtX3Byb3BlcnR5X3BhZ2VfY3RhIn0%3D
+                  - generic [ref=e721]: Criar uma conta
+            - img "Faça o login e economize" [ref=e725]
+          - generic [ref=e727]:
+            - generic [ref=e728]:
+              - heading "Disponibilidade" [level=2] [ref=e729]
+              - button "Cobrimos o menor preço!" [ref=e733] [cursor=pointer]:
+                - img [ref=e736]
+                - generic [ref=e738]: Cobrimos o menor preço!
+            - region [ref=e739]:
+              - img [ref=e741]
+              - paragraph [ref=e744]: Selecione as datas para conferir a disponibilidade e os preços desta acomodação
+            - generic [ref=e749]:
+              - generic [ref=e750]:
+                - button "Selecionar datas" [ref=e754] [cursor=pointer]:
+                  - generic [ref=e755]:
+                    - img [ref=e757]
+                    - generic [ref=e760]: Data de check-in - Data de check-out
+                - button "Selecione a ocupação" [ref=e764] [cursor=pointer]:
+                  - generic [ref=e765]:
+                    - img [ref=e767]
+                    - generic [ref=e770]: 2 adultos · 0 criança · 1 cômodo
+              - button "Pesquisar" [ref=e772] [cursor=pointer]:
+                - generic [ref=e773]: Pesquisar
+            - table [ref=e781]:
+              - rowgroup [ref=e782]:
+                - row "Tipo de quarto Quantas pessoas?" [ref=e783]:
+                  - columnheader "Tipo de quarto" [ref=e784]:
+                    - generic [ref=e785]: Tipo de quarto
+                  - columnheader "Quantas pessoas?" [ref=e786]:
+                    - generic [ref=e787]: Quantas pessoas?
+                  - columnheader [ref=e788]
+              - rowgroup [ref=e789]:
+                - row "Apartamento Superior 1 cama de casal extragrande ou 2 camas de solteiro 2 adultos, 1 criança Visualizar preços" [ref=e790]:
+                  - rowheader "Apartamento Superior 1 cama de casal extragrande ou 2 camas de solteiro" [ref=e791]:
+                    - link "Apartamento Superior" [ref=e793] [cursor=pointer]:
+                      - /url: "#RD29215201"
+                      - generic [ref=e795]: Apartamento Superior
+                    - generic [ref=e796]:
+                      - generic [ref=e797]:
+                        - text: 1 cama de casal extragrande
+                        - img [ref=e800]
+                      - generic [ref=e802]: ou
+                      - generic [ref=e803]:
+                        - text: 2 camas de solteiro
+                        - img [ref=e806]
+                  - cell "2 adultos, 1 criança" [ref=e808]:
+                    - img "2 adultos, 1 criança" [ref=e810]:
+                      - generic [ref=e811]:
+                        - img [ref=e813]
+                        - img [ref=e816]
+                      - generic [ref=e818]:
+                        - text: +
+                        - img [ref=e820]
+                      - button [ref=e823]:
+                        - img [ref=e825]
+                  - cell "Visualizar preços" [ref=e828]:
+                    - button "Visualizar preços" [ref=e830] [cursor=pointer]:
+                      - generic [ref=e831]: Visualizar preços
+                - row "Bangalô Superior Praia 1 cama de casal extragrande ou 2 camas de solteiro 3 adultos, 1 criança Visualizar preços" [ref=e832]:
+                  - rowheader "Bangalô Superior Praia 1 cama de casal extragrande ou 2 camas de solteiro" [ref=e833]:
+                    - link "Bangalô Superior Praia" [ref=e835] [cursor=pointer]:
+                      - /url: "#RD29215204"
+                      - generic [ref=e837]: Bangalô Superior Praia
+                    - generic [ref=e838]:
+                      - generic [ref=e839]:
+                        - text: 1 cama de casal extragrande
+                        - img [ref=e842]
+                      - generic [ref=e844]: ou
+                      - generic [ref=e845]:
+                        - text: 2 camas de solteiro
+                        - img [ref=e848]
+                  - cell "3 adultos, 1 criança" [ref=e850]:
+                    - img "3 adultos, 1 criança" [ref=e852]:
+                      - generic [ref=e853]:
+                        - img [ref=e855]
+                        - img [ref=e858]
+                        - img [ref=e861]
+                      - generic [ref=e863]:
+                        - text: +
+                        - img [ref=e865]
+                      - button [ref=e868]:
+                        - img [ref=e870]
+                  - cell "Visualizar preços" [ref=e873]:
+                    - button "Visualizar preços" [ref=e875] [cursor=pointer]:
+                      - generic [ref=e876]: Visualizar preços
+                - row "Bangalô Luxo 1 cama de casal extragrande ou 2 camas de solteiro 3 adultos, 1 criança Visualizar preços" [ref=e877]:
+                  - rowheader "Bangalô Luxo 1 cama de casal extragrande ou 2 camas de solteiro" [ref=e878]:
+                    - link "Bangalô Luxo" [ref=e880] [cursor=pointer]:
+                      - /url: "#RD29215205"
+                      - generic [ref=e882]: Bangalô Luxo
+                    - generic [ref=e883]:
+                      - generic [ref=e884]:
+                        - text: 1 cama de casal extragrande
+                        - img [ref=e887]
+                      - generic [ref=e889]: ou
+                      - generic [ref=e890]:
+                        - text: 2 camas de solteiro
+                        - img [ref=e893]
+                  - cell "3 adultos, 1 criança" [ref=e895]:
+                    - img "3 adultos, 1 criança" [ref=e897]:
+                      - generic [ref=e898]:
+                        - img [ref=e900]
+                        - img [ref=e903]
+                        - img [ref=e906]
+                      - generic [ref=e908]:
+                        - text: +
+                        - img [ref=e910]
+                      - button [ref=e913]:
+                        - img [ref=e915]
+                  - cell "Visualizar preços" [ref=e918]:
+                    - button "Visualizar preços" [ref=e920] [cursor=pointer]:
+                      - generic [ref=e921]: Visualizar preços
+                - row "Bangalô Superior Morro 1 cama de casal extragrande 3 adultos, 1 criança Visualizar preços" [ref=e922]:
+                  - rowheader "Bangalô Superior Morro 1 cama de casal extragrande" [ref=e923]:
+                    - link "Bangalô Superior Morro" [ref=e925] [cursor=pointer]:
+                      - /url: "#RD29215212"
+                      - generic [ref=e927]: Bangalô Superior Morro
+                    - generic [ref=e929]:
+                      - text: 1 cama de casal extragrande
+                      - img [ref=e932]
+                  - cell "3 adultos, 1 criança" [ref=e934]:
+                    - img "3 adultos, 1 criança" [ref=e936]:
+                      - generic [ref=e937]:
+                        - img [ref=e939]
+                        - img [ref=e942]
+                        - img [ref=e945]
+                      - generic [ref=e947]:
+                        - text: +
+                        - img [ref=e949]
+                      - button [ref=e952]:
+                        - img [ref=e954]
+                  - cell "Visualizar preços" [ref=e957]:
+                    - button "Visualizar preços" [ref=e959] [cursor=pointer]:
+                      - generic [ref=e960]: Visualizar preços
+                - row "Apartamento Luxo com Mezanino 2 camas de solteiro e 1 cama de casal 4 adultos, 1 criança Visualizar preços" [ref=e961]:
+                  - rowheader "Apartamento Luxo com Mezanino 2 camas de solteiro e 1 cama de casal" [ref=e962]:
+                    - link "Apartamento Luxo com Mezanino" [ref=e964] [cursor=pointer]:
+                      - /url: "#RD29215213"
+                      - generic [ref=e966]: Apartamento Luxo com Mezanino
+                    - generic [ref=e967]:
+                      - generic [ref=e968]:
+                        - text: 2 camas de solteiro
+                        - img [ref=e971]
+                      - generic [ref=e973]: e
+                      - generic [ref=e974]:
+                        - text: 1 cama de casal
+                        - img [ref=e977]
+                  - cell "4 adultos, 1 criança" [ref=e979]:
+                    - img "4 adultos, 1 criança" [ref=e981]:
+                      - generic [ref=e982]:
+                        - img [ref=e984]
+                        - generic [ref=e986]: × 4
+                      - generic [ref=e987]:
+                        - text: +
+                        - img [ref=e989]
+                      - button [ref=e992]:
+                        - img [ref=e994]
+                  - cell "Visualizar preços" [ref=e997]:
+                    - button "Visualizar preços" [ref=e999] [cursor=pointer]:
+                      - generic [ref=e1000]: Visualizar preços
+                - row "Bangalô Premium 1 cama de casal grande 2 adultos Visualizar preços" [ref=e1001]:
+                  - rowheader "Bangalô Premium 1 cama de casal grande" [ref=e1002]:
+                    - link "Bangalô Premium" [ref=e1004] [cursor=pointer]:
+                      - /url: "#RD29215215"
+                      - generic [ref=e1006]: Bangalô Premium
+                    - generic [ref=e1009]:
+                      - text: 1 cama de casal grande
+                      - img [ref=e1012]
+                  - cell "2 adultos" [ref=e1014]:
+                    - img "2 adultos" [ref=e1016]:
+                      - generic [ref=e1017]:
+                        - img [ref=e1019]
+                        - img [ref=e1022]
+                  - cell "Visualizar preços" [ref=e1024]:
+                    - button "Visualizar preços" [ref=e1026] [cursor=pointer]:
+                      - generic [ref=e1027]: Visualizar preços
+                - row "Apartamento de Luxo 1 cama de casal grande ou 2 camas de solteiro 3 adultos, 1 criança Visualizar preços" [ref=e1028]:
+                  - rowheader "Apartamento de Luxo 1 cama de casal grande ou 2 camas de solteiro" [ref=e1029]:
+                    - link "Apartamento de Luxo" [ref=e1031] [cursor=pointer]:
+                      - /url: "#RD29215216"
+                      - generic [ref=e1033]: Apartamento de Luxo
+                    - generic [ref=e1034]:
+                      - generic [ref=e1035]:
+                        - text: 1 cama de casal grande
+                        - img [ref=e1038]
+                      - generic [ref=e1040]: ou
+                      - generic [ref=e1041]:
+                        - text: 2 camas de solteiro
+                        - img [ref=e1044]
+                  - cell "3 adultos, 1 criança" [ref=e1046]:
+                    - img "3 adultos, 1 criança" [ref=e1048]:
+                      - generic [ref=e1049]:
+                        - img [ref=e1051]
+                        - img [ref=e1054]
+                        - img [ref=e1057]
+                      - generic [ref=e1059]:
+                        - text: +
+                        - img [ref=e1061]
+                      - button [ref=e1064]:
+                        - img [ref=e1066]
+                  - cell "Visualizar preços" [ref=e1069]:
+                    - button "Visualizar preços" [ref=e1071] [cursor=pointer]:
+                      - generic [ref=e1072]: Visualizar preços
+          - generic [ref=e1073]:
+            - generic [ref=e1075]:
+              - img [ref=e1078]
+              - generic [ref=e1081]: Você pode parcelar em até 3 x sem juros para reservas acima de R$ 6.000
+            - status [ref=e1083]:
+              - img [ref=e1085]
+              - paragraph [ref=e1088]: A legislação brasileira permite que você cancele gratuitamente até 7 dias após o momento da reserva. Depois desse período, será aplicada a política de cancelamento escolhida.
+          - generic [ref=e1091]:
+            - generic [ref=e1093]:
+              - generic [ref=e1094]:
+                - heading "Avaliações de hóspedes" [level=2] [ref=e1096]
+                - button "Veja a disponibilidade" [ref=e1098] [cursor=pointer]:
+                  - generic [ref=e1099]: Veja a disponibilidade
+              - generic [ref=e1102]:
+                - button "Com nota 9.2 Avaliação fantástico" [ref=e1103] [cursor=pointer]:
+                  - generic [ref=e1104]:
+                    - generic [ref=e1105]: Com nota 9.2
+                    - generic [ref=e1106]: 9,2
+                    - generic [ref=e1107]: Avaliação fantástico
+                    - generic [ref=e1108]:
+                      - generic [ref=e1109]: Fantástico
+                      - generic [ref=e1110]: · 168 avaliações
+                - button "Ler todas as avaliações" [ref=e1111] [cursor=pointer]:
+                  - generic [ref=e1112]: Ler todas as avaliações
+              - group "Revisar categorias" [ref=e1114]:
+                - heading "Categorias:" [level=3] [ref=e1116]
+                - generic [ref=e1117]:
+                  - generic "Nota média de 1 a 10" [ref=e1119]:
+                    - generic [ref=e1120]:
+                      - generic [ref=e1121]:
+                        - generic [ref=e1124]: Funcionários
+                        - generic [ref=e1126]: 9,3
+                      - meter "Funcionários" [ref=e1127]
+                  - generic "Nota média de 1 a 10" [ref=e1130]:
+                    - generic [ref=e1131]:
+                      - generic [ref=e1132]:
+                        - generic [ref=e1135]: Comodidades
+                        - generic [ref=e1137]: 9,3
+                      - meter "Comodidades" [ref=e1138]
+                  - generic "Nota média de 1 a 10" [ref=e1141]:
+                    - generic [ref=e1142]:
+                      - generic [ref=e1143]:
+                        - generic [ref=e1146]: Limpeza
+                        - generic [ref=e1148]: 9,4
+                      - meter "Limpeza" [ref=e1149]
+                  - generic "Nota média de 1 a 10" [ref=e1152]:
+                    - generic [ref=e1153]:
+                      - generic [ref=e1154]:
+                        - generic [ref=e1157]: Conforto
+                        - generic [ref=e1159]: 9,6
+                      - meter "Conforto" [ref=e1160]
+                  - generic "Nota média de 1 a 10" [ref=e1163]:
+                    - generic [ref=e1164]:
+                      - generic [ref=e1165]:
+                        - generic [ref=e1168]: Custo-benefício
+                        - generic [ref=e1170]: 8,0
+                      - meter "Custo-benefício" [ref=e1171]
+                  - generic "Nota média de 1 a 10" [ref=e1174]:
+                    - generic [ref=e1175]:
+                      - generic [ref=e1176]:
+                        - generic [ref=e1179]: Localização
+                        - generic [ref=e1181]: 9,4
+                      - meter "Localização" [ref=e1182]
+                  - generic "Nota média de 1 a 10" [ref=e1185]:
+                    - generic [ref=e1186]:
+                      - generic [ref=e1187]:
+                        - generic [ref=e1190]: WiFi gratuito
+                        - generic [ref=e1192]: 9,0
+                      - meter "WiFi gratuito" [ref=e1193]
+              - group "Selecione os tópicos para ler as avaliações:" [ref=e1196]:
+                - heading "Selecione os tópicos para ler as avaliações:" [level=3] [ref=e1199]
+                - group "Selecione os tópicos para ler as avaliações:" [ref=e1201]:
+                  - button "Praia" [ref=e1202]:
+                    - checkbox "Praia" [ref=e1203]
+                    - generic [ref=e1204] [cursor=pointer]:
+                      - img [ref=e1206]
+                      - generic [ref=e1208]: Praia
+                  - button "Spa" [ref=e1209]:
+                    - checkbox "Spa" [ref=e1210]
+                    - generic [ref=e1211] [cursor=pointer]:
+                      - img [ref=e1213]
+                      - generic [ref=e1215]: Spa
+                  - button "Restaurante" [ref=e1216]:
+                    - checkbox "Restaurante" [ref=e1217]
+                    - generic [ref=e1218] [cursor=pointer]:
+                      - img [ref=e1220]
+                      - generic [ref=e1222]: Restaurante
+                  - button "Check-in" [ref=e1223]:
+                    - checkbox "Check-in" [ref=e1224]
+                    - generic [ref=e1225] [cursor=pointer]:
+                      - img [ref=e1227]
+                      - generic [ref=e1229]: Check-in
+                  - button "Piscina" [ref=e1230]:
+                    - checkbox "Piscina" [ref=e1231]
+                    - generic [ref=e1232] [cursor=pointer]:
+                      - img [ref=e1234]
+                      - generic [ref=e1236]: Piscina
+              - generic [ref=e1238]:
+                - generic [ref=e1239]:
+                  - heading "Experiências de hóspedes com as melhores avaliações" [level=3] [ref=e1240]
+                  - generic [ref=e1241]:
+                    - region "Experiências de hóspedes com as melhores avaliações" [ref=e1242]:
+                      - group [ref=e1243]:
+                        - generic [ref=e1245]:
+                          - generic [ref=e1247]:
+                            - generic [ref=e1249]: C
+                            - generic [ref=e1250]:
+                              - generic [ref=e1251]: Cristina
+                              - generic [ref=e1252]:
+                                - img "Brasil" [ref=e1253]
+                                - generic [ref=e1254]: Brasil
+                          - generic [ref=e1257]: “Tudo impecável. Hotel perfeito em todos os detalhes e quesitos. Comida excelente! Funcionários ótimos, muito bem treinados, gentis, tranquilos e muito prestativos. Recebemos um 'up grade' e como era nosso aniversário de casamento também fomos...”
+                          - button "Continue lendo a avaliação de Cristina" [ref=e1259] [cursor=pointer]: Saiba mais
+                      - group [ref=e1260]:
+                        - generic [ref=e1262]:
+                          - generic [ref=e1267]:
+                            - generic [ref=e1268]: Gabriela
+                            - generic [ref=e1269]:
+                              - img "Brasil" [ref=e1270]
+                              - generic [ref=e1271]: Brasil
+                          - generic [ref=e1274]: “Eu gostei muito do serviço e simpatia do pessoal. Achei o lugar lindo e o chalé muito bacana.”
+                          - button "Continue lendo a avaliação de Gabriela" [ref=e1276] [cursor=pointer]: Saiba mais
+                      - group [ref=e1277]:
+                        - generic [ref=e1279]:
+                          - generic [ref=e1284]:
+                            - generic [ref=e1285]: Livia
+                            - generic [ref=e1286]:
+                              - img "Brasil" [ref=e1287]
+                              - generic [ref=e1288]: Brasil
+                          - generic [ref=e1291]: “Hotel maravilhoso, praia paradisíaca, piscinas incríveis, serviço excepcional, arborismo tudo incrível! Vale muito conhecer. Funcionarios incríveis, fomos muito bem recebidas pela Ingrid, é muito bem atendidas pela Amanda e Marcos!!”
+                          - button "Continue lendo a avaliação de Livia" [ref=e1293] [cursor=pointer]: Saiba mais
+                      - group [ref=e1294]:
+                        - generic [ref=e1296]:
+                          - generic [ref=e1301]:
+                            - generic [ref=e1302]: Ana
+                            - generic [ref=e1303]:
+                              - img "Brasil" [ref=e1304]
+                              - generic [ref=e1305]: Brasil
+                          - generic [ref=e1308]: “Ambiente lindo, mágico Ficamos no bangalô 39 Foi incrível”
+                          - button "Continue lendo a avaliação de Ana" [ref=e1310] [cursor=pointer]: Saiba mais
+                      - group [ref=e1311]:
+                        - generic [ref=e1313]:
+                          - generic [ref=e1318]:
+                            - generic [ref=e1319]: Rebecca
+                            - generic [ref=e1320]:
+                              - img "Brasil" [ref=e1321]
+                              - generic [ref=e1322]: Brasil
+                          - generic [ref=e1325]: "“O hotel é maravilhoso! Praia linda, deserta com uma excelente estrutura para sol, mar e piscina. Além disso, tem muita atividade para se fazer lá além disso: tênis, beach tênis, sauna, massagem, yoga… enfim. Bangalô perfeito! Acesso fácil a praia...”"
+                          - button "Continue lendo a avaliação de Rebecca" [ref=e1327] [cursor=pointer]: Saiba mais
+                      - group [ref=e1328]:
+                        - generic [ref=e1330]:
+                          - generic [ref=e1332]:
+                            - generic [ref=e1334]: J
+                            - generic [ref=e1335]:
+                              - generic [ref=e1336]: Juliana
+                              - generic [ref=e1337]:
+                                - img "Brasil" [ref=e1338]
+                                - generic [ref=e1339]: Brasil
+                          - generic [ref=e1342]: “Lugar maravilhoso, com vistas lindas, praia exclusiva.”
+                          - button "Continue lendo a avaliação de Juliana" [ref=e1344] [cursor=pointer]: Saiba mais
+                      - group [ref=e1345]:
+                        - generic [ref=e1347]:
+                          - generic [ref=e1349]:
+                            - generic [ref=e1351]: M
+                            - generic [ref=e1352]:
+                              - generic [ref=e1353]: Miruche
+                              - generic [ref=e1354]:
+                                - img "Brasil" [ref=e1355]
+                                - generic [ref=e1356]: Brasil
+                          - generic [ref=e1359]: “Café da manhã perfeito, atendimento impecável, local aconchegante, rústico e elegante ao mesmo tempo. A praia maravilhosa..”
+                          - button "Continue lendo a avaliação de Miruche" [ref=e1361] [cursor=pointer]: Saiba mais
+                      - group [ref=e1362]:
+                        - generic [ref=e1364]:
+                          - generic [ref=e1366]:
+                            - generic [ref=e1368]: L
+                            - generic [ref=e1369]:
+                              - generic [ref=e1370]: Luiza
+                              - generic [ref=e1371]:
+                                - img "Brasil" [ref=e1372]
+                                - generic [ref=e1373]: Brasil
+                          - generic [ref=e1376]: “PERFEITO!!! Quero voltar sempre! Um paraíso abençoado por Deus, roadeado de uma mata preservada lindíssima! Amamos as instalações do hotel, o cuidado de cada funcionário! Gostaria de parabenizar em especial o Joadison que fica no café da manhã e...”
+                          - button "Continue lendo a avaliação de Luiza" [ref=e1378] [cursor=pointer]: Saiba mais
+                      - group [ref=e1379]:
+                        - generic [ref=e1381]:
+                          - generic [ref=e1383]:
+                            - generic [ref=e1385]: L
+                            - generic [ref=e1386]:
+                              - generic [ref=e1387]: Luiza
+                              - generic [ref=e1388]:
+                                - img "Brasil" [ref=e1389]
+                                - generic [ref=e1390]: Brasil
+                          - generic [ref=e1393]: “SENSACIONAL!!!! Melhor experiência de resort beira-mar!”
+                          - button "Continue lendo a avaliação de Luiza" [ref=e1395] [cursor=pointer]: Saiba mais
+                      - group [ref=e1396]:
+                        - generic [ref=e1398]:
+                          - generic [ref=e1403]:
+                            - generic [ref=e1404]: Ana
+                            - generic [ref=e1405]:
+                              - img "Brasil" [ref=e1406]
+                              - generic [ref=e1407]: Brasil
+                          - generic [ref=e1410]: “Excelente acomodação, quartos espaçosos e maravilhosos.”
+                          - button "Continue lendo a avaliação de Ana" [ref=e1412] [cursor=pointer]: Saiba mais
+                    - button "Próximo" [ref=e1413] [cursor=pointer]:
+                      - img [ref=e1416]
+                - button "Ler todas as avaliações" [ref=e1418] [cursor=pointer]:
+                  - generic [ref=e1419]: Ler todas as avaliações
+            - generic [ref=e1426]:
+              - generic [ref=e1427]:
+                - heading "O que os viajantes estão perguntando" [level=2] [ref=e1429]:
+                  - generic [ref=e1430]: O que os viajantes estão perguntando
+                - button "Veja a disponibilidade" [ref=e1432] [cursor=pointer]:
+                  - generic [ref=e1433]: Veja a disponibilidade
+              - generic [ref=e1435]:
+                - generic [ref=e1436]:
+                  - list [ref=e1438]:
+                    - listitem [ref=e1439]:
+                      - button "Posso estacionar ali?" [ref=e1440] [cursor=pointer]:
+                        - generic [ref=e1441]:
+                          - img [ref=e1444]
+                          - generic [ref=e1446]: Posso estacionar ali?
+                          - img [ref=e1449]
+                    - listitem [ref=e1451]:
+                      - button "A acomodação serve café da manhã?" [ref=e1452] [cursor=pointer]:
+                        - generic [ref=e1453]:
+                          - img [ref=e1456]
+                          - generic [ref=e1458]: A acomodação serve café da manhã?
+                          - img [ref=e1461]
+                    - listitem [ref=e1463]:
+                      - button "Tem restaurante?" [ref=e1464] [cursor=pointer]:
+                        - generic [ref=e1465]:
+                          - img [ref=e1468]
+                          - generic [ref=e1470]: Tem restaurante?
+                          - img [ref=e1473]
+                    - listitem [ref=e1475]:
+                      - button "Quais são os horários de check-in e check-out?" [ref=e1476] [cursor=pointer]:
+                        - generic [ref=e1477]:
+                          - img [ref=e1480]
+                          - generic [ref=e1482]: Quais são os horários de check-in e check-out?
+                          - img [ref=e1485]
+                    - listitem [ref=e1487]:
+                      - button "A piscina está aberta?" [ref=e1488] [cursor=pointer]:
+                        - generic [ref=e1489]:
+                          - img [ref=e1492]
+                          - generic [ref=e1494]: A piscina está aberta?
+                          - img [ref=e1497]
+                    - listitem [ref=e1499]:
+                      - button "Quais são os restaurantes, atrações e opções de transporte público por perto?" [ref=e1500] [cursor=pointer]:
+                        - generic [ref=e1501]:
+                          - img [ref=e1504]
+                          - generic [ref=e1506]: Quais são os restaurantes, atrações e opções de transporte público por perto?
+                          - img [ref=e1509]
+                    - listitem [ref=e1511]:
+                      - button "O spa está aberto?" [ref=e1512] [cursor=pointer]:
+                        - generic [ref=e1513]:
+                          - img [ref=e1516]
+                          - generic [ref=e1518]: O spa está aberto?
+                          - img [ref=e1521]
+                    - listitem [ref=e1523]:
+                      - button "Posso levar meu pet?" [ref=e1524] [cursor=pointer]:
+                        - generic [ref=e1525]:
+                          - img [ref=e1528]
+                          - generic [ref=e1530]: Posso levar meu pet?
+                          - img [ref=e1533]
+                    - listitem [ref=e1535]:
+                      - button "Tem quartos com banheiro privativo?" [ref=e1536] [cursor=pointer]:
+                        - generic [ref=e1537]:
+                          - img [ref=e1540]
+                          - generic [ref=e1542]: Tem quartos com banheiro privativo?
+                          - img [ref=e1545]
+                    - listitem [ref=e1547]:
+                      - button "Tem quartos com varanda?" [ref=e1548] [cursor=pointer]:
+                        - generic [ref=e1549]:
+                          - img [ref=e1552]
+                          - generic [ref=e1554]: Tem quartos com varanda?
+                          - img [ref=e1557]
+                  - generic [ref=e1560]:
+                    - heading "Ainda não encontrou a resposta?" [level=3] [ref=e1561]
+                    - button "Faça uma pergunta" [ref=e1562] [cursor=pointer]:
+                      - generic [ref=e1563]: Faça uma pergunta
+                    - paragraph [ref=e1564]: Temos uma resposta imediata para a maioria das perguntas
+                - button "Ver outras perguntas (9)" [ref=e1567] [cursor=pointer]:
+                  - generic [ref=e1568]: Ver outras perguntas (9)
+            - generic [ref=e1573]:
+              - generic [ref=e1574]:
+                - heading "Proximidades da acomodação" [level=2] [ref=e1576]:
+                  - generic [ref=e1577]: Proximidades da acomodação
+                - button "Veja a disponibilidade" [ref=e1579] [cursor=pointer]:
+                  - generic [ref=e1580]: Veja a disponibilidade
+              - generic [ref=e1581]:
+                - generic [ref=e1583]: "Os hóspedes gostaram desta região para:"
+                - generic [ref=e1584]:
+                  - generic [ref=e1585]:
+                    - img [ref=e1587]
+                    - generic [ref=e1589]: Bem-estar e relaxamento
+                  - generic [ref=e1590]:
+                    - img [ref=e1592]
+                    - generic [ref=e1594]: Praias
+                  - generic [ref=e1595]:
+                    - img [ref=e1597]
+                    - generic [ref=e1599]: Trilha e caminhada
+                  - link "Localização excelente - mostrar o mapa" [ref=e1602] [cursor=pointer]:
+                    - /url: "#map_opened-hotel_surroundings"
+                    - generic [ref=e1603]: Localização excelente - mostrar o mapa
+                - generic [ref=e1604]:
+                  - generic [ref=e1605]:
+                    - generic [ref=e1606]:
+                      - generic [ref=e1607]:
+                        - img [ref=e1609]
+                        - heading "O que há por perto?" [level=3] [ref=e1611]:
+                          - generic [ref=e1612]: O que há por perto?
+                      - list [ref=e1613]:
+                        - listitem [ref=e1614]:
+                          - listitem [ref=e1616]:
+                            - generic [ref=e1617]:
+                              - generic [ref=e1618]: Wharf
+                              - generic [ref=e1620]: 18 km
+                    - generic [ref=e1621]:
+                      - generic [ref=e1622]:
+                        - img [ref=e1624]
+                        - heading "Restaurantes e cafés" [level=3] [ref=e1626]:
+                          - generic [ref=e1627]: Restaurantes e cafés
+                      - list [ref=e1628]:
+                        - listitem [ref=e1629]:
+                          - listitem [ref=e1631]:
+                            - generic [ref=e1632]:
+                              - generic [ref=e1633]: Restaurante Restaurante Praia
+                              - generic [ref=e1635]: 20 m
+                        - listitem [ref=e1636]:
+                          - listitem [ref=e1638]:
+                            - generic [ref=e1639]:
+                              - generic [ref=e1640]: Restaurante Manã
+                              - generic [ref=e1642]: 5 km
+                        - listitem [ref=e1643]:
+                          - listitem [ref=e1645]:
+                            - generic [ref=e1646]:
+                              - generic [ref=e1647]: Restaurante Churrascaria Recanto do Sol
+                              - generic [ref=e1649]: 9 km
+                    - generic [ref=e1650]:
+                      - generic [ref=e1651]:
+                        - img [ref=e1653]
+                        - heading "Praias na vizinhança" [level=3] [ref=e1655]:
+                          - generic [ref=e1656]: Praias na vizinhança
+                      - list [ref=e1657]:
+                        - listitem [ref=e1658]:
+                          - listitem [ref=e1660]:
+                            - generic [ref=e1661]:
+                              - generic [ref=e1662]: Itacarezinho Beach
+                              - generic [ref=e1664]: 1,4 km
+                        - listitem [ref=e1665]:
+                          - listitem [ref=e1667]:
+                            - generic [ref=e1668]:
+                              - generic [ref=e1669]: Engenhoca Beach
+                              - generic [ref=e1671]: 4,2 km
+                    - generic [ref=e1672]:
+                      - generic [ref=e1673]:
+                        - img [ref=e1675]
+                        - heading "Transporte público" [level=3] [ref=e1677]:
+                          - generic [ref=e1678]: Transporte público
+                      - list [ref=e1679]:
+                        - listitem [ref=e1680]:
+                          - listitem [ref=e1682]:
+                            - generic [ref=e1683]:
+                              - generic [ref=e1684]: Ônibus Itacare Bus Station
+                              - generic [ref=e1686]: 17 km
+                    - generic [ref=e1687]:
+                      - generic [ref=e1688]:
+                        - img [ref=e1690]
+                        - heading "Aeroportos mais próximos" [level=3] [ref=e1692]:
+                          - generic [ref=e1693]: Aeroportos mais próximos
+                      - list [ref=e1694]:
+                        - listitem [ref=e1695]:
+                          - listitem [ref=e1697]:
+                            - generic [ref=e1698]:
+                              - generic [ref=e1699]: Ilheus/Bahia-Jorge Amado Airport
+                              - generic [ref=e1701]: 56 km
+                        - listitem [ref=e1702]:
+                          - listitem [ref=e1704]:
+                            - generic [ref=e1705]:
+                              - generic [ref=e1706]: Barra Grande Airport
+                              - generic [ref=e1708]: 67 km
+                        - listitem [ref=e1709]:
+                          - listitem [ref=e1711]:
+                            - generic [ref=e1712]:
+                              - generic [ref=e1713]: Fabio Perini Airport
+                              - generic [ref=e1714]: 90 km*
+                  - generic [ref=e1715]:
+                    - text: É exibida uma estimativa das distâncias mais curtas de caminhada ou de carro. As distâncias reais podem variar.
+                    - generic [ref=e1716]: "*Não há uma trajeto de caminhada ou carro disponível. A distância exibida é medida em linha reta."
+                - group [ref=e1719]:
+                  - generic [ref=e1721]: Sente falta de alguma informação?
+                  - generic [ref=e1723]:
+                    - button "Sim" [ref=e1725] [cursor=pointer]
+                    - generic [ref=e1726]:
+                      - text: /
+                      - button "Não" [ref=e1727] [cursor=pointer]
+            - generic [ref=e1731]:
+              - generic [ref=e1733]:
+                - heading "Restaurantes" [level=2] [ref=e1734]:
+                  - generic [ref=e1735]: Restaurantes
+                - generic [ref=e1736]: 2 restaurantes no local
+              - region [ref=e1739]:
+                - group [ref=e1740]:
+                  - generic [ref=e1741]:
+                    - generic [ref=e1743]: Restaurante Orixás
+                    - list [ref=e1744]:
+                      - listitem [ref=e1745]:
+                        - generic [ref=e1746]:
+                          - generic [ref=e1747]: Culinária
+                          - generic [ref=e1748]: Brasileira
+                      - listitem [ref=e1749]:
+                        - generic [ref=e1750]:
+                          - generic [ref=e1751]: Aberto
+                          - generic [ref=e1752]: Jantar
+                      - listitem [ref=e1753]:
+                        - generic [ref=e1754]:
+                          - generic [ref=e1755]: Ambiente
+                          - generic [ref=e1756]: Familiar • Tradicional • Romântico
+                - group [ref=e1757]:
+                  - generic [ref=e1758]:
+                    - generic [ref=e1760]: Restaurante Praia
+                    - list [ref=e1761]:
+                      - listitem [ref=e1762]:
+                        - generic [ref=e1763]:
+                          - generic [ref=e1764]: Culinária
+                          - generic [ref=e1765]: Brasileira
+                      - listitem [ref=e1766]:
+                        - generic [ref=e1767]:
+                          - generic [ref=e1768]: Aberto
+                          - generic [ref=e1769]: Almoço
+                      - listitem [ref=e1770]:
+                        - generic [ref=e1771]:
+                          - generic [ref=e1772]: Ambiente
+                          - generic [ref=e1773]: Familiar • Tradicional • Romântico
+            - generic [ref=e1777]:
+              - generic [ref=e1778]:
+                - generic [ref=e1779]:
+                  - heading "Comodidades de resort do Txai Resort" [level=2] [ref=e1780]:
+                    - generic [ref=e1781]: Comodidades de resort do Txai Resort
+                  - generic [ref=e1782]: "Ótimas comodidades! Pontuação: 9,3"
+                - button "Veja a disponibilidade" [ref=e1784] [cursor=pointer]:
+                  - generic [ref=e1785]: Veja a disponibilidade
+              - generic [ref=e1786]:
+                - generic [ref=e1789]:
+                  - heading "Principais comodidades" [level=3] [ref=e1790]:
+                    - generic [ref=e1791]: Principais comodidades
+                  - list [ref=e1792]:
+                    - listitem [ref=e1793]:
+                      - generic [ref=e1794]:
+                        - img [ref=e1796]
+                        - generic [ref=e1801]: 5 piscinas
+                    - listitem [ref=e1802]:
+                      - generic [ref=e1803]:
+                        - img [ref=e1805]
+                        - generic [ref=e1810]: Estacionamento gratuito
+                    - listitem [ref=e1811]:
+                      - generic [ref=e1812]:
+                        - img [ref=e1814]
+                        - generic [ref=e1819]: Wi-Fi gratuito
+                    - listitem [ref=e1820]:
+                      - generic [ref=e1821]:
+                        - img [ref=e1823]
+                        - generic [ref=e1828]: Beira-mar
+                    - listitem [ref=e1829]:
+                      - generic [ref=e1830]:
+                        - img [ref=e1832]
+                        - generic [ref=e1837]: Quartos para famílias
+                    - listitem [ref=e1838]:
+                      - generic [ref=e1839]:
+                        - img [ref=e1841]
+                        - generic [ref=e1846]: Transfer (aeroporto)
+                    - listitem [ref=e1847]:
+                      - generic [ref=e1848]:
+                        - img [ref=e1850]
+                        - generic [ref=e1855]: Spa / Centro de bem-estar
+                    - listitem [ref=e1856]:
+                      - generic [ref=e1857]:
+                        - img [ref=e1859]
+                        - generic [ref=e1864]: 2 restaurantes
+                    - listitem [ref=e1865]:
+                      - generic [ref=e1866]:
+                        - img [ref=e1868]
+                        - generic [ref=e1873]: Bar
+                    - listitem [ref=e1874]:
+                      - generic [ref=e1875]:
+                        - img [ref=e1877]
+                        - generic [ref=e1882]: Café da manhã
+                - group [ref=e1885]:
+                  - generic [ref=e1887]: Sente falta de alguma informação?
+                  - generic [ref=e1889]:
+                    - button "Sim" [ref=e1891] [cursor=pointer]
+                    - generic [ref=e1892]:
+                      - text: /
+                      - button "Não" [ref=e1893] [cursor=pointer]
+            - region "Pesquisa com 2 perguntas" [ref=e1895]:
+              - generic [ref=e1899]:
+                - button "Fechar pesquisa" [ref=e1901] [cursor=pointer]:
+                  - img [ref=e1904]
+                - heading "Como estamos nos saindo?" [level=3] [ref=e1906]:
+                  - generic [ref=e1907]: Como estamos nos saindo?
+                - generic [ref=e1908]:
+                  - img [ref=e2487]
+                  - generic [ref=e1910]:
+                    - generic [ref=e1911]:
+                      - generic "Pergunta 1 de 2" [ref=e1912]: 1 de 2
+                      - generic [ref=e1913]: É fácil procurar opções de acomodação relevantes
+                    - group "Marque o quanto você concorda com a seguinte afirmação. Esta é uma escala de 5 ponto, em que 1 significa “concordo totalmente” e 5 significa “discordo totalmente”." [ref=e1915]:
+                      - generic [ref=e1916]:
+                        - radio "Concordo totalmente" [ref=e1917]
+                        - generic [ref=e1921] [cursor=pointer]: Concordo totalmente
+                      - generic [ref=e1922]:
+                        - radio "Concordo" [ref=e1923]
+                        - generic [ref=e1927] [cursor=pointer]: Concordo
+                      - generic [ref=e1928]:
+                        - radio "Neutro" [ref=e1929]
+                        - generic [ref=e1933] [cursor=pointer]: Neutro
+                      - generic [ref=e1934]:
+                        - radio "Discordo" [ref=e1935]
+                        - generic [ref=e1939] [cursor=pointer]: Discordo
+                      - generic [ref=e1940]:
+                        - radio "Discordo totalmente" [ref=e1941]
+                        - generic [ref=e1945] [cursor=pointer]: Discordo totalmente
+            - generic [ref=e1949]:
+              - generic [ref=e1950]:
+                - generic [ref=e1951]:
+                  - heading "Regras da casa" [level=2] [ref=e1952]:
+                    - generic [ref=e1953]: Regras da casa
+                  - generic [ref=e1954]: Txai Resort aceita pedidos especiais - adicione no próximo passo!
+                - button "Veja a disponibilidade" [ref=e1956] [cursor=pointer]:
+                  - generic [ref=e1957]: Veja a disponibilidade
+              - generic [ref=e1959]:
+                - generic [ref=e1960]:
+                  - generic [ref=e1962]:
+                    - img [ref=e1964]
+                    - generic [ref=e1966]: Entrada
+                  - generic [ref=e1967]:
+                    - generic [ref=e1968]: A partir de 15:00
+                    - generic [ref=e1969]: Os hóspedes devem apresentar um documento com foto e cartão de crédito no momento do check-in
+                    - generic [ref=e1970]: Informe o horário de sua chegada à acomodação com antecedência.
+                - separator [ref=e1971]
+                - generic [ref=e1972]:
+                  - generic [ref=e1974]:
+                    - img [ref=e1976]
+                    - generic [ref=e1978]: Saída
+                  - generic [ref=e1980]: Até 12:00
+                - separator [ref=e1981]
+                - generic [ref=e1982]:
+                  - generic [ref=e1984]:
+                    - img [ref=e1986]
+                    - generic [ref=e1988]: Cancelamento/ pré-pagamento
+                  - generic [ref=e1990]:
+                    - text: As políticas de cancelamento e pré-pagamento variam de acordo com o tipo de acomodação. Por favor,
+                    - link "insira as datas da sua estadia" [ref=e1991] [cursor=pointer]:
+                      - /url: "#availability_target"
+                    - text: e verifique as condições da opção escolhida.
+                - separator [ref=e1992]
+                - generic [ref=e1993]:
+                  - generic [ref=e1995]:
+                    - img [ref=e1997]
+                    - generic [ref=e1999]: Crianças e camas
+                  - generic [ref=e2001]:
+                    - generic [ref=e2002]:
+                      - heading "Políticas para crianças" [level=3] [ref=e2003]
+                      - paragraph [ref=e2004]: Crianças de qualquer idade são bem-vindas.
+                      - paragraph [ref=e2005]: Crianças a partir de 11 anos serão cobradas como adultos nesta acomodação.
+                      - paragraph [ref=e2006]: Para ver os preços e as informações de ocupação certos, informe quantas crianças fazem parte do seu grupo e a idade delas.
+                    - heading "Políticas para berços e camas extras" [level=3] [ref=e2007]
+                    - generic [ref=e2008]:
+                      - generic [ref=e2009]: de 0 a 2 anos de idade
+                      - generic [ref=e2010]:
+                        - generic [ref=e2011]:
+                          - img [ref=e2013]
+                          - text: Cama extra mediante pedido
+                        - generic [ref=e2016]: Grátis
+                      - generic [ref=e2017]:
+                        - generic [ref=e2018]:
+                          - img [ref=e2020]
+                          - text: Berços sempre disponíveis
+                        - generic [ref=e2023]: Grátis
+                    - generic [ref=e2024]:
+                      - generic [ref=e2025]: de 3 a 9 anos de idade
+                      - generic [ref=e2026]:
+                        - generic [ref=e2027]:
+                          - img [ref=e2029]
+                          - text: Cama extra mediante pedido
+                        - generic [ref=e2032]: Grátis
+                    - generic [ref=e2033]:
+                      - generic [ref=e2034]: 10 anos de idade ou mais
+                      - generic [ref=e2035]:
+                        - generic [ref=e2036]:
+                          - img [ref=e2038]
+                          - text: Cama extra mediante pedido
+                        - generic [ref=e2041]: R$ 1.000 por pessoa, por diária
+                    - generic [ref=e2042]:
+                      - paragraph [ref=e2043]: O preço de berços e camas extras não está incluído no valor total da reserva e deve ser pago separadamente durante sua estadia.
+                      - paragraph [ref=e2044]: O número de camas extras e berços permitidos depende da opção que você escolher. Para mais informações, por favor, confira a opção selecionada.
+                      - paragraph [ref=e2045]: Todas as camas extras estão sujeitas a disponibilidade.
+                - separator [ref=e2046]
+                - generic [ref=e2047]:
+                  - generic [ref=e2049]:
+                    - img [ref=e2051]
+                    - generic [ref=e2053]: Sem restrições de idade
+                  - generic [ref=e2055]: Não há exigência de idade para o check-in
+                - separator [ref=e2056]
+                - generic [ref=e2057]:
+                  - generic [ref=e2059]:
+                    - img [ref=e2061]
+                    - generic [ref=e2063]: Pets
+                  - generic [ref=e2065]: Pets não permitidos.
+                - separator [ref=e2066]
+                - generic [ref=e2067]:
+                  - generic [ref=e2069]:
+                    - img [ref=e2071]
+                    - generic [ref=e2073]: Cartões aceitos nesta propriedade
+                  - generic [ref=e2075]:
+                    - img "American Express" [ref=e2077]
+                    - img "Visa" [ref=e2079]
+                    - img "Mastercard" [ref=e2081]
+                    - img "Diners" [ref=e2083]
+                    - img "Cartão Elo" [ref=e2085]
+                    - generic [ref=e2087]: Dinheiro não é aceito
+            - generic [ref=e2091]:
+              - generic [ref=e2092]:
+                - generic [ref=e2093]:
+                  - heading "Pormenores" [level=2] [ref=e2094]:
+                    - generic [ref=e2095]: Pormenores
+                  - generic [ref=e2096]: Informações que os hóspedes desta acomodação precisam saber
+                - button "Veja a disponibilidade" [ref=e2098] [cursor=pointer]:
+                  - generic [ref=e2099]: Veja a disponibilidade
+              - generic [ref=e2102]:
+                - paragraph [ref=e2103]: Por favor, observe que as refeições não incluem bebidas.
+                - paragraph [ref=e2104]: Observe, também, que o imposto municipal é obrigatório.
+                - paragraph [ref=e2105]: Mediante pedido, o hotel oferece transfer (aeroporto) por um custo adicional. Você deverá informar, com antecedência, o número do voo, companhia aérea e horário de chegada.
+                - paragraph [ref=e2106]: Você deve apresentar um documento de identidade válido com foto e um cartão de crédito no momento do check-in. Por favor, observe que Pedidos Especiais estão sujeitos a disponibilidade, e custos adicionais podem ser aplicados.
+                - paragraph [ref=e2107]: Por favor, informe Txai Resort com antecedência sobre seu horário previsto de chegada. Para tanto, você pode utilizar o campo de Pedidos Especiais ao fazer a reserva ou entrar em contato diretamente com a propriedade usando os dados informados na sua confirmação de reserva.
+                - paragraph [ref=e2108]: Hóspedes menores de 18 anos só podem fazer check-in se estiverem acompanhados de ao menos um dos pais ou responsáveis.
+          - generic [ref=e2111]:
+            - heading "Perguntas frequentes sobre Txai Resort" [level=2] [ref=e2113]
+            - generic [ref=e2114]:
+              - generic [ref=e2116]:
+                - button "Que tipo de café da manhã é servido em Txai Resort?" [ref=e2119] [cursor=pointer]:
+                  - heading "Que tipo de café da manhã é servido em Txai Resort?" [level=3] [ref=e2121]
+                  - img [ref=e2123]
+                - separator [ref=e2125]
+                - button "Txai Resort tem piscina?" [ref=e2128] [cursor=pointer]:
+                  - heading "Txai Resort tem piscina?" [level=3] [ref=e2130]
+                  - img [ref=e2132]
+                - separator [ref=e2134]
+                - button "Que tipo de quarto eu posso reservar em Txai Resort?" [ref=e2137] [cursor=pointer]:
+                  - heading "Que tipo de quarto eu posso reservar em Txai Resort?" [level=3] [ref=e2139]
+                  - img [ref=e2141]
+                - separator [ref=e2143]
+                - button "Quais são os horários de check-in e check-out em Txai Resort?" [ref=e2146] [cursor=pointer]:
+                  - heading "Quais são os horários de check-in e check-out em Txai Resort?" [level=3] [ref=e2148]
+                  - img [ref=e2150]
+                - separator [ref=e2152]
+                - button "Quanto custa ficar em Txai Resort?" [ref=e2155] [cursor=pointer]:
+                  - heading "Quanto custa ficar em Txai Resort?" [level=3] [ref=e2157]
+                  - img [ref=e2159]
+              - generic [ref=e2162]:
+                - button "Txai Resort tem um restaurante no local?" [ref=e2165] [cursor=pointer]:
+                  - heading "Txai Resort tem um restaurante no local?" [level=3] [ref=e2167]
+                  - img [ref=e2169]
+                - separator [ref=e2171]
+                - button "Que atividades estão disponíveis em Txai Resort?" [ref=e2174] [cursor=pointer]:
+                  - heading "Que atividades estão disponíveis em Txai Resort?" [level=3] [ref=e2176]
+                  - img [ref=e2178]
+                - separator [ref=e2180]
+                - button "O centro de Itacaré fica a que distância de Txai Resort?" [ref=e2183] [cursor=pointer]:
+                  - heading "O centro de Itacaré fica a que distância de Txai Resort?" [level=3] [ref=e2185]
+                  - img [ref=e2187]
+                - separator [ref=e2189]
+                - button "Txai Resort fica a que distância da praia?" [ref=e2192] [cursor=pointer]:
+                  - heading "Txai Resort fica a que distância da praia?" [level=3] [ref=e2194]
+                  - img [ref=e2196]
+                - separator [ref=e2198]
+                - button "Txai Resort é popular entre famílias?" [ref=e2201] [cursor=pointer]:
+                  - heading "Txai Resort é popular entre famílias?" [level=3] [ref=e2203]
+                  - img [ref=e2205]
+      - 'button "O melhor de: Itacaré Clique aqui para ver mais hotéis e acomodações próximos a locais de interesse em: Itacaré" [ref=e2210] [cursor=pointer]':
+        - generic [ref=e2212]:
+          - generic [ref=e2214]: "O melhor de: Itacaré"
+          - generic [ref=e2215]: "Clique aqui para ver mais hotéis e acomodações próximos a locais de interesse em: Itacaré"
+        - img [ref=e2217]
+  - contentinfo [ref=e2219]:
+    - contentinfo [ref=e2223]:
+      - navigation "Links rápidos" [ref=e2226]:
+        - list [ref=e2227]:
+          - listitem [ref=e2228]:
+            - link "Países" [ref=e2229] [cursor=pointer]:
+              - /url: https://www.booking.com/country.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2231]: Países
+            - text: .
+          - listitem [ref=e2232]:
+            - link "Regiões" [ref=e2233] [cursor=pointer]:
+              - /url: https://www.booking.com/region.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2235]: Regiões
+            - text: .
+          - listitem [ref=e2236]:
+            - link "Cidades" [ref=e2237] [cursor=pointer]:
+              - /url: https://www.booking.com/city.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2239]: Cidades
+            - text: .
+          - listitem [ref=e2240]:
+            - link "Bairros" [ref=e2241] [cursor=pointer]:
+              - /url: https://www.booking.com/district.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2243]: Bairros
+            - text: .
+          - listitem [ref=e2244]:
+            - link "Aeroportos" [ref=e2245] [cursor=pointer]:
+              - /url: https://www.booking.com/airport.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2247]: Aeroportos
+            - text: .
+          - listitem [ref=e2248]:
+            - link "Hotéis" [ref=e2249] [cursor=pointer]:
+              - /url: https://www.booking.com/hotel/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2251]: Hotéis
+            - text: .
+          - listitem [ref=e2252]:
+            - link "Locais de interesse" [ref=e2253] [cursor=pointer]:
+              - /url: https://www.booking.com/landmark.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2255]: Locais de interesse
+            - text: .
+          - listitem [ref=e2256]:
+            - link "Casas de Temporada" [ref=e2257] [cursor=pointer]:
+              - /url: https://www.booking.com/booking-home/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2259]: Casas de Temporada
+            - text: .
+          - listitem [ref=e2260]:
+            - link "Apartamentos" [ref=e2261] [cursor=pointer]:
+              - /url: https://www.booking.com/apartments/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2263]: Apartamentos
+            - text: .
+          - listitem [ref=e2264]:
+            - link "Resorts" [ref=e2265] [cursor=pointer]:
+              - /url: https://www.booking.com/resorts/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2267]: Resorts
+            - text: .
+          - listitem [ref=e2268]:
+            - link "Villas" [ref=e2269] [cursor=pointer]:
+              - /url: https://www.booking.com/villas/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2271]: Villas
+            - text: .
+          - listitem [ref=e2272]:
+            - link "Hostels" [ref=e2273] [cursor=pointer]:
+              - /url: https://www.booking.com/hostels/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2275]: Hostels
+            - text: .
+          - listitem [ref=e2276]:
+            - link "Cama e cafés (B&Bs)" [ref=e2277] [cursor=pointer]:
+              - /url: https://www.booking.com/bed-and-breakfast/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2279]: Cama e cafés (B&Bs)
+            - text: .
+          - listitem [ref=e2280]:
+            - link "Casas de Hóspedes" [ref=e2281] [cursor=pointer]:
+              - /url: https://www.booking.com/guest-house/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2283]: Casas de Hóspedes
+            - text: .
+          - listitem [ref=e2284]:
+            - link "Lugares únicos para ficar" [ref=e2285] [cursor=pointer]:
+              - /url: https://www.booking.com/accommodations.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2287]: Lugares únicos para ficar
+            - text: .
+          - listitem [ref=e2288]:
+            - link "Conheça as estadias mensais" [ref=e2289] [cursor=pointer]:
+              - /url: https://www.booking.com/extended-stays/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+              - generic [ref=e2291]: Conheça as estadias mensais
+      - generic [ref=e2293]:
+        - generic [ref=e2294]:
+          - heading "Apoio" [level=3] [ref=e2296]
+          - list [ref=e2297]:
+            - listitem [ref=e2298]:
+              - link "Administre suas viagens" [ref=e2300] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/cs.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2301]: Administre suas viagens
+            - listitem [ref=e2302]:
+              - link "Contato - Serviço de Apoio ao Cliente" [ref=e2304] [cursor=pointer]:
+                - /url: https://secure.booking.com/help.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2305]: Contato - Serviço de Apoio ao Cliente
+            - listitem [ref=e2306]:
+              - link "Central de recursos de segurança" [ref=e2308] [cursor=pointer]:
+                - /url: https://www.booking.com/trust_and_safety.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2309]: Central de recursos de segurança
+        - generic [ref=e2310]:
+          - heading "Descubra" [level=3] [ref=e2312]
+          - list [ref=e2313]:
+            - listitem [ref=e2314]:
+              - link "Programa de fidelidade Genius" [ref=e2316] [cursor=pointer]:
+                - /url: https://www.booking.com/genius.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2317]: Programa de fidelidade Genius
+            - listitem [ref=e2318]:
+              - link "Ofertas sazonais e de viagem" [ref=e2320] [cursor=pointer]:
+                - /url: https://www.booking.com/deals/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2321]: Ofertas sazonais e de viagem
+            - listitem [ref=e2322]:
+              - link "Artigos de viagem" [ref=e2324] [cursor=pointer]:
+                - /url: https://www.booking.com/articles.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2325]: Artigos de viagem
+            - listitem [ref=e2326]:
+              - link "Booking.com para Empresas" [ref=e2328] [cursor=pointer]:
+                - /url: https://business.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2329]: Booking.com para Empresas
+            - listitem [ref=e2330]:
+              - link "Traveller Review Awards" [ref=e2332] [cursor=pointer]:
+                - /url: https://www.booking.com/traveller-awards/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2333]: Traveller Review Awards
+            - listitem [ref=e2334]:
+              - link "Aluguel de Carros" [ref=e2336] [cursor=pointer]:
+                - /url: https://www.booking.com/cars/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2337]: Aluguel de Carros
+            - listitem [ref=e2338]:
+              - link "Pesquisa de voos" [ref=e2340] [cursor=pointer]:
+                - /url: https://booking.com/pxgo?aid=304142&url=https%3A%2F%2Fbooking.kayak.com%2Fin%3Fsid%3Dfbcc71208ab34a645a56401717701e17%26mc%3DBRL%26bdclc%3Dpt-br%26p%3Dfooter_link%26a%3Dbdc%252Ffooter_link&lang=pt-br&token=UmFuZG9tSVYkc2RlIyh9YXOod6xipXL60d6GAE_cXs_1qjg--H__ZcJp01gdiv6iYbCmUnf-UzAsCOl6AAexeaW7uQqiP1pxDnkp-nsoxLaoPQCVE34r5mz6UFvAp0oY6MhgGirwal70ndvSiWKJNoeTaNSKHhbJKjYBvh5x-NBkuJamoAh6-kY7nSVfYF91ml9Cv8n1QpcaE8lVECtw9HSx_Ij8cdmujf-s3OYG-yFhdCwnsdbP9EsJOqz9k4fheAeCFId2z7fU1fbKYGtpKQOwHcDhm9NzAuA6PZGPU2asCl008CINmeK06uJMBGl6fVj736wCwT9KOaT0OJnYRuQ2MW2h_T7oBvuNjtDvqik4Yc9f-jPZJzU20gtEcWDij6UgVf4U--GnbaejrfnzSGJKqYkGA3cyl-epniXL8NxEhs6daav24fdD5RBvGgrE6VgaiXVyB5Xr23RJbYz2ATY24V6_o905Z75kPUJtzmpu4h7Xc0PO4mmBS6-K7nbK9FXpPUWwv2RsmpyDy6vzrrQm7oH4RVA9zS5w1ltitWE&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2341]: Pesquisa de voos
+            - listitem [ref=e2342]:
+              - link "Reservas de restaurantes" [ref=e2344] [cursor=pointer]:
+                - /url: https://www.opentable.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&ref=16087
+                - generic [ref=e2345]: Reservas de restaurantes
+            - listitem [ref=e2346]:
+              - link "Booking.com para Consultores de Viagem" [ref=e2348] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17&utm_campaign=booking-footer&utm_content=travel-agents-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e2349]: Booking.com para Consultores de Viagem
+        - generic [ref=e2350]:
+          - heading "Termos e configurações" [level=3] [ref=e2352]
+          - list [ref=e2353]:
+            - listitem [ref=e2354]:
+              - link "Política de Privacidade" [ref=e2356] [cursor=pointer]:
+                - /url: https://www.booking.com/content/privacy.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2357]: Política de Privacidade
+            - listitem [ref=e2358]:
+              - link "Termos de Serviço" [ref=e2360] [cursor=pointer]:
+                - /url: https://www.booking.com/content/terms.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2361]: Termos de Serviço
+            - listitem [ref=e2362]:
+              - link "Declaração de acessibilidade" [ref=e2364] [cursor=pointer]:
+                - /url: https://www.booking.com/content/accessibility_statement.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2365]: Declaração de acessibilidade
+            - listitem [ref=e2366]:
+              - link "Contestação dos parceiros" [ref=e2368] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/complaints.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2369]: Contestação dos parceiros
+            - listitem [ref=e2370]:
+              - link "Declaração contra o trabalho escravo" [ref=e2372] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/modern-slavery-statement/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2373]: Declaração contra o trabalho escravo
+            - listitem [ref=e2374]:
+              - link "Declaração de direitos humanos" [ref=e2376] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/about/compliance-and-ethics/human-rights/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2377]: Declaração de direitos humanos
+        - generic [ref=e2378]:
+          - heading "Parceiros" [level=3] [ref=e2380]
+          - list [ref=e2381]:
+            - listitem [ref=e2382]:
+              - link "Acesso à Extranet" [ref=e2384] [cursor=pointer]:
+                - /url: https://admin.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17&utm_campaign=login_footer_v0&utm_medium=frontend&utm_source=extranet_login_footer
+                - generic [ref=e2385]: Acesso à Extranet
+            - listitem [ref=e2386]:
+              - link "Central de Ajuda ao Parceiro" [ref=e2388] [cursor=pointer]:
+                - /url: https://partner.booking.com/pt-br?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17&utm_campaign=footer_list&utm_medium=frontend_footer&utm_source=booking.com
+                - generic [ref=e2389]: Central de Ajuda ao Parceiro
+            - listitem [ref=e2390]:
+              - link "Anuncie sua propriedade" [ref=e2392] [cursor=pointer]:
+                - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&lang=pt-br&sid=fbcc71208ab34a645a56401717701e17&utm_medium=frontend&utm_source=footer_menu
+                - generic [ref=e2393]: Anuncie sua propriedade
+            - listitem [ref=e2394]:
+              - link "Torne-se um afiliado" [ref=e2396] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17&utm_campaign=booking-footer&utm_content=become-an-affiliate-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e2397]: Torne-se um afiliado
+        - generic [ref=e2398]:
+          - heading "Sobre" [level=3] [ref=e2400]
+          - list [ref=e2401]:
+            - listitem [ref=e2402]:
+              - link "Sobre a Booking.com" [ref=e2404] [cursor=pointer]:
+                - /url: https://www.booking.com/content/about.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2405]: Sobre a Booking.com
+            - listitem [ref=e2406]:
+              - link "Como trabalhamos" [ref=e2408] [cursor=pointer]:
+                - /url: https://www.booking.com/content/how_we_work.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2409]: Como trabalhamos
+            - listitem [ref=e2410]:
+              - link "Sustentabilidade" [ref=e2412] [cursor=pointer]:
+                - /url: https://sustainability.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2413]: Sustentabilidade
+            - listitem [ref=e2414]:
+              - link "Assessoria de imprensa" [ref=e2416] [cursor=pointer]:
+                - /url: https://news.booking.com/pt-br
+                - generic [ref=e2417]: Assessoria de imprensa
+            - listitem [ref=e2418]:
+              - link "Trabalhe conosco" [ref=e2420] [cursor=pointer]:
+                - /url: https://careers.booking.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2421]: Trabalhe conosco
+            - listitem [ref=e2422]:
+              - link "Relação com investidores" [ref=e2424] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB
+                - generic [ref=e2425]: Relação com investidores
+            - listitem [ref=e2426]:
+              - link "Contato corporativo" [ref=e2428] [cursor=pointer]:
+                - /url: https://www.booking.com/content/contact-us.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2429]: Contato corporativo
+            - listitem [ref=e2430]:
+              - link "Diretrizes de conteúdo e denúncia de uso inadequado" [ref=e2432] [cursor=pointer]:
+                - /url: https://www.booking.com/content-moderation-policy/overview-page.pt-br.html?aid=304142&label=gen173nr-10CAsoIEILdHhhaS1yZXNvcnRILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As-To88GwAIB0gIkNmI3ZWVhYzYtZWQzOC00OTM2LThkMzYtYjAyNjdlMmJhYWM32AIB4AIB&sid=fbcc71208ab34a645a56401717701e17
+                - generic [ref=e2433]: Diretrizes de conteúdo e denúncia de uso inadequado
+      - generic [ref=e2435]:
+        - generic [ref=e2436]:
+          - 'button "Idioma: Português (BR)" [ref=e2438] [cursor=pointer]'
+          - button "Preços em Real" [ref=e2443] [cursor=pointer]:
+            - generic [ref=e2444]: BRL
+        - separator [ref=e2445]
+        - generic [ref=e2446]:
+          - generic [ref=e2448]: A Booking.com é parte da Booking Holdings Inc., líder mundial em viagens on-line e serviços relacionados.
+          - generic [ref=e2449]: Copyright © 1996–2026 Booking.com™. Todos os direitos reservados.
+        - generic [ref=e2450]:
+          - img "Booking.com" [ref=e2451]:
+            - img [ref=e2452]
+          - img "Priceline.com" [ref=e2454]:
+            - img [ref=e2455]
+          - img "Kayak" [ref=e2458]:
+            - img [ref=e2459]
+          - img "Agoda" [ref=e2473]:
+            - img [ref=e2474]
+          - img "OpenTable" [ref=e2482]:
+            - img [ref=e2483]
+  - text: 끖 낝 끲 낝 넌

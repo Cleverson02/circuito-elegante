@@ -1,0 +1,25 @@
+SOURCE: https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/location
+FETCHED: 2026-04-19
+
+ADDRESS: Avenida Atlântica 1702, Rio de Janeiro, CEP 22021 001, Brazil
+NEIGHBORHOOD: Copacabana ("the beating heart of a city that thrums with an endless rhythm")
+
+BEACH: Hotel sits directly on Copacabana Beach, "4km stretch of Rio de Janeiro's coastline"
+
+AIRPORT DISTANCES:
+- Santos Dumont (SDU): 15-minute drive
+- Rio de Janeiro International (GIG/Galeão): 45-minute drive; 28km from the about page
+
+TRANSPORTATION (Royal Coop):
+- Black sedan cars: R$330-495 (incoming), R$100-220 (outgoing)
+- Mini-vans (up to 10 passengers): R$600-650
+- Bilingual chauffeurs available upon request
+
+PARKING:
+- Valet parking on Avenida Atlantica: R$60/day plus tax
+- Private parking service: R$120/day plus tax
+- No on-property garage
+
+CONTACTS:
+- Reservations: +55 21 2545 8787
+- Main: +55 (21) 2548 7070

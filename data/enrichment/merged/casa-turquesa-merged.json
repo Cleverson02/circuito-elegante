@@ -1,0 +1,82 @@
+{
+  "slug": "casa-turquesa",
+  "name": "Casa Turquesa",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Casa Turquesa",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://casaturquesa.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Jericoacoara",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "CE",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://casaturquesa.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://casaturquesa.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Bungalow"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 88 3421-7000",
+        "website": "https://casaturquesa.com.br/",
+        "address": "Jericoacoara, Ceará"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "casa-turquesa",
+    "ESTABELECIMENTOS": "Casa Turquesa",
+    "MUNICÍPIO": "Paraty",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": 2612,
+    "Região": "sudeste",
+    "Experiência": "praia",
+    "Destino": "Centro Histórico de Paraty"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

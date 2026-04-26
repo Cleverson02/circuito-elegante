@@ -1,0 +1,181 @@
+{
+  "slug": "hotel-emiliano-rj",
+  "name": "Hotel Emiliano Rio de Janeiro",
+  "template_coverage": 0.24242424242424243,
+  "template_fields": {
+    "1.1": true,
+    "1.2": true,
+    "1.3": true,
+    "1.4": true,
+    "1.5": true,
+    "2.1": true,
+    "2.2": false,
+    "2.3": false,
+    "2.4": false,
+    "3.1": false,
+    "3.2": false,
+    "4.1": false,
+    "4.2": false,
+    "4.3": false,
+    "5.1": true,
+    "5.2": false,
+    "5.3": false,
+    "6.1": false,
+    "6.2": false,
+    "6.3": false,
+    "6.4": true,
+    "7.1": false,
+    "7.2": false,
+    "7.3": false,
+    "8.1": false,
+    "8.2": false,
+    "8.3": false,
+    "8.4": false,
+    "9.1": false,
+    "9.2": false,
+    "9.3": false,
+    "10.1": false,
+    "10.2": false
+  },
+  "quality_score": 0.22131661442006267,
+  "completeness": 0.1896551724137931,
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Emiliano Rio de Janeiro",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.emiliano.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Rio de Janeiro",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal",
+      "source_type": "local_xlsx"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "sudeste",
+      "confidence_type": "inferred",
+      "inference_logic": "UF=RJ → região (mapeamento IBGE)"
+    },
+    "1.9": {
+      "name": "description",
+      "value": "Hotel boutique de luxo localizado em Copacabana com atenção aos detalhes. Spa Santapele, restaurante contemporâneo da chef Viviane Gonçalves.",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Deluxe King",
+          "size": 45,
+          "description": "Quarto king-size com vista"
+        },
+        {
+          "name": "Deluxe Twin",
+          "size": 40,
+          "description": "Quarto com 2 camas"
+        },
+        {
+          "name": "Suite Executiva",
+          "size": 55,
+          "description": "Suite com sala de estar"
+        }
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Spa Santapele",
+        "Restaurante",
+        "Bar",
+        "Piscina",
+        "Fitness"
+      ],
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "5.1": {
+      "name": "check_in_out",
+      "value": {
+        "check_in": "15:00",
+        "check_out": "12:00"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "6.4": {
+      "name": "address",
+      "value": "Av. Atlântica, 3804 - Copacabana, Rio de Janeiro, RJ 22070-001",
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 21 3503-6600",
+        "website": "https://www.emiliano.com.br/"
+      },
+      "confidence_type": "literal",
+      "source_type": "hotel_website"
+    },
+    "1.5": {
+      "value": "Copacabana",
+      "source_type": "excel"
+    }
+  },
+  "excel_data": {
+    "ESTABELECIMENTOS": "Hotel Emiliano - RJ",
+    "MUNICÍPIO": "Rio de Janeiro",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "praia",
+    "Destino": "Copacabana"
+  },
+  "sources": [],
+  "source_priority": [
+    "enrich",
+    "excel"
+  ],
+  "gap_fields": [
+    "2.2",
+    "2.3",
+    "2.4",
+    "3.1",
+    "3.2",
+    "4.1",
+    "4.2",
+    "4.3",
+    "5.2",
+    "5.3",
+    "6.1",
+    "6.2",
+    "6.3",
+    "7.1",
+    "7.2",
+    "7.3",
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "9.1",
+    "9.2",
+    "9.3",
+    "10.1",
+    "10.2"
+  ]
+}

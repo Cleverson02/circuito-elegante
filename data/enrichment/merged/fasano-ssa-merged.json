@@ -1,0 +1,89 @@
+{
+  "slug": "fasano-ssa",
+  "name": "Hotel Fasano Salvador",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Fasano Salvador",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.fasano.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Salvador",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "BA",
+      "confidence_type": "literal"
+    },
+    "1.4": {
+      "name": "region",
+      "value": "BA",
+      "confidence_type": "inferred"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.fasano.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://www.fasano.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Deluxe"
+        },
+        {
+          "name": "Suite Vista Mar"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Spa",
+        "Restaurante",
+        "Bar"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 71 3264-2000",
+        "website": "https://www.fasano.com.br/",
+        "address": "Av. Tancredo Neves, 1926 - Bahia Marina, Salvador, BA"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "fasano-ssa",
+    "ESTABELECIMENTOS": "Fasano - SSA",
+    "MUNICÍPIO": "Salvador",
+    "UF": "BA",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "cidade",
+    "Destino": "Salvador"
+  },
+  "sources": [
+    "hotel_website",
+    "booking"
+  ]
+}

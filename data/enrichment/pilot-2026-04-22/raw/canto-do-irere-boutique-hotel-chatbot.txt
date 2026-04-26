@@ -1,0 +1,12 @@
+URL: https://cantodoirere.com.br (inspected via Playwright)
+Fetched: 2026-04-19
+
+Iframes detected:
+- YouTube embed (PrlVyJptFzE)
+- api.reprotel.com.br/widget/form/UpXeT1xfv2U0qk87bWcV (booking widget)
+- api.reprotel.com.br/widget/form/OpEB0BygZx5vJgtrO5sx (booking widget)
+
+Chat scripts: NONE (no tawk, intercom, zendesk, drift, crisp, jivo, livechat)
+Chat elements: Only WhatsApp social links (<a href="/whatsapp">). These are link redirects, NOT conversational chatbots.
+
+CONCLUSION: No conversational chatbot widget. Hotel offers only WhatsApp contact link (+55 11 96696-1800).

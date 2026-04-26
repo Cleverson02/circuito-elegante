@@ -1,0 +1,43 @@
+=== Booking.com: https://www.booking.com/hotel/br/nor.html (via Playwright) ===
+Name: NÖR Hotel & SPA, São Roque
+5 de 5 estrelas
+Address: Estrada do Pessegueiro, São Roque, CEP 18135-656, Brasil
+Reviews: casais deram nota 9,4 para viagem a dois
+Categorias: Piscina ao ar livre, Estacionamento gratuito, Quartos para famílias, Quartos para não fumantes, WiFi gratuito
+Estacionamento privativo gratuito disponível no hotel
+Entrada: Das 15:00 às 22:00
+Saída: Das 10:00 às 12:00
+Política: "A legislação brasileira permite cancelar gratuitamente até 7 dias após a reserva. Depois, aplica-se a política da tarifa."
+Crianças de qualquer idade são bem-vindas.
+"Não há exigência de idade para o check-in"
+Pets permitidos mediante pedido. Custos adicionais podem ser aplicados. BRL 350 + impostos por animal e por diária. Apenas 1 animal é permitido. Máximo 9 kg.
+
+Tipos de quarto:
+- Suíte Deluxe: 1 cama de casal grande, 2 adultos
+- Suíte Duplex: Quarto 1 cama casal extragrande + Sala de estar 1 sofá-cama. 3 adultos, 1 criança
+
+Review destacada: "Café da manhã muito bom com ovos Benedict. Excelente bar e boas opções no cardápio para jantar e petiscar na piscina. O quarto é muito confortável e silencioso."
+
+Aeroportos:
+- Sorocaba Airport: 50 km
+- São Paulo/Congonhas: 60 km
+- Guarulhos International: 81 km
+
+Restaurantes próximos:
+- Restaurante Bonsucesso Alcachofras: 2,5 km
+- Restaurante Secredos do Mar: 4,4 km
+- Restaurante Vila Don Patto: 4 km
+
+=== TripAdvisor: https://www.tripadvisor.com/Hotel_Review-g1675614-d25446120-Reviews-Nor_Hotel_Spa-Sao_Roque_State_of_Sao_Paulo.html ===
+4.5 of 5 stars, 69 reviews
+#2 of 5 inns in Sao Roque
+Travelers' Choice award recipient
+33 total rooms
+Non-smoking rooms, suites, family rooms.
+Free parking, Free high-speed WiFi, Fitness center with gym, Pool (heated), Free breakfast, Bicycles available, Hiking trails, Whirlpool bathtubs, Soundproof rooms, Air conditioning.
+On-site spa (Loccitane products).
+Rocco restaurant.
+Pets allowed (daily fee).
+Price $394-$659/night standard.
+Praised: Room comfort, staff attentiveness, breakfast quality.
+Criticized: Maintenance issues, service inconsistencies, pricing concerns.

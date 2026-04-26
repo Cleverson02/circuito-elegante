@@ -1,0 +1,598 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e7] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br
+        - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e9]
+      - navigation [ref=e12]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Início" [ref=e16] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/
+          - listitem [ref=e17]:
+            - link "A Pousada" [ref=e18] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#apousada
+          - listitem [ref=e19]:
+            - link "Acomodações" [ref=e20] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#acomodacoes
+          - listitem [ref=e21]:
+            - link "L’ALCOFA" [ref=e22] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#lalcofa
+          - listitem [ref=e23]:
+            - link "Lazer" [ref=e24] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#lazer
+          - listitem [ref=e25]:
+            - link "Galeria" [ref=e26] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/galeria/
+          - listitem [ref=e27]:
+            - link "Contato" [ref=e28] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/contato/
+      - generic [ref=e32]:
+        - link "en" [ref=e33] [cursor=pointer]:
+          - /url: "#"
+          - img "en" [ref=e34]
+        - link "pt" [ref=e35] [cursor=pointer]:
+          - /url: "#"
+          - img "pt" [ref=e36]
+        - link "es" [ref=e37] [cursor=pointer]:
+          - /url: "#"
+          - img "es" [ref=e38]
+    - generic [ref=e41]:
+      - group "1 / 7"
+      - group "2 / 7"
+      - group "3 / 7"
+      - group "4 / 7"
+      - group "5 / 7"
+      - group "6 / 7"
+      - group "7 / 7"
+      - group "1 / 7" [ref=e42]
+      - group "2 / 7"
+      - group "3 / 7"
+      - group "4 / 7"
+      - group "5 / 7"
+      - group "6 / 7"
+      - group "7 / 7"
+      - group "1 / 7"
+      - group "2 / 7"
+      - group "3 / 7"
+      - group "4 / 7"
+      - group "5 / 7"
+      - group "6 / 7"
+      - group "7 / 7"
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - heading "Pousada Inácia" [level=1] [ref=e50]
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: A Pousada Inácia está localizada na exótica região da Chapada dos Veadeiros em cujas franjas desfilam as águas que descem pelo rio Almécegas, numa sequência de banhos indescritíveis, sob a associação de pequenas e grandes cachoeiras, únicas a massagear o corpo e o ego pela influência vistosa da própria natureza.
+          - paragraph [ref=e54]: No ambiente oferecido pela Pousada Inácia, o cliente pode repousar o corpo e descansar o espírito, bem como atiçar a alma e celebrar a natureza entre trilhas cortadas pela força e experiência dos Calungas, com os olhos dispostos a capturar cada detalhe da mais rica biodiversidade do planeta.
+        - link "FALE CONOSCO" [ref=e58] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/contato/
+          - generic [ref=e60]: FALE CONOSCO
+      - generic [ref=e64]:
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e65] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-043.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e66]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e68] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-141124-09-1.jpeg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e69]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e71] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/07/Pousada-Inacia-014.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e72]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e74] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/07/Pousada-Inacia-005.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e75]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e77] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Chapada-202404.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e78]
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - heading "Faça sua reserva e venha viver essa experiência" [level=2] [ref=e85]
+        - paragraph [ref=e88]: Espécies de vegetais, animais e minerais convivem num secreto espaço, rico em mistérios e histórias de outros mundos, assimiladas em conformidade com o ânimo de cognição do homem que se aventura a conhecer o mundo quase invisível que se esconde na Chapada dos Veadeiros.
+        - link "RESERVAR" [ref=e92] [cursor=pointer]:
+          - /url: "#ctc_chat"
+          - generic [ref=e94]: RESERVAR
+      - generic [ref=e98]:
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e99] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-031-1800x1200-1.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e100]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e102] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Chapada-202405.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e103]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e105] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia_natureza.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e106]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e108] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/07/Pousada-Inacia-074.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e109]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e111] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/07/Pousada-Inacia-087.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e112]
+    - generic [ref=e115]:
+      - region "Carrossel de imagens" [ref=e119]:
+        - group "1 de 1" [ref=e121]:
+          - link [ref=e122] [cursor=pointer]:
+            - /url: "#ctc_chat"
+            - figure [ref=e123]:
+              - img "pousada inácia chapada promoção" [ref=e125]
+      - generic [ref=e126]:
+        - heading "Semana do Consumidor na Pousada Inácia!" [level=5] [ref=e129]
+        - generic [ref=e131]:
+          - paragraph [ref=e132]:
+            - text: Que tal aproveitar a oportunidade perfeita para planejar sua próxima viagem para a Chapada dos Veadeiros? Durante a
+            - strong [ref=e133]: Semana do Consumidor
+            - text: ", a"
+            - strong [ref=e134]: Pousada Inácia
+            - text: preparou uma condição especial para quem deseja viver momentos inesquecíveis em meio à natureza, charme e conforto.
+          - paragraph [ref=e135]:
+            - text: Reserve sua estadia com
+            - strong [ref=e136]: 10% de desconto
+            - text: e garanta dias de descanso em um ambiente acolhedor, cheio de personalidade e cercado pelas paisagens encantadoras da região. É a chance ideal para programar aquela viagem especial, seja para relaxar, celebrar uma data importante ou simplesmente desacelerar.
+          - paragraph [ref=e137]:
+            - img "📅" [ref=e138]
+            - strong [ref=e139]: Promoção válida de 11 a 20 de março
+            - img "📌" [ref=e140]
+            - text: Reservas podem ser feitas para qualquer época do ano
+            - emphasis [ref=e141]: (exceto feriados)
+            - img "⚠️" [ref=e142]
+            - emphasis [ref=e143]: Valores promocionais não reembolsáveis
+          - paragraph [ref=e144]:
+            - img "✨" [ref=e145]
+            - strong [ref=e146]: Antecipe sua reserva e viva a experiência única da Pousada Inácia.
+            - text: Entre em contato agora mesmo e garanta seu desconto!
+        - link "RESERVAR" [ref=e150] [cursor=pointer]:
+          - /url: "#ctc_chat"
+          - generic [ref=e152]: RESERVAR
+        - link "FALE CONOSCO" [ref=e156] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/contato/
+          - generic [ref=e158]: FALE CONOSCO
+    - heading "seu conforto é a nossa prioridade" [level=6] [ref=e163]
+    - generic [ref=e165]:
+      - generic [ref=e169]:
+        - img [ref=e172]
+        - generic [ref=e174]:
+          - heading "Trilhas e cachoeiras" [level=3] [ref=e175]
+          - paragraph [ref=e176]: Na Pousada Inácia, você poderá explorar trilhas encantadoras que levam a cachoeiras deslumbrantes. Cada trilha é uma jornada pela natureza exuberante, oferecendo momentos de paz e contemplação. As cachoeiras são ideais para um banho refrescante ou simplesmente para relaxar e apreciar a beleza natural ao seu redor.
+      - generic [ref=e180]:
+        - img [ref=e183]
+        - generic [ref=e185]:
+          - heading "SPA" [level=3] [ref=e186]
+          - paragraph [ref=e187]: O SPA da Pousada Inácia é um refúgio de relaxamento e bem-estar. Com uma variedade de tratamentos terapêuticos e de beleza, o SPA oferece um espaço tranquilo para revigorar o corpo e a mente. Desfrute de massagens, banhos aromáticos e outras experiências que promovem uma sensação de paz e renovação.
+      - generic [ref=e191]:
+        - generic [ref=e194]: 
+        - generic [ref=e195]:
+          - heading "Serviço de Bar" [level=3] [ref=e196]
+          - paragraph [ref=e197]: O serviço de bar da Pousada Inácia oferece uma seleção de bebidas e petiscos para você desfrutar. Com uma atmosfera acolhedora, é o lugar perfeito para relaxar após um dia de atividades, saboreando coquetéis, vinhos e outras opções deliciosas. Aproveite momentos de descontração com uma vista incrível e um atendimento de primeira.
+      - generic [ref=e201]:
+        - img [ref=e204]
+        - generic [ref=e206]:
+          - heading "Lazer" [level=3] [ref=e207]
+          - paragraph [ref=e208]: A Pousada Inácia oferece diversas opções de lazer para todos os gostos. Desde atividades ao ar livre, como passeios de bicicleta e esportes, até opções mais tranquilas, como jogos de tabuleiro e espaços de leitura, há sempre algo para todos. Nossa área de lazer é projetada para proporcionar momentos inesquecíveis de diversão e relaxamento para toda a família.
+    - generic [ref=e211]:
+      - group "1 / 5"
+      - group "2 / 5"
+      - group "3 / 5"
+      - group "4 / 5"
+      - group "5 / 5"
+      - group "1 / 5" [ref=e212]
+      - group "2 / 5"
+      - group "3 / 5"
+      - group "4 / 5"
+      - group "5 / 5"
+      - group "1 / 5"
+      - group "2 / 5"
+      - group "3 / 5"
+      - group "4 / 5"
+      - group "5 / 5"
+    - generic [ref=e216]:
+      - heading "acomodações" [level=2] [ref=e219]
+      - paragraph [ref=e222]: O hotel Pousada Inácia Alto Paraíso de Goiás, uma luxuosa propriedade cinco estrelas, oferece uma experiência incomparável de conforto e exclusividade. Composto por 10 quartos bem equipados, o hotel garante aos seus hóspedes um ambiente acolhedor e sofisticado. A localização privilegiada permite fácil acesso ao Santuário Ecológico Vale Dourado, situado a apenas 10 minutos de carro, proporcionando aos visitantes a oportunidade de explorar a beleza natural da região com conveniência.
+    - generic [ref=e228]:
+      - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e229] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-141124-09-1.jpeg
+        - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e230]
+      - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e232] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-141124-15.jpeg
+        - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e233]
+      - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e235] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Galeria-Pousada-Inacia-20245.jpg
+        - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e236]
+      - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e238] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pouada_inacia_Canto-Quarto.jpg
+        - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e239]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e241] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-14.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e242]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e244] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-13.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e245]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e247] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-12.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e248]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e250] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-11.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e251]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e253] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-10.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e254]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e256] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-09.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e257]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e259] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-08.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e260]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e262] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-07.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e263]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e265] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-06.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e266]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e268] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-05.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e269]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e271] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-01.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e272]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e274] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-02.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e275]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e277] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-03.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e278]
+      - link "Pousada Inácia Chapada dos Veadeiros" [ref=e280] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/wp-content/uploads/2025/08/Pousada-Inacia-CasaGaby-04.jpg
+        - img "Pousada Inácia Chapada dos Veadeiros" [ref=e281]
+    - generic [ref=e285]:
+      - generic [ref=e287]:
+        - paragraph [ref=e288]: Cada quarto da Pousada Inácia é meticulosamente projetado para oferecer o máximo conforto e funcionalidade. Os quartos estão equipados com camas king size, roupa de cama de alta qualidade, ar-condicionado, TV de tela plana com canais a cabo, Wi-Fi gratuito, minibar e cofre.
+        - paragraph [ref=e289]: Os banheiros privativos incluem amenidades de luxo, chuveiro com efeito de chuva e secador de cabelo. Além disso, muitos quartos possuem varanda com vista panorâmica para a exuberante paisagem local, permitindo que os hóspedes relaxem e apreciem a tranquilidade da natureza circundante.
+        - paragraph [ref=e290]: Os hóspedes também desfrutam de comodidades excepcionais, incluindo a conveniência de estacionamento no local, garantindo uma estadia tranquila e sem preocupações.
+      - list [ref=e293]:
+        - listitem [ref=e294]:
+          - img [ref=e296]
+          - generic [ref=e298]: Cama King Size
+        - listitem [ref=e299]:
+          - img [ref=e301]
+          - generic [ref=e303]: Ar Condicionado
+        - listitem [ref=e304]:
+          - img [ref=e306]
+          - generic [ref=e308]: TV a Cabo
+        - listitem [ref=e309]:
+          - img [ref=e311]
+          - generic [ref=e313]: Wifi
+      - list [ref=e316]:
+        - listitem [ref=e317]:
+          - generic [ref=e319]: 
+          - generic [ref=e320]: Cofre
+        - listitem [ref=e321]:
+          - generic [ref=e323]: 
+          - generic [ref=e324]: Minibar
+      - link "RESERVAR" [ref=e328] [cursor=pointer]:
+        - /url: "#ctc_chat"
+        - generic [ref=e330]: RESERVAR
+    - generic [ref=e333]:
+      - generic [ref=e335]: Seja para uma escapada relaxante ou uma viagem de negócios, a Pousada Inácia se destaca como a escolha ideal para quem busca excelência em hospitalidade na região de Alto Paraíso de Goiás.
+      - link "FALE CONOSCO" [ref=e339] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/contato/
+        - generic [ref=e341]: FALE CONOSCO
+    - generic [ref=e343]:
+      - generic [ref=e344]:
+        - heading "SPA" [level=4] [ref=e347]
+        - generic [ref=e353]:
+          - paragraph [ref=e354]: O SPA da Pousada Inácia é um oásis de tranquilidade e revitalização, onde os hóspedes podem se entregar a uma experiência de bem-estar completa. Com uma variedade de tratamentos personalizados, que incluem massagens terapêuticas, aromaterapia, banhos relaxantes e cuidados faciais, o SPA é projetado para proporcionar momentos de profunda serenidade e renovação.
+          - paragraph [ref=e355]: Os profissionais altamente qualificados utilizam produtos de qualidade e técnicas inovadoras para atender às necessidades individuais de cada visitante, promovendo equilíbrio e harmonia entre corpo e mente. O ambiente acolhedor e sofisticado, com uma decoração inspirada na natureza, complementa a sensação de paz e conforto, tornando o SPA um refúgio perfeito para aqueles que desejam escapar da rotina e cuidar de si mesmos.
+          - paragraph [ref=e356]: Além dos tratamentos, o SPA oferece áreas de relaxamento e saunas, garantindo uma experiência completa de descanso e rejuvenescimento.
+        - link "FALE CONOSCO" [ref=e360] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/contato/
+          - generic [ref=e362]: FALE CONOSCO
+      - generic [ref=e366]:
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e367] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Chapada-202408.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e368]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e370] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20241.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e371]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e373] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20242.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e374]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e376] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20243.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e377]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e379] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20245.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e380]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e382] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20246.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e383]
+    - generic [ref=e391]:
+      - generic [ref=e393]: Venha descobrir o prazer de uma refeição preparada com paixão e dedicação, onde cada mordida é uma viagem inesquecível.
+      - link "FALE CONOSCO" [ref=e397] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/contato/
+        - generic [ref=e399]: FALE CONOSCO
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - generic [ref=e404]:
+          - generic:
+            - img "Pousada Inácia - Alto Paraíso de Goiás"
+        - heading "GASTRONOMIA" [level=5] [ref=e407]
+        - paragraph [ref=e410]: Com um menu diversificado que destaca a riqueza da culinária local e internacional, o restaurante oferece pratos elaborados com ingredientes frescos e de alta qualidade. A equipe de chefs talentosos combina técnicas modernas com tradições culinárias autênticas para criar uma experiência única de sabores. Além disso, o ambiente acolhedor e elegante do L’alcofa proporciona o cenário perfeito para uma refeição inesquecível, seja um jantar romântico ou uma celebração especial. O restaurante também valoriza a sustentabilidade, priorizando produtos locais e práticas eco-friendly, o que reflete o compromisso da pousada com a preservação ambiental e o apoio à comunidade local.
+        - link "CARDÁPIO" [ref=e414] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2026/01/cardapio-set25.pdf
+          - generic [ref=e416]: CARDÁPIO
+      - generic [ref=e420]:
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e421] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/GOUT_DE_FRANCE-202.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e422]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e424] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Lalcofa-202412.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e425]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e427] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Lalcofa-202408.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e428]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e430] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Lalcofa-202410.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e431]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e433] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-Restaurante-01.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e434]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e436] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-141124-14.jpeg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e437]
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e439] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-055.jpg
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e440]
+    - generic [ref=e448]:
+      - generic [ref=e450]: o refúgio perfeito para quem busca tranquilidade e conexão com a natureza. Cercada por montanhas e mata nativa, oferece vistas deslumbrantes e trilhas que convidam à exploração.
+      - link "FALE CONOSCO" [ref=e454] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/contato/
+        - generic [ref=e456]: FALE CONOSCO
+    - generic [ref=e458]:
+      - generic [ref=e459]:
+        - heading "lazer" [level=6] [ref=e462]
+        - generic [ref=e464]:
+          - paragraph [ref=e465]: A Pousada Inácia é o ponto de partida perfeito para uma variedade de atividades de lazer e passeios inesquecíveis na região.
+          - paragraph [ref=e466]: Cercada por uma natureza exuberante, a pousada oferece aos seus hóspedes a oportunidade de explorar trilhas encantadoras, que levam a cachoeiras deslumbrantes e mirantes com vistas panorâmicas de tirar o fôlego.
+          - paragraph [ref=e467]: Os mais aventureiros podem se deliciar com opções de passeios de bicicleta, escaladas e cavalgadas, enquanto aqueles que preferem algo mais tranquilo podem optar por piqueniques em áreas verdes ou passeios de barco em lagos próximos. A região também é rica em cultura local, com visitas a vilarejos tradicionais e feiras de artesanato, onde é possível conhecer e adquirir produtos típicos.
+          - paragraph [ref=e468]: A equipe da pousada está sempre à disposição para ajudar a organizar essas atividades, garantindo uma experiência completa e inesquecível para todos os visitantes.
+        - link "FALE CONOSCO" [ref=e472] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/contato/
+          - generic [ref=e474]: FALE CONOSCO
+      - region "Carrossel de imagens" [ref=e478]:
+        - generic [ref=e479]:
+          - group [ref=e480]:
+            - figure [ref=e481]:
+              - img [ref=e483]
+          - group "1 / 13" [ref=e484]:
+            - figure [ref=e485]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e487]
+          - group [ref=e488]:
+            - figure [ref=e489]:
+              - img [ref=e491]
+          - group [ref=e492]:
+            - figure [ref=e493]:
+              - img [ref=e495]
+          - group [ref=e496]:
+            - figure [ref=e497]:
+              - img [ref=e499]
+          - group [ref=e500]:
+            - figure [ref=e501]:
+              - img [ref=e503]
+          - group [ref=e504]:
+            - figure [ref=e505]:
+              - img [ref=e507]
+          - group [ref=e508]:
+            - figure [ref=e509]:
+              - img [ref=e511]
+          - group [ref=e512]:
+            - figure [ref=e513]:
+              - img [ref=e515]
+          - group [ref=e516]:
+            - figure [ref=e517]:
+              - img [ref=e519]
+          - group [ref=e520]:
+            - figure [ref=e521]:
+              - img [ref=e523]
+          - group [ref=e524]:
+            - figure [ref=e525]:
+              - img [ref=e527]
+          - group [ref=e528]:
+            - figure [ref=e529]:
+              - img [ref=e531]
+          - group [ref=e532]:
+            - figure [ref=e533]:
+              - img [ref=e535]
+          - group [ref=e536]:
+            - figure [ref=e537]:
+              - img [ref=e539]
+        - button "Slide anterior" [ref=e540] [cursor=pointer]:
+          - img [ref=e541]
+        - button "Próximo slide" [ref=e543] [cursor=pointer]:
+          - img [ref=e544]
+        - generic [ref=e546]:
+          - button "Ir para o slide 1" [ref=e547] [cursor=pointer]
+          - button "Ir para o slide 2" [ref=e548] [cursor=pointer]
+          - button "Ir para o slide 3" [ref=e549] [cursor=pointer]
+          - button "Ir para o slide 4" [ref=e550] [cursor=pointer]
+          - button "Ir para o slide 5" [ref=e551] [cursor=pointer]
+          - button "Ir para o slide 6" [ref=e552] [cursor=pointer]
+          - button "Ir para o slide 7" [ref=e553] [cursor=pointer]
+          - button "Ir para o slide 8" [ref=e554] [cursor=pointer]
+          - button "Ir para o slide 9" [ref=e555] [cursor=pointer]
+          - button "Ir para o slide 10" [ref=e556] [cursor=pointer]
+          - button "Ir para o slide 11" [ref=e557] [cursor=pointer]
+          - button "Ir para o slide 12" [ref=e558] [cursor=pointer]
+          - button "Ir para o slide 13" [ref=e559] [cursor=pointer]
+    - generic [ref=e563]:
+      - generic [ref=e565]: galeria
+      - region "Carrossel de imagens" [ref=e568]:
+        - generic [ref=e569]:
+          - group [ref=e570]:
+            - figure [ref=e571]:
+              - img [ref=e573]
+          - group [ref=e574]:
+            - figure [ref=e575]:
+              - img [ref=e577]
+          - group [ref=e578]:
+            - figure [ref=e579]:
+              - img [ref=e581]
+          - group [ref=e582]:
+            - figure [ref=e583]:
+              - img [ref=e585]
+          - group [ref=e586]:
+            - figure [ref=e587]:
+              - img [ref=e589]
+          - group "1 / 15" [ref=e590]:
+            - figure [ref=e591]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e593]
+          - group "2 / 15" [ref=e594]:
+            - figure [ref=e595]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e597]
+          - group "3 / 15" [ref=e598]:
+            - figure [ref=e599]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e601]
+          - group "4 / 15" [ref=e602]:
+            - figure [ref=e603]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e605]
+          - group "5 / 15" [ref=e606]:
+            - figure [ref=e607]:
+              - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e609]
+          - group [ref=e610]:
+            - figure [ref=e611]:
+              - img [ref=e613]
+          - group [ref=e614]:
+            - figure [ref=e615]:
+              - img [ref=e617]
+          - group [ref=e618]:
+            - figure [ref=e619]:
+              - img [ref=e621]
+          - group [ref=e622]:
+            - figure [ref=e623]:
+              - img [ref=e625]
+          - group [ref=e626]:
+            - figure [ref=e627]:
+              - img [ref=e629]
+          - group [ref=e630]:
+            - figure [ref=e631]:
+              - img [ref=e633]
+          - group [ref=e634]:
+            - figure [ref=e635]:
+              - img [ref=e637]
+          - group [ref=e638]:
+            - figure [ref=e639]:
+              - img [ref=e641]
+          - group [ref=e642]:
+            - figure [ref=e643]:
+              - img [ref=e645]
+          - group [ref=e646]:
+            - figure [ref=e647]:
+              - img [ref=e649]
+          - group [ref=e650]:
+            - figure [ref=e651]:
+              - img [ref=e653]
+          - group [ref=e654]:
+            - figure [ref=e655]:
+              - img [ref=e657]
+          - group [ref=e658]:
+            - figure [ref=e659]:
+              - img [ref=e661]
+          - group [ref=e662]:
+            - figure [ref=e663]:
+              - img [ref=e665]
+          - group [ref=e666]:
+            - figure [ref=e667]:
+              - img [ref=e669]
+        - button "Slide anterior" [ref=e670] [cursor=pointer]:
+          - img [ref=e671]
+        - button "Próximo slide" [ref=e673] [cursor=pointer]:
+          - img [ref=e674]
+        - generic [ref=e676]:
+          - button "Ir para o slide 1" [ref=e677] [cursor=pointer]
+          - button "Ir para o slide 2" [ref=e678] [cursor=pointer]
+          - button "Ir para o slide 3" [ref=e679] [cursor=pointer]
+          - button "Ir para o slide 4" [ref=e680] [cursor=pointer]
+          - button "Ir para o slide 5" [ref=e681] [cursor=pointer]
+          - button "Ir para o slide 6" [ref=e682] [cursor=pointer]
+          - button "Ir para o slide 7" [ref=e683] [cursor=pointer]
+          - button "Ir para o slide 8" [ref=e684] [cursor=pointer]
+          - button "Ir para o slide 9" [ref=e685] [cursor=pointer]
+          - button "Ir para o slide 10" [ref=e686] [cursor=pointer]
+          - button "Ir para o slide 11" [ref=e687] [cursor=pointer]
+          - button "Ir para o slide 12" [ref=e688] [cursor=pointer]
+          - button "Ir para o slide 13" [ref=e689] [cursor=pointer]
+          - button "Ir para o slide 14" [ref=e690] [cursor=pointer]
+          - button "Ir para o slide 15" [ref=e691] [cursor=pointer]
+      - link "VER TODOS" [ref=e695] [cursor=pointer]:
+        - /url: https://pousadainacia.com.br/galeria/
+        - generic [ref=e697]: VER TODOS
+    - generic [ref=e699]:
+      - generic [ref=e700]:
+        - link "Pousada Inácia - Alto Paraíso de Goiás" [ref=e703] [cursor=pointer]:
+          - /url: https://pousadainacia.com.br/
+          - img "Pousada Inácia - Alto Paraíso de Goiás" [ref=e705]
+        - paragraph [ref=e708]: Aqui, cada momento é uma celebração da natureza e da tranquilidade, onde o conforto se encontra com a beleza intocada, criando memórias inesquecíveis em um refúgio de paz e serenidade.
+      - generic [ref=e709]:
+        - heading "Menu" [level=6] [ref=e712]
+        - list [ref=e715]:
+          - listitem [ref=e716]:
+            - link "Início" [ref=e717] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e718]: Início
+          - listitem [ref=e719]:
+            - link "A Pousada" [ref=e720] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#apousada
+              - generic [ref=e721]: A Pousada
+          - listitem [ref=e722]:
+            - link "Acomodações" [ref=e723] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#acomodacoes
+              - generic [ref=e724]: Acomodações
+          - listitem [ref=e725]:
+            - link "L'Alcofa Gastronomia" [ref=e726] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/lalcofa
+              - generic [ref=e727]: L'Alcofa Gastronomia
+          - listitem [ref=e728]:
+            - link "Lazer" [ref=e729] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/#lazer
+              - generic [ref=e730]: Lazer
+          - listitem [ref=e731]:
+            - link "Galeria" [ref=e732] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/galeria/
+              - generic [ref=e733]: Galeria
+          - listitem [ref=e734]:
+            - link "Contato" [ref=e735] [cursor=pointer]:
+              - /url: https://pousadainacia.com.br/contato/
+              - generic [ref=e736]: Contato
+      - generic [ref=e737]:
+        - heading "Onde estamos" [level=1] [ref=e740]
+        - list [ref=e743]:
+          - listitem [ref=e744]:
+            - img [ref=e746]
+            - generic [ref=e748]: Rodovia GO-118 KM 159, Fazenda Almessegas, Alto Paraíso de Goiás - GO
+          - listitem [ref=e749]:
+            - link "Central de Reservas" [ref=e750] [cursor=pointer]:
+              - /url: https://wa.me/5562999080895
+              - img [ref=e752]
+              - generic [ref=e754]: Central de Reservas
+          - listitem [ref=e755]:
+            - link "(62) 99908-0895" [ref=e756] [cursor=pointer]:
+              - /url: tel:62999080895
+              - img [ref=e758]
+              - generic [ref=e760]: (62) 99908-0895
+          - listitem [ref=e761]:
+            - img [ref=e763]
+            - generic [ref=e765]: contato@pousadainacia.com.br
+        - list [ref=e768]:
+          - listitem [ref=e769]:
+            - generic [ref=e770] [cursor=pointer]:
+              - generic [ref=e771]: Facebook
+              - img [ref=e772]
+          - listitem [ref=e774]:
+            - generic [ref=e775] [cursor=pointer]:
+              - generic [ref=e776]: Instagram
+              - img [ref=e777]
+    - generic [ref=e780]:
+      - generic [ref=e782]: Pousada Inácia - 2024 - Todos os direitos reservados.
+      - 'link "Site por: Código 1 TI" [ref=e786] [cursor=pointer]':
+        - /url: https://codigo1ti.com.br/
+  - generic "'Nosso" [ref=e789] [cursor=pointer]:
+    - generic [ref=e790]:
+      - img
+  - generic [ref=e791]: desktop

@@ -1,0 +1,438 @@
+- generic [active] [ref=e1]:
+  - button "Abrir WhatsApp" [ref=e527] [cursor=pointer]
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic:
+          - link [ref=e6] [cursor=pointer]:
+            - /url: index.html
+            - img [ref=e7]
+          - generic [ref=e8]:
+            - list:
+              - listitem [ref=e9]:
+                - link "" [ref=e10] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nor_hotel/
+                  - generic [ref=e11]: 
+          - navigation [ref=e12]:
+            - list:
+              - listitem [ref=e13]:
+                - link "NÓR" [ref=e14] [cursor=pointer]:
+                  - /url: "#nor"
+              - listitem [ref=e15]:
+                - link "Suítes" [ref=e16] [cursor=pointer]:
+                  - /url: "#suites"
+              - listitem [ref=e17]:
+                - link "Gastronomia" [ref=e18] [cursor=pointer]:
+                  - /url: "#gastronomia"
+              - listitem [ref=e19]:
+                - link "Atividades" [ref=e20] [cursor=pointer]:
+                  - /url: "#atividades"
+              - listitem [ref=e21]:
+                - link "Bem-estar" [ref=e22] [cursor=pointer]:
+                  - /url: "#bem-estar"
+              - listitem [ref=e23]:
+                - link "Chegar" [ref=e24] [cursor=pointer]:
+                  - /url: "#chegar"
+              - listitem [ref=e25]:
+                - link "Eventos" [ref=e26] [cursor=pointer]:
+                  - /url: "#eventos"
+              - listitem [ref=e27]:
+                - link "Reservas" [ref=e28] [cursor=pointer]:
+                  - /url: "#reservas"
+    - iframe [ref=e31]:
+      - generic [active] [ref=f11e1]:
+        - generic "Player de vídeo do YouTube" [ref=f11e3]
+        - button "Mostrar controles do player" [ref=f11e7] [cursor=pointer]
+    - generic [ref=e42]:
+      - generic [ref=e44]:
+        - generic [ref=e45]: Entrada
+        - generic [ref=e46]:
+          - textbox "Entrada" [ref=e47]:
+            - /placeholder: DD/MM/AAAA
+          - generic [ref=e49]: 
+      - generic [ref=e51]:
+        - generic [ref=e52]: Saída
+        - generic [ref=e53]:
+          - textbox "Saída" [ref=e54]:
+            - /placeholder: DD/MM/AAAA
+          - generic [ref=e56]: 
+      - generic [ref=e58]:
+        - generic [ref=e59]: Adultos
+        - combobox "Adultos" [ref=e60]:
+          - option "1" [selected]
+          - option "2"
+      - generic [ref=e62]:
+        - generic [ref=e63]: Crianças
+        - combobox "Crianças" [ref=e64]:
+          - option "0" [selected]
+          - option "1"
+          - option "2"
+      - generic [ref=e66]:
+        - generic [ref=e67]: Cód. Promo
+        - textbox "Cód. Promo" [ref=e68]
+      - button "Buscar" [ref=e70] [cursor=pointer]
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - heading "Hotel & Spa" [level=6] [ref=e77]
+        - heading "NÓR Hotel & Spa é um reduto para o escapismo da vida urbana." [level=3] [ref=e78]
+        - paragraph [ref=e79]: Tudo isto a 45 minutos de São Paulo.
+      - generic [ref=e81]:
+        - generic [ref=e83]:
+          - link [ref=e538] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e539]
+          - link [ref=e530] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e531]
+          - link [ref=e100] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e101]
+          - link [ref=e106] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e107]
+          - link "Piscina" [ref=e540] [cursor=pointer]:
+            - /url: "#"
+            - img "Piscina" [ref=e541]
+          - link [ref=e118] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e119]
+          - link [ref=e124] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e125]
+          - link [ref=e130] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e131]
+        - list [ref=e132]:
+          - listitem "Page dot 1" [ref=e133] [cursor=pointer]
+          - listitem "Page dot 2" [ref=e134] [cursor=pointer]
+          - listitem "Page dot 3" [ref=e135] [cursor=pointer]
+          - listitem "Page dot 4" [ref=e136] [cursor=pointer]
+          - listitem "Page dot 5" [ref=e137] [cursor=pointer]
+          - listitem "Page dot 6" [ref=e138] [cursor=pointer]
+          - listitem "Page dot 7" [ref=e139] [cursor=pointer]
+          - listitem "Page dot 8" [ref=e140] [cursor=pointer]
+      - paragraph [ref=e142]: Situado na região de São Roque em São Paulo, é ideal para quem busca um respiro a poucos quilômetros da capital paulista. Com um design moderno, conforto e aconchego, as suítes do NÓR são cercadas por área verde e trazem o mesmo luxo informal das demais áreas do hotel. Seja para usufruir de um momento de descanso, trabalhar remotamente, se exercitar, apreciar os prazeres da mesa ou simplesmente aproveitar a vida, NÓR oferece uma hospitalidade e gastronomia intrinsecamente conectada com a natureza.
+    - generic [ref=e144]:
+      - generic [ref=e146]:
+        - heading "Suítes" [level=6] [ref=e147]
+        - heading "As suítes do NÓR foram projetadas para proporcionar momentos intimistas, em ambientes aconchegantes e silenciosos." [level=3] [ref=e148]
+        - paragraph [ref=e149]: Com espaços acolhedores que recebem elementos em madeira, aço e concreto, a sensação da estética moderna traz referências ao minimalismo nórdico. Nas noites frias, típicas da região, acenda a lareira e curta o silêncio da natureza para se desconectar do caos da cidade com boas horas de sono, um banho sob as estrelas e uma comida aconchegante.
+      - generic [ref=e151]:
+        - generic [ref=e153]:
+          - generic [ref=e155]:
+            - link [ref=e160] [cursor=pointer]:
+              - /url: images/suites/1.jpg
+              - img [ref=e161]
+            - link "suíte" [ref=e166] [cursor=pointer]:
+              - /url: images/suites/2.jpg
+              - img "suíte" [ref=e167]
+            - link [ref=e172] [cursor=pointer]:
+              - /url: images/suites/3.jpg
+              - img [ref=e173]
+          - button "Previous" [ref=e174] [cursor=pointer]: 
+          - button "Next" [ref=e175] [cursor=pointer]: 
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - heading "SUÍTE DUPLEX" [level=5] [ref=e179]
+            - separator [ref=e180]
+            - paragraph [ref=e181]: Pensada para receber toda a família, a SUÍTE DUPLEX oferece um espaço reservado no mezanino para casal, e no espaço térreo um sofá cama que comporta duas crianças de até 12 anos. As suítes estão equipadas para proporcionar momentos em união e atividades indoor, como filmes, séries e jogos de tabuleiros.
+            - paragraph [ref=e182]: 60 m2 - Cama king - Ar condicionado - TV - WiFi - Lareira - Jacuzzi - Minibar
+          - generic [ref=e183]:
+            - heading "SUÍTE DELUXE" [level=5] [ref=e184]
+            - separator [ref=e185]
+            - paragraph [ref=e186]: Projetada para acolher casais em noites frescas e frias típicas da região, a SUÍTE DELUXE propõe uma lareira perto da cama, e uma banheira jacuzzi no deck privativo da suite. Além de um refúgio para os finais de semana, o espaço é também convidativo para quem quer escapar da cidade durante a semana e trabalhar remotamente.
+            - paragraph [ref=e187]: 48 m2 - Cama queen - Ar condicionado - TV - WiFi - Lareira - Jacuzzi - Minibar
+    - generic [ref=e192]:
+      - generic [ref=e193]:
+        - heading "Gastronomia" [level=6] [ref=e194]
+        - heading "Descubra a sofisticação e o requinte da gastronomia contemporânea no NÓR Sensi, localizado no deslumbrante NÓR Hotel & Spa, na encantadora região de São Roque." [level=3] [ref=e195]
+        - paragraph [ref=e196]: Aberto ao público, o NÓR Sensi oferece uma experiência única em almoços e jantares, onde cada prato é uma obra-prima que transcende as expectativas. Permita-se envolver pelos sabores modernos em uma atmosfera que exala glamour, tornando cada refeição uma celebração de indulgência e estilo.
+        - paragraph [ref=e197]: Faça parte desse cenário gastronômico excepcional reservando seu lugar no NÓR Sensi, onde a contemporaneidade se encontra com o luxo, proporcionando momentos inesquecíveis em cada mordida.
+      - separator [ref=e198]
+      - generic [ref=e199]:
+        - link "Carta de Vinhos" [ref=e200] [cursor=pointer]:
+          - /url: https://drive.google.com/file/d/1CqJSB0XUTVrRopn-l4xc8ZbJbeTUXsjh/view
+        - link "Cardápio Digital" [ref=e201] [cursor=pointer]:
+          - /url: https://livemenu.app/menu/6449611a1951c40055a1e76e
+        - link "Reservas" [ref=e202] [cursor=pointer]:
+          - /url: https://wa.me/551130909914
+    - generic [ref=e205]:
+      - generic [ref=e207]:
+        - heading "Adega" [level=3] [ref=e208]
+        - separator [ref=e209]
+        - paragraph [ref=e210]: Com uma ampla seleção de vinhos de rótulos internacionais e brasileiros, a adega é um lugar de experiências privilegiadas onde podem ser realizados jantares mais intimistas e degustações. Instalada num cubo de vidro espelhado para a piscina, a adega abriga também o sistema Wine Emotion, que traz uma seleção de vinhos de exceção servidos em taça.
+      - generic [ref=e212]:
+        - heading "Café da Manhã" [level=3] [ref=e213]
+        - separator [ref=e214]
+        - paragraph [ref=e215]: O café da manhã do NÓR, servido no restaurante NÓR Sensi ou pelo Room Service, é pensado para atender todos os gostos e estilos de vida. Sem deixar de lado as indulgências sonhadas em momentos de descanso, há opções para as pessoas com intolerâncias alimentares. Com uma deliciosa variedade, a maioria das receitas são feitas in loco com ingredientes da região.
+      - generic [ref=e217]:
+        - heading "Pool Bar" [level=3] [ref=e218]
+        - separator [ref=e219]
+        - paragraph [ref=e220]: No Pool Bar é possível apreciar a gastronomia do restaurante NÓR Sensi de um jeito informal e descomplicado. Ao redor da piscina com linda vista para a natureza, são oferecidas diversas opções como coquetéis, vinhos, porções, sanduíches, saladas e sobremesas.
+      - generic [ref=e222]:
+        - heading "Room Service" [level=3] [ref=e223]
+        - separator [ref=e224]
+        - paragraph [ref=e225]: Com total privacidade é possível desfrutar de um café da manhã, almoço ou jantar dentro das suítes. Com todo o conforto, o Room Service oferece excelentes sugestões de pratos, sobremesas, coquetéis e vinhos do restaurante NÓR Sensi e do POOL BAR.
+    - generic [ref=e227]:
+      - generic [ref=e229]:
+        - heading "Atividades" [level=6] [ref=e230]
+        - heading "As atividades físicas fazem bem para o corpo e a alma." [level=3] [ref=e231]
+        - paragraph [ref=e232]: Nas duas quadras de beach tennis, na piscina aquecida ou na pista de cooper é possível se exercitar, além da área fitness e sugestões de passeios e trilhas pela região que podem ser feitas a pé.
+      - generic [ref=e235]:
+        - generic [ref=e237]:
+          - generic [ref=e240]:
+            - generic [ref=e242]: Em breve
+            - generic [ref=e243]:
+              - heading "SPA by L’OCCITANE EN PROVENCE" [level=2] [ref=e244]
+              - separator [ref=e245]
+              - paragraph [ref=e246]: Em breve. O Spa by L’Occitane terá vista imersa para a natureza, será possível fazer uma massagem ou tratamento nas seis salas reservadas para terapias. O espaço contará também com uma academia de última geração, duas saunas e uma piscina interna aquecida.
+          - generic [ref=e251]:
+            - heading [level=2] [ref=e252]: Experiências
+            - separator [ref=e253]
+            - paragraph [ref=e254]: As diversas experiências gastronômicas possíveis do NÓR são desenhadas em função do desejo de cada cliente. Apreciar um piquenique em plena natureza, degustar vinhos com um especialista ou curtir um menu degustação são algumas das opções.
+          - generic [ref=e259]:
+            - heading [level=2] [ref=e260]: Piscina
+            - separator [ref=e261]
+            - paragraph [ref=e262]: Imersa em elegância, nossa piscina aquecida oferece o cenário perfeito para momentos de tranquilidade, proporcionando uma experiência única de bem-estar. Um verdadeiro convite para quem busca desacelerar no tempo e desfrutar de um relaxamento incrívelmente revigorante.
+          - generic [ref=e267]:
+            - heading [level=2] [ref=e268]: Beach Tennis
+            - separator [ref=e269]
+            - paragraph [ref=e270]: Estrategicamente posicionadas junto à uma pitoresca pista para trilha e caminhada, nossas quadras de beach tennis oferecem um convite irresistível para a diversão ao ar livre. Mergulhe na energia revigorante do esporte e desfrute de partidas animadas com amigos e familiares.
+          - generic [ref=e275]:
+            - heading [level=2] [ref=e276]: Academia
+            - separator [ref=e277]
+            - paragraph [ref=e278]: Nossa academia oferece equipamentos de última geração que garantem uma experiência fitness única. Descubra o equilíbrio perfeito entre conforto e atividade física em nosso espaço dedicado à sua saúde. Conheça nossas instalações e inspire-se para uma vida mais saudável.
+        - list [ref=e279]:
+          - listitem "Page dot 1" [ref=e280] [cursor=pointer]
+          - listitem "Page dot 2" [ref=e281] [cursor=pointer]
+          - listitem "Page dot 3" [ref=e282] [cursor=pointer]
+          - listitem "Page dot 4" [ref=e283] [cursor=pointer]
+          - listitem "Page dot 5" [ref=e284] [cursor=pointer]
+    - generic [ref=e286]:
+      - generic [ref=e288]:
+        - heading "Bem-estar" [level=6] [ref=e289]
+        - heading "Fora da rotina agitada da cidade, o NÓR tem como premissa proporcionar o bem-estar para seus hóspedes através de suas instalações, serviços e experiências." [level=3] [ref=e290]
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - heading "ATIVIDADES" [level=5] [ref=e294]
+          - separator [ref=e295]
+          - paragraph [ref=e296]: As atividades físicas fazem bem para o corpo e a alma. Nas duas quadras de beach tennis, na piscina aquecida ou na pista de cooper é possível se exercitar, além da área fitness e sugestões de passeios e trilhas pela região que podem ser feitas a pé.
+        - generic [ref=e297]:
+          - heading "SPA by L’OCCITANE EN PROVENCE" [level=5] [ref=e298]
+          - separator [ref=e299]
+          - paragraph [ref=e300]: Em breve estará aberto o Spa by L’Occitane. Com vista imersa para a natureza, será possível fazer uma massagem ou tratamento nas seis salas reservadas para terapias. O espaço contará também com uma academia de última geração, duas saunas e uma piscina interna aquecida.
+    - generic [ref=e302]:
+      - generic [ref=e304]:
+        - heading "Eventos" [level=6] [ref=e305]
+        - heading "Deixando uma impressão inesquecível." [level=3] [ref=e306]
+        - paragraph [ref=e307]: Quando se trata de sediar eventos o NÓR Hotel & Spa é o ápice da elegância. Nossa hospitalidade refinada, excelência culinária e glamour atemporal se combinam para criar um espaço sensacional para seus eventos, reuniões e celebrações. Nossos ambientes são luminosos e inspiradores, equipados com tecnologia de ponta, estão prontos para serem transformados e receber seus convidados.
+      - generic [ref=e310]:
+        - generic [ref=e312]:
+          - generic [ref=e315]:
+            - img [ref=e532]
+            - generic [ref=e318]:
+              - heading [level=2] [ref=e533]: Sala Refúgio
+              - separator [ref=e320]
+              - paragraph [ref=e321]: Ambiente sofisticado e versátil, ideal para reuniões de médio porte, workshops e encontros exclusivos, com diferentes layouts que se adaptam com elegância.
+              - paragraph [ref=e322]: 45m² - até 42 convidados
+              - link [ref=e534] [cursor=pointer]:
+                - /url: mailto:eventos@nor.tur.br
+                - text: Solicitar orçamento
+          - generic [ref=e326]:
+            - img [ref=e328]
+            - generic [ref=e329]:
+              - heading [level=2] [ref=e330]: Sala Adega
+              - separator [ref=e331]
+              - paragraph [ref=e332]: A Sala Adega é um espaço flexível e de bom tamanho para reuniões e eventos intimistas, oferecendo opções de montagem até 46 convidados distribuídos entre sala e deck.
+              - paragraph [ref=e333]: 44 m² - até 46 convidados
+              - link [ref=e334] [cursor=pointer]:
+                - /url: mailto:eventos@nor.tur.br
+                - text: Solicitar orçamento
+          - generic [ref=e337]:
+            - generic [ref=e338]:
+              - img [ref=e339]
+              - generic [ref=e340]: Em breve
+            - generic [ref=e341]:
+              - heading [level=2] [ref=e342]: Sala Origem
+              - separator [ref=e343]
+              - paragraph [ref=e344]: Salão amplo e refinado para eventos de médio porte, com múltiplas configurações de montagem e banquetes personalizados, ideal para celebrações elegantes e encontros de alto padrão.
+              - link [ref=e345] [cursor=pointer]:
+                - /url: mailto:eventos@nor.tur.br
+                - text: Solicitar orçamento
+          - generic [ref=e348]:
+            - img [ref=e350]
+            - generic [ref=e351]:
+              - heading [level=2] [ref=e352]: Eventos Sociais
+              - separator [ref=e353]
+              - paragraph [ref=e354]: Ambientes integrados à natureza, com luz natural abundante e vista para a vegetação serrana, perfeitos para eventos exclusivos, celebrações sofisticadas e experiências memoráveis de grande porte.
+              - link [ref=e355] [cursor=pointer]:
+                - /url: mailto:eventos@nor.tur.br
+                - text: Solicitar orçamento
+          - generic [ref=e360]:
+            - heading "Eventos Corporativos" [level=2] [ref=e542]
+            - separator [ref=e362]
+            - paragraph [ref=e363]: Estrutura sofisticada em meio à natureza, ideal para eventos corporativos que buscam privacidade, conforto, excelência em serviços e uma experiência diferenciada de alto nível.
+            - link "Solicitar orçamento" [ref=e543] [cursor=pointer]:
+              - /url: mailto:eventos@nor.tur.br
+          - generic [ref=e367]:
+            - img [ref=e544]
+            - generic [ref=e370]:
+              - heading [level=2] [ref=e545]: Casamentos
+              - separator [ref=e372]
+              - paragraph [ref=e373]: Cenários exclusivos e encantadores para celebrar o amor em meio à natureza, unindo sofisticação, beleza, cenografia elegante e detalhes pensados para experiências verdadeiramente inesquecíveis.
+              - link [ref=e546] [cursor=pointer]:
+                - /url: mailto:eventos@nor.tur.br
+                - text: Solicitar orçamento
+        - list [ref=e375]:
+          - listitem "Page dot 1" [ref=e376] [cursor=pointer]
+          - listitem "Page dot 2" [ref=e377] [cursor=pointer]
+          - listitem "Page dot 3" [ref=e378] [cursor=pointer]
+          - listitem "Page dot 4" [ref=e379] [cursor=pointer]
+          - listitem "Page dot 5" [ref=e380] [cursor=pointer]
+          - listitem "Page dot 6" [ref=e381] [cursor=pointer]
+    - generic [ref=e383]:
+      - generic [ref=e385]:
+        - heading "Chegar" [level=6] [ref=e386]
+        - heading "São Roque é a primeira cidade efetivamente fora de São Paulo." [level=3] [ref=e387]
+        - paragraph [ref=e388]:
+          - text: São Roque está a menos de 60 km de distância da capital paulista,
+          - text: via a Rodovia Castelo Branco - BR 374 na saída 54A.
+      - generic [ref=e390]:
+        - iframe [ref=e392]
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - heading "LOCALIZAÇÃO " [level=5] [ref=e396]:
+              - link "LOCALIZAÇÃO " [ref=e397] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/95Pmi3x4u55uyoQo6
+                - text: LOCALIZAÇÃO
+                - generic [ref=e398]: 
+            - separator [ref=e399]
+            - paragraph [ref=e400]: Estr. do Pessegueiro, 1000 - São Roque, SP - 18135-656
+          - generic [ref=e401]:
+            - heading "TELEFONE " [level=5] [ref=e402]:
+              - link "TELEFONE " [ref=e403] [cursor=pointer]:
+                - /url: call:+551130909914
+                - text: TELEFONE
+                - generic [ref=e404]: 
+            - separator [ref=e405]
+            - paragraph [ref=e406]: +55 (11) 3090-9914
+          - generic [ref=e407]:
+            - heading "WHATSAPP " [level=5] [ref=e408]:
+              - link "WHATSAPP " [ref=e409] [cursor=pointer]:
+                - /url: https://wa.me/5511911283421
+                - text: WHATSAPP
+                - generic [ref=e410]: 
+            - separator [ref=e411]
+            - paragraph [ref=e412]: +55 (11) 91128-3421
+          - generic [ref=e413]:
+            - heading "INSTAGRAM " [level=5] [ref=e414]:
+              - link "INSTAGRAM " [ref=e415] [cursor=pointer]:
+                - /url: https://www.instagram.com/nor_hotel/
+                - text: INSTAGRAM
+                - generic [ref=e416]: 
+            - separator [ref=e417]
+            - paragraph [ref=e418]: "@nor_hotel"
+    - generic [ref=e420]:
+      - generic [ref=e422]:
+        - heading "Depoimentos" [level=6] [ref=e423]
+        - heading "O que dizem nossos hóspedes" [level=3] [ref=e424]
+      - generic [ref=e425]:
+        - generic [ref=e427] [cursor=pointer]:
+          - paragraph [ref=e428]: Melhor experiência dentro da cidade de São Paulo. Para quem busca um momento de descanso, esse é o lugar. Boa acomodação, atendimento, limpeza!
+          - generic [ref=e429]: Lucas Wagner
+        - generic [ref=e431] [cursor=pointer]:
+          - paragraph [ref=e432]: Lugar apaixonante, com uma paisagem linda e gastronomia incrível. Sem dúvidas será uma viagem obrigatória anualmente.
+          - generic [ref=e433]: Esteban Diliberti
+        - generic [ref=e435] [cursor=pointer]:
+          - paragraph [ref=e436]: Ficamos encantados com cada detalhe. Acomodação, restaurante, recepção e localização, tudo perfeito. Voltaremos mais vezes!
+          - generic [ref=e437]: Karla Vaz
+    - generic [ref=e440]:
+      - generic [ref=e442]:
+        - heading "Reservas" [level=6] [ref=e443]
+        - heading "Faça a sua reserva online" [level=3] [ref=e444]
+        - generic [ref=e445]:
+          - link "Reservar agora " [ref=e446] [cursor=pointer]:
+            - /url: https://be.synxis.com/?Chain=10237&Hotel=48770&level=hotel&locale=pt-PT
+            - text: Reservar agora
+            - generic [ref=e447]: 
+          - link "Cancelar reserva" [ref=e448] [cursor=pointer]:
+            - /url: https://be.synxis.com/signin?Chain=10237&Hotel=48770&level=hotel&locale=pt-PT
+      - generic [ref=e452]:
+        - link "Circuito Elegante" [ref=e454] [cursor=pointer]:
+          - /url: https://www.roteirodovinho.com.br/
+          - img "Circuito Elegante" [ref=e455]
+        - link "Roteiro do Vinho" [ref=e457] [cursor=pointer]:
+          - /url: https://www.roteirodovinho.com.br/
+          - img "Roteiro do Vinho" [ref=e458]
+        - link "Selo de energia renovável" [ref=e460] [cursor=pointer]:
+          - /url: "#"
+          - img "Selo de energia renovável" [ref=e461]
+        - link "Preferred Lifestyle" [ref=e463] [cursor=pointer]:
+          - /url: https://preferredhotels.com/hotels/brazil/nor-hotel-spa
+          - img "Preferred Lifestyle" [ref=e464]
+    - contentinfo [ref=e466]:
+      - generic [ref=e469]:
+        - paragraph [ref=e471]:
+          - link "logo" [ref=e472] [cursor=pointer]:
+            - /url: index.html
+            - img "logo" [ref=e473]
+        - generic [ref=e475]:
+          - heading "NAVEGAÇÃO" [level=4] [ref=e476]
+          - list [ref=e477]:
+            - listitem [ref=e478]:
+              - link "NÓR" [ref=e479] [cursor=pointer]:
+                - /url: "#nor"
+            - listitem [ref=e480]:
+              - link "Suítes" [ref=e481] [cursor=pointer]:
+                - /url: "#suites"
+            - listitem [ref=e482]:
+              - link "Gastronomia" [ref=e483] [cursor=pointer]:
+                - /url: "#gastronomia"
+            - listitem [ref=e484]:
+              - link "Atividades" [ref=e485] [cursor=pointer]:
+                - /url: "#atividades"
+            - listitem [ref=e486]:
+              - link "Bem-estar" [ref=e487] [cursor=pointer]:
+                - /url: "#bem-estar"
+            - listitem [ref=e488]:
+              - link "Chegar" [ref=e489] [cursor=pointer]:
+                - /url: "#chegar"
+            - listitem [ref=e490]:
+              - link "Reservas" [ref=e491] [cursor=pointer]:
+                - /url: "#reservas"
+        - generic [ref=e493]:
+          - heading "NÓR Sensi" [level=4] [ref=e494]
+          - list [ref=e495]:
+            - listitem [ref=e496]:
+              - link "Cardápio Online" [ref=e497] [cursor=pointer]:
+                - /url: https://livemenu.app/menu/6449611a1951c40055a1e76e
+            - listitem [ref=e498]:
+              - link "Carta de Vinhos" [ref=e499] [cursor=pointer]:
+                - /url: https://drive.google.com/file/d/1XHhRJO4XsA4dD2pSwtq_N7CFX1xguCqV/view
+            - listitem [ref=e500]:
+              - link "Reservas NÓR Sensi" [ref=e501] [cursor=pointer]:
+                - /url: https://wa.me/551130909914
+        - generic [ref=e503]:
+          - heading "PARCEIROS" [level=4] [ref=e504]
+          - list [ref=e505]:
+            - listitem [ref=e506]:
+              - link "Trabalhe conosco" [ref=e507] [cursor=pointer]:
+                - /url: https://docs.google.com/forms/d/e/1FAIpQLSet4QgW0cENdB6xP4g0V3624tk8I4uC6uNIb6RbaWbCNdjA6w/viewform?pli=1
+        - generic [ref=e509]:
+          - heading "REDES SOCIAIS" [level=4] [ref=e510]
+          - generic [ref=e511]:
+            - list:
+              - listitem [ref=e512]:
+                - link "" [ref=e513] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nor_hotel/
+                  - generic [ref=e514]: 
+              - listitem [ref=e515]:
+                - link "" [ref=e516] [cursor=pointer]:
+                  - /url: https://br.linkedin.com/company/nor-hotel-spa
+                  - generic [ref=e517]: 
+      - generic [ref=e520]: © 2026 NÓR. Todos os direitos reservados.
+  - generic [ref=e521] [cursor=pointer]:
+    - generic [ref=e522]: 
+    - generic [ref=e523]: 
+  - iframe [ref=e524]:
+    

@@ -1,0 +1,83 @@
+{
+  "slug": "grande-hotel-termas-araxa",
+  "name": "Grande Hotel Termas Araxá",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Grande Hotel Termas Araxá",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.grandehoteltermas.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Araxá",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "MG",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.grandehoteltermas.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://www.grandehoteltermas.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Deluxe"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Termas",
+        "Spa",
+        "Piscina",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 34 3662-1000",
+        "website": "https://www.grandehoteltermas.com.br/",
+        "address": "Araxá, Minas Gerais"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "grande-hotel-termas-araxa",
+    "ESTABELECIMENTOS": "Grande Hotel Termas Araxa",
+    "MUNICÍPIO": "Araxa",
+    "UF": "MG",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "campo",
+    "Destino": "Araxá"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

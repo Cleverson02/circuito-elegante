@@ -1,0 +1,22 @@
+SOURCE: https://pousadadoouro.com.br/
+FETCHED: 2026-04-19
+
+Full Address: "R. Dr. Pereira, 298 (Antigo 145) - Centro Histórico - Paraty - RJ – Brasil - CEP 23970-000"
+
+Phones: +55 (11) 91935-7441 | +55 (11) 91935-7330 | +55 (11) 98161-4040
+WhatsApp: +55 (24) 3371-4300 (from contact page)
+Email: reservas@pousadaouro.com.br
+Languages offered on site: Portuguese, English, Spanish (PT/EN/ES toggle)
+
+Internal nav links discovered:
+- HOME index.php
+- ACOMODAÇÕES content.php?p=rooms
+- DESCUBRA MAIS content.php?p=discoverus
+- EVENTOS content.php?p=plananevent
+- FILOSOFIA content.php?p=about
+- ARQUITETURA content.php?p=architectural
+- DÚVIDAS content.php?p=faq
+- CONTATO & MAPA content.php?p=contact
+- RESERVE AGORA (booking) https://app.thebookingbutton.com/properties/pousadadoourodirect
+
+Tagline: "Inspire"

@@ -1,0 +1,82 @@
+{
+  "slug": "vila-de-alter",
+  "name": "Vila de Alter",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Vila de Alter",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://viladalter.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Alter do Chão",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PA",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://viladalter.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://viladalter.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Bungalow"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 93 3527-3000",
+        "website": "https://viladalter.com.br/",
+        "address": "Alter do Chão, Pará"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "vila-de-alter",
+    "ESTABELECIMENTOS": "Vila de Alter",
+    "MUNICÍPIO": "Santarem",
+    "UF": "PA",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "norte",
+    "Experiência": "praia",
+    "Destino": "Alter do Chão"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

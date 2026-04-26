@@ -1,0 +1,24 @@
+{
+  "slug": "fazenda-sao-luiz-da-boasorte",
+  "name": "Fazenda São Luiz da Boasorte",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "fazenda-sao-luiz-da-boasorte",
+    "ESTABELECIMENTOS": "Fazenda São Luiz da Boasorte",
+    "MUNICÍPIO": "Vassouras",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "serra Fluminense"
+  },
+  "sources": []
+}

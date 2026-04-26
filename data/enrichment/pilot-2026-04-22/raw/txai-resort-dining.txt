@@ -1,0 +1,191 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "TXAI" [ref=e8] [cursor=pointer]:
+          - /url: https://www.txairesorts.com/
+          - img "TXAI" [ref=e9]
+        - link "Relais & Chateaux" [ref=e10] [cursor=pointer]:
+          - /url: https://www.relaischateaux.com/
+          - img "Relais & Chateaux" [ref=e11]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - link "PT" [ref=e14] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php
+          - link "EN" [ref=e15] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php?lang=en
+          - link "ES" [ref=e16] [cursor=pointer]:
+            - /url: https://www.txairesorts.com/language.php?lang=es
+        - link "Reservas" [ref=e18] [cursor=pointer]:
+          - /url: "https://be.synxis.com/?Hotel=62559&Chain=8565&config=TXAIconfig&theme=TXAItheme&locale=pt-PT&adult=2&child=0 "
+        - button [ref=e19] [cursor=pointer]
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: Para
+      - text: saborear
+    - generic [ref=e31]:
+      - link [ref=e33] [cursor=pointer]:
+        - /url: javascript:;
+      - link "Conheça Mais " [ref=e36] [cursor=pointer]:
+        - /url: "#section-15"
+        - text: Conheça Mais
+        - generic [ref=e37]: 
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - textbox "CHECK-IN " [ref=e42] [cursor=pointer]
+      - textbox "CHECK-OUT " [ref=e43] [cursor=pointer]
+    - button " CHECAR DISPONIBILIDADE" [ref=e45] [cursor=pointer]:
+      - generic [ref=e46]: 
+      - text: CHECAR DISPONIBILIDADE
+  - generic [ref=e48]:
+    - heading "a nossa caprichada gastronomia baiana-contemporânea" [level=3] [ref=e49]
+    - tablist [ref=e50]:
+      - tab "A nossa gastronomia" [selected] [ref=e51] [cursor=pointer]:
+        - text: A nossa
+        - text: gastronomia
+      - tab "Menu degustação" [ref=e53] [cursor=pointer]:
+        - text: Menu
+        - text: degustação
+      - tab "Jantar Romântico" [ref=e55] [cursor=pointer]:
+        - text: Jantar
+        - text: Romântico
+      - tab "Almoço no gazebo" [ref=e57] [cursor=pointer]:
+        - text: Almoço no
+        - text: gazebo
+    - generic [ref=e59]:
+      - link [ref=e60] [cursor=pointer]:
+        - /url: javascript:;
+      - link [ref=e61] [cursor=pointer]:
+        - /url: javascript:;
+    - tabpanel "A nossa gastronomia" [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - text: A nossa
+            - text: gastronomia
+          - separator [ref=e68]
+          - paragraph [ref=e69]: Sob a liderança do renomado Chef Nena, com mais de 20 anos de experiência no Txai, a gastronomia mescla de forma harmoniosa a cozinha baiana e contemporânea, proporcionando experiências verdadeiramente singulares. Como parte de sua excelência em hospitalidade, o Txai disponibiliza aos seus hóspedes 2 refinados restaurantes dentro das instalações do hotel, ambos sob o selo do grupo Relais & Chateaux.
+        - generic [ref=e71]:
+          - img "0" [ref=e74]
+          - generic [ref=e76]:
+            - link "1" [ref=e78] [cursor=pointer]:
+              - /url: ""
+            - link "2" [ref=e80] [cursor=pointer]:
+              - /url: ""
+  - img "4" [ref=e85]
+  - generic [ref=e89]:
+    - heading "OUTRAS EXPERIÊNCIAS" [level=4] [ref=e90]
+    - separator [ref=e91]
+    - paragraph [ref=e92]: O LUXO DA SIMPLICIDADE
+    - generic [ref=e93]:
+      - link "Spa Shamash " [ref=e94] [cursor=pointer]:
+        - /url: https://www.txairesorts.com/spa-shamash
+        - generic [ref=e96]:
+          - text: Spa Shamash
+          - generic [ref=e98]: 
+      - link "Trilhas e Passeios " [ref=e99] [cursor=pointer]:
+        - /url: https://www.txairesorts.com/trilhas-e-passeios
+        - generic [ref=e101]:
+          - text: Trilhas e Passeios
+          - generic [ref=e103]: 
+  - generic [ref=e106]:
+    - img "Michelin" [ref=e107]
+    - img "2025 Traveler´s Choice TripAdvisor" [ref=e108]
+    - img "1st Grand Hotel Champion – 2026 Certification" [ref=e109]
+    - img "VIRTUOSO PREFERRED" [ref=e110]
+    - img "SERANDIPIANS" [ref=e111]
+    - img "BRAZILIAN LUXURY" [ref=e112]
+    - img "Xodó - BLTA" [ref=e113]
+  - contentinfo [ref=e114]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - paragraph [ref=e119]:
+          - text: Rodovia Ilhéus-Itacaré
+          - text: BA-001, KM 48
+          - text: Fazenda Boa Sorte
+          - text: Praia de Itacarezinho, Bahia - 45530-000
+          - text: +55 73 2101 5000
+        - list [ref=e121]:
+          - listitem [ref=e122]:
+            - link "O Txai" [ref=e124] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/txai
+            - link "Política de Qualidade" [ref=e126] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/quality/Política-da-Qualidade.pdf
+          - listitem [ref=e127]:
+            - generic [ref=e128]: Para descobrir
+            - link "Spa Shamash" [ref=e130] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/spa-shamash
+            - link "Trilhas e Passeios" [ref=e132] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/trilhas-e-passeios
+            - link "Gastronomia" [ref=e134] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-saborear
+          - listitem [ref=e135]:
+            - generic [ref=e136]: Para se hospedar
+            - link "Bangalôs" [ref=e138] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/acomodacoes/bangalo#section-11
+            - link "Apartamentos" [ref=e140] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/acomodacoes/apartamento#section-11
+            - link "Vilas do Sul" [ref=e142] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-vilas-do-sul#section-11
+            - link "Residences" [ref=e144] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-residences#section-11
+            - link "Vilas do Norte" [ref=e146] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/residencias/txai-vilas-do-norte#section-11
+          - listitem [ref=e147]:
+            - generic [ref=e148]: Para preservar
+            - link "Desenvolvimento comunitário" [ref=e150] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/desenvolvimento-comunitario#section-5
+            - link "TxaiTaruga" [ref=e152] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/txaitaruga#section-5
+            - link "Txai Consciente" [ref=e154] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/educacao-ambiental#section-5
+            - link "Nosso futuro" [ref=e156] [cursor=pointer]:
+              - /url: https://www.txairesorts.com/para-preservar/comunidade#section-5
+        - list [ref=e159]:
+          - listitem [ref=e160]:
+            - generic [ref=e161]: Fale Conosco
+            - generic [ref=e162]:
+              - text: "Central de Reservas:"
+              - text: +55 11 3040 5010
+              - text: central.reservas@txairesorts.com
+            - generic [ref=e163]:
+              - link "Carreiras" [ref=e165] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/txai-resorts-brasil
+              - text: "Assessoria de imprensa:"
+              - link "txai@taopr.com.br" [ref=e166] [cursor=pointer]:
+                - /url: mailto:txai@taopr.com.br
+            - generic [ref=e167]:
+              - text: Acompanhe
+              - text: nossas redes
+              - text: "sociais:"
+              - generic [ref=e168]:
+                - link "Instagram" [ref=e169] [cursor=pointer]:
+                  - /url: https://www.instagram.com/txairesorts
+                  - img "Instagram" [ref=e170]
+                - link "Facebook" [ref=e171] [cursor=pointer]:
+                  - /url: https://www.facebook.com/txairesorts
+                  - img "Facebook" [ref=e172]
+                - link "Youtube" [ref=e173] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/Txairesorts
+                  - img "Youtube" [ref=e174]
+                - link "LinkedIn" [ref=e175] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/txai-resorts-brasil
+                  - img "LinkedIn" [ref=e176]
+      - generic [ref=e177]: Todos os direitos reservados a Txai Resorts
+  - img [ref=e179] [cursor=pointer]
+  - dialog "Controle sua privacidade" [ref=e184]:
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - heading "Controle sua privacidade" [level=3] [ref=e188]
+          - link "AdOpt" [ref=e190] [cursor=pointer]:
+            - /url: https://goadopt.io/porque-aviso/?utm_content=main&utm_medium=cookie_banner_web&utm_source=cookie_banner_41528133-4862-450b-b81e-8304e9fa7bc4
+        - generic [ref=e191]:
+          - generic [ref=e192]: Nosso site usa cookies para melhorar a navegação.
+          - generic [ref=e193]: Usamos cookies para compartilhar dados de análise, publicidade, dados de usuários e personalização de anúncios com o Google.
+          - link "Política de Privacidade" [ref=e195] [cursor=pointer]:
+            - /url: https://adoptprodstorage.blob.core.windows.net/adopt-prod/organization/5405eac1-9bfd-4f22-a2d4-8525381935e1/disclaimer/014f7087-2fce-4e84-9979-ca75e83ae49b/policy/01GPEGAT7NRCEXYC424SQXSR37.pdf
+      - generic [ref=e196]:
+        - button "Minhas opções" [ref=e197] [cursor=pointer]
+        - button "Rejeitar" [ref=e198] [cursor=pointer]
+        - button "Aceitar" [ref=e199] [cursor=pointer]

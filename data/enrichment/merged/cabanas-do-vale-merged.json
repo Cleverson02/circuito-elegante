@@ -1,0 +1,83 @@
+{
+  "slug": "cabanas-do-vale",
+  "name": "Cabanas do Vale",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5,
+  "completeness": 0.5,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Cabanas do Vale",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://cabanasdo vale.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Pirenópolis",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "GO",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://cabanasdo vale.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://cabanasdo vale.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Chalé"
+        },
+        {
+          "name": "Bungalow"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Trilhas",
+        "Natureza",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 62 3331-2000",
+        "website": "https://cabanasdo vale.com.br/",
+        "address": "Pirenópolis, GO"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "cabanas-do-vale",
+    "ESTABELECIMENTOS": "Cabanas do Vale",
+    "MUNICÍPIO": "Petrópolis",
+    "UF": "RJ",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sudeste",
+    "Experiência": "serra",
+    "Destino": "Itaipava"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

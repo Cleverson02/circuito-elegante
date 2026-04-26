@@ -1,0 +1,82 @@
+{
+  "slug": "caiman-pantanal",
+  "name": "Caiman Pantanal",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Caiman Pantanal",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.caimanpantanal.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Miranda",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "MS",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.caimanpantanal.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://www.caimanpantanal.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Apartamento"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Natureza",
+        "Trilhas",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 67 3242-1000",
+        "website": "https://www.caimanpantanal.com.br/",
+        "address": "Miranda, Mato Grosso do Sul"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "caiman-pantanal",
+    "ESTABELECIMENTOS": "Caiman Pantanal",
+    "MUNICÍPIO": "Miranda",
+    "UF": "MS",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "Centro-oeste",
+    "Experiência": "campo",
+    "Destino": "Pantanal "
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

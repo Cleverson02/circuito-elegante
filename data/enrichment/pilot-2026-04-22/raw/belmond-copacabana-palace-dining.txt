@@ -1,0 +1,44 @@
+SOURCE: https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/dining
+FETCHED: 2026-04-19
+
+PÉRGULA:
+- Cuisine: Carioca/Brazilian (also described as Mediterranean-Brazilian fusion on about page)
+- Description: "Soak-up the colourful spirit of Rio from one of the city's most celebrated Carioca restaurants."
+- Location: Poolside seating available with Copacabana Beach views
+- Hours:
+  * Breakfast: 6:30am–10:30am (Mon–Fri); 7am–11am (Sat–Sun)
+  * Lunch: noon–4pm (Mon–Fri)
+  * Brunch: 1pm–4pm (Sundays)
+  * Dinner: 6pm–midnight (kitchen closes 11pm)
+- Specialties: Feijoada (Saturday buffet, 1–4pm); Sunday brunch with sparkling wine
+- Menus: Lunch/dinner, pizza, wine list, drinks
+- Booking: SevenRooms platform
+
+MEE RESTAURANT:
+- Cuisine: Pan-Asian
+- Chef: Alberto Morisawa
+- Accolades: Only Michelin-starred pan-Asian restaurant in Rio
+- Description: "Pair exotic specialty dishes with one of 60 imported sakes"
+- Hours: Open daily from 7pm
+- Specialties: Omakase experience (private sushi bar dining); seasonal creations
+- Menus: Dinner menu, sake and wine list, drink menu
+- Pricing: Omakase R$950 + 10% service per person
+- Booking: SevenRooms platform
+
+POOL BAR:
+- Cuisine: Light fare
+- Description: Handmade pizzas and light bites
+- Hours: Seasonal; currently 11am–6pm (Fri–Sun)
+
+GRILL DO PÉRGULA:
+- Cuisine: Brazilian grilled meats
+- Description: "Prime cuts of Brazilian meat served with a selection of sauces and garnishes"
+- Hours: Mon–Thu, 7:30pm–9:30pm
+- Pricing: R$445 + 10% service (excluding beverages); max 8 guests per group
+- Booking: Through hotel team
+
+ADDITIONAL:
+- Piano Bar: "venue for toasting"
+- Breakfast: Daily Brazilian breakfast included in celebration packages
+
+NOTE: Occasions page also mentioned "Ristorante Hotel Cipriani (Italian fine dining)" — likely legacy reference.

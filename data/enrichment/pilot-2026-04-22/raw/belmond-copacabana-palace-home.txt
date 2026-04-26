@@ -1,0 +1,30 @@
+SOURCE: https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/
+FETCHED: 2026-04-19
+
+Address: Avenida Atlântica 1702, Rio de Janeiro, CEP 22021 001, Brazil
+Reservations: +55 21 2545 8787
+Phone: +55 (21) 2548 7070
+
+RENOVATIONS:
+- "The annex building is currently closed and undergoing renovation until October 2026."
+- Main pool upgrades from June 8 through September; guests offered access to an exclusive 6th-floor pool during this period.
+
+AMENITIES & SERVICES:
+- Pools: Main pool (under renovation June-September 2024); exclusive 6th-floor pool available during upgrades
+- Dining: Restaurant facilities available
+- Spa & Wellness: Full-service spa
+- Activities: Helicopter rides over Rio landmarks, Carioca adventure packages, Carnival experiences
+
+WEBSITE NAVIGATION:
+- The Hotel: /about
+- Gallery: /gallery
+- Accommodation: /accommodation
+- Dining: /dining
+- Spa: /spa
+- Experiences: /activities
+- Occasions: /occasions
+- Offers: /offers
+- Location: /location
+
+BRAND: Part of Belmond luxury collection (LVMH)
+SOCIAL: Instagram, Facebook, LinkedIn

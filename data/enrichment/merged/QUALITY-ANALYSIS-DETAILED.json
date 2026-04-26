@@ -1,0 +1,370 @@
+{
+  "timestamp": "2026-04-25T04:24:10.459Z",
+  "summary": {
+    "total_hotels": 120,
+    "low_quality_count": 28,
+    "no_data_count": 28,
+    "excellent_count": 16
+  },
+  "by_problem": {
+    "Sem dados de nenhuma fonte": [
+      "estabelecimentos",
+      "faimont-rio-de-janeiro-copacabana",
+      "fazenda-moreias",
+      "fazenda-sao-luiz-da-boasorte",
+      "hotel-village-le-canton",
+      "ilha-dos-poldros-pousada",
+      "kurotel-spa",
+      "le-canton-hotel",
+      "manoa-eco-villa",
+      "naatooh-guest-houses",
+      "nanii",
+      "parador-cambara-do-sul",
+      "parador-lumiar",
+      "pousada-alma-charme-atins",
+      "pousada-cantelli",
+      "pousada-capim-do-mato",
+      "pousada-figueira-da-serra",
+      "pousada-mata-n-ativa",
+      "pousada-outeiro",
+      "pousada-rabo-do-lagarto",
+      "pousada-tankamana",
+      "rituaali-spa",
+      "tiradentes-boutique",
+      "unique-garden",
+      "valle-d-incanto-hotel",
+      "villa-d-ozio",
+      "villa-do-valle-boutique-hotel",
+      "villa-dos-nativos"
+    ],
+    "Apenas Excel (sem enriquecimento)": [],
+    "Enriquecimento incompleto": [],
+    "Nome ausente": []
+  },
+  "low_quality_hotels": [
+    {
+      "slug": "estabelecimentos",
+      "name": "ESTABELECIMENTOS",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "faimont-rio-de-janeiro-copacabana",
+      "name": "Faimont Rio de Janeiro Copacabana",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "fazenda-moreias",
+      "name": "Fazenda Moréias",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "fazenda-sao-luiz-da-boasorte",
+      "name": "Fazenda São Luiz da Boasorte",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "hotel-village-le-canton",
+      "name": "Hotel Village Le Canton",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "ilha-dos-poldros-pousada",
+      "name": "Ilha dos Poldros Pousada",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "kurotel-spa",
+      "name": "Kurotel SPA",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "le-canton-hotel",
+      "name": "Le Canton Hotel",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "manoa-eco-villa",
+      "name": "Manoá Eco-Villa",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "naatooh-guest-houses",
+      "name": "Naatooh Guest Houses",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "nanii",
+      "name": "Nanii",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "parador-cambara-do-sul",
+      "name": "Parador Cambará do Sul",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "parador-lumiar",
+      "name": "Parador Lumiar",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-alma-charme-atins",
+      "name": "Pousada Alma Charme Atins",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-cantelli",
+      "name": "Pousada Cantelli",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-capim-do-mato",
+      "name": "Pousada Capim do Mato",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-figueira-da-serra",
+      "name": "Pousada Figueira da Serra",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-mata-n-ativa",
+      "name": "Pousada Mata N' Ativa",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-outeiro",
+      "name": "Pousada Outeiro",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-rabo-do-lagarto",
+      "name": "Pousada Rabo do Lagarto",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "pousada-tankamana",
+      "name": "Pousada Tankamana",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "rituaali-spa",
+      "name": "Rituaali Spa",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "tiradentes-boutique",
+      "name": "Tiradentes Boutique",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "unique-garden",
+      "name": "Unique Garden",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "valle-d-incanto-hotel",
+      "name": "Valle D'Incanto Hotel",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "villa-d-ozio",
+      "name": "Villa D'Ozio",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "villa-do-valle-boutique-hotel",
+      "name": "Villa do Valle Boutique Hotel",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    },
+    {
+      "slug": "villa-dos-nativos",
+      "name": "Villa dos Nativos",
+      "quality_score": 0,
+      "field_count": 0,
+      "sources": []
+    }
+  ],
+  "excellent_hotels": [
+    {
+      "slug": "fasano-rj-full",
+      "name": "Hotel Fasano Rio de Janeiro",
+      "quality_score": 0.934,
+      "completeness": 0.845,
+      "field_count": 48,
+      "sources": [
+        "hotel_website",
+        "ota_booking",
+        "local_xlsx"
+      ]
+    },
+    {
+      "slug": "fasano-rj",
+      "name": "Hotel Fasano Rio de Janeiro",
+      "quality_score": 0.934,
+      "completeness": 0.845,
+      "field_count": 48,
+      "sources": [
+        "hotel_website",
+        "ota_booking",
+        "local_xlsx"
+      ]
+    },
+    {
+      "slug": "nor-hotel-e-spa-full",
+      "name": "NÓR Hotel & Spa",
+      "quality_score": 0.907,
+      "completeness": 0.793,
+      "field_count": 51,
+      "sources": [
+        "hotel_website",
+        "ota_booking",
+        "ota_tripadvisor",
+        "local_db"
+      ]
+    },
+    {
+      "slug": "nor-hotel-e-spa",
+      "name": "NÓR Hotel & Spa",
+      "quality_score": 0.907,
+      "completeness": 0.793,
+      "field_count": 51,
+      "sources": [
+        "hotel_website",
+        "ota_booking",
+        "ota_tripadvisor",
+        "local_db"
+      ]
+    },
+    {
+      "slug": "pousada-inacia-full",
+      "name": "Pousada Inácia",
+      "quality_score": 0.907,
+      "completeness": 0.793,
+      "field_count": 48,
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor",
+        "local_xlsx",
+        "web_search"
+      ]
+    },
+    {
+      "slug": "pousada-inacia",
+      "name": "Pousada Inácia",
+      "quality_score": 0.907,
+      "completeness": 0.793,
+      "field_count": 48,
+      "sources": [
+        "hotel_website",
+        "ota_tripadvisor",
+        "local_xlsx",
+        "web_search"
+      ]
+    },
+    {
+      "slug": "hotel-emiliano-sp",
+      "name": "Hotel Emiliano São Paulo",
+      "quality_score": 0.8745689655172414,
+      "completeness": 0.7068965517241379,
+      "field_count": 10,
+      "sources": [
+        "hotel_website",
+        "local_xlsx"
+      ]
+    },
+    {
+      "slug": "fasano-sp",
+      "name": "Hotel Fasano São Paulo",
+      "quality_score": 0.8642241379310345,
+      "completeness": 0.6724137931034483,
+      "field_count": 10,
+      "sources": [
+        "hotel_website",
+        "local_xlsx"
+      ]
+    },
+    {
+      "slug": "canto-do-irere-boutique-hotel-full",
+      "name": "Canto do Irerê Boutique Hotel",
+      "quality_score": 0.86,
+      "completeness": 0.81,
+      "field_count": 47,
+      "sources": [
+        "hotel_website",
+        "circuito_elegante",
+        "ota_tripadvisor",
+        "press_hoteliernews",
+        "local_xlsx"
+      ]
+    },
+    {
+      "slug": "canto-do-irere-boutique-hotel",
+      "name": "Canto do Irerê Boutique Hotel",
+      "quality_score": 0.86,
+      "completeness": 0.81,
+      "field_count": 47,
+      "sources": [
+        "hotel_website",
+        "circuito_elegante",
+        "ota_tripadvisor",
+        "press_hoteliernews",
+        "local_xlsx"
+      ]
+    }
+  ]
+}

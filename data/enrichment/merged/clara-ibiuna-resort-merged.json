@@ -1,0 +1,82 @@
+{
+  "slug": "clara-ibiuna-resort",
+  "name": "Clara Ibiúna Resort",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Clara Ibiúna Resort",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://www.claraibiuna.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Ibiúna",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "SP",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://www.claraibiuna.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://www.claraibiuna.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Chalé"
+        },
+        {
+          "name": "Bungalow"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Trilhas",
+        "Natureza"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 11 4700-1000",
+        "website": "https://www.claraibiuna.com.br/",
+        "address": "SP-255, km 60 - Ibiúna, SP"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "clara-ibiuna-resort",
+    "ESTABELECIMENTOS": "Clara Ibiúna Resort",
+    "MUNICÍPIO": "Ibiúna",
+    "UF": "SP",
+    "Tem Reserva integrada por API?": "SIM",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": 13663,
+    "Região": "sudeste",
+    "Experiência": "Campo",
+    "Destino": "Interior de São Paulo"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

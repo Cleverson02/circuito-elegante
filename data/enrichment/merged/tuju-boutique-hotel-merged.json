@@ -1,0 +1,82 @@
+{
+  "slug": "tuju-boutique-hotel",
+  "name": "Tuju Boutique Hotel",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.48793103448275865,
+  "completeness": 0.4827586206896552,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Tuju Boutique Hotel",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://tujuhotel.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Trancoso",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "BA",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://tujuhotel.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://tujuhotel.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Suite"
+        },
+        {
+          "name": "Bungalow"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Praia",
+        "Piscina",
+        "Spa"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 73 2668-3000",
+        "website": "https://tujuhotel.com.br/",
+        "address": "Trancoso, Bahia"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "tuju-boutique-hotel",
+    "ESTABELECIMENTOS": "Tuju Boutique Hotel",
+    "MUNICÍPIO": "Passo do Camaragibe",
+    "UF": "AL",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "nordeste",
+    "Experiência": "praia",
+    "Destino": "Praia do Marceneiro"
+  },
+  "sources": [
+    "hotel_website"
+  ]
+}

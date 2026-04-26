@@ -1,0 +1,41 @@
+{
+  "slug": "hotel-belmond-cataratas",
+  "name": "Belmond Hotel das Cataratas",
+  "source_priority": [
+    "enriched",
+    "excel"
+  ],
+  "quality_score": 0.5571341318514111,
+  "completeness": 0.4071341318514111,
+  "data_from": {},
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Belmond Hotel das Cataratas",
+      "confidence_type": "literal"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Foz do Iguaçu",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "PR",
+      "confidence_type": "literal"
+    }
+  },
+  "excel_data": {
+    "slug": "hotel-belmond-cataratas",
+    "ESTABELECIMENTOS": "Hotel Belmond Cataratas",
+    "MUNICÍPIO": "Foz do Iguaçu",
+    "UF": "PR",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "NÃO",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "campo",
+    "Destino": "Cataratas do Iguaçu"
+  },
+  "sources": []
+}

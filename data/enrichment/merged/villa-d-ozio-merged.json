@@ -1,0 +1,24 @@
+{
+  "slug": "villa-d-ozio",
+  "name": "Villa D'Ozio",
+  "source_priority": [
+    "excel"
+  ],
+  "quality_score": 0,
+  "completeness": 0,
+  "data_from": {},
+  "fields": {},
+  "excel_data": {
+    "slug": "villa-d-ozio",
+    "ESTABELECIMENTOS": "Villa D'Ozio",
+    "MUNICÍPIO": "Itajaí",
+    "UF": "SC",
+    "Tem Reserva integrada por API?": "NÃO",
+    "Cupom BRADESCO": "SIM",
+    "hotel_ID": "SIM",
+    "Região": "sul",
+    "Experiência": "praia",
+    "Destino": "Praia Brava"
+  },
+  "sources": []
+}

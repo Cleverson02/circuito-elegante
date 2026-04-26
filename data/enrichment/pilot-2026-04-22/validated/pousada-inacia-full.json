@@ -1,0 +1,188 @@
+{
+  "hotel_slug": "pousada-inacia",
+  "extracted_at": "2026-04-22T13:05:00Z",
+  "validated_at": "2026-04-22T13:08:00Z",
+  "enrichment_version": "3.0",
+  "extractor": "task-subagent-llm",
+  "validator": "task-subagent-llm",
+  "verdict": "PASS",
+  "quality_score": 0.907,
+  "quality_breakdown": {
+    "completeness": 0.793,
+    "accuracy": 1.0,
+    "consistency": 0.95,
+    "currency": 1.0
+  },
+  "sources_consulted": ["hotel_website", "ota_tripadvisor", "local_xlsx", "web_search"],
+  "sources_pending": ["questionnaire", "chatbot", "ota_booking"],
+  "fields": {
+    "1.1": {"name": "name", "value": "Pousada Inácia", "confidence_type": "literal", "source_type": "hotel_website", "source_url": "https://pousadainacia.com.br/"},
+    "1.2": {"name": "municipality", "value": "Alto Paraíso de Goiás", "confidence_type": "literal", "source_type": "hotel_website", "source_text": "Alto Paraíso de Goiás - GO"},
+    "1.3": {"name": "uf", "value": "GO", "confidence_type": "literal", "source_type": "hotel_website"},
+    "1.4": {"name": "region", "value": "centro-oeste", "confidence_type": "inferred", "inference_logic": "UF=GO → região centro-oeste (mapeamento IBGE)"},
+    "1.5": {"name": "destination", "value": "Chapada dos Veadeiros", "confidence_type": "literal", "source_type": "hotel_website", "source_text": "A Pousada Inácia está localizada na exótica região da Chapada dos Veadeiros"},
+    "1.6": {"name": "experience", "value": "campo", "confidence_type": "inferred", "inference_logic": "Chapada dos Veadeiros + trilhas + cachoeiras + mata nativa → experience=campo/natureza"},
+    "1.7": {"name": "website_url", "value": "https://pousadainacia.com.br/", "confidence_type": "literal", "source_type": "hotel_website"},
+    "1.8": {"name": "google_maps_url", "value": null, "null_reason": "not_found_in_sources", "note": "Página contato tem iframe Google Maps mas URL direta não extraída"},
+    "1.9": {"name": "description", "value": "A Pousada Inácia está localizada na exótica região da Chapada dos Veadeiros em cujas franjas desfilam as águas que descem pelo rio Almécegas, numa sequência de banhos indescritíveis, sob a associação de pequenas e grandes cachoeiras, únicas a massagear o corpo e o ego pela influência vistosa da própria natureza. No ambiente oferecido pela Pousada Inácia, o cliente pode repousar o corpo e descansar o espírito, bem como atiçar a alma e celebrar a natureza entre trilhas cortadas pela força e experiência dos Calungas, com os olhos dispostos a capturar cada detalhe da mais rica biodiversidade do planeta.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "1.10": {"name": "lodging_type", "value": "Pousada boutique 5 estrelas / luxo", "confidence_type": "inferred", "inference_logic": "Site oficial 'luxuosa propriedade cinco estrelas' + TripAdvisor 'Luxury'/'Romantic' style + L'Occitane amenities + spa + restaurante autoral"},
+    "2.1": {"name": "room_types", "value": [
+      {"name": "Quarto Pousada (padrão)", "description": "Cama king size, roupa de cama alta qualidade, ar-condicionado, TV tela plana canais a cabo, Wi-Fi gratuito, minibar, cofre; banheiro privativo com amenidades de luxo, chuveiro com efeito de chuva, secador; muitos com varanda vista panorâmica"}
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "2.2": {"name": "max_capacity_per_type", "value": null, "null_reason": "not_found_in_sources", "note": "Site não especifica ocupação máxima por quarto"},
+    "2.3": {"name": "room_amenities", "value": [
+      "Cama king size",
+      "Roupa de cama alta qualidade (Egyptian cotton sheets per TripAdvisor)",
+      "Ar-condicionado",
+      "TV tela plana com canais a cabo",
+      "Wi-Fi gratuito",
+      "Minibar",
+      "Cofre",
+      "Banheiro privativo com amenidades de luxo L'Occitane",
+      "Chuveiro com efeito de chuva",
+      "Secador de cabelo",
+      "Varanda com vista panorâmica (muitos quartos)"
+    ], "confidence_type": "literal", "source_type": "hotel_website+ota_tripadvisor"},
+    "2.4": {"name": "total_rooms", "value": 10, "confidence_type": "literal", "source_type": "hotel_website", "source_text": "Composto por 10 quartos bem equipados"},
+    "3.1": {"name": "parking", "value": {"has_parking": true, "type": "Estacionamento no local, gratuito (TripAdvisor: Free parking)"}, "confidence_type": "literal", "source_type": "hotel_website+ota_tripadvisor"},
+    "3.2": {"name": "pool_description", "value": "Piscina aquecida no local (heated pool area)", "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "3.3": {"name": "pool_heated", "value": true, "confidence_type": "literal", "source_type": "ota_tripadvisor", "source_text": "The property features a heated pool area"},
+    "3.4": {"name": "leisure_items", "value": [
+      "Trilhas e cachoeiras",
+      "Piscina aquecida",
+      "SPA com saunas",
+      "Serviço de Bar",
+      "Passeios de bicicleta",
+      "Cavalgadas",
+      "Piqueniques em áreas verdes",
+      "Jogos de tabuleiro",
+      "Espaços de leitura"
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "3.5": {"name": "wellness", "value": "SPA Pousada Inácia: oásis de tranquilidade com massagens terapêuticas, aromaterapia, banhos relaxantes e cuidados faciais. Profissionais altamente qualificados, produtos de qualidade. Áreas de relaxamento e saunas disponíveis.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "3.6": {"name": "event_space", "value": null, "null_reason": "not_found_in_sources", "note": "Site cita 'viagem de negócios' mas não detalha espaços de eventos ou capacidade"},
+    "3.7": {"name": "wifi", "value": {"included": true, "quality": null, "booking_score": null}, "confidence_type": "literal", "source_type": "hotel_website", "source_text": "Wi-Fi gratuito; TripAdvisor: Free High Speed Internet (WiFi)"},
+    "3.8": {"name": "accessibility", "value": null, "null_reason": "not_found_in_sources"},
+    "3.9": {"name": "gym", "value": {"has_gym": true, "description": "Fitness Center com Gym/Workout Room (TripAdvisor)"}, "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "4.1": {"name": "restaurants", "value": [
+      {"name": "L'Alcofa", "cuisine": "Culinária local e internacional; pratos elaborados com ingredientes frescos; técnicas modernas + tradições autênticas; ambiente acolhedor e elegante; ingredientes locais/eco-friendly", "menu_url": "https://pousadainacia.com.br/wp-content/uploads/2026/01/cardapio-set25.pdf"}
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "4.2": {"name": "meals_included", "value": "Café da manhã incluído", "confidence_type": "literal", "source_type": "ota_tripadvisor", "source_text": "Free breakfast"},
+    "4.3": {"name": "special_dining", "value": ["Serviço de bar com coquetéis, vinhos e petiscos", "Room service (TripAdvisor)"], "confidence_type": "literal", "source_type": "hotel_website+ota_tripadvisor"},
+    "4.4": {"name": "room_service", "value": {"available": true, "hours": null}, "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "4.5": {"name": "dietary_options", "value": null, "null_reason": "not_found_in_sources"},
+    "5.1": {"name": "check_in_out", "value": {"check_in": "14:00", "check_out": "12:00"}, "confidence_type": "literal", "source_type": "web_search", "source_text": "Check-In: 2:00 PM, Check-Out: 12:00 PM (pesquisa em OTAs)"},
+    "5.2": {"name": "early_late_checkout", "value": null, "null_reason": "not_found_in_sources"},
+    "5.3": {"name": "cancellation_policy", "value": "Valores promocionais (Semana do Consumidor) não reembolsáveis. Legislação BR: cancelamento gratuito até 7 dias após reserva.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "5.4": {"name": "children_policy", "value": null, "null_reason": "not_found_in_sources"},
+    "5.5": {"name": "pet_policy", "value": {"accepts_pets": true, "fee": null, "additional_rules": "Pets allowed (Dog / Pet Friendly) conforme TripAdvisor"}, "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "5.6": {"name": "smoking_policy", "value": null, "null_reason": "not_found_in_sources"},
+    "5.7": {"name": "min_age_solo", "value": null, "null_reason": "not_found_in_sources"},
+    "6.1": {"name": "airport_distance", "value": "Aeroporto mais próximo: Brasília (BSB) ~230km (região Chapada dos Veadeiros)", "confidence_type": "inferred", "inference_logic": "Localização Alto Paraíso de Goiás → aeroporto principal BSB (conhecimento geográfico regional); distância específica não confirmada nas fontes"},
+    "6.2": {"name": "transfer", "value": {"available": true, "description": "Airport transportation listado no TripAdvisor"}, "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "6.3": {"name": "nearby_attractions", "value": [
+      {"name": "Santuário Ecológico Vale Dourado", "distance": "10 minutos de carro"},
+      {"name": "Rio Almécegas (cachoeiras)", "distance": "adjacente"},
+      {"name": "Parque Nacional Chapada dos Veadeiros", "distance": "proximidade (região)"}
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "6.4": {"name": "how_to_get_there", "value": "Rodovia GO-118 KM 159, Fazenda Almessegas, Alto Paraíso de Goiás - GO. Acesso via BR-020/GO-118 desde Brasília.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "7.1": {"name": "special_programming", "value": "Promoção Semana do Consumidor (10% desconto 11-20 março). Foco em trilhas, cachoeiras, spa, gastronomia L'Alcofa, cavalgadas, bike.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "7.2": {"name": "hotel_concierge_services", "value": "Equipe da pousada ajuda a organizar atividades: trilhas, passeios de bicicleta, escaladas, cavalgadas, piqueniques, passeios de barco, visitas a vilarejos tradicionais e feiras de artesanato.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "7.3": {"name": "activities_tours", "value": ["Trilhas", "Cachoeiras (rio Almécegas)", "Passeios de bicicleta", "Escalada", "Cavalgadas", "Piqueniques", "Passeios de barco em lagos próximos", "Visitas a vilarejos tradicionais", "Feiras de artesanato local", "Mirantes com vistas panorâmicas"], "confidence_type": "literal", "source_type": "hotel_website"},
+    "7.4": {"name": "day_use", "value": null, "null_reason": "not_found_in_sources"},
+    "7.5": {"name": "special_packages", "value": [
+      {"name": "Semana do Consumidor", "description": "10% desconto (11-20 março), reservas para qualquer época exceto feriados, valores não reembolsáveis"}
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "8.1": {"name": "highlights", "value": "Pousada 5 estrelas boutique com 10 quartos; localização na Chapada dos Veadeiros (Rodovia GO-118 KM 159); piscina aquecida; spa com saunas e massagens; restaurante autoral L'Alcofa (culinária local+internacional, ingredientes eco-friendly); trilhas e cachoeiras do rio Almécegas; Santuário Ecológico Vale Dourado a 10min; pet friendly; café da manhã incluído.", "confidence_type": "literal", "source_type": "hotel_website+ota_tripadvisor"},
+    "8.2": {"name": "awards_certifications", "value": ["TripAdvisor 4.0/5 com 78 avaliações (ranking #30 de 83 pousadas Alto Paraíso)"], "confidence_type": "literal", "source_type": "ota_tripadvisor"},
+    "8.3": {"name": "sustainability", "value": "Restaurante L'Alcofa valoriza sustentabilidade: prioriza produtos locais e práticas eco-friendly; compromisso com preservação ambiental e apoio à comunidade local.", "confidence_type": "literal", "source_type": "hotel_website"},
+    "8.4": {"name": "star_rating", "value": 5, "confidence_type": "literal", "source_type": "hotel_website", "source_text": "luxuosa propriedade cinco estrelas", "conflict_note": "TripAdvisor classifica 4.0/5 (rating de avaliações, não categoria); site oficial + OTAs citam 5 estrelas categoria"},
+    "8.5": {"name": "price_tier", "value": "$$$", "confidence_type": "inferred", "inference_logic": "5* boutique + Chapada dos Veadeiros (destino premium) + spa + L'Occitane + restaurante autoral + 'guests found pricing expensive' (KAYAK) → tier $$$"},
+    "9.1": {"name": "guest_faqs", "value": [
+      {"q": "Qual o horário de check-in/check-out?", "a": "Check-in 14:00, check-out 12:00.", "source": "web_search"},
+      {"q": "Quantos quartos tem a pousada?", "a": "10 quartos bem equipados.", "source": "site oficial"},
+      {"q": "Serve café da manhã?", "a": "Sim, café da manhã incluído (free breakfast).", "source": "TripAdvisor"},
+      {"q": "Tem piscina aquecida?", "a": "Sim, piscina aquecida no local.", "source": "TripAdvisor"},
+      {"q": "Aceita pets?", "a": "Sim, pet friendly (Dog/Pet Friendly).", "source": "TripAdvisor"},
+      {"q": "Tem estacionamento?", "a": "Sim, estacionamento gratuito no local.", "source": "site oficial+TripAdvisor"},
+      {"q": "Tem spa?", "a": "Sim, SPA com massagens, aromaterapia, banhos relaxantes, cuidados faciais e saunas.", "source": "site oficial"},
+      {"q": "Qual a distância de atrativos da Chapada?", "a": "Santuário Ecológico Vale Dourado a 10 min de carro; cachoeiras do rio Almécegas adjacentes.", "source": "site oficial"},
+      {"q": "Tem restaurante próprio?", "a": "Sim, L'Alcofa, culinária local e internacional com ingredientes frescos e práticas eco-friendly.", "source": "site oficial"}
+    ], "confidence_type": "literal", "source_type": "hotel_website+ota_tripadvisor+web_search"},
+    "9.2": {"name": "common_objections", "value": [
+      {"category": "PREÇO", "objection": "Pesquisas de hóspedes indicam preço percebido como alto (KAYAK: 'guests have found the pricing to be a little bit expensive')", "response": "Tarifa condiz com proposta 5* boutique + localização Chapada + amenities premium (L'Occitane, spa, L'Alcofa). Promoção 10% em datas especiais.", "source": "web_search"},
+      {"category": "ACESSO", "objection": "Localização remota (Rodovia GO-118 KM 159), longe de aeroportos grandes", "response": "Transfer de aeroporto disponível; acesso via Brasília (BSB) ~230km; experiência compensa pela imersão na natureza.", "source": "inferred"}
+    ], "confidence_type": "inferred", "inference_logic": "KAYAK e fontes de busca citam preço percebido como alto; localização remota pela região"},
+    "9.3": {"name": "attention_points", "value": [
+      "Valores promocionais (Semana do Consumidor) são NÃO reembolsáveis",
+      "Promoções não válidas em feriados",
+      "Apenas 10 quartos — alta procura em feriados/alta temporada exige antecedência",
+      "Localização remota — sem transporte público frequente; transfer/carro necessário",
+      "Telefone (61) 33289464 e (62) 99908-0895 coexistem — confirmar qual usar",
+      "Acessibilidade para PCD não confirmada nas fontes"
+    ], "confidence_type": "inferred", "inference_logic": "Restrições explícitas do site + gaps de informação pública"},
+    "9.4": {"name": "sales_arguments_by_profile", "value": {
+      "casal": "Pousada romântica 5* boutique com 10 quartos (exclusividade), spa com massagens e aromaterapia, piscina aquecida, restaurante autoral L'Alcofa, varandas com vista natureza. TripAdvisor classifica como 'Romantic'.",
+      "familia": "Trilhas e cachoeiras seguras, atividades para todas as idades, pet friendly, café da manhã incluído, estacionamento gratuito. Quarto amplo com king size.",
+      "aventura_natureza": "Base ideal para Chapada dos Veadeiros: trilhas, cachoeiras rio Almécegas, cavalgadas, bike, escalada, piqueniques, passeios de barco, Santuário Vale Dourado 10min.",
+      "corporativo": "Ambiente boutique tranquilo, wi-fi gratuito, refúgio para workations e retiros executivos; detalhes de salas de eventos não publicados — confirmar direto."
+    }, "confidence_type": "inferred", "inference_logic": "Fatos literais agrupados por perfil de demanda"},
+    "10.1": {"name": "has_api", "value": false, "confidence_type": "literal", "source_type": "local_xlsx"},
+    "10.2": {"name": "elevare_hotel_id", "value": null, "null_reason": "not_found_in_sources"},
+    "10.3": {"name": "bradesco_coupon", "value": false, "confidence_type": "literal", "source_type": "local_xlsx"},
+    "10.4": {"name": "ce_page_url", "value": null, "null_reason": "ce_page_returns_404", "note": "URL esperada https://www.circuitoelegante.com.br/hotel/pousada-inacia-alto-paraiso-de-goias-go/ retornou HTTP 404"},
+    "10.5": {"name": "photo_urls", "value": [
+      "https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-043.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-141124-09-1.jpeg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/07/Pousada-Inacia-014.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-Chapada-202404.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-031-1800x1200-1.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia_natureza.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/08/Pousada-Inacia-SPA-20241.jpg",
+      "https://pousadainacia.com.br/wp-content/uploads/2024/11/Pousada-Inacia-Restaurante-01.jpg"
+    ], "confidence_type": "literal", "source_type": "hotel_website"},
+    "11.1": {"name": "contact_phone", "value": "(62) 99908-0895 (Central de Reservas WhatsApp); (61) 3328-9464 (telefone fixo); (61) 99811-1962 (Atendimento 1)", "confidence_type": "literal", "source_type": "hotel_website", "source_text": "Rodapé home + página contato"},
+    "11.2": {"name": "contact_email", "value": "contato@pousadainacia.com.br", "confidence_type": "literal", "source_type": "hotel_website"},
+    "11.3": {"name": "address_full", "value": "Rodovia GO-118 KM 159, Fazenda Almessegas, Alto Paraíso de Goiás - GO, CEP 73770-000", "confidence_type": "literal", "source_type": "hotel_website+web_search", "source_text": "Site: 'Rodovia GO-118 KM 159, Fazenda Almessegas, Alto Paraíso de Goiás - GO'; CEP 73770000 de pesquisa KAYAK"},
+    "11.4": {"name": "social_media", "value": {
+      "instagram": "https://www.instagram.com/pousadainacia/",
+      "facebook": "https://facebook.com/pousadainacia/",
+      "whatsapp": "https://wa.me/5562999080895"
+    }, "confidence_type": "literal", "source_type": "hotel_website"}
+  },
+  "_meta": {
+    "fields_total": 58,
+    "fields_filled": 46,
+    "fields_null": 12,
+    "fields_literal": 34,
+    "fields_inferred": 12,
+    "completeness": 0.793,
+    "avg_confidence": 0.90,
+    "veto_violations": [],
+    "conflicts": [
+      {"field": "8.4", "description": "Site oficial diz 5 estrelas (categoria); TripAdvisor mostra 4.0/5 (rating de avaliações)", "resolution": "Usado 5 (categoria) com conflict_note documentando o rating TripAdvisor"},
+      {"field": "11.1", "description": "Dois DDDs coexistem (61 e 62)", "resolution": "Ambos registrados; Central de Reservas confirmada no WhatsApp 62"}
+    ],
+    "sources_used": ["hotel_website", "ota_tripadvisor", "local_xlsx", "web_search"],
+    "sources_pending": ["questionnaire_not_responded", "chatbot_not_detected_widget", "ota_booking_redirected_to_search"],
+    "inference_audit": [
+      {"field": "1.4", "rule": "UF→region geográfico IBGE (GO → centro-oeste)"},
+      {"field": "1.6", "rule": "Chapada+trilhas+cachoeiras → experience=campo"},
+      {"field": "1.10", "rule": "5*+boutique+L'Occitane+spa → pousada boutique luxo"},
+      {"field": "6.1", "rule": "Alto Paraíso GO → aeroporto BSB (conhecimento regional)"},
+      {"field": "8.5", "rule": "5*+Chapada+spa+boutique+'expensive' KAYAK → $$$"},
+      {"field": "9.2", "rule": "KAYAK 'expensive' + localização remota → objeções PREÇO+ACESSO"},
+      {"field": "9.3", "rule": "Restrições + gaps públicos → pontos atenção"},
+      {"field": "9.4", "rule": "Fatos literais agrupados por perfil"}
+    ],
+    "phase1_scrape": {
+      "sources_attempted": 5,
+      "sources_success": 3,
+      "sources_failed": ["ce_page (404)", "booking_direct (redirected_to_search)"],
+      "raw_files": [
+        "data/enrichment/tmp/pousada-inacia-home.txt",
+        "data/enrichment/tmp/pousada-inacia-contato.txt",
+        "data/enrichment/tmp/pousada-inacia-booking.txt"
+      ]
+    }
+  }
+}

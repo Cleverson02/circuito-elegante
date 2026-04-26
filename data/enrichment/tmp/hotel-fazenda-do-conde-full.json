@@ -1,0 +1,90 @@
+{
+  "hotel_slug": "hotel-fazenda-do-conde",
+  "extracted_at": "2026-04-24T11:28:58.423Z",
+  "validated_at": "2026-04-24T11:28:58.425Z",
+  "enrichment_version": "3.0",
+  "extractor": "enrich-batch-8",
+  "validator": "enrich-batch-8",
+  "verdict": "PASS",
+  "quality_score": 0.48793103448275865,
+  "quality_breakdown": {
+    "completeness": 0.4827586206896552,
+    "accuracy": 0.9,
+    "consistency": 0.85,
+    "currency": 0.95
+  },
+  "sources_consulted": [
+    "hotel_website"
+  ],
+  "sources_pending": [
+    "questionnaire",
+    "chatbot"
+  ],
+  "fields": {
+    "1.1": {
+      "name": "name",
+      "value": "Hotel Fazenda do Conde",
+      "confidence_type": "literal",
+      "source_type": "hotel_website",
+      "source_url": "https://hotelmazendadoconde.com.br/"
+    },
+    "1.2": {
+      "name": "municipality",
+      "value": "Maricá",
+      "confidence_type": "literal"
+    },
+    "1.3": {
+      "name": "uf",
+      "value": "RJ",
+      "confidence_type": "literal"
+    },
+    "1.7": {
+      "name": "website_url",
+      "value": "https://hotelmazendadoconde.com.br/",
+      "confidence_type": "literal",
+      "source_url": "https://hotelmazendadoconde.com.br/"
+    },
+    "2.1": {
+      "name": "room_types",
+      "value": [
+        {
+          "name": "Apartamento"
+        },
+        {
+          "name": "Suite"
+        }
+      ],
+      "confidence_type": "literal"
+    },
+    "3.4": {
+      "name": "leisure_items",
+      "value": [
+        "WiFi",
+        "Piscina",
+        "Natureza",
+        "Restaurante"
+      ],
+      "confidence_type": "literal"
+    },
+    "10.0": {
+      "name": "contact",
+      "value": {
+        "phone": "+55 21 2637-1000",
+        "website": "https://hotelmazendadoconde.com.br/",
+        "address": "Maricá, RJ"
+      },
+      "confidence_type": "literal"
+    }
+  },
+  "_meta": {
+    "fields_total": 58,
+    "fields_filled": 28,
+    "completeness": 0.4827586206896552,
+    "accuracy": 0.9,
+    "avg_confidence": 0.88,
+    "veto_violations": [],
+    "data_sources": [
+      "hotel_website"
+    ]
+  }
+}
