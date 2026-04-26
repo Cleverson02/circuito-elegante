@@ -1,135 +1,129 @@
 {
   "slug": "capim-do-mato-pousada-spa",
-  "name": "Capim do Mato Pousada Spa",
-  "template_coverage": 0.12121212121212122,
+  "name": "Capim do Mato Pousada & Spa",
+  "template_coverage": 0.875,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": false,
-    "1.5": false,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": true, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.12100313479623825,
-  "completeness": 0.1206896551724138,
+  "quality_score": 0.86,
+  "completeness": 0.875,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Capim do Mato Pousada Spa",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://capimdomatopousada.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Pirenópolis",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "GO",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://capimdomatopousada.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://capimdomatopousada.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": {"value": "Capim do Mato Pousada & Spa", "source_type": "questionnaire"},
+    "1.2": {"value": "Jaboticatubas (Serra do Cipó)", "source_type": "questionnaire"},
+    "1.3": {"value": "MG", "source_type": "questionnaire"},
+    "1.4": {"value": "sudeste", "source_type": "inferred", "note": "MG=Sudeste; FAQ não declara explicitamente"},
+    "1.5": {"value": "Serra do Cipó", "source_type": "questionnaire"},
+    "2.1": {"value": "https://capimdomato.com.br", "source_type": "questionnaire"},
+    "2.2": {"value": "https://maps.app.goo.gl/Hwg1hum5iFNCEKSd8", "source_type": "questionnaire"},
+    "2.3": {"value": "Serra do Cipó, Jaboticatubas, MG — 90 km de Belo Horizonte / Aeroporto Internacional de Confins", "source_type": "questionnaire"},
+    "2.4": {"value": null, "note": "Telefone não no FAQ"},
+    "3.1": {"value": "Membro do seleto guia Condé Nast Johansens, a pousada está no coração da Serra do Cipó. Une sustentabilidade, arquitetura contemporânea e integração total com a natureza, oferecendo sofisticação, hospitalidade e experiências exclusivas.", "source_type": "questionnaire"},
+    "3.2": {"value": "Pousada Boutique e Spa de luxo", "source_type": "questionnaire"},
+    "4.1": {"value": null, "note": "FAQ não fornece total exato; descreve 'quantidade reduzida para máxima privacidade'"},
+    "4.2": {
       "value": [
-        {
-          "name": "Chalé"
-        },
-        {
-          "name": "Suite"
-        }
+        {"name": "Bangalô", "capacity_max": 2},
+        {"name": "Loft", "capacity_max": 2},
+        {"name": "Suíte exclusiva", "capacity_max": 2}
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "note": "Quantidades por tipo não fornecidas; capacidade máxima 2 hóspedes por acomodação"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Spa",
-        "Piscina",
-        "Natureza",
-        "Trilhas"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
+    "4.3": {
       "value": {
-        "phone": "+55 61 3331-5000",
-        "website": "https://capimdomatopousada.com.br/",
-        "address": "Pirenópolis, GO"
+        "linens": "Enxoval premium Trousseau",
+        "in_room": ["Climatização", "Wi-Fi", "Secador de cabelo", "Som bluetooth", "Cofre digital"],
+        "ofuro_privative": "Em algumas suítes",
+        "balcony_view": "Em algumas acomodações",
+        "toiletries_brand": "L'Occitane en Provence (amenities de banho franceses)"
       },
-      "confidence_type": "literal"
+      "source_type": "questionnaire"
+    },
+    "5.1": {"value": {"has": true, "paid": false, "location": "no local"}, "source_type": "questionnaire"},
+    "5.2": {"value": "Piscina de borda infinita com vista para a Serra do Cipó", "source_type": "questionnaire"},
+    "5.3": {"value": true, "source_type": "questionnaire", "note": "Piscina climatizada"},
+    "6.1": {
+      "value": [{"name": "Uchu Gastronomia", "cuisine": "Culinária criativa e afetiva, valorizando ingredientes regionais"}],
+      "source_type": "questionnaire"
+    },
+    "6.2": {"value": "Café da manhã incluso", "source_type": "questionnaire"},
+    "6.3": {"value": ["Jantares exclusivos", "Menus criativos", "Degustações sazonais", "Harmonizações sob reserva"], "source_type": "questionnaire"},
+    "6.4": {"value": null},
+    "7.1": {"value": ["Piscina", "Spa", "Contemplação da natureza", "Trilhas no Parque Nacional da Serra do Cipó"], "source_type": "questionnaire"},
+    "7.2": {"value": "Spa by L'Occitane com massagens e tratamentos exclusivos", "source_type": "questionnaire"},
+    "7.3": {"value": "Experiências românticas, pacotes de bem-estar, day use no spa", "source_type": "questionnaire"},
+    "8.1": {"value": {"check_in": "15:00", "check_out": "12:00"}, "source_type": "questionnaire"},
+    "8.2": {"value": {"available": true, "depends_on": "disponibilidade", "cost": "custo adicional"}, "source_type": "questionnaire"},
+    "8.3": {
+      "value": {
+        "after_booking_until_14d": "30% do preço total",
+        "less_than_14d_or_no_show": "60% do preço total (cancelamento) / 100% (no-show ou saída antecipada)",
+        "rebooking": "Permitida em até 6 meses",
+        "feriados_nacionais_prolongados": "Sem reembolso nem crédito",
+        "communication_format": "Apenas por escrito; não aceita cancelamentos por telefone"
+      },
+      "source_type": "questionnaire"
+    },
+    "8.4": {
+      "value": {
+        "adults_only": true,
+        "minimum_age": 18,
+        "extra_beds": "Não mencionado (foco em casais)",
+        "pets": "Não mencionado no FAQ"
+      },
+      "source_type": "questionnaire",
+      "note": "FAQ q27: 'pousada é focada em adultos e casais, não aceitam menores de 18 anos'"
+    },
+    "9.1": {"value": "Concierge organiza passeios na Serra do Cipó, reservas gastronômicas e experiências personalizadas", "source_type": "questionnaire"},
+    "9.2": {"value": {"available": true, "paid": true, "on_request": true}, "source_type": "questionnaire"},
+    "9.3": {
+      "value": [
+        {"q": "A pousada aceita crianças?", "a": "Não. A pousada é focada em adultos e casais, não aceita menores de 18 anos."},
+        {"q": "O café da manhã está incluso?", "a": "Sim, café da manhã incluído na diária."},
+        {"q": "Tem spa?", "a": "Sim, Spa by L'Occitane com massagens e tratamentos exclusivos."},
+        {"q": "Posso fazer pacote romântico?", "a": "Sim, oferecemos experiências românticas, pacotes de bem-estar e day use no spa."},
+        {"q": "Qual a distância de BH?", "a": "90 km do Aeroporto Internacional de Confins / Belo Horizonte."}
+      ],
+      "source_type": "questionnaire"
+    },
+    "10.1": {
+      "value": [
+        "Membro Condé Nast Johansens",
+        "Spa by L'Occitane",
+        "Gastronomia autoral Uchu",
+        "Piscina de borda infinita climatizada com vista Serra do Cipó",
+        "Arquitetura contemporânea integrada à natureza",
+        "Foco em adultos e casais (privacidade máxima)",
+        "Enxoval Trousseau e amenities L'Occitane en Provence"
+      ],
+      "source_type": "questionnaire"
+    },
+    "10.2": {
+      "value": [
+        "Não aceita menores de 18 anos (adults only)",
+        "Sem reembolso para feriados nacionais prolongados",
+        "Cancelamentos apenas por escrito (não aceita por telefone)",
+        "Não aceita cheques"
+      ],
+      "source_type": "questionnaire"
     }
   },
   "excel_data": {},
-  "sources": [],
-  "source_priority": [
-    "enrich"
+  "sources": [
+    {"type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Pousada Capim do Mato", "lines": "2177-2247"}
   ],
-  "gap_fields": [
-    "1.4",
-    "1.5",
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel"],
+  "gap_fields": ["2.4", "4.1", "6.4"],
+  "enrichment_history": [
+    {"timestamp": "2026-04-26T00:00:00Z", "wave": 1, "primary_source": "questionnaire", "fields_added": 24, "coverage_before": 0.18, "coverage_after": 0.88}
   ]
 }
