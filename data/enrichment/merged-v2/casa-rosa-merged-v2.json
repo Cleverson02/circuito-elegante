@@ -1,107 +1,37 @@
 {
   "slug": "casa-rosa",
   "name": "Casa Rosa",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.15151515151515152,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": false, "2.2": false, "2.3": false, "2.4": false,
+    "3.1": false, "3.2": false,
+    "4.1": false, "4.2": false, "4.3": false,
+    "5.1": false, "5.2": false, "5.3": false,
+    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "7.1": false, "7.2": false, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": false, "10.2": false
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.15,
+  "completeness": 0.15,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Casa Rosa",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://casarosapirenopolis.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Pirenópolis",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "GO",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://casarosapirenopolis.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://casarosapirenopolis.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Deluxe"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Piscina",
-        "Trilhas",
-        "Natureza"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 61 3331-7000",
-        "website": "https://casarosapirenopolis.com.br/",
-        "address": "Pirenópolis, GO"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "sudeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Serra Fluminense",
-      "source_type": "excel"
-    }
+    "1.1": { "value": "Casa Rosa", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.2": { "value": "Petrópolis", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel autoritativo; JSON antigo dizia Pirenópolis/GO (incorreto)" },
+    "1.3": { "value": "RJ", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Serra Fluminense", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": null, "note": "Tentativas: casarosapirenopolis.com.br (URL antiga, pesquisa errada), casarosapetropolis.com.br (ECONNREFUSED), pousadacasarosa.com.br (vazio), hotelcasarosa.com.br (ECONNREFUSED) — site oficial não localizado" },
+    "2.2": { "value": null }, "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": null }, "3.2": { "value": null },
+    "4.1": { "value": null }, "4.2": { "value": null }, "4.3": { "value": null },
+    "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
+    "6.1": { "value": null }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": null }, "7.2": { "value": null }, "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": null }, "10.2": { "value": null }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Casa Rosa",
@@ -114,38 +44,25 @@
     "Experiência": "serra",
     "Destino": "Serra Fluminense"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.1","2.2","2.3","2.4","3.1","3.2","4.1","4.2","4.3","5.1","5.2","5.3","6.1","6.2","6.3","6.4","7.1","7.2","7.3","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.1","10.2"],
+  "data_quality_warnings": [
+    "Site oficial não localizado (4 variantes testadas: casarosapirenopolis, casarosapetropolis, casarosa, hotelcasarosa, pousadacasarosa)",
+    "JSON antigo: Pirenópolis/GO + DDD 61 (incorreto) — descartado em favor de Excel (Petrópolis/RJ)",
+    "Coverage baixa por falta de fonte web acessível"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T12:35:00Z",
+      "wave": 1,
+      "primary_source": "excel",
+      "fields_added": 0,
+      "coverage_before": 0.18,
+      "coverage_after": 0.15,
+      "notes": "Coverage formal caiu pois 2.1 antigo (URL Pirenópolis) era falso. Excel-only até nova URL ser obtida."
+    }
   ]
 }
