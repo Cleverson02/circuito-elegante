@@ -1,152 +1,164 @@
 {
   "slug": "bahia-bonita-hotel-boutique-quadrado",
-  "name": "Bahia Bonita Hotel Boutique Quadrado",
-  "template_coverage": 0.18181818181818182,
+  "name": "Hotel Boutique Bahia Bonita",
+  "template_coverage": 0.90625,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": true, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": false, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.88,
+  "completeness": 0.90625,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Bahia Bonita Hotel Boutique Quadrado",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://bahiabonita.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Porto Seguro",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "BA",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://bahiabonita.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://bahiabonita.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": {"value": "Hotel Boutique Bahia Bonita", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q1"},
+    "1.2": {"value": "Trancoso (Porto Seguro)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q2"},
+    "1.3": {"value": "BA", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q3"},
+    "1.4": {"value": "nordeste", "source_type": "excel"},
+    "1.5": {"value": "Trancoso", "source_type": "excel"},
+    "2.1": {"value": "https://bahiabonita.com.br", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q4"},
+    "2.2": {"value": "https://maps.app.goo.gl/v8bMDPcxJP55oZsbA", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q5"},
+    "2.3": {"value": "Trancoso, Porto Seguro, BA — 400m da praia, 100m do Quadrado", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6", "note": "FAQ não fornece endereço numerado; valor descritivo da localização"},
+    "2.4": {"value": null, "note": "Telefone não consta no FAQ; requer scraping"},
+    "3.1": {"value": "O Hotel Boutique Bahia Bonita, em Trancoso, está a 400 metros da praia e a 100 metros do charmoso Quadrado. Oferece vista para o mar, piscina, jardim e terraço, além de quartos rodeados por natureza, alguns com piscina privativa ou hidromassagem. O café da manhã é servido até às 13h com mais de 100 itens preparados na hora. O hotel conta ainda com lounge bar, massagem, concierge, estacionamento e experiências exclusivas, como passeios de bike, cavalo, quadriciclo e até helicóptero. Para quem busca mais privacidade, há as Bahia Bonita Vilas: casas sofisticadas à beira do Rio Trancoso.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6"},
+    "3.2": {"value": "Hotel Boutique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q7"},
+    "4.1": {"value": null, "note": "FAQ lista 7 tipos de quarto + casas (vilas), mas não dá quantidade por tipo nem total"},
+    "4.2": {
       "value": [
-        {
-          "name": "Suite"
-        },
-        {
-          "name": "Deluxe"
-        }
+        {"name": "Bangalô com Piscina Privativa e Jacuzzi", "size_m2": 135, "capacity": 4},
+        {"name": "Suíte com Piscina Aquecida Vista Mar", "size_m2": 135, "capacity": 4},
+        {"name": "Duplex com Hidromassagem Vista Mar", "size_m2": 110, "capacity": 4},
+        {"name": "Suíte com Hidromassagem e Vista Mar", "size_m2": 90, "capacity": 5},
+        {"name": "Suíte Luxo Superior com Varanda", "size_m2": 48, "capacity": 2},
+        {"name": "Suíte Master com Vista Mar", "size_m2": 68, "capacity": 4},
+        {"name": "Suíte Luxo Térreo com Varanda", "size_m2": 65, "capacity": 4},
+        {"name": "Bahia Bonita Vilas (casas à beira do Rio Trancoso)", "capacity_max": 14, "note": "Para famílias, grupos e casais"}
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6,q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Spa",
-        "Restaurante"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
+    "4.3": {
       "value": {
-        "phone": "+55 73 3288-2000",
-        "website": "https://bahiabonita.com.br/",
-        "address": "Porto Seguro, Bahia"
+        "toiletries": ["Shampoo", "Condicionador", "Hidratante", "Sabonete líquido", "Sabonete em barra", "Kit de maquiagem", "Toalha demaquilante"],
+        "in_room": ["TV", "Frigobar", "Roupão", "Ferro de passar"],
+        "linens": "Enxovais de alta qualidade"
       },
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q9"
     },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
+    "5.1": {"value": {"has": true, "paid": false, "capacity": 15}, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q10"},
+    "5.2": {"value": "Possui piscina (FAQ q11 confirma sem detalhar quantidade/tamanho); algumas suítes têm piscina privativa, há piscina de uso comum, e as casas têm piscina própria", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q11,q12"},
+    "5.3": {"value": {"common_pool_heated": true, "private_suite_pools_heated": true, "house_pools_heated": false}, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q12"},
+    "6.1": {
+      "value": [
+        {"name": "Café da manhã à la carte", "type": "in-house", "features": "+100 opções (tapiocas, omeletes, cuscuz, ovos, frutas, sucos), feito na hora, servido até 13h"},
+        {"name": "Lounge Bar", "type": "in-house", "source": "FAQ q6 menciona; não detalhado"},
+        {"name": "Chá da tarde às 16h", "type": "in-house", "features": "Seleção de chás, café e petiscos"}
+      ],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6,q13,q14",
+      "note": "Hotel não opera restaurantes a la carte tradicionais; foco em café/chá com curadoria gastronômica"
     },
-    "1.5": {
-      "value": "Trancoso",
-      "source_type": "excel"
+    "6.2": {"value": ["Café da manhã (a la carte, +100 itens)", "Chá da tarde (16h)"], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q14"},
+    "6.3": {"value": "Personalização de experiências gastronômicas a pedido do hóspede", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q15"},
+    "6.4": {"value": null, "note": "Room service não mencionado no FAQ"},
+    "7.1": {
+      "value": ["Praia (400m do hotel)", "Caiaque", "Passeios personalizados pela região", "Passeios de bike", "Passeios de cavalo", "Passeios de quadriciclo", "Passeios de helicóptero", "Passeios de UTV"],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6,q16,q19"
+    },
+    "7.2": {"value": "Serviços de massagens podem ser contratados à parte", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q17"},
+    "7.3": {"value": "Não há programação especial para adultos ou crianças", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q18"},
+    "8.1": {"value": {"check_in": "15:00", "check_out": "12:00"}, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q21"},
+    "8.2": {"value": {"available": true, "depends_on": "disponibilidade", "cost": "não especificado no FAQ"}, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q22"},
+    "8.3": {
+      "value": {
+        "cancellation": {
+          "less_than_30_days": "Sem devolução do valor pago",
+          "more_than_30_days": "Carta de crédito equivalente a 50% do adiantamento",
+          "more_than_60_days": "Carta de crédito equivalente a 70% do adiantamento"
+        },
+        "alteration": {
+          "less_than_30_days": "Não é possível alterar",
+          "more_than_30_days": "Taxa de alteração de 20% do valor total",
+          "more_than_60_days": "Sem taxa de alteração",
+          "limit": "Apenas uma alteração permitida"
+        }
+      },
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q26"
+    },
+    "8.4": {
+      "value": {
+        "children_under_5_free": true,
+        "extra_bed_cost": "+25% do valor da diária",
+        "pets": "Não mencionado no FAQ"
+      },
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q27"
+    },
+    "9.1": {
+      "value": "Concierge para passeios de quadriciclo, helicóptero, táxi, UTV, restaurantes, maquiadores, manicures e cabeleireiras",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q19"
+    },
+    "9.2": {
+      "value": {"to_beaches_trancoso": {"available": true, "paid": false}, "to_airport": {"available": true, "paid": true}},
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q24"
+    },
+    "9.3": {
+      "value": [
+        {"q": "O hotel aceita crianças?", "a": "Crianças até 5 anos são cortesia. Cama extra tem custo adicional de 25%."},
+        {"q": "O hotel possui estacionamento?", "a": "Sim, gratuito, para 15 carros."},
+        {"q": "Quais experiências podem ser agendadas?", "a": "Passeios de quadriciclo, helicóptero, táxi, UTV, indicações de restaurantes, maquiadores, manicures e cabeleireiras — tudo via concierge."},
+        {"q": "Qual a distância do aeroporto?", "a": "80km do Aeroporto de Porto Seguro."},
+        {"q": "O hotel oferece WiFi?", "a": "Sim, com média de 400-600 megas."}
+      ],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q23,q25,q29"
+    },
+    "10.1": {
+      "value": [
+        "Atendimento 100% humanizado",
+        "Café da manhã com mais de 100 itens, servido até 13h",
+        "Transfer gratuito para praias de Trancoso",
+        "Massagem de boas-vindas",
+        "Localização privilegiada: 400m da praia, 100m do Quadrado",
+        "Quartos com piscina privativa e/ou hidromassagem",
+        "Bahia Bonita Vilas para famílias e grupos (até 14 hóspedes)",
+        "WiFi 400-600 megas"
+      ],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q6,q30"
+    },
+    "10.2": {
+      "value": ["Sem espaço para eventos (casamentos/corporativos)", "Apenas uma alteração de reserva permitida"],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#bahia-bonita-q20,q26"
     }
   },
-  "excel_data": {
-    "ESTABELECIMENTOS": "Bahia Bonita Hotel Boutique Quadrado",
-    "MUNICÍPIO": "Trancoso",
-    "UF": "BA",
-    "Tem Reserva integrada por API?": "SIM",
-    "Cupom BRADESCO": "SIM",
-    "hotel_ID": 6588,
-    "Região": "nordeste",
-    "Experiência": "praia",
-    "Destino": "Trancoso"
-  },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    {"type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Bahia Bonita", "lines": "226-364"},
+    {"type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "row": "Bahia Bonita Hotel Boutique Quadrado"}
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "enrich"],
+  "gap_fields": ["2.4", "4.1", "6.4"],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T00:00:00Z",
+      "wave": 1,
+      "primary_source": "questionnaire",
+      "fields_added": ["2.2", "2.3", "3.1", "3.2", "4.2", "4.3", "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "7.1", "7.2", "7.3", "8.1", "8.2", "8.3", "8.4", "9.1", "9.2", "9.3", "10.1", "10.2"],
+      "coverage_before": 0.18,
+      "coverage_after": 0.91,
+      "remaining_gaps": ["2.4 phone", "4.1 total_rooms", "6.4 room_service"]
+    }
   ]
 }
