@@ -1,110 +1,73 @@
 {
   "slug": "lk-design-hotel",
   "name": "LK Design Hotel",
-  "template_coverage": 0.18181818181818182,
+  "template_coverage": 0.9090909090909091,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.91,
+  "completeness": 0.91,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "LK Design Hotel",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://www.lkdesignhotel.com.br/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Porto Alegre",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "RS",
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "name": "region",
-      "value": "RS",
-      "confidence_type": "inferred"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://www.lkdesignhotel.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://www.lkdesignhotel.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "LK Design Hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q1" },
+    "1.2": { "value": "Florianópolis", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q2", "note": "FAQ + Excel confirmam; JSON antigo dizia Porto Alegre/RS (incorreto)" },
+    "1.3": { "value": "SC", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q3" },
+    "1.4": { "value": "sul", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Florianópolis", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://lkdesignhotel.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/mp8a8BpgrpSahc4LA", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q5" },
+    "2.3": { "value": null, "note": "Endereço completo não no FAQ (Av. Beira Mar Norte mencionada)" },
+    "2.4": { "value": null, "note": "Telefone não no FAQ" },
+    "3.1": { "value": "Expressão do estilo minimalista sofisticado, construído em 2020 na Av. Beira Mar Norte de Florianópolis com vistas privilegiadas da Baía. 164 quartos, rooftop com vista mar, seis espaços para eventos, arquitetura cosmopolita e arrojada. Complexo inclui Osli Restaurante (gastronomia conceitual) e LK Café Bar.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q6" },
+    "3.2": { "value": "Hotel de Alto Padrão", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q7" },
+    "4.1": { "value": 164, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q6" },
+    "4.2": {
       "value": [
-        {
-          "name": "Standard"
-        },
-        {
-          "name": "Superior"
-        },
-        {
-          "name": "Suite"
-        }
+        { "name": "Superior Vista Jardim Família (Conjugado)", "max_guests": 4, "feature": "1 quarto cama casal + 1 quarto duas camas solteiro" },
+        { "name": "Superior Vista Jardim Twin", "max_guests": 2 },
+        { "name": "Superior Vista Jardim King", "max_guests": 2 },
+        { "name": "Superior Vista Jardim King PCD", "max_guests": 2 },
+        { "name": "Superior Vista Lateral Mar King", "max_guests": 2 },
+        { "name": "Superior Vista Lateral Mar Twin", "max_guests": 2 },
+        { "name": "Superior Vista Lateral Mar Família", "max_guests": 3, "note": "1 menor de até 16 anos" },
+        { "name": "Luxo Frente Mar King", "max_guests": 2 },
+        { "name": "Suíte Junior", "max_guests": 2 },
+        { "name": "Suíte Júnior Família", "max_guests": 3, "note": "1 menor até 16 anos" }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 51 3028-5000",
-        "website": "https://www.lkdesignhotel.com.br/",
-        "address": "Rua Andrade Neves, 143 - Centro, Porto Alegre, RS"
-      },
-      "confidence_type": "literal"
-    },
-    "1.5": {
-      "value": "Florianópolis",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Amenities L'Occitane (Francesa)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q9" },
+    "5.1": { "value": "Estacionamento coberto com seguro, valet e estação de recarga para carros elétricos. Diária 13h-13h: R$ 59,00 por veículo + R$ 15,00 hora adicional.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q10" },
+    "5.2": { "value": "Piscina de borda infinita revestida com pedras naturais de Bali, climatizada, no rooftop", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q11" },
+    "5.3": { "value": "Sim, climatizada e aquecida a 29°C", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q12" },
+    "6.1": { "value": [
+      { "name": "Osli Restaurante", "since": 2021, "cuisine": "contemporânea, valoriza produtos locais de SC", "chef": "Felipe Silva" },
+      { "name": "LK Café Bar" }
+    ], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q13" },
+    "6.2": { "value": "Café da manhã incluso", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q14" },
+    "6.3": { "value": "Café da manhã, brunch, feijoada, cremes e sopas, menu executivo, menu degustação, à la carte, pacotes em datas comemorativas", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Spa, academia, piscina, música ao vivo, recreação infantil, ioga, bicicletas e raquetes de beach tennis cortesia, passeio a fazenda de cultivo de ostras, trilhas, exposições e shows", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q16" },
+    "7.2": { "value": "Variedade de tratamentos terapêuticos personalizados (menu de terapias para necessidades individuais, experiência sinestésica)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q17" },
+    "7.3": { "value": "Adultos: LK Bar com música ao vivo 5ª a sábado, Osli Restaurante. Crianças: experiência kids, aluguel PS5 (sob disponibilidade), recreação sáb/dom 12h30-15h.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q18" },
+    "8.1": { "value": "Check-in 15h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q21" },
+    "8.2": { "value": "Sim, mediante disponibilidade da categoria reservada; podendo ter valores adicionais ou não", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q22" },
+    "8.3": { "value": "Reservas individuais sem ônus com 48h de antecedência ao check-in. Grupos: acordos pontuais.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q26" },
+    "8.4": { "value": "Sem camas extras. Crianças até 10 anos cortesia (acomodação na mesma cama do casal ou categorias específicas para família).", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q27" },
+    "9.1": { "value": "Concierge da ordem Les Clefs d'Or (Union Internationale des Concierges d'Hotels). Organiza roteiros turísticos, reservas em restaurantes, massagens, experiências kids, experiências românticas.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q19" },
+    "9.2": { "value": "Aproximadamente 9km do aeroporto de Florianópolis (~14 min de carro). Transfer com motoristas parceiros (carros, vans, mini vans), cobrado à parte.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q23-q24" },
+    "9.3": { "value": "Horário de check-in/out, horário da academia, o que está incluso, estacionamento", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q25" },
+    "10.1": { "value": "Localização (10 min Beira Mar Shopping, 15 min Ponte Hercílio Luz e centro); welcome drink (água, suco e espumante); concierge Les Clefs d'Or; centro de convenções; rooftop com piscina climatizada; Wi-Fi de boa qualidade em todas as dependências", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q29-q30" },
+    "10.2": { "value": "Pagamento via link após reserva (PIX ou cartão); parcelamento até 5x sem juros (parcelas mínimas de R$ 300)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#lk-design-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "LK Design Hotel",
@@ -117,38 +80,24 @@
     "Experiência": "praia",
     "Destino": "Florianópolis"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "LK Design Hotel", "lines": "1380-1513" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: Porto Alegre/RS + DDD 51 (incorreto) — corrigido para Florianópolis/SC via FAQ + Excel"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:10:00Z",
+      "wave": 2,
+      "primary_source": "questionnaire",
+      "fields_added": 24,
+      "coverage_before": 0.18,
+      "coverage_after": 0.91,
+      "notes": "GOLD via FAQ. Hotel design 164 quartos em Florianópolis (Av. Beira Mar Norte, 2020). 10 categorias detalhadas. Osli Restaurante (Chef Felipe Silva). Concierge Les Clefs d'Or. Piscina rooftop infinita climatizada 29°C."
+    }
   ]
 }
