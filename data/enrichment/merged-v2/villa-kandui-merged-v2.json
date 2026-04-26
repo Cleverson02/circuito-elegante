@@ -1,108 +1,64 @@
 {
   "slug": "villa-kandui",
-  "name": "Villa Kandui",
-  "template_coverage": 0.18181818181818182,
+  "name": "Villa Kandui Boutique Hotel",
+  "template_coverage": 0.8484848484848485,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": true, "2.3": false, "2.4": false,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": true,
+    "5.1": true, "5.2": true, "5.3": true,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
+    "9.1": true, "9.2": true, "9.3": true,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.85,
+  "completeness": 0.85,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Villa Kandui",
-      "confidence_type": "literal",
-      "source_type": "hotel_website",
-      "source_url": "https://villakandui.com/"
-    },
-    "1.2": {
-      "name": "municipality",
-      "value": "Mentawai Islands",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "SB",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://villakandui.com/",
-      "confidence_type": "literal",
-      "source_url": "https://villakandui.com/"
-    },
-    "2.1": {
-      "name": "room_types",
+    "1.1": { "value": "Villa Kandui Boutique Hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q1" },
+    "1.2": { "value": "Maraú", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q2", "note": "FAQ + Excel confirmam Maraú/BA; JSON antigo dizia 'Mentawai Islands/SB' (Indonésia — bug crítico)" },
+    "1.3": { "value": "BA", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q3" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Taipu de Fora", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://villakandui.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q4" },
+    "2.2": { "value": "https://maps.app.goo.gl/GqEZq3M97Bg664hG8", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q5" },
+    "2.3": { "value": null }, "2.4": { "value": null },
+    "3.1": { "value": "Na paradisíaca Praia de Taipu de Fora, Península de Maraú/BA. Reúne natureza, conforto e exclusividade em verdadeiro santuário de boas energias. 14 villas privativas à beira-mar para momentos em família ou entre amigos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q6" },
+    "3.2": { "value": "Hotel Boutique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q7" },
+    "4.1": { "value": 14, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q6" },
+    "4.2": {
       "value": [
-        {
-          "name": "Bungalow"
-        },
-        {
-          "name": "Suite Deluxe"
-        }
+        { "name": "Suíte Kandui Beach Villa", "size_m2": 158, "suites": 2, "max_guests": 6 },
+        { "name": "Suíte Beach Villa Rooftop com piscina privativa (Villas 8/9/10)", "size_m2": 80, "suites": 2, "max_guests": 6 },
+        { "name": "Suíte Kandui Ocean Villas", "size_m2": 158, "suites": 2, "max_guests": 6 },
+        { "name": "Suíte Ocean Loft (Villas 4/5/6/7)", "size_m2": 78, "suites": 1, "max_guests": 3 },
+        { "name": "Kandui Ocean Loft (Lofts 11/12/13/14)", "size_m2": 80, "max_guests": 4 }
       ],
-      "confidence_type": "literal"
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q8"
     },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Praia",
-        "Piscina",
-        "Restaurante",
-        "Spa"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+62 812-3456-7890",
-        "website": "https://villakandui.com/",
-        "address": "Mentawai Islands, Sumatra"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Taipu de Fora",
-      "source_type": "excel"
-    }
+    "4.3": { "value": "Amenidades de banho Avatim; enxoval Trousseau", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q9" },
+    "5.1": { "value": "Estacionamento gratuito para hóspedes", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q10" },
+    "5.2": { "value": "Sim (algumas villas com piscina privativa)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q11" },
+    "5.3": { "value": "Não, são piscinas naturais", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q12" },
+    "6.1": { "value": [{ "name": "Kandui Beach Lounge", "feature": "atmosfera rústica beira-mar, culinária baiana, drinques especiais; aberto a não-hóspedes mediante reserva e Day Use" }], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q13" },
+    "6.2": { "value": "Café da manhã incluso", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q14" },
+    "6.3": { "value": "Experiências personalizadas conforme período (consultar time)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q15" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Vida noturna; piscinas naturais de Taipu de Fora; surf, SUP, quadriciclo; pôr do Sol Ponta do Mutá; Vila de Barra Grande; Lagoa Azul; Morro do Farol; passeio Ilhas Tropicais; Cachoeira do Tremebé; beach bike; jardineira off-road; Rio Carapitanguy; motocross, canoa havaiana, pesca submarina/alto mar, snorkeling/mergulho", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q16" },
+    "7.2": { "value": "Não possui spa próprio; massagem terceirizada na acomodação possível", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q17" },
+    "7.3": { "value": "Sem programação dedicada para crianças (mas há experiências na Península)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q18" },
+    "8.1": { "value": "Check-in 15h; Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q21" },
+    "8.2": { "value": "Sob disponibilidade, custo adicional", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q22" },
+    "8.3": { "value": "Até 30 dias antes: crédito (uso em até 4 meses); <30 dias: 50% cobrado; <7 dias: sem reembolso; no-show: sem reembolso; saída antecipada: sem reembolso. Solicitação por e-mail.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q26" },
+    "8.4": { "value": "Aceita crianças. Berço portátil sob consulta.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q27" },
+    "9.1": { "value": "Concierge recomenda parceiros da Península de Maraú para experiências", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q19" },
+    "9.2": { "value": "Aeroporto Jorge Amado Ilhéus (IOS) ~130km. Opções: (1) Carro Ilhéus→Barra Grande 85km asfalto + 45km terra (2h30 normais); (2) Transfer Ilhéus→Camamu (2h) + lancha rápida 30min até Pier Barra Grande; (3) Salvador→Barra Grande de carro (6-7h via ferry boat). Transfer pago via parceiros.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q23-q24" },
+    "9.3": { "value": "Caixas eletrônicos na Península, sinal de telefone, aceite de animais, o que levar na mala", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q25" },
+    "10.1": { "value": "Equipe atenta ao bem-estar antes da chegada; número limitado de hóspedes (atendimento personalizado); projeto sustentável (madeira reaproveitada, preservação de coqueiros nativos, sistema ecológico de tratamento de esgoto); Wi-Fi rápido", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q29-q30" },
+    "10.2": { "value": "Pagamento em até 48h após pedido (com comprovante por e-mail). 50% no ato da reserva; 50% restante 7 dias antes do check-in.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#villa-kandui-q28" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Villa Kandui",
@@ -115,38 +71,16 @@
     "Experiência": "praia",
     "Destino": "Taipu de Fora"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "Villa Kandui", "lines": "3388-3507" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.3","2.4","6.4"],
+  "data_quality_warnings": [
+    "JSON antigo: 'Mentawai Islands/SB' (Indonésia, bug grave!) + DDD +62 — corrigido para Maraú/BA via FAQ + Excel"
+  ],
+  "enrichment_history": [
+    { "timestamp": "2026-04-26T17:00:00Z", "wave": 3, "primary_source": "questionnaire", "fields_added": 24, "coverage_before": 0.18, "coverage_after": 0.85, "notes": "GOLD via FAQ. Villa Kandui Boutique Hotel — 14 villas beira-mar Taipu de Fora/Maraú/BA. Kandui Beach Lounge restaurante. Sem spa próprio. Projeto sustentável." }
   ]
 }
