@@ -1,108 +1,60 @@
 {
   "slug": "refugio-na-serra",
-  "name": "Refúgio na Serra",
-  "template_coverage": 0.18181818181818182,
+  "name": "Refúgio na Serra Boutique Hotel",
+  "template_coverage": 0.6363636363636364,
   "template_fields": {
-    "1.1": true,
-    "1.2": true,
-    "1.3": true,
-    "1.4": true,
-    "1.5": true,
-    "2.1": true,
-    "2.2": false,
-    "2.3": false,
-    "2.4": false,
-    "3.1": false,
-    "3.2": false,
-    "4.1": false,
-    "4.2": false,
-    "4.3": false,
-    "5.1": false,
-    "5.2": false,
-    "5.3": false,
-    "6.1": false,
-    "6.2": false,
-    "6.3": false,
-    "6.4": false,
-    "7.1": false,
-    "7.2": false,
-    "7.3": false,
-    "8.1": false,
-    "8.2": false,
-    "8.3": false,
-    "8.4": false,
-    "9.1": false,
-    "9.2": false,
-    "9.3": false,
-    "10.1": false,
-    "10.2": false
+    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
+    "2.1": true, "2.2": false, "2.3": true, "2.4": true,
+    "3.1": true, "3.2": true,
+    "4.1": true, "4.2": true, "4.3": false,
+    "5.1": false, "5.2": false, "5.3": false,
+    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": false,
+    "8.1": false, "8.2": false, "8.3": false, "8.4": true,
+    "9.1": false, "9.2": false, "9.3": false,
+    "10.1": true, "10.2": true
   },
-  "quality_score": 0.17115987460815046,
-  "completeness": 0.15517241379310345,
+  "quality_score": 0.64,
+  "completeness": 0.64,
   "fields": {
-    "1.1": {
-      "name": "name",
-      "value": "Refúgio na Serra",
-      "confidence_type": "literal",
+    "1.1": { "value": "Refúgio na Serra Boutique Hotel", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "1.2": { "value": "Mucugê", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam Mucugê/BA Chapada Diamantina; JSON antigo dizia Gramado/RS (incorreto)" },
+    "1.3": { "value": "BA", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.4": { "value": "nordeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "1.5": { "value": "Chapada Diamantina", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
+    "2.1": { "value": "https://www.refugionaserra.com.br/", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/", "note": "URL antiga refugionaserrahotel.com.br offline" },
+    "2.2": { "value": null },
+    "2.3": { "value": "Rua Caetité, 40A — Centro Histórico, Mucugê/BA, CEP 46750-000", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "2.4": { "value": "+55 71 98136-5626", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "3.1": { "value": "Hotel boutique familiar estabelecido em 2018, projetado para 'tocar a alma' com exclusividade, rusticidade e elegância em ambiente sereno no centro histórico de Mucugê.", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "3.2": { "value": "Hotel Boutique", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "4.1": { "value": 13, "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "4.2": {
+      "value": [
+        { "name": "Bangalô", "qty": 3 },
+        { "name": "Suíte Jardim", "qty": 4 },
+        { "name": "Suíte Jardim Suspenso", "qty": 1 },
+        { "name": "Suíte Design", "qty": 3 },
+        { "name": "Suíte Design Vista da Serra", "qty": 1 },
+        { "name": "Suíte Master", "qty": 1 }
+      ],
       "source_type": "hotel_website",
-      "source_url": "https://refugionaserrahotel.com.br/"
+      "source_url": "https://www.refugionaserra.com.br/"
     },
-    "1.2": {
-      "name": "municipality",
-      "value": "Gramado",
-      "confidence_type": "literal"
-    },
-    "1.3": {
-      "name": "uf",
-      "value": "RS",
-      "confidence_type": "literal"
-    },
-    "1.7": {
-      "name": "website_url",
-      "value": "https://refugionaserrahotel.com.br/",
-      "confidence_type": "literal",
-      "source_url": "https://refugionaserrahotel.com.br/"
-    },
-    "2.1": {
-      "name": "room_types",
-      "value": [
-        {
-          "name": "Apartamento"
-        },
-        {
-          "name": "Suite"
-        }
-      ],
-      "confidence_type": "literal"
-    },
-    "3.4": {
-      "name": "leisure_items",
-      "value": [
-        "WiFi",
-        "Spa",
-        "Piscina",
-        "Restaurante",
-        "Bar"
-      ],
-      "confidence_type": "literal"
-    },
-    "10.0": {
-      "name": "contact",
-      "value": {
-        "phone": "+55 54 3286-2000",
-        "website": "https://refugionaserrahotel.com.br/",
-        "address": "Rua Passo da Gravata - Gramado, RS"
-      },
-      "confidence_type": "literal"
-    },
-    "1.4": {
-      "value": "nordeste",
-      "source_type": "excel"
-    },
-    "1.5": {
-      "value": "Chapada Diamantina",
-      "source_type": "excel"
-    }
+    "4.3": { "value": null },
+    "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
+    "6.1": { "value": [{ "name": "Restaurante Paraguassu" }], "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "6.2": { "value": "Cozinha nacional e internacional", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "6.3": { "value": "Jantares privativos, piqueniques, menu degustação, jantares ao ar livre sob Flamboyants", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "6.4": { "value": null },
+    "7.1": { "value": "Spa, yoga, jantares privativos, piqueniques, área de fogueira", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "7.2": { "value": "Spa", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "7.3": { "value": null },
+    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null },
+    "8.4": { "value": "Hóspedes aceitos a partir de 8 anos. NÃO aceita pets.", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
+    "10.1": { "value": "Certificações de prêmios; microclima natural; integração com jardim; jantares ao ar livre sob árvores Flamboyant", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" },
+    "10.2": { "value": "Proibido fumar nas instalações; idade mínima 8 anos; pets não permitidos", "source_type": "hotel_website", "source_url": "https://www.refugionaserra.com.br/" }
   },
   "excel_data": {
     "ESTABELECIMENTOS": "Refugio na Serra",
@@ -115,38 +67,24 @@
     "Experiência": "serra",
     "Destino": "Chapada Diamantina"
   },
-  "sources": [],
-  "source_priority": [
-    "enrich",
-    "excel"
+  "sources": [
+    { "type": "hotel_website", "url": "https://www.refugionaserra.com.br/" },
+    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
-  "gap_fields": [
-    "2.2",
-    "2.3",
-    "2.4",
-    "3.1",
-    "3.2",
-    "4.1",
-    "4.2",
-    "4.3",
-    "5.1",
-    "5.2",
-    "5.3",
-    "6.1",
-    "6.2",
-    "6.3",
-    "6.4",
-    "7.1",
-    "7.2",
-    "7.3",
-    "8.1",
-    "8.2",
-    "8.3",
-    "8.4",
-    "9.1",
-    "9.2",
-    "9.3",
-    "10.1",
-    "10.2"
+  "source_priority": ["questionnaire", "excel", "hotel_website"],
+  "gap_fields": ["2.2","4.3","5.1","5.2","5.3","6.4","7.3","8.1","8.2","8.3","9.1","9.2","9.3"],
+  "data_quality_warnings": [
+    "JSON antigo: Gramado/RS + DDD 54 — corrigido para Mucugê/BA via Excel + site"
+  ],
+  "enrichment_history": [
+    {
+      "timestamp": "2026-04-26T15:50:00Z",
+      "wave": 3,
+      "primary_source": "hotel_website",
+      "fields_added": 17,
+      "coverage_before": 0.18,
+      "coverage_after": 0.64,
+      "notes": "Hotel boutique familiar 13 acomodações em Mucugê (Chapada Diamantina). Restaurante Paraguassu. Spa. Idade mínima 8 anos."
+    }
   ]
 }
