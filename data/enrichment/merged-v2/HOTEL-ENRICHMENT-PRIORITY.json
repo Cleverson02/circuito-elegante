@@ -1,0 +1,986 @@
+{
+  "timestamp": "2026-04-28T03:30:50.456Z",
+  "total_hotels": 92,
+  "classification": {
+    "gold": {
+      "count": 9,
+      "hotels": [
+        {
+          "name": "Atins Charme Chalés",
+          "slug": "atins-charme",
+          "coverage": 0.9375,
+          "critical": 10
+        },
+        {
+          "name": "Hotel Boutique Bahia Bonita",
+          "slug": "bahia-bonita-hotel-boutique-quadrado",
+          "coverage": 0.90625,
+          "critical": 9
+        },
+        {
+          "name": "Bupitanga Hotel",
+          "slug": "bupitanga-hotel",
+          "coverage": 0.9375,
+          "critical": 9
+        },
+        {
+          "name": "Casa Turquesa",
+          "slug": "casa-turquesa",
+          "coverage": 0.9090909090909091,
+          "critical": 8
+        },
+        {
+          "name": "Hotel Fasano Rio de Janeiro",
+          "slug": "fasano-rj",
+          "coverage": 0.9090909090909091,
+          "critical": 10
+        },
+        {
+          "name": "Insólito Boutique Hotel & Spa",
+          "slug": "insolito-boutique-hotel",
+          "coverage": 0.9393939393939394,
+          "critical": 10
+        },
+        {
+          "name": "LK Design Hotel",
+          "slug": "lk-design-hotel",
+          "coverage": 0.9090909090909091,
+          "critical": 8
+        },
+        {
+          "name": "NÓR Hotel & Spa",
+          "slug": "nor-hotel-e-spa",
+          "coverage": 0.9393939393939394,
+          "critical": 10
+        },
+        {
+          "name": "Tiradentes Boutique Hotel",
+          "slug": "tiradentes-boutique",
+          "coverage": 0.9393939393939394,
+          "critical": 9
+        }
+      ]
+    },
+    "good": {
+      "count": 25,
+      "hotels": [
+        {
+          "name": "Copacabana Palace, A Belmond Hotel",
+          "slug": "belmond-copacabana-palace",
+          "coverage": 0.8484848484848485,
+          "critical": 10
+        },
+        {
+          "name": "Clara Dourado Resort",
+          "slug": "clara-dourado-resort",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Clara Ibiúna Resort",
+          "slug": "clara-ibiuna-resort",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Hotel Fazenda Suíça Le Canton",
+          "slug": "hotel-fazenda-suica-le-canton",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Hotel Village Le Canton",
+          "slug": "hotel-village-le-canton",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Nanii Hotel",
+          "slug": "nanii",
+          "coverage": 0.8787878787878788,
+          "critical": 9
+        },
+        {
+          "name": "Nomaa Hotel",
+          "slug": "nomaa-hotel",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Parador Lumiar Hotel & SPA",
+          "slug": "parador-lumiar",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Hotel Boutique & SPA Ponta de Inhambupe by Slaviero Hotéis",
+          "slug": "ponta-de-inhambupe-hotel-boutique-spa",
+          "coverage": 0.8181818181818182,
+          "critical": 9
+        },
+        {
+          "name": "Alma Charme Atins",
+          "slug": "pousada-alma-charme-atins",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Capim do Mato Pousada & Spa",
+          "slug": "pousada-capim-do-mato",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Pousada Inácia",
+          "slug": "pousada-inacia",
+          "coverage": 0.8787878787878788,
+          "critical": 10
+        },
+        {
+          "name": "Pousada Mata N'ativa",
+          "slug": "pousada-mata-n-ativa",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Ibiti Projeto",
+          "slug": "projeto-ibiti-hospedagem",
+          "coverage": 0.8181818181818182,
+          "critical": 10
+        },
+        {
+          "name": "Rancharia Charme Beach",
+          "slug": "rancharia-charme-beach",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Rancho do Peixe",
+          "slug": "rancho-do-peixe",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Castelo Saint Andrews",
+          "slug": "saint-andrews-hotel",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Txai Resort & Spa Itacaré",
+          "slug": "txai-resort",
+          "coverage": 0.8787878787878788,
+          "critical": 9
+        },
+        {
+          "name": "Unique Garden",
+          "slug": "unique-garden",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Valle D'Incanto Hotel",
+          "slug": "valle-d-incanto-hotel",
+          "coverage": 0.8787878787878788,
+          "critical": 8
+        },
+        {
+          "name": "Vila Cerrado",
+          "slug": "vila-cerrado",
+          "coverage": 0.8181818181818182,
+          "critical": 7
+        },
+        {
+          "name": "Vila Kalango",
+          "slug": "vila-kalango",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Villa do Vale Boutique Hotel",
+          "slug": "villa-do-valle-boutique-hotel",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Villa dos Nativos Boutique Hotel",
+          "slug": "villa-dos-nativos",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        },
+        {
+          "name": "Villa Kandui Boutique Hotel",
+          "slug": "villa-kandui",
+          "coverage": 0.8484848484848485,
+          "critical": 8
+        }
+      ]
+    },
+    "fair": {
+      "count": 34,
+      "hotels": [
+        {
+          "name": "Canto do Irerê Boutique Hotel",
+          "slug": "canto-do-irere-boutique-hotel",
+          "coverage": 0.7878787878787878,
+          "critical": 10,
+          "missing_fields": 7
+        },
+        {
+          "name": "Hotel Magique (complexo Le Canton)",
+          "slug": "le-canton-hotel",
+          "coverage": 0.7878787878787878,
+          "critical": 7,
+          "missing_fields": 6
+        },
+        {
+          "name": "Pousada do Ouro",
+          "slug": "pousada-do-ouro",
+          "coverage": 0.7272727272727273,
+          "critical": 9,
+          "missing_fields": 9
+        },
+        {
+          "name": "Hotel Gran Marquise Fortaleza",
+          "slug": "hotel-gran-marquise",
+          "coverage": 0.696969696969697,
+          "critical": 8,
+          "missing_fields": 10
+        },
+        {
+          "name": "Hotel Fasano Belo Horizonte",
+          "slug": "fasano-bh",
+          "coverage": 0.6666666666666666,
+          "critical": 8,
+          "missing_fields": 11
+        },
+        {
+          "name": "Hotel Fasano Boa Vista",
+          "slug": "fasano-boavista",
+          "coverage": 0.6666666666666666,
+          "critical": 8,
+          "missing_fields": 11
+        },
+        {
+          "name": "Fairmont Rio de Janeiro Copacabana",
+          "slug": "faimont-rio-de-janeiro-copacabana",
+          "coverage": 0.6363636363636364,
+          "critical": 7,
+          "missing_fields": 11
+        },
+        {
+          "name": "Hotel Fasano Salvador",
+          "slug": "fasano-ssa",
+          "coverage": 0.6363636363636364,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Hotel Parador em Cambará do Sul",
+          "slug": "parador-cambara-do-sul",
+          "coverage": 0.6363636363636364,
+          "critical": 9,
+          "missing_fields": 12
+        },
+        {
+          "name": "Pousada Boutique Figueira da Serra",
+          "slug": "pousada-figueira-da-serra",
+          "coverage": 0.6363636363636364,
+          "critical": 7,
+          "missing_fields": 12
+        },
+        {
+          "name": "Refúgio na Serra Boutique Hotel",
+          "slug": "refugio-na-serra",
+          "coverage": 0.6363636363636364,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Villa d'Ozio | Hotel à beira mar",
+          "slug": "villa-d-ozio",
+          "coverage": 0.6363636363636364,
+          "critical": 8,
+          "missing_fields": 11
+        },
+        {
+          "name": "Zendaya Resort | Beach | Sport | Spa",
+          "slug": "zendaya-resort",
+          "coverage": 0.6363636363636364,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Botanique Hotel & Spa",
+          "slug": "botanique-hotel-experience",
+          "coverage": 0.625,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Casa Marambaia",
+          "slug": "casa-marambaia",
+          "coverage": 0.6060606060606061,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Clara Arte Resort",
+          "slug": "clara-arte-resort",
+          "coverage": 0.6060606060606061,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Hotel Fasano São Paulo",
+          "slug": "fasano-sp",
+          "coverage": 0.6060606060606061,
+          "critical": 8,
+          "missing_fields": 13
+        },
+        {
+          "name": "Santa Teresa Hotel RJ - MGallery",
+          "slug": "santa-teresa-rj-mgallery",
+          "coverage": 0.6060606060606061,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Fazenda São Luiz da Boa Sorte",
+          "slug": "fazenda-sao-luiz-da-boasorte",
+          "coverage": 0.5757575757575758,
+          "critical": 7,
+          "missing_fields": 14
+        },
+        {
+          "name": "HCM Hotel Corais de Manaíra",
+          "slug": "hcm-hotel-corais-de-manaira",
+          "coverage": 0.5757575757575758,
+          "critical": 7,
+          "missing_fields": 14
+        },
+        {
+          "name": "Hotel Emiliano São Paulo",
+          "slug": "hotel-emiliano-sp",
+          "coverage": 0.5757575757575758,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Kenoa Exclusive Beach Spa & Resort",
+          "slug": "kenoa",
+          "coverage": 0.5757575757575758,
+          "critical": 8,
+          "missing_fields": 17
+        },
+        {
+          "name": "Pousada Rabo do Lagarto",
+          "slug": "pousada-rabo-do-lagarto",
+          "coverage": 0.5757575757575758,
+          "critical": 8,
+          "missing_fields": 15
+        },
+        {
+          "name": "Vila de Alter Pousada Boutique Amazônia",
+          "slug": "vila-de-alter",
+          "coverage": 0.5757575757575758,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Casa Näh Praia",
+          "slug": "casa-nah-praia",
+          "coverage": 0.5454545454545454,
+          "critical": 7,
+          "missing_fields": 15
+        },
+        {
+          "name": "Naatooh — Hotel Boutique em Florianópolis",
+          "slug": "naatooh-guest-houses",
+          "coverage": 0.5454545454545454,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Pousada Cantelli",
+          "slug": "pousada-cantelli",
+          "coverage": 0.5454545454545454,
+          "critical": 8,
+          "missing_fields": 12
+        },
+        {
+          "name": "Pousada Outeiro das Brisas",
+          "slug": "pousada-outeiro",
+          "coverage": 0.5454545454545454,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Rituaali Clínica & Spa",
+          "slug": "rituaali-spa",
+          "coverage": 0.5454545454545454,
+          "critical": 8,
+          "missing_fields": 15
+        },
+        {
+          "name": "Hotel Unique São Paulo",
+          "slug": "unique-sp",
+          "coverage": 0.5454545454545454,
+          "critical": 8,
+          "missing_fields": 14
+        },
+        {
+          "name": "Vila Entre Chaves",
+          "slug": "vila-entre-chaves",
+          "coverage": 0.5454545454545454,
+          "critical": 7,
+          "missing_fields": 14
+        },
+        {
+          "name": "Kurotel Spa Médico",
+          "slug": "kurotel-spa",
+          "coverage": 0.5151515151515151,
+          "critical": 7,
+          "missing_fields": 15
+        },
+        {
+          "name": "Villa Rasa",
+          "slug": "villa-rasa",
+          "coverage": 0.5151515151515151,
+          "critical": 8,
+          "missing_fields": 16
+        },
+        {
+          "name": "Wood Hotel",
+          "slug": "wood",
+          "coverage": 0.5151515151515151,
+          "critical": 8,
+          "missing_fields": 14
+        }
+      ]
+    },
+    "poor": {
+      "count": 24,
+      "hotels": [
+        {
+          "name": "Carmel Taíba Exclusive Resort",
+          "slug": "carmel-taiba-exclusive-resort",
+          "coverage": 0.45454545454545453,
+          "critical": 5,
+          "missing_fields": 18
+        },
+        {
+          "name": "Hotel Casa da Montanha",
+          "slug": "casa-da-montanha-hotel",
+          "coverage": 0.45454545454545453,
+          "critical": 7,
+          "missing_fields": 18
+        },
+        {
+          "name": "Grande Hotel Termas de Araxá",
+          "slug": "grande-hotel-termas-araxa",
+          "coverage": 0.45454545454545453,
+          "critical": 6,
+          "missing_fields": 18
+        },
+        {
+          "name": "Hotel das Cataratas, A Belmond Hotel",
+          "slug": "hotel-belmond-cataratas",
+          "coverage": 0.45454545454545453,
+          "critical": 6,
+          "missing_fields": 18
+        },
+        {
+          "name": "Pousada Ilha dos Poldros",
+          "slug": "ilha-dos-poldros-pousada",
+          "coverage": 0.45454545454545453,
+          "critical": 7,
+          "missing_fields": 17
+        },
+        {
+          "name": "Pousada Tankamana",
+          "slug": "pousada-tankamana",
+          "coverage": 0.45454545454545453,
+          "critical": 7,
+          "missing_fields": 19
+        },
+        {
+          "name": "Casa de Santo Antônio Hotel de Charme",
+          "slug": "casa-de-santo-antonio",
+          "coverage": 0.42424242424242425,
+          "critical": 6,
+          "missing_fields": 19
+        },
+        {
+          "name": "Hotel Boutique Quebra-Noz",
+          "slug": "quebra-noz-hotel-boutique",
+          "coverage": 0.42424242424242425,
+          "critical": 7,
+          "missing_fields": 19
+        },
+        {
+          "name": "Carmel Charme Resort",
+          "slug": "carmel-charme",
+          "coverage": 0.40625,
+          "critical": 7,
+          "missing_fields": 21
+        },
+        {
+          "name": "Casa Poema",
+          "slug": "casa-poema",
+          "coverage": 0.36363636363636365,
+          "critical": 5,
+          "missing_fields": 21
+        },
+        {
+          "name": "Hotel Fasano Angra dos Reis",
+          "slug": "fasano-angra-dos-reis",
+          "coverage": 0.36363636363636365,
+          "critical": 6,
+          "missing_fields": 21
+        },
+        {
+          "name": "Hotel Solar do Império",
+          "slug": "solar-do-imperio",
+          "coverage": 0.36363636363636365,
+          "critical": 6,
+          "missing_fields": 21
+        },
+        {
+          "name": "Baía das Carúbas Glamping",
+          "slug": "baia-das-caraubas",
+          "coverage": 0.34375,
+          "critical": 5,
+          "missing_fields": 22
+        },
+        {
+          "name": "Caiman, Pantanal",
+          "slug": "caiman-pantanal",
+          "coverage": 0.34375,
+          "critical": 6,
+          "missing_fields": 21
+        },
+        {
+          "name": "Hotel Emiliano Rio de Janeiro",
+          "slug": "hotel-emiliano-rj",
+          "coverage": 0.3333333333333333,
+          "critical": 5,
+          "missing_fields": 22
+        },
+        {
+          "name": "Tivoli Mofarrej São Paulo",
+          "slug": "tivoli-mofarrej",
+          "coverage": 0.30303030303030304,
+          "critical": 5,
+          "missing_fields": 23
+        },
+        {
+          "name": "Cabanas do Vale",
+          "slug": "cabanas-do-vale",
+          "coverage": 0.21875,
+          "critical": 4,
+          "missing_fields": 26
+        },
+        {
+          "name": "Manoá Eco-Villa",
+          "slug": "manoa-eco-villa",
+          "coverage": 0.18181818181818182,
+          "critical": 2,
+          "missing_fields": 27
+        },
+        {
+          "name": "Casa do Arandis",
+          "slug": "casa-do-arandis",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        },
+        {
+          "name": "Casa Rosa",
+          "slug": "casa-rosa",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        },
+        {
+          "name": "Fazenda Moréias",
+          "slug": "fazenda-moreias",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        },
+        {
+          "name": "Madeiro Beach Hotel",
+          "slug": "madeiro-beach-hotel",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        },
+        {
+          "name": "Segredo na Serra",
+          "slug": "segredo-na-serra",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        },
+        {
+          "name": "Tuju Boutique Hotel",
+          "slug": "tuju-boutique-hotel",
+          "coverage": 0.15151515151515152,
+          "critical": 1,
+          "missing_fields": 28
+        }
+      ]
+    }
+  },
+  "enrichment_queue": [
+    {
+      "name": "Carmel Taíba Exclusive Resort",
+      "slug": "carmel-taiba-exclusive-resort",
+      "coverage": "45.5",
+      "gaps": 18
+    },
+    {
+      "name": "Hotel Casa da Montanha",
+      "slug": "casa-da-montanha-hotel",
+      "coverage": "45.5",
+      "gaps": 18
+    },
+    {
+      "name": "Grande Hotel Termas de Araxá",
+      "slug": "grande-hotel-termas-araxa",
+      "coverage": "45.5",
+      "gaps": 18
+    },
+    {
+      "name": "Hotel das Cataratas, A Belmond Hotel",
+      "slug": "hotel-belmond-cataratas",
+      "coverage": "45.5",
+      "gaps": 18
+    },
+    {
+      "name": "Pousada Ilha dos Poldros",
+      "slug": "ilha-dos-poldros-pousada",
+      "coverage": "45.5",
+      "gaps": 17
+    },
+    {
+      "name": "Pousada Tankamana",
+      "slug": "pousada-tankamana",
+      "coverage": "45.5",
+      "gaps": 19
+    },
+    {
+      "name": "Casa de Santo Antônio Hotel de Charme",
+      "slug": "casa-de-santo-antonio",
+      "coverage": "42.4",
+      "gaps": 19
+    },
+    {
+      "name": "Hotel Boutique Quebra-Noz",
+      "slug": "quebra-noz-hotel-boutique",
+      "coverage": "42.4",
+      "gaps": 19
+    },
+    {
+      "name": "Carmel Charme Resort",
+      "slug": "carmel-charme",
+      "coverage": "40.6",
+      "gaps": 21
+    },
+    {
+      "name": "Casa Poema",
+      "slug": "casa-poema",
+      "coverage": "36.4",
+      "gaps": 21
+    },
+    {
+      "name": "Hotel Fasano Angra dos Reis",
+      "slug": "fasano-angra-dos-reis",
+      "coverage": "36.4",
+      "gaps": 21
+    },
+    {
+      "name": "Hotel Solar do Império",
+      "slug": "solar-do-imperio",
+      "coverage": "36.4",
+      "gaps": 21
+    },
+    {
+      "name": "Baía das Carúbas Glamping",
+      "slug": "baia-das-caraubas",
+      "coverage": "34.4",
+      "gaps": 22
+    },
+    {
+      "name": "Caiman, Pantanal",
+      "slug": "caiman-pantanal",
+      "coverage": "34.4",
+      "gaps": 21
+    },
+    {
+      "name": "Hotel Emiliano Rio de Janeiro",
+      "slug": "hotel-emiliano-rj",
+      "coverage": "33.3",
+      "gaps": 22
+    },
+    {
+      "name": "Tivoli Mofarrej São Paulo",
+      "slug": "tivoli-mofarrej",
+      "coverage": "30.3",
+      "gaps": 23
+    },
+    {
+      "name": "Cabanas do Vale",
+      "slug": "cabanas-do-vale",
+      "coverage": "21.9",
+      "gaps": 26
+    },
+    {
+      "name": "Manoá Eco-Villa",
+      "slug": "manoa-eco-villa",
+      "coverage": "18.2",
+      "gaps": 27
+    },
+    {
+      "name": "Casa do Arandis",
+      "slug": "casa-do-arandis",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Casa Rosa",
+      "slug": "casa-rosa",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Fazenda Moréias",
+      "slug": "fazenda-moreias",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Madeiro Beach Hotel",
+      "slug": "madeiro-beach-hotel",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Segredo na Serra",
+      "slug": "segredo-na-serra",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Tuju Boutique Hotel",
+      "slug": "tuju-boutique-hotel",
+      "coverage": "15.2",
+      "gaps": 28
+    },
+    {
+      "name": "Canto do Irerê Boutique Hotel",
+      "slug": "canto-do-irere-boutique-hotel",
+      "coverage": "78.8",
+      "gaps": 7
+    },
+    {
+      "name": "Hotel Magique (complexo Le Canton)",
+      "slug": "le-canton-hotel",
+      "coverage": "78.8",
+      "gaps": 6
+    },
+    {
+      "name": "Pousada do Ouro",
+      "slug": "pousada-do-ouro",
+      "coverage": "72.7",
+      "gaps": 9
+    },
+    {
+      "name": "Hotel Gran Marquise Fortaleza",
+      "slug": "hotel-gran-marquise",
+      "coverage": "69.7",
+      "gaps": 10
+    },
+    {
+      "name": "Hotel Fasano Belo Horizonte",
+      "slug": "fasano-bh",
+      "coverage": "66.7",
+      "gaps": 11
+    },
+    {
+      "name": "Hotel Fasano Boa Vista",
+      "slug": "fasano-boavista",
+      "coverage": "66.7",
+      "gaps": 11
+    },
+    {
+      "name": "Fairmont Rio de Janeiro Copacabana",
+      "slug": "faimont-rio-de-janeiro-copacabana",
+      "coverage": "63.6",
+      "gaps": 11
+    },
+    {
+      "name": "Hotel Fasano Salvador",
+      "slug": "fasano-ssa",
+      "coverage": "63.6",
+      "gaps": 13
+    },
+    {
+      "name": "Hotel Parador em Cambará do Sul",
+      "slug": "parador-cambara-do-sul",
+      "coverage": "63.6",
+      "gaps": 12
+    },
+    {
+      "name": "Pousada Boutique Figueira da Serra",
+      "slug": "pousada-figueira-da-serra",
+      "coverage": "63.6",
+      "gaps": 12
+    },
+    {
+      "name": "Refúgio na Serra Boutique Hotel",
+      "slug": "refugio-na-serra",
+      "coverage": "63.6",
+      "gaps": 13
+    },
+    {
+      "name": "Villa d'Ozio | Hotel à beira mar",
+      "slug": "villa-d-ozio",
+      "coverage": "63.6",
+      "gaps": 11
+    },
+    {
+      "name": "Zendaya Resort | Beach | Sport | Spa",
+      "slug": "zendaya-resort",
+      "coverage": "63.6",
+      "gaps": 13
+    },
+    {
+      "name": "Botanique Hotel & Spa",
+      "slug": "botanique-hotel-experience",
+      "coverage": "62.5",
+      "gaps": 14
+    },
+    {
+      "name": "Casa Marambaia",
+      "slug": "casa-marambaia",
+      "coverage": "60.6",
+      "gaps": 13
+    },
+    {
+      "name": "Clara Arte Resort",
+      "slug": "clara-arte-resort",
+      "coverage": "60.6",
+      "gaps": 13
+    },
+    {
+      "name": "Hotel Fasano São Paulo",
+      "slug": "fasano-sp",
+      "coverage": "60.6",
+      "gaps": 13
+    },
+    {
+      "name": "Santa Teresa Hotel RJ - MGallery",
+      "slug": "santa-teresa-rj-mgallery",
+      "coverage": "60.6",
+      "gaps": 14
+    },
+    {
+      "name": "Fazenda São Luiz da Boa Sorte",
+      "slug": "fazenda-sao-luiz-da-boasorte",
+      "coverage": "57.6",
+      "gaps": 14
+    },
+    {
+      "name": "HCM Hotel Corais de Manaíra",
+      "slug": "hcm-hotel-corais-de-manaira",
+      "coverage": "57.6",
+      "gaps": 14
+    },
+    {
+      "name": "Hotel Emiliano São Paulo",
+      "slug": "hotel-emiliano-sp",
+      "coverage": "57.6",
+      "gaps": 14
+    },
+    {
+      "name": "Kenoa Exclusive Beach Spa & Resort",
+      "slug": "kenoa",
+      "coverage": "57.6",
+      "gaps": 17
+    },
+    {
+      "name": "Pousada Rabo do Lagarto",
+      "slug": "pousada-rabo-do-lagarto",
+      "coverage": "57.6",
+      "gaps": 15
+    },
+    {
+      "name": "Vila de Alter Pousada Boutique Amazônia",
+      "slug": "vila-de-alter",
+      "coverage": "57.6",
+      "gaps": 14
+    },
+    {
+      "name": "Casa Näh Praia",
+      "slug": "casa-nah-praia",
+      "coverage": "54.5",
+      "gaps": 15
+    },
+    {
+      "name": "Naatooh — Hotel Boutique em Florianópolis",
+      "slug": "naatooh-guest-houses",
+      "coverage": "54.5",
+      "gaps": 14
+    },
+    {
+      "name": "Pousada Cantelli",
+      "slug": "pousada-cantelli",
+      "coverage": "54.5",
+      "gaps": 12
+    },
+    {
+      "name": "Pousada Outeiro das Brisas",
+      "slug": "pousada-outeiro",
+      "coverage": "54.5",
+      "gaps": 14
+    },
+    {
+      "name": "Rituaali Clínica & Spa",
+      "slug": "rituaali-spa",
+      "coverage": "54.5",
+      "gaps": 15
+    },
+    {
+      "name": "Hotel Unique São Paulo",
+      "slug": "unique-sp",
+      "coverage": "54.5",
+      "gaps": 14
+    },
+    {
+      "name": "Vila Entre Chaves",
+      "slug": "vila-entre-chaves",
+      "coverage": "54.5",
+      "gaps": 14
+    },
+    {
+      "name": "Kurotel Spa Médico",
+      "slug": "kurotel-spa",
+      "coverage": "51.5",
+      "gaps": 15
+    },
+    {
+      "name": "Villa Rasa",
+      "slug": "villa-rasa",
+      "coverage": "51.5",
+      "gaps": 16
+    },
+    {
+      "name": "Wood Hotel",
+      "slug": "wood",
+      "coverage": "51.5",
+      "gaps": 14
+    }
+  ]
+}

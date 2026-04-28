@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-04-28T03:30:06.862Z",
+  "total_faq_hotels": 29,
+  "faq_hotels_in_merged": 15,
+  "faq_hotels_not_found": [
+    "alma-charme-atins-atins-charme-e-rancharia",
+    "bahia-bonita",
+    "hotel-boutique-spa-ponta-de-inhambupe-ok",
+    "insolito-boutique-hotel-spa",
+    "le-canton",
+    "nanii-hotel",
+    "nor-hotel-spa",
+    "parador-lumiar-hotel-spa",
+    "ponta-de-inhambupe-boutique",
+    "saint-andrews",
+    "tiradentes-boutique-hotel",
+    "villa-do-vale",
+    "villa-dos-nativos-boutique-hotel",
+    "zendaya-resort-beach-sport-spa"
+  ],
+  "details": [
+    {
+      "name": "Bupitanga Hotel",
+      "slug": "bupitanga-hotel",
+      "fields_total": 33,
+      "critical_fields": 9,
+      "missing_critical": [
+        "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Casa Turquesa",
+      "slug": "casa-turquesa",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Clara Ibiúna Resort",
+      "slug": "clara-ibiuna-resort",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Clara Dourado Resort",
+      "slug": "clara-dourado-resort",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "LK Design Hotel",
+      "slug": "lk-design-hotel",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Nomaa Hotel",
+      "slug": "nomaa-hotel",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Capim do Mato",
+      "slug": "pousada-capim-do-mato",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Mata N’ativa",
+      "slug": "pousada-mata-n-ativa",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Rancho do Peixe",
+      "slug": "rancho-do-peixe",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "UNIQUE GARDEN",
+      "slug": "unique-garden",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Valle D'Incanto Hotel",
+      "slug": "valle-d-incanto-hotel",
+      "fields_total": 29,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Vila Kalango",
+      "slug": "vila-kalango",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa Kandui",
+      "slug": "villa-kandui",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa Rasa",
+      "slug": "villa-rasa",
+      "fields_total": 33,
+      "critical_fields": 8,
+      "missing_critical": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Vila Cerrado",
+      "slug": "vila-cerrado",
+      "fields_total": 33,
+      "critical_fields": 7,
+      "missing_critical": [
+        "2.3",
+        "2.4",
+        "9.3"
+      ],
+      "coverage": 70
+    }
+  ],
+  "standard": {
+    "must_have": [
+      "1.1",
+      "2.1",
+      "2.3",
+      "2.4",
+      "3.1",
+      "4.2"
+    ],
+    "should_have": [
+      "6.1",
+      "7.1",
+      "8.1",
+      "9.3"
+    ],
+    "all_critical": [
+      "1.1",
+      "2.1",
+      "2.3",
+      "2.4",
+      "3.1",
+      "4.2",
+      "6.1",
+      "7.1",
+      "8.1",
+      "9.3"
+    ]
+  }
+}
