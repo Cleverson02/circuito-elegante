@@ -1,0 +1,126 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    HOTÉIS PARA PRÓXIMA RODADA DE ENRIQUECIMENTO               ║
+║                         58 HOTÉIS PRIORITÁRIOS (FAIR+POOR)                    ║
+║                                 2026-04-28                                    ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+INSTRUÇÕES:
+1. Executar enriquecimento APENAS nestes 58 hotéis
+2. Não gastar tempo com os 34 hotéis GOOD ou 9 hotéis GOLD
+3. Priorizar: POOR (24 hotéis) primeiro, depois FAIR (34 hotéis)
+4. Para cada hotel: preencher campos obrigatórios (1.1, 2.1, 2.3, 2.4, 3.1, 4.2)
+5. Se possível: complementar campos recomendados (6.1, 7.1, 8.1, 9.3)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRIORIDADE 1: HOTÉIS CRÍTICOS (POOR <50% - 24 hotéis)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Slug: carmel-taiba-exclusive-resort (45.5% - 18 campos faltam)
+Slug: hotel-casa-da-montanha (45.5% - 18 campos faltam)
+Slug: grande-hotel-termas-de-araxa (45.5% - 18 campos faltam)
+Slug: hotel-das-cataratas-a-belmond-hotel (45.5% - 18 campos faltam)
+Slug: pousada-ilha-dos-poldros (45.5% - 17 campos faltam)
+Slug: pousada-tankamana (45.5% - 19 campos faltam)
+Slug: casa-de-santo-antonio-hotel-de-charme (42.4% - 19 campos faltam)
+Slug: hotel-boutique-quebra-noz (42.4% - 19 campos faltam)
+Slug: carmel-charme-resort (40.6% - 21 campos faltam)
+Slug: casa-poema (36.4% - 21 campos faltam)
+Slug: hotel-fasano-angra-dos-reis (36.4% - 21 campos faltam)
+Slug: hotel-solar-do-imperio (36.4% - 21 campos faltam)
+Slug: baia-das-carabas-glamping (34.4% - 22 campos faltam)
+Slug: caiman-pantanal (34.4% - 21 campos faltam)
+Slug: hotel-emiliano-rio-de-janeiro (33.3% - 22 campos faltam)
+Slug: tivoli-mofarrej-sao-paulo (30.3% - 23 campos faltam)
+Slug: cabanas-do-vale (21.9% - 26 campos faltam)
+Slug: manoa-eco-villa (18.2% - 27 campos faltam)
+Slug: casa-do-arandis (15.2% - 28 campos faltam) ⚠️ SITE QUEBRADO
+Slug: casa-rosa (15.2% - 28 campos faltam) ⚠️ SITE QUEBRADO
+Slug: fazenda-moreias (15.2% - 28 campos faltam)
+Slug: madeiro-beach-hotel (15.2% - 28 campos faltam)
+Slug: segredo-na-serra (15.2% - 28 campos faltam)
+Slug: tuju-boutique-hotel (15.2% - 28 campos faltam)
+
+⚠️  NOTA: 6 hotéis com sites quebrados — considerar contato direto
+    - casa-do-arandis
+    - casa-rosa
+    - fazenda-moreias
+    - madeiro-beach-hotel
+    - segredo-na-serra
+    - tuju-boutique-hotel
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRIORIDADE 2: HOTÉIS INTERMEDIÁRIOS (FAIR 50-79% - 34 hotéis)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Slug: canto-do-irere-boutique-hotel (78.8% - 7 campos faltam)
+Slug: hotel-magique-complexo-le-canton (78.8% - 6 campos faltam)
+Slug: pousada-do-ouro (72.7% - 9 campos faltam)
+Slug: hotel-gran-marquise-fortaleza (69.7% - 10 campos faltam)
+Slug: hotel-fasano-belo-horizonte (66.7% - 11 campos faltam)
+Slug: hotel-fasano-boa-vista (66.7% - 11 campos faltam)
+Slug: fairmont-rio-de-janeiro-copacabana (63.6% - 11 campos faltam)
+Slug: hotel-fasano-salvador (63.6% - 13 campos faltam)
+Slug: hotel-parador-em-cambara-do-sul (63.6% - 12 campos faltam)
+Slug: pousada-boutique-figueira-da-serra (63.6% - 12 campos faltam)
+Slug: refugio-na-serra-boutique-hotel (63.6% - 13 campos faltam)
+Slug: villa-d-ozio-hotel-a-beira-mar (63.6% - 11 campos faltam)
+Slug: zendaya-resort-beach-sport-spa (63.6% - 13 campos faltam)
+Slug: botanique-hotel-spa (62.5% - 14 campos faltam)
+Slug: casa-marambaia (60.6% - 13 campos faltam)
+Slug: clara-arte-resort (60.6% - 13 campos faltam)
+Slug: hotel-fasano-sao-paulo (60.6% - 13 campos faltam)
+Slug: santa-teresa-hotel-rj-mgallery (60.6% - 14 campos faltam)
+Slug: fazenda-sao-luiz-da-boa-sorte (57.6% - 14 campos faltam)
+Slug: hcm-hotel-corais-de-manaira (57.6% - 14 campos faltam)
+Slug: hotel-emiliano-sao-paulo (57.6% - 14 campos faltam)
+Slug: kenoa-exclusive-beach-spa-resort (57.6% - 17 campos faltam)
+Slug: pousada-rabo-do-lagarto (57.6% - 15 campos faltam)
+Slug: vila-de-alter-pousada-boutique-amazonia (57.6% - 14 campos faltam)
+Slug: casa-nah-praia (54.5% - 15 campos faltam)
+Slug: naatooh-hotel-boutique-em-florianopolis (54.5% - 14 campos faltam)
+Slug: pousada-cantelli (54.5% - 12 campos faltam)
+Slug: pousada-outeiro-das-brisas (54.5% - 14 campos faltam)
+Slug: rituaali-clinica-spa (54.5% - 15 campos faltam)
+Slug: hotel-unique-sao-paulo (54.5% - 14 campos faltam)
+Slug: vila-entre-chaves (54.5% - 14 campos faltam)
+Slug: kurotel-spa-medico (51.5% - 15 campos faltam)
+Slug: villa-rasa (51.5% - 16 campos faltam) ⚠️ RESPONDENTE FAQ
+Slug: wood-hotel (51.5% - 14 campos faltam)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MÁQUINA DE ENRIQUECIMENTO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Para EACH slug acima:
+   - Buscar dados no website/Booking/TripAdvisor
+   - Preencher campos obrigatórios: 1.1 (Nome), 2.1 (Site), 2.3 (Endereço), 2.4 (Telefone), 3.1 (Descrição), 4.2 (Tipos quarto)
+   - Se encontrado: também preencher 6.1 (Restaurantes), 7.1 (Lazer), 8.1 (Check-in/out), 9.3 (FAQs)
+
+2. SALVAR em: data/enrichment/merged-v2/{slug}-merged-v2.json
+
+3. NUNCA inventar dados (Article IV: Zero Invenção)
+   - Se campo não existe na fonte: deixar null
+   - Sempre registrar source_url e source_type
+
+4. VALIDAR após cada rodada:
+   npx tsx data/scripts/validate-concierge-fields.ts
+
+5. DOCUMENTAR progresso:
+   - Quantos campos preenchidos
+   - Quais fontes usadas
+   - Quais gaps permanecem
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MÉTRICAS:
+- TOTAL: 58 hotéis para enriquecer
+- CRITICO: 24 hotéis POOR
+- PRIORITÁRIO: 34 hotéis FAIR
+- TEMPO ESTIMADO: 30-40 horas com squad de 2-3 pessoas
+- PADRÃO MINIMO ESPERADO: ≥80% cobertura (9+ campos preenchidos)
+
+✅ STATUS: Pronto para enriquecimento Squad
+   Arquivo de referência: data/enrichment/HOTEL-ENRICHMENT-PRIORITY.json
