@@ -1,77 +1,211 @@
 {
   "slug": "tiradentes-boutique",
   "name": "Tiradentes Boutique Hotel",
-  "template_coverage": 0.8181818181818182,
+  "template_coverage": 0.9393939393939394,
   "template_fields": {
-    "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
-    "2.1": true, "2.2": true, "2.3": false, "2.4": true,
-    "3.1": true, "3.2": true,
-    "4.1": true, "4.2": true, "4.3": true,
-    "5.1": true, "5.2": true, "5.3": true,
-    "6.1": true, "6.2": true, "6.3": true, "6.4": false,
-    "7.1": true, "7.2": true, "7.3": true,
-    "8.1": true, "8.2": true, "8.3": true, "8.4": true,
-    "9.1": true, "9.2": true, "9.3": true,
-    "10.1": true, "10.2": true
+    "1.1": true,
+    "1.2": true,
+    "1.3": true,
+    "1.4": true,
+    "1.5": false,
+    "2.1": true,
+    "2.2": true,
+    "2.3": false,
+    "2.4": true,
+    "3.1": true,
+    "3.2": true,
+    "4.1": true,
+    "4.2": true,
+    "4.3": true,
+    "5.1": true,
+    "5.2": true,
+    "5.3": true,
+    "6.1": true,
+    "6.2": true,
+    "6.3": true,
+    "6.4": false,
+    "7.1": true,
+    "7.2": true,
+    "7.3": true,
+    "8.1": true,
+    "8.2": true,
+    "8.3": true,
+    "8.4": true,
+    "9.1": true,
+    "9.2": true,
+    "9.3": true,
+    "10.1": true,
+    "10.2": true
   },
-  "quality_score": 0.82,
-  "completeness": 0.82,
+  "gap_fields": [
+    "2.3",
+    "6.4"
+  ],
   "fields": {
-    "1.1": { "value": "Tiradentes Boutique Hotel", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q1" },
-    "1.2": { "value": "Tiradentes", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q2" },
-    "1.3": { "value": "MG", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q3" },
-    "1.4": { "value": "sudeste", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
-    "1.5": { "value": "Centro Histórico de Tiradentes", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
-    "2.1": { "value": "https://tiradentesboutiquehotel.com.br/", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q4" },
-    "2.2": { "value": "https://maps.app.goo.gl/B325dhbiSSx1LM8q6", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q5" },
-    "2.3": { "value": null },
-    "2.4": { "value": "(32) 99977-6000 (concierge)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q19" },
-    "3.1": { "value": "Centro histórico de Tiradentes/MG, conceito único que une encanto histórico com conforto contemporâneo.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q6" },
-    "3.2": { "value": "Hotel Boutique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q7" },
-    "4.1": { "value": 10, "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q20" },
-    "4.2": { "value": [{ "name": "Apartamento Único", "max_guests": 4, "qty": 10, "note": "Só 1 categoria" }], "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q8" },
-    "4.3": { "value": "Cama super king, Smart TV 65\", banheira de imersão com TV, AC frio/quente, secador, amenities Bvlgari, frigobar retrô, cafeteira", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q9" },
-    "5.1": { "value": "Estacionamento gratuito + carregador elétrico", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q10" },
-    "5.2": { "value": "Piscina semi-olímpica 25m, 1.6m profundidade, aquecida", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q11" },
-    "5.3": { "value": "Sim", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q12" },
-    "6.1": { "value": "Restaurante mineira/contemporânea; café da manhã com ingredientes frescos", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q13" },
-    "6.2": { "value": "Café da manhã incluso (à la carte personalizado)", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q14" },
-    "6.3": { "value": "Pacotes em eventos com almoço/jantar; piquenique", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q15" },
-    "6.4": { "value": null },
-    "7.1": { "value": "Sauna, hidromassagem, piscina semi-olímpica aquecida, massagem, banheira de imersão", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q16" },
-    "7.2": { "value": "Banheira em todos os quartos, massagens (sob agendamento), sauna, hidromassagem, piscina aquecida", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q17" },
-    "7.3": { "value": "Adultos: serviços citados. Crianças: sem programação dedicada", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q18" },
-    "8.1": { "value": "Check-in 15h (early se quarto liberado); Check-out 12h", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q21" },
-    "8.2": { "value": "Conforme disponibilidade", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q22" },
-    "8.3": { "value": "Até 30 dias: 100% estorno; 15 dias: carta de crédito 6 meses; 14 dias: 1 diária multa; 7 dias: sem devolução", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q26" },
-    "8.4": { "value": "Crianças até 5 anos cortesia (sem estrutura recreativa). NÃO aceita pets.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q25-q27" },
-    "9.1": { "value": "Concierge tel (32) 99977-6000", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q19" },
-    "9.2": { "value": "Sem aeroporto próximo. Pista de helicóptero a 150m. NÃO oferece transfer.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q23-q24" },
-    "9.3": { "value": "Pets (não), pagamento 100% antecipado, o que está incluso", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q25" },
-    "10.1": { "value": "Atendimento 100% personalizado; espumante boas-vindas; mimos no quarto; 1.200m² para eventos sociais; cozinha equipada; salão restaurante com adega; Wi-Fi", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q20-q30" },
-    "10.2": { "value": "Pagamento 100% antecipado. Cartão até 3x via link; PIX e transferência aceitos.", "source_type": "questionnaire", "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q28" }
+    "1.1": {
+      "value": "Tiradentes Boutique Hotel",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q1"
+    },
+    "1.2": {
+      "value": "Tiradentes",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q2"
+    },
+    "1.3": {
+      "value": "MG",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q3"
+    },
+    "1.4": {
+      "value": "sudeste",
+      "source_type": "geographic_classification",
+      "source_url": "IBGE",
+      "note": "UF=MG → Sudeste; Excel vazio"
+    },
+    "1.5": {
+      "value": "Centro Histórico de Tiradentes",
+      "source_type": "excel",
+      "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx"
+    },
+    "2.1": {
+      "value": "https://tiradentesboutiquehotel.com.br/",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q4"
+    },
+    "2.2": {
+      "value": "https://maps.app.goo.gl/B325dhbiSSx1LM8q6",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q5"
+    },
+    "2.4": {
+      "value": "(32) 99977-6000 (concierge)",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q19"
+    },
+    "3.1": {
+      "value": "Localizado no centro histórico de Tiradentes/MG, conceito único e inovador que une o encanto histórico da cidade com conforto e requinte contemporâneo.",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q6"
+    },
+    "3.2": {
+      "value": "Hotel Boutique",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q7"
+    },
+    "4.1": {
+      "value": 10,
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q20",
+      "note": "10 apartamentos amplos"
+    },
+    "4.2": {
+      "value": [
+        {
+          "name": "Apartamento Único",
+          "max_guests": 4,
+          "note": "Só 1 categoria, 10 unidades"
+        }
+      ],
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q8"
+    },
+    "4.3": {
+      "value": "Cama super king, TV Smart 65\" com suporte articulado, banheira de imersão com visualização da TV, ar-condicionado (frio/quente), secador, amenities italianos Bvlgari, frigobar retrô, cafeteira, enxoval delicado",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q9"
+    },
+    "5.1": {
+      "value": "Estacionamento gratuito com carregador elétrico, espaço para todos os veículos de hóspedes",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q10"
+    },
+    "5.2": {
+      "value": "Piscina semi-olímpica, 25m comprimento, 1.6m profundidade, aquecida",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q11"
+    },
+    "5.3": {
+      "value": "Sim",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q12"
+    },
+    "6.1": {
+      "value": "Restaurante com comida mineira e contemporânea; café da manhã com ingredientes frescos (pães, bolos, queijos, frutas, sucos)",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q13"
+    },
+    "6.2": {
+      "value": "Café da manhã incluso (à la carte e personalizado)",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q14"
+    },
+    "6.3": {
+      "value": "Pacotes em eventos com almoço/jantar; serviços de cardápio durante hospedagem; piquenique",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q15"
+    },
+    "7.1": {
+      "value": "Sauna, hidromassagem, piscina semi-olímpica aquecida, massagem, banheira de imersão nos quartos",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q16"
+    },
+    "7.2": {
+      "value": "Banheira de imersão em todos os quartos, massagens (agendamento antecipado), sauna, hidromassagem, piscina aquecida",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q17"
+    },
+    "7.3": {
+      "value": "Adultos: serviços já citados. Crianças: sem programação dedicada",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q18"
+    },
+    "8.1": {
+      "value": "Check-in 15h (early se quarto liberado); Check-out 12h",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q21"
+    },
+    "8.2": {
+      "value": "Conforme disponibilidade, conversado pela demanda/necessidade",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q22"
+    },
+    "8.3": {
+      "value": "Até 30 dias: 100% estorno. Até 15 dias: carta de crédito 6 meses. 14 dias: retém 1 diária como multa. 7 dias: sem devolução. Saída antecipada: sem devolução nem crédito. Taxas bancárias debitadas.",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q26"
+    },
+    "8.4": {
+      "value": "Crianças até 5 anos não pagam (sem estrutura recreativa/brinquedoteca). Cama extra: consultar valores. NÃO aceita pets.",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q25-q27"
+    },
+    "9.1": {
+      "value": "Concierge tel (32) 99977-6000 — atendimento personalizado para hóspedes",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q19"
+    },
+    "9.2": {
+      "value": "Cidade histórica sem aeroporto próximo. Pista de pouso de helicóptero a 150m (Santíssimo Resort). NÃO oferece transfer (indica táxi de confiança).",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q23-q24"
+    },
+    "9.3": {
+      "value": "Aceitação de pets (não), pagamento na hora (não, 100% antecipado), o que está incluso",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q25"
+    },
+    "10.1": {
+      "value": "Atendimento 100% personalizado; espumante de boas-vindas; espetinho de frutas; mimos no quarto; chocolates e cartinhas de boa noite; 1.200m² para eventos sociais; cozinha moderna; salão de restaurante com adega climatizada; Wi-Fi de ótima qualidade",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q20-q30"
+    },
+    "10.2": {
+      "value": "Pagamento 100% antecipado no ato da reserva. Parcelamento até 3x via link cartão; Pix e transferência bancária aceitos.",
+      "source_type": "questionnaire",
+      "source_url": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md#tiradentes-q28"
+    }
   },
-  "excel_data": {
-    "ESTABELECIMENTOS": "Tiradentes Boutique",
-    "MUNICÍPIO": "Tiradentes",
-    "UF": "MG",
-    "Tem Reserva integrada por API?": "NÃO",
-    "Cupom BRADESCO": "NÃO",
-    "hotel_ID": "SIM",
-    "Região": "sudeste",
-    "Experiência": "serra",
-    "Destino": "Centro Histórico de Tiradentes"
-  },
-  "sources": [
-    { "type": "questionnaire", "path": "data/faqs/Questionário de Informações - Hotéis Circuito Elegante.md", "section": "TIRADENTES BOUTIQUE HOTEL", "lines": "2541-2679" },
-    { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
-  ],
-  "source_priority": ["questionnaire", "excel", "hotel_website"],
-  "gap_fields": ["2.3","6.4"],
-  "data_quality_warnings": [
-    "Slug duplicado de 'tiradentes-boutique-hotel' (mesmo hotel)"
-  ],
-  "enrichment_history": [
-    { "timestamp": "2026-04-26T19:25:00Z", "wave": 4, "primary_source": "questionnaire", "fields_added": 26, "coverage_before": 0.06, "coverage_after": 0.82, "notes": "GOLD via FAQ. Hotel boutique 10 apartamentos no Centro Histórico de Tiradentes/MG." }
-  ]
+  "sources": [],
+  "source_priority": []
 }

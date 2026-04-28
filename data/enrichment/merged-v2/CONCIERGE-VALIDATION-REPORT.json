@@ -1,0 +1,765 @@
+{
+  "timestamp": "2026-04-28T03:27:25.749Z",
+  "total_hotels": 92,
+  "with_all_critical_fields": 8,
+  "with_gaps": 84,
+  "gaps_list": [
+    {
+      "name": "Casa do Arandis",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Casa Rosa",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Fazenda Moréias",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Madeiro Beach Hotel",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Segredo na Serra",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Tuju Boutique Hotel",
+      "missing": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 10
+    },
+    {
+      "name": "Manoá Eco-Villa",
+      "missing": [
+        "2.3",
+        "2.4",
+        "3.1",
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 20
+    },
+    {
+      "name": "Cabanas do Vale",
+      "missing": [
+        "2.1",
+        "3.1",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 40
+    },
+    {
+      "name": "Baía das Carúbas Glamping",
+      "missing": [
+        "2.3",
+        "3.1",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 50
+    },
+    {
+      "name": "Carmel Taíba Exclusive Resort",
+      "missing": [
+        "2.3",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 50
+    },
+    {
+      "name": "Casa Poema",
+      "missing": [
+        "2.3",
+        "2.4",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 50
+    },
+    {
+      "name": "Hotel Emiliano Rio de Janeiro",
+      "missing": [
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 50
+    },
+    {
+      "name": "Tivoli Mofarrej São Paulo",
+      "missing": [
+        "4.2",
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 50
+    },
+    {
+      "name": "Caiman, Pantanal",
+      "missing": [
+        "2.3",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Casa de Santo Antônio Hotel de Charme",
+      "missing": [
+        "2.3",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Hotel Fasano Angra dos Reis",
+      "missing": [
+        "4.2",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Grande Hotel Termas de Araxá",
+      "missing": [
+        "2.3",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Hotel das Cataratas, A Belmond Hotel",
+      "missing": [
+        "4.2",
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Hotel Solar do Império",
+      "missing": [
+        "6.1",
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 60
+    },
+    {
+      "name": "Carmel Charme Resort",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Hotel Casa da Montanha",
+      "missing": [
+        "7.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Casa Näh Praia",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Fairmont Rio de Janeiro Copacabana",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Fazenda São Luiz da Boa Sorte",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "HCM Hotel Corais de Manaíra",
+      "missing": [
+        "4.2",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Pousada Ilha dos Poldros",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Kurotel Spa Médico",
+      "missing": [
+        "4.2",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Hotel Magique (complexo Le Canton)",
+      "missing": [
+        "2.3",
+        "2.4",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Pousada Boutique Figueira da Serra",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Pousada Tankamana",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Hotel Boutique Quebra-Noz",
+      "missing": [
+        "6.1",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Vila Cerrado",
+      "missing": [
+        "2.3",
+        "2.4",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Vila Entre Chaves",
+      "missing": [
+        "2.4",
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Botanique Hotel & Spa",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Casa Marambaia",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Casa Turquesa",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Clara Arte Resort",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Clara Dourado Resort",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Clara Ibiúna Resort",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Fasano Belo Horizonte",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Fasano Boa Vista",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Fasano São Paulo",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Fasano Salvador",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Emiliano São Paulo",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Fazenda Suíça Le Canton",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Gran Marquise Fortaleza",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Village Le Canton",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Kenoa Exclusive Beach Spa & Resort",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "LK Design Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Naatooh — Hotel Boutique em Florianópolis",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Nomaa Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Parador Lumiar Hotel & SPA",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Alma Charme Atins",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Cantelli",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Capim do Mato Pousada & Spa",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Mata N'ativa",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Outeiro das Brisas",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Pousada Rabo do Lagarto",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Rancharia Charme Beach",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Rancho do Peixe",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Refúgio na Serra Boutique Hotel",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Rituaali Clínica & Spa",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Castelo Saint Andrews",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Santa Teresa Hotel RJ - MGallery",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Unique Garden",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Unique São Paulo",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Valle D'Incanto Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Vila de Alter Pousada Boutique Amazônia",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Vila Kalango",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa d'Ozio | Hotel à beira mar",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa do Vale Boutique Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa dos Nativos Boutique Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa Kandui Boutique Hotel",
+      "missing": [
+        "2.3",
+        "2.4"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Villa Rasa",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Wood Hotel",
+      "missing": [
+        "4.2",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Zendaya Resort | Beach | Sport | Spa",
+      "missing": [
+        "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Boutique Bahia Bonita",
+      "missing": [
+        "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Bupitanga Hotel",
+      "missing": [
+        "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Nanii Hotel",
+      "missing": [
+        "2.3"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Hotel Parador em Cambará do Sul",
+      "missing": [
+        "9.3"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Hotel Boutique & SPA Ponta de Inhambupe by Slaviero Hotéis",
+      "missing": [
+        "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Pousada do Ouro",
+      "missing": [
+        "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Tiradentes Boutique Hotel",
+      "missing": [
+        "2.3"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Txai Resort & Spa Itacaré",
+      "missing": [
+        "9.3"
+      ],
+      "coverage": 90
+    }
+  ]
+}
