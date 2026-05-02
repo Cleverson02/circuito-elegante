@@ -1,21 +1,21 @@
 {
   "slug": "carmel-charme",
   "name": "Carmel Charme Resort",
-  "template_coverage": 0.40625,
+  "template_coverage": 0.53125,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": true, "2.2": false, "2.3": true, "2.4": true,
     "3.1": true, "3.2": true,
     "4.1": false, "4.2": true, "4.3": false,
-    "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": false, "6.3": false, "6.4": false,
     "7.1": true, "7.2": false, "7.3": false,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": true, "10.2": false
   },
-  "quality_score": 0.40,
-  "completeness": 0.40625,
+  "quality_score": 0.53,
+  "completeness": 0.53125,
   "fields": {
     "1.1": {"value": "Carmel Charme Resort", "source_type": "hotel_website", "source_url": "https://carmelhoteis.com.br/carmelcharme/"},
     "1.2": {"value": "Aquiraz", "source_type": "excel"},
@@ -38,11 +38,11 @@
       "note": "7 categorias listadas; detalhes não capturados"
     },
     "4.3": {"value": null},
-    "5.1": {"value": null}, "5.2": {"value": null}, "5.3": {"value": null},
-    "6.1": {"value": null}, "6.2": {"value": null}, "6.3": {"value": null}, "6.4": {"value": null},
-    "7.1": {"value": ["Acesso à praia", "Celebrações de casamento", "Atividades de limpeza de praia"], "source_type": "hotel_website"},
+    "5.1": {"value": null}, "5.2": {"value": "Piscinas, spa, sauna, jacuzzi", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-charme-resort.html", "confidence_type": "literal"}, "5.3": {"value": null},
+    "6.1": {"value": "Restaurante aberto 12h-22h com pratos variados, piscina bar", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-charme-resort.html", "confidence_type": "literal"}, "6.2": {"value": null}, "6.3": {"value": null}, "6.4": {"value": null},
+    "7.1": {"value": "Acesso à praia, piscinas, spa, sauna, jacuzzi, academia, aulas de yoga, trilhas, passeios a cavalo", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-charme-resort.html", "confidence_type": "literal"},
     "7.2": {"value": null}, "7.3": {"value": null},
-    "8.1": {"value": null}, "8.2": {"value": null}, "8.3": {"value": null}, "8.4": {"value": null},
+    "8.1": {"value": "Check-in a partir das 14h00, check-out até às 12h00", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-charme-resort.html", "confidence_type": "literal"}, "8.2": {"value": null}, "8.3": {"value": null}, "8.4": {"value": null},
     "9.1": {"value": null}, "9.2": {"value": null}, "9.3": {"value": null},
     "10.1": {"value": ["Energia solar", "Programas de reciclagem", "Pré-check-in"], "source_type": "hotel_website"},
     "10.2": {"value": null}
@@ -53,8 +53,9 @@
     {"type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx"}
   ],
   "source_priority": ["questionnaire", "hotel_website", "excel"],
-  "gap_fields": ["1.5", "2.2", "4.1", "4.3", "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "6.4", "7.2", "7.3", "8.1", "8.2", "8.3", "8.4", "9.1", "9.2", "9.3", "10.2"],
+  "gap_fields": ["1.5", "2.2", "4.1", "4.3", "5.1", "5.3", "6.2", "6.3", "6.4", "7.2", "7.3", "8.2", "8.3", "8.4", "9.1", "9.2", "9.3", "10.2"],
   "enrichment_history": [
-    {"timestamp": "2026-04-26T00:00:00Z", "wave": 1, "primary_source": "hotel_website", "fields_added": 7, "site_redirected": "carmelcharme.com.br → carmelhoteis.com.br/carmelcharme/", "coverage_before": 0.18, "coverage_after": 0.41}
+    {"timestamp": "2026-04-26T00:00:00Z", "wave": 1, "primary_source": "hotel_website", "fields_added": 7, "site_redirected": "carmelcharme.com.br → carmelhoteis.com.br/carmelcharme/", "coverage_before": 0.18, "coverage_after": 0.41},
+    {"timestamp": "2026-05-02T04:15:00Z", "wave": 2, "primary_source": "booking_scrape", "fields_added": 3, "coverage_before": 0.41, "coverage_after": 0.53, "notes": "Enriquecimento operacional via Booking.com: restaurante (6.1), check-in/out (8.1), piscinas/spa (5.2), atividades (7.1 complementado)"}
   ]
 }

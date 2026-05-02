@@ -1,21 +1,21 @@
 {
   "slug": "quebra-noz-hotel-boutique",
   "name": "Hotel Boutique Quebra-Noz",
-  "template_coverage": 0.42424242424242425,
+  "template_coverage": 0.484848484848,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": true, "2.2": false, "2.3": true, "2.4": true,
     "3.1": true, "3.2": true,
     "4.1": false, "4.2": true, "4.3": false,
     "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "6.1": true, "6.2": false, "6.3": false, "6.4": false,
     "7.1": true, "7.2": false, "7.3": false,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": true,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": true,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": true, "10.2": false
   },
-  "quality_score": 0.42,
-  "completeness": 0.42,
+  "quality_score": 0.48,
+  "completeness": 0.48,
   "fields": {
     "1.1": { "value": "Hotel Boutique Quebra-Noz", "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/" },
     "1.2": { "value": "Campos do Jordão", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel + site confirmam; JSON antigo dizia Florianópolis/SC (incorreto)" },
@@ -32,10 +32,10 @@
     "4.2": { "value": [{ "name": "Ala Cedro" }, { "name": "Ala Platanus" }, { "name": "Ala Villa" }, { "name": "Ala Araucária" }, { "name": "Ala Pinho Bravo" }], "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/", "note": "5 alas de acomodação" },
     "4.3": { "value": null },
     "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
-    "6.1": { "value": null }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
-    "7.1": { "value": "Atividades disponíveis; adega de vinhos", "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/" },
+    "6.1": { "value": "Pizzaria com culinária italiana regional, buffet de café da manhã, chá da tarde, recepção 24h", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/quebra-noz-hotel-boutique.html", "confidence_type": "literal" }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": "Atividades disponíveis; adega de vinhos; pizzaria", "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/" },
     "7.2": { "value": null }, "7.3": { "value": null },
-    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null },
+    "8.1": { "value": "Check-in a partir das 15h00, check-out até às 13h00", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/quebra-noz-hotel-boutique.html", "confidence_type": "literal" }, "8.2": { "value": null }, "8.3": { "value": null },
     "8.4": { "value": "Pet-friendly (acomodações específicas)", "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/" },
     "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
     "10.1": { "value": "Premiado 4 anos consecutivos como 'Melhor Hotel da Montanha'; certificação Safe & Clean", "source_type": "hotel_website", "source_url": "https://quebranoz.com.br/" },
@@ -57,7 +57,7 @@
     { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
   "source_priority": ["questionnaire", "excel", "hotel_website"],
-  "gap_fields": ["2.2","4.1","4.3","5.1","5.2","5.3","6.1","6.2","6.3","6.4","7.2","7.3","8.1","8.2","8.3","9.1","9.2","9.3","10.2"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","5.2","5.3","6.2","6.3","6.4","7.2","7.3","8.2","8.3","9.1","9.2","9.3","10.2"],
   "data_quality_warnings": [
     "JSON antigo: Florianópolis/SC + DDD 48 — corrigido para Campos do Jordão/SP"
   ],
@@ -70,6 +70,15 @@
       "coverage_before": 0.18,
       "coverage_after": 0.42,
       "notes": "Hotel boutique no Capivari/Campos do Jordão. 5 alas. Adega. Pet-friendly. Premiado Melhor Hotel da Montanha 4 anos."
+    },
+    {
+      "timestamp": "2026-05-02T04:25:00Z",
+      "wave": 2,
+      "primary_source": "booking_scrape",
+      "fields_added": 2,
+      "coverage_before": 0.42,
+      "coverage_after": 0.48,
+      "notes": "Enriquecimento operacional via Booking.com: pizzaria + buffet breakfast (6.1), check-in/out (8.1)"
     }
   ]
 }

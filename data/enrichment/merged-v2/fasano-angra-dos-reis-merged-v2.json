@@ -1,21 +1,21 @@
 {
   "slug": "fasano-angra-dos-reis",
   "name": "Hotel Fasano Angra dos Reis",
-  "template_coverage": 0.36363636363636365,
+  "template_coverage": 0.454545454545,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": true, "2.2": false, "2.3": true, "2.4": true,
     "3.1": true, "3.2": true,
     "4.1": false, "4.2": false, "4.3": false,
-    "5.1": false, "5.2": false, "5.3": false,
+    "5.1": false, "5.2": true, "5.3": false,
     "6.1": true, "6.2": false, "6.3": false, "6.4": false,
-    "7.1": false, "7.2": false, "7.3": false,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "7.1": true, "7.2": false, "7.3": false,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": true, "10.2": false
   },
-  "quality_score": 0.36,
-  "completeness": 0.36,
+  "quality_score": 0.45,
+  "completeness": 0.45,
   "fields": {
     "1.1": { "value": "Hotel Fasano Angra dos Reis", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hospedagem/hotel-fasano-angra-dos-reis" },
     "1.2": { "value": "Angra dos Reis", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
@@ -29,11 +29,11 @@
     "3.1": { "value": "Propriedade de luxo que harmoniza com o clima ensolarado e tropical da região; acomodações upscale em destino litorâneo.", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hospedagem/hotel-fasano-angra-dos-reis" },
     "3.2": { "value": "Hotel/Resort de Luxo", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hospedagem/hotel-fasano-angra-dos-reis" },
     "4.1": { "value": null }, "4.2": { "value": null }, "4.3": { "value": null },
-    "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
-    "6.1": { "value": [{ "name": "Fasano", "type": "restaurante", "cuisine": "Frutos do mar e culinária italiana", "hours": "19h-23h diariamente", "service": "jantar" }], "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hospedagem/hotel-fasano-angra-dos-reis" },
+    "5.1": { "value": null }, "5.2": { "value": "Piscina com vista para o mar", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/fasano-angra-dos-reis.html", "confidence_type": "literal" }, "5.3": { "value": null },
+    "6.1": { "value": [{ "name": "Fasano", "cuisine": "Frutos do mar e culinária italiana", "hours": "19h-23h" }, { "name": "Praia", "cuisine": "Casual beach dining" }, { "name": "CRUDO", "cuisine": "Novo, especialidades" }], "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/fasano-angra-dos-reis.html", "confidence_type": "literal", "note": "3 restaurantes + breakfast buffet" },
     "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
-    "7.1": { "value": null }, "7.2": { "value": null }, "7.3": { "value": null },
-    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "7.1": { "value": "Piscina, praia privada/acesso à praia", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/fasano-angra-dos-reis.html", "confidence_type": "literal" }, "7.2": { "value": null }, "7.3": { "value": null },
+    "8.1": { "value": "Check-in a partir das 17h00, check-out até às 14h00", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/fasano-angra-dos-reis.html", "confidence_type": "literal" }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
     "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
     "10.1": { "value": "Localização beachfront na Costa Verde; restaurante fine dining Fasano (frutos do mar + italiana)", "source_type": "hotel_website", "source_url": "https://www.fasano.com.br/hospedagem/hotel-fasano-angra-dos-reis" },
     "10.2": { "value": null }
@@ -54,7 +54,7 @@
     { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
   "source_priority": ["questionnaire", "excel", "hotel_website"],
-  "gap_fields": ["2.2","4.1","4.2","4.3","5.1","5.2","5.3","6.2","6.3","6.4","7.1","7.2","7.3","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
+  "gap_fields": ["2.2","4.1","4.2","4.3","5.1","5.3","6.2","6.3","6.4","7.2","7.3","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
   "data_quality_warnings": [
     "Site Fasano institucional minimalista; ausência de detalhes operacionais (acomodações, piscinas, políticas)",
     "Telefone JSON antigo +55 24 3369-2000 — site oficial mostra 3369-9500"
@@ -68,6 +68,15 @@
       "coverage_before": 0.18,
       "coverage_after": 0.36,
       "notes": "Site Fasano dá pouca info operacional. Endereço/tel/restaurante extraídos. Demais campos null por ausência de fonte."
+    },
+    {
+      "timestamp": "2026-05-02T04:35:00Z",
+      "wave": 2,
+      "primary_source": "booking_scrape",
+      "fields_added": 3,
+      "coverage_before": 0.36,
+      "coverage_after": 0.45,
+      "notes": "Enriquecimento operacional via Booking.com: 3 restaurantes (Fasano, Praia, CRUDO novo) + breakfast buffet (6.1 complementado), check-in/out (8.1), piscina com vista (5.2), praia (7.1)"
     }
   ]
 }
