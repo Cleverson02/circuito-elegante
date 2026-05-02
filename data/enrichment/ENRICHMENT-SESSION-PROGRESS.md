@@ -1,6 +1,6 @@
 # Sessão de Enriquecimento — 24 Hotéis POOR
 **Início:** 2026-05-02  
-**Status:** EM PROGRESSO (10/24 completos)
+**Status:** EM PROGRESSO (13/24 completos — 54%)
 
 ## Priorização
 1. **Grupo A — Sites acessíveis (15 hotéis):** 40-45% → 48-53%+ ✅
@@ -22,20 +22,27 @@
 9. ✅ **Hotel Fasano Angra dos Reis** — 36.4% → 45.5% (+3 campos: 3 restaurantes, piscina)
 10. ✅ **Hotel Solar do Império** — 36.4% → 42.4% (+2 campos: restaurante, check-in/out)
 
-## Hotéis Pendentes (14 restantes)
+### Batch 3: 3 hotéis Grupo A via web search (34-33%)
+11. ✅ **Baía das Carúbas Glamping** — 34.4% → 45.5% (+4 campos: restaurante chef, piscina, wifi, check-in)
+12. ✅ **Caiman Pantanal** — 34.4% → 39.4% (+2 campos: full board, check-in/out)
+13. ✅ **Hotel Emiliano Rio de Janeiro** — 33.3% → 36.4% (+3 campos: 2 restaurantes, piscina, check-in)
 
-### Próximos Alvos — Grupo A ainda acessível
-- Baía das Carúbas Glamping (34.4%)
-- Caiman Pantanal (34.4%)
-- Hotel Emiliano Rio de Janeiro (33.3%)
-- Cabanas do Vale (21.9%)
-- [10 mais de sites ainda acessíveis]
+## Hotéis Pendentes (11 restantes)
 
-### Grupo B — Sites bloqueados/offline
-- Tivoli Mofarrej São Paulo (30.3%) — Site 403
-- Manoá Eco-Villa (18.2%) — Placeholder "EM BREVE"
-- Casa do Arandis (15.2%) — ECONNREFUSED
-- [6 mais]
+### Grupo A — Sites acessíveis (8 restantes)
+🔲 **Hotel das Cataratas Belmond** (45.5%) — belmond.com
+🔲 **Cabanas do Vale** (21.9%) — BLOQUEADO (site offline, sem web search data)
+🔲 **Casa Rosa** (15.2%) — a validar
+🔲 **Fazenda Moréias** (15.2%) — a validar
+🔲 **Madeiro Beach Hotel** (15.2%) — a validar
+🔲 **Manoá Eco-Villa** (18.2%) — Placeholder "EM BREVE"
+🔲 **Segredo na Serra** (15.2%) — a validar
+🔲 **Tuju Boutique Hotel** (15.2%) — ECONNREFUSED
+
+### Grupo B — Sites bloqueados/offline (3 restantes)
+🔲 **Casa do Arandis** (15.2%) — ECONNREFUSED
+🔲 **Tivoli Mofarrej São Paulo** (30.3%) — Site 403
+🔲 [1 mais de Grupo B a validar]
 
 ## Campos enriquecidos (Batch 2)
 - ✅ **6.1 Restaurantes:** Pizzaria, culinária vegan, seafood, regional
@@ -47,19 +54,32 @@
 
 ## Estatísticas
 
-| Métrica | Batch 1 | Batch 2 | Total |
-|---------|---------|---------|-------|
-| Hotéis | 4 | 6 | 10 |
-| Campos adicionados | 17 | 17 | 34 |
-| Cobertura média inicial | 45.1% | 39.6% | 42.2% |
-| Cobertura média final | 57.5% | 48.1% | 52.7% |
-| Melhoria média | +12.4% | +8.5% | +10.5% |
-| Hotéis acima 50% | 4/4 | 3/6 | 7/10 |
-| Fonte predominante | OTA | OTA | OTA |
+| Métrica | Batch 1 | Batch 2 | Batch 3 | Total |
+|---------|---------|---------|---------|-------|
+| Hotéis | 4 | 6 | 3 | 13 |
+| Campos adicionados | 17 | 17 | 9 | 43 |
+| Cobertura média inicial | 45.1% | 39.6% | 34.0% | 39.9% |
+| Cobertura média final | 57.5% | 48.1% | 40.4% | 48.7% |
+| Melhoria média | +12.4% | +8.5% | +6.4% | +8.8% |
+| Hotéis acima 50% | 4/4 | 3/6 | 1/3 | 8/13 |
+| Fonte predominante | OTA | OTA | Web Search | OTA/Web |
 
-## Próxima Sessão
-- Continuar com 14 hotéis restantes
-- Foco: Grupo A sites acessíveis (melhor ROI)
-- Estratégia: Booking.com + TripAdvisor + Google Places para variedade
-- Meta: Atingir 12-15 hotéis acima de 50% coverage total
+## Próxima Sessão (11 hotéis restantes)
+
+**Prioridade 1 — Grupo A com dados disponíveis (6-7 hotéis):**
+1. Hotel das Cataratas Belmond (45.5%) — check Belmond properties
+2. Segredo na Serra (15.2%) — web search
+3. Madeiro Beach Hotel (15.2%) — web search
+4. Casa Rosa (15.2%) — web search
+5. Fazenda Moréías (15.2%) — web search
+6. Manoá Eco-Villa (18.2%) — web search (tem "EM BREVE" no site)
+
+**Prioridade 2 — Grupo B offline/bloqueado (3-4 hotéis):**
+- Casa do Arandis (15.2%) — OTA search (Booking/TripAdvisor fallback)
+- Tivoli Mofarrej (30.3%) — OTA fallback (site 403)
+- Cabanas do Vale (21.9%) — BLOQUEADO (skip ou investigação manual)
+- Tuju Boutique Hotel (15.2%) — OTA fallback
+
+**Meta realista:** Atingir 15-18 hotéis acima de 40% coverage (8-13 acima de 50%)
+**Estratégia:** Batch de 4-5 hotéis por rodada, priorizando web search + OTA fallback
 
