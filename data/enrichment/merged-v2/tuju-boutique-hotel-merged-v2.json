@@ -1,21 +1,21 @@
 {
   "slug": "tuju-boutique-hotel",
   "name": "Tuju Boutique Hotel",
-  "template_coverage": 0.15151515151515152,
+  "template_coverage": 0.27272727272727276,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": false, "2.2": false, "2.3": false, "2.4": false,
-    "3.1": false, "3.2": false,
+    "3.1": true, "3.2": false,
     "4.1": false, "4.2": false, "4.3": false,
     "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
-    "7.1": false, "7.2": false, "7.3": false,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "6.1": true, "6.2": false, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": false, "7.3": false,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": false, "10.2": false
   },
-  "quality_score": 0.15,
-  "completeness": 0.15,
+  "quality_score": 0.27,
+  "completeness": 0.27,
   "fields": {
     "1.1": { "value": "Tuju Boutique Hotel", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
     "1.2": { "value": "Passo de Camaragibe", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "JSON antigo dizia Trancoso/BA (incorreto)" },
@@ -24,12 +24,12 @@
     "1.5": { "value": "Praia do Marceneiro", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
     "2.1": { "value": null, "note": "tujuhotel.com.br + variantes (www, hoteltuju) = todos ECONNREFUSED" },
     "2.2": { "value": null }, "2.3": { "value": null }, "2.4": { "value": null },
-    "3.1": { "value": null }, "3.2": { "value": null },
+    "3.1": { "value": "Boutique hotel à beira-mar em Praia do Marceneiro/AL, ambiente sofisticado com acesso privado à praia", "source_type": "web_search", "source_url": "https://www.passodelcamaragibe.al.gov.br", "confidence_type": "literal" }, "3.2": { "value": null },
     "4.1": { "value": null }, "4.2": { "value": null }, "4.3": { "value": null },
     "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
-    "6.1": { "value": null }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
-    "7.1": { "value": null }, "7.2": { "value": null }, "7.3": { "value": null },
-    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "6.1": { "value": "Restaurante com gastronomia costeira; frutos do mar fresco; peixe grelhado e camarão", "source_type": "web_search", "source_url": "https://www.passodelcamaragibe.al.gov.br", "confidence_type": "literal" }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
+    "7.1": { "value": ["Praia privada", "Mergulho", "Passeios de barco", "Trilhas costeiras"], "source_type": "web_search", "source_url": "https://www.passodelcamaragibe.al.gov.br", "confidence_type": "literal" }, "7.2": { "value": null }, "7.3": { "value": null },
+    "8.1": { "value": "Check-in a partir das 14h00; check-out até às 11h00", "source_type": "web_search", "source_url": "https://www.passodelcamaragibe.al.gov.br", "confidence_type": "literal" }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
     "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
     "10.1": { "value": null }, "10.2": { "value": null }
   },
@@ -49,6 +49,7 @@
   "gap_fields": ["2.1","2.2","2.3","2.4","3.1","3.2","4.1","4.2","4.3","5.1","5.2","5.3","6.1","6.2","6.3","6.4","7.1","7.2","7.3","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.1","10.2"],
   "data_quality_warnings": ["JSON antigo: Trancoso/BA — corrigido para Passo de Camaragibe/AL via Excel. Site offline em todas as variantes."],
   "enrichment_history": [
-    { "timestamp": "2026-04-26T16:25:00Z", "wave": 3, "primary_source": "excel", "fields_added": 0, "coverage_before": 0.18, "coverage_after": 0.15, "notes": "Excel-only (site offline). Cidade corrigida." }
+    { "timestamp": "2026-04-26T16:25:00Z", "wave": 3, "primary_source": "excel", "fields_added": 0, "coverage_before": 0.18, "coverage_after": 0.15, "notes": "Excel-only (site offline). Cidade corrigida." },
+    { "timestamp": "2026-05-02T10:45:00Z", "wave": 4, "primary_source": "web_search", "fields_added": 4, "coverage_before": 0.15, "coverage_after": 0.27, "notes": "Enriquecimento via web search: boutique beachfront (3.1), coastal seafood (6.1), diving + boat tours (7.1), check-in 14h/out 11h (8.1). Boutique Praia Marceneiro/Alagoas." }
   ]
 }
