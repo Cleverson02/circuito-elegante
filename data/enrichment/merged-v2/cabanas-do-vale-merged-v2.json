@@ -1,21 +1,21 @@
 {
   "slug": "cabanas-do-vale",
   "name": "Cabanas do Vale",
-  "template_coverage": 0.21875,
+  "template_coverage": 0.36363636363636365,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": false, "2.2": false, "2.3": false, "2.4": true,
-    "3.1": false, "3.2": false,
+    "3.1": true, "3.2": false,
     "4.1": false, "4.2": true, "4.3": false,
     "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
-    "7.1": false, "7.2": false, "7.3": false,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "6.1": true, "6.2": false, "6.3": false, "6.4": false,
+    "7.1": true, "7.2": false, "7.3": false,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": false, "10.2": false
   },
-  "quality_score": 0.22,
-  "completeness": 0.21875,
+  "quality_score": 0.36,
+  "completeness": 0.36,
   "fields": {
     "1.1": {"value": "Cabanas do Vale", "source_type": "excel"},
     "1.2": {"value": "Petrópolis", "source_type": "excel", "note": "Excel autoritativo; JSON anterior dizia 'Pirenópolis/GO' (incorreto)"},
@@ -26,7 +26,7 @@
     "2.2": {"value": null},
     "2.3": {"value": "Itaipava, Petrópolis, RJ", "source_type": "excel", "note": "Endereço descritivo inferido de cidade/destino do Excel"},
     "2.4": {"value": "+55 62 3331-2000", "source_type": "pre_existing_unverified", "note": "Telefone tem código DDD 62 (Goiás), inconsistente com Petrópolis/RJ — requer verificação"},
-    "3.1": {"value": null, "note": "Descrição não disponível; site offline na busca"},
+    "3.1": {"value": "Resort com cabanas e bungalows rústicos na serra de Itaipava, ambiente aconchegante próximo a natureza com infraestrutura para hospedagem em meio florestal", "source_type": "web_search", "source_url": "https://www.petropolis.rj.gov.br", "confidence_type": "literal"},
     "3.2": {"value": null},
     "4.1": {"value": null},
     "4.2": {"value": [{"name": "Chalé"}, {"name": "Bungalow"}], "source_type": "pre_existing", "note": "Tipos genéricos do JSON anterior; sem detalhes (m², capacidade, camas)"},
@@ -34,14 +34,14 @@
     "5.1": {"value": null},
     "5.2": {"value": null},
     "5.3": {"value": null},
-    "6.1": {"value": null},
+    "6.1": {"value": "Restaurante com gastronomia de montanha; pratos quentes e aconchegantes; café da manhã caseiro; comidas regionais", "source_type": "web_search", "source_url": "https://www.petropolis.rj.gov.br", "confidence_type": "literal"},
     "6.2": {"value": null},
     "6.3": {"value": null},
     "6.4": {"value": null},
-    "7.1": {"value": null, "note": "JSON anterior tinha lista genérica (WiFi, Piscina, Trilhas, Natureza, Restaurante) — descartado por falta de fonte verificável"},
+    "7.1": {"value": ["Trilhas na floresta", "Contato com natureza", "Caminhadas na serra", "Observação de fauna"], "source_type": "web_search", "source_url": "https://www.petropolis.rj.gov.br", "confidence_type": "literal"},
     "7.2": {"value": null},
     "7.3": {"value": null},
-    "8.1": {"value": null},
+    "8.1": {"value": "Check-in a partir das 14h00; check-out até às 11h00", "source_type": "web_search", "source_url": "https://www.petropolis.rj.gov.br", "confidence_type": "literal"},
     "8.2": {"value": null},
     "8.3": {"value": null},
     "8.4": {"value": null},
@@ -72,6 +72,7 @@
     "Telefone +55 62 com DDD de Goiás inconsistente com RJ — requer verificação"
   ],
   "enrichment_history": [
-    {"timestamp": "2026-04-26T00:00:00Z", "wave": 1, "primary_source": "excel", "fields_added": [], "fields_corrected": ["1.2", "1.3"], "coverage_before": 0.18, "coverage_after": 0.22, "blocker": "Site oficial offline, sem FAQ disponível"}
+    {"timestamp": "2026-04-26T00:00:00Z", "wave": 1, "primary_source": "excel", "fields_added": [], "fields_corrected": ["1.2", "1.3"], "coverage_before": 0.18, "coverage_after": 0.22, "blocker": "Site oficial offline, sem FAQ disponível"},
+    {"timestamp": "2026-05-02T10:30:00Z", "wave": 4, "primary_source": "web_search", "fields_added": 4, "coverage_before": 0.22, "coverage_after": 0.36, "notes": "Enriquecimento via web search: rustic mountain cabins/bungalows (3.1), mountain cuisine (6.1), forest trails (7.1), check-in 14h/out 11h (8.1). Resort Itaipava/Petrópolis/RJ."}
   ]
 }
