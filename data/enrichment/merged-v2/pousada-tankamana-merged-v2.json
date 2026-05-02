@@ -1,21 +1,21 @@
 {
   "slug": "pousada-tankamana",
   "name": "Pousada Tankamana",
-  "template_coverage": 0.45454545454545453,
+  "template_coverage": 0.5454545454545454,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": true, "2.2": false, "2.3": true, "2.4": true,
     "3.1": true, "3.2": true,
     "4.1": false, "4.2": true, "4.3": false,
     "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": false, "6.4": false,
+    "6.1": true, "6.2": false, "6.3": false, "6.4": false,
     "7.1": true, "7.2": false, "7.3": true,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": false, "9.3": false,
     "10.1": true, "10.2": false
   },
-  "quality_score": 0.45,
-  "completeness": 0.45,
+  "quality_score": 0.55,
+  "completeness": 0.55,
   "fields": {
     "1.1": { "value": "Pousada Tankamana", "source_type": "hotel_website", "source_url": "https://www.tankamana.com.br/" },
     "1.2": { "value": "Petrópolis", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx" },
@@ -32,11 +32,11 @@
     "4.2": { "value": [{ "name": "Chalés", "feature": "conforto e luxo na natureza, em Mata Atlântica" }], "source_type": "hotel_website", "source_url": "https://www.tankamana.com.br/" },
     "4.3": { "value": null },
     "5.1": { "value": null }, "5.2": { "value": null }, "5.3": { "value": null },
-    "6.1": { "value": null }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
+    "6.1": { "value": "Restaurante aberto 11h-23h (dom-qui), 11h-00h (sex-sab); café da manhã à hora que desejar (pães, frutas, ovos, tapiocas, waffles frescos); chá da tarde sex-sab 17h; serviço em qualquer local da propriedade", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/pousada-tankamana.html", "confidence_type": "literal" }, "6.2": { "value": null }, "6.3": { "value": null }, "6.4": { "value": null },
     "7.1": { "value": "Piqueniques na montanha, trilhas na Mata Atlântica, aulas de horta caseira, lições de fotografia de natureza, observação de aves", "source_type": "hotel_website", "source_url": "https://www.tankamana.com.br/" },
     "7.2": { "value": null },
     "7.3": { "value": "Experiências guiadas com atividades baseadas em natureza e workshops educacionais", "source_type": "hotel_website", "source_url": "https://www.tankamana.com.br/" },
-    "8.1": { "value": null }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
+    "8.1": { "value": "Check-in a partir das 13h00, check-out até às 12h00. Late check-in disponível com horários variáveis", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/pousada-tankamana.html", "confidence_type": "literal" }, "8.2": { "value": null }, "8.3": { "value": null }, "8.4": { "value": null },
     "9.1": { "value": null }, "9.2": { "value": null }, "9.3": { "value": null },
     "10.1": { "value": "Foco em sustentabilidade; ambiente Mata Atlântica; observação de aves", "source_type": "hotel_website", "source_url": "https://www.tankamana.com.br/" },
     "10.2": { "value": null }
@@ -57,7 +57,7 @@
     { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
   "source_priority": ["questionnaire", "excel", "hotel_website"],
-  "gap_fields": ["2.2","4.1","4.3","5.1","5.2","5.3","6.1","6.2","6.3","6.4","7.2","8.1","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
+  "gap_fields": ["2.2","4.1","4.3","5.1","5.2","5.3","6.2","6.3","6.4","7.2","8.2","8.3","8.4","9.1","9.2","9.3","10.2"],
   "data_quality_warnings": [],
   "enrichment_history": [
     { "timestamp": "2026-04-26T18:25:00Z", "wave": 4, "primary_source": "hotel_website", "fields_added": 12, "coverage_before": 0.06, "coverage_after": 0.45, "notes": "Pousada boutique chalés na Mata Atlântica em Itaipava/Petrópolis. Foco romântico + observação de natureza." }

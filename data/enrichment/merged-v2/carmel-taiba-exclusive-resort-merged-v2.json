@@ -1,21 +1,21 @@
 {
   "slug": "carmel-taiba-exclusive-resort",
   "name": "Carmel Taíba Exclusive Resort",
-  "template_coverage": 0.45454545454545453,
+  "template_coverage": 0.5909090909090909,
   "template_fields": {
     "1.1": true, "1.2": true, "1.3": true, "1.4": true, "1.5": true,
     "2.1": true, "2.2": false, "2.3": false, "2.4": true,
     "3.1": true, "3.2": true,
     "4.1": false, "4.2": true, "4.3": false,
-    "5.1": false, "5.2": false, "5.3": false,
-    "6.1": false, "6.2": false, "6.3": true, "6.4": false,
-    "7.1": false, "7.2": false, "7.3": true,
-    "8.1": false, "8.2": false, "8.3": false, "8.4": false,
+    "5.1": false, "5.2": true, "5.3": false,
+    "6.1": true, "6.2": false, "6.3": true, "6.4": false,
+    "7.1": true, "7.2": true, "7.3": true,
+    "8.1": true, "8.2": false, "8.3": false, "8.4": false,
     "9.1": false, "9.2": true, "9.3": false,
     "10.1": true, "10.2": true
   },
-  "quality_score": 0.45,
-  "completeness": 0.45,
+  "quality_score": 0.59,
+  "completeness": 0.59,
   "fields": {
     "1.1": { "value": "Carmel Taíba Exclusive Resort", "source_type": "hotel_website", "source_url": "https://carmelhoteis.com.br/carmeltaiba/" },
     "1.2": { "value": "São Gonçalo do Amarante", "source_type": "excel", "source_url": "data/faqs/lista-hoteis-circuito-elegante.xlsx", "note": "Excel autoritativo sobrescreve JSON anterior (Caucaia)" },
@@ -48,16 +48,16 @@
     },
     "4.3": { "value": null, "note": "Amenities por quarto não detalhadas" },
     "5.1": { "value": null, "note": "Estacionamento não mencionado no site" },
-    "5.2": { "value": null, "note": "Piscina não mencionada explicitamente" },
+    "5.2": { "value": "3 piscinas interiores + 1 piscina infinita", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-taiba-exclusive-resort.html", "confidence_type": "literal" },
     "5.3": { "value": null },
-    "6.1": { "value": null, "note": "Restaurantes nomeados não listados na página principal" },
+    "6.1": { "value": "2 restaurantes (moderno com frutos do mar, culinária brasileira e internacional; opções vegetarianas, sem glúten, sem laticínios) + 2 bares/lounges + bar à beira da piscina", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-taiba-exclusive-resort.html", "confidence_type": "literal" },
     "6.2": { "value": null },
     "6.3": { "value": "Festival Gastronômico", "source_type": "hotel_website", "source_url": "https://carmelhoteis.com.br/carmeltaiba/" },
     "6.4": { "value": null },
-    "7.1": { "value": null, "note": "Apenas menção genérica a 'Beach cleanup' sem lista de itens" },
-    "7.2": { "value": null, "note": "Spa/wellness não mencionado no site" },
+    "7.1": { "value": "Piscinas (3 interiores + 1 infinita), spa com massagens, health club, academia aberta 24h, esportes aquáticos, bicicletas gratuitas para explorar a área", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-taiba-exclusive-resort.html", "confidence_type": "literal" },
+    "7.2": { "value": "Spa com serviços de massagem disponível", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-taiba-exclusive-resort.html", "confidence_type": "literal" },
     "7.3": { "value": "Festival Gastronômico; serviços de casamento", "source_type": "hotel_website", "source_url": "https://carmelhoteis.com.br/carmeltaiba/" },
-    "8.1": { "value": null, "note": "Horários check-in/out não informados" },
+    "8.1": { "value": "Check-in a partir das 15h00, check-out antes das 12h00. Check-out entre 12h00-18h00 = 50% da diária; após 18h00 = tarifa completa", "source_type": "booking_scrape", "source_url": "https://www.booking.com/hotel/br/carmel-taiba-exclusive-resort.html", "confidence_type": "literal" },
     "8.2": { "value": null },
     "8.3": { "value": null, "note": "Política de cancelamento não no site" },
     "8.4": { "value": null, "note": "Política de crianças/pets não no site" },
@@ -83,7 +83,7 @@
     { "type": "excel", "path": "data/faqs/lista-hoteis-circuito-elegante.xlsx" }
   ],
   "source_priority": ["questionnaire", "excel", "hotel_website"],
-  "gap_fields": ["2.2","2.3","4.1","4.3","5.1","5.2","5.3","6.1","6.2","6.4","7.1","7.2","8.1","8.2","8.3","8.4","9.1","9.3"],
+  "gap_fields": ["2.2","2.3","4.1","4.3","5.1","5.3","6.2","6.4","8.2","8.3","8.4","9.1","9.3"],
   "data_quality_warnings": [
     "Site institucional minimalista — campos operacionais (check-in, política, piscina) ausentes",
     "Município corrigido de Caucaia (JSON antigo) para São Gonçalo do Amarante (Excel autoritativo)"
@@ -97,6 +97,15 @@
       "coverage_before": 0.18,
       "coverage_after": 0.45,
       "notes": "WebFetch via carmelhoteis.com.br/carmeltaiba/ (redirect 301). Município corrigido para São Gonçalo do Amarante."
+    },
+    {
+      "timestamp": "2026-05-02T03:45:00Z",
+      "wave": 2,
+      "primary_source": "booking_scrape",
+      "fields_added": 5,
+      "coverage_before": 0.45,
+      "coverage_after": 0.59,
+      "notes": "Enriquecimento operacional via Booking.com/OTAs: restaurantes (6.1), atividades (7.1), spa (7.2), piscinas (5.2), check-in/out (8.1). Site oficial do hotel não contém essas informações."
     }
   ]
 }
