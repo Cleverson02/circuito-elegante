@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-28T03:27:25.749Z",
+  "timestamp": "2026-05-03T00:12:35.717Z",
   "total_hotels": 92,
   "with_all_critical_fields": 8,
   "with_gaps": 84,
@@ -10,14 +10,10 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Casa Rosa",
@@ -25,14 +21,10 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Fazenda Moréias",
@@ -40,14 +32,10 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Madeiro Beach Hotel",
@@ -55,14 +43,10 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Segredo na Serra",
@@ -70,14 +54,10 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Tuju Boutique Hotel",
@@ -85,170 +65,26 @@
         "2.1",
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 10
+      "coverage": 50
     },
     {
       "name": "Manoá Eco-Villa",
       "missing": [
         "2.3",
         "2.4",
-        "3.1",
         "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
         "9.3"
       ],
-      "coverage": 20
-    },
-    {
-      "name": "Cabanas do Vale",
-      "missing": [
-        "2.1",
-        "3.1",
-        "6.1",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 40
+      "coverage": 60
     },
     {
       "name": "Baía das Carúbas Glamping",
       "missing": [
         "2.3",
         "3.1",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 50
-    },
-    {
-      "name": "Carmel Taíba Exclusive Resort",
-      "missing": [
-        "2.3",
-        "6.1",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 50
-    },
-    {
-      "name": "Casa Poema",
-      "missing": [
-        "2.3",
-        "2.4",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 50
-    },
-    {
-      "name": "Hotel Emiliano Rio de Janeiro",
-      "missing": [
-        "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 50
-    },
-    {
-      "name": "Tivoli Mofarrej São Paulo",
-      "missing": [
-        "4.2",
-        "6.1",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 50
-    },
-    {
-      "name": "Caiman, Pantanal",
-      "missing": [
-        "2.3",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Casa de Santo Antônio Hotel de Charme",
-      "missing": [
-        "2.3",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Hotel Fasano Angra dos Reis",
-      "missing": [
-        "4.2",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Grande Hotel Termas de Araxá",
-      "missing": [
-        "2.3",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Hotel das Cataratas, A Belmond Hotel",
-      "missing": [
-        "4.2",
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Hotel Solar do Império",
-      "missing": [
-        "6.1",
-        "7.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 60
-    },
-    {
-      "name": "Carmel Charme Resort",
-      "missing": [
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 70
-    },
-    {
-      "name": "Hotel Casa da Montanha",
-      "missing": [
-        "7.1",
-        "8.1",
         "9.3"
       ],
       "coverage": 70
@@ -258,6 +94,15 @@
       "missing": [
         "6.1",
         "8.1",
+        "9.3"
+      ],
+      "coverage": 70
+    },
+    {
+      "name": "Casa Poema",
+      "missing": [
+        "2.3",
+        "2.4",
         "9.3"
       ],
       "coverage": 70
@@ -290,10 +135,10 @@
       "coverage": 70
     },
     {
-      "name": "Pousada Ilha dos Poldros",
+      "name": "Hotel Emiliano Rio de Janeiro",
       "missing": [
-        "6.1",
-        "8.1",
+        "4.2",
+        "7.1",
         "9.3"
       ],
       "coverage": 70
@@ -326,19 +171,10 @@
       "coverage": 70
     },
     {
-      "name": "Pousada Tankamana",
+      "name": "Tivoli Mofarrej São Paulo",
       "missing": [
-        "6.1",
-        "8.1",
-        "9.3"
-      ],
-      "coverage": 70
-    },
-    {
-      "name": "Hotel Boutique Quebra-Noz",
-      "missing": [
-        "6.1",
-        "8.1",
+        "4.2",
+        "7.1",
         "9.3"
       ],
       "coverage": 70
@@ -365,6 +201,46 @@
       "name": "Botanique Hotel & Spa",
       "missing": [
         "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Cabanas do Vale",
+      "missing": [
+        "2.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Caiman, Pantanal",
+      "missing": [
+        "2.3",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Carmel Taíba Exclusive Resort",
+      "missing": [
+        "2.3",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel Casa da Montanha",
+      "missing": [
+        "7.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Casa de Santo Antônio Hotel de Charme",
+      "missing": [
+        "2.3",
         "9.3"
       ],
       "coverage": 80
@@ -410,6 +286,14 @@
       "coverage": 80
     },
     {
+      "name": "Hotel Fasano Angra dos Reis",
+      "missing": [
+        "4.2",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
       "name": "Hotel Fasano Belo Horizonte",
       "missing": [
         "8.1",
@@ -437,6 +321,22 @@
       "name": "Hotel Fasano Salvador",
       "missing": [
         "8.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Grande Hotel Termas de Araxá",
+      "missing": [
+        "2.3",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
+      "name": "Hotel das Cataratas, A Belmond Hotel",
+      "missing": [
+        "4.2",
         "9.3"
       ],
       "coverage": 80
@@ -610,6 +510,14 @@
       "coverage": 80
     },
     {
+      "name": "Hotel Solar do Império",
+      "missing": [
+        "7.1",
+        "9.3"
+      ],
+      "coverage": 80
+    },
+    {
       "name": "Unique Garden",
       "missing": [
         "2.3",
@@ -720,6 +628,20 @@
       "coverage": 90
     },
     {
+      "name": "Carmel Charme Resort",
+      "missing": [
+        "9.3"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Pousada Ilha dos Poldros",
+      "missing": [
+        "9.3"
+      ],
+      "coverage": 90
+    },
+    {
       "name": "Nanii Hotel",
       "missing": [
         "2.3"
@@ -744,6 +666,20 @@
       "name": "Pousada do Ouro",
       "missing": [
         "2.4"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Pousada Tankamana",
+      "missing": [
+        "9.3"
+      ],
+      "coverage": 90
+    },
+    {
+      "name": "Hotel Boutique Quebra-Noz",
+      "missing": [
+        "9.3"
       ],
       "coverage": 90
     },
