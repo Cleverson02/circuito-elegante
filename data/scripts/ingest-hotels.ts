@@ -1,7 +1,12 @@
 import postgres from 'postgres';
-import * as XLSX from 'xlsx';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+// Dynamic import of XLSX for ES module compatibility
+// @ts-ignore
+import xlsxModule from 'xlsx';
 
+const __dirname = join(fileURLToPath(import.meta.url), '..');
 const XLSX_PATH = join(__dirname, '..', 'lista-hoteis-circuito-elegante.xlsx');
 
 // --- Types ---
@@ -71,7 +76,10 @@ function normalizeExperience(value: string): string {
 // --- Parsing ---
 
 export function parseXlsx(filePath: string): RawRow[] {
-  const workbook = XLSX.readFile(filePath);
+  // @ts-ignore
+  const XLSX = xlsxModule;
+  const fileBuffer = readFileSync(filePath);
+  const workbook = XLSX.read(fileBuffer, { type: 'buffer' });
   const sheetName = workbook.SheetNames[0];
   if (!sheetName) throw new Error('XLSX has no sheets');
   const sheet = workbook.Sheets[sheetName]!;
@@ -282,7 +290,7 @@ async function main(): Promise<void> {
 }
 
 // Only run when executed directly (not when imported by tests)
-const isDirectExecution = require.main === module || process.argv[1]?.endsWith('ingest-hotels');
+const isDirectExecution = process.argv[1]?.includes('ingest-hotels');
 if (isDirectExecution) {
   main().catch((err) => {
     console.error('❌ Erro na ingestão:', err);
