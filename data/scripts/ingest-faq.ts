@@ -1,11 +1,13 @@
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import postgres from 'postgres';
 import { chunkByHeadings } from '../../backend/src/vectordb/chunker.js';
 import { generateEmbeddings, EMBEDDING_MODEL } from '../../backend/src/vectordb/embedding.js';
 
 // --- Config ---
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const FAQ_PATH = join(__dirname, '..', 'faqs', 'Questionário de Informações - Hotéis Circuito Elegante.md');
 const SOURCE = 'local-file';
 const FAQ_FILENAME = 'Questionário de Informações - Hotéis Circuito Elegante.md';
