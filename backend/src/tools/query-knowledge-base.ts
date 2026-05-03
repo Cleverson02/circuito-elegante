@@ -13,7 +13,7 @@ export const QueryKBParams = z.object({
 
 export type QueryKBParams = z.infer<typeof QueryKBParams>;
 
-const SIMILARITY_THRESHOLD = 0.7;
+const SIMILARITY_THRESHOLD = 0.5;
 const CACHE_TTL = 3600; // 1 hour
 const TOP_K = 3;
 
