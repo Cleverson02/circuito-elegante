@@ -1,22 +1,24 @@
 services:
-  app:
-    build:
-      context: ..
-      dockerfile: infra/Dockerfile
-    ports:
-      - "${PORT:-3000}:3000"
-    env_file:
-      - ../.env
-    depends_on:
-      redis:
-        condition: service_healthy
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health/live"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
+  # app:
+  #   build:
+  #     context: ..
+  #     dockerfile: infra/Dockerfile
+  #   ports:
+  #     - "${PORT:-3000}:3000"
+  #   env_file:
+  #     - ../.env
+  #   depends_on:
+  #     redis:
+  #       condition: service_healthy
+  #     postgres:
+  #       condition: service_healthy
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health/live"]
+  #     interval: 30s
+  #     timeout: 5s
+  #     retries: 3
+  #     start_period: 10s
 
   redis:
     image: redis:7-alpine
@@ -32,5 +34,24 @@ services:
       timeout: 3s
       retries: 5
 
+  postgres:
+    image: pgvector/pgvector:pg15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: stella
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password_local_dev
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
 volumes:
   redis_data:
+  postgres_data:
