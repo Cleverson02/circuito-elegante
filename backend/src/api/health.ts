@@ -64,11 +64,11 @@ export async function registerHealthRoutes(app: FastifyInstance): Promise<void> 
 
   app.get('/debug/env', async (_request, reply) => {
     return reply.send({
-      EVOLUTION_WEBHOOK_SECRET: process.env.EVOLUTION_WEBHOOK_SECRET ? '✓' : '✗',
-      PORT: process.env.PORT,
-      NODE_ENV: process.env.NODE_ENV,
-      DATABASE_URL: process.env.DATABASE_URL ? '✓' : '✗',
-      OPENAI_API_KEY: process.env.OPENAI_API_KEY ? '✓' : '✗',
+      EVOLUTION_WEBHOOK_SECRET: process.env['EVOLUTION_WEBHOOK_SECRET'] ? `✓ (${process.env['EVOLUTION_WEBHOOK_SECRET']!.substring(0, 20)}...)` : '✗ MISSING',
+      PORT: process.env['PORT'] || '✗',
+      NODE_ENV: process.env['NODE_ENV'] || '✗',
+      DATABASE_URL: process.env['DATABASE_URL'] ? '✓' : '✗',
+      OPENAI_API_KEY: process.env['OPENAI_API_KEY'] ? '✓' : '✗',
     });
   });
 }

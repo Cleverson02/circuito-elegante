@@ -55,7 +55,7 @@ export async function registerChatRoute(app: FastifyInstance): Promise<void> {
 
       const response: ChatResponse = {
         success: false,
-        question: (request.body as Record<string, unknown>).question as string || 'Unknown',
+        question: ((request.body as Record<string, unknown>)['question'] as string) || 'Unknown',
         results: [],
         error: error instanceof Error ? error.message : 'An error occurred',
       };

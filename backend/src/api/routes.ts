@@ -18,7 +18,7 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
   await registerElevareWebhookRoute(app, {
     redis: getRedisClient(),
     logger,
-    webhookSecret: env.ELEVARE_WEBHOOK_SECRET,
+    webhookSecret: env.ELEVARE_API_KEY || undefined,
   });
 
   // WhatsApp webhook listener — FR33 (Story 4.1)

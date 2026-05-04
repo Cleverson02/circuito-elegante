@@ -164,14 +164,14 @@ export async function handleWhatsAppWebhook(
 
   // Fallback: try to get from process.env if not provided
   if (!webhookSecret || webhookSecret.length === 0) {
-    webhookSecret = process.env.EVOLUTION_WEBHOOK_SECRET;
+    webhookSecret = process.env['EVOLUTION_WEBHOOK_SECRET'];
   }
 
   // AC5: fail-closed if secret still missing
   if (!webhookSecret || webhookSecret.length === 0) {
     logger.warn('whatsapp_webhook_secret_not_configured', {
       fromDeps: deps.webhookSecret ? `(${deps.webhookSecret.length} chars)` : 'undefined',
-      fromProcessEnv: process.env.EVOLUTION_WEBHOOK_SECRET ? '✓' : '✗',
+      fromProcessEnv: process.env['EVOLUTION_WEBHOOK_SECRET'] ? '✓' : '✗',
     });
     return reply.status(503).send({
       error: 'Service Unavailable',
