@@ -158,12 +158,21 @@ export async function handleWhatsAppWebhook(
   reply: FastifyReply,
   deps: WhatsAppWebhookDeps,
 ): Promise<FastifyReply> {
-  const { redis, logger, webhookSecret } = deps;
+  const { redis, logger } = deps;
+  let { webhookSecret } = deps;
   const correlationId = randomUUID();
 
-  // AC5: fail-closed if secret missing
+  // Fallback: try to get from process.env if not provided
   if (!webhookSecret || webhookSecret.length === 0) {
-    logger.warn('whatsapp_webhook_secret_not_configured');
+    webhookSecret = process.env.EVOLUTION_WEBHOOK_SECRET;
+  }
+
+  // AC5: fail-closed if secret still missing
+  if (!webhookSecret || webhookSecret.length === 0) {
+    logger.warn('whatsapp_webhook_secret_not_configured', {
+      fromDeps: deps.webhookSecret ? `(${deps.webhookSecret.length} chars)` : 'undefined',
+      fromProcessEnv: process.env.EVOLUTION_WEBHOOK_SECRET ? '✓' : '✗',
+    });
     return reply.status(503).send({
       error: 'Service Unavailable',
       message: 'Webhook secret not configured',

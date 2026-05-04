@@ -1,8 +1,13 @@
-import 'dotenv/config';
+// Load .env first
+import dotenv from 'dotenv';
+dotenv.config();
 
 import Fastify from 'fastify';
 import * as Sentry from '@sentry/node';
 import { env } from '../../config/env.js';
+
+// Debug: check env vars
+console.log('[server.ts] EVOLUTION_WEBHOOK_SECRET:', process.env.EVOLUTION_WEBHOOK_SECRET ? '✓' : '✗');
 import { logger } from './middleware/logging.js';
 import { registerLogging } from './middleware/logging.js';
 import { registerRateLimiting } from './middleware/rate-limit.js';
