@@ -17,6 +17,9 @@ COPY . .
 # Build TypeScript
 RUN npm run build
 
+# Copy non-TypeScript assets (markdown, etc)
+RUN cp -r backend/src/prompts dist/backend/src/ 2>/dev/null || true
+
 # Expose port
 EXPOSE 3005
 
