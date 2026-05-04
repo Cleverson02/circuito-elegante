@@ -5,6 +5,9 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
+# Skip prepare lifecycle scripts (husky) in CI/Docker
+ENV CI=true
+
 # Install dependencies
 RUN npm ci
 
