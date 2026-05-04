@@ -5,6 +5,8 @@ import { registerElevareWebhookRoute } from '../webhooks/elevare-handler.js';
 import { registerWhatsAppWebhookRoute } from '../webhooks/whatsapp-handler.js';
 import { getRedisClient } from '../state/redis-client.js';
 import { logger } from '../middleware/logging.js';
+import { env } from '../../../config/env.js';
+
 
 export async function registerRoutes(app: FastifyInstance): Promise<void> {
   await registerHealthRoutes(app);
@@ -16,13 +18,13 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
   await registerElevareWebhookRoute(app, {
     redis: getRedisClient(),
     logger,
-    webhookSecret: process.env['ELEVARE_WEBHOOK_SECRET'],
+    webhookSecret: env.ELEVARE_WEBHOOK_SECRET,
   });
 
   // WhatsApp webhook listener — FR33 (Story 4.1)
   await registerWhatsAppWebhookRoute(app, {
     redis: getRedisClient(),
     logger,
-    webhookSecret: process.env['EVOLUTION_WEBHOOK_SECRET'],
+    webhookSecret: env.EVOLUTION_WEBHOOK_SECRET,
   });
 }

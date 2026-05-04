@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import Fastify from 'fastify';
 import * as Sentry from '@sentry/node';
 import { env } from '../../config/env.js';
